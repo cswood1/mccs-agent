@@ -73,5 +73,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is the SAPR program?",
+    "Who are SARCs and VAs?",
+    "How do I report sexual assault?",
+    "Where can I get support?"
+  ],
+  "chipsSourceHash": "f8c7230ad662efd6"
 }

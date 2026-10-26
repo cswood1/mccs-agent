@@ -49,5 +49,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/153ecde5-4806-474d-b0e6-bd176bf82e8a",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time are free appetizers?",
+    "When's the next Bosses' Night?",
+    "Where exactly is this at?"
+  ],
+  "chipsSourceHash": "caef5779bd9b4fb3"
 }

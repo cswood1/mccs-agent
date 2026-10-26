@@ -206,5 +206,12 @@
   ],
   "notCaptured": "Upcoming events calendar appears to load dynamically and may not be fully captured; Facebook follow link present.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for classes?",
+    "Is Grow Parenting for all ages?",
+    "Do all installations offer these?",
+    "What does the POWER Workshop cover?"
+  ],
+  "chipsSourceHash": "0355dcb5161e31ab"
 }

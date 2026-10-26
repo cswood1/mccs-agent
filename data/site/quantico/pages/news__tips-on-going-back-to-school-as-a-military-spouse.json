@@ -70,5 +70,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I apply for MyCAA?",
+    "What other scholarships can I find?"
+  ],
+  "chipsSourceHash": "d9e87c17176b3a5f"
 }

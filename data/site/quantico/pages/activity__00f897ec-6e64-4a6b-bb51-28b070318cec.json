@@ -58,5 +58,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/00f897ec-6e64-4a6b-bb51-28b070318cec",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much does it cost?",
+    "What proteins can I choose?"
+  ],
+  "chipsSourceHash": "a55905070d2f4a4c"
 }

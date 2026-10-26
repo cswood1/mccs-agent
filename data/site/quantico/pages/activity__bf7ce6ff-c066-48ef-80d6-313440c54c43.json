@@ -53,5 +53,11 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does this grief group meet?",
+    "Where is Little Hall located?",
+    "How do I sign up for the group?"
+  ],
+  "chipsSourceHash": "6ad01f3367e7715f"
 }

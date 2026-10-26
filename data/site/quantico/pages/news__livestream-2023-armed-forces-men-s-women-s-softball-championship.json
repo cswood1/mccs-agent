@@ -70,5 +70,10 @@
   ],
   "notCaptured": "Audio player for livestream content; exact playback functionality not captured",
   "url": "https://quantico.usmc-mccs.org/news/livestream-2023-armed-forces-men-s-women-s-softball-championship",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the championship start?",
+    "How can I watch the games live?"
+  ],
+  "chipsSourceHash": "7e089065ea7e38df"
 }

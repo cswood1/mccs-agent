@@ -66,5 +66,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/find-balance-nine-alcohol-free-coping-strategies",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can exercise help with stress?",
+    "How long should I listen to music?"
+  ],
+  "chipsSourceHash": "63ae348156fe73f1"
 }

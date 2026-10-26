@@ -50,5 +50,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can I talk to about LSP?",
+    "How do I apply to LSP?"
+  ],
+  "chipsSourceHash": "3fa66cca68fc4806"
 }

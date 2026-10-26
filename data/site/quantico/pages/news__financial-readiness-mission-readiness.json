@@ -66,5 +66,12 @@
   ],
   "notCaptured": "Only the hero image and related-story teaser cards were visible; the article's main body text was not captured (appears missing or unrendered).",
   "url": "https://quantico.usmc-mccs.org/news/financial-readiness-mission-readiness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's financial readiness?",
+    "How does money affect my mission?",
+    "Where do I start getting ready?",
+    "Who can help me plan finances?"
+  ],
+  "chipsSourceHash": "07b227ea93c5afb4"
 }

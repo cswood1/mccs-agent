@@ -62,5 +62,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/build-your-spiritual-fitness-by-exploring-the-great-outdoors",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What equipment can I rent?",
+    "How do I join sports programs?",
+    "Are family members allowed?",
+    "Where are the pools located?"
+  ],
+  "chipsSourceHash": "2ef887db34b1dc09"
 }

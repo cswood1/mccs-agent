@@ -84,5 +84,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/october-is-national-depression-and-mental-health-screening-month",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are signs of depression?",
+    "Who can use the counseling program?",
+    "How do I reach a counselor?",
+    "When should I seek help?"
+  ],
+  "chipsSourceHash": "6d6c79b8e8eba570"
 }

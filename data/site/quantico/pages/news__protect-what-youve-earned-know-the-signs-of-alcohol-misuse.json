@@ -54,5 +54,12 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible.",
   "url": "https://quantico.usmc-mccs.org/news/protect-what-youve-earned-know-the-signs-of-alcohol-misuse",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are signs of alcohol misuse?",
+    "How do I find the SACC?",
+    "What does SACC help with?",
+    "Where do I get counseling help?"
+  ],
+  "chipsSourceHash": "59711a473c43d017"
 }

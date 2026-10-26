@@ -54,5 +54,12 @@
   ],
   "notCaptured": "The main article content appears to load dynamically; only the header image and metadata are visible in the static HTML.",
   "url": "https://quantico.usmc-mccs.org/news/how-to-be-sensitive-to-service-members-this-memorial-day",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I avoid saying?",
+    "How can I show respect?",
+    "Why is Memorial Day hard?",
+    "What can I do to help?"
+  ],
+  "chipsSourceHash": "da6352d2ff83a467"
 }

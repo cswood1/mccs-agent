@@ -66,5 +66,11 @@
   ],
   "notCaptured": "Main content image appears to be a graphic/infographic that did not load with visible text or detail in the provided HTML; the actual body content of the article is not visible in the page source provided.",
   "url": "https://quantico.usmc-mccs.org/news/alcohol-and-the-body",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does alcohol do to my body?",
+    "How much alcohol is safe to drink?",
+    "Where can I get help with drinking?"
+  ],
+  "chipsSourceHash": "d4bc5185f74840e0"
 }

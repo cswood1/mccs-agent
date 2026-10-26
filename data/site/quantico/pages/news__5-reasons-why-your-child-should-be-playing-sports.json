@@ -79,5 +79,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/5-reasons-why-your-child-should-be-playing-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign my child up?",
+    "What are the program costs?",
+    "What age groups can join?",
+    "Where are practices held?"
+  ],
+  "chipsSourceHash": "8fa5ffcc365d55ce"
 }

@@ -66,5 +66,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/single-marine-program-coordinator-in-yuma-sees-benefits-of-recreation",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What activities does SMP offer?",
+    "How does SMP help mental health?",
+    "Can I volunteer with SMP?",
+    "What's the Single Marine Program?"
+  ],
+  "chipsSourceHash": "867db2b4e6a6050a"
 }

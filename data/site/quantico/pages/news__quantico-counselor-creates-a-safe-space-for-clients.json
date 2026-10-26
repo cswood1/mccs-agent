@@ -80,5 +80,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/quantico-counselor-creates-a-safe-space-for-clients",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I contact CCP?",
+    "Do I need to be in crisis?",
+    "How long has McGhee worked here?"
+  ],
+  "chipsSourceHash": "ca07f4172a3c0a8a"
 }

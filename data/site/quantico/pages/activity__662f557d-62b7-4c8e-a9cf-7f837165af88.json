@@ -51,5 +51,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/662f557d-62b7-4c8e-a9cf-7f837165af88",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the basketball meeting?",
+    "Can I join if I'm a dependent?",
+    "Where do I go for the meeting?"
+  ],
+  "chipsSourceHash": "508d442cc86ece49"
 }

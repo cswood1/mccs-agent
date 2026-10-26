@@ -79,5 +79,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/bringing-the-presidential-fitness-test-to-marine-corps-youth-programs",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the PFT start?",
+    "Is this replacing current programs?",
+    "What activities are included?",
+    "Where do I get more info?"
+  ],
+  "chipsSourceHash": "c4abe55166783796"
 }

@@ -68,5 +68,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/navigate-with-confidence-how-efmp-supports-your-familys-journey",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How does EFMP help with PCS moves?",
+    "How do I connect with EFMP?",
+    "Do caseworkers help with IEP?",
+    "What's the first step in EFMP?"
+  ],
+  "chipsSourceHash": "a1d99ab65ebdc998"
 }

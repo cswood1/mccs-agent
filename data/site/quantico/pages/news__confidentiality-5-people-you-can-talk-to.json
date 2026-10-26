@@ -65,5 +65,11 @@
   ],
   "notCaptured": "Audio player control element present but not further detailed.",
   "url": "https://quantico.usmc-mccs.org/news/confidentiality-5-people-you-can-talk-to",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What can a SARC do to help me?",
+    "Who can I talk to confidentially?",
+    "How do I contact someone 24/7?"
+  ],
+  "chipsSourceHash": "5fd985071f6acc4c"
 }

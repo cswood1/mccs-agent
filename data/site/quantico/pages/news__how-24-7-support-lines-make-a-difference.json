@@ -107,5 +107,12 @@
   ],
   "notCaptured": "Audio player control visible but transcript/content not accessible.",
   "url": "https://quantico.usmc-mccs.org/news/how-24-7-support-lines-make-a-difference",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What happens if no one picks up?",
+    "Can I stay anonymous?",
+    "How fast can someone meet me?",
+    "Who answers the support line?"
+  ],
+  "chipsSourceHash": "d10fdd36c8778a2b"
 }

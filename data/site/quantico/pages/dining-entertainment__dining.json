@@ -83,5 +83,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I eat on West Side?",
+    "How do I book catering here?",
+    "What's The Clubs at Quantico?",
+    "Can I reserve a space for events?"
+  ],
+  "chipsSourceHash": "5ff5b855e36385c7"
 }

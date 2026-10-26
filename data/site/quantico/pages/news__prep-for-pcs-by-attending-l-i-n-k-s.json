@@ -60,5 +60,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/prep-for-pcs-by-attending-l-i-n-k-s",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can attend L.I.N.K.S. sessions?",
+    "How do I sign up for L.I.N.K.S.?"
+  ],
+  "chipsSourceHash": "51839868ee97fe24"
 }

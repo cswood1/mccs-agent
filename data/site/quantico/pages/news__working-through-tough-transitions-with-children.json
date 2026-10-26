@@ -71,5 +71,10 @@
   ],
   "notCaptured": "The main article content appears to be an image/PDF (clickable to enlarge) with no extractable text body visible in the HTML provided.",
   "url": "https://quantico.usmc-mccs.org/news/working-through-tough-transitions-with-children",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this article about?",
+    "How do I help my kids with moves?"
+  ],
+  "chipsSourceHash": "56c50164f94d5867"
 }

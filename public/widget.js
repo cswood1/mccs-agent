@@ -28,11 +28,17 @@
   var accessCode = script.getAttribute("data-access-code") || "";
   var apiHeaders = accessCode ? { "X-Demo-Access": accessCode } : {};
 
+  var currentPath = (location.pathname.replace(/\/+$/, "") || "/");
+  var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
+
   var state = {
     open: false,
     busy: false,
     config: null,
+    page: null, // { title, chips, chipsFrom, welcome, known } from /api/installations/:id/page
     messages: loadMessages(), // [{ role: "user" | "assistant", content: string, error?: true }]
+    followups: loadJSON(storageKey + ":followups", null), // { path, items } — replace page chips until navigation
+    trail: updateTrail(), // pages visited earlier this session, most recent first
   };
 
   // ---------- DOM ----------
@@ -41,6 +47,10 @@
   var root = host.attachShadow({ mode: "open" });
   root.innerHTML =
     "<style>" + css() + "</style>" +
+    '<div class="nudge" role="status" hidden>' +
+      '<button class="nudge-text" type="button"></button>' +
+      '<button class="nudge-close" type="button" aria-label="Dismiss suggestion">' + icon("close") + "</button>" +
+    "</div>" +
     '<button class="launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel">' +
       icon("chat") + '<span class="launcher-label">Ask me anything</span>' +
     "</button>" +
@@ -52,6 +62,7 @@
       "</header>" +
       '<div class="sample-banner" hidden>Sample data — answers use placeholder content, not real MCCS information.</div>' +
       '<div class="log" role="log" aria-live="polite" aria-relevant="additions text"></div>' +
+      '<div class="chips" role="group" aria-label="Suggested questions" hidden></div>' +
       '<form class="composer">' +
         '<label class="sr-only" for="input">Message</label>' +
         '<textarea id="input" rows="1" placeholder="Ask me anything..." autocomplete="off" enterkeyhint="send"></textarea>' +
@@ -69,6 +80,17 @@
   var form = root.querySelector(".composer");
   var input = root.querySelector("#input");
   var sendBtn = root.querySelector(".send");
+  var chipsEl = root.querySelector(".chips");
+  var nudge = root.querySelector(".nudge");
+  var nudgeText = root.querySelector(".nudge-text");
+
+  nudgeText.addEventListener("click", function () {
+    var q = nudgeText.textContent;
+    hideNudge();
+    setOpen(true);
+    send(q);
+  });
+  root.querySelector(".nudge-close").addEventListener("click", hideNudge);
 
   launcher.addEventListener("click", function () { setOpen(true); });
   root.querySelector(".close").addEventListener("click", function () { setOpen(false); });
@@ -90,6 +112,7 @@
 
   document.body.appendChild(host);
   fetchConfig();
+  fetchPage();
   // Reopen after navigating to another page if the chat was open.
   if (loadOpen()) setOpen(true, true);
 
@@ -109,11 +132,69 @@
         host.style.setProperty("--primary", cfg.theme.primary);
         host.style.setProperty("--accent", cfg.theme.accent);
         titleEl.textContent = cfg.assistantName;
-        subtitleEl.textContent = cfg.name;
         sampleBanner.hidden = !cfg.sample;
+        renderHeader();
         render();
+        scheduleNudge();
       })
       .catch(function () { /* widget still works with defaults */ });
+  }
+
+  // Title, breadcrumb and chips for the page this widget is on (no AI call).
+  function fetchPage() {
+    fetch(apiBase + "/api/installations/" + encodeURIComponent(installationId) + "/page?path=" + encodeURIComponent(currentPath), { headers: apiHeaders })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (info) {
+        if (!info) return;
+        state.page = info;
+        // Remember this page's title for the trail on later pages.
+        try { sessionStorage.setItem(storageKey + ":current", JSON.stringify({ path: currentPath, title: info.title || document.title })); } catch { /* ignore */ }
+        renderHeader();
+        render();
+        scheduleNudge();
+      })
+      .catch(function () { /* chips just won't show */ });
+  }
+
+  function renderHeader() {
+    var page = state.page;
+    subtitleEl.textContent = page && page.known && currentPath !== "/" ? "Viewing: " + page.title : (state.config ? state.config.name : "");
+  }
+
+  // ---------- page trail (last 5 pages this session; sent with each question, never shown) ----------
+  function updateTrail() {
+    var trail = loadJSON(storageKey + ":trail", []);
+    var prev = loadJSON(storageKey + ":current", null);
+    if (prev && prev.path && prev.path !== currentPath) {
+      trail = [prev].concat(trail.filter(function (t) { return t.path !== prev.path && t.path !== currentPath; })).slice(0, 5);
+      try { sessionStorage.setItem(storageKey + ":trail", JSON.stringify(trail)); } catch { /* ignore */ }
+    }
+    try { sessionStorage.setItem(storageKey + ":current", JSON.stringify({ path: currentPath, title: document.title })); } catch { /* ignore */ }
+    return trail;
+  }
+
+  function readBreadcrumb() {
+    var items = document.querySelectorAll('.breadcrumb li, nav[aria-label*="readcrumb"] li');
+    return Array.prototype.map.call(items, function (li) { return li.textContent.trim(); }).filter(Boolean).slice(0, 6);
+  }
+
+  // ---------- nudge: one suggestion bubble on a non-home page, once per session ----------
+  function scheduleNudge() {
+    if (scheduleNudge.done || !state.config || !state.page) return;
+    scheduleNudge.done = true;
+    var chip = state.page.chips && state.page.chips[0];
+    if (!state.config.nudge || currentPath === "/" || !chip || state.page.chipsFrom === "home") return;
+    if (loadJSON(storageKey + ":nudged", false)) return;
+    setTimeout(function () {
+      if (state.open || loadJSON(storageKey + ":nudged", false)) return;
+      try { sessionStorage.setItem(storageKey + ":nudged", "true"); } catch { /* ignore */ }
+      nudgeText.textContent = chip;
+      nudge.hidden = false;
+    }, 20000);
+  }
+
+  function hideNudge() {
+    nudge.hidden = true;
   }
 
   function setOpen(open, restoring) {
@@ -125,6 +206,7 @@
     // Full-screen on phones: stop the page underneath from scrolling.
     document.documentElement.style.overflow = open && isPhone() ? "hidden" : "";
     if (open) {
+      hideNudge();
       warmCache();
       render();
       scrollToEnd();
@@ -152,7 +234,9 @@
   function resetChat() {
     if (state.busy) return;
     state.messages = [];
+    state.followups = null;
     saveMessages();
+    saveFollowups();
     render();
     input.focus();
   }
@@ -165,6 +249,7 @@
 
     state.messages.push({ role: "user", content: text });
     var reply = { role: "assistant", content: "" };
+    var raw = "";
     state.messages.push(reply);
     state.busy = true;
     render();
@@ -182,6 +267,8 @@
       body: JSON.stringify({
         installationId: installationId,
         messages: history.map(function (m) { return { role: m.role, content: m.content }; }),
+        page: { url: location.href, path: currentPath, title: document.title, breadcrumb: readBreadcrumb() },
+        trail: state.trail.map(function (t) { return { path: t.path, title: t.title }; }),
       }),
     })
       .then(function (res) {
@@ -196,7 +283,8 @@
         function pump() {
           return reader.read().then(function (chunk) {
             if (chunk.done) return;
-            reply.content += decoder.decode(chunk.value, { stream: true });
+            raw += decoder.decode(chunk.value, { stream: true });
+            reply.content = raw.split(FRAME)[0];
             if (!pending) {
               pending = true;
               requestAnimationFrame(function () {
@@ -210,11 +298,22 @@
         return pump();
       })
       .catch(function (err) {
+        var msg = err && err.message ? err.message : "Couldn't reach the assistant.";
         reply.error = true;
-        reply.content = (reply.content ? reply.content + "\n\n" : "") +
-          (err && err.message ? err.message : "Couldn't reach the assistant.") + " Please try again.";
+        reply.content = (reply.content ? reply.content + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again.");
       })
       .then(function () {
+        reply.content = reply.content.trim();
+        var frame = raw.split(FRAME)[1];
+        if (frame) {
+          try {
+            var items = JSON.parse(frame).followups;
+            if (Array.isArray(items) && items.length) state.followups = { path: currentPath, items: items.slice(0, 2) };
+          } catch { /* ignore a malformed frame */ }
+        } else if (!reply.error) {
+          state.followups = null;
+        }
+        saveFollowups();
         if (!reply.content) {
           reply.error = true;
           reply.content = "No answer came back. Please try again.";
@@ -231,31 +330,35 @@
   function render() {
     sendBtn.disabled = state.busy;
     log.innerHTML = "";
+    renderChips();
 
     if (!state.messages.length) {
       var welcome = document.createElement("div");
       welcome.className = "msg assistant";
-      welcome.textContent = state.config ? state.config.welcomeMessage : "Hi! How can I help?";
+      welcome.textContent = (state.page && state.page.welcome) || (state.config ? state.config.welcomeMessage : "Hi! How can I help?");
       log.appendChild(welcome);
-
-      var qs = state.config ? state.config.suggestedQuestions : [];
-      if (qs.length) {
-        var list = document.createElement("div");
-        list.className = "suggestions";
-        qs.forEach(function (q) {
-          var b = document.createElement("button");
-          b.type = "button";
-          b.className = "chip";
-          b.textContent = q;
-          b.addEventListener("click", function () { send(q); });
-          list.appendChild(b);
-        });
-        log.appendChild(list);
-      }
       return;
     }
 
     state.messages.forEach(function (m) { log.appendChild(bubble(m)); });
+  }
+
+  // Follow-ups from the last answer on this page, else this page's chips (page → section → home).
+  function renderChips() {
+    var items = [];
+    if (state.followups && state.followups.path === currentPath && state.messages.length) items = state.followups.items;
+    else if (state.page && state.page.chips) items = state.page.chips.slice(0, 4);
+    else if (state.config && state.config.defaultChips) items = state.config.defaultChips.slice(0, 4);
+    chipsEl.innerHTML = "";
+    chipsEl.hidden = state.busy || !items.length;
+    items.forEach(function (q) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = q;
+      b.addEventListener("click", function () { send(q); });
+      chipsEl.appendChild(b);
+    });
   }
 
   function updateLast() {
@@ -301,6 +404,19 @@
     } catch {
       return [];
     }
+  }
+
+  function loadJSON(key, fallback) {
+    try {
+      var v = sessionStorage.getItem(key);
+      return v === null ? fallback : JSON.parse(v);
+    } catch {
+      return fallback;
+    }
+  }
+
+  function saveFollowups() {
+    try { sessionStorage.setItem(storageKey + ":followups", JSON.stringify(state.followups)); } catch { /* ignore */ }
   }
 
   function loadOpen() {
@@ -366,15 +482,36 @@
   }
 
   // Input is already HTML-escaped; only add tags we construct ourselves.
+  // Phone numbers become tap-to-call links and street addresses become map links (§4 Actions).
+  var PHONE = "(?:\\+?1[-.\\s])?\\(?\\d{3}\\)?[-.\\s]\\d{3}[-.\\s]\\d{4}";
+  var CRISIS = "(?:dial|call) 988|text 838255";
+  var STREET = "\\b\\d{2,5} (?:[A-Z][a-z]+\\.? ){1,3}(?:Rd|Road|Ave|Avenue|St|Street|Loop|Blvd|Dr|Drive|Ln|Lane|Hwy|Way|Ct|Pl|Cir|Circle)\\b\\.?(?:,? (?:Suite|Ste\\.?|Bldg\\.?|Building) [\\w-]+)?(?:, ?Quantico(?:, ?VA)?(?: \\d{5})?)?";
+  var INLINE = new RegExp(
+    "\\[([^\\]]+)\\]\\(((?:https?:\\/\\/|mailto:|tel:)[^\\s)]+)\\)|(https?:\\/\\/[^\\s<]*[^\\s<.,;:!?)\\]])|\\*\\*([^*]+)\\*\\*|(" + CRISIS + ")|(" + PHONE + ")|(" + STREET + ")",
+    "g"
+  );
+
   function inline(s) {
-    return s.replace(
-      /\[([^\]]+)\]\(((?:https?:\/\/|mailto:|tel:)[^\s)]+)\)|(https?:\/\/[^\s<]*[^\s<.,;:!?)\]])|\*\*([^*]+)\*\*/g,
-      function (_, text, href, bare, bold) {
-        if (href) return link(href, text);
-        if (bare) return link(bare, bare);
-        return "<strong>" + bold + "</strong>";
+    return s.replace(INLINE, function (_, text, href, bare, bold, crisis, phone, street) {
+      if (href) return link(href, text);
+      if (bare) return link(bare, bare);
+      if (bold) return "<strong>" + inline(bold) + "</strong>";
+      if (crisis) {
+        var sms = /838255/.test(crisis);
+        return '<a href="' + (sms ? "sms:838255" : "tel:988") + '">' + crisis + "</a>";
       }
-    );
+      if (phone) return '<a href="tel:' + phone.replace(/[^\d+]/g, "") + '">' + phone + "</a>";
+      if (street) {
+        var place = unescapeHtml(street);
+        if (!/Quantico/i.test(place) && state.config && state.config.location) place += ", " + state.config.location;
+        return '<a href="https://www.google.com/maps/search/?api=1&amp;query=' + encodeURIComponent(place) + '" target="_blank" rel="noopener noreferrer">' + street + "</a>";
+      }
+      return _;
+    });
+  }
+
+  function unescapeHtml(s) {
+    return s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
   }
 
   function link(href, text) {
@@ -452,10 +589,19 @@
       ".msg ul, .msg ol { margin: 4px 0 8px; padding-left: 20px; } .msg li { margin: 2px 0; }",
       ".msg a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }",
 
-      ".suggestions { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }",
-      ".chip { text-align: left; padding: 9px 13px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink);",
-      "  font: inherit; font-size: 14px; cursor: pointer; }",
+      ".chips { display: flex; gap: 8px; padding: 10px 12px 2px; overflow-x: auto; scrollbar-width: none; background: var(--bg); border-top: 1px solid var(--line); }",
+      ".chips::-webkit-scrollbar { display: none; }",
+      "@media (min-width: 641px) { .chips { flex-wrap: wrap; overflow-x: visible; } }",
+      ".chip { flex: none; text-align: left; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink);",
+      "  font: inherit; font-size: 14px; white-space: nowrap; cursor: pointer; }",
       ".chip:hover { border-color: var(--primary); color: var(--primary); }",
+      ".nudge { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(16px, env(safe-area-inset-bottom)) + 58px);",
+      "  display: flex; align-items: center; max-width: min(280px, calc(100vw - 32px)); background: #fff; color: var(--ink); border: 1px solid var(--line);",
+      "  border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.18); animation: pop .2s ease-out; }",
+      "@keyframes pop { from { transform: translateY(6px); opacity: 0; } to { transform: none; opacity: 1; } }",
+      ".nudge-text { flex: 1; min-width: 0; padding: 10px 4px 10px 14px; border: 0; background: none; color: inherit; font: inherit; font-size: 14px; text-align: left; cursor: pointer; }",
+      ".nudge-close { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border: 0; background: none; color: var(--muted); cursor: pointer; }",
+      ".nudge-close svg { width: 16px; height: 16px; }",
 
       ".typing { display: inline-flex; gap: 4px; padding: 4px 0; }",
       ".typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite both; }",
@@ -463,6 +609,7 @@
       "@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }",
 
       ".composer { display: flex; align-items: flex-end; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: var(--bg); }",
+      ".chips:not([hidden]) + .composer { border-top: 0; }",
       // 16px font stops iOS Safari from zooming in when the field is focused.
       "textarea { flex: 1; resize: none; max-height: 120px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 22px;",
       "  font: inherit; font-size: 16px; line-height: 1.35; color: var(--ink); background: #fff; }",
@@ -471,7 +618,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 12px; color: var(--muted); background: var(--bg); text-align: center; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i { animation: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge { animation: none; } }",
     ].join("\n");
   }
 })();

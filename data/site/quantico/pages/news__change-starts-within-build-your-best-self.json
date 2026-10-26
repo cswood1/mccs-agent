@@ -68,5 +68,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/change-starts-within-build-your-best-self",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I get feedback from others?",
+    "Can I talk to a counselor here?",
+    "What's the first step to change?",
+    "How does gratitude help me?"
+  ],
+  "chipsSourceHash": "02096cff7a49e20f"
 }

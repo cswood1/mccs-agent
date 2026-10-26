@@ -92,5 +92,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/red-ribbon-week-life-is-a-puzzle-solve-it-drug-free",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Red Ribbon Week?",
+    "How do I sign the pledge?",
+    "Who can participate in this?"
+  ],
+  "chipsSourceHash": "99563ed465190764"
 }

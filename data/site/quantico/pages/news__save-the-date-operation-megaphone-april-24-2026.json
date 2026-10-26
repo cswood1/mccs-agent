@@ -50,5 +50,11 @@
   ],
   "notCaptured": "Audio player control visible on page; publication date shown elsewhere on page as 'Published: 15 Apr 2026'",
   "url": "https://quantico.usmc-mccs.org/news/save-the-date-operation-megaphone-april-24-2026",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Operation Megaphone?",
+    "How do I join Operation Megaphone?",
+    "Can I do OMP online or in person?"
+  ],
+  "chipsSourceHash": "88030f1f0375b2fe"
 }

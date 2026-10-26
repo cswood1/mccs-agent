@@ -147,5 +147,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lunga-park",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does Lunga Park close?",
+    "How much is a cabin rental?",
+    "Can I bring my dog?",
+    "When is the Boathouse open?"
+  ],
+  "chipsSourceHash": "4a6b82e238010518"
 }

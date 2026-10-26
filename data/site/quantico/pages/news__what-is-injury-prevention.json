@@ -88,5 +88,12 @@
   ],
   "notCaptured": "An audio player for listening to the content is present but not captured; a stress monitoring tool image/chart is referenced but source URL not fully accessible.",
   "url": "https://quantico.usmc-mccs.org/news/what-is-injury-prevention",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I manage stress?",
+    "What causes psychological injuries?",
+    "What's active recovery?",
+    "Where can I get help?"
+  ],
+  "chipsSourceHash": "c81beaa2fb345f57"
 }

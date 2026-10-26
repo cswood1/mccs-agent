@@ -390,5 +390,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/shopping/marine-marts-package-wine-stores",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Which Marine Mart is open latest?",
+    "When does Hot Patch open?",
+    "Is Main Side open Sundays?",
+    "Package Store hours Friday?"
+  ],
+  "chipsSourceHash": "2dbf64df5211012a"
 }

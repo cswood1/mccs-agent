@@ -50,5 +50,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/performance-dietitian-at-camp-pendleton-shares-recipes-for-success",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I meet with the dietitian?",
+    "What nutrition classes are offered?",
+    "What's the protein goal per meal?",
+    "Where do I go for nutrition help?"
+  ],
+  "chipsSourceHash": "06a4f37419e414f4"
 }

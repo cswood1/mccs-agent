@@ -67,5 +67,11 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible",
   "url": "https://quantico.usmc-mccs.org/news/goal-setting-for-growth",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the SMART goal framework?",
+    "Who can help me reach my goals?",
+    "What is Marine Corps Total Fitness?"
+  ],
+  "chipsSourceHash": "3d83b137b7730916"
 }

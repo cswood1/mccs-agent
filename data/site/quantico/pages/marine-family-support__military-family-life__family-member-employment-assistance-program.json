@@ -143,5 +143,11 @@
   "images": [],
   "notCaptured": "Event images and locations are embedded in event cards but specific event details (times, locations) are shown in the markdown section. Downloadable PDF files are referenced but not fully captured.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for FMEAP?",
+    "What workshops are coming up?",
+    "Can I get help with my resume?"
+  ],
+  "chipsSourceHash": "b74c1554bbf4b185"
 }

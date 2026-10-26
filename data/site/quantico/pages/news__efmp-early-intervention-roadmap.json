@@ -50,5 +50,10 @@
     }
   ],
   "notCaptured": "The main content area appears to contain primarily a featured image with a link to enlarge it. No descriptive text, body content, or detailed information about the EFMP Early Intervention Roadmap itself is visible on this page.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I get my child enrolled?",
+    "What ages does EFMP serve?"
+  ],
+  "chipsSourceHash": "d8566256daf85560"
 }

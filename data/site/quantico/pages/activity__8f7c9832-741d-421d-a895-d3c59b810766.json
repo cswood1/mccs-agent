@@ -41,5 +41,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/8f7c9832-741d-421d-a895-d3c59b810766",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where do I go to take this class?",
+    "How do I sign up for the seminar?"
+  ],
+  "chipsSourceHash": "d6bdff9227eb1717"
 }

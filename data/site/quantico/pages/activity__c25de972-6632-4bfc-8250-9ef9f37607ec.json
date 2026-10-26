@@ -75,5 +75,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/c25de972-6632-4bfc-8250-9ef9f37607ec",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What days can I get this sandwich?",
+    "How do I order it to go?"
+  ],
+  "chipsSourceHash": "b90e01f053c1a8cc"
 }

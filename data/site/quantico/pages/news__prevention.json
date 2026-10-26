@@ -85,5 +85,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/prevention",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the newest issue?",
+    "What topics does it cover?",
+    "Can I suggest a topic?",
+    "What was in the 2025 Q3 issue?"
+  ],
+  "chipsSourceHash": "df57c631f46f6cf1"
 }

@@ -58,5 +58,12 @@
     }
   ],
   "notCaptured": "Audio player element present but content not extractable",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is mental fitness?",
+    "How do I build mental fitness?",
+    "What resources are available?",
+    "Why does mental fitness matter?"
+  ],
+  "chipsSourceHash": "12a0a8f00869d3ea"
 }

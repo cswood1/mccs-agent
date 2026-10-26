@@ -121,5 +121,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/six-essential-tips-for-a-successful-college-application",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I find career resources?",
+    "What colleges should I apply to?",
+    "How do I prep for the ACT?",
+    "Who helps with applications?"
+  ],
+  "chipsSourceHash": "5fbbb29ba53b89db"
 }

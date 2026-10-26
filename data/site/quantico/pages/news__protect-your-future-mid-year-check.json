@@ -74,5 +74,12 @@
   ],
   "notCaptured": "SGLI Benefits Infographic mentioned but image not fully accessible in provided content",
   "url": "https://quantico.usmc-mccs.org/news/protect-your-future-mid-year-check",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I update my SGLI benefits?",
+    "What should I review in my budget?",
+    "Where can I get financial help?",
+    "Why do a mid-year financial check?"
+  ],
+  "chipsSourceHash": "fce4c9d335be3c1f"
 }

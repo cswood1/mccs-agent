@@ -54,5 +54,12 @@
   ],
   "notCaptured": "Audio player embedded on page (Listen | 0:00 controls); infographic image showing daily routine tips displays but specific text content within the image was not transcribed",
   "url": "https://quantico.usmc-mccs.org/news/routines-that-help",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What routines help after trauma?",
+    "Where do I find behavioral health?",
+    "What areas should I focus on?",
+    "Who should I talk to first?"
+  ],
+  "chipsSourceHash": "62e44d59a25a720a"
 }

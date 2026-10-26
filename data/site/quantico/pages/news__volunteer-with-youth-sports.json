@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/volunteer-with-youth-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What sports can I coach?",
+    "Do I need coaching experience?",
+    "How do I start volunteering?",
+    "What age kids play?"
+  ],
+  "chipsSourceHash": "ea208122bfe9a09b"
 }

@@ -126,5 +126,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/personal-training",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much for 3 sessions?",
+    "Do I need a doctor's note?",
+    "What's included in assessment?",
+    "When can I schedule workouts?"
+  ],
+  "chipsSourceHash": "c8ba850aaa75e6f1"
 }

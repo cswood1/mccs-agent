@@ -7,12 +7,15 @@
   "location": "Quantico, Virginia",
   "localContext": "Marine Corps Base Quantico is in Prince William County, Virginia, about 35 miles south of Washington, D.C., along I-95. It is home to Marine Corps Combat Development Command, The Basic School, and Officer Candidates School, and hosts the FBI Academy. The National Museum of the Marine Corps is just outside the main gate in Triangle, Virginia. Visitors include active-duty Marines and students in training, their families, retirees, DoD civilians, and guests.",
   "welcomeMessage": "Hi! I can help you find facilities, hours, programs, and events at MCCS Quantico. What are you looking for?",
-  "suggestedQuestions": [
-    "Where are the gyms and what are their hours?",
-    "Am I eligible for tuition assistance, and how do I get my Joint Services Transcript?",
-    "What child care options are on base?",
-    "What's happening this week?"
+  "defaultChips": [
+    "I just PCS'd here, where do I start?",
+    "Which gyms are open today?",
+    "What's happening this weekend?",
+    "Child care options on base",
+    "Help me use Tuition Assistance",
+    "Where can I eat on base?"
   ],
+  "nudge": true,
   "trustedDomains": [
     "quantico.usmc-mccs.org",
     "jst.doded.mil",

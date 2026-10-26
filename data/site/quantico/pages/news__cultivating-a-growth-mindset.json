@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/cultivating-a-growth-mindset",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I shift to a growth mindset?",
+    "How long does mindset change take?"
+  ],
+  "chipsSourceHash": "2fff1d29742bf913"
 }

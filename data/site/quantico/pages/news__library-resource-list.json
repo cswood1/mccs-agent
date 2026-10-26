@@ -56,5 +56,12 @@
   ],
   "notCaptured": "The page contains a linked PDF document (view most recent list) whose content is not accessible via the provided HTML.",
   "url": "https://quantico.usmc-mccs.org/news/library-resource-list",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where's the library located?",
+    "What are the library hours?",
+    "Can I check out books?",
+    "How do I get a library card?"
+  ],
+  "chipsSourceHash": "0b9a3cebf0c29f20"
 }

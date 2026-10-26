@@ -50,5 +50,12 @@
   ],
   "notCaptured": "The main article body content does not appear in the page markup; only the headline, featured image, and related story cards are visible. Full article text may load dynamically.",
   "url": "https://quantico.usmc-mccs.org/news/fueling-the-mission-a-tactical-guide-to-grocery-shopping",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I save money on groceries?",
+    "What stores does MCCS recommend?",
+    "Where's the nearest commissary?",
+    "Any tips for meal planning?"
+  ],
+  "chipsSourceHash": "65aa459e5949201a"
 }

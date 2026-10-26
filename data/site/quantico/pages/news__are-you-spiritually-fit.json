@@ -54,5 +54,11 @@
   ],
   "notCaptured": "Audio player element (0:00 / 0:00) - functionality and any associated content not captured; survey feedback form with control number USMC-25-042",
   "url": "https://quantico.usmc-mccs.org/news/are-you-spiritually-fit",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is spiritual fitness?",
+    "Can I talk to a chaplain?",
+    "What resources are available?"
+  ],
+  "chipsSourceHash": "d9a5158e54a11edc"
 }

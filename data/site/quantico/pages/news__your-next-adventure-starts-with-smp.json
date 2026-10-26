@@ -105,5 +105,12 @@
   ],
   "notCaptured": "Audio player control for embedded media (listen function at 0:00)",
   "url": "https://quantico.usmc-mccs.org/news/your-next-adventure-starts-with-smp",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I join SMP?",
+    "Where's the Recreation Center?",
+    "Can I serve on the SMP Council?",
+    "What kind of events does SMP host?"
+  ],
+  "chipsSourceHash": "2526b830b3f756c5"
 }

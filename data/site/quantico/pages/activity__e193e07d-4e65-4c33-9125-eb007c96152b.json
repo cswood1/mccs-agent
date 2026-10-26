@@ -61,5 +61,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/e193e07d-4e65-4c33-9125-eb007c96152b",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the registration deadline?",
+    "How do I sign up for the workshop?",
+    "Where should I park for this?"
+  ],
+  "chipsSourceHash": "1aa8a0837a6f2a3a"
 }

@@ -55,5 +55,10 @@
     }
   ],
   "notCaptured": "Audio player control visible (Listen | 0:00)",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the ELM curriculum?",
+    "How can I help my child at home?"
+  ],
+  "chipsSourceHash": "fd48404a55fe8947"
 }

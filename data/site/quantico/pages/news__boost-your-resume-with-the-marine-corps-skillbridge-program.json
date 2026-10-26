@@ -64,5 +64,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/boost-your-resume-with-the-marine-corps-skillbridge-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is SkillBridge?",
+    "Does SkillBridge cost money?",
+    "Am I eligible for SkillBridge?",
+    "How do I join SkillBridge?"
+  ],
+  "chipsSourceHash": "c0617caf8913b13c"
 }

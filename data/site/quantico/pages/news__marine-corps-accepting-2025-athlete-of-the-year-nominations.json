@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-accepting-2025-athlete-of-the-year-nominations",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I nominate someone?",
+    "What's the deadline?",
+    "What documents do I need to submit?",
+    "Does my CO need to approve this?"
+  ],
+  "chipsSourceHash": "71175acfa67d025c"
 }

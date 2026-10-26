@@ -50,5 +50,12 @@
     }
   ],
   "notCaptured": "Audio player control visible but content not accessible; specific contact details for Semper Fit Health Promotion Program not provided in main content",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is dripping exactly?",
+    "How can Semper Fit help me quit?",
+    "Why is dripping more dangerous?",
+    "When's the next cessation class?"
+  ],
+  "chipsSourceHash": "8dca44e2947beee8"
 }

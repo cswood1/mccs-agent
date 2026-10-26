@@ -71,5 +71,12 @@
   ],
   "notCaptured": "The main article content beneath the image appears to load dynamically or was not visible in the provided HTML.",
   "url": "https://quantico.usmc-mccs.org/news/strength-in-numbers-your-tribe-provides-protection",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is this article about?",
+    "How does my tribe protect me?",
+    "Where can I find more stories?",
+    "Is there info on spiritual fitness?"
+  ],
+  "chipsSourceHash": "73a2372bac64226d"
 }

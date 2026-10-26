@@ -66,5 +66,11 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I help new Marines adjust?",
+    "How can I keep my unit safe?",
+    "What's my role in peer support?"
+  ],
+  "chipsSourceHash": "b46d36e59666fa81"
 }

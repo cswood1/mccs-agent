@@ -121,5 +121,10 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/stories",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I submit my own story?",
+    "Where can I read past stories?"
+  ],
+  "chipsSourceHash": "424b790497327ac6"
 }

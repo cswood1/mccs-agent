@@ -86,5 +86,11 @@
   ],
   "notCaptured": "Thumbnail image for infographic/document appears to load dynamically; full content of that document not accessible. Main body content beyond the mission statement line could not be captured; page may require additional rendering.",
   "url": "https://quantico.usmc-mccs.org/news/health-wellness-and-performance",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs do you offer here?",
+    "Who can use these services?",
+    "How do I sign up for a program?"
+  ],
+  "chipsSourceHash": "438cabe67a090314"
 }

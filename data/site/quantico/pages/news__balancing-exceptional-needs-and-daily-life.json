@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/balancing-exceptional-needs-and-daily-life",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs does MCCS offer here?",
+    "How can my family get involved?"
+  ],
+  "chipsSourceHash": "5782045d0301f491"
 }

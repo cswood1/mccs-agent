@@ -62,5 +62,12 @@
   "images": [],
   "notCaptured": "Content is loaded in tabbed sections (First Permanent Duty Station, Reenlistment, Promotion, Deployment/Redeployment, Permanent Change of Station, Mobilization / Demobilization, A Major Life Event, Transition, Veteran). Only the first several tabs visible were fully extracted; remaining tabs beyond PCS contain similar structural content but were not fully scrolled/captured in the source document.",
   "url": "https://quantico.usmc-mccs.org/about/marine-for-life-cycle",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When do I need to complete PRS?",
+    "What does the ESO help with?",
+    "How do I update my address?",
+    "What is the Single Marine Program?"
+  ],
+  "chipsSourceHash": "12039269405c2988"
 }

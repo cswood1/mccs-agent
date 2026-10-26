@@ -65,5 +65,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/talk-to-your-teens-about-dating-relationships",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are signs of dating abuse?",
+    "Where do I get help for my teen?"
+  ],
+  "chipsSourceHash": "365e703aa52f3307"
 }

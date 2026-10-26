@@ -60,5 +60,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/shape-the-next-generation-as-a-youth-sports-coach",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I become a coach?",
+    "What skills will kids learn?",
+    "What teamwork methods work best?",
+    "Who can volunteer to coach?"
+  ],
+  "chipsSourceHash": "712b66de9c29c469"
 }

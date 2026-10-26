@@ -54,5 +54,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/the-alcohol-screening-program-will-restart-in-june-2023",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does ASP testing start?",
+    "Who has to take the breathalyzer?",
+    "What is ASP testing for?"
+  ],
+  "chipsSourceHash": "51096402629503a0"
 }

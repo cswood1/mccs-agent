@@ -64,5 +64,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/support-peers-by-checking-in-post-leave",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I ask during check-ins?",
+    "What group activities can we do?",
+    "Where are sexual assault resources?"
+  ],
+  "chipsSourceHash": "20ccefd78c31b43d"
 }

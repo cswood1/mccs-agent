@@ -76,5 +76,10 @@
   "images": [],
   "notCaptured": "Teaser card image URLs are included in the cards array. No additional dynamic content detected.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I get help finding a job?",
+    "How do I get voting assistance?"
+  ],
+  "chipsSourceHash": "d08e3725907f5e77"
 }

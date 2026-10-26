@@ -249,5 +249,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What ages does CYP care for?",
+    "Are CDCs open on weekends?",
+    "How do I book extended hours?"
+  ],
+  "chipsSourceHash": "4110ad36ae5456e5"
 }

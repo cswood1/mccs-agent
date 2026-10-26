@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/coronavirus-update-catch-up-on-the-commandants-reading-list",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I find the reading list?",
+    "What free education is available?",
+    "How do tuition benefits work?",
+    "Can I contact School Liaison?"
+  ],
+  "chipsSourceHash": "673a17d87c86e2d6"
 }

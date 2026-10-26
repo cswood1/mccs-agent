@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/eight-healthy-tips-to-digest-during-national-nutrition-month-1",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the eight healthy tips?",
+    "How much should I move daily?"
+  ],
+  "chipsSourceHash": "98bd3e0d541eb70e"
 }

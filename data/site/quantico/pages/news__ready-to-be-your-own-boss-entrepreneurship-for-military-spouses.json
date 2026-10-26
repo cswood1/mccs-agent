@@ -89,5 +89,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/ready-to-be-your-own-boss-entrepreneurship-for-military-spouses",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the MySECO program?",
+    "What's Boots to Business?",
+    "Where do I find FMEAP?"
+  ],
+  "chipsSourceHash": "730c05531dbc3ca8"
 }

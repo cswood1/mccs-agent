@@ -51,5 +51,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/270d7a50-6a3e-4a6c-a2a9-e8adec0e601d",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time is Candy Cane Lane?",
+    "Where is the museum located?",
+    "Can I take pictures with Santa?",
+    "How do I register for this?"
+  ],
+  "chipsSourceHash": "c6ebfaf703b8c4de"
 }

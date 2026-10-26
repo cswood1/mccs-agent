@@ -102,5 +102,12 @@
   ],
   "notCaptured": "Audio player control visible but not accessible to extraction",
   "url": "https://quantico.usmc-mccs.org/news/how-to-keep-your-kids-away-from-the-rough-stuff",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next golf clinic?",
+    "How much does it cost?",
+    "What do kids get with signup?",
+    "Can parents play on Graduation Day?"
+  ],
+  "chipsSourceHash": "b06f3d0f12d7612e"
 }

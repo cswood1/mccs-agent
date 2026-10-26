@@ -75,5 +75,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/honoring-gold-star-mothers-and-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Gold Star Mother's Day?",
+    "What support does LTAP provide?",
+    "Can I contact LTAP for resources?",
+    "What's the LTAP phone number?"
+  ],
+  "chipsSourceHash": "a13a44029258d40d"
 }

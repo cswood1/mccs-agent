@@ -106,5 +106,12 @@
     }
   ],
   "notCaptured": "Audio player control visible but content not captured",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What discounts does MCX offer?",
+    "How much can I save at MCX?",
+    "When can my kid claim their reward?",
+    "What grades qualify for the reward?"
+  ],
+  "chipsSourceHash": "e278e9f008939fba"
 }

@@ -74,5 +74,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/be-prepared-for-individualized-education-program-iep",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What laws cover IEPs?",
+    "How do I prepare my records?",
+    "Who's on the IEP team?",
+    "Can EFMP help me?"
+  ],
+  "chipsSourceHash": "636b98bcd6d4ac7a"
 }

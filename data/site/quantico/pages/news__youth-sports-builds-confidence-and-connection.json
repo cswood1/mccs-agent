@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/youth-sports-builds-confidence-and-connection",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What skills will my kid learn?",
+    "Are there programs at Quantico?"
+  ],
+  "chipsSourceHash": "aef57f71760f7f87"
 }

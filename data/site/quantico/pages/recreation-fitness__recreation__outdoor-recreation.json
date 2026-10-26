@@ -73,5 +73,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I book a golf tee time?",
+    "What's the cost to use the marina?",
+    "What activities are at Lunga Park?"
+  ],
+  "chipsSourceHash": "9749913544128faa"
 }

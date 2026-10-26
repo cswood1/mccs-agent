@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/are-you-ready-to-conquer-the-cft",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does the CFT actually test?",
+    "How do I find a Semper Fit coach?",
+    "Where's the CFT Prep Program?"
+  ],
+  "chipsSourceHash": "f80f728dc605409e"
 }

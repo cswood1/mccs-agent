@@ -70,5 +70,11 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible",
   "url": "https://quantico.usmc-mccs.org/news/military-sexual-trauma",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is military sexual trauma?",
+    "How do I find MST services near me?",
+    "Can I choose a clinician's gender?"
+  ],
+  "chipsSourceHash": "24d6cf9a70a7a317"
 }

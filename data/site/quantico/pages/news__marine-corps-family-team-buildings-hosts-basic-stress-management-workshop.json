@@ -54,5 +54,12 @@
   ],
   "notCaptured": "Audio player for workshop content; dynamic story cards may load additional content",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-family-team-buildings-hosts-basic-stress-management-workshop",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the workshop?",
+    "How much does it cost?",
+    "Who can attend?",
+    "How do I sign up?"
+  ],
+  "chipsSourceHash": "8c1712ff6dcb525d"
 }

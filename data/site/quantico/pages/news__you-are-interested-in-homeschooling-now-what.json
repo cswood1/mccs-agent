@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/you-are-interested-in-homeschooling-now-what",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Does DoDEA help with curriculum?",
+    "What is HSLDA and do they help?",
+    "Where do I find my School Liaison?"
+  ],
+  "chipsSourceHash": "db9510e36551c5c8"
 }

@@ -65,5 +65,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/services",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where's the post office located?",
+    "How much does a haircut cost?"
+  ],
+  "chipsSourceHash": "9ed80bae08a5f614"
 }

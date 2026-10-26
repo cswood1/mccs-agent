@@ -86,5 +86,10 @@
   ],
   "notCaptured": "Audio player control (Listen | 0:00) present; expandable image thumbnail with enlargement functionality; survey feedback form at page bottom.",
   "url": "https://quantico.usmc-mccs.org/news/key-programs-supporting-military-families-in-transition-community-engagement-and-career-advancement",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs does MCCS offer?",
+    "How can my family get support?"
+  ],
+  "chipsSourceHash": "85ff1bc747ce82ea"
 }

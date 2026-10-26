@@ -60,5 +60,12 @@
   ],
   "notCaptured": "Event date and time: Tuesday, November 10, 2026, 1:00 PM - 3:00 PM (displayed in separate structured fields on the page)",
   "url": "https://quantico.usmc-mccs.org/activity/ae8a8d6c-ae2b-41b1-bbf1-f5198b3756e3",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does registration close?",
+    "Where do I park for this?",
+    "How do I sign up?",
+    "Can I just walk in?"
+  ],
+  "chipsSourceHash": "c1a5e90747bc788e"
 }

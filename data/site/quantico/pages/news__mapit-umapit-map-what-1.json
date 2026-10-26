@@ -70,5 +70,11 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does UMAPIT stand for?",
+    "Who has to do UMAPIT training?",
+    "What topics does UMAPIT cover?"
+  ],
+  "chipsSourceHash": "4cfaf584a57d27b5"
 }

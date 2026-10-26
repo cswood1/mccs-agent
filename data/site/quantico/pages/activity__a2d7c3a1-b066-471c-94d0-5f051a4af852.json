@@ -52,5 +52,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/a2d7c3a1-b066-471c-94d0-5f051a4af852",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the PCS workshop start?",
+    "How do I register for this class?",
+    "Where should I park?",
+    "Is attendance required?"
+  ],
+  "chipsSourceHash": "a89a76207dca616d"
 }

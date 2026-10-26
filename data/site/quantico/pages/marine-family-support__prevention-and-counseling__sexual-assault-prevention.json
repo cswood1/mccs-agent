@@ -167,5 +167,12 @@
   ],
   "notCaptured": "This URL (sexual-assault-prevention) redirected/resolved to the same content as the Prevention and Counseling hub page (sexual-assault-prevention-and-response is the actual sub-page, not captured here); page shown has no unique SAPR-specific body content, just hub cards.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the Victim Advocacy Program?",
+    "How do I contact Semper Support?",
+    "Does Military OneSource cost money?",
+    "How can New Parent Support help me?"
+  ],
+  "chipsSourceHash": "1e29640835c8346d"
 }

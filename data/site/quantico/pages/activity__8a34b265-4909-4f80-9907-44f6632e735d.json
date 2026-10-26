@@ -48,5 +48,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/8a34b265-4909-4f80-9907-44f6632e735d",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next orientation class?",
+    "How do I sign up for the class?"
+  ],
+  "chipsSourceHash": "623e950d397b34e6"
 }

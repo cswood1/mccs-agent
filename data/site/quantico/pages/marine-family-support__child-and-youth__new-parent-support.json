@@ -140,5 +140,12 @@
   "images": [],
   "notCaptured": "NPSP Events section references [list] and [Grid] view toggles but no event content is visible in provided HTML",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What ages can join this program?",
+    "How often do home visitors come?",
+    "What's Baby Boot Camp about?",
+    "Can active duty moms join groups?"
+  ],
+  "chipsSourceHash": "cffd2da2bebf857c"
 }

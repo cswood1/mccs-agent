@@ -90,5 +90,10 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/about/business-partners",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I become an MCCS vendor?",
+    "What equipment does MCCS procure?"
+  ],
+  "chipsSourceHash": "739a53dcd10eb18d"
 }

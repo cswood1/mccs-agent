@@ -153,5 +153,11 @@
     }
   ],
   "notCaptured": "Audio player for article content appears but content not transcribed",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I chat with someone online?",
+    "Can I get the app for my phone?",
+    "How do I find local resources?"
+  ],
+  "chipsSourceHash": "06774e8854ebf760"
 }

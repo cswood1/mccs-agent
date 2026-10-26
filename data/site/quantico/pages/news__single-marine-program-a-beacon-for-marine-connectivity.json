@@ -75,5 +75,12 @@
   ],
   "notCaptured": "Audio player with listen control and timestamp display",
   "url": "https://quantico.usmc-mccs.org/news/single-marine-program-a-beacon-for-marine-connectivity",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What activities does SMP offer?",
+    "How do I join the SMP council?",
+    "Where are the recreation centers?",
+    "What community service can I do?"
+  ],
+  "chipsSourceHash": "1fd8c3b5f3db9c61"
 }

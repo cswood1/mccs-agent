@@ -90,5 +90,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/summer-is-the-perfect-time-to-volunteer-1",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What volunteer jobs are available?",
+    "Can I volunteer for Youth Sports?",
+    "What summer programs need help?",
+    "How do I get started volunteering?"
+  ],
+  "chipsSourceHash": "d057665e7ed8f5d3"
 }

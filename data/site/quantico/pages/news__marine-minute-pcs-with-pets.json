@@ -50,5 +50,12 @@
   ],
   "notCaptured": "The main content of the 'Marine Minute: PCS with Pets' article appears to load dynamically or as embedded video/media content that is not visible in the static HTML provided.",
   "url": "https://quantico.usmc-mccs.org/news/marine-minute-pcs-with-pets",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I move my pet?",
+    "What pets can I bring?",
+    "Where do I find PCS pet help?",
+    "Are there pet moving costs?"
+  ],
+  "chipsSourceHash": "6d4302385ddd7e37"
 }

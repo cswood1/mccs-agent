@@ -88,5 +88,10 @@
   ],
   "notCaptured": "Audio player control for article narration; exact time duration not visible",
   "url": "https://quantico.usmc-mccs.org/news/the-marine-path-of-growth-leadership-and-lifelong-purpose",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I volunteer while active duty?",
+    "What does SkillBridge help with?"
+  ],
+  "chipsSourceHash": "02f227c752accb65"
 }

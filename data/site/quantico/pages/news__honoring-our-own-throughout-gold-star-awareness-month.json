@@ -86,5 +86,12 @@
     }
   ],
   "notCaptured": "Audio player for article narration (0:00 / 0:00 shown but content not accessible)",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Gold Star Awareness Month?",
+    "Can I contact LTAP for support?",
+    "What services does LTAP provide?",
+    "How do I reach the LTAP program?"
+  ],
+  "chipsSourceHash": "ea20b54eb0d7ce10"
 }

@@ -69,5 +69,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/tips-for-staying-centered-in-recovery",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the 4 tips for recovery?",
+    "How do I recognize warning signs?",
+    "What services does SACC provide?"
+  ],
+  "chipsSourceHash": "07feda4891b357b8"
 }

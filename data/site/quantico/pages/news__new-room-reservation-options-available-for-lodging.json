@@ -66,5 +66,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/new-room-reservation-options-available-for-lodging",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I book a room?",
+    "Can I book overseas?",
+    "Where are Marine Lodge locations?",
+    "What's included in MCHS?"
+  ],
+  "chipsSourceHash": "43f667051d930022"
 }

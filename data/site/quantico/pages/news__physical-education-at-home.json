@@ -54,5 +54,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/physical-education-at-home",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What ages is this PE for?",
+    "Can high schoolers use this?",
+    "How is the PE broken up?",
+    "Where do I find the activities?"
+  ],
+  "chipsSourceHash": "f8f6ef8156c8a9da"
 }

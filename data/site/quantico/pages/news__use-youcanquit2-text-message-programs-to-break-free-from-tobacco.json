@@ -62,5 +62,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/use-youcanquit2-text-message-programs-to-break-free-from-tobacco",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I start a text program?",
+    "Which program helps quit vaping?",
+    "Can I use this with counseling?",
+    "Are there programs for teens?"
+  ],
+  "chipsSourceHash": "8f7bc91880c40b80"
 }

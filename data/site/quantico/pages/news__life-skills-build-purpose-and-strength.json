@@ -63,5 +63,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/life-skills-build-purpose-and-strength",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the five life skills?",
+    "How do I build these skills?",
+    "What does WARR help with?",
+    "Can spouses use these resources?"
+  ],
+  "chipsSourceHash": "a08122fa9cca0ef9"
 }

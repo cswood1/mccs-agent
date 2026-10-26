@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/amphibious-excellence-elevating-water-readiness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for S3T training?",
+    "What swimming strokes will I learn?",
+    "How often do Marines requalify?",
+    "What is the S3T program?"
+  ],
+  "chipsSourceHash": "126ca636cd8da169"
 }

@@ -45,5 +45,12 @@
   ],
   "notCaptured": "Event date/time details displayed in separate informational boxes (Date: Friday, November 6, 2026; Time: 10:00 AM - 11:00 AM)",
   "url": "https://quantico.usmc-mccs.org/activity/ffc2dd72-82bb-4520-a300-5de81ceea679",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next orientation class?",
+    "What topics does the class cover?",
+    "How do I register for a class?",
+    "Can I call with questions?"
+  ],
+  "chipsSourceHash": "b3e1e3dfde45457d"
 }

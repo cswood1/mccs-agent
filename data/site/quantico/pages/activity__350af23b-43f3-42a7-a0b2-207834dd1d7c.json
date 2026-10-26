@@ -46,5 +46,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/350af23b-43f3-42a7-a0b2-207834dd1d7c",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does First Friday start?",
+    "Who can go to this event?",
+    "Do they have free food and drinks?"
+  ],
+  "chipsSourceHash": "5c0bf87c21e70d58"
 }

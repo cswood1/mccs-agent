@@ -71,5 +71,12 @@
   ],
   "notCaptured": "The main article content appears to be image-based (an enlargeable graphic shown via a 'CLICK TO ENLARGE' link). The actual text content of the article is not visible/extractable as text from the fetched page.",
   "url": "https://quantico.usmc-mccs.org/news/is-drinking-draining-your-wallet",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this article about?",
+    "How can I save money on drinks?",
+    "When was this published?",
+    "Are there other wellness articles?"
+  ],
+  "chipsSourceHash": "7c5fbd1be383b6d3"
 }

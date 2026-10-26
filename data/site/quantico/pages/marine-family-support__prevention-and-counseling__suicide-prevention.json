@@ -206,5 +206,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/suicide-prevention",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I call 988?",
+    "Can I text for help?",
+    "What's the A.C.T. tool?",
+    "How do I secure my firearms?"
+  ],
+  "chipsSourceHash": "d9fc59b5253f3208"
 }

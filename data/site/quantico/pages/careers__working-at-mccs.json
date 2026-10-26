@@ -170,5 +170,12 @@
   "images": [],
   "notCaptured": "On this page navigation links appear as interactive elements but only text labels are captured; Training Ethos LMS portal functionality with dynamic interface elements; PeopleSoft login integration details",
   "url": "https://quantico.usmc-mccs.org/careers/working-at-mccs",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I access Ethos training?",
+    "What's my Ethos login username?",
+    "Where's Quantico HR located?",
+    "What are HR office hours?"
+  ],
+  "chipsSourceHash": "090693547a65e8ca"
 }

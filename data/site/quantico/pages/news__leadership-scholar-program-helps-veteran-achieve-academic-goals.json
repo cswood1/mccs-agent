@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/leadership-scholar-program-helps-veteran-achieve-academic-goals",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can apply to the LSP?",
+    "How do I contact the program?"
+  ],
+  "chipsSourceHash": "1031167be926194e"
 }

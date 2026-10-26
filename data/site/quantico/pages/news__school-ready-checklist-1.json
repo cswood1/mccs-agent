@@ -50,5 +50,10 @@
     }
   ],
   "notCaptured": "The main content area appears to contain primarily an image asset labeled 'School Ready Checklist' with minimal accompanying text. No detailed checklist items or structured content are visible in the fetched page.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I find this checklist?",
+    "How do I use this checklist?"
+  ],
+  "chipsSourceHash": "7f5113606409e70c"
 }

@@ -898,5 +898,10 @@
   "images": [],
   "notCaptured": "The page contains a searchable directory interface with an alphabetically organized contact list that appears to load dynamically based on user search/selection.",
   "url": "https://quantico.usmc-mccs.org/about/contact-us",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I reach the pool?",
+    "Where's the contact for child care?"
+  ],
+  "chipsSourceHash": "c4d5deb6c9b8e2b0"
 }

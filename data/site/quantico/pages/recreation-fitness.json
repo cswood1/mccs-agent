@@ -65,5 +65,10 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I join Semper Fit?",
+    "Who can use recreation and fitness?"
+  ],
+  "chipsSourceHash": "2b3524f907135c93"
 }

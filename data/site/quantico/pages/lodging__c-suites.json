@@ -119,5 +119,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/lodging/c-suites",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's included in the kitchen?",
+    "How do I book a suite?",
+    "Can I bring my dog?"
+  ],
+  "chipsSourceHash": "5edb333e10309562"
 }

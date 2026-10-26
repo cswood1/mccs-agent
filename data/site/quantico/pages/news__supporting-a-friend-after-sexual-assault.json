@@ -105,5 +105,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/supporting-a-friend-after-sexual-assault",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I say to support them?",
+    "What phrases should I avoid saying?"
+  ],
+  "chipsSourceHash": "0cc64e368ddadd32"
 }

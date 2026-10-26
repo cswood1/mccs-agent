@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/stars-transition-is-a-family-affair",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What topics does STARS cover?",
+    "How do I sign up for STARS?",
+    "Who can attend STARS?"
+  ],
+  "chipsSourceHash": "5d128d97394c5ee0"
 }

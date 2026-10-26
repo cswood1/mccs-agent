@@ -77,5 +77,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/building-your-professional-network",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs help with networking?",
+    "How do I access the TRP?"
+  ],
+  "chipsSourceHash": "5e7062554e88f0c2"
 }

@@ -83,5 +83,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/honoring-cyp-nurses-on-national-nurses-day",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What do CYP nurses actually do?",
+    "Who do CYP nurses teach?",
+    "When is National Nurses Day?",
+    "How do CYP nurses keep kids safe?"
+  ],
+  "chipsSourceHash": "a2055c39d1fbe77e"
 }

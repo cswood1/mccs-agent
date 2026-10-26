@@ -66,5 +66,10 @@
     }
   ],
   "notCaptured": "The page appears to be a news/story article about Master REM Sleep published 06 Jun 2026, but the main body content of the article is not visible in the fetched page. Only the image, title, and related stories cards are present.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for this program?",
+    "When does Master REM Sleep start?"
+  ],
+  "chipsSourceHash": "fcc2a5e50e2a290e"
 }

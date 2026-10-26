@@ -44,5 +44,11 @@
   "images": [],
   "notCaptured": "Holiday events list content loads dynamically via JavaScript list/grid toggle; specific event details not present in static HTML",
   "url": "https://quantico.usmc-mccs.org/about/holiday-events",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When are the holiday events?",
+    "What holiday events do you have?",
+    "How do I sign up for events?"
+  ],
+  "chipsSourceHash": "5bd2984ce5834788"
 }

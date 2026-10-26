@@ -71,5 +71,10 @@
   ],
   "notCaptured": "The main body content of the PSA (image-based material) cannot be extracted as text; only the promotional image and publication date are visible.",
   "url": "https://quantico.usmc-mccs.org/news/school-liaison-psa",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does a school liaison do?",
+    "When should I reach out to them?"
+  ],
+  "chipsSourceHash": "07c5ad1bf879463a"
 }

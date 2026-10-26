@@ -55,5 +55,11 @@
   ],
   "notCaptured": "Audio player control with timestamp display (0:00/0:00) appears to be embedded but non-functional on static page view.",
   "url": "https://quantico.usmc-mccs.org/news/warr-building-strength-that-lasts",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does WARR stand for?",
+    "Can family members join WARR?",
+    "How do I get started with WARR?"
+  ],
+  "chipsSourceHash": "8ad0cea4c5bee740"
 }

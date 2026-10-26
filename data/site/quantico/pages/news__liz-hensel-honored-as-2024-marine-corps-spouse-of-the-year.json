@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/liz-hensel-honored-as-2024-marine-corps-spouse-of-the-year",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is the MSOY program?",
+    "When was the MSOY program started?",
+    "How do I learn more about MSOY?"
+  ],
+  "chipsSourceHash": "4352baac08fd299c"
 }

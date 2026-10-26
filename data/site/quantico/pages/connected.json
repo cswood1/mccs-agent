@@ -345,5 +345,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/connected",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I create a social roster?",
+    "Can I share contact info I collect?",
+    "What if someone doesn't want calls?",
+    "How do I use the Phone Call Log?"
+  ],
+  "chipsSourceHash": "4db4c7245f2a20cc"
 }

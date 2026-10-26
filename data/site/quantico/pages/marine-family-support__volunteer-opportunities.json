@@ -215,5 +215,12 @@
   "images": [],
   "notCaptured": "Related Stories section contains card preview images that appear as teaser content; Volunteer Application and Volunteer Hours forms are available as downloadable PDFs but their full content is not visible in the HTML provided.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/volunteer-opportunities",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the age limit to volunteer?",
+    "How do I start volunteering here?",
+    "Do I need a background check?",
+    "What volunteer roles are available?"
+  ],
+  "chipsSourceHash": "850e22143f6edcb6"
 }

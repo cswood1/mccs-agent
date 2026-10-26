@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/spouse-relicensing-reimbursement-program-expands",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much can I get reimbursed?",
+    "How do I apply for reimbursement?",
+    "Am I eligible as a military spouse?"
+  ],
+  "chipsSourceHash": "7f76ce1b30f87cc2"
 }

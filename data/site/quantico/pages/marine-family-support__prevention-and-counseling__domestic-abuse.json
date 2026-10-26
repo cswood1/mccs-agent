@@ -405,5 +405,12 @@
   "images": [],
   "notCaptured": "Four placeholder images that load dynamically from the media module appear near the top of the page but have no alt text or identifiable content.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is domestic abuse?",
+    "How do I report safely?",
+    "Can I get help anonymously?",
+    "What's the Quantico FAP hotline?"
+  ],
+  "chipsSourceHash": "b0a65639edaa560b"
 }

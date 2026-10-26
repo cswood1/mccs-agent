@@ -71,5 +71,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/engaging-marines-and-promoting-connectedness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this page about?",
+    "Does this help military spouses?",
+    "Where do I find more stories?"
+  ],
+  "chipsSourceHash": "1963019ced37de06"
 }

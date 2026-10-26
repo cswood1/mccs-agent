@@ -136,5 +136,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education/nutrition-supplements-education",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next nutrition class?",
+    "How do I sign up for cooking class?",
+    "What's included in RMR testing?",
+    "Can I tour the commissary?"
+  ],
+  "chipsSourceHash": "99feaf9960932c50"
 }

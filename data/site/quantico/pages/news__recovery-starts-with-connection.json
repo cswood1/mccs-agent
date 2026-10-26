@@ -119,5 +119,11 @@
   ],
   "notCaptured": "Audio player control visible but not extractable; social sharing button placeholders present",
   "url": "https://quantico.usmc-mccs.org/news/recovery-starts-with-connection",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I build social connections?",
+    "What's the Single Marine Program?",
+    "What are the four fitness pillars?"
+  ],
+  "chipsSourceHash": "bfb8aa0502c38ef2"
 }

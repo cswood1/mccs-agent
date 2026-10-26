@@ -75,5 +75,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/more",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I give feedback?",
+    "What's the voting assistance about?",
+    "Can I sponsor MCCS events?",
+    "Where's the customer feedback form?"
+  ],
+  "chipsSourceHash": "8399a38c67792ece"
 }

@@ -198,5 +198,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/the-clubs-at-quantico",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's lunch open on weekdays?",
+    "What's the lounge open on Friday?"
+  ],
+  "chipsSourceHash": "a987682164017c7a"
 }

@@ -55,5 +55,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/ecea95ba-9932-42b6-9a22-3e6b7b0dcee3",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Holidays in the Barracks?",
+    "Who can go to this event?",
+    "How do I get there?",
+    "What's included in the gift bag?"
+  ],
+  "chipsSourceHash": "245ad86884aaecf4"
 }

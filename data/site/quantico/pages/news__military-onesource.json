@@ -136,5 +136,10 @@
   ],
   "notCaptured": "Audio player element with play/pause controls and duration timing visible but cannot extract exact audio file details. Interactive phone and chat contact buttons displayed but linked to external services.",
   "url": "https://quantico.usmc-mccs.org/news/military-onesource",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Is Military OneSource really free?",
+    "What should I do in a crisis?"
+  ],
+  "chipsSourceHash": "f6b3c53e8b87e6de"
 }

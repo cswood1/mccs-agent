@@ -62,5 +62,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/why-linkedin-is-for-you-marine-spouse",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Why should I join LinkedIn?",
+    "How do I keep my network connected?",
+    "Who can help me with my job search?"
+  ],
+  "chipsSourceHash": "da54bdceed7d9b4e"
 }

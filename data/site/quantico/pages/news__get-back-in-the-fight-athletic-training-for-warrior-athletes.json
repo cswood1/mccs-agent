@@ -50,5 +50,11 @@
   ],
   "notCaptured": "The main article content appears to be missing; only the title, hero image, and related stories section are visible on the page.",
   "url": "https://quantico.usmc-mccs.org/news/get-back-in-the-fight-athletic-training-for-warrior-athletes",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs do you offer here?",
+    "Who can participate in this?",
+    "How do I sign up for training?"
+  ],
+  "chipsSourceHash": "2b5fea238b56f914"
 }

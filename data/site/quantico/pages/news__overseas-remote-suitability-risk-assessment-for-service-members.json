@@ -50,5 +50,10 @@
   ],
   "notCaptured": "Page (published 08 Jun 2026, last updated 01 Oct 2026) has no actual article body text; only the hero image, publish dates, and related 'Other Stories' teaser links are present. Confirmed via two separate fetch attempts.",
   "url": "https://quantico.usmc-mccs.org/news/overseas-remote-suitability-risk-assessment-for-service-members",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is this assessment for?",
+    "When was this last updated?"
+  ],
+  "chipsSourceHash": "b76361365eb3a259"
 }

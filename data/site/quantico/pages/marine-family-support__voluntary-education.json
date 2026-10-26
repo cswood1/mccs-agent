@@ -393,5 +393,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/voluntary-education",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What funding options are available?",
+    "Can I take military tests here?",
+    "What testing services are offered?"
+  ],
+  "chipsSourceHash": "4e3705ca71586b64"
 }

@@ -188,5 +188,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What age kids can join FCC?",
+    "How do I sign up for care?",
+    "What if there's no space available?",
+    "Do providers work evenings?"
+  ],
+  "chipsSourceHash": "3ee3dd6349f3570a"
 }

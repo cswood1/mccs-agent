@@ -87,5 +87,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What times can I go bowling?",
+    "Can I use the Auto Skills Center?"
+  ],
+  "chipsSourceHash": "8b7cb4956f181ee1"
 }

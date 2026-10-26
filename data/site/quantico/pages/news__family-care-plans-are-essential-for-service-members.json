@@ -54,5 +54,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is a Family Care Plan?",
+    "Who needs to have one?",
+    "When should I set mine up?",
+    "How do I start my plan?"
+  ],
+  "chipsSourceHash": "f68dcbb671ff2794"
 }

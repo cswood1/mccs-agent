@@ -71,5 +71,10 @@
   ],
   "notCaptured": "The actual article body text is not present in the fetched HTML (confirmed on two separate fetch attempts, including a raw word-for-word markdown reproduction) - only the headline image, 'Other Stories' related-links block, and publisher/date metadata were available. The article body likely loads dynamically or was not present server-side at crawl time.",
   "url": "https://quantico.usmc-mccs.org/news/community-based-child-care-options",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for child care?",
+    "Where is child care located?"
+  ],
+  "chipsSourceHash": "8e76b547ac009237"
 }

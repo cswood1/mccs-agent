@@ -408,5 +408,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/education",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can use the Education Center?",
+    "What funding options are available?",
+    "What testing services do you offer?"
+  ],
+  "chipsSourceHash": "4e259a473e61f964"
 }

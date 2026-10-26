@@ -84,5 +84,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/intramural-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What sports can I sign up for?",
+    "When does basketball league start?",
+    "How do I register my team?"
+  ],
+  "chipsSourceHash": "07ec6c8aab898220"
 }

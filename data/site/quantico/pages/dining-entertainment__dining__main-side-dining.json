@@ -277,5 +277,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/main-side-dining",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does McDonald's open?",
+    "Is Mobile Canteen open on weekends?",
+    "Where is Quigley's Main Side?",
+    "When can I get lunch at The Clubs?"
+  ],
+  "chipsSourceHash": "72ce8cea232ce49a"
 }

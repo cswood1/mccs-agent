@@ -219,5 +219,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/libraries",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can get a library account here?",
+    "How long can I check out books?",
+    "How do I create an account online?"
+  ],
+  "chipsSourceHash": "6a28921ad6c3aa68"
 }

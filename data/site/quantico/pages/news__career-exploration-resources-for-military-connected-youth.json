@@ -66,5 +66,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/career-exploration-resources-for-military-connected-youth",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I find a School Liaison?",
+    "What internships are available?",
+    "Can I get help with resumes?",
+    "Does MCCS help with college?"
+  ],
+  "chipsSourceHash": "a0df1c835c2042f7"
 }

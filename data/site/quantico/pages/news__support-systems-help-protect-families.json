@@ -96,5 +96,12 @@
   ],
   "notCaptured": "Audio player control for listening to page content; dynamic survey control element",
   "url": "https://quantico.usmc-mccs.org/news/support-systems-help-protect-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I report suspected abuse?",
+    "Is the hotline confidential?",
+    "What are warning signs of abuse?",
+    "Who can I call in an emergency?"
+  ],
+  "chipsSourceHash": "8b4e5f11e61c6fb8"
 }

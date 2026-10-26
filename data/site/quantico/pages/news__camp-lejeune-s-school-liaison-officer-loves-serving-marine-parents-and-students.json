@@ -102,5 +102,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/camp-lejeune-s-school-liaison-officer-loves-serving-marine-parents-and-students",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can they help with private school?",
+    "When should I contact the liaison?",
+    "Do they help during PCS moves?",
+    "How can the liaison help my child?"
+  ],
+  "chipsSourceHash": "499bf31199ce7c3a"
 }

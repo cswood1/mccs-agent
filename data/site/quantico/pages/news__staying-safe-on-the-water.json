@@ -62,5 +62,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/staying-safe-on-the-water",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I get swim lessons?",
+    "What sunscreen SPF should I use?"
+  ],
+  "chipsSourceHash": "e438af11fd45db23"
 }

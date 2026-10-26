@@ -59,5 +59,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/all-marine-rugby-team-competes-at-2025-armed-forces-championship",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When were the matches played?",
+    "Where was the tournament held?"
+  ],
+  "chipsSourceHash": "9dec9e36cb90388f"
 }

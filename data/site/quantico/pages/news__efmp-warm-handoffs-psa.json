@@ -50,5 +50,11 @@
     }
   ],
   "notCaptured": "The page displays a single image with minimal text content (appears to be a PSA graphic/video placeholder); no body text available in the main content area besides the image. Share-button target URLs omitted (placeholder share links excluded).",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is EFMP warm handoff?",
+    "How do I request a warm handoff?",
+    "Who qualifies for EFMP services?"
+  ],
+  "chipsSourceHash": "fde7fddc465e0471"
 }

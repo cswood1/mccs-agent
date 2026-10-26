@@ -201,5 +201,10 @@
   ],
   "notCaptured": "Events section shows 'Currently, there are no scheduled activities planned for the near future'; location picker modal is hidden until activated; some contact information for local offices may be dynamic or region-specific and not displayed in this Quantico instance.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/personal-financial-management",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who's eligible for this program?",
+    "What workshops are available?"
+  ],
+  "chipsSourceHash": "a72d445205179f00"
 }

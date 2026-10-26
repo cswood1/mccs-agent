@@ -50,5 +50,11 @@
   ],
   "notCaptured": "The main article content describing JEPES credits appears to load dynamically or is contained within the image/infographic; no descriptive text about the program is visible in the HTML structure provided.",
   "url": "https://quantico.usmc-mccs.org/news/earn-your-jepes-credits-with-ease",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are JEPES credits?",
+    "How do I earn JEPES credits?",
+    "Where can I use my JEPES credits?"
+  ],
+  "chipsSourceHash": "4a2a194aa2ebb9c0"
 }

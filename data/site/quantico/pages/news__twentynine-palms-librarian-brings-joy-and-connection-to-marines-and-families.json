@@ -84,5 +84,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/twentynine-palms-librarian-brings-joy-and-connection-to-marines-and-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I borrow things besides books?",
+    "What's the Library of Things?",
+    "When is the star party?"
+  ],
+  "chipsSourceHash": "d8677867d4db5fad"
 }

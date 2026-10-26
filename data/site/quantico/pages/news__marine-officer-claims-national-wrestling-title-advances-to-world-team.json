@@ -70,5 +70,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-officer-claims-national-wrestling-title-advances-to-world-team",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What weight class did Zaleski win?",
+    "How did Zaleski become champion?"
+  ],
+  "chipsSourceHash": "c4ce51524a4c6e3e"
 }

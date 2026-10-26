@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/apply-for-the-all-marine-sports-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I apply for this program?",
+    "Can I compete internationally?"
+  ],
+  "chipsSourceHash": "1678253e68f6758f"
 }

@@ -50,5 +50,12 @@
     }
   ],
   "notCaptured": "Audio player present on page (Listen | 0:00 / 0:00); unable to access audio content. Full story text not visible in provided HTML; only the image is present in main content.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I apply to this program?",
+    "Who is eligible to join?",
+    "When does the program start?",
+    "How much does it cost?"
+  ],
+  "chipsSourceHash": "871d0143b51c7829"
 }

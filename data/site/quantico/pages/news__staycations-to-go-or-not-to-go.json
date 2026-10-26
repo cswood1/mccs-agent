@@ -55,5 +55,10 @@
   ],
   "notCaptured": "Audio player element with play/pause controls shown but not functional in static HTML",
   "url": "https://quantico.usmc-mccs.org/news/staycations-to-go-or-not-to-go",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What exactly is a staycation?",
+    "How much does a staycation cost?"
+  ],
+  "chipsSourceHash": "79630d8c04e2989e"
 }

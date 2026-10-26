@@ -66,5 +66,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who counts as a childcare provider?",
+    "What gifts can I give?",
+    "Why is quality childcare important?",
+    "How can I show appreciation?"
+  ],
+  "chipsSourceHash": "c74b6989c22365b8"
 }

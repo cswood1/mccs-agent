@@ -68,5 +68,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/what-to-know-about-adaptogens",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Are adaptogens banned for Marines?",
+    "What adaptogens are commonly used?",
+    "What risks come with adaptogens?",
+    "Should I talk to my doctor first?"
+  ],
+  "chipsSourceHash": "8fcc1abb4ce29393"
 }

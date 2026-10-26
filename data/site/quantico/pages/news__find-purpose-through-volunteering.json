@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/find-purpose-through-volunteering",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I start volunteering here?",
+    "Who can volunteer at this base?"
+  ],
+  "chipsSourceHash": "b7a0877692d95b7a"
 }

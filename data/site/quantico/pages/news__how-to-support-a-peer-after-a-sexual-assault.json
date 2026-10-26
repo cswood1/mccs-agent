@@ -54,5 +54,11 @@
   ],
   "notCaptured": "Main content of article appears to be contained within an image; text content not visible in provided HTML",
   "url": "https://quantico.usmc-mccs.org/news/how-to-support-a-peer-after-a-sexual-assault",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I say to a friend?",
+    "What shouldn't I do or say?",
+    "How do I support them long-term?"
+  ],
+  "chipsSourceHash": "eb40517a93b81865"
 }

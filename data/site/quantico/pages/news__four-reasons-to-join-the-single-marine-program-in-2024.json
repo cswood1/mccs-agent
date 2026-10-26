@@ -70,5 +70,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/four-reasons-to-join-the-single-marine-program-in-2024",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What kinds of events does SMP have?",
+    "Can I volunteer through SMP?"
+  ],
+  "chipsSourceHash": "a3414a5db378091a"
 }

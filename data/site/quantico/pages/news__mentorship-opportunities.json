@@ -131,5 +131,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/mentorship-opportunities",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I find a mentor?",
+    "Can military spouses get mentoring?",
+    "How do I become a mentor?",
+    "What's the SkillBridge Program?"
+  ],
+  "chipsSourceHash": "e92acf814f624e57"
 }

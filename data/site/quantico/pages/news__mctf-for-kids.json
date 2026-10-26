@@ -66,5 +66,11 @@
   ],
   "notCaptured": "Page (published 11 Aug 2026) has no actual article body beyond the hero image and standard MCCS tagline; confirmed via a second fetch attempt with a plain-markdown prompt.",
   "url": "https://quantico.usmc-mccs.org/news/mctf-for-kids",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is MCTF For Kids?",
+    "How do I sign my kid up?",
+    "What ages can participate?"
+  ],
+  "chipsSourceHash": "42eba1fd71a1d2d5"
 }

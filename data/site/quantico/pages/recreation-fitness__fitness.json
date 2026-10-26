@@ -214,5 +214,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are BPAC hours on Saturday?",
+    "How much is a monthly locker?",
+    "Can my 13-year-old go alone?",
+    "What's the daily contractor fee?"
+  ],
+  "chipsSourceHash": "fea7406d30112aad"
 }

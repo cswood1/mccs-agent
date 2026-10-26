@@ -88,5 +88,10 @@
   ],
   "notCaptured": "Audio player control visible but content not transcribed; social media share buttons present but placeholder URLs used",
   "url": "https://quantico.usmc-mccs.org/news/mentorship-a-force-multiplier-for-readiness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is National Mentoring Month?",
+    "How can I volunteer as a mentor?"
+  ],
+  "chipsSourceHash": "df7705bbed452747"
 }

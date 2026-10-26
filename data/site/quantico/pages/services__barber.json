@@ -176,5 +176,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/services/barber",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where is the TBS Barbershop?",
+    "Is OCS Barbershop open weekends?",
+    "When can I get a haircut Sunday?"
+  ],
+  "chipsSourceHash": "b94520a1335fdfdf"
 }

@@ -81,5 +81,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What movies are playing?",
+    "Where can I eat on base?",
+    "How do I get discounted tickets?",
+    "What dining options are there?"
+  ],
+  "chipsSourceHash": "b17d4d3b1c0f71a7"
 }

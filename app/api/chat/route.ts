@@ -4,18 +4,27 @@ import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
 import { rateLimit } from "@/lib/ratelimit";
 import { buildContentBlock } from "@/lib/prompt";
+import { cleanClientText, pageInfo } from "@/lib/site/context";
 
 // docs/PRODUCT.md section 4, restated each turn.
 const REPLY_REMINDER =
-  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked.";
+  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked. End with the <followups> line.";
+
+// Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
+const FRAME = "\u001e";
 
 const MAX_MESSAGES = 30;
 const MAX_CONTINUATIONS = 2;
 const MAX_MESSAGE_CHARS = 4000;
 
+type PageRef = { url?: string; path?: string; title?: string; breadcrumb?: string[] };
+
 type ChatRequest = {
   installationId: string;
   messages: { role: "user" | "assistant"; content: string }[];
+  /** The page the person is on, and up to 5 pages they visited before it (most recent first). */
+  page?: PageRef;
+  trail?: PageRef[];
 };
 
 export const OPTIONS = preflight;
@@ -46,11 +55,19 @@ export async function POST(request: Request) {
   const shared = agentRequest(installation, content);
 
   // Saved site content goes first in the first user turn (cached), then the conversation.
-  // A trailing system note carries today's date without breaking the cached prefix.
-  const [first, ...rest] = body.messages;
+  // The latest question carries a page-context note (after the cached prefix), and a trailing
+  // system note carries today's date and the length rule.
+  const pageNote = buildPageNote(body, installation.defaultChips);
+  const turns: Anthropic.Beta.BetaMessageParam[] = body.messages.map((m, i) => {
+    if (m.role !== "user") return { role: "assistant", content: m.content };
+    const blocks: Anthropic.Beta.BetaTextBlockParam[] = [];
+    if (i === 0) blocks.push(buildContentBlock(installation, content));
+    if (i === body.messages.length - 1 && pageNote) blocks.push({ type: "text", text: pageNote });
+    blocks.push({ type: "text", text: m.content });
+    return { role: "user", content: blocks };
+  });
   let messages: Anthropic.Beta.BetaMessageParam[] = [
-    { role: "user", content: [buildContentBlock(installation, content), { type: "text", text: first.content }] },
-    ...rest,
+    ...turns,
     // Per-turn note after the cached prefix: today's date, plus the length rule, which the
     // model follows far better when it's restated right before it answers.
     { role: "system", content: `Today is ${today()}. ${REPLY_REMINDER}` },
@@ -62,7 +79,9 @@ export async function POST(request: Request) {
   const encoder = new TextEncoder();
   const readable = new ReadableStream<Uint8Array>({
     async start(controller) {
-      const send = (text: string) => controller.enqueue(encoder.encode(text));
+      const write = (text: string) => controller.enqueue(encoder.encode(text));
+      const answer = new FollowupSplitter(write);
+      const send = (text: string) => answer.push(text);
       let sentText = false;
       try {
         // Server tools run in a server-side loop that can pause; resume a couple of times.
@@ -109,10 +128,14 @@ export async function POST(request: Request) {
           }
           break;
         }
+        // Follow-up chips go after the answer as one JSON frame.
+        const followups = answer.finish();
+        if (followups.length) write(FRAME + JSON.stringify({ followups }));
       } catch (err) {
         if (request.signal.aborted) return;
         console.error("[chat] error", err);
-        send(`\n\n${friendlyError(err)}`);
+        answer.finish();
+        write(`\n\n${friendlyError(err)}`);
       } finally {
         try {
           controller.close();
@@ -133,6 +156,89 @@ export async function POST(request: Request) {
       "Cache-Control": "no-store",
     },
   });
+}
+
+/**
+ * The page note for the latest question. Titles come from our own page data when the path is
+ * known; anything from the browser is cleaned and capped. Wrapped as website data so it can't
+ * pass for instructions.
+ */
+function buildPageNote(body: ChatRequest, defaultChips: string[]): string | null {
+  const describe = (ref: PageRef | undefined) => {
+    if (!ref || (!ref.path && !ref.url)) return null;
+    const info = pageInfo(String(ref.path || ref.url), defaultChips);
+    const title = info.known ? info.title : cleanClientText(ref.title);
+    const breadcrumb = info.breadcrumb.length ? info.breadcrumb : (Array.isArray(ref.breadcrumb) ? ref.breadcrumb : []).map((b) => cleanClientText(b, 60)).filter(Boolean).slice(0, 6);
+    return { title: title || (info.path === "/" ? "Home" : info.path), url: info.url, breadcrumb };
+  };
+  const current = describe(body.page);
+  if (!current) return null;
+  const trail = (Array.isArray(body.trail) ? body.trail : [])
+    .slice(0, 5)
+    .map(describe)
+    .filter((t): t is NonNullable<typeof t> => !!t && t.url !== current.url);
+  const lines = [
+    "<page_context>",
+    "(From the website, not typed by the person.)",
+    `Viewing: ${current.title} — ${current.url}`,
+  ];
+  if (current.breadcrumb.length) lines.push(`Breadcrumb: ${current.breadcrumb.join(" > ")}`);
+  if (trail.length) lines.push(`Earlier this visit (most recent first): ${trail.map((t) => `${t.title} (${t.url})`).join("; ")}`);
+  lines.push("</page_context>");
+  return lines.join("\n");
+}
+
+/**
+ * Streams answer text through, but holds back and captures the trailing
+ * <followups>["…","…"]</followups> line so it never reaches the visitor as text.
+ */
+class FollowupSplitter {
+  private buffer = "";
+  private captured: string | null = null;
+  constructor(private out: (text: string) => void) {}
+
+  push(text: string) {
+    if (this.captured !== null) {
+      this.captured += text;
+      return;
+    }
+    this.buffer += text;
+    const start = this.buffer.indexOf("<followups>");
+    if (start >= 0) {
+      this.out(this.buffer.slice(0, start));
+      this.captured = this.buffer.slice(start);
+      this.buffer = "";
+      return;
+    }
+    // Hold back a tail that might be the start of the tag.
+    const hold = longestTagPrefixSuffix(this.buffer, "<followups>");
+    this.out(this.buffer.slice(0, this.buffer.length - hold));
+    this.buffer = this.buffer.slice(this.buffer.length - hold);
+  }
+
+  /** Flush any held text and return the parsed follow-ups. */
+  finish(): string[] {
+    if (this.buffer) this.out(this.buffer);
+    this.buffer = "";
+    const json = this.captured?.match(/<followups>([\s\S]*?)(<\/followups>|$)/)?.[1];
+    this.captured = null;
+    if (!json) return [];
+    try {
+      const arr = JSON.parse(json.trim());
+      return Array.isArray(arr)
+        ? arr.filter((x): x is string => typeof x === "string").map((x) => x.trim().slice(0, 60)).filter(Boolean).slice(0, 2)
+        : [];
+    } catch {
+      return [];
+    }
+  }
+}
+
+function longestTagPrefixSuffix(text: string, tag: string): number {
+  for (let n = Math.min(tag.length - 1, text.length); n > 0; n--) {
+    if (text.endsWith(tag.slice(0, n))) return n;
+  }
+  return 0;
 }
 
 function today() {

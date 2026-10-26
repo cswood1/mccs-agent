@@ -95,5 +95,10 @@
   ],
   "notCaptured": "Audio player control (0:00 / 0:00) appears to be present but content not accessible; page published date shown as 04 Feb 2026",
   "url": "https://quantico.usmc-mccs.org/news/strong-finances-start-at-home",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What classes does PFMP offer?",
+    "Why should kids learn about money?"
+  ],
+  "chipsSourceHash": "1b8db7faf675d6ed"
 }

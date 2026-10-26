@@ -183,5 +183,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I report sexual assault?",
+    "How do I contact a victim advocate?"
+  ],
+  "chipsSourceHash": "6f7c184f33d60c36"
 }

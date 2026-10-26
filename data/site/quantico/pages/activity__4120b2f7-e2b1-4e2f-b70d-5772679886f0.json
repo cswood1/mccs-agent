@@ -57,5 +57,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/4120b2f7-e2b1-4e2f-b70d-5772679886f0",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Troop Appreciation?",
+    "Where do I go for this event?",
+    "Is there free food?",
+    "Can Reservists come?"
+  ],
+  "chipsSourceHash": "4f35ab31cea020a3"
 }

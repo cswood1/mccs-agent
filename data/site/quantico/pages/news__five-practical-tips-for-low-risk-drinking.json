@@ -66,5 +66,11 @@
   ],
   "notCaptured": "The main infographic image appears to be the primary content of this page; specific text content describing the five tips is not visible in the HTML provided.",
   "url": "https://quantico.usmc-mccs.org/news/five-practical-tips-for-low-risk-drinking",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What counts as one drink?",
+    "How many drinks is safe per week?",
+    "What are the main tips mentioned?"
+  ],
+  "chipsSourceHash": "758c15f8a1298eed"
 }

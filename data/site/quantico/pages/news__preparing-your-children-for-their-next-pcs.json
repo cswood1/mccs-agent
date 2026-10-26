@@ -66,5 +66,11 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible; specific warning signs and support resources in table image not readable",
   "url": "https://quantico.usmc-mccs.org/news/preparing-your-children-for-their-next-pcs",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How often do military kids move?",
+    "What MCCS resources can help us?",
+    "How do I prepare my child for PCS?"
+  ],
+  "chipsSourceHash": "99ed6181f07bd91c"
 }

@@ -250,5 +250,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the Quantico SAPR hotline?",
+    "What counts as sexual assault?",
+    "What should I do right after?",
+    "Can I report confidentially?"
+  ],
+  "chipsSourceHash": "63fdaacab884005f"
 }

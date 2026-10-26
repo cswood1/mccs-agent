@@ -50,5 +50,10 @@
   ],
   "notCaptured": "Page (published 11 Aug 2025) has no actual article body beyond the hero image and standard MCCS tagline; only related 'Other Stories' teaser links are present. Confirmed via a second fetch attempt.",
   "url": "https://quantico.usmc-mccs.org/news/building-resilience-to-cope-with-stress",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for a program?",
+    "Where are these programs offered?"
+  ],
+  "chipsSourceHash": "fa96553793dd2c63"
 }

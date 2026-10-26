@@ -66,5 +66,12 @@
   ],
   "notCaptured": "The main article content appears to be missing or loaded dynamically; only the image and related stories section are visible.",
   "url": "https://quantico.usmc-mccs.org/news/smooth-overseas-moves-start-with-a-plan",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I plan an overseas move?",
+    "What services help with PCS?",
+    "Where do I get moving advice?",
+    "When should I start planning?"
+  ],
+  "chipsSourceHash": "16c32001888b009a"
 }

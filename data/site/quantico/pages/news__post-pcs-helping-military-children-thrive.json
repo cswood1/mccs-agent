@@ -71,5 +71,12 @@
   ],
   "notCaptured": "The actual article body text is not present in the fetched HTML (confirmed on two separate fetch attempts, including a raw word-for-word markdown reproduction) - only the headline image, 'Other Stories' related-links block, and publisher/date metadata were available. The article body likely loads dynamically or was not present server-side at crawl time.",
   "url": "https://quantico.usmc-mccs.org/news/post-pcs-helping-military-children-thrive",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Post-PCS about?",
+    "How can MCCS help my family?",
+    "Where can I find more stories?",
+    "What youth programs exist?"
+  ],
+  "chipsSourceHash": "92acf07d6708003e"
 }

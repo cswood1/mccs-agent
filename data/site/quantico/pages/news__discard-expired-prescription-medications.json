@@ -66,5 +66,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/discard-expired-prescription-medications",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I drop off expired meds?",
+    "When is Drug Take Back Day?"
+  ],
+  "chipsSourceHash": "fc41a5db2bffab1b"
 }

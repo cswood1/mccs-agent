@@ -66,5 +66,11 @@
   ],
   "notCaptured": "The main article content for the school bus safety tips does not appear in the provided HTML; only the image and related story cards are visible.",
   "url": "https://quantico.usmc-mccs.org/news/school-bus-safety-tips",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I teach bus safety at home?",
+    "What are the pickup rules?",
+    "What if my child misses the bus?"
+  ],
+  "chipsSourceHash": "fbf4e18eae41aa2a"
 }

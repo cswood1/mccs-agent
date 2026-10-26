@@ -109,5 +109,12 @@
   "images": [],
   "notCaptured": "Bowling Events section appears to have dynamic content (list/grid view toggle) but no visible events are displayed in the provided HTML.",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much does bowling cost?",
+    "What are the Saturday hours?",
+    "Can I book a lane for a party?",
+    "Do I need to bring my own shoes?"
+  ],
+  "chipsSourceHash": "85761426b7ac40b6"
 }

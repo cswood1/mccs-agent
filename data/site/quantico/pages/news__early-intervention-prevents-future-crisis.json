@@ -58,5 +58,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/early-intervention-prevents-future-crisis",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can I help a fellow Marine?",
+    "What counts as early intervention?"
+  ],
+  "chipsSourceHash": "85bcdb3694e1640f"
 }

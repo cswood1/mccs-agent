@@ -96,5 +96,10 @@
   ],
   "notCaptured": "Audio player (0:00 / 0:00) with play controls visible but not detailed; feedback survey form structure present but not captured.",
   "url": "https://quantico.usmc-mccs.org/news/supporting-marine-family-growth-through-mccs-programs",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How does CYP build kids' skills?",
+    "What is EFMP for?"
+  ],
+  "chipsSourceHash": "3993b04d3b4d9b36"
 }

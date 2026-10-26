@@ -71,5 +71,11 @@
   ],
   "notCaptured": "Embedded video content from DVIDS not captured",
   "url": "https://quantico.usmc-mccs.org/news/the-strive-msgt-juan-garcia",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this video about?",
+    "When was this uploaded?",
+    "What other stories can I read?"
+  ],
+  "chipsSourceHash": "fa26b6cefd2d6852"
 }

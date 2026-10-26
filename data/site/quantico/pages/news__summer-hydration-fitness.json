@@ -50,5 +50,10 @@
   ],
   "notCaptured": "Main content image appears to be a promotional graphic for Summer Hydration Fitness program; no descriptive text accompanies the image on this page.",
   "url": "https://quantico.usmc-mccs.org/news/summer-hydration-fitness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for this program?",
+    "Is there a cost to join?"
+  ],
+  "chipsSourceHash": "bba5ad329eb039d0"
 }

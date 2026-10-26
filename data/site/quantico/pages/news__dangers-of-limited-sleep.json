@@ -71,5 +71,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/dangers-of-limited-sleep",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can I sleep better at night?",
+    "Do you offer sleep coaching?",
+    "Why do shift workers lose sleep?",
+    "What should I avoid before bed?"
+  ],
+  "chipsSourceHash": "6663b5ebc2ab3ec9"
 }

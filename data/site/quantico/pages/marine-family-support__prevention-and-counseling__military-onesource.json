@@ -99,5 +99,10 @@
   "images": [],
   "notCaptured": "Model extraction returned a non-image URL for a claimed image; omitted rather than recorded as a false image resource.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I call Military OneSource?",
+    "Who can use Military OneSource?"
+  ],
+  "chipsSourceHash": "142b84298c3839bb"
 }

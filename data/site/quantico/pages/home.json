@@ -274,5 +274,10 @@
   ],
   "notCaptured": "Carousel/slider content may rotate dynamically; Facebook share functionality not fully captured",
   "url": "https://quantico.usmc-mccs.org/",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I book temporary lodging?",
+    "What fitness classes are available?"
+  ],
+  "chipsSourceHash": "45e183c31cdfde3c"
 }

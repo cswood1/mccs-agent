@@ -51,5 +51,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/f5916037-5645-48cb-93f9-3c99b5d8b7ba",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the Master Resume Workshop?",
+    "Who can attend this workshop?",
+    "How do I sign up for this event?"
+  ],
+  "chipsSourceHash": "10eabf31f0c8a0b8"
 }

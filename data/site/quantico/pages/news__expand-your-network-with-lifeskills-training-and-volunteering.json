@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/expand-your-network-with-lifeskills-training-and-volunteering",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can take LifeSkills Training?",
+    "How do I sign up for LifeSkills?"
+  ],
+  "chipsSourceHash": "05a2f95773d203ec"
 }

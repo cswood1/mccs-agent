@@ -66,5 +66,11 @@
     }
   ],
   "notCaptured": "The main article content appears to load dynamically; only the title, publication date, image, and related stories section are visible in the fetched page.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I start a vacation budget?",
+    "What expenses should I plan for?",
+    "Any tips to save money on vacation?"
+  ],
+  "chipsSourceHash": "5a0ead1a271db54a"
 }

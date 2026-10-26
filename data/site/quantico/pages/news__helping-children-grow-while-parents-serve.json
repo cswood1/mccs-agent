@@ -65,5 +65,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/helping-children-grow-while-parents-serve",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I visit the CDC anytime?",
+    "How do I schedule a tour?"
+  ],
+  "chipsSourceHash": "9b3eade9b839bcbe"
 }

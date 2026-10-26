@@ -64,5 +64,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/privacy",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I opt out of tracking?",
+    "Who can use this website?",
+    "What data do you collect?",
+    "How do I contact support?"
+  ],
+  "chipsSourceHash": "187a2793e47b1ddc"
 }

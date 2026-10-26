@@ -105,5 +105,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where is Rec/ITT located?",
+    "Am I eligible to use this?",
+    "What are your hours on Saturday?",
+    "Can I get my money back?"
+  ],
+  "chipsSourceHash": "5ad55b2d499cf29c"
 }

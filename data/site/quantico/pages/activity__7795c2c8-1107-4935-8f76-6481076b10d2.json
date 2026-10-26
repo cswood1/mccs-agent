@@ -55,5 +55,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/7795c2c8-1107-4935-8f76-6481076b10d2",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Baby Boot Camp?",
+    "What should I wear?",
+    "How do I sign up?",
+    "What will we learn?"
+  ],
+  "chipsSourceHash": "6c63fd7761135e06"
 }

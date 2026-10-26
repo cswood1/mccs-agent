@@ -75,5 +75,11 @@
   ],
   "notCaptured": "The main story content appears to be represented only by an image; no descriptive text or narrative content is visible on this page",
   "url": "https://quantico.usmc-mccs.org/news/10th-anniversary-of-smp-days-of-service",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is SMP Days of Service?",
+    "How do I volunteer for this event?",
+    "Where can I find more details?"
+  ],
+  "chipsSourceHash": "6a774d65cefbf62a"
 }

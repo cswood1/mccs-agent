@@ -76,5 +76,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/planning-to-pcs-make-it-a-team-effort-with-relocation-assistance",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What topics do PCS workshops cover?",
+    "How do I register for a workshop?"
+  ],
+  "chipsSourceHash": "702db2874e983d3a"
 }

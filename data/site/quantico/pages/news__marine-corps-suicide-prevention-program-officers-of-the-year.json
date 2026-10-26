@@ -68,5 +68,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-suicide-prevention-program-officers-of-the-year",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who won SPPO of the Year for 2024?",
+    "What did the SPPOs accomplish?",
+    "How do SPPOs support Marines?"
+  ],
+  "chipsSourceHash": "0babddf0a08aa771"
 }

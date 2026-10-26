@@ -66,5 +66,12 @@
   ],
   "notCaptured": "The main article content appears to be embedded in an image file; actual text body of the article is not visible in the provided HTML.",
   "url": "https://quantico.usmc-mccs.org/news/the-emotional-cycle-of-deployment",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can I cope during deployment?",
+    "Where do I get deployment support?",
+    "Is this for spouses too?",
+    "When was this article published?"
+  ],
+  "chipsSourceHash": "afa0127c5618d616"
 }

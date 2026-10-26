@@ -203,5 +203,11 @@
   ],
   "notCaptured": "Carousel/slider content with promotional banners may not display fully; dynamic event or promotional content may be region-specific",
   "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the gun counter open?",
+    "What are Main Exchange hours today?",
+    "Can I buy firearms before closing?"
+  ],
+  "chipsSourceHash": "944273feed8bfcc1"
 }

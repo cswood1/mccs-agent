@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/maintain-total-fitness-during-the-holidays",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the Single Marine Program?",
+    "How can breathing help my fitness?"
+  ],
+  "chipsSourceHash": "024cb28c7f06ed7f"
 }

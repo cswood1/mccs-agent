@@ -53,5 +53,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/d9621328-561d-4b6a-a466-fd146fcf6e67",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time can I bring my kids?",
+    "Where is this event at Quantico?",
+    "How do I book tickets?"
+  ],
+  "chipsSourceHash": "540a24173f6bc04a"
 }

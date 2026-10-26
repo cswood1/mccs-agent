@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/oscar-teams-were-born-from-the-fight-and-for-the-fight",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What topics do OSCAR Teams discuss?",
+    "Who's on an OSCAR Team?",
+    "How do I join my unit's OSCAR Team?",
+    "Where do I find OSCAR resources?"
+  ],
+  "chipsSourceHash": "768d7925ad90ffd2"
 }

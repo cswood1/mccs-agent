@@ -88,5 +88,11 @@
   ],
   "notCaptured": "Audio player element present on page (Listen | 0:00)",
   "url": "https://quantico.usmc-mccs.org/news/connect-with-others-to-build-mental-toughness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is the Single Marine Program?",
+    "How do I join WARR classes?",
+    "Where do I go to get started?"
+  ],
+  "chipsSourceHash": "56ec3f121e2c1752"
 }

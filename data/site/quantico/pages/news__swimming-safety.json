@@ -50,5 +50,12 @@
   ],
   "notCaptured": "Main content appears to be primarily the hero image with minimal text. The page title and intro text are not visible in the provided content beyond the heading.",
   "url": "https://quantico.usmc-mccs.org/news/swimming-safety",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are pool safety rules?",
+    "When is the pool open?",
+    "Who can use the pool?",
+    "How do I get certified?"
+  ],
+  "chipsSourceHash": "d501066a92c1fa54"
 }

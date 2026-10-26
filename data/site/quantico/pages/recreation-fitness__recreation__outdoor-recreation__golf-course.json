@@ -239,5 +239,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the hours on Saturday?",
+    "How far in advance can I book?",
+    "What's included in the Swing Lab?"
+  ],
+  "chipsSourceHash": "abaaf4d5e46cdbda"
 }

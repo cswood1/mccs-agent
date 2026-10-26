@@ -75,5 +75,12 @@
   ],
   "notCaptured": "Audio player for the article content (labeled 'Listen | 0:00'); embedded share functionality for social media platforms",
   "url": "https://quantico.usmc-mccs.org/news/clear-your-cabinet-secure-the-force",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Drug Take Back Day?",
+    "Where do I drop off my meds?",
+    "Why should I dispose of old meds?",
+    "Who can help with substance misuse?"
+  ],
+  "chipsSourceHash": "049c7d1fc7e7c09f"
 }

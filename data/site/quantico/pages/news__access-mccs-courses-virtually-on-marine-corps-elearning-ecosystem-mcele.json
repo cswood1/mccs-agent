@@ -90,5 +90,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/access-mccs-courses-virtually-on-marine-corps-elearning-ecosystem-mcele",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What courses are on MCeLE?",
+    "How do I get a MCeLE account?",
+    "Who can take these courses?",
+    "Is Real Relationships for families?"
+  ],
+  "chipsSourceHash": "3c2d71b99c492722"
 }

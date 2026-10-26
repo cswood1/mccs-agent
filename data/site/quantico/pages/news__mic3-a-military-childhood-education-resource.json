@@ -66,5 +66,11 @@
   ],
   "notCaptured": "The page appears to be primarily a container for a featured image related to MIC3 with links to other stories. The main content of the MIC3 resource itself does not appear to be fully loaded or visible on this page view.",
   "url": "https://quantico.usmc-mccs.org/news/mic3-a-military-childhood-education-resource",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is MIC3 and who is it for?",
+    "How do I access MIC3 resources?",
+    "Can MIC3 help with my PCS move?"
+  ],
+  "chipsSourceHash": "234ba4e3de970484"
 }

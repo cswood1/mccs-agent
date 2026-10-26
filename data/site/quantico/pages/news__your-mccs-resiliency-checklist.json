@@ -70,5 +70,10 @@
   ],
   "notCaptured": "The resiliency checklist's actual content is presented as an image (with a 'CLICK TO ENLARGE' link to the full-size image) rather than as text; no text transcription of the checklist items is available in the page markup.",
   "url": "https://quantico.usmc-mccs.org/news/your-mccs-resiliency-checklist",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's on the resiliency checklist?",
+    "How do I use this checklist?"
+  ],
+  "chipsSourceHash": "3763d52e71cdb282"
 }

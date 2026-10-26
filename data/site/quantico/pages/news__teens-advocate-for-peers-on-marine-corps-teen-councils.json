@@ -90,5 +90,11 @@
   ],
   "notCaptured": "Audio player for article (0:00 duration shown). Author byline: BETTY SNIDER | HQMC MF COMMSTRAT. Last Updated: 02 Jun 2025 Published: 02 Jun 2025. Social sharing buttons for Facebook, X (Twitter), LinkedIn, and Email.",
   "url": "https://quantico.usmc-mccs.org/news/teens-advocate-for-peers-on-marine-corps-teen-councils",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I join the teen council?",
+    "What is the Keystone Club?",
+    "What changes are teens requesting?"
+  ],
+  "chipsSourceHash": "8f7aec611dcff458"
 }

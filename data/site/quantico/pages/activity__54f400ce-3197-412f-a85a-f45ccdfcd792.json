@@ -41,5 +41,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the next workshop?",
+    "What topics does it cover?",
+    "How do I sign up?",
+    "Where is this held?"
+  ],
+  "chipsSourceHash": "0149547288961e03"
 }

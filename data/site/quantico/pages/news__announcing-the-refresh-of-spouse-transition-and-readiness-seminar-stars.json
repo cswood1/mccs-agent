@@ -58,5 +58,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/announcing-the-refresh-of-spouse-transition-and-readiness-seminar-stars",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What topics does STARS cover?",
+    "How do I sign up for STARS?",
+    "When and where is STARS offered?"
+  ],
+  "chipsSourceHash": "0c52a2cf1d1e7320"
 }

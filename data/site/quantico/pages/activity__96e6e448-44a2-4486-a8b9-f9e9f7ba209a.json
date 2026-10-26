@@ -52,5 +52,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/96e6e448-44a2-4486-a8b9-f9e9f7ba209a",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time do kids need to leave?",
+    "How much is it for my family of 4?",
+    "How do I buy tickets?"
+  ],
+  "chipsSourceHash": "1371fbf252f86503"
 }

@@ -32,5 +32,12 @@
   "images": [],
   "notCaptured": "Dynamic event listing for October 2026 with specific event details, registration status, and filtering functionality not visible in static page content.",
   "url": "https://quantico.usmc-mccs.org/calendar-of-events",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What events are coming up?",
+    "How do I filter by category?",
+    "Can I switch to list view?",
+    "Are there youth sports events?"
+  ],
+  "chipsSourceHash": "84a2a0463dd1cb81"
 }

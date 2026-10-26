@@ -110,5 +110,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/peer-support-strengthening-resilience-in-military-life",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is an OSCAR Team?",
+    "How do I contact Vets4Warriors?"
+  ],
+  "chipsSourceHash": "f428f6f5d5c6753d"
 }

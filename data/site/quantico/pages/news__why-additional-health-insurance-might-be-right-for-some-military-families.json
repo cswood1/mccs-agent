@@ -80,5 +80,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/why-additional-health-insurance-might-be-right-for-some-military-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What services does Medicaid cover?",
+    "When is Medicare enrollment open?"
+  ],
+  "chipsSourceHash": "d041e3b64c73b453"
 }

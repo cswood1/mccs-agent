@@ -62,5 +62,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-reunion-toolkit-and-resources",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I start planning a reunion?",
+    "Where can I see upcoming reunions?",
+    "How do I list my reunion for free?"
+  ],
+  "chipsSourceHash": "5ef49b4b5c78d930"
 }

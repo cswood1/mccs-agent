@@ -55,5 +55,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where is Little Hall on base?",
+    "How do I sign up for this group?"
+  ],
+  "chipsSourceHash": "d4833193ca7990cd"
 }

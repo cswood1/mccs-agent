@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/september-is-national-recovery-month-1",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Does SAP cost money?",
+    "How do I contact SAP for help?"
+  ],
+  "chipsSourceHash": "2b611e038328529e"
 }

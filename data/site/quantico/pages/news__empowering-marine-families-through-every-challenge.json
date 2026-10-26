@@ -82,5 +82,11 @@
   ],
   "notCaptured": "Audio player element present but content not accessible; exact playback timing and audio file details not captured.",
   "url": "https://quantico.usmc-mccs.org/news/empowering-marine-families-through-every-challenge",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does School Liaison help with?",
+    "What programs does CYP offer?",
+    "How does EFMP support families?"
+  ],
+  "chipsSourceHash": "9dd2decb4506e27b"
 }

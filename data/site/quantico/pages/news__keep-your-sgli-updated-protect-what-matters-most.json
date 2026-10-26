@@ -78,5 +78,12 @@
   ],
   "notCaptured": "Audio player control visible but content not extractable",
   "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I update my beneficiary?",
+    "How often should I check SGLI?",
+    "How do I log into SOES?",
+    "Who do I call for help?"
+  ],
+  "chipsSourceHash": "18c9b71097b107a4"
 }

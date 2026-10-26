@@ -60,5 +60,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/a131c848-fcdc-49fb-be70-f4f822ba9d5e",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does the 10K start?",
+    "Is the Turkey Trot open to kids?",
+    "Where do we start and finish?",
+    "How do I register for this?"
+  ],
+  "chipsSourceHash": "ec16e02bd2f8830a"
 }

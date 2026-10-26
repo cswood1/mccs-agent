@@ -127,5 +127,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming/pools",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the pool open weekdays?",
+    "Can I use the diving boards?",
+    "What happens if it rains?",
+    "Is the pool open year-round?"
+  ],
+  "chipsSourceHash": "0e474b95c3084952"
 }

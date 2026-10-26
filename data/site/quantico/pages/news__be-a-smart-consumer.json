@@ -85,5 +85,11 @@
   ],
   "notCaptured": "Audio player with 0:00 duration displayed but no audio content accessible",
   "url": "https://quantico.usmc-mccs.org/news/be-a-smart-consumer",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the 24-hour rule?",
+    "How do I avoid hidden fees?",
+    "How do budgeting tools help?"
+  ],
+  "chipsSourceHash": "c006076eba9806ed"
 }

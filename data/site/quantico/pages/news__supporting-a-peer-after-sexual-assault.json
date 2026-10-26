@@ -89,5 +89,10 @@
   ],
   "notCaptured": "Audio player for a 0:00 length recording appears embedded but is not accessible for transcription.",
   "url": "https://quantico.usmc-mccs.org/news/supporting-a-peer-after-sexual-assault",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I say to support them?",
+    "What phrases should I avoid saying?"
+  ],
+  "chipsSourceHash": "5d08336ce44354fb"
 }

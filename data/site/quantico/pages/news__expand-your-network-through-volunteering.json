@@ -64,5 +64,10 @@
   ],
   "notCaptured": "Audio player control present but content not captured; social sharing URLs use placeholder text",
   "url": "https://quantico.usmc-mccs.org/news/expand-your-network-through-volunteering",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I use volunteering on LinkedIn?",
+    "Who should I contact to start?"
+  ],
+  "chipsSourceHash": "5e24159ea5fc9664"
 }

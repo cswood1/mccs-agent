@@ -237,5 +237,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/linkedin",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I start a LinkedIn resume?",
+    "What's included in a good profile?",
+    "Can I get LinkedIn Job Seeker free?",
+    "How do I network on LinkedIn?"
+  ],
+  "chipsSourceHash": "e25ca4155b855a93"
 }

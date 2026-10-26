@@ -86,5 +86,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/network-with-purpose",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is SkillBridge?",
+    "How does FMEAP help spouses?",
+    "What does TRP offer?",
+    "When are career fairs?"
+  ],
+  "chipsSourceHash": "3ac387d2ffc24403"
 }

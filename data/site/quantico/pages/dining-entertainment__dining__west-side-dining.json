@@ -141,5 +141,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/west-side-dining",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Is Quigley's open on weekends?",
+    "Where is Hawkins Room located?"
+  ],
+  "chipsSourceHash": "e1c465469642892e"
 }

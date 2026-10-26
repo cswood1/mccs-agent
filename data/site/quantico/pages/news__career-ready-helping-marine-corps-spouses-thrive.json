@@ -69,5 +69,11 @@
   ],
   "notCaptured": "Audio player present but content not transcribed; dynamic location picker modal; share buttons with placeholder URLs",
   "url": "https://quantico.usmc-mccs.org/news/career-ready-helping-marine-corps-spouses-thrive",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is FMEAP and how can it help?",
+    "Does FMEAP offer resume help?",
+    "How do I connect with a mentor?"
+  ],
+  "chipsSourceHash": "84b8435bddb5c819"
 }

@@ -122,5 +122,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the pool open for swimming?",
+    "What happens if it rains?",
+    "Where is the Quantico pool located?"
+  ],
+  "chipsSourceHash": "87f60d3867a961ec"
 }

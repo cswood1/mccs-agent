@@ -71,5 +71,12 @@
   ],
   "notCaptured": "This page has no real article body text beyond the headline image - only the headline image and related 'Other Stories' links were present in the fetched content; the article text itself was not captured and may load dynamically or be missing server-side.",
   "url": "https://quantico.usmc-mccs.org/news/get-up-get-out-and-go-play",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What activities does this cover?",
+    "How do I sign up to play?",
+    "Where can I go play?",
+    "What's the cost to participate?"
+  ],
+  "chipsSourceHash": "527e84d0595ed467"
 }

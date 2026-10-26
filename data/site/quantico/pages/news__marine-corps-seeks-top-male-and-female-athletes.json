@@ -58,5 +58,10 @@
   ],
   "notCaptured": "Audio player control visible but no transcript provided.",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-seeks-top-male-and-female-athletes",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the deadline to apply?",
+    "Where do I submit my application?"
+  ],
+  "chipsSourceHash": "65b551b2049f7bb0"
 }

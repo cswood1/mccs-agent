@@ -51,5 +51,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/3ec7dcbb-5ae7-42ae-a36b-81297cea31ca",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the grief group meet?",
+    "Where is Little Hall on base?",
+    "How do I sign up for this group?"
+  ],
+  "chipsSourceHash": "719fadc6bcc447d7"
 }

@@ -66,5 +66,11 @@
   ],
   "notCaptured": "The page displays primarily an image and related story cards. No substantive textual content describing the Respite Care Reimbursement Program itself is visible in the main content area.",
   "url": "https://quantico.usmc-mccs.org/news/recharge-with-efmp-respite-care-reimbursement-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much does respite care cost?",
+    "Who can use this program?",
+    "How do I sign up for reimbursement?"
+  ],
+  "chipsSourceHash": "020ed99fae7a10dc"
 }

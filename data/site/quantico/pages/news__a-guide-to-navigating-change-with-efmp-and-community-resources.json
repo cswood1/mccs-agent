@@ -87,5 +87,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does EFMP help with?",
+    "How does respite care work?",
+    "What goes in a family binder?",
+    "What are Purple Star Schools?"
+  ],
+  "chipsSourceHash": "6875b5cf7df8762f"
 }

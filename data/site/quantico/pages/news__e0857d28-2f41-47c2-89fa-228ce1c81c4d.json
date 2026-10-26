@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/e0857d28-2f41-47c2-89fa-228ce1c81c4d",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Why should I join LinkedIn?",
+    "Can employers find me on LinkedIn?",
+    "What goes on a LinkedIn profile?",
+    "Where do I find job postings?"
+  ],
+  "chipsSourceHash": "9299c6a657b63dcd"
 }

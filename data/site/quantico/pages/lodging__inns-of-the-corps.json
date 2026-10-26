@@ -82,5 +82,10 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/lodging/inns-of-the-corps",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What types of rooms do you have?",
+    "Can I bring my pet?"
+  ],
+  "chipsSourceHash": "2291ccabf5b22798"
 }

@@ -66,5 +66,12 @@
   ],
   "notCaptured": "The main content area displays a large image but no accompanying text, article body, or detailed information about deployment preparation. The page appears to be a landing page for the topic with related story links.",
   "url": "https://quantico.usmc-mccs.org/news/preparing-for-deployment",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I do before deploying?",
+    "Where can I get deployment support?",
+    "How do I prepare my family?",
+    "What resources are available?"
+  ],
+  "chipsSourceHash": "308f21b1e1f364a6"
 }

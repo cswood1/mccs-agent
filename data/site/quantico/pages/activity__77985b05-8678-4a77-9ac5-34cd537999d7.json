@@ -49,5 +49,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/77985b05-8678-4a77-9ac5-34cd537999d7",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next Bosses' Night?",
+    "What food is included for free?",
+    "Where exactly is this event?"
+  ],
+  "chipsSourceHash": "d69020c4b4a31905"
 }

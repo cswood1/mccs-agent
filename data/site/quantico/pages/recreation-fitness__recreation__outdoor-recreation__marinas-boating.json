@@ -168,5 +168,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marinas-boating",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the marina open?",
+    "What boats can I rent?",
+    "How do I rent kayaks?",
+    "What size boats fit here?"
+  ],
+  "chipsSourceHash": "ebf3bf72b096610f"
 }

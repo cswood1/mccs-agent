@@ -66,5 +66,10 @@
   ],
   "notCaptured": "The main article content for 'Safe Sleep for Babies' does not appear to include narrative body text beyond the featured image and publish date; confirmed on retry with full-markdown fallback prompt, which also found no additional article body text.",
   "url": "https://quantico.usmc-mccs.org/news/safe-sleep-for-babies",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for this program?",
+    "What age babies does this cover?"
+  ],
+  "chipsSourceHash": "948126c5d7c37b0f"
 }

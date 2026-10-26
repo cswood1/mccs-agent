@@ -67,5 +67,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/3ddc4f44-f5a2-45bb-b970-d2370a29dc9c",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is the next info session?",
+    "How do I register for this event?",
+    "Where do I park at Lejeune Hall?"
+  ],
+  "chipsSourceHash": "5955f9fa7afb07e7"
 }

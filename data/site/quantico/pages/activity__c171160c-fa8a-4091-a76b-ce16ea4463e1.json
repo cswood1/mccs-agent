@@ -53,5 +53,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where is Little Hall located?",
+    "How do I join this support group?"
+  ],
+  "chipsSourceHash": "50c64b06221f12b2"
 }

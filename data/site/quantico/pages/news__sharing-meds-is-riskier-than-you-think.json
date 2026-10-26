@@ -50,5 +50,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/sharing-meds-is-riskier-than-you-think",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Why is sharing meds illegal?",
+    "What happens if I fail a drug test?",
+    "What are the health risks?",
+    "Who should I talk to instead?"
+  ],
+  "chipsSourceHash": "387d830590d70d23"
 }

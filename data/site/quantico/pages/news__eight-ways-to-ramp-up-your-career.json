@@ -122,5 +122,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/eight-ways-to-ramp-up-your-career",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I clean up my social media?",
+    "How do I update my resume?"
+  ],
+  "chipsSourceHash": "6ece70455c2fd175"
 }

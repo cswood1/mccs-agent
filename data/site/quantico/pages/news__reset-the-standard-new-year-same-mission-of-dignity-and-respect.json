@@ -72,5 +72,10 @@
   ],
   "notCaptured": "Audio player element present (0:00 / 0:00); appears to be a podcast or audio content but content not transcribed in visible text.",
   "url": "https://quantico.usmc-mccs.org/news/reset-the-standard-new-year-same-mission-of-dignity-and-respect",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is the SAPR mission?",
+    "Is SAPR support available 24/7?"
+  ],
+  "chipsSourceHash": "d35001777da7e75f"
 }

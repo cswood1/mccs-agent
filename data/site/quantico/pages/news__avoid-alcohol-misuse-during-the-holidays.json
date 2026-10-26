@@ -54,5 +54,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much can I drink per day?",
+    "What counts as a standard drink?",
+    "Does coffee help me sober up?",
+    "What's a designated driver?"
+  ],
+  "chipsSourceHash": "73979bf3b6d4263e"
 }

@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/nutrition-recovery-fueling-your-return-to-duty",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much protein should I eat?",
+    "What foods reduce inflammation?",
+    "Can I talk to a dietitian?",
+    "Why do I need more calories?"
+  ],
+  "chipsSourceHash": "2a0efa976d001589"
 }

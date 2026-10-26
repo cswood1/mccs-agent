@@ -115,5 +115,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/high-intensity-tactical-training",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can do HITT classes?",
+    "What are open gym hours?",
+    "How do I book a unit PT?",
+    "Where is the HITT Center?"
+  ],
+  "chipsSourceHash": "b2691fd749076d7c"
 }

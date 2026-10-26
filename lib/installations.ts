@@ -14,7 +14,10 @@ export type InstallationConfig = {
   /** Short background on the base and its local area, injected into the system prompt. */
   localContext: string;
   welcomeMessage: string;
-  suggestedQuestions: string[];
+  /** Home page / default chips (docs/PRODUCT.md §6); the widget shows the first 4. */
+  defaultChips: string[];
+  /** Show the nudge bubble on non-home pages (docs/PRODUCT.md §5). */
+  nudge: boolean;
   /**
    * The only domains the agent's live web_fetch / web_search may reach: the installation
    * site plus official sites for education/benefits questions. Plain hostnames; subdomains

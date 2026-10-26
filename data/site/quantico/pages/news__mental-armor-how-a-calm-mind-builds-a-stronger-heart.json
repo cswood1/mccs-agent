@@ -60,5 +60,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/mental-armor-how-a-calm-mind-builds-a-stronger-heart",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the breathing techniques?",
+    "Where do I get mindfulness classes?",
+    "Can mindfulness improve sleep?",
+    "What's the body scan drill?"
+  ],
+  "chipsSourceHash": "8cbe684399a3a7c4"
 }

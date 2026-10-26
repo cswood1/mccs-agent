@@ -109,5 +109,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What events can you host here?",
+    "When are you open for bookings?",
+    "What's included in the ballrooms?",
+    "How do I contact catering?"
+  ],
+  "chipsSourceHash": "b9764484ec778a23"
 }

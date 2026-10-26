@@ -122,5 +122,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/sapr-provides-support-to-those-affected-by-sexual-assault",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can file a retaliation report?",
+    "What counts as retaliation?"
+  ],
+  "chipsSourceHash": "9e5c1a00c416f129"
 }

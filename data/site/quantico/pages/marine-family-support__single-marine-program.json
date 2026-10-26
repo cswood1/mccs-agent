@@ -196,5 +196,12 @@
   "images": [],
   "notCaptured": "Dynamic event calendar system with paginated event listings; Facebook and Instagram social media links embedded; additional events beyond those shown may load on interaction",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/single-marine-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What events do you have coming up?",
+    "Who can join the program?",
+    "Where is SMP located?",
+    "When are you open on weekends?"
+  ],
+  "chipsSourceHash": "671aca62255fceb1"
 }

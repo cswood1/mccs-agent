@@ -66,5 +66,10 @@
   ],
   "notCaptured": "The main content area appears to contain only a hero image with no descriptive text or body content visible below the title.",
   "url": "https://quantico.usmc-mccs.org/news/drive-sober-this-december",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What resources help me stay sober?",
+    "How do I get a safe ride home?"
+  ],
+  "chipsSourceHash": "fe7e8cc4baf994bc"
 }

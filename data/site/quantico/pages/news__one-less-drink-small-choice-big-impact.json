@@ -65,5 +65,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/one-less-drink-small-choice-big-impact",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Marine Corps Total Fitness?",
+    "Where can I get help with drinking?",
+    "Why does one less drink matter?",
+    "Who should I talk to about this?"
+  ],
+  "chipsSourceHash": "d8d835fc8f8f2853"
 }

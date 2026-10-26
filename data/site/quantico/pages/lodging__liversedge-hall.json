@@ -89,5 +89,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/lodging/liversedge-hall",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How far ahead can I book?",
+    "What do I need at check-in?",
+    "Who's eligible to stay here?",
+    "Where do I check in?"
+  ],
+  "chipsSourceHash": "3d14c32c14e2c697"
 }

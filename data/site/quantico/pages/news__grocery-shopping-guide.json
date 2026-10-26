@@ -54,5 +54,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/grocery-shopping-guide",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What produce stays fresh longest?",
+    "How do I save money on proteins?",
+    "Where's the local fitness team?"
+  ],
+  "chipsSourceHash": "32173f58fc43d8cd"
 }

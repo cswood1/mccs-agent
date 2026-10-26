@@ -71,5 +71,12 @@
     }
   ],
   "notCaptured": "Main article body text appears to load dynamically; only the header image, publish date byline, and related-stories cards were present in the fetched content.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What foods help with sleep?",
+    "When is the Sleep Challenge?",
+    "How do I join the challenge?",
+    "Where's the full nutrition guide?"
+  ],
+  "chipsSourceHash": "b1a8d14e07bcccb7"
 }

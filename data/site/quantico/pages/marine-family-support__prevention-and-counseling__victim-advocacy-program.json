@@ -131,5 +131,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/victim-advocacy-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I report anonymously?",
+    "What's the office address?",
+    "Is there 24/7 support?",
+    "What is Transitional Compensation?"
+  ],
+  "chipsSourceHash": "a03d7827cdb3def6"
 }

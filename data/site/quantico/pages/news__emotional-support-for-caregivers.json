@@ -70,5 +70,11 @@
   ],
   "notCaptured": "Page (published 30 May 2024) has no actual article body text beyond a graphic/infographic image and the standard MCCS tagline; confirmed via a second fetch attempt with a plain-markdown prompt. The infographic image content itself was not transcribed.",
   "url": "https://quantico.usmc-mccs.org/news/emotional-support-for-caregivers",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I get emotional support?",
+    "Where can caregivers find help?",
+    "How do I access MCCS resources?"
+  ],
+  "chipsSourceHash": "7b43910d6a9b5fb2"
 }

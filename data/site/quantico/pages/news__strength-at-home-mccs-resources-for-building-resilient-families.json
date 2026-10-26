@@ -72,5 +72,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/strength-at-home-mccs-resources-for-building-resilient-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can I get parenting support?",
+    "What is Child & Youth Programs?"
+  ],
+  "chipsSourceHash": "9cc3cd62ccff2ee2"
 }

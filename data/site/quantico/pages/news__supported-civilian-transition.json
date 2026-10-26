@@ -81,5 +81,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/supported-civilian-transition",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When can I start SkillBridge?",
+    "What veteran groups are mentioned?",
+    "How do I build my support network?"
+  ],
+  "chipsSourceHash": "0d36b9b441bf76e9"
 }

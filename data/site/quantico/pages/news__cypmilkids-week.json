@@ -71,5 +71,11 @@
   ],
   "notCaptured": "Main content area appears minimal; page primarily displays featured image and links to related stories. No detailed article text visible in the main content section.",
   "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is CYPMilKids Week?",
+    "When does CYPMilKids Week happen?",
+    "How do I sign my kid up?"
+  ],
+  "chipsSourceHash": "db2b6066713300db"
 }

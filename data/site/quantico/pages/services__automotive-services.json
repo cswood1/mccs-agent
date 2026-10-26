@@ -115,5 +115,10 @@
   "images": [],
   "notCaptured": "Auto Skills Events section appears to contain a list/grid view toggle with no visible event content loaded on page.",
   "url": "https://quantico.usmc-mccs.org/services/automotive-services",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does Auto Skills open?",
+    "What parts do you have in stock?"
+  ],
+  "chipsSourceHash": "8219743e8e6c4c2f"
 }

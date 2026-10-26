@@ -101,5 +101,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/m4l-network-success-story-las-vegas-rep-helps-marines-gain-employment-with-local-fedex-contractor",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I join M4L Network?",
+    "What is the M4L Network?"
+  ],
+  "chipsSourceHash": "53fa733c0686f963"
 }

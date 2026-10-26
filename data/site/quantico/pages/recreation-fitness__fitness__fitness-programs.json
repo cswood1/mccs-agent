@@ -68,5 +68,11 @@
   "images": [],
   "notCaptured": "Fitness Events section appears to have dynamic list/grid view toggle with no visible content displayed",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What fitness programs do you offer?",
+    "How do I sign up for a class?",
+    "When are fitness classes available?"
+  ],
+  "chipsSourceHash": "fe6ca2f30024d9a5"
 }

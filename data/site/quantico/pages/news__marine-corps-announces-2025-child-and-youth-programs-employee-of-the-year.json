@@ -80,5 +80,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does this award recognize?",
+    "When was the award presented?",
+    "Where is the winner from?",
+    "Why are these programs important?"
+  ],
+  "chipsSourceHash": "515eb958a72c2e7a"
 }

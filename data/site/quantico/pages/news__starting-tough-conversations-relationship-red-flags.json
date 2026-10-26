@@ -50,5 +50,12 @@
   ],
   "notCaptured": "The main article content appears to be a featured image (infographic) with no accompanying text body visible in the page source. The article may load dynamically or the content may be contained only in the image itself.",
   "url": "https://quantico.usmc-mccs.org/news/starting-tough-conversations-relationship-red-flags",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are relationship red flags?",
+    "How do I start a tough talk?",
+    "When should I seek help?",
+    "Who can I talk to about this?"
+  ],
+  "chipsSourceHash": "4cbaccf2e77c5e94"
 }

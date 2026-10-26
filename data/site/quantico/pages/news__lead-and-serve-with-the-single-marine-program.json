@@ -74,5 +74,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/lead-and-serve-with-the-single-marine-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What kind of events does SMP host?",
+    "How do I join the SMP council?"
+  ],
+  "chipsSourceHash": "18b5db58eeff06ae"
 }

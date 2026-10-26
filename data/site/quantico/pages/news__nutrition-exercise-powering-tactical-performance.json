@@ -66,5 +66,12 @@
   ],
   "notCaptured": "The page appears to be a news/story article page with minimal main content visible. The featured image and related stories section are shown, but the full article body text does not appear in the provided HTML content.",
   "url": "https://quantico.usmc-mccs.org/news/nutrition-exercise-powering-tactical-performance",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this article about?",
+    "When was this published?",
+    "Who runs these programs?",
+    "How do I find more MCCS stories?"
+  ],
+  "chipsSourceHash": "d649fbeb1c2a1676"
 }

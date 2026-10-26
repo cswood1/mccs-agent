@@ -219,5 +219,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/transition-readiness-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When do I start the program?",
+    "How do I schedule counseling?",
+    "What's the five-step process?",
+    "Where is the office located?"
+  ],
+  "chipsSourceHash": "65d3be23607b1581"
 }

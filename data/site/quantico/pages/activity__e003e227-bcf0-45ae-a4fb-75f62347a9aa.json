@@ -55,5 +55,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/e003e227-bcf0-45ae-a4fb-75f62347a9aa",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does the meal start?",
+    "Where is it being held?"
+  ],
+  "chipsSourceHash": "6ff83f8c9c138702"
 }

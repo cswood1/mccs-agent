@@ -258,5 +258,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/school-liaison",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What do School Liaisons help with?",
+    "Who can use this program?",
+    "How do I contact my School Liaison?"
+  ],
+  "chipsSourceHash": "4aec44413708f558"
 }

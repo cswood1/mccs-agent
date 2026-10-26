@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/f11ad311-a5c8-4f86-acf4-cb03cbcb6fdf",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Who can go on this trip?",
+    "What time do we leave?",
+    "How much does it cost?",
+    "What should I bring?"
+  ],
+  "chipsSourceHash": "f76307984548b993"
 }

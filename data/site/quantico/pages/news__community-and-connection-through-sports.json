@@ -74,5 +74,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What sports leagues are available?",
+    "How do I volunteer or coach?",
+    "What age groups can join?",
+    "How do I sign my kid up?"
+  ],
+  "chipsSourceHash": "c21e2e477b81dfa7"
 }

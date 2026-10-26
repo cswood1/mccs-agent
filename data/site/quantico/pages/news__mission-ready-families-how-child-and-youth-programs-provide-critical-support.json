@@ -74,5 +74,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/mission-ready-families-how-child-and-youth-programs-provide-critical-support",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What activities does CYP offer?",
+    "What ages do you serve?",
+    "How do I enroll my child?",
+    "What are your hours?"
+  ],
+  "chipsSourceHash": "3ee38eef3d03e12d"
 }

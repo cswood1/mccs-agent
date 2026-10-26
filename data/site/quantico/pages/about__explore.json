@@ -159,5 +159,11 @@
   ],
   "notCaptured": "Page content appeared to load mostly a grid of links to other MCCS installations' /about/explore pages; no further descriptive body text about Quantico itself was present in the fetched main content.",
   "url": "https://quantico.usmc-mccs.org/about/explore",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where are other MCCS locations?",
+    "Is there an MCCS in Hawaii?",
+    "What MCCS sites are in California?"
+  ],
+  "chipsSourceHash": "6345b99932a5b183"
 }

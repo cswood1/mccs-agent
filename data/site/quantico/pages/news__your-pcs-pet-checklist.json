@@ -50,5 +50,12 @@
   ],
   "notCaptured": "The main checklist content for the PCS pet checklist appears to load dynamically; only the hero image is visible in the static HTML provided.",
   "url": "https://quantico.usmc-mccs.org/news/your-pcs-pet-checklist",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What do I need to move my pet?",
+    "Where can I find pet housing help?",
+    "How do I prepare my pet for PCS?",
+    "What paperwork does my pet need?"
+  ],
+  "chipsSourceHash": "2f7960504841fc06"
 }

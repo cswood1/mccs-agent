@@ -66,5 +66,12 @@
   ],
   "notCaptured": "Video content embedded on page not captured; social sharing placeholders use PLACEHOLDER_URL variables",
   "url": "https://quantico.usmc-mccs.org/news/make-the-time",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this video about?",
+    "Who are the people in it?",
+    "How long is the video?",
+    "Where can I watch it?"
+  ],
+  "chipsSourceHash": "d794768399a615a0"
 }

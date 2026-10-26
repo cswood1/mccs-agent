@@ -57,5 +57,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/f4d6f4a9-db5a-4aff-a062-dc0aec4b4bd3",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Troop Appreciation?",
+    "Where do I go for TCAQ?",
+    "Are appetizers free?",
+    "Can Reservists come?"
+  ],
+  "chipsSourceHash": "7e359b3f8c79b13b"
 }

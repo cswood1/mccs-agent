@@ -76,5 +76,12 @@
   ],
   "notCaptured": "The main article content under the hero image appears to be missing/not rendered by WebFetch - only the hero image, 'Other Stories' teaser list, and organizational blurb were visible. Likely the actual article body is thin or not present on this page.",
   "url": "https://quantico.usmc-mccs.org/news/dive-into-a-summer-of-opportunity",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What summer programs are available?",
+    "How do I sign up for activities?",
+    "Where's this at?",
+    "What ages can join?"
+  ],
+  "chipsSourceHash": "9fbd03199fe1f614"
 }

@@ -81,5 +81,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/parenting-with-purpose-growing-strong-families-in-the-corps",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I access Military OneSource?",
+    "What is Thrive and how do I use it?"
+  ],
+  "chipsSourceHash": "981f21a2e4357bf0"
 }

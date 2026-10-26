@@ -54,5 +54,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/nature-boosts-wellness-for-marines-and-their-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I access outdoor equipment?",
+    "Do vets get free park access?",
+    "Why is nature good for Marines?"
+  ],
+  "chipsSourceHash": "13c70c2aaedbf0b2"
 }

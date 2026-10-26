@@ -103,5 +103,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What movies are playing this week?",
+    "How much does it cost for kids?",
+    "What time are movies on Saturday?"
+  ],
+  "chipsSourceHash": "1462fbc9b8b4d4a5"
 }

@@ -59,5 +59,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/8de075c2-5333-4ef3-95d6-18b6e514af42",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time's the pickup at MSRC?",
+    "Who can get free transportation?",
+    "How do I sign up for this trip?"
+  ],
+  "chipsSourceHash": "fa309fa8bb9be4b7"
 }

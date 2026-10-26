@@ -66,5 +66,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/find-joy-during-the-holidays",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs can help me?",
+    "Can I volunteer with other Marines?",
+    "How do I practice gratitude?"
+  ],
+  "chipsSourceHash": "131d28665332e7fa"
 }

@@ -93,5 +93,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/no-marine-stands-alone",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is OSCAR and how does it work?",
+    "Can I call Vets4Warriors 24/7?"
+  ],
+  "chipsSourceHash": "a2e818338d506772"
 }

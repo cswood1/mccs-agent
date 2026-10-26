@@ -83,5 +83,11 @@
   ],
   "notCaptured": "Audio player with transcript (0:00 duration); expandable image with enlarge function",
   "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs help military kids?",
+    "When is Purple Up Day?",
+    "How do I support military children?"
+  ],
+  "chipsSourceHash": "8ff52364336d5156"
 }

@@ -298,5 +298,12 @@
   ],
   "notCaptured": "Page included site-wide quick-links and footer navigation (Home/Events/Stories/Careers/etc., logo, social icons) which were excluded per instructions; those are not page-specific content.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign my child up?",
+    "Who's eligible to use this program?",
+    "What meals are included?",
+    "What activities does SAC offer?"
+  ],
+  "chipsSourceHash": "ff9420ca9f97d8f7"
 }

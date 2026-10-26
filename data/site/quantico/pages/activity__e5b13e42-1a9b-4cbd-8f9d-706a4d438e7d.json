@@ -65,5 +65,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/e5b13e42-1a9b-4cbd-8f9d-706a4d438e7d",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does the workshop end?",
+    "Can I bring my own lunch?"
+  ],
+  "chipsSourceHash": "4f67b292ab682b19"
 }

@@ -84,5 +84,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/tactical-pause-strengthens-readiness",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's a tactical pause?",
+    "How do I practice this?",
+    "What are the main benefits?",
+    "Where can I learn more?"
+  ],
+  "chipsSourceHash": "fbc1ebd4ef0a0dc3"
 }

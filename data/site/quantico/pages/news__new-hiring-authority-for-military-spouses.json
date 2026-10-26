@@ -50,5 +50,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/new-hiring-authority-for-military-spouses",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Military Spouse Preference?",
+    "Which job levels qualify for MSP?",
+    "How do I apply for MCCS jobs?"
+  ],
+  "chipsSourceHash": "aaf5b71c787eac82"
 }

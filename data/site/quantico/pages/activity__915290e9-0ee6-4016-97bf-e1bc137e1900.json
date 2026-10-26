@@ -51,5 +51,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/915290e9-0ee6-4016-97bf-e1bc137e1900",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does registration close?",
+    "How do I sign up for this?",
+    "Can military spouses attend?",
+    "What topics does it cover?"
+  ],
+  "chipsSourceHash": "8d9f8bf3b4396a0d"
 }

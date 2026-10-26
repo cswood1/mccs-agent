@@ -72,5 +72,10 @@
   ],
   "notCaptured": "Audio player control visible; publication date 27 Aug 2026, last updated 24 Sep 2026",
   "url": "https://quantico.usmc-mccs.org/news/spouse-employment-resources-available-through-spouseworks",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much tuition help can I get?",
+    "What's included in SpouseWorks?"
+  ],
+  "chipsSourceHash": "3793025be46a1b2f"
 }

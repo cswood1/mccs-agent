@@ -70,5 +70,11 @@
   ],
   "notCaptured": "Audio player control visible but content not captured",
   "url": "https://quantico.usmc-mccs.org/news/how-to-support-your-local-sapr-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What SAPR events are happening?",
+    "How do I volunteer with SAPR?",
+    "What's the 2025 SAAPM theme?"
+  ],
+  "chipsSourceHash": "08770ccc794a785e"
 }

@@ -79,5 +79,12 @@
   "images": [],
   "notCaptured": "Two clickable elements (phone icon and live chat icon) displayed as images above the FAQ section; actual clickable links rendered as image assets rather than text links",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/semper-support",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I contact Semper Support?",
+    "Who can use this service?",
+    "How many free sessions do I get?",
+    "Do I need to make an appointment?"
+  ],
+  "chipsSourceHash": "f4dcb33a6e2eddde"
 }

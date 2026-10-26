@@ -75,5 +75,11 @@
   ],
   "notCaptured": "Audio player for article (0:00 timestamp visible but content not accessible)",
   "url": "https://quantico.usmc-mccs.org/news/chaplains-stand-ready",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What support do chaplains offer?",
+    "Are talks with a chaplain private?",
+    "How do chaplains help families?"
+  ],
+  "chipsSourceHash": "cf51b8acb115ca39"
 }

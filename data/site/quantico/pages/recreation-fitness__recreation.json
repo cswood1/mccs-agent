@@ -118,5 +118,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for sports?",
+    "Tell me about swimming programs",
+    "What's in indoor recreation?",
+    "Who can use these facilities?"
+  ],
+  "chipsSourceHash": "6c44a9b1ea09a05b"
 }

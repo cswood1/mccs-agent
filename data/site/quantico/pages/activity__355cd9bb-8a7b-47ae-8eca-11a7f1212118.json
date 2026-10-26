@@ -63,5 +63,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/355cd9bb-8a7b-47ae-8eca-11a7f1212118",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What should I wear to this ball?",
+    "How do I buy tickets?",
+    "Who can attend this event?"
+  ],
+  "chipsSourceHash": "5b303eed40402d6a"
 }

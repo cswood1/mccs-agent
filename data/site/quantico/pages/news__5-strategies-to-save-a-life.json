@@ -88,5 +88,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I promise to keep it secret?",
+    "How often should I follow up?"
+  ],
+  "chipsSourceHash": "92fffb2d1c07c1ed"
 }

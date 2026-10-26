@@ -210,5 +210,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What forms do I need to enroll?",
+    "How often should I update my info?"
+  ],
+  "chipsSourceHash": "a38c8ad415c8e382"
 }

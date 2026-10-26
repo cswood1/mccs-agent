@@ -89,5 +89,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/829e5430-b24f-4b11-8039-0a2341298b70",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I bring my older kids too?",
+    "Do I need to sign up ahead of time?"
+  ],
+  "chipsSourceHash": "4e56b5144479261e"
 }

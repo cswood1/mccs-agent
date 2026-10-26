@@ -115,5 +115,12 @@
   ],
   "notCaptured": "Audio player element with playback controls (0:00 / 0:00) appears in the page but is not functional content.",
   "url": "https://quantico.usmc-mccs.org/news/unplug-your-kids-this-summer",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What activities help kids unplug?",
+    "Why should I limit screen time?",
+    "Where can I find summer programs?",
+    "How does outdoor time help kids?"
+  ],
+  "chipsSourceHash": "f384c1e61b7c01cb"
 }

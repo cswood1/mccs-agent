@@ -75,5 +75,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/athletic-competition-feeding-the-competitive-spirit",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Why should I compete in athletics?",
+    "What can I control in sports?",
+    "How do I handle losing?",
+    "Can sports change who I am?"
+  ],
+  "chipsSourceHash": "bd26a7fcee28f79e"
 }

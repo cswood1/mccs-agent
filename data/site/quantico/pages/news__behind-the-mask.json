@@ -92,5 +92,12 @@
   ],
   "notCaptured": "Audio player control for listening to the article content",
   "url": "https://quantico.usmc-mccs.org/news/behind-the-mask",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is masked depression?",
+    "How do I talk to someone?",
+    "What are the warning signs?",
+    "Can I call 988 anytime?"
+  ],
+  "chipsSourceHash": "21635da1e5a21fc8"
 }

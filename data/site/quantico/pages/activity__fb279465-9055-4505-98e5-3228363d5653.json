@@ -49,5 +49,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/fb279465-9055-4505-98e5-3228363d5653",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Right Hand Night?",
+    "Where is The Clubs located?",
+    "Are appetizers really free?",
+    "What time does it start?"
+  ],
+  "chipsSourceHash": "52c19d4f4f610f10"
 }

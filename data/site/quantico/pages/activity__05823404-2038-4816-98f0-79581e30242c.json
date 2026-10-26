@@ -52,5 +52,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/05823404-2038-4816-98f0-79581e30242c",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is SkillBridge?",
+    "How do I register?",
+    "Where do I park?",
+    "When does registration close?"
+  ],
+  "chipsSourceHash": "6e853036d2f7eb70"
 }

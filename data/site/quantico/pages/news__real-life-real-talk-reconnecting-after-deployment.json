@@ -71,5 +71,11 @@
   ],
   "notCaptured": "The main body content of the article appears to be rendered as an image/graphic and was not extractable as text; only the hero image and 'Other Stories' teaser list were captured.",
   "url": "https://quantico.usmc-mccs.org/news/real-life-real-talk-reconnecting-after-deployment",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this article about?",
+    "When was this published?",
+    "What other stories can I read?"
+  ],
+  "chipsSourceHash": "068601ddf0736673"
 }

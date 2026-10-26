@@ -79,5 +79,11 @@
   ],
   "notCaptured": "Audio player (Listen | 0:00)",
   "url": "https://quantico.usmc-mccs.org/news/marines-and-families-stronger-together",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can chaplains help me?",
+    "How do I reach out to my chaplain?",
+    "What does community mean here?"
+  ],
+  "chipsSourceHash": "4fe39acef1e51922"
 }

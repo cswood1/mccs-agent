@@ -51,5 +51,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What dates is this workshop?",
+    "Where's Little Hall located?",
+    "How do I sign up?",
+    "What will I learn here?"
+  ],
+  "chipsSourceHash": "2f7dfba06acbb0db"
 }

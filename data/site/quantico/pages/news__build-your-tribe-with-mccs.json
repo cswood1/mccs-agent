@@ -66,5 +66,10 @@
     }
   ],
   "notCaptured": "Page uses placeholder URLs for social media sharing (PLACEHOLDER_URL, PLACEHOLDER_SUBJECT, PLACEHOLDER_BODY); no body article text beyond the caption/credit line was present in the fetched page.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What programs does MCCS offer?",
+    "What is MCCS trying to help with?"
+  ],
+  "chipsSourceHash": "970211b1ddfa18f2"
 }

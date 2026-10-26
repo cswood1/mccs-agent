@@ -210,5 +210,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/information-referral-and-relocation",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Is the PCS Workshop required?",
+    "How do I request a sponsor?",
+    "Where do I schedule a PCS Workshop?"
+  ],
+  "chipsSourceHash": "65aa52799f22ba18"
 }

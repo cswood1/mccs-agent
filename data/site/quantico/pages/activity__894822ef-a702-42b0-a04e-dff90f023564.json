@@ -53,5 +53,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/894822ef-a702-42b0-a04e-dff90f023564",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much for kids ages 4-12?",
+    "What time are the seatings?",
+    "Where's The Clubs located?",
+    "How do I buy tickets?"
+  ],
+  "chipsSourceHash": "d031ca3e6ba9886e"
 }

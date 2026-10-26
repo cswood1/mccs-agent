@@ -59,5 +59,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/facing-changes-rise-to-the-challenge",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How can my support network help?",
+    "What mental health tools work best?"
+  ],
+  "chipsSourceHash": "a22ec19e02ac2258"
 }

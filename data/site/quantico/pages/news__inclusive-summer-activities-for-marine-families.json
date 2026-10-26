@@ -83,5 +83,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/inclusive-summer-activities-for-marine-families",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is WARR-Semper Fit?",
+    "When are sensory-friendly movies?"
+  ],
+  "chipsSourceHash": "3e3fedecf89d99eb"
 }

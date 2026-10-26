@@ -66,5 +66,10 @@
     }
   ],
   "notCaptured": "Audio player element (listen button with 0:00 timestamp) appears to be present but source file not provided in content",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is the School Liaison Program?",
+    "How do I contact my School Liaison?"
+  ],
+  "chipsSourceHash": "17d1bdd91debd06f"
 }

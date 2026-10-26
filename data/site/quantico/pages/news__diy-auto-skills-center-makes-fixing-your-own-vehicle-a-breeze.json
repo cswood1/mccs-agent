@@ -45,5 +45,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/diy-auto-skills-center-makes-fixing-your-own-vehicle-a-breeze",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What tools are available?",
+    "How much can I save?",
+    "Do I need experience?",
+    "What repairs can I do?"
+  ],
+  "chipsSourceHash": "46fcb5ef04dce240"
 }

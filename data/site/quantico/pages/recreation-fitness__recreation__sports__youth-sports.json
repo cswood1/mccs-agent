@@ -77,5 +77,11 @@
   ],
   "notCaptured": "The source extraction did not separately populate breadcrumb, cards, or links arrays even though contact details (address/phone/hours table) were present in the Contact Information section markdown; those contact details were duplicated into the contacts array here for consistency.",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does soccer registration open?",
+    "How much does flag football cost?",
+    "What's the weather hotline number?"
+  ],
+  "chipsSourceHash": "af251c5f888be1ba"
 }

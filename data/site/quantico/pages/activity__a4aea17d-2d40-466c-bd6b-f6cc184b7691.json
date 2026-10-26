@@ -55,5 +55,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/a4aea17d-2d40-466c-bd6b-f6cc184b7691",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next New Join Brief?",
+    "Do I have to go to this brief?",
+    "Where do I go for the brief?"
+  ],
+  "chipsSourceHash": "996954ae47c8ab4c"
 }

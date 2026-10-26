@@ -261,5 +261,10 @@
   "images": [],
   "notCaptured": "Inline images referenced in the page (7b1da15d-6c71-41ed-b81d-674a3498e1b8, 341e76e4-4ef5-45df-840c-cd5bb83c5e3b, cbd8721a-1eb2-42fd-a802-137fc9ebee11, 60e5f81e-2e88-44ec-b904-f898ef6f6f1e, 07783c64-d912-42b7-b422-08a68b7a7b85, e9bc8707-d15e-4b63-af10-5512518ea9f9, 54cac9b3-9573-4d42-861d-cb018392a185, 36389e79-80e2-4aa2-8775-bdde79f74ba3) did not load with visible alt text or descriptions.",
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-misuse",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I call for help 24/7?",
+    "What's a safe drink limit?"
+  ],
+  "chipsSourceHash": "baf00fcfddfe10f1"
 }

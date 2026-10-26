@@ -96,5 +96,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/finding-strength-through-peer-support",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I support a fellow Marine?",
+    "What's an OSCAR team?",
+    "Where can I get free counseling?"
+  ],
+  "chipsSourceHash": "ede9c4585e2c7054"
 }

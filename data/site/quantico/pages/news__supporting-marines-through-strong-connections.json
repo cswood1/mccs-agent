@@ -69,5 +69,12 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible",
   "url": "https://quantico.usmc-mccs.org/news/supporting-marines-through-strong-connections",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is social fitness?",
+    "How does peer support help?",
+    "Who plays a role in building trust?",
+    "What resources are available?"
+  ],
+  "chipsSourceHash": "03f2ed6a11537c8c"
 }

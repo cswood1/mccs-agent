@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/when-should-you-sign-your-child-up-for-swim-lessons",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When can kids start swim lessons?",
+    "Do lessons prevent all drowning?"
+  ],
+  "chipsSourceHash": "571ba4a2619d4433"
 }

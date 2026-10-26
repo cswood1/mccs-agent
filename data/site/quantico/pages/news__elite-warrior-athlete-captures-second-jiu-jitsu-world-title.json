@@ -41,5 +41,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/elite-warrior-athlete-captures-second-jiu-jitsu-world-title",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I apply for Elite Warrior?",
+    "What's the Elite Warrior program?",
+    "Where did LtCol Emison train?",
+    "How many matches did he win?"
+  ],
+  "chipsSourceHash": "d1c18f93379d5dc9"
 }

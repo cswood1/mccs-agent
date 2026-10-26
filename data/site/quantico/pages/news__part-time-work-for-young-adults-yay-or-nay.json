@@ -90,5 +90,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What risks should I know about?",
+    "What skills will my teen gain?",
+    "How can FMEAP help my family?",
+    "What traits should my teen have?"
+  ],
+  "chipsSourceHash": "82e2d229e18806b1"
 }

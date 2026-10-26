@@ -75,5 +75,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/helping-children-move-from-chaos-to-calm",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the 3 steps to help kids?",
+    "How do I calm my child down?",
+    "Why do kids have tantrums?",
+    "What coping strategies work best?"
+  ],
+  "chipsSourceHash": "43f55a2ca13b0114"
 }

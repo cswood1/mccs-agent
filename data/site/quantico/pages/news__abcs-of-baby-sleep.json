@@ -70,5 +70,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/abcs-of-baby-sleep",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I keep my baby safe?",
+    "Where can I learn more details?",
+    "Why does safe sleep matter here?",
+    "What are the ABCs of baby sleep?"
+  ],
+  "chipsSourceHash": "faabfa7224b25e3e"
 }

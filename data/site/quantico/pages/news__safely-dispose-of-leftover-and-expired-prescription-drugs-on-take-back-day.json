@@ -54,5 +54,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/safely-dispose-of-leftover-and-expired-prescription-drugs-on-take-back-day",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Take Back Day this year?",
+    "How do I find a drop-off location?"
+  ],
+  "chipsSourceHash": "d7c71f941257247b"
 }

@@ -21,6 +21,8 @@ export type SitePage = {
   links: { text: string; url: string }[];
   images: { src: string; alt: string }[];
   notCaptured: string;
+  /** Suggested-question chips for this page (scripts/chips/generate.mjs). */
+  chips: string[];
 };
 
 export const SITE_ORIGIN = "https://quantico.usmc-mccs.org";
@@ -92,5 +94,6 @@ function normalize(raw: Partial<SitePage>): SitePage {
     links: raw.links ?? [],
     images: raw.images ?? [],
     notCaptured: raw.notCaptured ?? "",
+    chips: Array.isArray(raw.chips) ? raw.chips : [],
   };
 }

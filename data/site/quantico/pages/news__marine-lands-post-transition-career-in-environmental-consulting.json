@@ -50,5 +50,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-lands-post-transition-career-in-environmental-consulting",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is SkillBridge?",
+    "How long is the program?",
+    "What skills does it teach?",
+    "Did Maj. Stigall get a job?"
+  ],
+  "chipsSourceHash": "ed0e8583ef6cad0c"
 }

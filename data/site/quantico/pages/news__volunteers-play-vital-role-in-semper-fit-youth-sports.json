@@ -60,5 +60,12 @@
   ],
   "notCaptured": "Audio player control visible but content not accessible",
   "url": "https://quantico.usmc-mccs.org/news/volunteers-play-vital-role-in-semper-fit-youth-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What age kids can join?",
+    "How do I become a coach?",
+    "What training do I need?",
+    "Where do I sign up to volunteer?"
+  ],
+  "chipsSourceHash": "ddbc918e9c9afb02"
 }

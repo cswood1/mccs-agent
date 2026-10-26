@@ -62,5 +62,12 @@
   ],
   "notCaptured": "Audio player element present but content not captured",
   "url": "https://quantico.usmc-mccs.org/news/learn-to-budget-for-the-unexpected",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How much should I save first?",
+    "What's the target emergency fund?",
+    "How do I automate savings?",
+    "Where can I get help budgeting?"
+  ],
+  "chipsSourceHash": "32c5406f7a80cf69"
 }

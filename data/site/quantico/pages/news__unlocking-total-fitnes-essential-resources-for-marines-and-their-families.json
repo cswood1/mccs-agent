@@ -117,5 +117,12 @@
     }
   ],
   "notCaptured": "Audio player control visible but content not captured",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What are the four fitness domains?",
+    "Where do I find MarineNet courses?",
+    "What does CHAMP help with?",
+    "Who provides spiritual guidance?"
+  ],
+  "chipsSourceHash": "4fa2f3fed1532ba6"
 }

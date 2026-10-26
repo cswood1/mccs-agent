@@ -66,5 +66,11 @@
   ],
   "notCaptured": "The main article content appears to load dynamically or is not visible in the provided HTML; only the image header and related stories section are present.",
   "url": "https://quantico.usmc-mccs.org/news/self-awareness-and-mental-agility-high-impact-skills",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I sign up for this?",
+    "When and where is it offered?",
+    "Who can attend this training?"
+  ],
+  "chipsSourceHash": "8154c945d211b31f"
 }

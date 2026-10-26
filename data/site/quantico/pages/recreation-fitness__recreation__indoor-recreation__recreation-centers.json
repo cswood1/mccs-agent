@@ -88,5 +88,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What time does Main Side Rec open?",
+    "Can I use the gaming center?",
+    "Is there free Wi-Fi here?",
+    "What's at 206 Nicholas Rd?"
+  ],
+  "chipsSourceHash": "f6ae6ba8a2a42a7f"
 }

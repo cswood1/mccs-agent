@@ -64,5 +64,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/embracing-change-the-healthy-way",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the Chill Drills app?",
+    "How often should I exercise?",
+    "Where do I find local activities?",
+    "What if I'm drinking too much?"
+  ],
+  "chipsSourceHash": "01f824d3223d6c9e"
 }

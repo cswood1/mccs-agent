@@ -46,5 +46,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/a55d2a5a-6942-4543-b163-1ecfd9f7ea70",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does the class start?",
+    "How many sessions is it?",
+    "What will I learn?",
+    "Where is it located?"
+  ],
+  "chipsSourceHash": "36f96bedab4e15cc"
 }

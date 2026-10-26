@@ -70,5 +70,11 @@
   ],
   "notCaptured": "Audio player visible but content not captured",
   "url": "https://quantico.usmc-mccs.org/news/sarc-of-the-year-award-winner",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does SARC stand for?",
+    "Who won the 2023 Liz Blanc award?",
+    "Where was Maj Rollins stationed?"
+  ],
+  "chipsSourceHash": "f4325ad2bf888344"
 }

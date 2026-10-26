@@ -91,5 +91,12 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What assessments does SECO offer?",
+    "How long is Traitify?",
+    "Can I talk to a coach?",
+    "Is face-to-face help available?"
+  ],
+  "chipsSourceHash": "ba8ec8e7104a16e1"
 }

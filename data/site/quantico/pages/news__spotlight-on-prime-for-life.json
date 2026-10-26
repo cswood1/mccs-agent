@@ -50,5 +50,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/spotlight-on-prime-for-life",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What is Prime for Life?",
+    "Who can join Prime for Life?"
+  ],
+  "chipsSourceHash": "684252c4a33a5560"
 }

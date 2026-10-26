@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/7bb632b2-1db7-4910-8926-c8467a548cac",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When does Century start?",
+    "What topics does this cover?",
+    "How do I sign up?",
+    "Where is it held?"
+  ],
+  "chipsSourceHash": "d4bd6238b57701dc"
 }

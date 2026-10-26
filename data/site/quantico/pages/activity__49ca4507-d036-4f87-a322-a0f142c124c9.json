@@ -74,5 +74,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/49ca4507-d036-4f87-a322-a0f142c124c9",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When's the next marriage workshop?",
+    "Is this for newlyweds only?",
+    "What's the cost to attend?",
+    "How do I sign up for it?"
+  ],
+  "chipsSourceHash": "a1d4f04774cf5aea"
 }

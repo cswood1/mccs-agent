@@ -50,5 +50,10 @@
     }
   ],
   "notCaptured": "",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How does alcohol affect my fitness?",
+    "Where can I get help with drinking?"
+  ],
+  "chipsSourceHash": "b6917a7c3d430091"
 }

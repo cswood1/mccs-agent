@@ -68,5 +68,10 @@
   ],
   "notCaptured": "Audio player element present but not captured",
   "url": "https://quantico.usmc-mccs.org/news/the-masks-we-wear",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I ask if someone's okay?",
+    "What's the crisis text number?"
+  ],
+  "chipsSourceHash": "054680bbacb237b7"
 }

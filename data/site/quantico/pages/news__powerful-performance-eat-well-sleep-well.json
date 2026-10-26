@@ -66,5 +66,11 @@
   ],
   "notCaptured": "Audio player appears to be dynamically loaded; exact duration and playback controls not captured. Main body text content beyond the mission statement line could not be fully captured; page may require additional rendering.",
   "url": "https://quantico.usmc-mccs.org/news/powerful-performance-eat-well-sleep-well",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What does this program cover?",
+    "Who can join this program?",
+    "How do I sign up?"
+  ],
+  "chipsSourceHash": "12d6c68e2d71232a"
 }

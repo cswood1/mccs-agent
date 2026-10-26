@@ -64,5 +64,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/balance-in-healthy-relationships-starts-with-safety",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What makes a relationship healthy?",
+    "Where is my local FAP office?"
+  ],
+  "chipsSourceHash": "1b1298fe387414cc"
 }

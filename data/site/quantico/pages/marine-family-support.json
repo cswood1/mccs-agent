@@ -279,5 +279,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/marine-family-support",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How do I find counseling services?",
+    "What's the Single Marine Program?",
+    "Does MCCS help with job training?"
+  ],
+  "chipsSourceHash": "7e14bf9b43272dc8"
 }

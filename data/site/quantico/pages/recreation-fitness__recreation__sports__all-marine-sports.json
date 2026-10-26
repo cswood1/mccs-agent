@@ -189,5 +189,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/all-marine-sports",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What sports can I compete in?",
+    "How do I apply as an athlete?",
+    "Who's eligible to join?",
+    "What test events do I need?"
+  ],
+  "chipsSourceHash": "794ebcaf531dcb2a"
 }

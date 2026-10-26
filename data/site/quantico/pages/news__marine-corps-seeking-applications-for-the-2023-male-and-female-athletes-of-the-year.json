@@ -68,5 +68,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/marine-corps-seeking-applications-for-the-2023-male-and-female-athletes-of-the-year",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the deadline to submit?",
+    "Do I need my commander's approval?",
+    "What competitions qualify?"
+  ],
+  "chipsSourceHash": "9c3b40611e1b8714"
 }

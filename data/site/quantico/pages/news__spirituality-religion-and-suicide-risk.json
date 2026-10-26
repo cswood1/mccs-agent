@@ -66,5 +66,11 @@
     }
   ],
   "notCaptured": "Main article body text appears to load dynamically and was not present in the fetched content; only the header image and related-stories cards were visible.",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's this article about?",
+    "Is spirituality protective?",
+    "Who should read this?"
+  ],
+  "chipsSourceHash": "2deb53e47fa6c422"
 }

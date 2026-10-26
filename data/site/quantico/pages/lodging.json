@@ -81,5 +81,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/lodging",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Where can I stay at Quantico?",
+    "How many rooms at Marine Lodge?",
+    "What's the C Suites like?",
+    "Which lodging is for TAD/TDY?"
+  ],
+  "chipsSourceHash": "974f94d05e4bf466"
 }

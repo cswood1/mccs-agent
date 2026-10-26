@@ -79,5 +79,11 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/less-alcohol-more-fitness-gains",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "How many calories are in beer?",
+    "What's a standard drink size?",
+    "How do I talk to a fitness coach?"
+  ],
+  "chipsSourceHash": "0709d8a83989f30a"
 }

@@ -53,5 +53,10 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/activity/8bb79742-c19b-402b-8a33-309d7596ca29",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Can I get a ride to the Rec Center?",
+    "How do I sign up for this event?"
+  ],
+  "chipsSourceHash": "d28d8d5d2b018e87"
 }

@@ -118,5 +118,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/resources-to-support-emotional-health",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "Is counseling free?",
+    "How many sessions with CCP?",
+    "What's the crisis line number?",
+    "Can I call a counselor 24/7?"
+  ],
+  "chipsSourceHash": "4a16f451e4d4fd8c"
 }

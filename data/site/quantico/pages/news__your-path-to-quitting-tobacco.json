@@ -83,5 +83,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/your-path-to-quitting-tobacco",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "What's the Great American Smokeout?",
+    "How do I find my tobacco triggers?",
+    "Where can I get quit support?",
+    "When should I set my quit date?"
+  ],
+  "chipsSourceHash": "518037e6f424d45a"
 }

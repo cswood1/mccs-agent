@@ -54,5 +54,12 @@
   ],
   "notCaptured": "",
   "url": "https://quantico.usmc-mccs.org/news/read-across-america-with-marine-corps-mwr-libraries",
-  "fetchedAt": "2026-10-26"
+  "fetchedAt": "2026-10-26",
+  "chips": [
+    "When is Read Across America?",
+    "What events does the library have?",
+    "Can I access books online?",
+    "How do I find reading lists?"
+  ],
+  "chipsSourceHash": "4f6fedec0ded038b"
 }
