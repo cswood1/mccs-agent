@@ -48,7 +48,7 @@ check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(subtitle), sub
 const welcome = await w.locator(".msg.assistant").first().textContent();
 check("Page-specific welcome", /Questions about .*Bowling.*\? I can help\./i.test(welcome), welcome);
 const pageChips = await w.locator(".chips .chip").allTextContents();
-check("3–4 of the page's own chips shown", pageChips.length >= 3 && pageChips.length <= 4 && !pageChips.includes("I just PCS'd here, where do I start?"), JSON.stringify(pageChips));
+check("3–4 of the page's own chips shown", pageChips.length >= 3 && pageChips.length <= 4 && !pageChips.includes("Just PCS’d here, where do I start?"), JSON.stringify(pageChips));
 
 // 2. Ask via a chip: page context sent, follow-ups replace page chips, links rendered.
 await w.locator(".chips .chip").first().click();
@@ -118,7 +118,7 @@ const p3 = await ctx2.newPage();
 await p3.goto(base + "/", { waitUntil: "networkidle" });
 await p3.locator("#mccs-assistant button.launcher").click().catch(() => {});
 const homeChips = await p3.locator("#mccs-assistant .chips .chip").allTextContents();
-check("Home shows the default chips", homeChips[0] === "I just PCS'd here, where do I start?" && homeChips.length === 4, JSON.stringify(homeChips));
+check("Home shows the default chips", homeChips[0] === "Just PCS’d here, where do I start?" && homeChips.length === 4, JSON.stringify(homeChips));
 
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();

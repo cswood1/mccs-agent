@@ -15,12 +15,12 @@
     {
       "heading": "",
       "level": 0,
-      "markdown": "The Barber Physical Activity Center (BPAC) is a 57,000 square foot, state-of-the-art facility that houses Physical Fitness, Health Promotion, Athletics, and Single Marine Program. The facility offers a large variety of recreational opportunities with a 9,600 square foot fitness deck, group exercise room, spin studio, functional fitness room, three racquetball courts, and one full sized basketball court. It also offers a TV and Wi-Fi lounge, locker rooms, and separate saunas for men and women for all eligible patrons. Children 12-15 years old must be accompanied by an adult over 18. 16 and older are permitted unaccompanied access. 10–15-year-olds may use the basketball and racquetball courts when accompanied by an adult. Children under the age of 10 are not permitted access to the facility unless it is an organized MCCS or Command event open to all ages. ID is required for access to the facility, DoD civilians and Base Contractors."
+      "markdown": "The Barber Physical Activity Center (BPAC) is a 57,000 square foot, state-of-the-art facility that houses Physical Fitness, Health Promotion, Athletics, and Single Marine Program. The facility offers a large variety of recreational opportunities with a 9,600 square foot fitness deck, group exercise room, spin studio, functional fitness room, three racquetball courts, and one full sized basketball court. It also offers a TV and Wi-Fi lounge, locker rooms, and separate saunas for men and women for all eligible patrons. Children 12-15 years old must be accompanied by an adult over 18. 16 and older are permitted unaccompanied access. 10\u201315-year-olds may use the basketball and racquetball courts when accompanied by an adult. Children under the age of 10 are not permitted access to the facility unless it is an organized MCCS or Command event open to all ages. ID is required for access to the facility, DoD civilians and Base Contractors."
     },
     {
       "heading": "Unmanned Fitness Center",
       "level": 3,
-      "markdown": "**Authorized Users: Active Duty Military, MCINCR-MCBQ PMO Civilians, and Fire Department personnel only.**\n\n• Unmanned hours start 30 minutes after closing of regular hours: All patrons must exit facility.\n• Unmanned access is turned off 30 minutes before opening: Patrons do not need to exit facility.\n• Federal Holidays BPAC is open for unmanned access registrants only."
+      "markdown": "**Authorized Users: Active Duty Military, MCINCR-MCBQ PMO Civilians, and Fire Department personnel only.**\n\n\u2022 Unmanned hours start 30 minutes after closing of regular hours: All patrons must exit facility.\n\u2022 Unmanned access is turned off 30 minutes before opening: Patrons do not need to exit facility.\n\u2022 Federal Holidays BPAC is open for unmanned access registrants only."
     },
     {
       "heading": "Parking",
@@ -216,10 +216,10 @@
   "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness",
   "fetchedAt": "2026-10-26",
   "chips": [
-    "What are BPAC hours on Saturday?",
-    "How much is a monthly locker?",
+    "Is the gym open right now?",
+    "Group fitness class schedule",
     "Can my 13-year-old go alone?",
-    "What's the daily contractor fee?"
+    "Can contractors use the gym?"
   ],
-  "chipsSourceHash": "fea7406d30112aad"
+  "chipsManual": true
 }

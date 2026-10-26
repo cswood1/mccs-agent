@@ -25,7 +25,7 @@
     {
       "heading": "Family Child Care",
       "level": 3,
-      "markdown": "Family Child Care (FCC) providers are military spouses that are licensed by the Base Commander to care for children in government quarters. They complete the same program training as center-based care givers. Homes are inspected regularly and complete ongoing training monthly. FCC Providers offer activity centers/learning areas that allow children the opportunity to explore, create, imagine, and experience their environment. Providers are readily available to facilitate learning and provide nurturing encouragement to each child. Each activity is designed with a goal that promotes further development and prepares your child for the next level of learning. FCC Director – 703.784.2011\n\n**Extended Hours:** Extended hours are from 0500-0600 and 1800-1900 and are available when reserved one week in advance for Active Duty patrons only. The cost is the hourly care rate per child.\n\n**Special Events Care:** Units aboard MCB Quantico may request childcare services for special events. Contact CYP Administration office for more information, 703.784.3760.\n\n**Parent Orientation:** Families receive a welcome orientation specific to their child's program. This is the opportunity for parents to share information about their child to help ensure a positive start. The orientation covers policy and instructions to help make your family's transition to CYP smooth. It is necessary and mandatory to attend an orientation prior to your child's start date."
+      "markdown": "Family Child Care (FCC) providers are military spouses that are licensed by the Base Commander to care for children in government quarters. They complete the same program training as center-based care givers. Homes are inspected regularly and complete ongoing training monthly. FCC Providers offer activity centers/learning areas that allow children the opportunity to explore, create, imagine, and experience their environment. Providers are readily available to facilitate learning and provide nurturing encouragement to each child. Each activity is designed with a goal that promotes further development and prepares your child for the next level of learning. FCC Director \u2013 703.784.2011\n\n**Extended Hours:** Extended hours are from 0500-0600 and 1800-1900 and are available when reserved one week in advance for Active Duty patrons only. The cost is the hourly care rate per child.\n\n**Special Events Care:** Units aboard MCB Quantico may request childcare services for special events. Contact CYP Administration office for more information, 703.784.3760.\n\n**Parent Orientation:** Families receive a welcome orientation specific to their child's program. This is the opportunity for parents to share information about their child to help ensure a positive start. The orientation covers policy and instructions to help make your family's transition to CYP smooth. It is necessary and mandatory to attend an orientation prior to your child's start date."
     }
   ],
   "cards": [
@@ -251,9 +251,10 @@
   "url": "https://quantico.usmc-mccs.org/marine-family-support/child-and-youth",
   "fetchedAt": "2026-10-26",
   "chips": [
-    "What ages does CYP care for?",
-    "Are CDCs open on weekends?",
-    "How do I book extended hours?"
+    "Child care options for my kids",
+    "How do I get on the waitlist?",
+    "Before and after school care",
+    "Summer camps for my kids"
   ],
-  "chipsSourceHash": "4110ad36ae5456e5"
+  "chipsManual": true
 }

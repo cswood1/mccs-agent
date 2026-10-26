@@ -86,8 +86,8 @@ covers content.
   that page, and spread across different needs (hours/location, cost/eligibility, how-to/booking).
 - **Section chips (fallback):** for pages without their own chips.
 - **Home / default set:**
-  "I just PCS'd here, where do I start?", "Which gyms are open today?",
-  "What's happening this weekend?", "Child care options on base",
+  "Just PCS’d here, where do I start?", "Which gyms are open today?",
+  "What’s happening this weekend?", "Child care options on base",
   "Help me use Tuition Assistance", "Where can I eat on base?" (show 4).
 - **Follow-up chips:** after each answer, 2 next questions the model suggests, returned as
   structured data rather than in the answer text. They replace the page chips until the user
@@ -143,6 +143,17 @@ every run on:
 7. **Close:** "Same script tag, different config," then switch to a second installation (stretch goal).
 
 ## 11. Roadmap (in order)
+
+**Working rhythm:**
+- Ship in small slices of about 10 minutes, one visible change each.
+- After every slice: commit, push (which auto-deploys), give a 3-line report, then stop.
+- Run 3–5 targeted test questions per slice.
+- Run the full eval only at milestones, and only when asked.
+- The team tests the live demo between slices.
+- Round 3 ships as separate slices:
+  1. page awareness, chips and follow-ups
+  2. nudge
+  3. tap-to-call and map links
 
 1. **Round 2 (in progress):** conversational style, speed and cost, test set, auto-deploy.
 2. **Round 3:** page awareness, chips, follow-ups, nudge, tap-to-call and map links, and the

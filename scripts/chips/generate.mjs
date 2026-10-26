@@ -8,7 +8,8 @@
  *
  * Chips are written into each page file (data/site/<id>/pages/*.json) as `chips`, with a hash
  * of the text they were generated from (`chipsSourceHash`). Pages whose text hasn't changed
- * are skipped, so re-runs only pay for what changed.
+ * are skipped, so re-runs only pay for what changed. Pages marked "chipsManual": true keep their
+ * hand-set chips and are never sent to the model.
  */
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -67,6 +68,7 @@ function loadTodo() {
   for (const f of readdirSync(pagesDir).filter((f) => f.endsWith(".json")).sort()) {
     const p = JSON.parse(readFileSync(path.join(pagesDir, f), "utf8"));
     if (!p.title || failed(p)) continue;
+    if (p.chipsManual) continue; // hand-set chips (e.g. demo pages) are never regenerated
     const text = pageText(p);
     const h = hash(text);
     if (p.chipsSourceHash === h && Array.isArray(p.chips) && p.chips.length >= 2) {
@@ -177,6 +179,7 @@ if (mode === "--collect") {
     }
     const file = path.join(pagesDir, item.file);
     const page = JSON.parse(readFileSync(file, "utf8"));
+    if (page.chipsManual) continue;
     page.chips = chips;
     page.chipsSourceHash = item.hash;
     writeFileSync(file, JSON.stringify(page, null, 2) + "\n");

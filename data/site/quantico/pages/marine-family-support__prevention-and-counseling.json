@@ -70,7 +70,7 @@
     {
       "title": "Domestic Abuse",
       "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse",
-      "text": "Everyone's situation is different — domestic abuse can happen to anyone and it's not their fault....",
+      "text": "Everyone's situation is different \u2014 domestic abuse can happen to anyone and it's not their fault....",
       "image": "https://quantico.usmc-mccs.org/modules/media/t/3d9309b2812348fa8f2bb91852285b2d_v2.png?m=638298232777400000"
     },
     {
@@ -185,8 +185,10 @@
   "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling",
   "fetchedAt": "2026-10-26",
   "chips": [
-    "How do I report sexual assault?",
-    "How do I contact a victim advocate?"
+    "I need someone to talk to",
+    "Is counseling confidential?",
+    "Help with stress or anger",
+    "How do I reach a victim advocate?"
   ],
-  "chipsSourceHash": "6f7c184f33d60c36"
+  "chipsManual": true
 }
