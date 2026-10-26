@@ -1,0 +1,113 @@
+{
+  "title": "Bowling",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    },
+    {
+      "label": "Bowling",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling"
+    }
+  ],
+  "intro": "Leatherneck Lanes offers recreational bowling, leagues, glow-bowling, private and unit party options, and much more. The center has new scoring and bumper systems, as well as new seating area décor. The 12-lane facility has a snack bar and full-service Pro Shop. Please come in for fun, food, camaraderie, and of course, bowling!",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Competitive team building opportunities available.\n\n$13 per person for 1 hour of bowling includes shoes."
+    },
+    {
+      "heading": "Services",
+      "level": 3,
+      "markdown": "* Lane rental for open/recreational bowling\n* Instructional classes and lessons\n* Snack shop\n* League bowling\n* Tournaments and group bowling\n* Room rentals for parties\n* Special events\n* Resources and services are available to Marines and families"
+    },
+    {
+      "heading": "Bowling Events",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Leatherneck Lanes",
+      "address": "2034 Barnett Ave (Lower Level) Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2210"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-784-2210"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "3:00pm - 9:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "3:00pm - 9:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "3:00pm - 9:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "3:00pm - 11:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "1:00pm - 11:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "1:00pm - 5:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Effective August 9, 2026"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Leatherneck Lanes Brochure",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=2f8c8d30-6914-43da-af3e-2f15c78d2735&v=1"
+    },
+    {
+      "text": "Leatherneck Lanes Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=d7afc56d-c014-4643-807b-bc066ae5ce37&v=1"
+    },
+    {
+      "text": "2034 Barnett Ave (Lower Level) Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.521948585883706,-77.29534434317054"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Bowling Events section appears to have dynamic content (list/grid view toggle) but no visible events are displayed in the provided HTML.",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,281 @@
+{
+  "title": "Main Side Dining",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": "Multiple dining facilities and vendors available on Main Side."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "McDonald's",
+      "address": "3500 A Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-221-0410"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Saturday",
+              "time": "5:00am - 11:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6:00am - 10:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Menu: https://www.mcdonalds.com/us/en-us/location/va/quantico/3500-a-russell-road/7930.html"
+      ]
+    },
+    {
+      "name": "Mobile Canteen",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-432-0219"
+        },
+        {
+          "label": "Unit Events/Training Days",
+          "number": "540-706-8421"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "7:00am - 12:00pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Breakfast & lunch grab and go style dining",
+        "Closed Thanksgiving and Christmas Day. Federal Holiday Hours may vary."
+      ]
+    },
+    {
+      "name": "Quigley's Main Side",
+      "address": "3048 Bordelon St, Quantico, Virginia",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-432-3212"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:30am - 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Holidays",
+              "time": "10:00am - 2:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Menu: https://quantico.usmc-mccs.org//modules/media/?do=inline&id=20d6a235-67da-41ac-a977-62a9d7411a88"
+      ]
+    },
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Lunch",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "11:00am - 1:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Officers/SNCO Lounge",
+          "rows": [
+            {
+              "days": "Wednesday - Thursday",
+              "time": "4:00pm - 8:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "3:00pm - 8:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Administrative Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8:00am - 4:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Chef-designed menu for lunch, dinner, and holiday events",
+        "Officers/SNCO Club (Pub) open to all with pub-like atmosphere",
+        "Full-service catering available",
+        "Event space for weddings, balls, meetings, and professional/personal occasions",
+        "No food orders after 7:00pm",
+        "Closed on Holidays"
+      ]
+    },
+    {
+      "name": "We Proudly Serve",
+      "address": "2034 Barnett Ave, Quantico, VA 22134",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "7:00am - 1:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "WPS Coffee Trailer",
+      "address": "MCX parking lot, Quantico",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "6:00am - 2:00pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "9:00am - 5:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Mobile coffee trailer located in MCX parking lot"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to McDonald's",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5202209,-77.3518813"
+    },
+    {
+      "text": "McDonald's Menu",
+      "url": "https://www.mcdonalds.com/us/en-us/location/va/quantico/3500-a-russell-road/7930.html"
+    },
+    {
+      "text": "Directions to Mobile Canteen",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5096073,-77.3130025"
+    },
+    {
+      "text": "Directions to Quigley's Main Side",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.518382631167604,-77.29714062166852"
+    },
+    {
+      "text": "Quigley's Menu",
+      "url": "https://quantico.usmc-mccs.org//modules/media/?do=inline&id=20d6a235-67da-41ac-a977-62a9d7411a88"
+    },
+    {
+      "text": "Directions to The Clubs at Quantico",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "full-service catering",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events"
+    },
+    {
+      "text": "Directions to We Proudly Serve",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5220399,-77.2976911"
+    },
+    {
+      "text": "Directions to WPS Coffee Trailer",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.519381,-77.348146"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=d94071ae-6d2e-4a95-afd3-fcf80a229000&w=200&h=114&v=1",
+      "alt": "McDonald's"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=307a37d4-88ba-4d12-9e87-5ac6af0c3942&w=300&h=87&v=1",
+      "alt": "Quigley's Main Side"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=77ad1d3c-9ef3-4911-a091-bbc7e1fb6017&v=1",
+      "alt": "The Clubs at Quantico"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=1fc26130-2f7f-4a1c-9486-eb11ca689678&v=1",
+      "alt": "We Proudly Serve"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=1fc26130-2f7f-4a1c-9486-eb11ca689678&v=1",
+      "alt": "WPS Coffee Trailer"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/main-side-dining",
+  "fetchedAt": "2026-10-26"
+}

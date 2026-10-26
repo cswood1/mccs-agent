@@ -1,0 +1,69 @@
+{
+  "title": "Recreation & Fitness",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "On this page:",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation",
+      "text": "Outdoor recreation programs provide authorized patrons with outdoor recr...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/274f6d83d8764eb5806204cf1139469b_v1.jpg?m=638298221831800000"
+    },
+    {
+      "title": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness",
+      "text": "Semper Fit provides fitness and health education programs that focus on ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/944f27998524492d9e7a3ce40e8e6ccd_v1.jpg?m=638298221832030000"
+    },
+    {
+      "title": "Health, Wellness, and Performance",
+      "url": "https://quantico.usmc-mccs.org/news/health-wellness-and-performance",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Powerful Performance - Eat Well, Sleep Well",
+      "url": "https://quantico.usmc-mccs.org/news/powerful-performance-eat-well-sleep-well",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Is Drinking Draining Your Wallet?",
+      "url": "https://quantico.usmc-mccs.org/news/is-drinking-draining-your-wallet",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Athletic Competition: Feeding the Competitive Spirit",
+      "url": "https://quantico.usmc-mccs.org/news/athletic-competition-feeding-the-competitive-spirit",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "text": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness",
+  "fetchedAt": "2026-10-26"
+}

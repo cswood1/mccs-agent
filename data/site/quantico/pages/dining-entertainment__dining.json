@@ -1,0 +1,87 @@
+{
+  "title": "Dining",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Main Side Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/main-side-dining",
+      "text": "All of your food options on MCBQ Main Side.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/99b5a92dbf3144daae0a77b01d6978f5_v1.jpg?m=638298224462900000"
+    },
+    {
+      "title": "West Side Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/west-side-dining",
+      "text": "If you are on the West Side of MCBQ (TBS), here are the food options for you.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d7ba278e3a114562a26b2c3facb15c13_v1.jpg?m=638298224461500000"
+    },
+    {
+      "title": "Catering/Special Events",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events",
+      "text": "The Clubs at Quantico & Crossroads Events Center will create a custom, worry-free event that will...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/79fa021a13954dc98ffadd73dc81905d_v1.jpg?m=638298224462770000"
+    },
+    {
+      "title": "The Clubs at Quantico",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/the-clubs-at-quantico",
+      "text": "The Clubs at Quantico & Crossroads Events Center will create a custom, worry-free event that will...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/b267a011336044caada8ccd8176a23f4_v1.jpg?m=638298224463630000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Main Side Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/main-side-dining"
+    },
+    {
+      "text": "West Side Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/west-side-dining"
+    },
+    {
+      "text": "Catering/Special Events",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events"
+    },
+    {
+      "text": "The Clubs at Quantico",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/the-clubs-at-quantico"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/99b5a92dbf3144daae0a77b01d6978f5_v1.jpg?m=638298224462900000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d7ba278e3a114562a26b2c3facb15c13_v1.jpg?m=638298224461500000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/79fa021a13954dc98ffadd73dc81905d_v1.jpg?m=638298224462770000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/b267a011336044caada8ccd8176a23f4_v1.jpg?m=638298224463630000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining",
+  "fetchedAt": "2026-10-26"
+}

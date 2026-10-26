@@ -1,0 +1,126 @@
+{
+  "title": "Pools",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Swimming",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "MCCS offers a 50-meter pool, one- and three-meter diving boards, and a zero-entry wading pool with a slide and water feature. The facility also provides complete locker rooms with shower facilities. The MCCS pool is open only for Active Duty lap swim and military training from mid-May to last Friday in September.\n\n**Refund, & Rain Check Policy** The pool will close in the event of thunder, lightning, or other inclement weather and will re-open 30 minutes after the last occurrence or at the discretion of the Pool Manager or designated staff member. All patrons must vacate the water and the pool deck during inclement weather. Patrons may wait in the locker rooms during the inclement weather but are prohibited from taking showers or using the sinks. Refunds will not be issued for closures due to inclement weather.\n\nPool Weather Hotline: [703.784.2973](tel:7037842973)"
+    },
+    {
+      "heading": "Upcoming Events",
+      "level": 2,
+      "markdown": "Currently, there are no scheduled activities planned for the near future. See all [upcoming events](https://quantico.usmc-mccs.org/calendar-of-events)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "On this page",
+      "url": "",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Quantico Pool",
+      "address": "Adjacent to the Clubs at Quantico",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2973"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-784-2973"
+        }
+      ],
+      "emails": [
+        "quantico.aquatics@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Weekday Hours of Operation August 10 - September 7",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5:30am - 1:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5:30am - 1:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5:30am - 1:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5:30am - 1:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5:30am - 1:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Weekend Hours of Operation August 10 - September 7",
+          "rows": [
+            {
+              "days": "Saturday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "12:00pm - 6:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Holiday Hours Labor Day September 7",
+          "rows": [
+            {
+              "days": "Labor Day",
+              "time": "12:00pm - 6:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Weekday hours are for ONLY PT/Lap Swim",
+        "Weekend hours for Recreational and PT/Lap Swim",
+        "Hours of operation are subject to change based on staffing levels and weather.",
+        "Open to all DoD ID Card Holders"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "upcoming events",
+      "url": "https://quantico.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "Adjacent to the Clubs at Quantico",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.50922232293459,-77.30948296040779"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming",
+  "fetchedAt": "2026-10-26"
+}

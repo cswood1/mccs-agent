@@ -1,0 +1,122 @@
+{
+  "title": "Recreation",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "On this page:",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Indoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
+      "text": "Looking for great food and excellent service without breaking the bank? MCCS has you covered. Whe...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d075168476374c6395c5cca52d3a3dc1_v1.jpg?m=638298217037070000"
+    },
+    {
+      "title": "Outdoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
+      "text": "Outdoor recreation programs provide authorized patrons with outdoor recreational opportunities an...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d682243b268c4936a33080ae1dfa008a_v1.jpg?m=638298217037700000"
+    },
+    {
+      "title": "Swimming",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming",
+      "text": "The Aquatics programs provide a full spectrum of recreational and instructional activities in a s...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/076304f71efe4857ad5d28de06ed7084_v1.jpg?m=638298217036700000"
+    },
+    {
+      "title": "Sports",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/intramural-sports",
+      "text": "MCCS Athletics Offers a Comprehensive Range of Sports for Youth to Adults.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/43f42add78124018a4086f8592597b08_v1.jpg?m=638298217037430000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Indoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    },
+    {
+      "text": "Bowling",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling"
+    },
+    {
+      "text": "Recreation Centers",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers"
+    },
+    {
+      "text": "Theaters",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies/"
+    },
+    {
+      "text": "Auto Skills",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services/"
+    },
+    {
+      "text": "Outdoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation"
+    },
+    {
+      "text": "Golf Course",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course"
+    },
+    {
+      "text": "Marinas & Boating",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marinas-boating"
+    },
+    {
+      "text": "Lunga Park",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lunga-park"
+    },
+    {
+      "text": "Swimming",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming"
+    },
+    {
+      "text": "Pools",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming/pools"
+    },
+    {
+      "text": "Sports",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/intramural-sports"
+    },
+    {
+      "text": "Intramural Sports",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/intramural-sports"
+    },
+    {
+      "text": "All-Marine Sports",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/all-marine-sports"
+    },
+    {
+      "text": "Youth Sports",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d075168476374c6395c5cca52d3a3dc1_v1.jpg?m=638298217037070000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d682243b268c4936a33080ae1dfa008a_v1.jpg?m=638298217037700000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/076304f71efe4857ad5d28de06ed7084_v1.jpg?m=638298217036700000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/43f42add78124018a4086f8592597b08_v1.jpg?m=638298217037430000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation",
+  "fetchedAt": "2026-10-26"
+}

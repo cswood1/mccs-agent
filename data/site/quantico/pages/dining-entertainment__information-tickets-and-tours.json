@@ -1,0 +1,109 @@
+{
+  "title": "Information, Tickets, and Tours",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Information, Tickets, and Tours",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/information-tickets-and-tours"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Tickets",
+      "level": 2,
+      "markdown": "MCCS Rec/ITT program offers information and brochures about many local, regional and destination attractions. The staff searches out hot spots suitable for individual and family outings and tours of special interest to their customers. Rec/ITT offers discount tickets and to many attractions: Kings Dominion, Busch Gardens, Six Flags America, Colonial Williamsburg, Walt Disney World, Universal Studios, Hershey Park, Luray Caverns, Medieval Times and much more. Contact the Rec/ITT office at 703-432-8850 for the latest ticket information and schedules or download the latest price list.\n\nRecreation, Information, Tickets and Tours (Rec/ITT) is located inside the Quantico MCX, Building 3500, Russell Road. They offer information and discounts for local and regional attractions (i.e., theme parks, theaters, sporting events, etc.) to all authorized Patrons. (Ticket prices are subject to change without notice).\n\nAuthorized Patrons: Active Duty, Retired, Reserve Military, Coast Guard Personnel and Family Members. Commissioned Corps of the Public Health Service and the National Oceanic and Atmospheric Administration (NOAA) on active duty. DoD Civilians, Full-time Quantico DoD Contractors, FBI/DEA Permanent Personnel and Students assigned to Quantico. Purple Heart recipients, former prisoners of war, or veterans with VA-documented service-connected disability ratings of 0-100% who have been issued a Veteran Health Identification Card (VHIC) from VA. Primary family caregivers of veterans must present an eligibility letter from the VA's Office of Community Care.\n\nRefund Policy: All sales are final. No refunds or exchanges.\n\nNational Parks Pass: America owes a debt to those who make sacrifices to protect our country. To say \"Thank You\", Active Duty U.S. Military and their Dependents can pick-up a FREE Annual Pass to the National Parks and Federal Recreational Lands. [Click here](https://www.nps.gov/planyourvisit/veterans-and-gold-star-families-free-access.htm) to find out more details, or stop by the Rec/ITT Office.\n\nDisclaimer: Rec/ITT is not affiliated with ITT Corporation, ITT Industries, or their subsidiaries."
+    },
+    {
+      "heading": "American Forces Travel",
+      "level": 2,
+      "markdown": "An MWR joint service initiative has resulted in the first official DoD online vacation travel site, American Forces Travel! With Priceline Partner Network® as the service provider, the site offers travel deals and benefits exclusively for Military members and authorized patrons! American Forces Travel provides access to a wide selection of discounted rates on hotels, air fare, rental cars, vacation packages, cruises and much more! Log onto [www.americanforcestravel.com](https://www.americanforcestravel.com) and plan your dream vacation!"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Financial Savings Tips for the Summer",
+      "url": "https://quantico.usmc-mccs.org/news/financial-savings-tips-for-the-summer",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6d98c86be6ac4485a44a9b35300b48dc.png?m=638775600167400000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Rec/ITT",
+      "address": "3500 Russell Rd (Inside the MCX)\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-432-8850"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-432-8850"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:00am - 5:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10:00am - 5:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:00am - 5:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10:00am - 5:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:30am - 2:30pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Click here",
+      "url": "https://www.nps.gov/planyourvisit/veterans-and-gold-star-families-free-access.htm"
+    },
+    {
+      "text": "www.americanforcestravel.com",
+      "url": "https://www.americanforcestravel.com"
+    },
+    {
+      "text": "3500 Russell Rd (Inside the MCX)\nQuantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52006535147127,-77.34881381104478"
+    },
+    {
+      "text": "Price List, 08 April 2026.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=a47464d7-0d4f-42c0-b8ef-2e72c34c6f5a&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+  "fetchedAt": "2026-10-26"
+}

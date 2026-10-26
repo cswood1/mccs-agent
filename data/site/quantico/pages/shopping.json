@@ -1,0 +1,111 @@
+{
+  "title": "Shopping",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://quantico.usmc-mccs.org/shopping"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Exchange",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange",
+      "text": "Shop the brands you love in one convenient location.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/1b6861d2915d48aebedbed3922e023bf_v1.jpg?m=638298241546170000"
+    },
+    {
+      "title": "Marine Marts",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-marts-package-wine-stores",
+      "text": "Enjoy a wide variety of quality products and services to suit your busy ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2d73fb7900154e9995720af7bbbbd80b_v1.jpg?m=638298241546100000"
+    },
+    {
+      "title": "Commissary",
+      "url": "https://www.commissaries.com/shopping/store-locations/quantico-mcb",
+      "text": "The Commissary can save shoppers over 20 cents on the dollar over other ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/04384a474fec4be5abef8ec5ee90460f_v1.jpg?m=638298241546430000"
+    },
+    {
+      "title": "GNC",
+      "url": "https://stores.gnc.com/all-stores-virginia/quantico/3500-russell-road",
+      "text": "Living fit. Every person has a different definition of what it means to ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/cefa1a95a2444c998e1b69aec19af427_v1.jpg?m=638298241544270000"
+    },
+    {
+      "title": "Uniform Shop",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange/shopping/uniforms",
+      "text": "We carry a wide selection of products and services that are tailored spe...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2b24c5e5fadf4b9990fdce629fb5d828_v1.jpg?m=638298241546330000"
+    },
+    {
+      "title": "Firestone",
+      "url": "https://local.firestonecompleteautocare.com/virginia/quantico/3141-barnett-ave/",
+      "text": "We're more than just experts in tires; we're also the right spot before ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/97116b7f84e1488088a89b1577df64b5_v1.png?m=638298241545530000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Marine Corps Exchange",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange"
+    },
+    {
+      "text": "Marine Marts",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-marts-package-wine-stores"
+    },
+    {
+      "text": "Commissary",
+      "url": "https://www.commissaries.com/shopping/store-locations/quantico-mcb"
+    },
+    {
+      "text": "GNC",
+      "url": "https://stores.gnc.com/all-stores-virginia/quantico/3500-russell-road"
+    },
+    {
+      "text": "Uniform Shop",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange/shopping/uniforms"
+    },
+    {
+      "text": "Firestone",
+      "url": "https://local.firestonecompleteautocare.com/virginia/quantico/3141-barnett-ave/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/1b6861d2915d48aebedbed3922e023bf_v1.jpg?m=638298241546170000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2d73fb7900154e9995720af7bbbbd80b_v1.jpg?m=638298241546100000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/04384a474fec4be5abef8ec5ee90460f_v1.jpg?m=638298241546430000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/cefa1a95a2444c998e1b69aec19af427_v1.jpg?m=638298241544270000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2b24c5e5fadf4b9990fdce629fb5d828_v1.jpg?m=638298241546330000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/97116b7f84e1488088a89b1577df64b5_v1.png?m=638298241545530000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/shopping",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Outdoor Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Outdoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "On this page:",
+      "level": 5,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Golf Course",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course",
+      "text": "Golf never gets old! From beginners to seasoned golf enthusiasts, your MCCS golf course has every...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/962c7ccdccb54133b039529f6418968b_v1.jpg?m=638298220384670000"
+    },
+    {
+      "title": "Marinas & Boating",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marinas-boating",
+      "text": "MCCS Marina & Boating programs offer the water sport enthusiast a full range of boating and water...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d6ef27b4110e4471a326fe98490ed496_v1.jpg?m=638298220384400000"
+    },
+    {
+      "title": "Lunga Park",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lunga-park",
+      "text": "Lunga Park Quantico offers breathtaking views of the surrounding forests, mountains, and waterways.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/daa9fa2655b342bfa092d90e1767e7d7_v1.png?m=638298220383570000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Golf Course",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course"
+    },
+    {
+      "text": "Marinas & Boating",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marinas-boating"
+    },
+    {
+      "text": "Lunga Park",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lunga-park"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/962c7ccdccb54133b039529f6418968b_v1.jpg?m=638298220384670000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d6ef27b4110e4471a326fe98490ed496_v1.jpg?m=638298220384400000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/daa9fa2655b342bfa092d90e1767e7d7_v1.png?m=638298220383570000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
+  "fetchedAt": "2026-10-26"
+}

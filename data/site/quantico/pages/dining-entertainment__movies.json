@@ -1,0 +1,107 @@
+{
+  "title": "Movies",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Movies",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "[![Register For Movies Here](https://quantico.usmc-mccs.org/modules/media/t/903a7c87ab314cd48924bfc6eb9dee36.jpg?m=638919073379470000)](https://www.eventbrite.com/o/mccs-marketing-26851466691#events)\n\n#### [Register For Movies Here](https://www.eventbrite.com/o/mccs-marketing-26851466691#events)\n\nSee what movies are playing. Register here and pay at the door.\n\nThe Little Hall Theater shows near first-run movies at a discounted price Thursday through Sunday. The projection equipment provides a high quality, digital, cinema experience. Movie-goers may purchase popcorn, candy, and soda at the snack bar located in the lobby. Little Hall Theater also provides sensory friendly movies once per month based on the availability of G and PG films. Please check the MCCS website for the next sensory friendly showing. Patrons are requested to pre-register for all movies using the links provided on the MCCS website. Admission payment will be accepted at the door.\n\nRegistration on Eventbrite is required for all movie showings. Please click on the Movie Schedule and Tickets to be taken to the registration page for the movie showing."
+    },
+    {
+      "heading": "Theater Rules",
+      "level": 0,
+      "markdown": "- An adult or dependent child 15 years or older will accompany family members under 12 years of age for G and PG rated films.\n- No outside food permitted in the theater.\n- No strollers are permitted.\n- No recording devices permitted. Large bags may be subject to search.\n\nThe Base Theater is located on the main deck of Little Hall, 2034 Barnett Avenue. Moviegoers may purchase popcorn, candy, and soda at the snack bar, located in the Little Hall lobby."
+    },
+    {
+      "heading": "MPAA Ratings",
+      "level": 0,
+      "markdown": "**G (General Audiences):** All ages admitted.\n\n**PG (Parental Guidance Suggested):** Some material may not be suitable for children.\n\n**PG-13 (Parents Strongly Cautioned):** Some material may be inappropriate for children under 13. Under 13 years of age requires accompanying parent or adult guardian.\n\n**R (Restricted):** Under 17 Requires Parent or Adult Guardian. Contains some adult material. Parents are urged to learn more about the film before taking their young children with them.\n\n**NC-17:** No one 17 or under admitted."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Register For Movies Here",
+      "url": "https://www.eventbrite.com/o/mccs-marketing-26851466691#events",
+      "text": "See what movies are playing. Register here and pay at the door.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/903a7c87ab314cd48924bfc6eb9dee36.jpg?m=638919073379470000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Little Hall Theater",
+      "address": "2034 Barnett Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2279"
+        },
+        {
+          "label": "24-Hour Movie Line",
+          "number": "703-784-2638"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Movie Admission",
+          "rows": [
+            {
+              "days": "Adult 12+",
+              "time": "$6.00"
+            },
+            {
+              "days": "Children 6-11",
+              "time": "$4.00"
+            },
+            {
+              "days": "Children 0-5",
+              "time": "Free"
+            },
+            {
+              "days": "New Release Adults (12 and older)",
+              "time": "$8.00"
+            },
+            {
+              "days": "New Release Children (ages 6-11)",
+              "time": "$6.00"
+            },
+            {
+              "days": "New Release Children (ages 0-5)",
+              "time": "FREE"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Register For Movies Here",
+      "url": "https://www.eventbrite.com/o/mccs-marketing-26851466691#events"
+    },
+    {
+      "text": "2034 Barnett Ave Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522015804529396,-77.29529799018313"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/903a7c87ab314cd48924bfc6eb9dee36.jpg?m=638919073379470000",
+      "alt": "Register For Movies Here"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies",
+  "fetchedAt": "2026-10-26"
+}

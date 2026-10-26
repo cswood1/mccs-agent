@@ -1,0 +1,62 @@
+{
+  "title": "TCAQ Mongolian BBQ",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Date**\n\nTuesday, October 27, 2026 Every Tuesday\n\n**Time**\n\n11:00 AM - 1:00 PM\n\n**Address**\n\n[The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777)\n\n**Contact**\n\nPhone: [703.784.4266](tel:703.784.4266)"
+    },
+    {
+      "heading": "Mongolian BBQ",
+      "level": 3,
+      "markdown": "Every Tuesday for Lunch\n\nPrice is per ounce.\n\n**Choice of:**\n\n- Beef\n- Pork\n- Chicken\n- Shrimp\n- Fresh Vegetables\n\nIncludes steamed white rice, egg drop soup, spring rolls, sauces and a fountain drink.\n\nFor more information call, 703.784.4266."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "TCAQ Mongolian BBQ",
+      "address": "The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4266"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Every Tuesday",
+              "time": "11:00 AM - 1:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "703.784.4266",
+      "url": "tel:703.784.4266"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/e615049e007547969e7fa5899a9cb459_w433_h243.jpg?m=638482846692200000",
+      "alt": "TCAQ Mongolian BBQ"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/00f897ec-6e64-4a6b-bb51-28b070318cec",
+  "fetchedAt": "2026-10-26"
+}

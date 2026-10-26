@@ -1,0 +1,59 @@
+{
+  "title": "SMP Holiday in the Barracks",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Holidays In The Barracks",
+      "level": 3,
+      "markdown": "Enjoy good food, good company, and relax at the Main Side Rec Center. A holiday gift bag will be given to each service member in attendance. This is always a fun event which includes a great holiday meal!\n\n**Date:** December 17\n\n**Time:** 11 AM - 2 PM\n\n**Location:** Main Side Rec Center 206 Nicholas Rd., Quantico, VA 22134\n\n**[REGISTER ON EVENTBRITE](https://www.eventbrite.com/e/1999284054426?aff=oddtdtcreator)**\n\nMUST BE A SINGLE MARINE BETWEEN THE AGES OF 18-25 OR A GEO BACHELOR. NOT OPEN TO CIVILIANS.\n\nWe've got wheels! Transportation to the MSRC provided to Single Service Members and geo-bachelors associated with the SMP. Seating limited; first come, first served.\n\nFor more information or to arrange pick-up, call 703.432.0363 or Email: MCCSQUANTICOSMP@USMC-MCCS.ORG\n\nVolunteer Opportunity\nDuties: Assist with gift bag distribution, and other duties needed at the Holiday in the Barracks event.\nIf your interested in volunteering for this event, please specify when registering."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Main Side Rec Center",
+      "address": "206 Nicholas Rd, Quantico, Virginia 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.0363"
+        }
+      ],
+      "emails": [
+        "MCCSQUANTICOSMP@USMC-MCCS.ORG"
+      ],
+      "hours": [
+        {
+          "label": "Event Time",
+          "rows": [
+            {
+              "days": "Thursday, December 17, 2026",
+              "time": "11:00 AM - 2:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "REGISTER ON EVENTBRITE",
+      "url": "https://www.eventbrite.com/e/1999284054426?aff=oddtdtcreator"
+    },
+    {
+      "text": "Main Side Rec Center 206 Nicholas Rd Quantico, Virginia 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522560877074255,-77.2986739"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/3b28b76fae694342815b4e36c80118a2_v1.jpg?m=638298926560370000",
+      "alt": "SMP Holiday in the Barracks"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/ecea95ba-9932-42b6-9a22-3e6b7b0dcee3",
+  "fetchedAt": "2026-10-26"
+}

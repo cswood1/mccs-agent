@@ -1,0 +1,81 @@
+{
+  "title": "Youth Sports",
+  "breadcrumb": [],
+  "intro": "Youth Sports is a skill based program open to children ages 4-14. Rather than focusing on competition, which is an inherit part of sports, children are provided the opportunity to learn the fundamentals of a sport, in addition to good sportsmanship and the benefits of teamwork.",
+  "sections": [
+    {
+      "heading": "Youth Sports",
+      "level": 2,
+      "markdown": "Try outs are not required, as all skill levels are welcome to participate. All players are also offered equal playing time during games. Opportunities can include team sports, skill development clinics and sports specific camps. All coaches are volunteers and certified through the National Alliance for Youth Sports and have an extensive background check before working with the children. Coaches are always needed in our program and training is provided to those interested. Please contact your local Youth Sports office to learn more.\n\nSemper Fit Youth Sports activities are open to all dependents of active duty, military reservists, retired military, and DOD employed civilians associated with MCAS Quantico, ages 4-14 unless specified otherwise. Registration dates are announced prior to each program or clinic and are subject to change. Fees, schedules, and age divisions are also subject to change.\n\nThe Youth Sports program offers seasonal baseball, basketball, flag football, cheerleading, and soccer. Summer Camps include baseball, flag football, cheer/hip hop, and basketball for ages 5-14. (Camp offerings may vary). Registration periods are outlined below:\n\n- **Baseball/Tee ball** Mid-February - Mid March\n- **Summer Camps** Mid-May - Early August\n- **Soccer** Late May - Early July\n- **Flag Football** Early August - Mid-September\n- **Basketball/Cheerleading** Early November - December\n\nFor practice and game cancellations or delays call the weather hotline.\n\n**Pricing**\nAll sports seasons are $60, except for flag football which is $65.\n\n**To become a youth sports coach the below is required:**\n\n- Complete a Coaches Application and pass all background checks\n- NAYS sports specific training (registered through youth sports office)\n- Attend a mandatory child abuse course.\n- Attend mandatory coaches orientation prior to the season"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "**Youth Sports**\n\n**Address:** [3312 Purvis Rd, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.53532378983399,-77.32992781620028)\n\n**Phone:** [(703) 784-9756](tel:7037849756)\n\n**Weather Hotline:** [(703) 784-5637](tel:7037845637)\n\n**Hours of operation:**\n\n| Day | Hours |\n|-----|-------|\n| Monday | 9:00am - 5:30pm |\n| Tuesday | 9:00am - 5:30pm |\n| Wednesday | 9:00am - 5:30pm |\n| Thursday | 9:00am - 5:30pm |\n| Friday | 9:00am - 5:30pm |"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Youth Sports",
+      "address": "3312 Purvis Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(703) 784-9756"
+        },
+        {
+          "label": "Weather Hotline",
+          "number": "(703) 784-5637"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:00am - 5:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:00am - 5:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:00am - 5:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:00am - 5:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9:00am - 5:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/16c5ec23e7194cba9869728631b4209e.jpg?m=638315334221600000",
+      "alt": "Youth Co-Ed Basketball Regular Season Registration"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/fd3b9c592c704e7f978017f3f4235606_v1.jpg?m=638298271528800000",
+      "alt": "Youth Co-Ed Cheerleading Registration"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/09d47264c0274464a34e47b5efef899f.jpg?m=639228459440300000",
+      "alt": "Youth Pre-Season Basketball Camp Registration"
+    }
+  ],
+  "notCaptured": "The source extraction did not separately populate breadcrumb, cards, or links arrays even though contact details (address/phone/hours table) were present in the Contact Information section markdown; those contact details were duplicated into the contacts array here for consistency.",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,73 @@
+{
+  "title": "FAP Century Anger Management",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Date**\n\nTuesday, January 5, 2027\n\n**Time**\n\n1:00 PM - 3:00 PM\n\n**Address**\n\n[Family Advocacy Program, 2034 Barnett Ave, Lower Level, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.52209863693904,-77.29528782533997)\n\n**Contact**\n\nPhone: [703.784.2570](tel:703.784.2570)\n\nEmail: [MCCSQuanticoFAP@usmc.mil](mailto:MCCSQuanticoFAP@usmc.mil)"
+    },
+    {
+      "heading": "CENTURY ANGER MANAGEMENT",
+      "level": 3,
+      "markdown": "8-session workshop designed to increase skills for dealing with anger at work and home and developing conflict resolution skills.\n\nEvery Tuesday for 8 weeks.\n\n**2026 Dates**\nThursdays, Sep 24-Nov 19 | 9-11 AM\n\n**2027 Dates**\nTuesdays, Jan 5-Feb 23 | 1-3 PM\nThursdays, Apr 1-May 20 | 9-11 AM\nTuesdays, Jul 6-Aug 24 | 1-3 PM\n\nLocation: FAP, Little Hall, Lower Level"
+    },
+    {
+      "heading": "About This Course:",
+      "level": 3,
+      "markdown": "Course explores eight tools that help individuals manage anger. The goal is to teach individuals how to accurately examine triggers and perceptions of situations, and learn healthy, constructive ways to express their frustrations."
+    },
+    {
+      "heading": "Topics Include:",
+      "level": 3,
+      "markdown": "Stress management, empathy, respond vs. react, self-talk, assertive communication, adjusting expectations, forgiveness, and time-out."
+    },
+    {
+      "heading": "The Benefits:",
+      "level": 3,
+      "markdown": "- Knowing your triggers\n- Assertive communication\n- Respond instead of react\n\n**For more info and to register, call 703.784.2570.**"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Family Advocacy Program",
+      "address": "2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703.784.2570"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoFAP@usmc.mil"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Family Advocacy Program, 2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52209863693904,-77.29528782533997"
+    },
+    {
+      "text": "703.784.2570",
+      "url": "tel:703.784.2570"
+    },
+    {
+      "text": "MCCSQuanticoFAP@usmc.mil",
+      "url": "mailto:MCCSQuanticoFAP@usmc.mil"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/b55a71d05f3c4295adf96006e8aa9cd0_v1.jpg?m=638298378419400000",
+      "alt": "FAP Century Anger Management"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/7bb632b2-1db7-4910-8926-c8467a548cac",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,202 @@
+{
+  "title": "The Clubs at Quantico",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "The Clubs at Quantico offers a Chef-designed menu for lunch, dinner, and holiday events. The Officers/SNCO Club (Pub) is open to all and offers a relaxing and fun pub-like atmosphere filled with USMC mementos. Our event space is expansive and offers many amenities to meet your needs for weddings, balls, meetings, and professional/personal occasions. The Clubs at Quantico also offers full-service catering and is the perfect partner for all your events. We look forward to serving you!",
+  "sections": [
+    {
+      "heading": "Contact Information and Resources",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Lunch Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=854371ae-13bb-4803-a1f2-be20fbe038af&v=1",
+      "text": "Enjoy our five day lunch specials!",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/87f3646570044d05a0981185af75fde5_v1.jpg?m=638298225648030000"
+    },
+    {
+      "title": "Dinner Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=2e7a94fd-e399-4a98-bf05-6e21678840d7&v=1",
+      "text": "In the mood for some pub food?",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/b267a011336044caada8ccd8176a23f4_v1.jpg?m=638298224463630000"
+    },
+    {
+      "title": "Clubs Brochure",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=3a2c48e5-45a6-4b21-bb60-ab9e03e9a500&v=1",
+      "text": "View what the Clubs has to offer.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2610ed00c7594896b5af5e3402f67244_v1.jpg?m=638298225648030000"
+    },
+    {
+      "title": "TCAQ October Limited Time Offer",
+      "url": "https://quantico.usmc-mccs.org/activity/c25de972-6632-4bfc-8250-9ef9f37607ec",
+      "text": "Oct 26",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/c450500f8a7a42eb8255b3d2bf540e0b_w433_h243.jpg?m=638636447394770000"
+    },
+    {
+      "title": "TCAQ Mongolian BBQ",
+      "url": "https://quantico.usmc-mccs.org/activity/00f897ec-6e64-4a6b-bb51-28b070318cec",
+      "text": "Oct 27, 11:00am - 01:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/e615049e007547969e7fa5899a9cb459_w433_h243.jpg?m=638482846692200000"
+    },
+    {
+      "title": "TCAQ - Bosses' Night",
+      "url": "https://quantico.usmc-mccs.org/activity/77985b05-8678-4a77-9ac5-34cd537999d7",
+      "text": "Nov 4, 04:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/c5985a6b11d54dcea2b11641a0ae08e7.jpg?m=638844904452970000"
+    },
+    {
+      "title": "TCAQ - First Friday",
+      "url": "https://quantico.usmc-mccs.org/activity/3de60db3-cef1-4b73-beec-6db7f9dabdb3",
+      "text": "Nov 6, 03:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/41c3e9dcfe3d46d48562c3d9d9703f37_w433_h243.jpg?m=638840528289630000"
+    },
+    {
+      "title": "TCAQ - Troop Appreciation",
+      "url": "https://quantico.usmc-mccs.org/activity/4120b2f7-e2b1-4e2f-b70d-5772679886f0",
+      "text": "Nov 18, 04:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/784a8aa1c4ef4a01b7e8f9b6e789476e_w433_h243.jpg?m=638857021168470000"
+    },
+    {
+      "title": "TCAQ - Thanksgiving Champagne Brunch",
+      "url": "https://quantico.usmc-mccs.org/activity/894822ef-a702-42b0-a04e-dff90f023564",
+      "text": "Nov 26, 10:00am - 02:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/c8b92a5277834f8a9c83a86a028dba62_w433_h243.jpg?m=638967440599570000"
+    },
+    {
+      "title": "TCAQ - Bosses' Night",
+      "url": "https://quantico.usmc-mccs.org/activity/153ecde5-4806-474d-b0e6-bd176bf82e8a",
+      "text": "Dec 2, 04:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/c5985a6b11d54dcea2b11641a0ae08e7.jpg?m=638844904452970000"
+    },
+    {
+      "title": "TCAQ - First Friday",
+      "url": "https://quantico.usmc-mccs.org/activity/350af23b-43f3-42a7-a0b2-207834dd1d7c",
+      "text": "Dec 4, 03:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/41c3e9dcfe3d46d48562c3d9d9703f37_w433_h243.jpg?m=638840528289630000"
+    },
+    {
+      "title": "TCAQ - Right Hand Night",
+      "url": "https://quantico.usmc-mccs.org/activity/fb279465-9055-4505-98e5-3228363d5653",
+      "text": "Dec 9, 04:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/0c7d4d055c8a45628038dfb4244d5aa7.jpg?m=639126459795330000"
+    },
+    {
+      "title": "TCAQ - Troop Appreciation",
+      "url": "https://quantico.usmc-mccs.org/activity/f4d6f4a9-db5a-4aff-a062-dc0aec4b4bd3",
+      "text": "Dec 16, 04:00pm - 08:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/784a8aa1c4ef4a01b7e8f9b6e789476e_w433_h243.jpg?m=638857021168470000"
+    },
+    {
+      "title": "TCAQ - Breakfast with Santa",
+      "url": "https://quantico.usmc-mccs.org/activity/d9621328-561d-4b6a-a466-fd146fcf6e67",
+      "text": "Dec 20, 09:00am - 12:00pm",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/29a13dfdaaab4cd88175046f17399309_w433_h243.jpg?m=638622875700800000"
+    },
+    {
+      "title": "TCAQ - New Year's Eve Celebration",
+      "url": "https://quantico.usmc-mccs.org/activity/96e6e448-44a2-4486-a8b9-f9e9f7ba209a",
+      "text": "Dec 31, 08:00pm - 12:00am",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/4fb560c7a8fa4e60a7ebfb12d2cb7a6c_w433_h243.jpg?m=638627932331170000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "703-784-4264"
+        },
+        {
+          "label": "Restaurant",
+          "number": "703-784-4266"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Lunch",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "11:00am - 1:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Officers/SNCO Lounge",
+          "rows": [
+            {
+              "days": "Wednesday - Thursday",
+              "time": "4:00pm - 8:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "3:00pm - 8:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Administrative Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8:00am - 4:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "No food orders after 7:00pm",
+        "Closed on Holidays"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "full-service catering",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events"
+    },
+    {
+      "text": "Military Sponsored Functions",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=91d6e753-d229-41c4-ad66-b49997f8a58a&v=1"
+    },
+    {
+      "text": "Marine Corps Birthday Ball Brochure",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=6e927c98-6467-4856-8b54-7832655082e4&v=1"
+    },
+    {
+      "text": "BBQ Catering Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=35d51e85-e8be-48c2-9208-de64047bd659&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/87f3646570044d05a0981185af75fde5_v1.jpg?m=638298225648030000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/b267a011336044caada8ccd8176a23f4_v1.jpg?m=638298224463630000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2610ed00c7594896b5af5e3402f67244_v1.jpg?m=638298225648030000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/the-clubs-at-quantico",
+  "fetchedAt": "2026-10-26"
+}

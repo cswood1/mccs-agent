@@ -1,0 +1,54 @@
+{
+  "title": "Swimming Safety",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Swimming Safety](https://quantico.usmc-mccs.org/modules/media/t/cdbb2ee426cf4440afd6823c9525d7df.jpg?m=639090004529970000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Community-Based Child Care Options",
+      "url": "https://quantico.usmc-mccs.org/news/community-based-child-care-options",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Master REM Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/master-rem-sleep",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Community and Connection Through Sports",
+      "url": "https://quantico.usmc-mccs.org/news/community-and-connection-through-sports",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Build Your Tribe with MCCS",
+      "url": "https://quantico.usmc-mccs.org/news/build-your-tribe-with-mccs",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/cdbb2ee426cf4440afd6823c9525d7df.jpg?m=639090004529970000",
+      "alt": "Swimming Safety"
+    }
+  ],
+  "notCaptured": "Main content appears to be primarily the hero image with minimal text. The page title and intro text are not visible in the provided content beyond the heading.",
+  "url": "https://quantico.usmc-mccs.org/news/swimming-safety",
+  "fetchedAt": "2026-10-26"
+}

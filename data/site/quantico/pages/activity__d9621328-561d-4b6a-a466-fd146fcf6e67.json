@@ -1,0 +1,57 @@
+{
+  "title": "TCAQ - Breakfast with Santa",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Breakfast with Santa",
+      "level": 3,
+      "markdown": "Join The Clubs at Quantico for a delicious and expansive breakfast buffet with omelette station.\n\nSanta will be in attendance and available for photos.\n\nTwo seatings are available: 9:00 AM and 10:30 AM.\n\nAdult Reservations (13+) $30/adult\nChild Reservations (4-12yrs) $15/child\nChildren 3 years & under are FREE\n\n**Please note:** All ticket purchases are subject to Eventbrite service and processing fees. These fees are visible before checkout – displayed alongside ticket prices – and are non-refundable.\n\nClick here to get [TICKETS ON EVENTBRITE](https://www.eventbrite.com/e/1999385072574?aff=oddtdtcreator)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Event",
+          "rows": [
+            {
+              "days": "Sunday, December 20, 2026",
+              "time": "9:00 AM - 12:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "TICKETS ON EVENTBRITE",
+      "url": "https://www.eventbrite.com/e/1999385072574?aff=oddtdtcreator"
+    },
+    {
+      "text": "The Clubs at Quantico 3017 Russell Rd Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/29a13dfdaaab4cd88175046f17399309_w433_h243.jpg?m=638622875700800000",
+      "alt": "TCAQ - Breakfast with Santa"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/d9621328-561d-4b6a-a466-fd146fcf6e67",
+  "fetchedAt": "2026-10-26"
+}

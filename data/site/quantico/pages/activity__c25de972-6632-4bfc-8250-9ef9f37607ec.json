@@ -1,0 +1,79 @@
+{
+  "title": "TCAQ October Limited Time Offer",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Date",
+      "level": 3,
+      "markdown": "Monday, October 26, 2026 Every Monday, Tuesday, Wednesday, Thursday, Friday"
+    },
+    {
+      "heading": "Time",
+      "level": 3,
+      "markdown": "12:00 AM - 11:59 PM"
+    },
+    {
+      "heading": "Address",
+      "level": 3,
+      "markdown": "[The Clubs at Quantico  \n3017 Russell Rd  \nQuantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777)"
+    },
+    {
+      "heading": "Contact",
+      "level": 3,
+      "markdown": "Phone: [703.784.4264](tel:703.784.4264)"
+    },
+    {
+      "heading": "October Limited Time Offer",
+      "level": 3,
+      "markdown": "Eat-in or takeout.\n\n**Jersey Cheesesteak Melt**  \nThinly sliced, perfectly-seasoned ribeye steak, cooked with sweet, caramelized onions, and topped with melted Monterey Jack and cheddar cheese. Nestled between slices of thick-cut Texas toast. Served with a side of crispy French fries.\n\nMonday-Friday\n\nCost: $13.00\n\nTo go: 703.784.4266"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "General",
+          "number": "703.784.4264"
+        },
+        {
+          "label": "To go orders",
+          "number": "703.784.4266"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Jersey Cheesesteak Melt Offer",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "12:00 AM - 11:59 PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Cost: $13.00"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c450500f8a7a42eb8255b3d2bf540e0b_w433_h243.jpg?m=638636447394770000",
+      "alt": "TCAQ October Limited Time Offer"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/c25de972-6632-4bfc-8250-9ef9f37607ec",
+  "fetchedAt": "2026-10-26"
+}

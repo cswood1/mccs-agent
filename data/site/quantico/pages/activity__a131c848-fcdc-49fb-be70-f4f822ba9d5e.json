@@ -1,0 +1,64 @@
+{
+  "title": "Marine Corps Marathon Turkey Trot",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Open to runners ages 10 and over, the 10K features a fast course through Marine Corps Base Quantico. The course goes through the tree-lined winding roads of Marine Corps Base Quantico and wraps back along the Potomac River.\n\nThe Turkey Trot starts and finishes at Lejeune Hall on Catlin Ave.\n\nTurkey Trot Mile starts at 9:30 AM\nTurkey Trot 10K starts at 10:00 AM\n\n#RunWithTheMarines\n\n[Click here for event information and registration](https://www.marinemarathon.com/event/turkey-trot/)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Marine Corps Marathon Turkey Trot",
+      "address": "Lejeune Hall\n3250 Catlin Ave\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703.784.4348"
+        }
+      ],
+      "emails": [
+        "mcmcustomerservice@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Date",
+          "rows": [
+            {
+              "days": "Saturday, November 21, 2026",
+              "time": ""
+            }
+          ]
+        },
+        {
+          "label": "Time",
+          "rows": [
+            {
+              "days": "",
+              "time": "10:00 AM - 12:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Click here for event information and registration",
+      "url": "https://www.marinemarathon.com/event/turkey-trot/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/901ab303a38a447793d6b7df146bd35a_w433_h243.jpg?m=638587377558930000",
+      "alt": "Marine Corps Marathon Turkey Trot"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/a131c848-fcdc-49fb-be70-f4f822ba9d5e",
+  "fetchedAt": "2026-10-26"
+}

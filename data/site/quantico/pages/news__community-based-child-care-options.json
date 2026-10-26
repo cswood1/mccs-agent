@@ -1,0 +1,75 @@
+{
+  "title": "Community-Based Child Care Options",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Other Stories",
+      "level": 2,
+      "markdown": "* [Marine Corps Youth Programs Help Teen Build Leadership Skills](https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills)\n* [#CYPMilKids Week](https://quantico.usmc-mccs.org/news/cypmilkids-week)\n* [Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids](https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids)\n* [Marine Corps Announces 2025 Child and Youth Programs Employee of the Year](https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year)\n\n[Read More Stories](https://quantico.usmc-mccs.org/stories)"
+    },
+    {
+      "heading": "",
+      "level": 2,
+      "markdown": "Published: 04 Jun 2026\n\n**Marine Corps Community Services**\n\n\"Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "#CYPMilKids Week",
+      "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills"
+    },
+    {
+      "text": "#CYPMilKids Week",
+      "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week"
+    },
+    {
+      "text": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids"
+    },
+    {
+      "text": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2e03273e45564a7696c4018ce5cc65f2.jpg?m=639120761123700000",
+      "alt": "Community-Based Child Care Options"
+    }
+  ],
+  "notCaptured": "The actual article body text is not present in the fetched HTML (confirmed on two separate fetch attempts, including a raw word-for-word markdown reproduction) - only the headline image, 'Other Stories' related-links block, and publisher/date metadata were available. The article body likely loads dynamically or was not present server-side at crawl time.",
+  "url": "https://quantico.usmc-mccs.org/news/community-based-child-care-options",
+  "fetchedAt": "2026-10-26"
+}

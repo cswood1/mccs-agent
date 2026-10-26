@@ -1,0 +1,48 @@
+{
+  "title": "Holiday Events",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "No specific holiday events content is visible on this page. The page displays a \"Holiday Events\" heading with list/grid view toggle options, but the actual event listings do not appear in the provided HTML content."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Home",
+      "url": "https://quantico.usmc-mccs.org/"
+    },
+    {
+      "text": "Events",
+      "url": "https://quantico.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    },
+    {
+      "text": "Careers",
+      "url": "https://careers.usmc-mccs.org/"
+    },
+    {
+      "text": "US Marine Corps",
+      "url": "https://www.marines.mil"
+    },
+    {
+      "text": "Marine Corps Recruiting",
+      "url": "https://www.marines.com"
+    },
+    {
+      "text": "Military One Source",
+      "url": "https://www.militaryonesource.mil"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Holiday events list content loads dynamically via JavaScript list/grid toggle; specific event details not present in static HTML",
+  "url": "https://quantico.usmc-mccs.org/about/holiday-events",
+  "fetchedAt": "2026-10-26"
+}

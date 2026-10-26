@@ -1,0 +1,85 @@
+{
+  "title": "Dining & Entertainment",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "/dining-entertainment"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "On this page:",
+      "level": 5,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Movies",
+      "url": "/dining-entertainment/movies",
+      "text": "Looking for a local Movie Theater? Go no further than MCCS! See the newest movies right outside y...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6d8b2c15d4954238b831a33e6f82b836_v1.jpg?m=638298216545730000"
+    },
+    {
+      "title": "Dining",
+      "url": "/dining-entertainment/dining",
+      "text": "There are many different dining opportunities available aboard Marine Corps Installations; full s...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/9db105d46c564c6dbdcffccf27ba604e_v1.jpg?m=638298224847830000"
+    },
+    {
+      "title": "Information, Tickets, and Tours",
+      "url": "/dining-entertainment/information-tickets-and-tours",
+      "text": "MCCS ITT program offers discounts for all of your travel needs. Discounted tickets for all major ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/16b836c966c04aa081384f39c7cb95ba_v1.jpg?m=638298228551570000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Movies",
+      "url": "/dining-entertainment/movies"
+    },
+    {
+      "text": "Dining",
+      "url": "/dining-entertainment/dining"
+    },
+    {
+      "text": "Main Side Dining",
+      "url": "/dining-entertainment/dining/main-side-dining"
+    },
+    {
+      "text": "West Side Dining",
+      "url": "/dining-entertainment/dining/west-side-dining"
+    },
+    {
+      "text": "Catering/Special Events",
+      "url": "/dining-entertainment/dining/catering-special-events"
+    },
+    {
+      "text": "The Clubs at Quantico",
+      "url": "/dining-entertainment/dining/the-clubs-at-quantico"
+    },
+    {
+      "text": "Information, Tickets, and Tours",
+      "url": "/dining-entertainment/information-tickets-and-tours"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/6d8b2c15d4954238b831a33e6f82b836_v1.jpg?m=638298216545730000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/9db105d46c564c6dbdcffccf27ba604e_v1.jpg?m=638298224847830000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/16b836c966c04aa081384f39c7cb95ba_v1.jpg?m=638298228551570000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment",
+  "fetchedAt": "2026-10-26"
+}

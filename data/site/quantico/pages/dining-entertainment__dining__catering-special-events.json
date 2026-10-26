@@ -1,0 +1,113 @@
+{
+  "title": "Catering/Special Events",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Clubs at Quantico & Crossroads Events Center will create a custom, worry-free event that will exceed your expectations. We offer premium banquet and reception space located on historic Marine Corps Base Quantico Virginia. Our professional and experienced staff offers unparalleled service ensuring no detail is overlooked.\n\nThe Clubs at Quantico and Crossroads Events Center offers a state of the art facility that can accommodate PME's, Dining In or Mess Night, Promotion or Retirement, Seminars, Conferences, Symposiums, Change of Command, and Weddings."
+    },
+    {
+      "heading": "Amenities",
+      "level": 2,
+      "markdown": "**Ballrooms**\n\n* PowerPoint presentations in 1 or all rooms including the Waller Room and Runners Room\n* Video viewing to include watching video clips and DVDs\n* Live projection of your guest speaker\n* Wired or wireless lapel/handheld mics\n* WIFI access\n* Display active webpages on the projection screen\n* DISH Network - Coming in the future\n* XM Radio\n* Inputs in the front and back of each ballroom for S-Video, Composite Video, Component Video, and VGA video, as well as sound input via a headphone jack\n\n**Waller Room and Runner's Room**\n\n* 60\" PLASMA MONITOR, 1080P\n* PowerPoint presentations\n* Video viewing"
+    },
+    {
+      "heading": "Equipment",
+      "level": 2,
+      "markdown": "**Projection System**\n\n* 4 - Christie Digital LX-505 Projector with Christie Digital Zoom Lens 3.4-5.4:1 Zoom (1 per ballroom), 5K Lumens with a 1000:1 contrast ratio\n* 4 - Motorized projection screen, wall mounted 78\" x 104\" SD format(1 per ballroom)\n* Projectors and screens can be used in combination with adjacent rooms for larger size groups to allow for better sound/visual coverage of the material\n\n**Sound System**\n\n* 24 - 5.25\" High Power Coaxial Open-Ceiling Speakers (6 per ballroom)\n* 1 - 4-Channel 200Watt/channel Professional Power Amplifier\n* 4 - Nexia TC digital signal processor (1 per ballroom)\n* 2 - Wireless lavalier microphones\n* 2 - Wireless handheld microphones\n* 4 - Wired handheld microphones"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Weddings",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=8b95dc16-d0a1-4f3d-9dfb-c95b56d854c3&v=1",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/72792ec4aee64c56b0b90d9f67488c3b_v1.jpg?m=638298381425130000"
+    },
+    {
+      "title": "Marine Corps Birthday Balls",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=72356be3-5a0c-441a-b4cf-b364aa2da938&v=1",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/53f07135c0d14aa8851105bfbd29609b_v1.jpg?m=638298381426200000"
+    },
+    {
+      "title": "Catering Guide",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=1b50a393-dd90-4c49-81d1-19973cdddf90&v=1",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2a4ce5e7b6ab4c26b4cac1fad17f9fae_v1.jpg?m=638298381424700000"
+    },
+    {
+      "title": "Mulligan's Clubhouse Rental",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=8b5b5bfd-0f03-4906-8c77-ea060cc238da&v=1",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/59f232b816964c12a089265847e9f283_v1.jpg?m=638298381425330000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Catering",
+      "address": "3017 Russell Road\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-4264"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-784-4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Mon-Fri",
+              "time": "8 AM - 4:30 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "3017 Russell Road Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.50979197719289,-77.31081380223263"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/72792ec4aee64c56b0b90d9f67488c3b_v1.jpg?m=638298381425130000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/53f07135c0d14aa8851105bfbd29609b_v1.jpg?m=638298381426200000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2a4ce5e7b6ab4c26b4cac1fad17f9fae_v1.jpg?m=638298381424700000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/59f232b816964c12a089265847e9f283_v1.jpg?m=638298381425330000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/catering-special-events",
+  "fetchedAt": "2026-10-26"
+}

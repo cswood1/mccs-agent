@@ -1,0 +1,206 @@
+/* ==========================================================================
+   MCCS Design Tokens
+   Usage: import this file once at the page level.
+   All tokens are CSS custom properties on :root.
+   Shadow DOM components consume them via var() — custom properties
+   intentionally pierce shadow boundaries.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------
+     Brand Colors
+     ------------------------------------------------------------------ */
+  --meridian-color-red:          #b91c1c;
+  --meridian-color-red-hover:    #991b1b;
+  --meridian-color-red-light:    #fee2e2;
+
+  --meridian-color-navy:         #0f1f3d;
+  --meridian-color-navy-dark:    #0a1628;
+  --meridian-color-navy-light:   #1e3a5f;
+
+  --meridian-color-white:        #ffffff;
+  --meridian-color-black:        #000000;
+
+  --meridian-color-gray-50:      #f9fafb;
+  --meridian-color-gray-100:     #f3f4f6;
+  --meridian-color-gray-200:     #e5e7eb;
+  --meridian-color-gray-300:     #d1d5db;
+  --meridian-color-gray-400:     #9ca3af;
+  --meridian-color-gray-500:     #6b7280;
+  --meridian-color-gray-600:     #4b5563;
+  --meridian-color-gray-700:     #374151;
+  --meridian-color-gray-800:     #1f2937;
+  --meridian-color-gray-900:     #111827;
+
+  /* Slate color scale (blue-gray; used by news feed & prototype pages) */
+  --meridian-color-slate-50:     #f8fafc;
+  --meridian-color-slate-100:    #f1f5f9;
+  --meridian-color-slate-200:    #e2e8f0;
+  --meridian-color-slate-300:    #cbd5e1;
+  --meridian-color-slate-400:    #94a3b8;
+  --meridian-color-slate-500:    #64748b;
+  --meridian-color-slate-600:    #475569;
+  --meridian-color-slate-700:    #334155;
+  --meridian-color-slate-800:    #1e293b;
+  --meridian-color-slate-900:    #0f172a;
+
+  /* Glass / overlay surfaces */
+  --meridian-color-glass-light:  rgba(255, 255, 255, 0.12);
+  --meridian-color-glass-border: rgba(255, 255, 255, 0.25);
+  --meridian-color-overlay-dark: rgba(10, 22, 40, 0.72);
+
+  /* ------------------------------------------------------------------
+     Typography
+     ------------------------------------------------------------------ */
+  --meridian-font-family:        'Manrope', sans-serif;
+  --meridian-font-weight-regular: 400;
+  --meridian-font-weight-medium:  500;
+  --meridian-font-weight-semibold: 600;
+  --meridian-font-weight-bold:    700;
+  --meridian-font-weight-extrabold: 800;
+
+  /* Font size scale */
+  --meridian-fs-2xs:     0.625rem;   /*  10px */
+  --meridian-fs-xs:      0.6875rem;  /*  11px */
+  --meridian-fs-sm:      0.75rem;    /*  12px */
+  --meridian-fs-base:    0.875rem;   /*  14px */
+  --meridian-fs-md:      1rem;       /*  16px */
+  --meridian-fs-lg:      1.125rem;   /*  18px */
+  --meridian-fs-xl:      1.25rem;    /*  20px */
+  --meridian-fs-2xl:     1.5rem;     /*  24px */
+  --meridian-fs-3xl:     1.875rem;   /*  30px */
+  --meridian-fs-4xl:     2.25rem;    /*  36px */
+  --meridian-fs-display: 3rem;       /*  48px */
+
+  /* Line heights */
+  --meridian-lh-tight:   1.2;
+  --meridian-lh-snug:    1.375;
+  --meridian-lh-normal:  1.5;
+  --meridian-lh-relaxed: 1.625;
+
+  /* Letter spacing */
+  --meridian-ls-tighter: -0.02em;
+  --meridian-ls-tight:   -0.01em;
+  --meridian-ls-normal:   0em;
+  --meridian-ls-wide:     0.04em;
+  --meridian-ls-wider:    0.08em;
+  --meridian-ls-widest:   0.16em;
+
+  /* ------------------------------------------------------------------
+     Spacing Scale  (base-8 grid)
+     ------------------------------------------------------------------ */
+  --meridian-space-0:    0;
+  --meridian-space-1:    0.25rem;    /*  4px */
+  --meridian-space-2:    0.5rem;     /*  8px */
+  --meridian-space-3:    0.75rem;    /* 12px */
+  --meridian-space-4:    1rem;       /* 16px */
+  --meridian-space-5:    1.25rem;    /* 20px */
+  --meridian-space-6:    1.5rem;     /* 24px */
+  --meridian-space-8:    2rem;       /* 32px */
+  --meridian-space-10:   2.5rem;     /* 40px */
+  --meridian-space-12:   3rem;       /* 48px */
+  --meridian-space-16:   4rem;       /* 64px */
+  --meridian-space-20:   5rem;       /* 80px */
+  --meridian-space-24:   6rem;       /* 96px */
+
+  /* ------------------------------------------------------------------
+     Border Radius
+     ------------------------------------------------------------------ */
+  --meridian-radius-none:   0;
+  --meridian-radius-sm:     0.25rem;   /* 4px  */
+  --meridian-radius-md:     0.5rem;    /* 8px  */
+  --meridian-radius-lg:     0.75rem;   /* 12px */
+  --meridian-radius-xl:     1rem;      /* 16px */
+  --meridian-radius-2xl:    1.5rem;    /* 24px */
+  --meridian-radius-full:   9999px;
+
+  /* ------------------------------------------------------------------
+     Shadows
+     ------------------------------------------------------------------ */
+  --meridian-shadow-sm:  0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+  --meridian-shadow-md:  0 4px 12px rgba(0,0,0,0.15);
+  --meridian-shadow-lg:  0 8px 32px rgba(0,0,0,0.2);
+  --meridian-shadow-xl:  0 16px 48px rgba(0,0,0,0.25);
+
+  /* Neumorphic shadows (light surface, blue-gray ambient) */
+  --meridian-shadow-neu-rest:    3px 3px 7px rgba(174,183,196,0.50), -3px -3px 7px rgba(255,255,255,0.95);
+  --meridian-shadow-neu-hover:   4px 4px 9px rgba(174,183,196,0.55), -4px -4px 9px rgba(255,255,255,1.00);
+  --meridian-shadow-neu-active:  inset 3px 3px 6px rgba(174,183,196,0.50), inset -2px -2px 5px rgba(255,255,255,0.85);
+
+  /* ------------------------------------------------------------------
+     Transitions
+     ------------------------------------------------------------------ */
+  --meridian-transition-fast:   150ms ease;
+  --meridian-transition-base:   250ms ease;
+  --meridian-transition-slow:   400ms ease;
+
+  /* ------------------------------------------------------------------
+     Z-index Scale
+     ------------------------------------------------------------------ */
+  --meridian-z-base:    0;
+  --meridian-z-raised:  10;
+  --meridian-z-dropdown: 100;
+  --meridian-z-sticky:  200;
+  --meridian-z-overlay: 300;
+  --meridian-z-modal:   400;
+  --meridian-z-toast:   500;
+
+  /* ------------------------------------------------------------------
+     Component-Specific Tokens
+     (override per-component without touching global scale)
+     ------------------------------------------------------------------ */
+
+  /* Kicker */
+  --meridian-kicker-line-color:  var(--meridian-color-red);
+  --meridian-kicker-text-color:  var(--meridian-color-navy);
+
+  /* Primary Button */
+  --meridian-btn-primary-bg:          var(--meridian-color-red);
+  --meridian-btn-primary-bg-hover:    var(--meridian-color-red-hover);
+  --meridian-btn-primary-text:        var(--meridian-color-white);
+  --meridian-btn-primary-radius:      var(--meridian-radius-full);
+
+  /* Hero */
+  --meridian-hero-overlay-bg:         var(--meridian-color-overlay-dark);
+  --meridian-hero-heading-color:      var(--meridian-color-white);
+  --meridian-hero-description-color:  rgba(255, 255, 255, 0.85);
+
+  /* Carousel */
+  --meridian-carousel-control-bg:     var(--meridian-color-glass-light);
+  --meridian-carousel-control-border: var(--meridian-color-glass-border);
+
+  /* Section Header */
+  --meridian-mission-section: 1200px;
+  --meridian-section-header-max-width: none;
+  --meridian-section-kicker-line:     var(--meridian-color-red);
+  --meridian-section-kicker-text:     var(--meridian-color-navy);
+
+  /* Section Heading */
+  --meridian-section-heading-color:   var(--meridian-color-gray-900);
+  --meridian-section-heading-accent:  var(--meridian-color-red);
+
+  /* Section Lead */
+  --meridian-section-lead-color:      var(--meridian-color-gray-600);
+
+  /* Section CTA */
+  --meridian-section-cta-bg:          var(--meridian-color-red);
+  --meridian-section-cta-bg-hover:    var(--meridian-color-red-hover);
+  --meridian-section-cta-color:       var(--meridian-color-white);
+  --meridian-section-cta-radius:      var(--meridian-radius-xl);
+
+  /* Latest News */
+  --meridian-news-heading-color:      #0f2b4d;
+  --meridian-news-pill-bg:            #f1f4f8;
+  --meridian-news-image-filter:       saturate(0.45) brightness(1.1);
+  --meridian-news-image-filter-hover: saturate(1) brightness(1);
+
+   /* Services Map */
+   --meridian-services-sheet-height-full: min(70svh, 620px);
+   --meridian-services-sheet-height-compact: min(33svh, 330px);
+   --meridian-services-chip-bg: #f6f8fb;
+   --meridian-services-chip-bg-hover: #eef2f7;
+   --meridian-services-chip-bg-active: #e5edf7;
+   --meridian-services-chip-border: rgba(148, 163, 184, 0.58);
+   --meridian-services-chip-border-hover: rgba(148, 163, 184, 0.64);
+   --meridian-services-chip-border-active: rgba(148, 163, 184, 0.7);
+}

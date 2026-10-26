@@ -1,0 +1,218 @@
+{
+  "title": "Fitness",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Barber Physical Activity Center (BPAC) is a 57,000 square foot, state-of-the-art facility that houses Physical Fitness, Health Promotion, Athletics, and Single Marine Program. The facility offers a large variety of recreational opportunities with a 9,600 square foot fitness deck, group exercise room, spin studio, functional fitness room, three racquetball courts, and one full sized basketball court. It also offers a TV and Wi-Fi lounge, locker rooms, and separate saunas for men and women for all eligible patrons. Children 12-15 years old must be accompanied by an adult over 18. 16 and older are permitted unaccompanied access. 10–15-year-olds may use the basketball and racquetball courts when accompanied by an adult. Children under the age of 10 are not permitted access to the facility unless it is an organized MCCS or Command event open to all ages. ID is required for access to the facility, DoD civilians and Base Contractors."
+    },
+    {
+      "heading": "Unmanned Fitness Center",
+      "level": 3,
+      "markdown": "**Authorized Users: Active Duty Military, MCINCR-MCBQ PMO Civilians, and Fire Department personnel only.**\n\n• Unmanned hours start 30 minutes after closing of regular hours: All patrons must exit facility.\n• Unmanned access is turned off 30 minutes before opening: Patrons do not need to exit facility.\n• Federal Holidays BPAC is open for unmanned access registrants only."
+    },
+    {
+      "heading": "Parking",
+      "level": 3,
+      "markdown": "Parking is available at BPAC and is adjacent parking lots across the street at Barnett Field and next to Butler Stadium."
+    },
+    {
+      "heading": "Policies",
+      "level": 3,
+      "markdown": "All patrons must present proper identification to enter BPAC. 100% ID check. Exception: Active Duty in uniform (this does not include PT uniform green-on-green). Patrons are required to present their IDs to the customer service front desk staff and log in on the touch screen to identify eligibility."
+    },
+    {
+      "heading": "Fees",
+      "level": 3,
+      "markdown": "Contractors working aboard MCB Quantico may access BPAC for a Daily Fee - $5.00 or Monthly Fee - $40.00.\n\nMonthly Locker Fee - $15.00\n\n(Available for DoD, Retirees, Family Members, and Contractors assigned to MCB Quantico.)"
+    },
+    {
+      "heading": "Physical Fitness Program",
+      "level": 3,
+      "markdown": "The Quantico Physical Fitness Program is located in the Barber Physical Activity Center, Building 2073, Barnett Avenue. Fitness programs include personal training, group exercise programs, health promotion, fitness lecture series and a variety of specialty programs. The Physical Fitness Program supports the Marine Corps PFT, CFT and weight control requirements. For more information on the Physical Fitness program, contact the Fitness Director at 703-784-2672."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Personal Training",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/personal-training",
+      "text": "Jump start your exercise program with the help of a personal trainer. In...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/5f92eaca87f341d2b78fc59c9f664eaa_v1.jpg?m=638298216364800000"
+    },
+    {
+      "title": "Health Promotion",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education",
+      "text": "The mission of the Semper Fit Health Promotion and Physical Fitness prog...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6d0ba80410a340ffbc76a81514a95779_v1.jpg?m=638298216367470000"
+    },
+    {
+      "title": "Nutrition Services",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education/nutrition-supplements-education",
+      "text": "Nutrition classes, cooking classes, nutrition counseling, and so much more!",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/efd6fe868b3c4baabb3f5674aa2ccb24_v1.jpg?m=638298216365530000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Barber Physical Activity Center",
+      "address": "Building 2073\nBarnett Ave\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "703-432-0590"
+        },
+        {
+          "label": "Fitness Director",
+          "number": "703-784-2672"
+        },
+        {
+          "label": "Group Exercise Office",
+          "number": "703-784-2339"
+        },
+        {
+          "label": "Personal Trainer's Desk",
+          "number": "703-432-0590"
+        },
+        {
+          "label": "Personal Trainer's Office",
+          "number": "703-784-2162"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Regular Operation Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5:00am - 8:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5:00am - 8:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5:00am - 8:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5:00am - 8:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5:00am - 8:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:00am - 3:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Holidays",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Active duty, including those TAD at Quantico, can sign up for Unmanned Fitness Access, during regular operation hours.",
+        "In the event of inclement weather, please refer to MCCS Quantico's Facebook page for delays & closures."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Personal Training",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/personal-training"
+    },
+    {
+      "text": "Health Promotion",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education"
+    },
+    {
+      "text": "Nutrition Services",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education/nutrition-supplements-education"
+    },
+    {
+      "text": "Building 2073 Barnett Ave Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5164025,-77.3028067"
+    },
+    {
+      "text": "Equipment List",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=f1b10041-5227-4525-9cb8-2d181681a178&v=1"
+    },
+    {
+      "text": "Dress Code",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=89e672c9-58f4-4786-a5e1-da84f651e213&v=1"
+    },
+    {
+      "text": "Field Request Form",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=e96c5e37-642b-4956-91eb-b6e0009a13b6&v=1"
+    },
+    {
+      "text": "SIGNED-MCINCR-MCBQ-1020_1K-UNIFORM-REGULATION-ORDER.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=32fd71e0-e6be-4156-99be-a16b88204b70&v=1"
+    },
+    {
+      "text": "SOP For Unmanned Fitness Center.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=b0c78dd1-f499-415e-b15f-0b16c30c0d03&v=1"
+    },
+    {
+      "text": "SOU Unmanned Fitness Center.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=04b61161-5479-42dc-af29-15625bc772fb&v=1"
+    },
+    {
+      "text": "Uniform Regulation Order",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=9287ae95-a8e5-4f02-a7f9-72fb2d30a485&v=1"
+    },
+    {
+      "text": "Unmanned Assumption of Risk.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=6364c8ad-e45d-4c2a-93b9-39f26c33dc06&v=1"
+    },
+    {
+      "text": "Eligibility",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=47661474-a5d0-4597-9533-e64f3d2ac283&v=1"
+    },
+    {
+      "text": "Racquetball Policy",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=e9d50bc3-3ba4-46c5-93db-431d107df21c&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/5f92eaca87f341d2b78fc59c9f664eaa_v1.jpg?m=638298216364800000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/6d0ba80410a340ffbc76a81514a95779_v1.jpg?m=638298216367470000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/efd6fe868b3c4baabb3f5674aa2ccb24_v1.jpg?m=638298216365530000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness",
+  "fetchedAt": "2026-10-26"
+}

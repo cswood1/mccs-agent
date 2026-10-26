@@ -1,0 +1,63 @@
+{
+  "title": "SMP Trip - National Museum of the Marine Corps",
+  "breadcrumb": [],
+  "intro": "Visit the National Museum of the Marine Corps and experience the Museum with your fellow Marines.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The National Museum of the Marine Corps, under the command of Marine Corps University, preserves and exhibits the material history of the U.S. Marine Corps; honors the commitment, accomplishments, and sacrifices of Marines; supports recruitment, training, education, and retention of Marines; and provides the public with a readily accessible platform for the exploration of Marine Corps history.\n\n[Register on Eventbrite](https://www.eventbrite.com/o/12631456557)\n\n**SMP Transportation Pick up locations and Times:**\n\n- 09:00 AM - MSRC (Main Side Rec Center 206 Nicholas Rd, Quantico, VA)\n- 9:10 AM - OCS Taxi\n- 9:15 AM - HMX-1/MCAF Gate\n- 9:20 AM - MCESG/WTBN Chow Hall\n\nTransportation is only provided to Single Service Members and geo-bachelors associated with the SMP. Seating limited; first come, first served.\n\nFor more information call [703.432.0363](tel:703.432.0363) or Email: [MCCSQUANTICOSMP@USMC-MCCS.ORG](mailto:MCCSQUANTICOSMP@USMC-MCCS.ORG)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "SMP Trip - National Museum of the Marine Corps",
+      "address": "National Museum of the Marine Corps, 18900 Jefferson Davis Hwy, Triangle, VA 22172",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.0363"
+        }
+      ],
+      "emails": [
+        "MCCSQUANTICOSMP@USMC-MCCS.ORG"
+      ],
+      "hours": [
+        {
+          "label": "Date",
+          "rows": [
+            {
+              "days": "Friday, November 6, 2026",
+              "time": "9:00 AM - 11:00 AM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Register on Eventbrite",
+      "url": "https://www.eventbrite.com/o/12631456557"
+    },
+    {
+      "text": "703.432.0363",
+      "url": "tel:703.432.0363"
+    },
+    {
+      "text": "MCCSQUANTICOSMP@USMC-MCCS.ORG",
+      "url": "mailto:MCCSQUANTICOSMP@USMC-MCCS.ORG"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/8d4faaf068ef4a098d4e87c883ac20e5_w433_h243.jpg?m=638596804201570000",
+      "alt": "SMP Trip - National Museum of the Marine Corps"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/8de075c2-5333-4ef3-95d6-18b6e514af42",
+  "fetchedAt": "2026-10-26"
+}

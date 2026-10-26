@@ -1,0 +1,57 @@
+{
+  "url": "https://quantico.usmc-mccs.org/activity/bf7ce6ff-c066-48ef-80d6-313440c54c43",
+  "title": "FAP Through the Season Grief Support Group",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Through the Season Grief Support Group",
+      "level": 3,
+      "markdown": "The holidays can be hard when you are grieving from loss. This support group is here to help you cope with loss—whether it's the loss of loved ones, jobs, or other difficult life changes.\n\nJoin us for coping strategies, psychoeducation, and open discussions around holidays, anniversaries, and more.\n\nFind comfort, understanding, and healing in a safe and supportive environment.\n\nMondays | 12:00-1:30 PM\nNovember 2 & 9\nDecember 7 & 14\n\nLocation: Little Hall, 2034 Barnett Ave., FAP Classroom, lower level\n\nFor more information, contact: FAP Mainline 703.784.2570"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Family Advocacy Program",
+      "address": "2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.2570"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoFAP@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Group Meeting Times",
+          "rows": [
+            {
+              "days": "Mondays",
+              "time": "12:00 PM - 1:30 PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Dates: November 2 & 9, December 7 & 14"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Family Advocacy Program 2034 Barnett Ave Lower Level Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52209863693904,-77.29528782533997"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/bb9ade510b10459d9ecda10413bb7068.jpg?m=639227504550600000",
+      "alt": "FAP Through the Season Grief Support Group"
+    }
+  ],
+  "notCaptured": "",
+  "fetchedAt": "2026-10-26"
+}

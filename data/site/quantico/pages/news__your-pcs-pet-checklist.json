@@ -1,0 +1,54 @@
+{
+  "title": "Your PCS Pet Checklist",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Your PCS Pet Checklist](/modules/media/t/de1fbb99aa664fa888092da1213f8fc0.jpg?m=639189675559500000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "#CYPMilKids Week",
+      "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/de1fbb99aa664fa888092da1213f8fc0.jpg?m=639189675559500000",
+      "alt": "Your PCS Pet Checklist"
+    }
+  ],
+  "notCaptured": "The main checklist content for the PCS pet checklist appears to load dynamically; only the hero image is visible in the static HTML provided.",
+  "url": "https://quantico.usmc-mccs.org/news/your-pcs-pet-checklist",
+  "fetchedAt": "2026-10-26"
+}

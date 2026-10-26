@@ -1,0 +1,110 @@
+{
+  "title": "What Do I Do if I'm Sexually Assaulted?",
+  "breadcrumb": [],
+  "intro": "If you are a victim of sexual assault, there are several things you may want to consider doing to keep yourself safe and healthy. You may also want to think about preserving the evidence, and reaching out to people who are ready to listen without disclosing your identity to others.",
+  "sections": [
+    {
+      "heading": "Consider Taking These Steps",
+      "level": 2,
+      "markdown": "- Go to a safe place away from the offender. If you are in danger or feel threatened, contact PMO/law enforcement immediately. Note: You cannot file a 'Restricted Report' if you disclose a sexual assault to PMO/law enforcement.\n- Preserve evidence of the assault. For instance:\n  - Do not take a shower or a bath.\n  - Do not wash your hands or brush your teeth.\n  - Do not straighten up or remove anything from the crime scene.\n  - Request a Sexual Assault Forensic Exam (SAFE) to collect evident from the assault.\n- Seek medical care to take care of your physical injuries:\n  - Be aware of the risks of pregnancy and sexually-transmitted infection.\n  - Request a SAFE as noted above.\n  - Consider a blood test or urinalysis if you suspect you were drugged.\n- Contact a SARC, UVA (for military victims) or SAPR VA (for civilian victims), who will:\n  - Keep your report confidential.\n  - Inform you of the Restricted & Unrestricted reporting options.\n  - Provide you with resources and support."
+    },
+    {
+      "heading": "24/7 Hotlines and Website Resources",
+      "level": 2,
+      "markdown": "- Contact the DOD Safe Helpline for Sexual Assault Victims - 24/7\n  - Confidential Toll-free call at 1-877-995-5247\n  - Via Internet at [www.safehelpline.org](http://www.safehelpline.org/)\n  - Search by unit or installation name or zip code to find SAPR resources or rape crisis centers near you.\n- Contact your USMC Installation Sexual Assault Helpline - 24/7\n  - No matter where you are in the world, free and confidential help is available.\n  - For those on or close to a major USMC Installation, call your local helpline. Each helpline is staffed by a trained advocate who will talk to you about whatever you want to discuss regarding the incident and refer you to resources that might be helpful.\n\nTo learn more about the Sexual Assault Prevention and Response Program and the resources available to you, [click here](https://usmc-mccs.org/index.cfm/services/support/sexual-assault-prevention/)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Routines that Help",
+      "url": "https://quantico.usmc-mccs.org/news/routines-that-help",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Military Sexual Trauma",
+      "url": "https://quantico.usmc-mccs.org/news/military-sexual-trauma",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "October is National Depression and Mental Health Screening Month",
+      "url": "https://quantico.usmc-mccs.org/news/october-is-national-depression-and-mental-health-screening-month",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "SARC of the Year Award Winner",
+      "url": "https://quantico.usmc-mccs.org/news/sarc-of-the-year-award-winner",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "DOD Safe Helpline for Sexual Assault Victims",
+      "address": "",
+      "phones": [
+        {
+          "label": "Confidential Toll-free",
+          "number": "1-877-995-5247"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Availability",
+          "rows": [
+            {
+              "days": "24/7",
+              "time": ""
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Available via Internet at www.safehelpline.org"
+      ]
+    },
+    {
+      "name": "USMC Installation Sexual Assault Helpline",
+      "address": "",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Availability",
+          "rows": [
+            {
+              "days": "24/7",
+              "time": ""
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Free and confidential help available worldwide",
+        "Call your local helpline for installations"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "www.safehelpline.org",
+      "url": "http://www.safehelpline.org/"
+    },
+    {
+      "text": "Sexual Assault Prevention and Response Program",
+      "url": "https://usmc-mccs.org/index.cfm/services/support/sexual-assault-prevention/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2baf3cab20e242e0b526178a2671fbc9.jpg?m=638312698419770000",
+      "alt": "What Do I Do if I'm Sexually Assaulted?"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/news/what-do-i-do-if-im-sexually-assaulted",
+  "fetchedAt": "2026-10-26"
+}

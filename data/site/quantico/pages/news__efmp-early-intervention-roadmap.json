@@ -1,0 +1,54 @@
+{
+  "url": "https://quantico.usmc-mccs.org/news/efmp-early-intervention-roadmap",
+  "title": "EFMP: Early Intervention Roadmap",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![EFMP: Early Intervention Roadmap](https://quantico.usmc-mccs.org/modules/media/t/983ea3acc26a4764a987fa6d8c4014e9.jpg?m=639120480846170000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "#CYPMilKids Week",
+      "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/983ea3acc26a4764a987fa6d8c4014e9.jpg?m=639120480846170000",
+      "alt": "EFMP: Early Intervention Roadmap"
+    }
+  ],
+  "notCaptured": "The main content area appears to contain primarily a featured image with a link to enlarge it. No descriptive text, body content, or detailed information about the EFMP Early Intervention Roadmap itself is visible on this page.",
+  "fetchedAt": "2026-10-26"
+}

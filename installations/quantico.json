@@ -25,24 +25,5 @@
   "theme": {
     "primary": "#9e1b32",
     "accent": "#ffc72c"
-  },
-  "html": {
-    "contentSelectors": ["main", "[role=main]", "#main-content", "#content", "article", ".main-content"],
-    "removeSelectors": [
-      "header",
-      "nav",
-      "footer",
-      "[role=navigation]",
-      "[role=banner]",
-      "[role=contentinfo]",
-      "[aria-hidden=true]",
-      ".breadcrumb",
-      ".breadcrumbs",
-      ".skip-link",
-      ".visually-hidden",
-      ".sr-only",
-      "#cookie-banner",
-      ".social-share"
-    ]
   }
 }

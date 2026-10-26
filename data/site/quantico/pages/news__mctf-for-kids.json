@@ -1,0 +1,70 @@
+{
+  "title": "MCTF For Kids",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![MCTF For Kids](https://quantico.usmc-mccs.org/modules/media/t/531575aca38b474e8fc695ebc584b1bd.jpg?m=639166296540530000)\n\nPublished: 11 Aug 2026\n\n**Marine Corps Community Services**\n\n\"Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Supporting Marines Through Strong Connections",
+      "url": "https://quantico.usmc-mccs.org/news/supporting-marines-through-strong-connections",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "EFMP: Early Intervention Roadmap",
+      "url": "https://quantico.usmc-mccs.org/news/efmp-early-intervention-roadmap",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Amphibious Excellence: Elevating Water Readiness",
+      "url": "https://quantico.usmc-mccs.org/news/amphibious-excellence-elevating-water-readiness",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Inclusive Summer Activities for Marine Families",
+      "url": "https://quantico.usmc-mccs.org/news/inclusive-summer-activities-for-marine-families",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Supporting Marines Through Strong Connections",
+      "url": "https://quantico.usmc-mccs.org/news/supporting-marines-through-strong-connections"
+    },
+    {
+      "text": "EFMP: Early Intervention Roadmap",
+      "url": "https://quantico.usmc-mccs.org/news/efmp-early-intervention-roadmap"
+    },
+    {
+      "text": "Amphibious Excellence: Elevating Water Readiness",
+      "url": "https://quantico.usmc-mccs.org/news/amphibious-excellence-elevating-water-readiness"
+    },
+    {
+      "text": "Inclusive Summer Activities for Marine Families",
+      "url": "https://quantico.usmc-mccs.org/news/inclusive-summer-activities-for-marine-families"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/531575aca38b474e8fc695ebc584b1bd.jpg?m=639166296540530000",
+      "alt": "MCTF For Kids"
+    }
+  ],
+  "notCaptured": "Page (published 11 Aug 2026) has no actual article body beyond the hero image and standard MCCS tagline; confirmed via a second fetch attempt with a plain-markdown prompt.",
+  "url": "https://quantico.usmc-mccs.org/news/mctf-for-kids",
+  "fetchedAt": "2026-10-26"
+}

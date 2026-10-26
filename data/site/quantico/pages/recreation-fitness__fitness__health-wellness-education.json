@@ -1,0 +1,170 @@
+{
+  "title": "Health & Wellness Education",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "/recreation-fitness/fitness"
+    },
+    {
+      "label": "Health & Wellness Education",
+      "url": "/recreation-fitness/fitness/health-wellness-education"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Our Mission",
+      "level": 3,
+      "markdown": "The goal of Health Promotion is to improve the health and well-being, and to mitigate risk factors for the members of our community by enhancing readiness through the voluntary adoption of a healthy lifestyle. The program is designed to educate personnel about health risks, thereby enabling informed decisions about their own health."
+    },
+    {
+      "heading": "Classes",
+      "level": 3,
+      "markdown": "The Semper Fit Health Promotion program offers a variety of classes to provide education and support to keep you healthy. Classes are available to all patrons through briefs and Unit PMEs. Class topics include:\n\n* Tobacco Cessation\n* Sexual Health\n* Nutrition Education and Dietary Supplements\n* Weight Management\n* Physical Activity\n* Injury Prevention\n* Chronic Disease Prevention\n\nAll classes can be provided to the unit at BPAC or their location upon request."
+    },
+    {
+      "heading": "Event Support",
+      "level": 3,
+      "markdown": "Do you want to include health education on any of these topics for a class or at an event? Health Promotion will come to you and offer a variety of classes, displays and/or activities appropriate for your audience."
+    },
+    {
+      "heading": "Our Registered Dietitian provides the following services:",
+      "level": 3,
+      "markdown": ""
+    },
+    {
+      "heading": "Individual Nutrition Counseling",
+      "level": 3,
+      "markdown": "The Semper Fit Dietitian helps individuals reach their health goals. Each client receives a diet assessment plus expert advice and tips on how to make successful, lifestyle changes. **Counseling sessions are available by appointment only.**\n\n* Active Duty: Free\n* Dependents. Reservists, and Retirees: $25 (Dependents must be 12+ years of age).\n* DoD Civilians: $40\n* Contractors: $50"
+    },
+    {
+      "heading": "Monthly Nutrition Class",
+      "level": 3,
+      "markdown": "This free, one hour course is offered the 1st Wednesday of every month at 11:30 am - 12:30 pm at the link below via Adobe Connect:\n\n* [Join](https://meeting.marinenet.usmc.mil/mcbqnutritionclass/) the meeting!"
+    },
+    {
+      "heading": "Cooking Classes",
+      "level": 3,
+      "markdown": "* Cooking classes are offered quarterly. Participants learn how to cook delicious, nutritious meals and then, enjoy the healthful foods they cooked. Each class has a different theme based on the season or chosen health topic."
+    },
+    {
+      "heading": "Healthy Grocery Store Tour",
+      "level": 3,
+      "markdown": "* Tours are offered by appointment for a group of three or more at the Quantico Commissary. Go through the aisles with the Semper Fit Dietitian and discuss healthy food options in the grocery store. Discuss how to compile a healthy grocery list and learn to read food labels correctly."
+    },
+    {
+      "heading": "Nutrition Briefs",
+      "level": 3,
+      "markdown": "* Health Promotion will come to you! Nutrition and health briefs are available to all units and civilian offices aboard Quantico. Brief topics can include but are not limited to: Nutrition Basics, Weight Management (BCP), Sports Nutrition and Injuries, Dietary Supplement Awareness, and Healthy Eating on-the-go."
+    },
+    {
+      "heading": "Free Health Screenings (Walk-in or By Appointment)",
+      "level": 3,
+      "markdown": "* Blood Pressure\n* Body Composition via InBody\n* Bone Density"
+    },
+    {
+      "heading": "Tobacco Cessation",
+      "level": 3,
+      "markdown": "* Semper Fit Health Promotion has a standardized, evidenced-based tobacco cessation program called Operation Tobacco Free Marine (OTFM) which is free and open to all ID holders. The program is designed to help Marines and their families quit tobacco. OTFM incorporates the Centers for Disease Control and Prevention's Best Practices for Comprehensive Tobacco Control and evidence-based recommendations from the Clinical Practice Guidelines for the Treatment of Tobacco Use and Dependence published by the U.S. Public Health Service. Topics covered in the curriculum include the health consequences of tobacco, barriers to quitting, familiarization with nicotine replacement therapy and other medications, creating a quit plan and accessing support resources. The program launched in 2017, and we offer 1:1 counseling sessions by appointment."
+    },
+    {
+      "heading": "Sexual Health",
+      "level": 3,
+      "markdown": "* Our staff utilizes resources by the Navy and Marine Corps Public Health Center's Sexual Health and Responsibility Program (SHARP). We offer classes and resource table activities."
+    },
+    {
+      "heading": "Physical Activity and Injury Prevention",
+      "level": 3,
+      "markdown": "We partner with our Semper Fit Physical Fitness department to tailor classes to meet your audience's needs."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Mental Armor: How a Calm Mind Builds a Stronger Heart",
+      "url": "/news/mental-armor-how-a-calm-mind-builds-a-stronger-heart",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/dd4cfbd535da4b48ae32708bc878ddd1.jpg"
+    },
+    {
+      "title": "Safely Storing and Repurposing Holiday Leftovers",
+      "url": "/news/safely-storing-and-repurposing-holiday-leftovers",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/025f681c21df4148afa9b85f14cb821c.jpg"
+    },
+    {
+      "title": "Your Path to Quitting Tobacco",
+      "url": "/news/your-path-to-quitting-tobacco",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/4b30e858e5344a53b5ed1f948b35f258.jpg"
+    },
+    {
+      "title": "Nutrition & Recovery: Fueling Your Return to Duty",
+      "url": "/news/nutrition-recovery-fueling-your-return-to-duty",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/0375304db57e4d9ba58081b8d528e419.jpg"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Health Promotion",
+      "address": "Building 2073 Barnett Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2869"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "calendar-of-events",
+      "url": "https://quantico.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "Join",
+      "url": "https://meeting.marinenet.usmc.mil/mcbqnutritionclass/"
+    },
+    {
+      "text": "Building 2073 Barnett Ave Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51689247540214,-77.30292135788395"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Monthly Nutrition Class join link via Adobe Connect; current scheduled activities status indicates none planned for near future but references upcoming events page",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education",
+  "fetchedAt": "2026-10-26"
+}

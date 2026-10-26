@@ -1,0 +1,92 @@
+{
+  "title": "What is injury prevention",
+  "breadcrumb": [],
+  "intro": "Injury prevention is the ability to manage stress and minimize the impact of physical and mental injuries.",
+  "sections": [
+    {
+      "heading": "What is stress?",
+      "level": 2,
+      "markdown": "Stress is the body's response to physical, mental, or emotional pressure. Stress can be both good and bad. How we adapt and respond to stress is what impacts our physical and mental health."
+    },
+    {
+      "heading": "How is stress helpful?",
+      "level": 2,
+      "markdown": "Stress can be a valuable tool to help you live out your values, accomplish your goals, strengthen your relationships, and grow and learn from adversity, for example fitness is a form of positive stress."
+    },
+    {
+      "heading": "How do I manage stress to prevent injury?",
+      "level": 2,
+      "markdown": "Recovery and rest are ways to reduce the risk of physical and mental injury.\n\nPhysical injuries are either caused by a sudden injury due to an accident, or chronic, due to repetitive stress. Marines have higher rates of chronic injuries when they do not implement recovery."
+    },
+    {
+      "heading": "How do I lower my risk for physical injuries?",
+      "level": 2,
+      "markdown": "1. Get at least 24 hours of rest and recovery between intense workout sessions.\n2. Plan workouts around your work tasks:\n   - If your job training requires high physical demands, then decrease the intensity of your workouts.\n   - If your job demands are lower, you can increase the intensity of your workout.\n3. Include active recovery in your workout: low level movements and exercises at the end of a workout help reduce muscle soreness and help to slow down the nervous system, and heart rate. This is called downregulating."
+    },
+    {
+      "heading": "Psychological injuries",
+      "level": 2,
+      "markdown": "Psychological injuries are non-physical injuries caused by work or life related pressure, a negative experience such as divorce, or a traumatic event. A psychological injury is sometimes expressed as physical pain (muscle tension, high blood pressure, or getting sick)."
+    },
+    {
+      "heading": "How can I lower my risk for a psychological injury?",
+      "level": 2,
+      "markdown": "1. Mental rehearsal: framing thoughts in a positive direction through positive self-talk, using phrases to encourage yourself to stay on track and face challenges.\n2. Mental imagery: imagine yourself in control of a challenging situation, whether you picture it as if it's through your own eyes, or as if you are watching as a bystander.\n3. Increase energy: try setting up a routine bedtime to improve sleep, get exercise or active recovery during the day, avoid energy drinks, and make healthy food choices to fuel the body and enhance recovery."
+    },
+    {
+      "heading": "Stress Monitoring Tool",
+      "level": 2,
+      "markdown": "The Department of the Navy (Navy Operational Fitness & Fueling System) uses a stress management tool to monitor personal stress levels called a Subjective Daily Questionnaire. Use this tool daily to monitor or adjust your physical training and decrease your risk for injury."
+    },
+    {
+      "heading": "Resources and Services",
+      "level": 2,
+      "markdown": "Installation Semper Fit Programs, such as [Fitness Centers](https://www.usmc-mccs.org/services/fitness/fitness-centers/), [Health Promotions](https://www.usmc-mccs.org/services/fitness/health-promotion/), and [High Intensity Tactical Training (HITT)](https://www.usmc-mccs.org/services/fitness/high-intensity-tactical-training/), have a variety of professionals who can support injury prevention and stress management.\n\n- Strength and Conditioning Coaches provide unit level training plans and education regarding stress management.\n- Performance Educators provide nutrition service and professional sleep health coaches.\n- The [Single Marine Program](https://www.usmc-mccs.org/services/activities/single-marine-program/) provides an outlet for Marines to engage in social fitness and other activities for downregulation and other activities that improve mental performance.\n\n[The Consortium for Health and Military Performance](https://www.hprc-online.org/total-force-fitness/service-specific-resources/marines) provides branch-specific resources regarding health and human performance to include stress management tools for service members and families.\n\nContact your local [Family Advocacy Program](https://www.usmc-mccs.org/services/support/family-advocacy/), [Community Counseling Program](https://www.usmc-mccs.org/services/support/community-counseling/), or [Military and Family Life Counselors](https://www.usmc-mccs.org/services/support/military-family-life-counselors/) for additional in-depth support for individuals and units.\n\nTheir programs reduce deployment stressors, improve acclimation to the military lifestyle, and increase family functioning during separations. The strengths-based approach builds resiliency and promotes early recognition and prevention of stress injuries in the Marine Corps, and the programs are directly related to the mission, human resource development, and unit goals. We continue the tradition of \"taking care of our own.\""
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Fitness Centers",
+      "url": "https://www.usmc-mccs.org/services/fitness/fitness-centers/"
+    },
+    {
+      "text": "Health Promotions",
+      "url": "https://www.usmc-mccs.org/services/fitness/health-promotion/"
+    },
+    {
+      "text": "High Intensity Tactical Training (HITT)",
+      "url": "https://www.usmc-mccs.org/services/fitness/high-intensity-tactical-training/"
+    },
+    {
+      "text": "Single Marine Program",
+      "url": "https://www.usmc-mccs.org/services/activities/single-marine-program/"
+    },
+    {
+      "text": "The Consortium for Health and Military Performance",
+      "url": "https://www.hprc-online.org/total-force-fitness/service-specific-resources/marines"
+    },
+    {
+      "text": "Family Advocacy Program",
+      "url": "https://www.usmc-mccs.org/services/support/family-advocacy/"
+    },
+    {
+      "text": "Community Counseling Program",
+      "url": "https://www.usmc-mccs.org/services/support/community-counseling/"
+    },
+    {
+      "text": "Military and Family Life Counselors",
+      "url": "https://www.usmc-mccs.org/services/support/military-family-life-counselors/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/15724a77b7014b908404ead27be05449.jpg?m=638312712273630000",
+      "alt": "What is injury prevention"
+    }
+  ],
+  "notCaptured": "An audio player for listening to the content is present but not captured; a stress monitoring tool image/chart is referenced but source URL not fully accessible.",
+  "url": "https://quantico.usmc-mccs.org/news/what-is-injury-prevention",
+  "fetchedAt": "2026-10-26"
+}

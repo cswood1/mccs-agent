@@ -1,0 +1,69 @@
+{
+  "title": "Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://quantico.usmc-mccs.org/services"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Post Offices](/services/post-offices)\n- [Automotive Services](/services/automotive-services)\n- [Barber](/services/barber)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Post Offices",
+      "url": "https://quantico.usmc-mccs.org/services/post-offices",
+      "text": "The station post office serves as both a U.S. Postal Service and military postal facility.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/75f1294ccbbb4c59a764b9db7bbfbd58_v1.jpg?m=638298223464770000"
+    },
+    {
+      "title": "Automotive Services",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services",
+      "text": "Marine Corps Automotive Services offers a variety of tools and equipment for do-it-yourself services.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6699eb58b8b748c5bee94c9574979007_v1.jpg?m=638298223464600000"
+    },
+    {
+      "title": "Barber",
+      "url": "https://quantico.usmc-mccs.org/services/barber",
+      "text": "Military style, civilian cuts, shampoos, and shaves.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/f2ff689d41a94bc1adf302a7271a0522_v1.jpg?m=638298223464970000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Post Offices",
+      "url": "https://quantico.usmc-mccs.org/services/post-offices"
+    },
+    {
+      "text": "Automotive Services",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services"
+    },
+    {
+      "text": "Barber",
+      "url": "https://quantico.usmc-mccs.org/services/barber"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/75f1294ccbbb4c59a764b9db7bbfbd58_v1.jpg?m=638298223464770000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/6699eb58b8b748c5bee94c9574979007_v1.jpg?m=638298223464600000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/f2ff689d41a94bc1adf302a7271a0522_v1.jpg?m=638298223464970000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/services",
+  "fetchedAt": "2026-10-26"
+}

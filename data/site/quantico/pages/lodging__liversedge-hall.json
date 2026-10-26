@@ -1,0 +1,93 @@
+{
+  "title": "Marine Lodge Liversedge Quantico",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://quantico.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Marine Lodge Liversedge Quantico",
+      "url": "https://quantico.usmc-mccs.org/lodging/liversedge-hall"
+    }
+  ],
+  "intro": "Marine Lodge Quantico Liversedge is your TAD/TDY destination! The facility has 66 standard rooms, 50 suites, as well as meeting space to accommodate up to 80 people. The hotel requires a valid credit or debit card at check-in.",
+  "sections": [
+    {
+      "heading": "Check-in",
+      "level": 3,
+      "markdown": "Please check-in at Inns of the Corps Quantico, located at 3018 Russell Rd, Quantico, VA 22134."
+    },
+    {
+      "heading": "Eligibility",
+      "level": 3,
+      "markdown": "Military: Active Duty, National Guard, Reserves and Retirees on Leave or Official Duty\n\nDoD Civilians\n\nValid Credentials REQUIRED at check-in."
+    },
+    {
+      "heading": "Reservations",
+      "level": 3,
+      "markdown": "TAD/TDY can book 90 days in advance.\n\nLeisure Reservations can only be made 30 days in advance.\n\nFor groups, please email [LodgingReservations.Liversedge@usmc-mccs.org](mailto:LodgingReservations.Liversedge@usmc-mccs.org)\n\nDue to high occupancy, we recommend making reservations as early as possible per the restrictions above."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Book Now Liversedge",
+      "url": "https://lodgingreservations.usmc-mccs.org/Search/Index/15445/90/",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "View all Locations",
+      "url": "https://www.marinelodge.com/",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Marine Lodge Quantico Liversedge",
+      "address": "15 Liversedge Dr, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "7036304444"
+        }
+      ],
+      "emails": [
+        "LodgingReservations.Liversedge@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": []
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "LodgingReservations.Liversedge@usmc-mccs.org",
+      "url": "mailto:LodgingReservations.Liversedge@usmc-mccs.org"
+    },
+    {
+      "text": "15 Liversedge Dr Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52783288503506,-77.30662937116408"
+    },
+    {
+      "text": "7036304444",
+      "url": "tel:7036304444"
+    },
+    {
+      "text": "Book Now Liversedge",
+      "url": "https://lodgingreservations.usmc-mccs.org/Search/Index/15445/90/"
+    },
+    {
+      "text": "View all Locations",
+      "url": "https://www.marinelodge.com/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/lodging/liversedge-hall",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,74 @@
+{
+  "title": "Emotional Support for Caregivers",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Emotional Support for Caregivers](https://quantico.usmc-mccs.org/modules/media/t/673d71817c974b388794fe0f38ad6909.png)\n\nPublished: 30 May 2024\n\n**Marine Corps Community Services**\n\n\"Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Three Cs Are Key to Healthy Relationships",
+      "url": "https://quantico.usmc-mccs.org/news/three-cs-are-key-to-healthy-relationships",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Change Starts Within: Build Your Best Self",
+      "url": "https://quantico.usmc-mccs.org/news/change-starts-within-build-your-best-self",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Keep Your SGLI Updated: Protect What Matters Most",
+      "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Support Systems Help Protect Families",
+      "url": "https://quantico.usmc-mccs.org/news/support-systems-help-protect-families",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Three Cs Are Key to Healthy Relationships",
+      "url": "https://quantico.usmc-mccs.org/news/three-cs-are-key-to-healthy-relationships"
+    },
+    {
+      "text": "Change Starts Within: Build Your Best Self",
+      "url": "https://quantico.usmc-mccs.org/news/change-starts-within-build-your-best-self"
+    },
+    {
+      "text": "Keep Your SGLI Updated: Protect What Matters Most",
+      "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most"
+    },
+    {
+      "text": "Support Systems Help Protect Families",
+      "url": "https://quantico.usmc-mccs.org/news/support-systems-help-protect-families"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/673d71817c974b388794fe0f38ad6909.png",
+      "alt": "Emotional Support for Caregivers"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=33ed1332-9c1e-4e6d-978e-27b79f1a337b&w=612&h=795&v=4",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "Page (published 30 May 2024) has no actual article body text beyond a graphic/infographic image and the standard MCCS tagline; confirmed via a second fetch attempt with a plain-markdown prompt. The infographic image content itself was not transcribed.",
+  "url": "https://quantico.usmc-mccs.org/news/emotional-support-for-caregivers",
+  "fetchedAt": "2026-10-26"
+}

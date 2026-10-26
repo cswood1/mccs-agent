@@ -1,0 +1,207 @@
+{
+  "title": "Marine Corps Exchange",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://quantico.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Marine Corps Exchange",
+      "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": "**Main Exchange**\n\n| Day | Hours |\n|-----|-------|\n| Monday | 8:00am - 8:30pm |\n| Tuesday | 8:00am - 8:30pm |\n| Wednesday | 8:00am - 8:30pm |\n| Thursday | 8:00am - 8:30pm |\n| Friday | 8:00am - 8:30pm |\n| Saturday | 9:00am - 7:30pm |\n| Sunday | 9:00am - 6:00pm |\n| Holidays | 10:00am - 5:00pm |\n\nCertain services are unavailable before 8:00AM and after 6:00PM.\n\n**Gun Counter**\n\nNo firearms sales within the last hour before closing\n\n| Day | Hours |\n|-----|-------|\n| Monday | CLOSED |\n| Tuesday | 11:00am - 6:00pm |\n| Wednesday | 11:00am - 6:00pm |\n| Thursday | 11:00am - 6:00pm |\n| Friday | 11:00am - 6:00pm |\n| Saturday | 11:00am - 6:00pm |\n| Sunday | CLOSED |\n| Holidays | 10:00am - 4:00pm |"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Subscribe to MCX Offers Now",
+      "url": "https://www.mymcx.com/",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "eGift Cards",
+      "url": "https://mcxstore.wgiftcard.com/responsive/personalize_responsive/chooseDesign/mcx_resp/1",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Uniforms",
+      "url": "https://www.mymcx.com/uniforms",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "CHECK ELIGIBILITY",
+      "url": "https://www.vetverify.org/",
+      "text": "Save Every Day on Essentials",
+      "image": "https://www.mymcx.com/cms_themes/mcx/images/icon_awesome-check-circle.svg"
+    },
+    {
+      "title": "SIGN UP TO SAVE!",
+      "url": "https://www.mymcx.com/sign-up-for-mcx-circular",
+      "text": "Conveniently receive your weekly circulars anywhere at anytime, digital and/or print.",
+      "image": "https://www.mymcx.com/cms_themes/mcx/images/icon_material-email.svg"
+    },
+    {
+      "title": "Shop MCX + NEX",
+      "url": "https://www.mynavyexchange.com/",
+      "text": "Tax Free & Delivered to your door",
+      "image": "https://www.mymcx.com/cms_themes/mcx/images/hand-graving-smartphone.svg"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Main Exchange",
+      "address": "3500 Russell Road, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-1656"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Main Exchange",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8:00am - 8:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8:00am - 8:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8:00am - 8:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8:00am - 8:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8:00am - 8:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:00am - 7:30pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9:00am - 6:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "10:00am - 5:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Gun Counter",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "11:00am - 6:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Holidays",
+              "time": "10:00am - 4:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "No firearms sales within the last hour before closing",
+        "Certain services are unavailable before 8:00AM and after 6:00PM."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Subscribe to MCX Offers Now",
+      "url": "https://www.mymcx.com/"
+    },
+    {
+      "text": "eGift Cards",
+      "url": "https://mcxstore.wgiftcard.com/responsive/personalize_responsive/chooseDesign/mcx_resp/1"
+    },
+    {
+      "text": "Uniforms",
+      "url": "https://www.mymcx.com/uniforms"
+    },
+    {
+      "text": "Directions to Main Exchange",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52064604639119,-77.34848430221815"
+    },
+    {
+      "text": "GET VERIFIED",
+      "url": "https://www.vetverify.org/"
+    },
+    {
+      "text": "SIGN UP TO SAVE!",
+      "url": "https://www.mymcx.com/sign-up-for-mcx-circular"
+    },
+    {
+      "text": "SHOP NOW",
+      "url": "https://www.mynavyexchange.com/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.mymcx.com/cms_themes/mcx/images/icon_awesome-check-circle.svg",
+      "alt": "icon"
+    },
+    {
+      "src": "https://www.mymcx.com/cms_themes/mcx/images/home/mcx-logo.svg",
+      "alt": "icon"
+    },
+    {
+      "src": "https://www.mymcx.com/cms_themes/mcx/images/icon_material-email.svg",
+      "alt": "icon"
+    },
+    {
+      "src": "https://www.mymcx.com/cms_themes/mcx/images/logo.svg",
+      "alt": "alt"
+    },
+    {
+      "src": "https://www.mymcx.com/cms_themes/mcx/images/hand-graving-smartphone.svg",
+      "alt": "icon"
+    }
+  ],
+  "notCaptured": "Carousel/slider content with promotional banners may not display fully; dynamic event or promotional content may be region-specific",
+  "url": "https://quantico.usmc-mccs.org/shopping/marine-corps-exchange",
+  "fetchedAt": "2026-10-26"
+}

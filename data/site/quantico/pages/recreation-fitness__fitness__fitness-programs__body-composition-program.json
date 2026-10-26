@@ -1,0 +1,13 @@
+{
+  "title": "",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "Content extraction failed across 3 WebFetch attempts: all attempts (two structured-JSON prompts plus one markdown-reproduction fallback) returned an unrelated cached PDF binary (application/pdf, ~113.2KB, a logo/design file) instead of this page's HTML. No real main content could be captured for this URL.",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/body-composition-program",
+  "fetchedAt": "2026-10-26"
+}

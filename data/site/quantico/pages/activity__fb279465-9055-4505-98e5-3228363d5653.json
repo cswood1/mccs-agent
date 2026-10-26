@@ -1,0 +1,53 @@
+{
+  "title": "TCAQ - Right Hand Night",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Right Hand Night",
+      "level": 2,
+      "markdown": "Stop by The Clubs for a chance to unwind, relax, and socialize with fellow Quantico Leaders.\n\nThis event occurs on the second Wednesday of each month.\n\nEnjoy FREE appetizers until 4:30 PM. Spirits are also available for purchase."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Date",
+          "rows": [
+            {
+              "days": "Wednesday, December 9, 2026",
+              "time": "4:00 PM - 8:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/0c7d4d055c8a45628038dfb4244d5aa7.jpg?m=639126459795330000",
+      "alt": "TCAQ - Right Hand Night"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/fb279465-9055-4505-98e5-3228363d5653",
+  "fetchedAt": "2026-10-26"
+}

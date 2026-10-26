@@ -1,0 +1,103 @@
+{
+  "title": "Military OneSource",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Prevention and Counseling",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Along with resources provided at the duty station, such as counselors, chaplains, and other advisors, [Military OneSource](https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us) can also support Service members and their families.\n\nMilitary OneSource, [https://www.militaryonesource.mil/](https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us), is your connection to information, answers, and support when Marine Corps life happens. We can help you overcome challenges, reach your goals, and thrive.\n\nMilitary OneSource is a free service to Marines (active duty, veteran, wounded/ill/injured), attached sailors, family, and naval personnel supporting Marine Units. The Military OneSource Line is a confidential phone and chat support service that operates 24 hours a day, 7 days a week."
+    },
+    {
+      "heading": "Crisis Signs",
+      "level": 3,
+      "markdown": "These signs require immediate attention. If you are experiencing any of these and need medical attention, call 911 now. For immediate help in dealing with a suicidal crisis, call the Military Crisis Line at 1-800-273-8255 and Press 1 or dial 988.\n\n*   Thinking about hurting or killing yourself\n*   Looking for ways to kill yourself\n*   Talking about death, dying, or suicide\n*   Self-destructive behavior, such as drug abuse, risky use of weapons, etc.\n\nFor more information, visit the [Military Crisis Line website](http://www.veteranscrisisline.net/get-help-now/military-crisis-line/)."
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The goal of the Military OneSource confidential support services is to help callers manage stress in all forms, ranging from relationship and career issues, to deployment and financial problems, and develop the necessary skills required to cope with the widely-varying challenges of life in the Corps.\n\nA few of the types of help available:\n\n*   Relationship counseling\n*   Non-medical counseling for stress relief\n*   Financial counseling\n*   Document translation\n*   Spouse scholarships, education and career benefits\n*   Child care options\n*   Permanent change of station moves\n\n[Learn more](https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us) about what happens when you use Military OneSource support services."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Resources to Support Emotional Health",
+      "url": "https://quantico.usmc-mccs.org/news/resources-to-support-emotional-health",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Unlocking Total Fitness: Essential Resources for Marines and Their Families",
+      "url": "https://quantico.usmc-mccs.org/news/unlocking-total-fitnes-essential-resources-for-marines-and-their-families",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Military OneSource Line",
+      "address": "",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "1-800-342-9647"
+        },
+        {
+          "label": "Crisis Line",
+          "number": "1-800-273-8255 (Press 1)"
+        },
+        {
+          "label": "Crisis Line (Dial)",
+          "number": "988"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Available",
+          "rows": [
+            {
+              "days": "24/7",
+              "time": "Phone and chat support"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Confidential support service",
+        "Free service to Marines, attached sailors, family, and naval personnel supporting Marine Units"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Military OneSource",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "https://www.militaryonesource.mil/",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "Learn more",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "Military Crisis Line website",
+      "url": "http://www.veteranscrisisline.net/get-help-now/military-crisis-line/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Model extraction returned a non-image URL for a claimed image; omitted rather than recorded as a false image resource.",
+  "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource",
+  "fetchedAt": "2026-10-26"
+}

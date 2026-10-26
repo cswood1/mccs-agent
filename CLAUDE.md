@@ -26,68 +26,77 @@ needs, some things common across all installations, some unique to one base and 
 - Don't invent hours, phone numbers, or eligibility rules — say when it's unsure and link the page.
 - Mobile-friendly; most users will be on phones.
 
-## Decision: how content gets in (prototype; updated 2026-10-26)
-Current phase is early prototyping to figure out how the assistant should work, look, and feel.
-Optimize for speed.
+## Demo host site (decided 2026-10-26)
+The app is now a high-fidelity recreation of quantico.usmc-mccs.org with the assistant on every page,
+deployed on Vercel for demos.
 
-- **Preloaded snapshot.** `data/content/quantico.json` holds 71 pages of quantico.usmc-mccs.org
-  (≈158K tokens), captured 2026-10-26 with Claude Code's **WebFetch** tool, starting from the home page
-  and its main menus. Each page keeps its URL and fetch date. The whole file goes into the first user
-  turn with a prompt-cache breakpoint (not the system prompt — see live lookups below).
-- **No scripted crawling.** The site is behind Akamai bot protection that returns 403 to curl and
-  similar clients. Do NOT use curl, custom headers, headless browsers, or anything else that tries to
-  get around it. Refresh the snapshot only with WebFetch (or by saving pages from a normal browser and
-  running `npm run convert -- quantico`, which overwrites the same file).
-- **Snapshot caveats.** WebFetch returns a model-extracted rendition of each page, not raw HTML. It is
-  mostly verbatim, but some pages came back lightly paraphrased, and a few details can be wrong (one
-  capture had a phone number that didn't match the page's own tel: link). Spot-check hours and phone
-  numbers before showing this to MCCS. Not captured: the events calendar (rendered by JavaScript), the
-  Marine for Life Cycle page (WebFetch declined to reproduce it), the body composition PDF, and pages
-  that redirect to quantico.marines.mil (post offices, voting assistance).
-- **Live lookups.** The chat agent also has the API's server-side tools `web_fetch_20260318` and
-  `web_search_20260318`, limited to the installation's `trustedDomains` (Quantico site plus jst.doded.mil,
-  dantes.mil, militaryonesource.mil, militarychildcare.com, va.gov, marines.mil). It answers from the
-  snapshot first and fetches a live page only for changeable details (today's hours, events). Anthropic's
-  fetcher can reach the Quantico site (verified 2026-10-26). web_fetch can only open URLs that appeared in a
-  user message or tool result, which is why the snapshot lives in the first user turn.
-- **No embeddings / vector search / RAG.**
-- **Sample data:** `data/sample/<installation>.json` is invented placeholder content, used only when no
-  `data/content/<installation>.json` exists.
-- Revisit later (not now): official feed or allowlisted crawler from MCCS, scheduled refresh,
-  retrieval if content outgrows the prompt.
+- **Theme from a browser capture.** `design/reference/` holds the real rendered HTML of four page
+  templates plus the site's own CSS and logo, captured once from a normal browser.
+  `node scripts/extract-theme.mjs` turns it into `site/fragments/quantico/*.html` (header, MENU drawer,
+  search modal, footer, home carousel/tiles/important links) and `public/theme/` (site CSS, Bootstrap
+  5.3.2 + Bootstrap Icons 1.7.2 from npm, logo). The MCCS CMS theme is shared by every installation.
+- **Content from WebFetch only.** `data/site/quantico/pages/*.json` holds one structured file per page
+  (title, breadcrumb, sections, cards, contacts with hours/phones/emails, links, images), captured with
+  Claude Code's WebFetch tool. Never use curl, custom headers, headless browsers, or anything else that
+  tries to get around the site's Akamai bot protection. Headless screenshot tests must block every
+  request to *.usmc-mccs.org.
+- **One source for site and agent.** `npm run build:content` generates `data/content/quantico.json`
+  (the agent's knowledge) from the same page files: program/facility/section/event pages in full, news
+  stories as title + link + excerpt (the agent can web_fetch the full story).
+- **Templates** (`app/(site)/templates.tsx`): section landing, program/facility detail (side nav, header
+  card, "On this page", body, cards, contact + hours card), story/event article, and story/event
+  listings for `/stories` and `/calendar-of-events` (dynamic on the real site, rebuilt from captured
+  pages). Side nav comes from the MENU drawer markup. Unknown paths render a "not part of the demo" page
+  linking to the real one. Photos are hotlinked from the real site (they load in a normal browser),
+  with a neutral placeholder fallback (`<Photo>` and `app/(site)/site-enhancements.tsx`).
+- **Safeguards.** Yellow "Prototype demo — not the official MCCS site" banner on every page, footer's
+  "Official U.S. Marine Corps Website" line replaced, noindex (meta tag, X-Robots-Tag header,
+  robots.txt).
+- **Access code.** `proxy.ts` gates every page and API route when `DEMO_ACCESS_CODE` is set (unset =
+  public). The `/access` page sets a hashed cookie for a year; the widget can also send the code in an
+  `X-Demo-Access` header (used by the bookmarklet on the live site). Never commit the code.
+- **Widget on the demo site.** `data-site-host="quantico.usmc-mccs.org"` makes links to the real site in
+  answers open the local page in the same tab; chat history and open state persist across navigation
+  (sessionStorage). The header search box opens the assistant.
+- **Live lookups.** The chat agent also has `web_fetch_20260318` / `web_search_20260318`, limited to the
+  installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
+- **No embeddings / vector search / RAG.** The whole content file goes in the (cached) prompt.
 
 ## Cost and speed notes
-- First question in a conversation writes ~167K tokens to the prompt cache; follow-ups within 5 minutes
-  read it back at ~10% of the price. A live fetch adds a few extra model passes, each re-reading the cache.
-- Typical answers stream in 7–11 seconds.
+- First question in a conversation writes the content file (~180K tokens) to the prompt cache;
+  follow-ups within 5 minutes read it back at ~10% of the price. A live fetch adds a few extra model
+  passes, each re-reading the cache.
 
 ## Stack
-- Next.js 16 (App Router, TypeScript, Tailwind v4). Note: Next 16 differs from older versions — see
-  `AGENTS.md` and the docs in `node_modules/next/dist/docs/`.
-- Claude API via `@anthropic-ai/sdk`. Model `claude-opus-5` (override with `CLAUDE_MODEL`), effort `low`
-  (override with `CLAUDE_EFFORT`), streaming, server-side refusal fallbacks on.
+- Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
+  differs from older versions — see `AGENTS.md` and `node_modules/next/dist/docs/`. Middleware is
+  `proxy.ts` in Next 16.
+- Claude API via `@anthropic-ai/sdk`. Model `claude-opus-5` by default (override with `CLAUDE_MODEL`),
+  effort `low` (override with `CLAUDE_EFFORT`), streaming, server-side refusal fallbacks on.
 - Widget is plain JS in `public/widget.js` (Shadow DOM, no build step), served by the same app.
+- Deployed on Vercel (`vercel` CLI). Env vars there: `ANTHROPIC_API_KEY`, `CLAUDE_MODEL`,
+  `DEMO_ACCESS_CODE`.
 
 ## Layout
-- `installations/<id>.json` — per-installation config (name, site URL, local context, welcome message,
-  suggested questions, theme colors, HTML selectors for the converter). Register new ones in
-  `lib/installations.ts`.
-- `lib/prompt.ts` — the shared agent template: system prompt plus the cached content block for the first
-  user turn. Keep it deterministic so caching works; today's date goes in a trailing system message.
-- `app/api/chat/route.ts` — POST `{installationId, messages}` → streams plain text. Adds the live web tools,
-  resumes `pause_turn`, and logs token usage plus every fetch/search to the server console
-  (also in `.next/dev/logs/next-development.log`).
+- `app/(site)/` — the recreated site: `layout.tsx` (banner, captured header/footer, Bootstrap JS,
+  widget), `page.tsx` (home), `[...slug]/page.tsx` (every other captured page), `templates.tsx`.
+- `app/access/`, `app/api/access/`, `proxy.ts`, `lib/access.ts` — access-code gate.
+- `app/api/chat/route.ts` — POST `{installationId, messages}` → streams plain text, with live web tools.
 - `app/api/installations/[id]/route.ts` — public display config the widget fetches.
-- `public/widget.js` — the embed. `public/embed-test.html` — plain-HTML embed check.
-- `public/bookmarklet.html` — bookmarklet that injects the local widget onto the live Quantico site
-  (open http://localhost:3000/bookmarklet.html and drag the button to the bookmarks bar).
-- `app/page.tsx` — mock installation homepage with the widget on it.
-- `scripts/convert-html.mts` — saved HTML → `data/content/<id>.json`.
+- `app/bookmarklet.html/route.ts` + `site/bookmarklet.html` — bookmarklet that injects this server's
+  widget onto the live Quantico site (carries the access code).
+- `lib/prompt.ts` — the shared agent template (system prompt + cached content block).
+- `lib/site/` — page data loader, markdown renderer, nav tree from the MENU markup.
+- `installations/<id>.json` — per-installation config (name, site URL, trusted domains, theme, ...).
+- `scripts/extract-theme.mjs`, `scripts/build-content.mjs` — see above.
+- `public/embed-test.html` — plain-HTML embed check.
 
 ## Commands
-- `npm run dev` — run locally (needs `ANTHROPIC_API_KEY` in `.env.local`)
-- `npm run convert -- quantico` — rebuild Quantico content from `data/raw/quantico/`
+- `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; set `DEMO_ACCESS_CODE` to test the gate)
+- `npm run build:content` — regenerate the agent's content file from `data/site/quantico/pages`
+- `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
 - `npm run build`, `npm run lint`
+- `vercel deploy --prod` — deploy
 
 ## Status
 Prototype runs end to end on the real Quantico snapshot, with live fetch. Both example queries answer

@@ -1,0 +1,87 @@
+{
+  "title": "Inclusive Summer Activities for Marine Families",
+  "breadcrumb": [],
+  "intro": "Summer is here—school is winding down, the sun is out, and it's the perfect time for Marine Corps families to get outside, stay active, and make lasting memories. From inclusive playgrounds to adaptive recreation programs, Marine Corps Community Services (MCCS) offers a variety of activities designed for all ages and abilities.",
+  "sections": [
+    {
+      "heading": "Accessible Playgrounds for All Abilities",
+      "level": 2,
+      "markdown": "Let your kids explore, play, and connect at accessible playgrounds across Marine Corps installations. These inclusive spaces go beyond traditional swings and slides, offering adaptive equipment and engaging environments where children of all abilities can build confidence, develop social skills, and have fun together."
+    },
+    {
+      "heading": "Achieve Your Goals with WARR-Semper Fit",
+      "level": 2,
+      "markdown": "Take your fitness to the next level with [WARR-Semper Fit certified fitness trainers](https://www.usmc-mccs.org/recreation-fitness), available at installation fitness centers. These professionals create personalized workout plans tailored to your goals and abilities, including adaptive fitness options. Whether you're starting fresh or advancing your routine, WARR-Semper Fit helps you stay strong, healthy, and mission-ready."
+    },
+    {
+      "heading": "Adaptive Equipment for Outdoor Recreation",
+      "level": 2,
+      "markdown": "Enjoy the outdoors with confidence using adaptive recreation equipment available at many installations. From specialized wheelchairs to other mobility-support tools, these resources make it easier for individuals of all abilities to experience outdoor recreation. Contact your local [Exceptional Family Member Program (EFMP)](https://www.usmc-mccs.org/efmp) office to learn more about equipment checkout and accessible recreation areas."
+    },
+    {
+      "heading": "Special Olympics Young Athletes Program",
+      "level": 2,
+      "markdown": "Introduce your child to the joy of movement with the Special Olympics Young Athletes Program. Designed for children ages 2 to 7, this inclusive program focuses on fun, play-based activities that support physical, social, and emotional development. Reach out to your local EFMP office for program availability and enrollment details."
+    },
+    {
+      "heading": "Sensory-Friendly Movies and Story Time",
+      "level": 2,
+      "markdown": "Looking for a more relaxed activity? Many installations offer sensory-friendly movies and story time through base libraries. These events provide a welcoming, supportive environment for children and families seeking inclusive entertainment options. Check with your local EFMP office or [library](https://www.usmc-mccs.org/marine-family-support/libraries) for schedules."
+    },
+    {
+      "heading": "Get Connected and Stay Active",
+      "level": 2,
+      "markdown": "Ready to explore inclusive summer activities at your installation? Contact your local EFMP office or Semper Fit program to discover available resources and opportunities. Get outside, stay active, and make this summer one to remember."
+    }
+  ],
+  "cards": [
+    {
+      "title": "P3T: Supporting Strength Through Every Stage",
+      "url": "https://quantico.usmc-mccs.org/news/p3t-supporting-strength-through-every-stage",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Community-Based Child Care Options",
+      "url": "https://quantico.usmc-mccs.org/news/community-based-child-care-options",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Master REM Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/master-rem-sleep",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Community and Connection Through Sports",
+      "url": "https://quantico.usmc-mccs.org/news/community-and-connection-through-sports",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "WARR-Semper Fit certified fitness trainers",
+      "url": "https://www.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "text": "Exceptional Family Member Program (EFMP)",
+      "url": "https://www.usmc-mccs.org/efmp"
+    },
+    {
+      "text": "library",
+      "url": "https://www.usmc-mccs.org/marine-family-support/libraries"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/26073544667c4574ae00c40d50fc5f97.jpg?m=639125664170570000",
+      "alt": "Inclusive Summer Activities for Marine Families"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/news/inclusive-summer-activities-for-marine-families",
+  "fetchedAt": "2026-10-26"
+}

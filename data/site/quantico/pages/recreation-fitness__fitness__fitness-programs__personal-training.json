@@ -1,0 +1,130 @@
+{
+  "title": "Personal Training",
+  "breadcrumb": [],
+  "intro": "Jump start your exercise program with the help of a personal trainer. Individualized exercise programs are designed to meet each person's needs and goals. The Semper Fit Fitness staff members are certified Personal Trainers and/or possess degrees in Exercise Science and Physiology or related fields.",
+  "sections": [
+    {
+      "heading": "One-on-One Personal Training Sessions",
+      "level": 3,
+      "markdown": "No fees assessed for Active Duty on BCP or Reconditioning Program. Proper documentation required.\n\n**Active Duty & Reservists**\n3 one-on-one sessions with 1 Microfit assessment- Free\nAdditional sessions- $20 each (5 sessions $85)\n\n**Family Members & Retirees**\n3 one-on-one sessions with 1 Microfit assessment- $60\nAdditional sessions- $25 each (5 sessions $115)\n\n**DoD Civillians**\n3 one-on-one sessions with 1 Microfit assessment- $90\nAdditional sessions- $40 each (5 sessions $185)\n\n**Contractors**\n3 one-on-one sessions with 1 Microfit assessment- $100\nAdditional sessions- $50 each (5 sessions $225)"
+    },
+    {
+      "heading": "Microfit Assessments",
+      "level": 3,
+      "markdown": "Using state of the art technology, receive a complete personalized fitness/lifestyle assessment. A personal trainer will use the information on your body composition, strength, flexibility, and aerobic fitness to design an individualized exercise program for you. Profile includes results and printed report of: Weight, Body Fat, Heart Rate, Blood Pressure, Flexibility, Strength, Cardio Conditioning. For appointments call 703.432.0593."
+    },
+    {
+      "heading": "Steps to Start Your Personal Fitness Program",
+      "level": 3,
+      "markdown": "If you have any of the following conditions, you will first need a [clearance form](https://quantico.usmc-mccs.org/modules/media/?do=inline&id=996ea148-9684-4b56-a01b-2d5b3355d1dc) signed by your physician.\n\n* Heart problems, chest pain, history of stroke\n* High blood pressure, lung or breathing problems\n* Men over age 45, women over age 55\n* Diabetes, thyroid condition, high cholesterol\n* Smoker, sedentary or any condition that would be aggravated by exercise\n* If the above conditions do not exist in your health history, stop by BPAC to purchase and schedule your first Fitness Assessment, or call 703.432.0593.\n\nAfter you hand carry, mail, or fax the Physician's Clearance form to your physician...\n\n* Return the completed form in person or by fax to:\n* Barber Physical Fitness Activities Center\n* Attn: Physical Fitness\n* 2073 Barnett Ave., Quantico, VA 22134\n* Fax: 703.432.0588\n* When the form is completed and returned, call or stop by BPAC and schedule an assessment with a Personal Trainer.\n* Call 703.432.0593 between 0500-2000, Monday-Friday. 0800-1700 Sat/ 0900-1700 Sun.\n* Workout appointments available 0530-1900 Mon-Fri/ 0830-1530 Sat/ 0930-1530 Sun."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Dangers of Limited Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/dangers-of-limited-sleep",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6049d7a0007f4727a57fe7897af67195.png?m=638312998796770000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Barber Physical Activity Center",
+      "address": "Building 2073, Barnett Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "703-432-0590"
+        },
+        {
+          "label": "Fitness Director",
+          "number": "703-784-2672"
+        },
+        {
+          "label": "Group Exercise Office",
+          "number": "703-784-2339"
+        },
+        {
+          "label": "Personal Trainer's Desk",
+          "number": "703-432-0590"
+        },
+        {
+          "label": "Personal Trainer's Office",
+          "number": "703-784-2162"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Phone Hours",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "0500-2000"
+            },
+            {
+              "days": "Saturday",
+              "time": "0800-1700"
+            },
+            {
+              "days": "Sunday",
+              "time": "0900-1700"
+            }
+          ]
+        },
+        {
+          "label": "Workout Appointments",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "0530-1900"
+            },
+            {
+              "days": "Saturday",
+              "time": "0830-1530"
+            },
+            {
+              "days": "Sunday",
+              "time": "0930-1530"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "clearance form",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=996ea148-9684-4b56-a01b-2d5b3355d1dc"
+    },
+    {
+      "text": "Building 2073 Barnett Ave Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5164025,-77.3028067"
+    },
+    {
+      "text": "Client Agreement Form.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=420d1463-0962-48ff-a36f-6bdc935e50d7&v=1"
+    },
+    {
+      "text": "Dress-code-graphic-signage-FULL.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=89e672c9-58f4-4786-a5e1-da84f651e213&v=1"
+    },
+    {
+      "text": "Health Questionaire.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=942e0310-c75e-40f3-986b-4376d4e3c4d8&v=1"
+    },
+    {
+      "text": "Physicians-Clearance.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=996ea148-9684-4b56-a01b-2d5b3355d1dc&v=1"
+    },
+    {
+      "text": "Uniform Regulation Order.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=9287ae95-a8e5-4f02-a7f9-72fb2d30a485&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/personal-training",
+  "fetchedAt": "2026-10-26"
+}

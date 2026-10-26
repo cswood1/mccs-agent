@@ -1,0 +1,151 @@
+{
+  "title": "High Intensity Tactical Training",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Fitness Programs",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs"
+    }
+  ],
+  "intro": "The primary purpose of the High Intensity Tactical Training (HITT) program is to enhance operational fitness levels and optimize combat readiness and resiliency for the Marine. This comprehensive strength and conditioning program takes into consideration the physical demands of operational related activities in order to optimize physical performance while in combat. By implementing the latest cutting edge training methods and fundamental scientific principles, the HITT program focuses on enhancing athleticism for today's tactical athlete – The United States Marine.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**ALL Hours are subject to change to meet the needs of the HITT Program.** Please check the website or call the HITT Coordinator for the most up to date information. The HITT Center will Be closed for all federal holidays.\n\n**HITT Instructor Led Sessions**\n\nOpen to all active duty or reservist ONLY. Daily HITT sessions will allow Marines, Reservists, and other Active Duty Personnel the opportunity to train in a highly motivated group setting. All HITT sessions will be led by our qualified strength and conditioning coaches.\n\n**HITT UNIT PT Reservations**\n\nThe HITT Center can accommodate individual unit PTs led by our HITT Instructors upon approval from the HITT Coordinator. MCB Quantico offers a shadowing program which allows all HITT Level-1 and 2 instructors to utilize the facility for their units outside of MCCS operating hours. This also requires prior approval by the installation HITT Coordinator.\n\n**ALL RESERVATONS MUST BE MADE AT LEAST 10 DAYS IN ADVANCE**\n\n**Open Gym**\n\nPatrons unable to attend an instructor led HITT session can train during posted open gym hours. If you have any questions or concerns our highly qualified strength coaches are happy to assist you.\n\n\\*\\*MARINES PARTICIPATING IN HITT HAVE PRIORITY OVER EQUIPMENT AND SPACE IN THE HITT CENTER AND IS SUBJECT TO THE INSTRUCTOR'S DISCRETION\\*\\*"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Are You Ready to Conquer the CFT?",
+      "url": "https://quantico.usmc-mccs.org/news/are-you-ready-to-conquer-the-cft",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/25686a8454d14bc68e586e936966e15b.png?m=638512645731430000"
+    },
+    {
+      "title": "What is injury prevention",
+      "url": "https://quantico.usmc-mccs.org/news/what-is-injury-prevention",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/15724a77b7014b908404ead27be05449.jpg?m=638312712273630000"
+    },
+    {
+      "title": "Health, Wellness, and Performance",
+      "url": "https://quantico.usmc-mccs.org/news/health-wellness-and-performance",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2aeba4f0cc56471e8643deae1ae43dc2.jpg?m=638312688066900000"
+    },
+    {
+      "title": "Physical Education at Home",
+      "url": "https://quantico.usmc-mccs.org/news/physical-education-at-home",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/4a21308a5fa94d5c91f8bb6c93a6c02f.jpg?m=638312899868230000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "HITT- High Intensity Tactical Training Center",
+      "address": "Bldg 3117, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Main Line",
+          "number": "703-784-5799"
+        },
+        {
+          "label": "HITT Coordinator Office",
+          "number": "703-432-0592"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Classes",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "11:30am - 12:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11:30am - 12:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11:30am - 12:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "11:30am - 12:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "11:30am - 12:30pm"
+            }
+          ]
+        },
+        {
+          "label": "Open Gym",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5:00am - 8:00am, 11:00am - 1:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5:00am - 8:00am, 11:00am - 1:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5:00am - 8:00am, 11:00am - 1:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5:00am - 8:00am, 11:00am - 1:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5:00am - 8:00am, 11:00am - 1:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Health History questionnaire.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=0c8ae0c5-2bf4-45b7-88a8-157a4df8f13d&v=1"
+    },
+    {
+      "text": "Groupf-Fitness-schedule-2025.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=54f9d641-dce9-4de0-b38c-87879031db22&v=1"
+    },
+    {
+      "text": "OPSS Drug Testing and DS Handout.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=1f34f9e3-1e92-43fe-8ec2-d30e7fa09532&v=1"
+    },
+    {
+      "text": "OPSS-Postcard.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=d9b355ea-f333-4caf-b8ce-684403ef0b55&v=1"
+    },
+    {
+      "text": "OPSS Nutrition.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=4589aabd-fccd-48fd-a9a9-458e6fc8cc9e&v=1"
+    },
+    {
+      "text": "HITT Rig Now Open Flyer.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=287d7f73-8106-4553-ba61-369b97dc9b89&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/high-intensity-tactical-training",
+  "fetchedAt": "2026-10-26"
+}

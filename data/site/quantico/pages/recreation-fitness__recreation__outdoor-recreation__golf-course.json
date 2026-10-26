@@ -1,0 +1,243 @@
+{
+  "title": "Golf Course",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "/recreation-fitness/recreation"
+    },
+    {
+      "label": "Outdoor Recreation",
+      "url": "/recreation-fitness/recreation/outdoor-recreation"
+    },
+    {
+      "label": "Golf Course",
+      "url": "/recreation-fitness/recreation/outdoor-recreation/golf-course"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Medal of Honor Golf Course proudly offers year-round golf on our 18-hole championship golf course. Customers can also enjoy our Swing Lab training facility, lighted driving range, practice putting green, and Pro-Shop. The beautiful grounds and course clubhouse provide the perfect venue for daily golf as well as outings and private functions. The course is open year-round to Active Duty and Retired Military, DoD civilian employees, family members, FBI Academy, National Guard and Reserve personnel, as well as the public.\n\n[Book A Tee Time](https://www.chronogolf.com/club/medal-of-honor-golf-course)"
+    },
+    {
+      "heading": "Course History",
+      "level": 3,
+      "markdown": "The Medal of Honor Golf Course, originally called The Officers' Club Golf Course, began in 1930 as a six-hole layout, most likely built by Marine Corps construction personnel. The course grew to 9-holes, with two tee boxes on each hole, around 1934. The course expanded again to 18-holes in the mid-1940s and became known as the Quantico Golf Course. This growth was led by Ernest Stanley, who was the Golf Course Superintendent from 1933 to 1976. In 1980, the Quantico Golf Course was renamed the Medal of Honor Golf Course in honor of Marines who have earned the nation's highest medal for valor."
+    },
+    {
+      "heading": "Swing Lab",
+      "level": 3,
+      "markdown": "Take your play to the next level. The Medal of Honor Swing Lab is a state-of-the-art training facility where we use the same equipment that top tier professional athletes in golf use to advance their game. The use of ultra slow-motion video analysis software, thermographic weight imaging, biometric feedback from K-Vest, and the top-of-the-line golf clubs/equipment will allow the PGA Professional staff at Medal of Honor Golf Course to evaluate, address, correct your swing, dial in your equipment, and have you shooting lower than ever scores!\n\n* **Rental Policy** – Tee up a round of golf with friends or dial in your game with a practice session. Our TruGolf simulator offers a realistic high-definition virtual golfing experience second to none. Our simulator rental times are by the hour and up to four golfers. Please arrive 15 minutes prior to your tee time.\n* **Club Fitting** – PGA Professional Master Certified Fitters measure and benchmark your current clubs, then provide new combinations of club heads and shafts to hit, dialing in the perfect equipment for your swing using metrics provided by our state-of-the-art E6 launch monitor data.\n* **Swing & Video Analysis** – Swing Catalyst Software & thermographic weight tracking pressure mat technology is used for slow motion viewing, and frame by frame analysis of your golf swing. In-depth swing analysis is extremely detailed, highlighting the key areas for improvement. The analysis is immediately followed by an action plan for improvement that matches the player's short and long-term goals.\n* **High Tech Swing Evaluation** – K Coach Certified PGA Professionals use the K-VEST wearable motion biofeedback learning system to augment and enhance verbal instruction to accelerate the pace of improvement.\n* **Golf Lessons** – Improve your golf game with simulator golf lessons, choose from High Tech, Adult, Junior, or Winter Maintenance.\n* **Golf Improvement Package** – If you are ready to take your game to the next level, our golf improvement package is just the thing, this package includes a High Tech lesson, two indoor lessons and five hours of simulator practice time. Our PGA Professional staff will assess, improve, and design a practice plan for your swing\n* **Six Month Simulator Subscription** – Take advantage of our flexible six-month simulator subscription plan. Our PGA Professionals will discuss your goals and assess your current skill set and design a six-month lesson plan that can improve your game and lower your scores. The subscription includes one Club fitting, two indoor lessons per month, and six hours of simulator practice time per month."
+    },
+    {
+      "heading": "Tee Times",
+      "level": 3,
+      "markdown": "The Medal of Honor Golf Course offers an online tee time system based on a priority system.\n\n* Initial registration will default first time users to the General Public category. Present your identification to the Pro Shop staff upon arrival so you can be repositioned to the correct priority category. The priority system protects our Active-duty military personnel's right to first access. The following priority use guidelines are in effect:\n* Active-duty military can book tee times up to ten days in advance.\n* Members can book tee times up to nine days in advance.\n* Retired Military/Veterans/DoD can book tee times up to eight days in advance.\n* General Public can book tee-times up to seven days in advance.\n* [Book A Tee Time Online](https://www.chronogolf.com/club/medal-of-honor-golf-course)\n\n**Proper attire required: Collared shirts & Bermuda shorts/skirts.**\n\n**MCBO 1700.2A**\n\nYouth Golf\n\na. Children under seven (7) years of age are not permitted on the Golf Course, unless playing in our Youth Golf Program, i.e., First Tee Program, with signed parental consent."
+    },
+    {
+      "heading": "Currently, there are no scheduled activities planned for the near future. See all upcoming events.",
+      "level": 0,
+      "markdown": "[upcoming events](/calendar-of-events)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Swing Lab",
+      "url": "/modules/media/?do=inline&id=91527d89-d303-4974-a950-2fac4f02a120&v=1",
+      "text": "Take your play to the next level. The Medal of Honor Swing Lab is a sta...",
+      "image": "https://www.usmc-mccs.org/modules/media/t/da17a43759344b71a29673741d448f9f_v1.jpg?m=638298220285970000"
+    },
+    {
+      "title": "How to Book Tee Times",
+      "url": "https://support.chronogolf.com/hc/en-ca/sections/9338037475469-Booking-Management",
+      "text": "View our \"How to\" FAQ's if you need assistance on booking your tee time.",
+      "image": "https://www.usmc-mccs.org/modules/media/t/1f6a181d183e4e35bba540e7b188feba_v1.jpg?m=638298220286000000"
+    },
+    {
+      "title": "How to Keep Your Kids Away From the \"Rough\" Stuff",
+      "url": "/news/how-to-keep-your-kids-away-from-the-rough-stuff",
+      "text": "",
+      "image": "https://www.usmc-mccs.org/modules/media/t/32ed9fe9b5c8463e9caae8b80181328d.jpg?m=638312725446330000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Medal of Honor Golf Course",
+      "address": "3313 Fuller Heights Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Main Line",
+          "number": "703-784-2424"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation October-November",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7:30am - 4:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Hours of Operation December-February",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:00am - 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10:00am - 4:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Hours of Operation March - September",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 6:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 6:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 6:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 6:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 6:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6:30am - 6:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6:30am - 6:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Book A Tee Time",
+      "url": "https://www.chronogolf.com/club/medal-of-honor-golf-course"
+    },
+    {
+      "text": "Book A Tee Time Online",
+      "url": "https://www.chronogolf.com/club/medal-of-honor-golf-course"
+    },
+    {
+      "text": "upcoming events",
+      "url": "/calendar-of-events"
+    },
+    {
+      "text": "Book Your Tee Time",
+      "url": "https://www.chronogolf.com/club/medal-of-honor-golf-course"
+    },
+    {
+      "text": "Join Waitlist",
+      "url": "https://medalofhonorgolfcourse.noteefy.app/"
+    },
+    {
+      "text": "Driving Range Rules",
+      "url": "/modules/media/?do=inline&id=fad178c0-e2a5-4df5-93ea-18177d8b95b6&v=1"
+    },
+    {
+      "text": "Rates Brochure",
+      "url": "/modules/media/?do=inline&id=c043f06c-ff51-4995-bf82-84fef74592e0&v=1"
+    },
+    {
+      "text": "Scorecard",
+      "url": "/modules/media/?do=inline&id=7fdbc104-9aed-4289-b131-31d7d7be6629&v=1"
+    },
+    {
+      "text": "Yardage Book",
+      "url": "/modules/media/?do=inline&id=e7700a76-6dce-42e3-8617-2625078f5e71&v=1"
+    },
+    {
+      "text": "2024 Fall Junior Academy",
+      "url": "/modules/media/?do=inline&id=084f3fc7-b0c1-4125-ad3f-cf385d1b3a46&v=1"
+    },
+    {
+      "text": "2024 Fall Ladies Academy",
+      "url": "/modules/media/?do=inline&id=f0979984-661b-4dcf-b023-45b0cfe02cba&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.usmc-mccs.org/modules/media/t/da17a43759344b71a29673741d448f9f_v1.jpg?m=638298220285970000",
+      "alt": ""
+    },
+    {
+      "src": "https://www.usmc-mccs.org/modules/media/t/1f6a181d183e4e35bba540e7b188feba_v1.jpg?m=638298220286000000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course",
+  "fetchedAt": "2026-10-26"
+}

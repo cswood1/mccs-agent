@@ -1,0 +1,163 @@
+{
+  "title": "Quantico",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![About Page Image](/modules/media/t/c00b5941adf24f6dbf44ddf8c4216a3a_v1.jpg?m=638298263549630000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "8th & I",
+      "url": "https://8thandi.usmc-mccs.org/about/explore",
+      "text": "Washington, D.C.",
+      "image": ""
+    },
+    {
+      "title": "Albany",
+      "url": "https://albany.usmc-mccs.org/about/explore",
+      "text": "Georgia",
+      "image": ""
+    },
+    {
+      "title": "Barstow",
+      "url": "https://barstow.usmc-mccs.org/about/explore",
+      "text": "California",
+      "image": ""
+    },
+    {
+      "title": "Bridgeport",
+      "url": "https://bridgeport.usmc-mccs.org/about/explore",
+      "text": "Bridgeport, California",
+      "image": ""
+    },
+    {
+      "title": "Camp Fuji",
+      "url": "https://campfuji.usmc-mccs.org/about/explore",
+      "text": "Japan",
+      "image": ""
+    },
+    {
+      "title": "Camp Lejeune",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/explore",
+      "text": "North Carolina",
+      "image": ""
+    },
+    {
+      "title": "Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/about/explore",
+      "text": "California",
+      "image": ""
+    },
+    {
+      "title": "Cherry Point",
+      "url": "https://cherrypoint.usmc-mccs.org/about/explore",
+      "text": "North Carolina",
+      "image": ""
+    },
+    {
+      "title": "Hampton Roads",
+      "url": "https://hamptonroads.usmc-mccs.org/about/explore",
+      "text": "Virginia",
+      "image": ""
+    },
+    {
+      "title": "Hawaii",
+      "url": "https://hawaii.usmc-mccs.org/about/explore",
+      "text": "Kaneohe Bay, Hawaii",
+      "image": ""
+    },
+    {
+      "title": "Henderson Hall",
+      "url": "https://hendersonhall.usmc-mccs.org/about/explore",
+      "text": "Arlington, Virginia",
+      "image": ""
+    },
+    {
+      "title": "Iwakuni",
+      "url": "https://iwakuni.usmc-mccs.org/about/explore",
+      "text": "Japan",
+      "image": ""
+    },
+    {
+      "title": "Miramar",
+      "url": "https://miramar.usmc-mccs.org/about/explore",
+      "text": "California",
+      "image": ""
+    },
+    {
+      "title": "Mujuk",
+      "url": "https://mujuk.usmc-mccs.org/about/explore",
+      "text": "South Korea",
+      "image": ""
+    },
+    {
+      "title": "New River",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/explore",
+      "text": "North Carolina",
+      "image": ""
+    },
+    {
+      "title": "Okinawa",
+      "url": "https://www.okinawa.usmc-mccs.org/about/explore",
+      "text": "Japan",
+      "image": ""
+    },
+    {
+      "title": "Quantico",
+      "url": "https://quantico.usmc-mccs.org/about/explore",
+      "text": "Virginia",
+      "image": ""
+    },
+    {
+      "title": "San Diego",
+      "url": "http://www.mccsmcrd.com/about/explore",
+      "text": "California",
+      "image": ""
+    },
+    {
+      "title": "South Carolina",
+      "url": "https://southcarolina.usmc-mccs.org/about/explore",
+      "text": "Beaufort, South Carolina",
+      "image": ""
+    },
+    {
+      "title": "29 Palms",
+      "url": "https://29palms.usmc-mccs.org/about/explore",
+      "text": "California",
+      "image": ""
+    },
+    {
+      "title": "Yuma",
+      "url": "https://yuma.usmc-mccs.org/about/explore",
+      "text": "Arizona",
+      "image": ""
+    },
+    {
+      "title": "Eastern Recruiting Region",
+      "url": "https://err.usmc-mccs.org/about/explore",
+      "text": "Parris Island",
+      "image": ""
+    },
+    {
+      "title": "Western Recruiting Region",
+      "url": "https://wrr.usmc-mccs.org/about/explore",
+      "text": "San Diego",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c00b5941adf24f6dbf44ddf8c4216a3a_v1.jpg?m=638298263549630000",
+      "alt": "About Page Image"
+    }
+  ],
+  "notCaptured": "Page content appeared to load mostly a grid of links to other MCCS installations' /about/explore pages; no further descriptive body text about Quantico itself was present in the fetched main content.",
+  "url": "https://quantico.usmc-mccs.org/about/explore",
+  "fetchedAt": "2026-10-26"
+}

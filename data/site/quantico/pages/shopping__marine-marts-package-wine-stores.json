@@ -1,0 +1,394 @@
+{
+  "title": "Marine Marts, Package & Wine Stores",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "FBI Exchange",
+      "address": "Building 9, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-632-3011"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10:00am - 7:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:00am - 7:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10:00am - 7:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:00am - 7:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9:00am - 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Hot Patch Marine Mart",
+      "address": "27406 Hot Patch Rd, MCB 1, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-0309"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:00am - 7:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:00am - 7:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:00am - 7:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:00am - 7:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:00am - 7:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:00am - 6:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10:00am - 6:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "10:00am - 6:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Main Side Marine Mart",
+      "address": "3048 Bordelon St, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-784-2712"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:00am - 10:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:00am - 10:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:00am - 10:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:00am - 10:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:00am - 10:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:00am - 10:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8:00am - 10:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "8:00am - 10:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "OCS Exchange",
+      "address": "Building 2189, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-6225"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 3:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 3:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 3:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 3:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 3:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Package Store",
+      "address": "Building 3500, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-8159"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:00am - 9:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9:00am - 7:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "9:00am - 7:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "TBS Marine Mart",
+      "address": "Building 24005, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-6462"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:00am - 9:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:00am - 7:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9:00am - 7:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "WTBN Exchange",
+      "address": "27212-T Garand Rd, Stafford, Virginia 22556",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-6949"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:00am - 6:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:00am - 2:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10:00am - 2:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to FBI Exchange",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.531223665297176,-77.44601317075984"
+    },
+    {
+      "text": "Directions to Hot Patch Marine Mart",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52763988205198,-77.4123703288362"
+    },
+    {
+      "text": "Directions to Main Side Marine Mart",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51861659116997,-77.29673838533286"
+    },
+    {
+      "text": "Directions to OCS Exchange",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.49657459861537,-77.31388490339361"
+    },
+    {
+      "text": "Directions to Package Store",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51915445098338,-77.34650056512785"
+    },
+    {
+      "text": "Directions to TBS Marine Mart",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.49837702175768,-77.4402756948065"
+    },
+    {
+      "text": "Directions to WTBN Exchange",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.53034262446441,-77.43539710203198"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/shopping/marine-marts-package-wine-stores",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,55 @@
+{
+  "url": "https://quantico.usmc-mccs.org/activity/666204be-045c-4a35-aae3-ef1c9aff2fde",
+  "title": "FAP Within My Reach",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "One day workshop for individuals to help them enrich their lives and their relationships with the people that matter most. Attendees will learn how to achieve their personal and relationship goals by using decision-making tools.\n\nLocation: Family Advocacy Program, Little Hall, Lower Level\n\n**2026 Dates**\n- October 2\n- December 4\n\n**2027 Dates**\n- March 5\n- June 4\n- September 10\n\nTo register, call 703.784.2570"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Family Advocacy Program",
+      "address": "2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.2570"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoFAP@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Date and Time",
+          "rows": [
+            {
+              "days": "Friday, December 4, 2026",
+              "time": "9:00 AM - 4:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Family Advocacy Program, 2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52209863693904,-77.29528782533997"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/32746ca019224351ba65c91d85515390_v1.jpg?m=638298230795730000",
+      "alt": "FAP Within My Reach"
+    }
+  ],
+  "notCaptured": "",
+  "fetchedAt": "2026-10-26"
+}

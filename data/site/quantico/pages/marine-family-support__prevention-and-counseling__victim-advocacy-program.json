@@ -1,0 +1,135 @@
+{
+  "title": "Victim Advocacy Program",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Prevention and Counseling",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling"
+    },
+    {
+      "label": "Victim Advocacy Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/victim-advocacy-program"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Victim Advocacy",
+      "level": 3,
+      "markdown": "Victim Advocates provide information, guidance, and support to victims. They are specially trained to respond to incidents of domestic violence 24 hours a day, 7 days a week. Victim Advocates provide emotional support; advise victims of their rights, explore resources and service in both civilian and military communities, and accompany and support victims through medical and legal proceedings.\n\nAdult victims of domestic violence have two reporting options: Unrestricted and Restricted. Unrestricted Reporting allows victims to pursue an official investigation of an incident. Restricted Reporting allows adult victims to receive help without requiring notifications to law enforcement or command. There are some limits to restricted reporting which can be explained by the victim advocate."
+    },
+    {
+      "heading": "Transitional Compensation",
+      "level": 3,
+      "markdown": "If you or someone in your family has been abused, Transitional Compensation can help you start a new life. This program provides 12-36 months of financial compensation and military ID card benefits and privileges to families of service members separated for domestic violence. To find out more about this program and to see if you qualify for the Victim Advocate Program, contact Victim Advocacy.\n\nMain Side Office: 2034 Barnett Ave, Quantico VA 22134. 703-784-2570\n\nCamp Barrett/TBS Office: 24009 Montezuma Ave, Quantico VA 22134. 703-432-6442\nMonday-Friday 0730-1630 and Tuesday evenings until 1900.\n\nVA Helpline Number: 703-350-1688\n\nFor more information on the reporting options and support services available to military service members and spouses, please contact a Victim Advocate.\n\nIf you have an emergency, please call 911 immediately.\n\nFor after hours reporting of suspected child abuse or neglect, please contact the Virginia Child Abuse Hotline at 1-800-552-7096."
+    },
+    {
+      "heading": "Self Assesment for Relationship Violence",
+      "level": 3,
+      "markdown": "Do any of the following describe your current or past relationships?\n\n1. My partner is extremely jealous or controlling. S/he accuses me of cheating or keeps me from\n2. work/school/church/friends. I feel cut off from friends or family. S/he constantly calls/texts to check up on me.\n3. Sometimes I feel afraid or scared. My partner intimidates me by breaking things or threatens to hurt me or someone I care about.\n4. My partner tries to make me feel bad about myself. S/he puts me down, calls me names, or criticizes me.\n5. My partner physically fights me - hitting, pushing, or shoving.\n6. My partner has strangled me.\n7. My partner has forced me to have sex when I haven't wanted to.\n8. I have done these things to my partner."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Family Advocacy Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Family Advocacy Program",
+      "address": "2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2570"
+        },
+        {
+          "label": "24 Hour Victim Advocacy Helpline",
+          "number": "703-350-1688"
+        },
+        {
+          "label": "Child Abuse/Neglect Hotline (Out of State)",
+          "number": "804-786-8536"
+        },
+        {
+          "label": "Child Abuse/Neglect Hotline (Virginia)",
+          "number": "800-552-7096"
+        },
+        {
+          "label": "National Domestic Violence Hotline",
+          "number": "800-799-7233"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoFAP@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Main Side Office: 2034 Barnett Ave, Quantico VA 22134. 703-784-2570",
+        "Camp Barrett/TBS Office: 24009 Montezuma Ave, Quantico VA 22134. 703-432-6442, Monday-Friday 0730-1630 and Tuesday evenings until 1900"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Family Advocacy Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program"
+    },
+    {
+      "text": "US Marine Corps",
+      "url": "https://www.marines.mil"
+    },
+    {
+      "text": "Marine Corps Recruiting",
+      "url": "https://www.marines.com"
+    },
+    {
+      "text": "Military One Source",
+      "url": "https://www.militaryonesource.mil"
+    },
+    {
+      "text": "Sexual Assault Prevention and Response (SAPR)",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response"
+    },
+    {
+      "text": "Military/Veterans Crisis Line DIAL 988",
+      "url": "https://www.veteranscrisisline.net/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/victim-advocacy-program",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Military Family Life",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Military Family Life",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Exceptional Family Member Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
+      "text": "The Exceptional Family Member Program (EFMP) supports the continuum of care for all eligible spon...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/b88595303a074fe0a2b3935f179e6c83_v1.jpg?m=638298219806670000"
+    },
+    {
+      "title": "Family Advocacy Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
+      "text": "The mission of the Quantico Family Advocacy Program (FAP) is to promote healthy military family d...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d88fed02bdd84a17b02ae16cba3e47af_v1.jpg?m=638298226951800000"
+    },
+    {
+      "title": "Marine Corps Family Team Building",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building",
+      "text": "Family Readiness Services provides ways for Marines, Sailors, and their Families to build valuabl...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/40eb418b6b484837acaa0ba1f6528ec6_v1.jpg?m=639261641996770000"
+    },
+    {
+      "title": "Family Member Employment Assistance Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
+      "text": "The Family Member Employment Assistance Program provides employment related referral services, ca...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/47f6c7bea2eb47d4878fe41d238119da_v1.jpg?m=638298220451770000"
+    },
+    {
+      "title": "Voting Assistance",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/voting-assistance",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/dde9f30eb4944f63a37be0731104a4b2_v1.jpg?m=638298220449400000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Exceptional Family Member Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program"
+    },
+    {
+      "text": "Family Advocacy Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program"
+    },
+    {
+      "text": "Marine Corps Family Team Building",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building"
+    },
+    {
+      "text": "Family Member Employment Assistance Program",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program"
+    },
+    {
+      "text": "Voting Assistance",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life/voting-assistance"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Teaser card image URLs are included in the cards array. No additional dynamic content detected.",
+  "url": "https://quantico.usmc-mccs.org/marine-family-support/military-family-life",
+  "fetchedAt": "2026-10-26"
+}

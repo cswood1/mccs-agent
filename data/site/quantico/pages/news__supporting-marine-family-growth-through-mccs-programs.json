@@ -1,0 +1,100 @@
+{
+  "title": "Supporting Marine Family Growth Through MCCS Programs",
+  "breadcrumb": [],
+  "intro": "Marine Corps life brings both exciting opportunities and unique challenges for families. That's why Marine Corps Community Services (MCCS) offers programs designed to promote family growth, resilience, and well-being—all essential elements of Marine Corps Total Fitness.",
+  "sections": [
+    {
+      "heading": "School Liaison Program (SLP)",
+      "level": 2,
+      "markdown": "The School Liaison Program connects families with local schools, command leadership, and MCCS resources. SLP helps parents navigate school transitions, education systems, and community support—especially during PCS moves."
+    },
+    {
+      "heading": "Child & Youth Programs (CYP)",
+      "level": 2,
+      "markdown": "CYP supports child development through high-quality child care, recreational activities, and educational support for children and teens. These programs build confidence, social skills, and emotional resilience."
+    },
+    {
+      "heading": "Exceptional Family Member Program (EFMP)",
+      "level": 2,
+      "markdown": "EFMP provides critical support to families with special medical or educational needs, helping ensure continuity of care and access to necessary services—key for family stability and readiness."
+    },
+    {
+      "heading": "Marine Corps Family Team Building (MCFTB)",
+      "level": 2,
+      "markdown": "MCFTB offers workshops, trainings, and events that strengthen family readiness, build communication skills, and promote adaptability during the military journey."
+    },
+    {
+      "heading": "DEERS (Defense Enrollment Eligibility Reporting System) Enrollment",
+      "level": 2,
+      "markdown": "DEERS verifies dependent eligibility for healthcare and other military benefits—ensuring access to resources that support mental and emotional well-being."
+    },
+    {
+      "heading": "",
+      "level": 2,
+      "markdown": "Together, these programs support all four pillars of Marine Corps Total Fitness—social, spiritual, mental, and physical—empowering Marine families to thrive at every stage of military life."
+    },
+    {
+      "heading": "Ready to support your family's growth?",
+      "level": 3,
+      "markdown": "Connect with your local [Family Care](https://www.usmc-mccs.org/cyp) team to explore programs tailored for Marine families."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Keep Your Career Moving Through Every PCS",
+      "url": "https://quantico.usmc-mccs.org/news/keep-your-career-moving-through-every-pcs",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Recognizing Military Spouse Resilience and Contributions",
+      "url": "https://quantico.usmc-mccs.org/news/recognizing-military-spouse-resilience-and-contributions",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Community-Based Child Care Options",
+      "url": "https://quantico.usmc-mccs.org/news/community-based-child-care-options",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Overseas Remote Suitability Risk Assessment For Service Members",
+      "url": "https://quantico.usmc-mccs.org/news/overseas-remote-suitability-risk-assessment-for-service-members",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "School Liaison Program (SLP)",
+      "url": "https://www.usmc-mccs.org/sl"
+    },
+    {
+      "text": "Child & Youth Programs (CYP)",
+      "url": "https://www.usmc-mccs.org/cyp"
+    },
+    {
+      "text": "Exceptional Family Member Program (EFMP)",
+      "url": "https://www.usmc-mccs.org/efmp"
+    },
+    {
+      "text": "Marine Corps Family Team Building (MCFTB)",
+      "url": "https://www.usmc-mccs.org/mcftb"
+    },
+    {
+      "text": "Family Care",
+      "url": "https://www.usmc-mccs.org/cyp"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/b104b3eca8c94551bcc2ef223156b6cb.jpg?m=638906706424900000",
+      "alt": "Supporting Marine Family Growth Through MCCS Programs"
+    }
+  ],
+  "notCaptured": "Audio player (0:00 / 0:00) with play controls visible but not detailed; feedback survey form structure present but not captured.",
+  "url": "https://quantico.usmc-mccs.org/news/supporting-marine-family-growth-through-mccs-programs",
+  "fetchedAt": "2026-10-26"
+}

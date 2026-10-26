@@ -1,0 +1,86 @@
+{
+  "title": "Inns of the Corps Quantico",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://quantico.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Inns of the Corps Quantico",
+      "url": "https://quantico.usmc-mccs.org/lodging/inns-of-the-corps"
+    }
+  ],
+  "intro": "Inns of the Corps Quantico is one of the greatest assets to the Base! The facility has 74 standard rooms, 4 king rooms, 42 efficiencies and 24 suites, as well as meeting space to accommodate up to 25 people. The hotel requires a valid credit or debit card at check-in. We also have a limited number of pet friendly rooms at the Inns of the Corps.",
+  "sections": [
+    {
+      "heading": "Location",
+      "level": 3,
+      "markdown": "Inns of the Corps Quantico is located on the main side of Quantico Marine Corps Base, next to the beautiful, new state-of-the-art club, The Clubs At Quantico. The base is located about one hour from downtown Washington, DC. The base and the nearby town of Quantico, VA are situated adjacent to the scenic Potomac River. Historic Fredericksburg is just 25 minutes south on interstate 95."
+    },
+    {
+      "heading": "Eligibility",
+      "level": 3,
+      "markdown": "Military: Active Duty, National Guard, Reserves and Retirees on Leave or Official Duty\n\nDoD Civilians\n\nFBI/DEA\n\nOfficer Candidates School Students: Must have valid picture ID and receiving orders\n\nValid Credentials REQUIRED at check-in. Guests will not be allowed to check-in if credentials are not presented."
+    },
+    {
+      "heading": "Reservations",
+      "level": 3,
+      "markdown": "* PCS families can make reservations \\*one year\\* in advance\n* TAD/TDY can book 90 days in advance\n* Leisure Reservations can only be made 30 days in advance\n* For group reservations, please email [LodgingReservations.Quantico@usmc-mccs.org](mailto:LodgingReservations.Quantico@usmc-mccs.org)\n* Due to high occupancy, we recommend making reservations as early as possible, per the restrictions above."
+    }
+  ],
+  "cards": [
+    {
+      "title": "New Room Reservation Options Available for Lodging",
+      "url": "https://quantico.usmc-mccs.org/news/new-room-reservation-options-available-for-lodging",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/37b05e555c604e3c9947d4845a77432c.png?m=638312668199070000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Inns of the Corps Quantico",
+      "address": "3018 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-630-4444"
+        },
+        {
+          "label": "Toll Free",
+          "number": "800-965-9511"
+        },
+        {
+          "label": "24/7 Reservation Center",
+          "number": "1-888-409-7829"
+        }
+      ],
+      "emails": [
+        "LodgingReservations.Quantico@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "3018 Russell Rd, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51017888953322,-77.31240585767145"
+    },
+    {
+      "text": "LodgingReservations.Quantico@usmc-mccs.org",
+      "url": "mailto:LodgingReservations.Quantico@usmc-mccs.org"
+    },
+    {
+      "text": "Book Now Inns of the Corps Quantico",
+      "url": "https://lodgingreservations.usmc-mccs.org/Search/Index/14937/90/"
+    },
+    {
+      "text": "View all Locations",
+      "url": "http://innsofthecorps.com/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/lodging/inns-of-the-corps",
+  "fetchedAt": "2026-10-26"
+}

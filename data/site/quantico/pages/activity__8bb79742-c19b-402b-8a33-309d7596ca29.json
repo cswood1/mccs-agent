@@ -1,0 +1,57 @@
+{
+  "title": "MSRC Thursday Night Football Watch Party",
+  "breadcrumb": [],
+  "intro": "Active Duty Marines! Thursday Night Football at the Main Side Rec Center. Every Sunday. Big screen, good company, zero stress. Be there.",
+  "sections": [
+    {
+      "heading": "Thursday Night Football Watch Party!",
+      "level": 3,
+      "markdown": "Active Duty Marines! Thursday Night Football at the Main Side Rec Center. Every Sunday. Big screen, good company, zero stress. Be there.\n\nBRING YOUR OWN SNACKS AND DRINKS!\n\nIf you have any questions, please call MSRC at 703.432.0363\n\nNeed transportation to/from the Rec Center? We've got wheels! Call 703.432.0363 for a ride.\n\nThe Main Side Recreation Center is open to all active duty service members. Opens daily at 10:00 AM.\n\n[Sign up on Eventbrite](https://www.eventbrite.com/o/40555282583)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "MSRC",
+      "address": "Main Side Rec Center, 206 Nicholas Rd, Quantico, Virginia 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.0363"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Event",
+          "rows": [
+            {
+              "days": "Thursday, October 29, 2026 Every Thursday",
+              "time": "10:00 AM - 8:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Main Side Rec Center, 206 Nicholas Rd, Quantico, Virginia 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522560877074255,-77.2986739"
+    },
+    {
+      "text": "Sign up on Eventbrite",
+      "url": "https://www.eventbrite.com/o/40555282583"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/9ad0e4acf25d4785b6dd6de8368accfa.jpg?m=638929497194930000",
+      "alt": "MSRC Thursday Night Football Watch Party"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/8bb79742-c19b-402b-8a33-309d7596ca29",
+  "fetchedAt": "2026-10-26"
+}

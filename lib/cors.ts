@@ -4,7 +4,7 @@
 export const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers": "Content-Type, X-Demo-Access",
   // Lets a public page (e.g. via the bookmarklet) call a localhost dev server in Chrome.
   "Access-Control-Allow-Private-Network": "true",
 };

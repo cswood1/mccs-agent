@@ -1,0 +1,140 @@
+{
+  "title": "Nutrition & Supplements Education",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Health & Wellness Education",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Monthly Nutrition Class",
+      "level": 3,
+      "markdown": "This free, 1-hour course is offered the 1st Wednesday of every month at 11:30 am - 12:30 pm at the link below via Adobe Connect:\n\n* [Join](https://meeting.marinenet.usmc.mil/mcbqnutritionclass/) the meeting!"
+    },
+    {
+      "heading": "Cooking Classes",
+      "level": 3,
+      "markdown": "Participants learn how to cook delicious and nutritious meals and then enjoy the healthful foods they cooked. Each class has a different theme based on the season or chosen health topic. Cooking classes are offered quarterly. To sign up for a cooking class, please contact the Registered Dietitian at 703.784.2869 or send a sign-up request to [mccsquanticobpaceventregistration@usmc-mccs.org](mailto:mccsquanticobpaceventregistration@usmc-mccs.org)."
+    },
+    {
+      "heading": "Individual Nutrition Counseling",
+      "level": 3,
+      "markdown": "The Semper Fit Dietitian helps individuals reach their health goals. Each client receives a diet assessment plus expert advice and tips on how to make successful, lifestyle changes. **Counseling sessions are by appointment only.**\n\n* Active Duty: Free\n* Dependents. Reservists, and Retirees: $25 (Dependents must be 12+ years of age).\n* DoD Civilians: $40\n* Contractors: $50"
+    },
+    {
+      "heading": "Resting Metabolic Rate Testing",
+      "level": 3,
+      "markdown": "Managing your weight is dependent on being in control of how many calories you should eat every day. Your resting metabolic rate is the number of calories your body burns each day with little or no activity. An accurate measurement will put you in control of your weight. **RMR testing is by appointment only.**\n\n* Active Duty: $15 per test **\\*Free for Marines on BCP\\***\n* Retirees, Reservists, DoD Civilians, and Dependents: $25 per test\n* Contractors: $35 per test"
+    },
+    {
+      "heading": "Nutrition Briefs",
+      "level": 3,
+      "markdown": "We will come to you! Nutrition and health briefs are available to all units and civilian offices aboard Quantico. Brief topics can include but are not limited to: Nutrition Basics, Weight Management (BCP), Sports Nutrition and Injuries, Supplement Awareness, and Healthy Eating on-the-go, Dietary Supplements, and more."
+    },
+    {
+      "heading": "Grocery Store Tour",
+      "level": 3,
+      "markdown": "Tours are offered by appointment at the Quantico Commissary.\n\nGo through the aisles with the Semper Fit Dietitian and discuss healthy food options in the grocery store. Discuss how to compile a healthy grocery list and learn to read food labels correctly.\n\nAvailable to all patrons and units in groups of three (3) or more."
+    },
+    {
+      "heading": "Event Support",
+      "level": 3,
+      "markdown": "Do you want to include nutrition education at another event? We can provide activities and displays appropriate for your audience."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Nutrition + Exercise: Powering Tactical Performance",
+      "url": "https://quantico.usmc-mccs.org/news/nutrition-exercise-powering-tactical-performance",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/3c6b9e1bbeb1449d855e4a73e5837803.jpg?m=639046406470530000"
+    },
+    {
+      "title": "Nutrition Affects Performance and Long-Term Purpose",
+      "url": "https://quantico.usmc-mccs.org/news/nutrition-affects-performance-and-long-term-purpose",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/ca8a38fc3e4e4381af606a93641b5566.jpg?m=639002080195370000"
+    },
+    {
+      "title": "Nutrition & Recovery: Fueling Your Return to Duty",
+      "url": "https://quantico.usmc-mccs.org/news/nutrition-recovery-fueling-your-return-to-duty",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/0375304db57e4d9ba58081b8d528e419.jpg?m=638906681070830000"
+    },
+    {
+      "title": "Dangers of Limited Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/dangers-of-limited-sleep",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/6049d7a0007f4727a57fe7897af67195.png?m=638312998796770000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Health Promotion",
+      "address": "Building 2073 Barnett Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703.784.2869"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Join",
+      "url": "https://meeting.marinenet.usmc.mil/mcbqnutritionclass/"
+    },
+    {
+      "text": "mccsquanticobpaceventregistration@usmc-mccs.org",
+      "url": "mailto:mccsquanticobpaceventregistration@usmc-mccs.org"
+    },
+    {
+      "text": "Building 2073 Barnett Ave  Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51689247540214,-77.30292135788395"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education/nutrition-supplements-education",
+  "fetchedAt": "2026-10-26"
+}

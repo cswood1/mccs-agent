@@ -1,0 +1,164 @@
+{
+  "title": "Community Counseling",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Prevention and Counseling",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling"
+    },
+    {
+      "label": "Community Counseling",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling"
+    }
+  ],
+  "intro": "We provide non-medical counseling services and help service members and their families develop skills to manage life's stressors and challenges.​",
+  "sections": [
+    {
+      "heading": "Eligibility & How To Get Started",
+      "level": 2,
+      "markdown": "#### Getting Started\n\nOffering support to service members and their families within the military community.\n\n#### Getting Started\n\nEligibility for participation in our Community Counseling Program extends to individuals across various segments of the military community. This includes:\n\n*   Active-Duty Service Members - All Branches\n*   Civilian Expeditionary Forces\n*   Spouses\n*   Families\n*   Children\n*   Recruits\n\n**How to get started with Community Counseling:**\n\n1.  **Schedule an Appointment:** Contact the Community Counseling Program office and speak to a professional about scheduling an appointment with a mental health clinician.\n2.  **Assessment:** A Community Counseling Program clinician will conduct an intake assessment which typically involves a structured evaluation designed to identify an individual's needs, concerns, and goals regarding their mental health and well-being.\n3.  **Counseling Services:** Following your initial assessment, you and the clinician will identify appropriate services.\n4.  **Case Management Services:** If individuals or families are working with multiple providers and managing multiple systems, our staff and clinicians are available to assist you.\n5.  **Referral Services:** Our staff will help you to identify other services to meet your specific needs for those beyond what is offered at the Community Counseling Program.\n\n#### Counseling, Services, and Support\n\nThe Community Counseling Program utilizes a holistic approach to support individuals, children, couples, and families. Our clinicians provide solutions designed to meet your specific needs in the following areas:\n\n*   Relationship Concerns\n*   Work Stressors\n*   Life Stressors\n*   EAS/PCS and Challenges Related to Transition\n*   Grief and Loss\n*   Sadness\n*   Worry\n*   Deployment Cycle Stressors and Reintegration\n*   Adjustment\n*   Crisis Intervention\n*   Sleep Hygiene\n*   Parent-Child Communication\n\nEstablish a connection with professionals at Community Counseling and discover a successful journey toward overcoming life's challenges."
+    },
+    {
+      "heading": "Programs, Services & Support",
+      "level": 2,
+      "markdown": "#### Semper Support\n\nFree virtual, confidential counseling for Marines and families.\n\n[Learn more](https://www.militaryonesource.mil/benefits/marine-corps-semper-support/)\n\n#### Domestic Abuse\n\nInformation and resources that provide support to you and your family.\n\n[Learn more](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse)\n\n#### Sexual Assault Prevention and Response\n\nResources and support for the prevention and response to sexual assault.\n\n[Learn more](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response)\n\n#### Substance Misuse\n\nSupport for alcohol and illicit drug misuse through education and training.\n\n[Learn more](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-misuse)\n\n#### Suicide Prevention\n\nValuable suicide prevention resources and support that is within reach.\n\n[Learn more](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/suicide-prevention)\n\n#### Military and Family Life Counselors\n\nFree, confidential counseling for service members, their families and survivors.\n\n[Learn more](https://www.militaryonesource.mil/benefits/military-family-life-counseling-program/)\n\n#### 988 Suicide & Crisis Lifeline\n\nCounselors are here for you 24/7, providing free and confidential support for life's challenges.\n\n[Learn more](https://988lifeline.org/)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "PCS Moves = Family Routine Reset",
+      "url": "https://quantico.usmc-mccs.org/news/pcs-moves-family-routine-reset",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/701e437e850d44128ede6c49839d29d9.jpg?m=639143778634270000"
+    },
+    {
+      "title": "Quantico Counselor Creates a Safe Space for Clients",
+      "url": "https://quantico.usmc-mccs.org/news/quantico-counselor-creates-a-safe-space-for-clients",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/892a112607884945af91560882595f01_v2.jpg?m=638936366202800000"
+    },
+    {
+      "title": "Behind the Mask",
+      "url": "https://quantico.usmc-mccs.org/news/behind-the-mask",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/d31e4754cd354d71b4690ebb8dba896a.jpg?m=638906673881900000"
+    },
+    {
+      "title": "Support Systems Help Protect Families",
+      "url": "https://quantico.usmc-mccs.org/news/support-systems-help-protect-families",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/5c2cf1a65cd0462a9411d13ca83d9030.jpg?m=638846414879270000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Community Counseling Program",
+      "address": "Little Hall, Suite 200\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2570"
+        }
+      ],
+      "emails": [
+        "SMB_MCCSQuanticoCommunityCounselingCenter@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 7:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "West Side Location: Cox Hall, Camp Barrett, 24009 Montezuma Ave, Quantico, VA, 703-784-2570"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Semper Support",
+      "url": "https://www.militaryonesource.mil/benefits/marine-corps-semper-support/"
+    },
+    {
+      "text": "Domestic Abuse",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse"
+    },
+    {
+      "text": "Sexual Assault Prevention and Response",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response"
+    },
+    {
+      "text": "Substance Misuse",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-misuse"
+    },
+    {
+      "text": "Suicide Prevention",
+      "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/suicide-prevention"
+    },
+    {
+      "text": "Military and Family Life Counselors",
+      "url": "https://www.militaryonesource.mil/benefits/military-family-life-counseling-program/"
+    },
+    {
+      "text": "988 Suicide & Crisis Lifeline",
+      "url": "https://988lifeline.org/"
+    },
+    {
+      "text": "Behavioral Health Brochure.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=da33703a-df9d-4489-a86c-441e11688df1&v=1"
+    },
+    {
+      "text": "CCP Brochure.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=15321412-64db-4a3a-abbc-eb1a154c2384&v=1"
+    },
+    {
+      "text": "Marine Intercept Program.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=d37dd166-4247-40e4-93aa-23993ac66dab&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/701e437e850d44128ede6c49839d29d9.jpg?m=639143778634270000",
+      "alt": "PCS Moves = Family Routine Reset"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/892a112607884945af91560882595f01_v2.jpg?m=638936366202800000",
+      "alt": "Quantico Counselor Creates a Safe Space for Clients"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d31e4754cd354d71b4690ebb8dba896a.jpg?m=638906673881900000",
+      "alt": "Behind the Mask"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/5c2cf1a65cd0462a9411d13ca83d9030.jpg?m=638846414879270000",
+      "alt": "Support Systems Help Protect Families"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling",
+  "fetchedAt": "2026-10-26"
+}

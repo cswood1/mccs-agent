@@ -1,0 +1,71 @@
+{
+  "title": "SkillBridge Information Session",
+  "breadcrumb": [],
+  "intro": "(Overview of the DoD SkillBridge Program)",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Brought to you by: MCCS Quantico Personal and Professional Development (P & PD)\n\nThis SkillBridge Information session will provide the purpose of the SkillBridge Program, its policies and directives, your responsibilities as the applicant and approver, and the application process with timelines.\n\nThis session will be the perfect starting point if you have questions about SkillBridge.\n\nCome meet and connect with DOD approved SkillBridge Programs.\n\nRegistration Required. NO WALK-INS\n\n***REGISTRATION CLOSES 2 DAYS BEFORE THE SCHEDULED CLASS DATE***\n\nParking: Lejeune Hall overflow parking lot - on Catlin Road. Do not park in employee parking in front or rear of the building\n\nFor more information call, 703.784.4963 or email mccsquanticoppdregistration@usmc.mil\n\n[REGISTER ON EVENTBRITE](https://www.eventbrite.com/e/skillbridge-information-session-quantico-tickets-1968661751293?aff=oddtdtcreator)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "SkillBridge",
+      "address": "3019 Embry Loop, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703.784.4963"
+        }
+      ],
+      "emails": [
+        "mccsquanticoppdregistration@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Date & Time",
+          "rows": [
+            {
+              "days": "Tuesday, October 27, 2026",
+              "time": "1:00 PM - 3:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Registration Required. NO WALK-INS",
+        "Registration closes 2 days before scheduled class date",
+        "Parking: Lejeune Hall overflow parking lot on Catlin Road"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "SkillBridge 3019 Embry Loop Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51255221532949,-77.3127453846588"
+    },
+    {
+      "text": "703.784.4963",
+      "url": "tel:703.784.4963"
+    },
+    {
+      "text": "mccsquanticoppdregistration@usmc.mil",
+      "url": "mailto:mccsquanticoppdregistration@usmc.mil"
+    },
+    {
+      "text": "REGISTER ON EVENTBRITE",
+      "url": "https://www.eventbrite.com/e/skillbridge-information-session-quantico-tickets-1968661751293?aff=oddtdtcreator"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d3b6861136b74e08867c501750d565fd_v1.jpg?m=638298241758430000",
+      "alt": "Skillbridge Information Session"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/3ddc4f44-f5a2-45bb-b970-d2370a29dc9c",
+  "fetchedAt": "2026-10-26"
+}

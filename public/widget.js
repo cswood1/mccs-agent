@@ -21,6 +21,12 @@
   var installationId = script.getAttribute("data-installation") || "quantico";
   var apiBase = script.getAttribute("data-api-base") || new URL(script.src, location.href).origin;
   var storageKey = "mccs-assistant:" + installationId;
+  var openKey = storageKey + ":open";
+  // On a copy of the installation site (our demo), links to the real site stay in this site and tab.
+  var siteHost = script.getAttribute("data-site-host") || "";
+  // Demo access code, for when the widget runs on another site (bookmarklet) and our cookie isn't sent.
+  var accessCode = script.getAttribute("data-access-code") || "";
+  var apiHeaders = accessCode ? { "X-Demo-Access": accessCode } : {};
 
   var state = {
     open: false,
@@ -84,10 +90,18 @@
 
   document.body.appendChild(host);
   fetchConfig();
+  // Reopen after navigating to another page if the chat was open.
+  if (loadOpen()) setOpen(true, true);
+
+  // Lets the host page open the chat (e.g. from its search box) or ask a question.
+  window.mccsAssistant = {
+    open: function () { setOpen(true); },
+    ask: function (q) { setOpen(true); send(q); },
+  };
 
   // ---------- behavior ----------
   function fetchConfig() {
-    fetch(apiBase + "/api/installations/" + encodeURIComponent(installationId))
+    fetch(apiBase + "/api/installations/" + encodeURIComponent(installationId), { headers: apiHeaders })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (cfg) {
         if (!cfg) return;
@@ -102,8 +116,9 @@
       .catch(function () { /* widget still works with defaults */ });
   }
 
-  function setOpen(open) {
+  function setOpen(open, restoring) {
     state.open = open;
+    saveOpen(open);
     panel.hidden = !open;
     launcher.hidden = open;
     launcher.setAttribute("aria-expanded", String(open));
@@ -112,7 +127,7 @@
     if (open) {
       render();
       scrollToEnd();
-      input.focus();
+      if (!(restoring && isPhone())) input.focus({ preventScroll: true });
     } else {
       launcher.focus();
     }
@@ -147,7 +162,7 @@
 
     fetch(apiBase + "/api/chat", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: Object.assign({ "Content-Type": "application/json" }, apiHeaders),
       body: JSON.stringify({
         installationId: installationId,
         messages: history.map(function (m) { return { role: m.role, content: m.content }; }),
@@ -272,6 +287,20 @@
     }
   }
 
+  function loadOpen() {
+    try {
+      return sessionStorage.getItem(openKey) === "1";
+    } catch {
+      return false;
+    }
+  }
+
+  function saveOpen(open) {
+    try {
+      sessionStorage.setItem(openKey, open ? "1" : "0");
+    } catch { /* ignore */ }
+  }
+
   function saveMessages() {
     try {
       sessionStorage.setItem(storageKey, JSON.stringify(state.messages.slice(-30)));
@@ -333,8 +362,26 @@
   }
 
   function link(href, text) {
+    var local = sameSitePath(href);
+    if (local) return '<a href="' + escapeHtml(local) + '">' + text + "</a>";
     var external = /^https?:/.test(href);
     return '<a href="' + href + '"' + (external ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + text + "</a>";
+  }
+
+  // A link to this site (or to the real site this page recreates) opens here, in the same tab.
+  // The chat stays open across the navigation (see loadOpen/saveOpen).
+  function sameSitePath(href) {
+    var u;
+    try {
+      u = new URL(href.replace(/&amp;/g, "&"));
+    } catch {
+      return null;
+    }
+    if (!/^https?:$/.test(u.protocol)) return null;
+    var host = u.hostname.replace(/^www\./, "");
+    if (host !== location.hostname.replace(/^www\./, "") && host !== siteHost) return null;
+    if (u.pathname.indexOf("/modules/") === 0) return null; // files (PDFs, menus) only exist on the real site
+    return (u.pathname.replace(/\/+$/, "") || "/") + u.search + u.hash;
   }
 
   function escapeHtml(s) {

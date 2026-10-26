@@ -1,0 +1,68 @@
+{
+  "title": "Privacy and Security Notice",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Marine Corps Community Services (MCCS) website is provided as a public service by the Business and Support Services Division, Manpower and Reserve Affairs Department, Headquarters, United States Marine Corps.\n\nInformation presented on this service, not identified as protected by copyright, is considered public information and may be distributed or copied. Use of appropriate byline, photo, and image credits is requested.\n\nFor site management, information is collected for statistical purposes. This U.S. Government computer system uses software programs to create summary statistics, which are used for such purposes as assessing what information is of most and least interest, determining technical design specifications, and identifying system performance or problem areas.\n\nFor site security purposes and to ensure that this service remains available to all users, software programs are employed to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.\n\nExcept for authorized law enforcement investigations and national security purposes, no other attempts are made to identify individual users or their usage habits beyond DoD websites. Raw data logs are used for no other purposes and are scheduled for regular destruction in accordance with National Archives and Records Administration approved records schedule."
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Web measurement and customization technologies (WMCT) may be used on this site to remember your online interactions, to conduct measurement and analysis of usage, or to customize your experience. The Department of Defense does not use the information associated with WMCT to track individual user activity on the Internet outside of Defense Department websites, nor does it share the data obtained through such technologies, without your explicit consent, with other departments or agencies, unless directed to do so in statute, regulation, or Executive order. The Department of Defense does not keep a database of information obtained from the use of WMCT. General instructions for how you may opt out of some of the most commonly used WMCT is available at [https://www.usa.gov/optout-instructions](https://www.usa.gov/optout-instructions).\n\nUnauthorized attempts to upload information or change information on this site are strictly prohibited and may be punishable under the Computer Fraud and Abuse Act of 1987 and the National Information Infrastructure Protection Act (Section 1030 of Title 18, United States Code).\n\nIf you have any questions or comments about the information presented here, please forward them to webmaster@usmc-mccs.org."
+    },
+    {
+      "heading": "Use Of Third-Party Websites And Applications",
+      "level": 2,
+      "markdown": "Third-party websites and applications that are not owned, operated, or controlled by DoD are integral to internet-based operations across DoD and used to augment official communication and services. These capabilities include, but are not limited to, networking services, media sharing services, marketing, event management, wikis and data mashups. Users should consult the security and privacy policies of the third-party websites and applications they subscribe to for more information. Users who choose to not use the third-party website or application may still learn about and register for MCCS activities by contacting the local MCCS activity or event organizer."
+    },
+    {
+      "heading": "Privacy Act Statement For Mailing List",
+      "level": 2,
+      "markdown": "**AUTHORITY:** 10 U.S.C. 5013; 10 U.S.C. 5041; E.O. 13571; and MCO P1700.27B W CH1.\n\n**PRINCIPAL PURPOSE:** To manage and administer communication subscriptions.\n\n**ROUTINE USES:** Information will be accessed by Marine Corps Community Services authorized personnel with a need-to-know to meet the purpose. In addition, information may be disclosed to current authorized contractors and vendors to accomplish a function related to this system of records. A complete list and explanation of applicable Routine Uses is included in SORN N04066-5, \"NEXCOM Direct Mail List/Patron Profile,\" accessible at [https://dpcld.defense.gov/Privacy/SORNsIndex/DOD-wide-SORN-Article-View/Article/570348/n04066-5/](https://dpcld.defense.gov/Privacy/SORNsIndex/DOD-wide-SORN-Article-View/Article/570348/n04066-5/).\n\n**DISCLOSURE:** Voluntary; however, failure to provide required information may result in not receiving information relating to the promotions, sales, events, and services."
+    },
+    {
+      "heading": "Privacy Advisory For Event Management Purposes",
+      "level": 2,
+      "markdown": "Please refer to the Privacy Policy on the platform collecting the information for a description of why this information is being collected and how it will be used."
+    },
+    {
+      "heading": "Non-Endorsement",
+      "level": 2,
+      "markdown": "The appearance of hyperlinks does not constitute endorsement by the U.S. Marine Corps of non-U.S. Government sites or the information, products, or services contained therein. Although MCCS may or may not use these sites as additional distribution channels for Department of Defense information, it does not exercise editorial control over all of the information that you may find at these locations. Such links are provided consistent with the stated purpose of this website"
+    },
+    {
+      "heading": "Intended Patrons",
+      "level": 2,
+      "markdown": "This site is intended to provide information and services to authorized exchange customers only. If you can shop for retail merchandise at your local Exchange, you are authorized to order from the Catalog and Exchange Online Store."
+    },
+    {
+      "heading": "Legal Disclaimer",
+      "level": 2,
+      "markdown": "While we strive to continually provide accurate information on this web site, typographical or omission errors may occasionally occur in pricing, disclaimers, special offers, product information or images (photographed items may contain slight differences). Such errors are subject to correction at any time."
+    },
+    {
+      "heading": "Links to External Sites",
+      "level": 2,
+      "markdown": "USMC-MCCS.ORG and other MCCS platforms and pages may link to websites created and maintained by other public and/or private organizations and individuals. When you follow a link to an external site, you are leaving USMC-MCCS.ORG and are subject to the external site's privacy and security policies. We do not control or guarantee the accuracy, relevance, timeliness, or completeness of information contained on an external site. We also do not endorse the site's sponsor, any views they or others may express on the site, or any products or services offered on the site.\n\nThe appearance of hyperlinks does not constitute endorsement by the Marine Corps Community Services (MCCS) nor the U.S. Marine Corps of non-U.S. Government sites or the information, products, or services contained therein. Although MCCS may or may not use these sites as additional distribution channels for Department of Defense information, it does not exercise editorial control over all of the information that you may find at these locations. Such links are provided consistent with the stated purpose of this website."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "https://www.usa.gov/optout-instructions",
+      "url": "https://www.usa.gov/optout-instructions"
+    },
+    {
+      "text": "https://dpcld.defense.gov/Privacy/SORNsIndex/DOD-wide-SORN-Article-View/Article/570348/n04066-5/",
+      "url": "https://dpcld.defense.gov/Privacy/SORNsIndex/DOD-wide-SORN-Article-View/Article/570348/n04066-5/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/privacy",
+  "fetchedAt": "2026-10-26"
+}

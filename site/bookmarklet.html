@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistant bookmarklet</title>
+  <style>
+    body { font: 16px/1.55 system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem; color: #222; }
+    .bm { display: inline-block; padding: 10px 18px; border-radius: 999px; background: #9e1b32; color: #fff; font-weight: 600; text-decoration: none; }
+    code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
+    li { margin: .4rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Try the assistant on the live Quantico site</h1>
+  <p>Drag this button to your bookmarks bar:</p>
+  <p><a class="bm" id="bm" href="#">MCCS Assistant (local)</a></p>
+  <ol>
+    <li>Keep this demo server running (<code>npm run dev</code> locally).</li>
+    <li>Open <a href="https://quantico.usmc-mccs.org/">quantico.usmc-mccs.org</a> in Chrome or Firefox.</li>
+    <li>Click the bookmark. The “Ask me anything” button appears in the corner.</li>
+    <li>If Chrome asks to let the site access devices on your local network, click <strong>Allow</strong>. That's how the page reaches a localhost server.</li>
+  </ol>
+  <p>Nothing is changed on the real site. The widget exists only in your browser tab until you reload.</p>
+
+  <script>
+    // Built here so the readable source and the bookmark stay in sync.
+    function bookmarklet() {
+      if (window.__mccsAssistantLoaded) return;
+      var s = document.createElement("script");
+      s.src = WIDGET_SRC;
+      s.setAttribute("data-installation", "quantico");
+      if (ACCESS_CODE) s.setAttribute("data-access-code", ACCESS_CODE);
+      s.onerror = function () {
+        alert(
+          "Couldn't load the assistant from " + WIDGET_SRC + ".\n\n" +
+          "1. Is the demo server running?\n" +
+          "2. If it is, this site or your browser blocked it. Open DevTools > Console and look for a " +
+          "Content-Security-Policy, mixed-content, or local-network-access error."
+        );
+      };
+      document.body.appendChild(s);
+    }
+    // Filled in by app/bookmarklet.html/route.ts for this server.
+    var config = __CONFIG__;
+    document.getElementById("bm").href =
+      "javascript:(function(){var WIDGET_SRC=" + JSON.stringify(config.widgetSrc) +
+      ",ACCESS_CODE=" + JSON.stringify(config.accessCode) + ";(" +
+      encodeURIComponent(bookmarklet.toString()) + ")()})()";
+  </script>
+</body>
+</html>

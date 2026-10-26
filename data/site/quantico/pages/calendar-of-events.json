@@ -1,0 +1,36 @@
+{
+  "title": "MCCS Calendar of Events",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Upcoming Events",
+      "level": 2,
+      "markdown": "Show Filters\n\n### Interests\n\n* Career & Education\n* Family Member Employment Assistance Program\n* Libraries\n* Tuition Assistance\n* Voluntary Education\n* Child & Youth\n* New Parent Support Program\n* School Age Care\n* School Liaison Program\n* Youth Sports\n* Entertainment & Dining\n* Military Family Life\n* Exceptional Family Member Program\n* Family Advocacy Program\n* Information, Referral and Relocation\n* L.I.N.K.S\n* Marine Corps Family Team Building\n* Personal Financial Management Program\n* Prevention & Counseling\n* Recreation & Fitness\n* All-Marine Sports\n* High Intensity Tactical Training\n* Intramural Sports\n* Outdoor Adventures\n* Retail\n* Tickets and Travel\n* Single Marine Program\n* TRS\n* SkillBridge\n* Transition Readiness\n* Volunteer Opportunities\n* Volunteer Management Program\n\nOctober 2026 calendar view available with List view and Grid view options."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Home",
+      "url": "https://quantico.usmc-mccs.org/"
+    },
+    {
+      "text": "Events",
+      "url": "https://quantico.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    },
+    {
+      "text": "Careers",
+      "url": "https://careers.usmc-mccs.org/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Dynamic event listing for October 2026 with specific event details, registration status, and filtering functionality not visible in static page content.",
+  "url": "https://quantico.usmc-mccs.org/calendar-of-events",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,119 @@
+{
+  "title": "Automotive Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://quantico.usmc-mccs.org/services"
+    },
+    {
+      "label": "Automotive Services",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Auto Skills Center provides assistance with repairs, maintenance, and instruction on automotive needs for Marines and their families. The shop offers the assistance of a certified mechanic and the equipment needed to repair and rebuild a personal vehicle, classes in preventive maintenance and repairs, and has a resale area stocked with oil, filters, and vehicle fluids. If any other parts or supplies are needed, the Auto Skills Center can also order them the same day depending on the time of day."
+    },
+    {
+      "heading": "Tools and Facilities",
+      "level": 3,
+      "markdown": "- 6 Two post lifts for light duty cars /small SUVs /small trucks\n- 2 Drive on oil change lifts (oil and lube only)\n- Alignment Rack for alignments only, appointments only throughout the week no Saturdays\n- 3 Heavy duty 12,000 lb lifts for full size trucks ½ ton to 1 ton\n- 4 Flat stalls\n- Quality tools\n- Trained staff\n- Engine room\n- Storage space\n- Tire machine and Balancer, staff performed service\n- A/C Machine, staff performed service\n- Various BG services coolant, brake, fuel, and trans services. Staff performed services\n- Glass bead machine\n- 2 Parts Washers"
+    },
+    {
+      "heading": "For the safety of all patrons and staff, the following services are NOT permitted:",
+      "level": 3,
+      "markdown": "- Rust removal\n- Rust proofing\n- Rust neutralization\n- Any body work (including sanding)\n- Any service requiring respirators or masks"
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**FREE PRE-TRIP inspections for Active Duty and family members are performed only on dates and times specified on a first-come, first-served basis.**\n\n- Inspections average 20-30 minutes, depending on make and model of vehicle.\n- Patron must stay with vehicle.\n- Copy of inspection results will be given to patron when inspection is completed"
+    }
+  ],
+  "cards": [
+    {
+      "title": "DIY: Auto Skills Center Makes Fixing Your Own Vehicle a Breeze!",
+      "url": "https://quantico.usmc-mccs.org/news/diy-auto-skills-center-makes-fixing-your-own-vehicle-a-breeze",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/1d7b4c428ad445dabca74c57af674fe4.jpg?m=639098799241570000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Auto Skills Center",
+      "address": "Building 2080, Anderson Ave (behind Pruitt Hall Barracks) Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-784-2729"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-784-2729"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:00am - 4:15pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:00am - 4:15pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:00am - 4:15pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9:00am - 4:15pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:00am - 4:15pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Cleanup will begin 1/2 hour before closing. All work will stop at that time.",
+        "Vehicle Admittance Ceases 1 hour before closing.",
+        "All staff performed services stop at 3:00 pm."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Building 2080, Anderson Ave (behind Pruitt Hall Barracks) Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.516023915328134,-77.30601579986424"
+    },
+    {
+      "text": "ASC Price List Update 5_2026.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=b29c9281-bc78-4dc1-a153-5dd93698fc9f&v=1"
+    },
+    {
+      "text": "MCBO 1700.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=3c272a5c-cc2a-4274-87b3-0570c861ffc4&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Auto Skills Events section appears to contain a list/grid view toggle with no visible event content loaded on page.",
+  "url": "https://quantico.usmc-mccs.org/services/automotive-services",
+  "fetchedAt": "2026-10-26"
+}

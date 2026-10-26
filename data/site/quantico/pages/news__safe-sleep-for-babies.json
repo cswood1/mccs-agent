@@ -1,0 +1,70 @@
+{
+  "title": "Safe Sleep for Babies",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Safe Sleep for Babies](/modules/media/t/de9d4bc5aa6541a8b093564705ba2f6f.jpg?m=639220609158700000)\n\nPublished: 21 Oct 2026"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "/news/marine-corps-youth-programs-help-teen-build-leadership-skills",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "#CYPMilKids Week",
+      "url": "/news/cypmilkids-week",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "/news/marine-corps-youth-programs-help-teen-build-leadership-skills"
+    },
+    {
+      "text": "#CYPMilKids Week",
+      "url": "/news/cypmilkids-week"
+    },
+    {
+      "text": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids"
+    },
+    {
+      "text": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "/modules/media/t/de9d4bc5aa6541a8b093564705ba2f6f.jpg?m=639220609158700000",
+      "alt": "Safe Sleep for Babies"
+    }
+  ],
+  "notCaptured": "The main article content for 'Safe Sleep for Babies' does not appear to include narrative body text beyond the featured image and publish date; confirmed on retry with full-markdown fallback prompt, which also found no additional article body text.",
+  "url": "https://quantico.usmc-mccs.org/news/safe-sleep-for-babies",
+  "fetchedAt": "2026-10-26"
+}

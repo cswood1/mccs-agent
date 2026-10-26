@@ -1,0 +1,59 @@
+{
+  "title": "NPSP Baby Boot Camp",
+  "breadcrumb": [],
+  "intro": "A hands-on workshop to assist you in caring for your new baby!",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "* Discuss infant development and the importance of bonding with your baby\n* Learn about the first few months of your baby's life and the fulfillment of being a parent\n* Learn how to enjoy, nurture, and provide positive parenting which is important for infant development\n* Learn how to prepare the nursery, diaper, feed, bathe, and dress your baby\n* Learn ways to communicate with your baby, how to calm a fussy baby, and when to call the doctor\n* Learn safe sleep practices for the baby\n* Focus on what to expect when you bring your baby home\n* **Recommended for the 3rd trimester**\n\n**Dress code is civilian attire.** Feel free to bring snacks and drinks.\n\n**Registration is required.** [Register on Eventbrite to save your spot!](https://www.eventbrite.com/o/mccs-quantico-new-parent-support-program-npsp-42943967143)\n\nLocation: NPSP, Little Hall, Lower Level\n\nFor more information, call 703.784.4248 or email, [MCCSQuanticoNPSP@usmc.mil](mailto:MCCSQuanticoNPSP@usmc.mil)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "New Parent Support Program",
+      "address": "Little Hall Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4248"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoNPSP@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Date/Time",
+          "rows": [
+            {
+              "days": "Tuesday, October 27, 2026",
+              "time": "9:00 AM - 4:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Register on Eventbrite to save your spot!",
+      "url": "https://www.eventbrite.com/o/mccs-quantico-new-parent-support-program-npsp-42943967143"
+    },
+    {
+      "text": "New Parent Support Little Hall Lower Level Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52231639682454,-77.29554515308818"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/83dd0eee83804d81b62ebabd63dbd0df_v1.JPG?m=638298243851800000",
+      "alt": "NPSP Baby Boot Camp"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/7795c2c8-1107-4935-8f76-6481076b10d2",
+  "fetchedAt": "2026-10-26"
+}

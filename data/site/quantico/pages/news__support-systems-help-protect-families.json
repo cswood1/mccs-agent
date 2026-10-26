@@ -1,0 +1,100 @@
+{
+  "title": "Support Systems Help Protect Families",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Why This Matters to You, Marine:",
+      "level": 2,
+      "markdown": "- **Deployments, PCS Move, and Constant Pressure:** We know the unique challenges of military life can create stress that can lead to problems at home. Don't let it fester.\n- **We've Got Your Six:** The Marine Corps has resources dedicated to supporting Marines and their families. The [Family Advocacy Program](https://www.usmc-mccs.org/fap), [Community Counseling Program](https://www.usmc-mccs.org/ccp), [Military OneSource](https://www.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource), and your command leadership are there to provide confidential support and guidance.\n- **It's About Honor:** Upholding the values of the Corps means protecting our own from harm, both on and off the battlefield. Domestic abuse is a betrayal of those values."
+    },
+    {
+      "heading": "What You Can Do:",
+      "level": 2,
+      "markdown": "- **Lead by Example:** Promote a culture of respect, communication, and support within your unit.\n- **Your Brothers and Sisters Need You:** Be a sounding board when your friends need to vent about stressors. Volunteer to help them unpack or babysit the kids for a night.\n- **Be Alert:** Know the warning signs of domestic abuse. If you suspect something, don't stay silent. Talk to someone you trust – a friend, a chaplain, or a member of your command.\n- **Know the Resources:** Familiarize yourself with the support systems available to Marines and their families. Suggest your friends seek help from those resources if they need additional support."
+    },
+    {
+      "heading": "Need Urgent Help? Know Someone in Danger?",
+      "level": 2,
+      "markdown": "- Call [National Domestic Violence Hotline](https://www.thehotline.org/): 800-799-7233 (24/7, confidential support)\n- Call 911 or your military law enforcement in an emergency."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Key Programs Supporting Military Families in Transition, Community Engagement, and Career Advancement",
+      "url": "https://quantico.usmc-mccs.org/news/key-programs-supporting-military-families-in-transition-community-engagement-and-career-advancement",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Emotional Support for Caregivers",
+      "url": "https://quantico.usmc-mccs.org/news/emotional-support-for-caregivers",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Do You Fight Fair When in an Argument?",
+      "url": "https://quantico.usmc-mccs.org/news/do-you-fight-fair-when-in-an-argument",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Talk To Your Teens About Dating Relationships",
+      "url": "https://quantico.usmc-mccs.org/news/talk-to-your-teens-about-dating-relationships",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "National Domestic Violence Hotline",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "800-799-7233"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "24/7",
+              "time": "confidential support"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Family Advocacy Program",
+      "url": "https://www.usmc-mccs.org/fap"
+    },
+    {
+      "text": "Community Counseling Program",
+      "url": "https://www.usmc-mccs.org/ccp"
+    },
+    {
+      "text": "Military OneSource",
+      "url": "https://www.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource"
+    },
+    {
+      "text": "National Domestic Violence Hotline",
+      "url": "https://www.thehotline.org/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/5c2cf1a65cd0462a9411d13ca83d9030.jpg?m=638846414879270000",
+      "alt": "Support Systems Help Protect Families"
+    }
+  ],
+  "notCaptured": "Audio player control for listening to page content; dynamic survey control element",
+  "url": "https://quantico.usmc-mccs.org/news/support-systems-help-protect-families",
+  "fetchedAt": "2026-10-26"
+}

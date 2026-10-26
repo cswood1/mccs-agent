@@ -1,0 +1,2781 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        :root {
+            --marine-red: rgb(166, 25, 46);
+            --header-blue: #0C2340; 
+        }
+        
+        /* --- 1. Header Input Styles --- */
+        .modern-search-input {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: #ffffff !important;
+            padding-right: 6rem !important;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .modern-search-input::placeholder { color: rgba(255, 255, 255, 0.6) !important; }
+        
+        .modern-search-input:focus, 
+        .modern-search-input:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- 2. RESPONSIVE POSITIONING LOGIC --- */
+        
+        .responsive-search-container {
+            z-index: 10;
+            transition: opacity 0.2s ease, visibility 0.2s;
+        }
+
+        /* ZONE A: Desktop (1200px to 1600px) -> STANDARD FLOW (FILL SPACE) */
+        @media (min-width: 1200px) and (max-width: 1599.98px) {
+            .responsive-search-container {
+                position: relative;
+                width: 100%;
+                max-width: none;
+                flex-grow: 1;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+
+        /* ZONE B: Widescreen (1600px+) -> ABSOLUTE CENTER (FIXED WIDTH) */
+        @media (min-width: 1600px) {
+            .responsive-search-container {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        
+        /* --- 3. COLLISION STATES --- */
+        body.search-overlap .responsive-search-container {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        body.search-overlap .mobile-search-trigger {
+            display: block !important;
+        }
+
+        /* Badge Styles */
+        .shortcut-badge {
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1;
+        }
+
+        /* --- 4. Modal Styles --- */
+        .glass-overlay { background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(4px); }
+        #searchModal .modal-dialog { max-width: 640px; margin-top: 5vh; }
+        #searchModal .modal-content {
+            background-color: #ffffff;
+            color: #212529;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        .search-input-wrapper {
+            background-color: transparent; /* Wrapper bg */
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            display: flex; align-items: center; padding: 0.75rem 1rem;
+        }
+        .search-input-wrapper.focused {
+            border-color: var(--marine-red) !important;
+            box-shadow: 0 0 0 1px var(--marine-red) !important;
+        }
+        
+        /* Force Transparency on Input (Updated) */
+        #modal-search-input {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            color: #212529;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        #modal-search-input:focus {
+            background-color: transparent !important;
+        }
+
+        #searchModal .suggestion-item {
+            display: flex; align-items: center; padding: 0.75rem;
+            border-radius: 0.5rem; cursor: pointer; color: #212529 !important;
+            text-decoration: none;
+        }
+        #searchModal .suggestion-item:hover, #searchModal .suggestion-item.active { background-color: #f3f4f6; }
+        #searchModal .suggestion-item.selected {
+            background-color: var(--marine-red) !important; color: white !important;
+        }
+        #searchModal .suggestion-item.selected .icon-box {
+            background-color: rgba(255,255,255,0.2) !important; color: white !important;
+        }
+        #searchModal .icon-box {
+            background-color: #f3f4f6; color: #6b7280; border: 1px solid #e5e7eb;
+        }
+
+        /* Dark Mode Overrides */  
+        @media (prefers-color-scheme: dark) {
+            #searchModal .modal-content { background-color: var(--header-blue) !important; color: #f8f9fa !important; }
+            #searchModal .suggestion-item { color: #f8f9fa !important; }
+            #modal-search-input { color: #fff; }
+            #searchModal .suggestion-item:hover { background-color: rgba(255,255,255,0.05); }
+            #searchModal .icon-box { background-color: rgba(255,255,255,0.05); color: #d1d5db; border-color: rgba(255,255,255,0.1);}
+            #searchModal .modal-footer, #searchModal .modal-footer .text-secondary { color:black !important; }
+        }
+    
+.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}
+
+	.offcanvas {
+  height: 100vh;
+  /* Set height to always be 100vh */
+  max-height: 100vh;
+  /* Ensure the height does not exceed the viewport */
+  overflow-y: auto;
+  /* Enable vertical scrolling within the offcanvas */
+}
+
+.offcanvas.show .offcanvas-header,
+.offcanvas.show .offcanvas-body {
+  display: block;
+  /* Ensure the offcanvas content is visible when the offcanvas is active */
+}
+
+.navbar-nav > .nav-item > .nav-link {
+  line-height: 2;
+  /* Adjust the line height as needed */
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+							        .location-card .card:hover{
+							            background-color: #e1e1e1!important;
+				
+							        }
+				
+							        .location-card-subtext {
+							        	font-size: .8rem!important;
+							        }
+								
+
+    .carousel-control-prev, .carousel-control-next {
+        opacity:1;
+    }
+    .carousel-control-prev-icon {
+        background-image: url("/theme/images/CarouselArrows/left-outline.svg");
+    }
+    .carousel-control-next-icon {
+        background-image: url("/theme/images/CarouselArrows/right-outline.svg");
+    }
+
+
+    .carousel-control-prev, .carousel-control-next {
+        opacity:1;
+    }
+    .carousel-control-prev-icon {
+        background-image: url("/theme/images/CarouselArrows/left-outline.svg");
+    }
+    .carousel-control-next-icon {
+        background-image: url("/theme/images/CarouselArrows/right-outline.svg");
+    }
+
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000049919661218493274510000015563726998673844355_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000026136239868153890290000008344188935645178015_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+	                                                .st0 {
+	                                                    fill: #E9E9EA;
+	                                                }
+	                    
+	                                                .st1 {
+	                                                    fill: #FFFFFF;
+	                                                }
+	                    
+	                                                .st2 {
+	                                                    fill: #A8D2F0;
+	                                                }
+	                    
+	                                                .st3 {
+	                                                    fill: #22205F;
+	                                                }
+	                    
+	                                                .st4 {
+	                                                    fill: #A61E2F;
+	                                                }
+	                    
+	                                                .st5 {
+	                                                    opacity: 0.4;
+	                                                    fill: #22205F;
+	                                                }
+	                    
+	                                                .st6 {
+	                                                    fill: none;
+	                                                }
+	                    
+	                                                .st7 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #FFFFFF;
+	                                                }
+	                    
+	                                                .st8 {
+	                                                    fill: #F6BE5B;
+	                                                }
+	                    
+	                                                .st9 {
+	                                                    fill: none;
+	                                                    stroke: #FFFFFF;
+	                                                    stroke-width: 4;
+	                                                    stroke-miterlimit: 10;
+	                                                }
+	                    
+	                                                .st10 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #F6BE5B;
+	                                                }
+	                    
+	                                                .st11 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #FFFFFF;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st12 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: none;
+	                                                    stroke: #A61E2F;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st13 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #F6BE5B;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st14 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: none;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st15 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #FFFFFF;
+	                                                    stroke: #A61E2F;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st16 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: none;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.4173;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st17 {
+	                                                    fill: #FFFFFF;
+	                                                    stroke: #A61E2F;
+	                                                    stroke-width: 1.5;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st18 {
+	                                                    fill: none;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.4173;
+	                                                    stroke-linejoin: round;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st19 {
+	                                                    fill: #010101;
+	                                                }
+	                    
+	                                                .st20 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #F6BE5B;
+	                                                    stroke: #000000;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st21 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #F6BE5B;
+	                                                    stroke: #000000;
+	                                                    stroke-width: 1.2;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st22 {
+	                                                    fill-rule: evenodd;
+	                                                    clip-rule: evenodd;
+	                                                    fill: #FFFFFF;
+	                                                    stroke: #A61E2F;
+	                                                    stroke-width: 2;
+	                                                    stroke-miterlimit: 22.9256;
+	                                                }
+	                    
+	                                                .st23 {
+	                                                    fill: #0C233F;
+	                                                }
+	                    
+	                                                .st24 {
+	                                                    fill: #C62327;
+	                                                }
+	                    
+	                                                .st25 {
+	                                                    fill: #E5E5E5;
+	                                                }
+	                    
+	                                                .st26 {
+	                                                    clip-path: url(#SVGID_00000014592648289679477050000005606990242297086880_);
+	                                                }
+	                    
+	                                                .st27 {
+	                                                    fill: #FFFFFF;
+	                                                    stroke: #CB2026;
+	                                                    stroke-miterlimit: 10;
+	                                                }
+	                    
+	                                                .st28 {
+	                                                    fill: #1D3954;
+	                                                }
+	                    
+	                                                .st29 {
+	                                                    opacity: 0.9;
+	                                                    fill: #E9E9EA;
+	                                                }
+	                    
+	                                                .st30 {
+	                                                    fill: #EE273E;
+	                                                }
+	                    
+	                                                .st31 {
+	                                                    fill: #ED1C24;
+	                                                }
+	                    
+	                                                .st32 {
+	                                                    fill: #DD1F2B;
+	                                                }
+	                    
+	                                                .st33 {
+	                                                    fill: #BE1E2D;
+	                                                }
+	                    
+	                                                .st34 {
+	                                                    fill: #EF3846;
+	                                                }
+	                                            
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000174571239039597006750000005970558517346940861_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000005988118244033560830000003394840081223862689_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000100383681331776436840000005923609117178440889_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000014633253554048840030000012406991760990012349_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000009584688798218694730000011460092158620097691_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000043434572330326880310000014031842061635259537_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000004522288405529627800000005628202913081405861_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+
+                            .st35 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #233065;
+                            }
+
+                            .st36 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #EB2332;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000083076063457289048120000001238212450850876832_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+                            .st0 {
+                                fill: #E9E9EA;
+                            }
+
+                            .st1 {
+                                fill: #FFFFFF;
+                            }
+
+                            .st2 {
+                                fill: #A8D2F0;
+                            }
+
+                            .st3 {
+                                fill: #22205F;
+                            }
+
+                            .st4 {
+                                fill: #A61E2F;
+                            }
+
+                            .st5 {
+                                opacity: 0.4;
+                                fill: #22205F;
+                            }
+
+                            .st6 {
+                                fill: none;
+                            }
+
+                            .st7 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                            }
+
+                            .st8 {
+                                fill: #F6BE5B;
+                            }
+
+                            .st9 {
+                                fill: none;
+                                stroke: #FFFFFF;
+                                stroke-width: 4;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st10 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                            }
+
+                            .st11 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st14 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st15 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st16 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st17 {
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 1.5;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st18 {
+                                fill: none;
+                                stroke: #000000;
+                                stroke-width: 1.4173;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st19 {
+                                fill: #010101;
+                            }
+
+                            .st20 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st21 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #F6BE5B;
+                                stroke: #000000;
+                                stroke-width: 1.2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st22 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #A61E2F;
+                                stroke-width: 2;
+                                stroke-miterlimit: 22.9256;
+                            }
+
+                            .st23 {
+                                fill: #0C233F;
+                            }
+
+                            .st24 {
+                                fill: #C62327;
+                            }
+
+                            .st25 {
+                                fill: #E5E5E5;
+                            }
+
+                            .st26 {
+                                clip-path: url(#SVGID_00000118366356497017599590000017780894659349554569_);
+                            }
+
+                            .st27 {
+                                fill: #FFFFFF;
+                                stroke: #CB2026;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .st28 {
+                                fill: #1D3954;
+                            }
+
+                            .st29 {
+                                opacity: 0.9;
+                                fill: #E9E9EA;
+                            }
+
+                            .st30 {
+                                fill: #EE273E;
+                            }
+
+                            .st31 {
+                                fill: #ED1C24;
+                            }
+
+                            .st32 {
+                                fill: #DD1F2B;
+                            }
+
+                            .st33 {
+                                fill: #BE1E2D;
+                            }
+
+                            .st34 {
+                                fill: #EF3846;
+                            }
+                        
+
+.gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    border-radius: inherit;
+}
+
+
+	.scroll-container::-webkit-scrollbar {
+		width: 1rem!important;
+		height: 2px;
+	}
+	.scroll-container::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		border-radius:10px;
+		height:2px;
+	}
+	.scroll-container::-webkit-scrollbar-thumb {
+		background-color: #a6192e;
+		border-radius:10px;
+	}
+	
+
+.cls-1, .cls-2 { fill: #fff; } .cls-1 { fill-rule: evenodd; }
+
+
+
+	#feedbackModal {
+
+	}
+	#feedbackModal .modal-title {
+		margin-left:-18px;
+	}
+	#feedback-dialog {
+		max-width: 504px !important;
+		margin:auto;
+	}
+	.feedback-iframe {
+		width:100%;
+		min-height: 476px;
+	}
+	
+	.btn-feedback {
+		position:fixed;
+		bottom: clamp(15px, calc(2vw + 10px), 20px);
+		right: clamp(15px, calc(2vw + 10px), 20px);
+		font-weight:bolder;
+		font-size:12px;
+		background: #7aace1; /*#e0e0e0 - Original*/
+		color: #18222d; /* #484848 - Original */
+		border:#55789d 1px solid; /*#b8b8b8 - Original*/
+		padding: 6px 10px;
+		opacity:1;
+		border-radius: 10px 10px 0 10px;
+		z-index:100;
+		transition: ease-in-out 200ms;
+		display:flex;
+		align-items: center;
+		justify-content:center;
+	}
+	.btn-feedback p {
+		float: right;
+		transition: ease-in-out 200ms;
+		opacity: 1;
+		transform: translateX(0);
+	}
+	.btn-feedback .feedback-icon {
+		display:block;
+	}
+	.btn-feedback .feedback-icon-scrolled {
+		display:none;
+	}
+	.btn-feedback .feedback-icon, .btn-feedback .feedback-icon-scrolled {
+		width: 34px;
+		margin: auto;
+		padding:1px;
+		fill:#18222d;
+		float: left;
+		transition: ease-in-out 200ms;
+		flex-shrink: 0;
+	}
+
+	.btn-feedback:hover, .btn-feedback.scrolled:hover {
+		background:#809ebf; /* #c2c2c2 - Original */
+		color: #20272f;
+		opacity: 1;
+	}
+	#feedbackModal .modal-body {
+		padding:0!important;
+	}
+	@media screen and (max-width: 991px) {
+		.btn-feedback, .btn-feedback::after {
+			opacity:1;
+		}
+		.btn-feedback.scrolled svg {
+		/*transform: translate(32px, 0px) !important;*/
+	}
+	}
+	.btn-feedback.scrolled {
+		width: 50px;
+		height: 50px;
+		padding: 0;
+		border-radius: 50%;
+		background:#7aace1;
+		transition: ease-in-out 200ms;
+	}
+	.btn-feedback.scrolled .feedback-icon-scrolled {
+		float:none!important;
+		display:block;
+		transition: ease-in-out 200ms;
+		width:38px;
+		margin:auto;
+		position:absolute;
+	}
+	.btn-feedback.scrolled .feedback-icon {
+		display:none;
+	}
+	.btn-feedback.scrolled p {
+		opacity: 0;
+		transform: translateX(20px); /* text slides out smoothly */
+	}
+

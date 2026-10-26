@@ -1,0 +1,59 @@
+{
+  "title": "MCBQ's New Join Brief",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "This mandatory brief is designed to inform all active-duty newcomers and their families about programs and services available at MCB Quantico to include recreation and physical fitness resources, education, medical and counseling services, local area information, Single Marine Program, religious services, and so much more. **(MCO 1754.10B: Attendance is mandatory for all newly arrived personnel in the grades of E-1 through E-6, WO-1 and O-1 through O-3 within 90 days of arrival at a new duty station.)**\n\nScheduled Dates:\n- January 21\n- March 11\n- May 20\n- July 15\n- August 19\n- September 16\n- November 18\n\nTime: 9 AM - 12 PM\n\nLocation: The Clubs at Quantico, 3017 Russell Rd., Quantico, VA 22134\n\nFor more info, call [703.784.2659](tel:703.784.2659) or email mccsppdregistration@usmc.mil\n\nSponsors:\n- First Command\n- Marine Federal Credit Union\n- American Military University\n- USAA\n\nPaid Sponsorship. No Federal endorsement implied."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "MCBQ's New Join Brief",
+      "address": "The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.2659"
+        }
+      ],
+      "emails": [
+        "mccsppdregistration@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Time",
+          "rows": [
+            {
+              "days": "Wednesday, November 18, 2026",
+              "time": "9:00 AM - 12:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico 3017 Russell Rd Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "703.784.2659",
+      "url": "tel:703.784.2659"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/b22f8da398ba4b179a9c87b123b3b7cf.jpg?m=639178162491070000",
+      "alt": "MCBQ's New Join Brief"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/a4aea17d-2d40-466c-bd6b-f6cc184b7691",
+  "fetchedAt": "2026-10-26"
+}

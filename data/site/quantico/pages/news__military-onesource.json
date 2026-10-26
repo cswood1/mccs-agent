@@ -1,0 +1,140 @@
+{
+  "title": "Military Onesource",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Along with resources provided at the [duty station](https://usmc-mccs.org/help/), such as counselors, chaplains, and other advisors, [Military OneSource](https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us) can also support Service members and their families.\n\nMilitary OneSource, [https://www.militaryonesource.mil/](https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us), is your connection to information, answers, and support when Marine Corps life happens. We can help you overcome challenges, reach your goals, and thrive.\n\nMilitary OneSource is a free service to Marines (active duty, veteran, wounded/ill/injured), attached sailors, family, and naval personnel supporting Marine Units. The Military OneSource Line is a confidential phone and chat support service that operates 24 hours a day, 7 days a week."
+    },
+    {
+      "heading": "Crisis Signs",
+      "level": 2,
+      "markdown": "These signs require immediate attention. If you are experiencing any of these and need medical attention, call 911 now. For immediate help in dealing with a suicidal crisis, call the Military Crisis Line at 1-800-273-8255 and Press 1 or dial 988.\n\n- Thinking about hurting or killing yourself\n- Looking for ways to kill yourself\n- Talking about death, dying, or suicide\n- Self-destructive behavior, such as drug abuse, risky use of weapons, etc.\n\nFor more information, visit the [Military Crisis Line website](http://www.veteranscrisisline.net/get-help-now/military-crisis-line/)."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Family Meetings: Why They Are a Good Idea",
+      "url": "https://quantico.usmc-mccs.org/news/family-meetings-why-they-are-a-good-idea",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "MCTF in Action Newsletter",
+      "url": "https://quantico.usmc-mccs.org/news/prevention",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "24 hours, 7 days a Week of Constant Support",
+      "url": "https://quantico.usmc-mccs.org/news/24-hours-7-days-a-week-of-constant-support",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "5 Strategies to Save a Life",
+      "url": "https://quantico.usmc-mccs.org/news/5-strategies-to-save-a-life",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Military OneSource Line",
+      "address": "",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "1-800-342-9647"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "24/7",
+              "time": "Confidential phone and chat support"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Free service to Marines (active duty, veteran, wounded/ill/injured), attached sailors, family, and naval personnel supporting Marine Units"
+      ]
+    },
+    {
+      "name": "Military Crisis Line",
+      "address": "",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "1-800-273-8255 (Press 1)"
+        },
+        {
+          "label": "Alternate",
+          "number": "988"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "For immediate help with suicidal crisis"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "duty station",
+      "url": "https://usmc-mccs.org/help/"
+    },
+    {
+      "text": "Military OneSource",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "https://www.militaryonesource.mil/",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "Learn more",
+      "url": "https://www.militaryonesource.mil/confidential-help/non-medical-counseling/military-onesource/military-counseling-for-stress/#contact-us"
+    },
+    {
+      "text": "Military Crisis Line website",
+      "url": "http://www.veteranscrisisline.net/get-help-now/military-crisis-line/"
+    },
+    {
+      "text": "Family Meetings: Why They Are a Good Idea",
+      "url": "https://quantico.usmc-mccs.org/news/family-meetings-why-they-are-a-good-idea"
+    },
+    {
+      "text": "MCTF in Action Newsletter",
+      "url": "https://quantico.usmc-mccs.org/news/prevention"
+    },
+    {
+      "text": "24 hours, 7 days a Week of Constant Support",
+      "url": "https://quantico.usmc-mccs.org/news/24-hours-7-days-a-week-of-constant-support"
+    },
+    {
+      "text": "5 Strategies to Save a Life",
+      "url": "https://quantico.usmc-mccs.org/news/5-strategies-to-save-a-life"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/f99115c71e54400dabf9c146d8cdb301.png?m=638312691805770000",
+      "alt": "Military Onesource"
+    }
+  ],
+  "notCaptured": "Audio player element with play/pause controls and duration timing visible but cannot extract exact audio file details. Interactive phone and chat contact buttons displayed but linked to external services.",
+  "url": "https://quantico.usmc-mccs.org/news/military-onesource",
+  "fetchedAt": "2026-10-26"
+}

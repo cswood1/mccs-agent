@@ -1,0 +1,60 @@
+{
+  "title": "Library Resource List",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Library Resource List](https://quantico.usmc-mccs.org/modules/media/t/85b9b0a54ad340efae3f1f03e80cbdbe.png?m=638312683681530000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Six Essential Tips for a Successful College Application",
+      "url": "https://quantico.usmc-mccs.org/news/six-essential-tips-for-a-successful-college-application",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Level Up at Your Library",
+      "url": "https://quantico.usmc-mccs.org/news/level-up-at-your-library",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Keep Your SGLI Updated: Protect What Matters Most",
+      "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Navigating Deployment with Young Children",
+      "url": "https://quantico.usmc-mccs.org/news/navigating-deployment-with-young-children",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Click to view our most recent list!",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=0e8ca2d9-9faf-4aee-9dd3-2906ec28a57d&v=1",
+      "text": "",
+      "image": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=da348ecb-c145-4d21-9ccd-8375f3ae5474&w=612&h=792&v=1"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/85b9b0a54ad340efae3f1f03e80cbdbe.png?m=638312683681530000",
+      "alt": "Library Resource List"
+    }
+  ],
+  "notCaptured": "The page contains a linked PDF document (view most recent list) whose content is not accessible via the provided HTML.",
+  "url": "https://quantico.usmc-mccs.org/news/library-resource-list",
+  "fetchedAt": "2026-10-26"
+}

@@ -22,8 +22,6 @@ export type InstallationConfig = {
    */
   trustedDomains: string[];
   theme: { primary: string; accent: string };
-  /** Hints for scripts/convert-html.ts on where the page body lives in saved HTML. */
-  html: { contentSelectors: string[]; removeSelectors: string[] };
 };
 
 export type ContentPage = {
@@ -52,7 +50,7 @@ export function getInstallation(id: string): InstallationConfig | undefined {
 }
 
 /**
- * Real content (data/content/<id>.json, produced by `npm run convert`) wins;
+ * Real content (data/content/<id>.json, produced by `npm run build:content`) wins;
  * otherwise fall back to the sample placeholder so the app runs out of the box.
  */
 export async function loadContent(id: string): Promise<InstallationContent> {

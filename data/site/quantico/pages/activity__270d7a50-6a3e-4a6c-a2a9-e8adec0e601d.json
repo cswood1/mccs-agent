@@ -1,0 +1,55 @@
+{
+  "title": "EFMP Special Needs Forum: Candy Cane Lane",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "EFMP Candy Cane Lane Special Needs Forum",
+      "level": 3,
+      "markdown": "EFMP is collaborating with the National Museum of the Marine Corps to host our semi-annual Special Needs Forum.\n\nThe forum will be held after-hours and allows families to connect with community resources, partners, and key stakeholders. During the event families will participate in holiday-themed games (Candy Cane Lane), crafts, picture with Santa, and have full access to the museum for a self-paced tour.\n\n**Friday, December 11**  \n**6:00-7:30 PM**\n\nNational Museum of the Marine Corps  \n1775 Semper Fidelis Way, Triangle, VA 22172\n\n[**Register on Eventbrite**](https://www.eventbrite.com/o/12865230600)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "EFMP Office",
+      "address": "National Museum of the Marine Corps, 1775 Semper Fidelis Way, Triangle, VA 22172",
+      "phones": [
+        {
+          "label": "",
+          "number": "703.784.9395"
+        }
+      ],
+      "emails": [
+        "QuanticoEfmpOffice@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Date",
+          "rows": [
+            {
+              "days": "Friday, December 11",
+              "time": "6:00 PM - 7:30 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Register on Eventbrite",
+      "url": "https://www.eventbrite.com/o/12865230600"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/4ec3100bf8d34573bf8753779c9584d4.jpg?m=639220522530630000",
+      "alt": "EFMP Special Needs Forum: Candy Cane Lane"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/270d7a50-6a3e-4a6c-a2a9-e8adec0e601d",
+  "fetchedAt": "2026-10-26"
+}

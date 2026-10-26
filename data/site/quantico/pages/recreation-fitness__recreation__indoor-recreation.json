@@ -1,0 +1,91 @@
+{
+  "title": "Indoor Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "On this page:",
+      "level": 5,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Bowling",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling",
+      "text": "Do you and your family enjoy open bowling, bowling leagues, tournaments, instructional programs, ...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/24d6baa6c2fb45139bd95bb307f7637d_v1.jpg?m=638298346346800000"
+    },
+    {
+      "title": "Recreation Centers",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers",
+      "text": "Semper Fit Recreation Centers (SMP Centers) provide free and reduced-priced recreational activiti...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/db8eed7e08e04a3ba35f09c7f10a0bbc_v1.jpg?m=638298346346430000"
+    },
+    {
+      "title": "Theaters",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies/",
+      "text": "The Base Theater, located on the main deck of Little Hall, 2034 Barnett Avenue. Moviegoers may pu...",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/2c88d7caadb840b3ba91bdf977a82cb5_v1.jpg?m=638298346346630000"
+    },
+    {
+      "title": "Auto Skills",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services/",
+      "text": "The Quantico Auto Skills Center offers a variety of tools and equipment for do-it-yourself services.",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/858fc4f4844b4076987a975d552c565c_v1.jpg?m=638298346348000000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Bowling",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling"
+    },
+    {
+      "text": "Recreation Centers",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers"
+    },
+    {
+      "text": "Theaters",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/movies/"
+    },
+    {
+      "text": "Auto Skills",
+      "url": "https://quantico.usmc-mccs.org/services/automotive-services/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/24d6baa6c2fb45139bd95bb307f7637d_v1.jpg?m=638298346346800000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/db8eed7e08e04a3ba35f09c7f10a0bbc_v1.jpg?m=638298346346430000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/2c88d7caadb840b3ba91bdf977a82cb5_v1.jpg?m=638298346346630000",
+      "alt": ""
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/858fc4f4844b4076987a975d552c565c_v1.jpg?m=638298346348000000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
+  "fetchedAt": "2026-10-26"
+}

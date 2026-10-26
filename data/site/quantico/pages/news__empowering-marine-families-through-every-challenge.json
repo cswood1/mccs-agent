@@ -1,0 +1,86 @@
+{
+  "title": "Empowering Marine Families Through Every Challenge",
+  "breadcrumb": [],
+  "intro": "Marine families manage unique challenges—from relocations and deployments to adjusting to new schools and communities.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Resilience is essential, and Marine & Family Programs provide the support needed to stay connected and prepared for change. School Liaison (SL), Child & Youth Programs (CYP), and the Exceptional Family Member Program (EFMP) each play an important role in strengthening families throughout the Marine Corps community."
+    },
+    {
+      "heading": "School Liaison: Supporting Education Transitions",
+      "level": 2,
+      "markdown": "School Liaisons help families navigate school-related challenges during a PCS move. They assist with enrollment, school records, and access to services to reduce academic disruption. SLs also work closely with educators to increase understanding of military life, creating supportive environments that promote student well-being and success."
+    },
+    {
+      "heading": "Child & Youth Programs: Promoting Healthy Development",
+      "level": 2,
+      "markdown": "CYP offers childcare, youth sports, and recreational activities designed to support the social, emotional, and cognitive development of children and teens. These structured programs provide safe, encouraging spaces where young people can build confidence, form friendships, and develop skills that help them adapt during times of change."
+    },
+    {
+      "heading": "Exceptional Family Member Program: Coordinated Family Support",
+      "level": 2,
+      "markdown": "EFMP assists families with medical or educational needs through case management, relocation guidance, and resource coordination. This ongoing support ensures dependents receive consistent care, reducing stress, and helping families plan for long-term stability."
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Together, SL, CYP, and EFMP create a network of support that strengthens family resilience. With the right tools, resources, and community connections, Marine families are empowered to manage challenges and embrace new opportunities with confidence."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Youth Programs Help Teen Build Leadership Skills",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-youth-programs-help-teen-build-leadership-skills",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "#CYPMilKids Week",
+      "url": "https://quantico.usmc-mccs.org/news/cypmilkids-week",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Always Faithful, Always Resilient: 40 Years of Honoring Marine Corps Kids",
+      "url": "https://quantico.usmc-mccs.org/news/always-faithful-always-resilient-40-years-of-honoring-marine-corps-kids",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Announces 2025 Child and Youth Programs Employee of the Year",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-announces-2025-child-and-youth-programs-employee-of-the-year",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "School Liaison",
+      "url": "https://www.usmc-mccs.org/sl"
+    },
+    {
+      "text": "Child & Youth Programs",
+      "url": "https://www.usmc-mccs.org/cyp"
+    },
+    {
+      "text": "Exceptional Family Member Program",
+      "url": "https://www.usmc-mccs.org/efmp"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/946b17389ed84d86bf5cb3def39c32c2.jpg?m=639002057712900000",
+      "alt": "Empowering Marine Families Through Every Challenge"
+    }
+  ],
+  "notCaptured": "Audio player element present but content not accessible; exact playback timing and audio file details not captured.",
+  "url": "https://quantico.usmc-mccs.org/news/empowering-marine-families-through-every-challenge",
+  "fetchedAt": "2026-10-26"
+}

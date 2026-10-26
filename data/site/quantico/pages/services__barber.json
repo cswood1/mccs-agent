@@ -1,0 +1,180 @@
+{
+  "title": "Barber",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://quantico.usmc-mccs.org/services"
+    },
+    {
+      "label": "Barber",
+      "url": "https://quantico.usmc-mccs.org/services/barber"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "MCX Barbershop",
+      "address": "3500 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-432-8800"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:00am - 6:30pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9:00am - 5:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "OCS Barbershop",
+      "address": "Building 2189, Quantico, VA 22134",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:00am - 3:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "Closed"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Appointment Only"
+      ]
+    },
+    {
+      "name": "TBS Barbershop",
+      "address": "Building 24005, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-640-7501"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:00am - 5:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:00am - 3:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "Closed"
+            },
+            {
+              "days": "Saturday",
+              "time": "9:00am - 5:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9:00am - 5:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to MCX Barbershop",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52065863749288,-77.34846284343622"
+    },
+    {
+      "text": "Directions to OCS Barbershop",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.49651427953249,-77.312617282338"
+    },
+    {
+      "text": "Directions to TBS Barbershop",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.499293180122876,-77.44064346998832"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/services/barber",
+  "fetchedAt": "2026-10-26"
+}

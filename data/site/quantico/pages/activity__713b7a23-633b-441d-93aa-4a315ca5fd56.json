@@ -1,0 +1,54 @@
+{
+  "title": "Tuition Assistance Orientation Class",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Tuition Assistance Orientation Class](/modules/media/t/c1de14cf9a444703b17bdec9d6053ac5_w433_h243.jpg?m=638844930222200000)\n\n**Date:** Friday, January 8, 2027\n\n**Time:** 10:00 AM - 11:00 AM\n\n**Address:** [Voluntary Education Center, 3088 Roan St, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.50792407313076,-77.30939364439293)"
+    },
+    {
+      "heading": "Tuition Assistance Orientation Classes",
+      "level": 3,
+      "markdown": "You will learn:\n\n* eligibility requirements to obtaining and maintaining Military TA\n* how to apply for TA through the WebTA system\n* FAFSA information will also be provided\n\nClasses scheduled on the following dates:\n\nJanuary 08\nFebruary 05\nMarch 12\nApril 09\nMay 14\nJune 11\nJuly 09\nAugust 13\nSeptember 10\nOctober 01\nNovember 05\nDecember 10\n\n[Register on Eventbrite](https://www.eventbrite.com/e/2027-tuition-assistance-orientation-classes-tickets-1998503860846?aff=oddtdtcreator)\n\nFor more information, call 703.784.2375"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Voluntary Education Center",
+      "address": "3088 Roan St, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.2375"
+        }
+      ],
+      "emails": [
+        "SMB_MCCSQuanticoEdCenter@usmc.mil"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Voluntary Education Center",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.50792407313076,-77.30939364439293"
+    },
+    {
+      "text": "Register on Eventbrite",
+      "url": "https://www.eventbrite.com/e/2027-tuition-assistance-orientation-classes-tickets-1998503860846?aff=oddtdtcreator"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c1de14cf9a444703b17bdec9d6053ac5_w433_h243.jpg?m=638844930222200000",
+      "alt": "Tuition Assistance Orientation Class"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/713b7a23-633b-441d-93aa-4a315ca5fd56",
+  "fetchedAt": "2026-10-26"
+}

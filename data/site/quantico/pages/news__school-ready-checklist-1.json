@@ -1,0 +1,54 @@
+{
+  "url": "https://quantico.usmc-mccs.org/news/school-ready-checklist-1",
+  "title": "School Ready Checklist",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![School Ready Checklist](https://quantico.usmc-mccs.org/modules/media/t/09f65151e2de431997866fb2c3c75f75_w500_h300.jpg?m=638312669763170000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "A Guide to Navigating Change with EFMP and Community Resources",
+      "url": "https://quantico.usmc-mccs.org/news/a-guide-to-navigating-change-with-efmp-and-community-resources",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Keep Your SGLI Updated: Protect What Matters Most",
+      "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Build Your Child's Academic Goals",
+      "url": "https://quantico.usmc-mccs.org/news/build-your-childs-academic-goals",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "How the Voluntary Education Center Helped a Marine Reach Princeton University",
+      "url": "https://quantico.usmc-mccs.org/news/how-the-voluntary-education-center-helped-a-marine-reach-princeton-university",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/09f65151e2de431997866fb2c3c75f75_w500_h300.jpg?m=638312669763170000",
+      "alt": "School Ready Checklist"
+    }
+  ],
+  "notCaptured": "The main content area appears to contain primarily an image asset labeled 'School Ready Checklist' with minimal accompanying text. No detailed checklist items or structured content are visible in the fetched page.",
+  "fetchedAt": "2026-10-26"
+}

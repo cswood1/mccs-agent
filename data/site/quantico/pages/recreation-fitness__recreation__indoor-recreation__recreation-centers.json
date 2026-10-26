@@ -1,0 +1,92 @@
+{
+  "title": "Recreation Centers",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Main Side Recreation Center is open to all Active Duty personnel. The Center offers a 12-seat movie theater with NDVD, TVs, Xbox One, PS4, DirecTV, Gaming Center, FREE Wi-Fi, computer room and laptops, multiple games, corn hole sets, mountain bicycles, and full kitchen which is available for meal prep. The Center provides opportunities for Active Duty personnel to get out of the barracks, relax and reset. The Center offers a variety of recreation events, such as game night, movie night, corn hole competitions and other special events."
+    }
+  ],
+  "cards": [
+    {
+      "title": "On this page:",
+      "url": "",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Main Side Rec Center",
+      "address": "206 Nicholas Rd\nQuantico, Virginia 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "703-432-0363"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation:",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:00am - 8:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10:00am - 8:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "206 Nicholas Rd\nQuantico, Virginia 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522560877074255,-77.2986739"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers",
+  "fetchedAt": "2026-10-26"
+}

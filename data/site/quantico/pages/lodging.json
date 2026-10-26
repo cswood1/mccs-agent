@@ -1,0 +1,85 @@
+{
+  "title": "Lodging",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "/lodging"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Inns of the Corps Quantico](/lodging/inns-of-the-corps)\n- [Marine Lodge Liversedge Quantico](/lodging/liversedge-hall)\n- [C Suites](/lodging/c-suites)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Inns of the Corps Quantico",
+      "url": "/lodging/inns-of-the-corps",
+      "text": "Inns of the Corps Quantico is one of the greatest assets to the Base! The facility has 74 standard...",
+      "image": "https://www.usmc-mccs.org/modules/media/t/a624be67f7d840a6b56b35dc3aa9acde.jpg?m=638429099402430000"
+    },
+    {
+      "title": "Marine Lodge Liversedge Quantico",
+      "url": "/lodging/liversedge-hall",
+      "text": "Marine Lodge Liversedge Quantico is your TAD/TDY destination! The facility has 66 standard rooms,...",
+      "image": "https://www.usmc-mccs.org/modules/media/t/247c5c38cd4e49c688ba6c669d6c98b7.jpg?m=638490491508170000"
+    },
+    {
+      "title": "C Suites",
+      "url": "/lodging/c-suites",
+      "text": "The C Suites at Quantico is the best kept secret at MCB Quantico! Tucked away between the hills a...",
+      "image": "https://www.usmc-mccs.org/modules/media/t/d031e4efe619489ca6e0c246545d4781.jpg?m=638490487630000000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Inns of the Corps Quantico",
+      "url": "/lodging/inns-of-the-corps"
+    },
+    {
+      "text": "Marine Lodge Liversedge Quantico",
+      "url": "/lodging/liversedge-hall"
+    },
+    {
+      "text": "C Suites",
+      "url": "/lodging/c-suites"
+    },
+    {
+      "text": "Read More",
+      "url": "/lodging/inns-of-the-corps"
+    },
+    {
+      "text": "Read More",
+      "url": "/lodging/liversedge-hall"
+    },
+    {
+      "text": "Read More",
+      "url": "/lodging/c-suites"
+    },
+    {
+      "text": "New Room Reservation Options Available for Lodging",
+      "url": "/news/new-room-reservation-options-available-for-lodging"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.usmc-mccs.org/modules/media/t/a624be67f7d840a6b56b35dc3aa9acde.jpg?m=638429099402430000",
+      "alt": ""
+    },
+    {
+      "src": "https://www.usmc-mccs.org/modules/media/t/247c5c38cd4e49c688ba6c669d6c98b7.jpg?m=638490491508170000",
+      "alt": ""
+    },
+    {
+      "src": "https://www.usmc-mccs.org/modules/media/t/d031e4efe619489ca6e0c246545d4781.jpg?m=638490487630000000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/lodging",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,72 @@
+{
+  "title": "Fitness Programs",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Fitness Programs",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Fitness Events",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Marine Corps Seeks Top Male and Female Athletes",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-seeks-top-male-and-female-athletes",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Marine Corps Seeks Applications for the Elite Warrior Athlete Program",
+      "url": "https://quantico.usmc-mccs.org/news/marine-corps-seeks-applications-for-the-elite-warrior-athlete-program",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Performance Dietitian at Camp Pendleton Shares Recipes for Success",
+      "url": "https://quantico.usmc-mccs.org/news/performance-dietitian-at-camp-pendleton-shares-recipes-for-success",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "High Intensity Tactical Training",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/high-intensity-tactical-training"
+    },
+    {
+      "text": "Personal Training",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/personal-training"
+    },
+    {
+      "text": "Body Composition Program",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/body-composition-program"
+    },
+    {
+      "text": "Nutrition & Supplements Education",
+      "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education/nutrition-supplements-education"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Fitness Events section appears to have dynamic list/grid view toggle with no visible content displayed",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs",
+  "fetchedAt": "2026-10-26"
+}

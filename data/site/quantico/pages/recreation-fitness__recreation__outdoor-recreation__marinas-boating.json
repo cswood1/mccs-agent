@@ -1,0 +1,172 @@
+{
+  "title": "Marinas & Boating",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Quantico Marina is located just past the town of Quantico at the end of Potomac Avenue. We have 150 wet slips that can accommodate vessels 14 to 50 feet in length. The docks are floating wooden structures with finger piers. The Marina has a fuel dock with 89 octane unleaded pump out station and small convenience store with ice, drinks, and snacks. Boat rentals are available 15 May – 15 October. If you are renting a boat, please call ahead for weather conditions. Children must be six years old to be passengers on any rental boat."
+    },
+    {
+      "heading": "Services",
+      "level": 3,
+      "markdown": "- Private berthing\n- Dry Storage\n- Resale\n- Resources and services are available to Marines and families.\n- Programs designed to enhance and promote the mental and physical well-being of Service members and considered essential to sustaining readiness.\n\nThe Quantico Marina is located just past the town of Quantico at the end of Potomac Avenue. We have 150 wet slips that can accommodate vessels 14 to 50 feet in length. The docks are floating wooden structures with finger piers. The Marina has a small convenience store with ice, drinks and snacks.\n\nIf you are renting a boat please call ahead for weather conditions. Children must be 6 years old to be passengers on any rental boat. (Refund for weather or mechanical issues only.)\n\nVirginia requires all motorboat operators to take Certified Boat Safety Course. Please visit Virginia Department of Game & Inland Fisheries website at www.dgif.virginia.gov/boating or call 804-367-1000 for class schedules.\n\n**Fishing License Requirements**\n\nAnglers age 16 and older fishing these waters must have in their possession a Virginia freshwater fishing license per Virginia fishing regulations, available online at www.dgif.virginia.gov/fishing. All fisherman on Quantico must register for an account on https://quantico.isportsman.net/. All fishing licenses are purchased online. Please be advised that fisherman must checkin/checkout using the iSportsman online platform.\n\n**Waters on MCB Quantico**\n\nSmith Lake: Smith Lake Rd, Quantico, VA 22134\n\nQuantico Creek: Hospital Point Boat Ramp, Quantico, VA 22134\n\nBreckenridge Reservoir: New Breckenridge Road, Quantico, VA 22134\n\nChopawamsic Creek: Quantico Mainside by Marine Federal Credit Union\n\nPotomac River: Quantico Marina\n\nLunga Park: West side Quantico, Marine Base\n\n**Outdoor Gear does have rentals available for you to take to a body of water in Virginia. It includes kayaks, paddleboards, and more. Outdoor Gear is located at the Marina. Call for availability!**"
+    },
+    {
+      "heading": "Outdoor Gear Rentals:",
+      "level": 3,
+      "markdown": "Gear Issue offers a wide variety of outdoor recreation equipment to rent for recreational use on a daily or weekly basis. This provides Marines, Sailors, and families an opportunity to enjoy these recreational activities while avoiding the expense of purchasing these items they may not use on a regular basis. Items range from lawn games, canopies, canoes, kayaks, stand up paddleboards, bikes, and camping supplies. Gear and equipment are available for unit events FREE of charge through your MCCS Area Coordinator.\n\nCheckout Regulations:\n\nCheckout options include 24 hours, weekday (Mon-Thu), weekend (Fri-Mon), 7 days, and half-day.\n\n• Reservation may be made in advance with prepayment\n\n• Telephone reservations are accepted\n\n• Patrons turning in equipment late will be charged the allocated late fee"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Quantico Marina and Outdoor Gear",
+      "address": "100 Potomac Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "1-703-784-5718"
+        },
+        {
+          "label": "Alternate",
+          "number": "571-683-0784"
+        },
+        {
+          "label": "Main Line",
+          "number": "703-784-5718"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Regular Hours: May 15 – September 7",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8:30am – 4:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Seasonal Hours: September 8 – October 15, 2026",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8:30am – 4:00pm"
+            }
+          ]
+        },
+        {
+          "label": "Hours of Operation: October 16, 2026 – May 14, 2027",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:30am – 4:00pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "100 Potomac Ave, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52013395746883,-77.2860496457201"
+    },
+    {
+      "text": "www.dgif.virginia.gov/boating",
+      "url": "http://www.dgif.virginia.gov/boating"
+    },
+    {
+      "text": "804-367-1000",
+      "url": "tel:804-367-1000"
+    },
+    {
+      "text": "www.dgif.virginia.gov/fishing",
+      "url": "http://www.dgif.virginia.gov/fishing"
+    },
+    {
+      "text": "https://quantico.isportsman.net/",
+      "url": "https://quantico.isportsman.net/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marinas-boating",
+  "fetchedAt": "2026-10-26"
+}

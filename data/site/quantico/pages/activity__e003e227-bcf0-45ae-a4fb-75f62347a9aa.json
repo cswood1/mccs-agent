@@ -1,0 +1,59 @@
+{
+  "title": "SMP Thanksgiving Meal",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Enjoy a delicious holiday meal provided by **The Clubs at Quantico** and celebrate the spirit of Thanksgiving with fellow Marines.\n\nSeating is limited - tell a friend and reserve your spot today!\n\nDate: November 19\n\nTime: 11 AM - 1 PM\n\nLocation: Main Side Rec Center\n\nFor more information call 703.432.0363 or Email: MCCSQUANTICOSMP@USMC-MCCS.ORG\n\n[REGISTER ON EVENTBRITE](https://www.eventbrite.com/e/1999282068486?aff=oddtdtcreator)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Single Marine Program",
+      "address": "206 Nicholas Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.0363"
+        }
+      ],
+      "emails": [
+        "mccsquanticosmp@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "SMP Thanksgiving Meal",
+          "rows": [
+            {
+              "days": "Thursday, November 19, 2026",
+              "time": "11:00 AM - 1:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Single Marine Program",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522492304295625,-77.2987937289893"
+    },
+    {
+      "text": "REGISTER ON EVENTBRITE",
+      "url": "https://www.eventbrite.com/e/1999282068486?aff=oddtdtcreator"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/d4e390f18ece4db6a604d098c2660f75.jpg?m=638888117774230000",
+      "alt": "SMP Thanksgiving Meal"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/e003e227-bcf0-45ae-a4fb-75f62347a9aa",
+  "fetchedAt": "2026-10-26"
+}

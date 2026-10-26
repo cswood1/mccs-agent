@@ -1,0 +1,55 @@
+{
+  "title": "Intramural Basketball League Meeting",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Intramural Basketball Interest Meeting",
+      "level": 2,
+      "markdown": "Wednesday, December 9 | 11:30 AM - 12:30 PM\n\nBarber Physical Activity Center, Health Promotions Classroom\n\nLeague information will be discussed -- rules, structure, start date, schedule, etc.\n\nBasketball league is open to all active-duty, their dependents (18+) and DoD civilians aboard MCBQ.\n\nFor more information call, 703.432.1475"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Intramural Basketball League Meeting",
+      "address": "Barber Physical Activity Center\nBuilding 2073\nBarnett Ave\nQuantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.1475"
+        }
+      ],
+      "emails": [
+        "MCCSQUANTICOATHLETICS@USMC-MCCS.ORG"
+      ],
+      "hours": [
+        {
+          "label": "Date",
+          "rows": [
+            {
+              "days": "Wednesday, December 9, 2026",
+              "time": "11:30 AM - 12:30 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Barber Physical Activity Center Building 2073 Barnett Ave Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5164025,-77.3028067"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c151c7a5ec664060867a751ce4d78567.jpg?m=638949474758500000",
+      "alt": "Intramural Basketball League Meeting"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/662f557d-62b7-4c8e-a9cf-7f837165af88",
+  "fetchedAt": "2026-10-26"
+}

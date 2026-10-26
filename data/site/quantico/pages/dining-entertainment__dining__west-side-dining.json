@@ -1,0 +1,145 @@
+{
+  "title": "West Side Dining",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "West Side Dining",
+      "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/west-side-dining"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Bulldogs Burgers",
+      "address": "Montezuma Ave, Quantico, VA 22134",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Breakfast Hours",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "6:00am - 9:30am"
+            }
+          ]
+        },
+        {
+          "label": "Lunch Hours",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "10:30am - 2:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Hawkins Room",
+      "address": "24202 Montezuma Ave, Inside Lopez Hall, Quantico, VA 22134",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "4:00pm - 9:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Quigley's",
+      "address": "27402 Hot Patch Rd, Stafford, VA 22554",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703-432-6556"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "6:00am - 4:00pm"
+            },
+            {
+              "days": "Holidays",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Drive-thru open during normal hours of operation."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to Bulldogs Burgers",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.4989636,-77.441089"
+    },
+    {
+      "text": "Bulldog's Burgers Breakfast Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=22479678-3a49-4921-a225-a6b25fda5036"
+    },
+    {
+      "text": "Bulldog's Burgers Lunch Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=9b8eda80-0087-4928-ae95-8d62c86862f3"
+    },
+    {
+      "text": "Directions to Hawkins Room",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.49967017313313,-77.44047043777061"
+    },
+    {
+      "text": "Directions to Quigley's",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.5273072,-77.4121141"
+    },
+    {
+      "text": "Quigley's TBS Menu",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=b62d7a3a-5792-499e-85bc-77411a343ed5"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=7530a576-cf78-49f2-b446-20dab4f155cb&w=200&h=111&v=1",
+      "alt": "Bulldogs Burgers"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=cb29fadb-f56e-4c85-b659-493bd16b4f6a&w=200&h=56&v=1",
+      "alt": "Hawkins Room"
+    },
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/?do=thumb&id=06535a96-3460-4467-94f4-0eb60ea6a372&w=200&h=136&v=1",
+      "alt": "Quigley's"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/dining-entertainment/dining/west-side-dining",
+  "fetchedAt": "2026-10-26"
+}

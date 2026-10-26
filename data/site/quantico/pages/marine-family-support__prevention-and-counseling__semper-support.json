@@ -1,0 +1,83 @@
+{
+  "title": "Virtual Support for Marines & Their Families",
+  "breadcrumb": [],
+  "intro": "Marines and families face stress–in life, at work, in training, on deployments. Sometimes additional support, like counseling, is needed.",
+  "sections": [
+    {
+      "heading": "Free, Convenient, and Effective",
+      "level": 2,
+      "markdown": "Marines and their families are eligible to receive up 12 free, non-medical confidential counseling sessions per issue. Our goal is to provide short-term, solution-focused support. If you need longer-term care or specialized services, your counselor will provide appropriate referrals to ensure you get the help you need.\n\nSemper Support provides access to counseling for service members, as well as their families, who are geographically dispersed and/or those who may experience barriers to in-person counseling services."
+    },
+    {
+      "heading": "Confidential Support for Life's Challenges",
+      "level": 2,
+      "markdown": "Marine leaders and their unit's Operational Stress Control and Readiness (OSCAR) team members provide critical mentorship and support. Sometimes other support – like non-medical counseling - is needed.\n\nSemper Support provides virtual, non-medical counseling and referrals for Marines and their families to address stressful situations. Our counselors provide help and resources to better manage life stressors and challenges while improving mission readiness, resilience, and well-being."
+    },
+    {
+      "heading": "The Right Help at the Right Time",
+      "level": 2,
+      "markdown": "Your safety is our priority. While Semper Support is not a crisis hotline, our trained counselors will make a warm handoff to the appropriate emergency services or crisis resources if you are in immediate danger."
+    },
+    {
+      "heading": "Frequently Asked Questions (FAQs)",
+      "level": 2,
+      "markdown": "Find answers to commonly asked questions."
+    },
+    {
+      "heading": "How do I access Semper Support?",
+      "level": 3,
+      "markdown": "Contact Semper Support worldwide at 800-342-9647, or visit [https://www.militaryonesource.mil/benefits/marine-corps-semper-support/](https://www.militaryonesource.mil/benefits/marine-corps-semper-support/)."
+    },
+    {
+      "heading": "Who is eligible for Semper Support?",
+      "level": 3,
+      "markdown": "- Active-duty Marines and their immediate family members.\n- Reserve Marines (regardless of activation status) and their immediate family members who are listed in DEERS.\n- Designated Department of Defense expeditionary civilians and their immediate family members.\n- Marines and their immediate family members who are listed in DEERS for 365 days post-separation.\n- Surviving spouses who have not remarried and surviving children who are listed in DEERS."
+    },
+    {
+      "heading": "How many counseling sessions are typically provided through Semper Support?",
+      "level": 3,
+      "markdown": "Semper Support typically provides up 12 free counseling sessions."
+    },
+    {
+      "heading": "Do I need an appointment to access Semper Support?",
+      "level": 3,
+      "markdown": "No appointment is needed to reach out for counseling. The Semper Support team will work with you to find the best time for counseling sessions."
+    },
+    {
+      "heading": "Is there a fee for using this service?",
+      "level": 3,
+      "markdown": "No, this is a free service."
+    },
+    {
+      "heading": "Why is Semper Support important for the Marine Corps?",
+      "level": 3,
+      "markdown": "Semper Support provides access to counseling for service members and their families who are geographically dispersed and/or those who may experience barriers to in-person counseling services. Semper Support enhances readiness, resilience, and total fitness, which are all crucial for mission success."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Semper Support",
+      "address": "",
+      "phones": [
+        {
+          "label": "Worldwide",
+          "number": "800-342-9647"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "https://www.militaryonesource.mil/benefits/marine-corps-semper-support/",
+      "url": "https://www.militaryonesource.mil/benefits/marine-corps-semper-support/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Two clickable elements (phone icon and live chat icon) displayed as images above the FAQ section; actual clickable links rendered as image assets rather than text links",
+  "url": "https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/semper-support",
+  "fetchedAt": "2026-10-26"
+}

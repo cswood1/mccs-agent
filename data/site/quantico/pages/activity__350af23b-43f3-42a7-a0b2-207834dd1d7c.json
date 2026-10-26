@@ -1,0 +1,50 @@
+{
+  "title": "TCAQ - First Friday",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Date**\n\nFriday, December 4, 2026\n\n**Time**\n\n3:00 PM - 8:00 PM\n\n**Address**\n\n[The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777)\n\n**Contact**\n\nPhone: [703.784.4264](tel:703.784.4264)\n\n**First Friday**\n\nOfficers/Staff NCO and their civilian counterparts come together to strengthen camaraderie and foster esprit de corps.\n\nComplimentary appetizers and non-alcoholic beverages for the first 30 minutes.\n\nThis event occurs on the first Friday of each month.\n\nWhere: Officer/SNCO Bar at The Clubs at Quantico\n\nFor more information call, 703.784.4264."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "Event occurs on the first Friday of each month",
+        "Complimentary appetizers and non-alcoholic beverages for first 30 minutes"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico, 3017 Russell Rd, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "703.784.4264",
+      "url": "tel:703.784.4264"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/41c3e9dcfe3d46d48562c3d9d9703f37_w433_h243.jpg?m=638840528289630000",
+      "alt": "TCAQ - First Friday"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/350af23b-43f3-42a7-a0b2-207834dd1d7c",
+  "fetchedAt": "2026-10-26"
+}

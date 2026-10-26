@@ -1,0 +1,61 @@
+{
+  "title": "TCAQ - Troop Appreciation",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**The popular TROOP APPRECIATION is every third Wednesday of each month.**\n\nStop by The Clubs for a chance to unwind, relax, and socialize with fellow Active Duty and Reservists.\n\nLocation: Officer/SNCO Bar at The Clubs\n\nEnjoy FREE appetizers until 4:30 PM. Spirits are also available for purchase."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Event Time",
+          "rows": [
+            {
+              "days": "Wednesday, November 18, 2026",
+              "time": "4:00 PM - 8:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico 3017 Russell Rd Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "Facebook",
+      "url": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fquantico.usmc-mccs.org%2Factivity%2F4120b2f7-e2b1-4e2f-b70d-5772679886f0"
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/intent/tweet?text=https%3A%2F%2Fquantico.usmc-mccs.org%2Factivity%2F4120b2f7-e2b1-4e2f-b70d-5772679886f0"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/784a8aa1c4ef4a01b7e8f9b6e789476e_w433_h243.jpg?m=638857021168470000",
+      "alt": "TCAQ - Troop Appreciation"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/4120b2f7-e2b1-4e2f-b70d-5772679886f0",
+  "fetchedAt": "2026-10-26"
+}

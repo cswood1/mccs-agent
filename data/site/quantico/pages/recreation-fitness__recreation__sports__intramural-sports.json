@@ -1,0 +1,88 @@
+{
+  "title": "Intramural Sports",
+  "breadcrumb": [],
+  "intro": "The Intramural Sports program offers a comprehensive range of team sports to promote a healthy lifestyle for Active Duty, family members and DoD civilians aboard the base of Quantico.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Intramural Sports provides a variety of athletic activities in which everyone can participate regardless of physical ability. The program is designed to provide the opportunity to keep mentally alert and physically fit in a comfortable, relaxed social and recreational atmosphere during their leisure time.\n\nUnits can compete for the Annual Commanders Cup Award. Leagues include softball, flag football, basketball, soccer, and special competitions. League offerings may vary.\n\n**Athletics Eligibility**\n\nThe Marine Corps Base, Quantico Athletics program guarantees to provide a comprehensive range of individual and team sports for both men and women with an emphasis placed on mass participation. It is designed to provide programs that assist Marines in maintaining morale and esprit de corps while keeping mentally alert and physically fit. In addition, the program fulfills the leisure time needs of interested military personnel, their family members, and DoD civilians through recreational and competitive activities.\n\n**Event General Dates**\n\n* Basketball January-March\n* Soccer April-June\n* Ultimate Frisbee April-June\n* Softball June-August\n* Flag Football September-December\n* Volleyball (Postponed)"
+    },
+    {
+      "heading": "Upcoming Events",
+      "level": 2,
+      "markdown": "[Intramural Basketball League Meeting](/activity/662f557d-62b7-4c8e-a9cf-7f837165af88) - Dec 9, 11:30am - 12:30pm at Barber Physical Activity Center"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 2,
+      "markdown": "**Intramural Sports**\n\nAddress: [2073 Barnett Ave, Quantico, VA 22134](https://www.google.com/maps/search/?api=1&query=38.51686663381788,-77.30264438588354)\n\nPhone: [7034321475](tel:7034321475)\n\nEmail: [MCCSQuanticoAthletics@usmc-mccs.org](mailto:MCCSQuanticoAthletics@usmc-mccs.org)\n\n**Hours of operation:**\n\nMonday-Friday: 8:00am - 5:00pm\n\n**Resource Downloads**\n\n[2025-Newsletter.pdf](/modules/media/?do=inline&id=9c7f938c-53c2-4a90-b600-f3ecb8de6704&v=1)\n\n[Intramural-Free-Agent-Form.pdf](/modules/media/?do=inline&id=97b653f5-f64a-4bdd-9150-bc59a7f59e4a&v=1)\n\n[Intramural-Registration-Form Submit.pdf](/modules/media/?do=inline&id=4e444167-3491-4b2e-8a2d-200e27c0733a&v=1)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Intramural Basketball League Meeting",
+      "url": "https://quantico.usmc-mccs.org/activity/662f557d-62b7-4c8e-a9cf-7f837165af88",
+      "text": "Dec 9, 11:30am - 12:30pm at Barber Physical Activity Center",
+      "image": "https://quantico.usmc-mccs.org/modules/media/t/c151c7a5ec664060867a751ce4d78567.jpg?m=638949474758500000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Intramural Sports",
+      "address": "2073 Barnett Ave, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "",
+          "number": "7034321475"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoAthletics@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "8:00am - 5:00pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "2025-Newsletter.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=9c7f938c-53c2-4a90-b600-f3ecb8de6704&v=1"
+    },
+    {
+      "text": "Intramural-Free-Agent-Form.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=97b653f5-f64a-4bdd-9150-bc59a7f59e4a&v=1"
+    },
+    {
+      "text": "Intramural-Registration-Form Submit.pdf",
+      "url": "https://quantico.usmc-mccs.org/modules/media/?do=inline&id=4e444167-3491-4b2e-8a2d-200e27c0733a&v=1"
+    },
+    {
+      "text": "Intramural Basketball League Meeting",
+      "url": "https://quantico.usmc-mccs.org/activity/662f557d-62b7-4c8e-a9cf-7f837165af88"
+    },
+    {
+      "text": "2073 Barnett Ave, Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51686663381788,-77.30264438588354"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c151c7a5ec664060867a751ce4d78567.jpg?m=638949474758500000",
+      "alt": "Intramural Basketball League Meeting"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/intramural-sports",
+  "fetchedAt": "2026-10-26"
+}

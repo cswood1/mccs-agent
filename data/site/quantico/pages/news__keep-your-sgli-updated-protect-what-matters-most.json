@@ -1,0 +1,82 @@
+{
+  "title": "Keep Your SGLI Updated: Protect What Matters Most",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Servicemembers' Group Life Insurance (SGLI) provides low-cost term life insurance coverage to [eligible Marines](https://www.va.gov/life-insurance/options-eligibility/sgli/)—up to $500,000 automatically as of March 1, 2023. Yet, 1 in 5 Marines have never accessed the [SGLI Online Enrollment System (SOES)](https://milconnect.dmdc.osd.mil/milconnect/) to confirm or update their elections.\n\nMarines can log into SOES 24/7 through [milConnect](https://milconnect.dmdc.osd.mil/milconnect/) using a CAC or DS logon. Once logged in, click the blue \"manage my SGLI\" button to:\n\n* Update beneficiary information.\n* Modify coverage amounts.\n* Review and verify your current policy.\n\n**Tip:** Log in every two years or after any major life events (like marriage, divorce, or a new child).\n\n**Married to Another Service Member?**\n\nMake sure your marital status is updated in DEERS. If not, you won't be able to make SGLI elections or access FAMILY SGLI in SOES.\n\n**Command Responsibility**\n\nCommanders must ensure Marines:\n\n1. Access SOES.\n2. Make an election.\n3. Click \"Confirm and Certify\" before exiting.\n\nAll eligible Marines are automatically enrolled in maximum SGLI coverage. Marines have one calendar month to reduce or decline the increased coverage without being charged if your previously elected less or no coverage.\n\nSee [MARADMIN 097/23](https://www.marines.mil/News/Messages/Messages-Display/Article/3303990/guidance-for-servicemembers-group-life-insurance-increase-to-500000-dollars/) for full details.\n\n**Need Help?**\n\nContact HQMC Casualty Assistance\n(800) 847-1597\n[casualty.section@usmc.mil](mailto:casualty.section@usmc.mil)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "When Should You Sign Your Child Up for Swim Lessons?",
+      "url": "https://quantico.usmc-mccs.org/news/when-should-you-sign-your-child-up-for-swim-lessons",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Emotional Support for Caregivers",
+      "url": "https://quantico.usmc-mccs.org/news/emotional-support-for-caregivers",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Make The Time",
+      "url": "https://quantico.usmc-mccs.org/news/make-the-time",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Camp Lejeune's School Liaison Officer Loves Serving Marine Parents and Students",
+      "url": "https://quantico.usmc-mccs.org/news/camp-lejeune-s-school-liaison-officer-loves-serving-marine-parents-and-students",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "HQMC Casualty Assistance",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "(800) 847-1597"
+        }
+      ],
+      "emails": [
+        "casualty.section@usmc.mil"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "eligible Marines",
+      "url": "https://www.va.gov/life-insurance/options-eligibility/sgli/"
+    },
+    {
+      "text": "SGLI Online Enrollment System (SOES)",
+      "url": "https://milconnect.dmdc.osd.mil/milconnect/"
+    },
+    {
+      "text": "milConnect",
+      "url": "https://milconnect.dmdc.osd.mil/milconnect/"
+    },
+    {
+      "text": "MARADMIN 097/23",
+      "url": "https://www.marines.mil/News/Messages/Messages-Display/Article/3303990/guidance-for-servicemembers-group-life-insurance-increase-to-500000-dollars/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/02ce0743a5524105a1dd342dc44392ff.png?m=638822317371600000",
+      "alt": "Keep Your SGLI Updated: Protect What Matters Most"
+    }
+  ],
+  "notCaptured": "Audio player control visible but content not extractable",
+  "url": "https://quantico.usmc-mccs.org/news/keep-your-sgli-updated-protect-what-matters-most",
+  "fetchedAt": "2026-10-26"
+}

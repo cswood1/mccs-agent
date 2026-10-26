@@ -1,0 +1,57 @@
+{
+  "title": "MSRC Sunday Night Football Watch Party",
+  "breadcrumb": [],
+  "intro": "Active Duty Marines! Sunday Night Football at the Main Side Rec Center. Every Sunday. Big screen, good company, zero stress. Be there.",
+  "sections": [
+    {
+      "heading": "Sunday Night Football Watch Party!",
+      "level": 2,
+      "markdown": "Active Duty Marines! Sunday Night Football at the Main Side Rec Center. Every Sunday. Big screen, good company, zero stress. Be there.\n\nBRING YOUR OWN SNACKS AND DRINKS!\n\nIf you have any questions, please call MSRC at 703.432.0363\n\nNeed transportation to/from the Rec Center? We've got wheels! Call 703.432.0363 for a ride.\n\nThe Main Side Recreation Center is open to all active duty service members. Opens daily at 10:00 AM.\n\n[Sign up on Eventbrite](https://www.eventbrite.com/o/40555282583)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Main Side Rec Center",
+      "address": "206 Nicholas Rd, Quantico, Virginia 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.432.0363"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday, November 1, 2026 Every Sunday",
+              "time": "10:00 AM - 8:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Main Side Rec Center 206 Nicholas Rd Quantico, Virginia 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.522560877074255,-77.2986739"
+    },
+    {
+      "text": "Sign up on Eventbrite",
+      "url": "https://www.eventbrite.com/o/40555282583"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/3958b4460a07432d8b516efa020f4b6a_w433_h243.jpg?m=638929502549300000",
+      "alt": "MSRC Sunday Night Football Watch Party"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/817f81d3-8f03-498b-a31b-2cb21384c8bf",
+  "fetchedAt": "2026-10-26"
+}

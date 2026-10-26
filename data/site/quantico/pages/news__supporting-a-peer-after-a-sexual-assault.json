@@ -1,0 +1,19 @@
+{
+  "title": "",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 2,
+      "markdown": "# Marine Corps Community Services - Quantico\n\n## Welcome\n\nThe page opens with a greeting welcoming visitors to Marine Corps Community Services, encouraging them to browse through the many programs and services offered.\n\n## Main Navigation Sections\n\nThe site is organized into several key service categories:\n\n**Recreation & Services** includes recreation and fitness options, with subsections for indoor/outdoor recreation, swimming, and sports, plus fitness programs and health/wellness education.\n\n**Marine & Family Support** encompasses child and youth services, military family life programs, counseling and prevention services, transition readiness, and voluntary education opportunities.\n\n**Hospitality & Shopping** features lodging options, the Marine Corps Exchange, commissary, dining, and entertainment venues.\n\n**Discover More** provides access to additional services like automotive care, barber services, and links to resources such as customer feedback channels and the Marine Corps Marathon.\n\n## Additional Content\n\nThe page highlights \"Other Stories\" including topics like \"Preparing for Deployment,\" \"ABCs of Baby Sleep,\" and \"Goal Setting for Growth.\"\n\n## Mission Statement\n\nThe organization describes itself as \"Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\"\n\n## Crisis Resources\n\nThe page prominently features the Military/Veterans Crisis Line accessible by dialing 988."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "structured extraction failed; body saved as markdown. Both WebFetch attempts (structured JSON prompt and plain markdown prompt) returned only generic site-wide navigation/footer boilerplate (menu categories, footer links, mission statement, crisis line) with no article-specific title, byline, or body text. The actual news article content for this URL could not be retrieved; it may require JS rendering or the content may not exist/have been removed.",
+  "url": "https://quantico.usmc-mccs.org/news/supporting-a-peer-after-a-sexual-assault",
+  "fetchedAt": "2026-10-26"
+}

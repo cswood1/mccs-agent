@@ -1,0 +1,78 @@
+{
+  "title": "FAP Seven Principles for Making Marriage Work",
+  "breadcrumb": [],
+  "intro": "Learn to apply the seven principles of marriage, increase respect and appreciation, address perpetual problems with conflict resolution skills, and build a shared sense of purpose and values in your relationship.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Suited for couples who are contemplating marriage all the way to couples who have been married for many years and are seeking to deepen their relationship.\n\nInappropriate for couples that have severe relational distress or where emotional/physical abuse is present or where severe mental health/substance use issues are present."
+    },
+    {
+      "heading": "2026 Dates",
+      "level": 3,
+      "markdown": "October 30 | 9 AM - 4 PM"
+    },
+    {
+      "heading": "2027 Dates",
+      "level": 3,
+      "markdown": "February 12 | 9 AM - 4 PM\nMay 14 | 9 AM - 4 PM\nAugust 20 | 9 AM - 4 PM"
+    },
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "For more information or to register, call [703.784.2570](tel:703.784.2570)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Family Advocacy Program",
+      "address": "2034 Barnett Ave, Lower Level, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.2570"
+        }
+      ],
+      "emails": [
+        "MCCSQuanticoFAP@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Event Time",
+          "rows": [
+            {
+              "days": "Friday, October 30, 2026",
+              "time": "9:00 AM - 4:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "703.784.2570",
+      "url": "tel:703.784.2570"
+    },
+    {
+      "text": "MCCSQuanticoFAP@usmc.mil",
+      "url": "mailto:MCCSQuanticoFAP@usmc.mil"
+    },
+    {
+      "text": "Family Advocacy Program 2034 Barnett Ave Lower Level Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.52209863693904,-77.29528782533997"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c91555b40152497396541feffb0f286e_w433_h243.jpg?m=638888096427200000",
+      "alt": "FAP Seven Principles for Making Marriage Work"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/49ca4507-d036-4f87-a322-a0f142c124c9",
+  "fetchedAt": "2026-10-26"
+}

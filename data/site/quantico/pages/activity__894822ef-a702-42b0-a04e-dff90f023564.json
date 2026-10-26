@@ -1,0 +1,57 @@
+{
+  "title": "TCAQ - Thanksgiving Champagne Brunch",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Join The Clubs for a lavish Thanksgiving Champagne Brunch buffet. Enjoy a variety of breakfast classics and traditional Thanksgiving favorites. Also featuring a New York Striploin Carving Station, made-to-order omelet station, and a delectable assortment of desserts.\n\nFour seatings between 10:00 AM - 2:00 PM\n\n**Cost:**\n- Adults, ages 13 and older: $39.00\n- Children, ages 4-12: $19.50\n- Children, ages 0-3: FREE\n\n**Please note:** All ticket purchases are subject to Eventbrite service and processing fees. These fees are visible before checkout – displayed alongside ticket prices – and are non-refundable.\n\n[TICKETS ON EVENTBRITE](https://www.eventbrite.com/e/thanksgiving-champagne-brunch-at-the-clubs-at-quantico-tickets-1998989851457?aff=oddtdtcreator)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Event Date & Time",
+          "rows": [
+            {
+              "days": "Thursday, November 26, 2026",
+              "time": "10:00 AM - 2:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico 3017 Russell Rd Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    },
+    {
+      "text": "TICKETS ON EVENTBRITE",
+      "url": "https://www.eventbrite.com/e/thanksgiving-champagne-brunch-at-the-clubs-at-quantico-tickets-1998989851457?aff=oddtdtcreator"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c8b92a5277834f8a9c83a86a028dba62_w433_h243.jpg?m=638967440599570000",
+      "alt": "TCAQ - Thanksgiving Champagne Brunch"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/894822ef-a702-42b0-a04e-dff90f023564",
+  "fetchedAt": "2026-10-26"
+}

@@ -1,0 +1,53 @@
+{
+  "title": "TCAQ - Bosses' Night",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Join us for the popular BOSSES' NIGHT on the first Wednesday of each month.**\n\nCome unwind, have a drink, and have a laugh with co-workers.\n\nLocation: Officer/SNCO Bar at The Clubs\n\nEnjoy FREE appetizers until 4:30 PM. Spirits also available for purchase."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Clubs at Quantico",
+      "address": "3017 Russell Rd, Quantico, VA 22134",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "703.784.4264"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Event Date & Time",
+          "rows": [
+            {
+              "days": "Wednesday, November 4, 2026",
+              "time": "4:00 PM - 8:00 PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "The Clubs at Quantico 3017 Russell Rd Quantico, VA 22134",
+      "url": "https://www.google.com/maps/search/?api=1&query=38.51022301434779,-77.31061124440777"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c5985a6b11d54dcea2b11641a0ae08e7.jpg?m=638844904452970000",
+      "alt": "TCAQ - Bosses' Night"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/activity/77985b05-8678-4a77-9ac5-34cd537999d7",
+  "fetchedAt": "2026-10-26"
+}

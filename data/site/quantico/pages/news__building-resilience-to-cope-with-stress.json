@@ -1,0 +1,54 @@
+{
+  "title": "Building Resilience to Cope with Stress",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The organization is committed to \"Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Early Intervention Prevents Future Crisis",
+      "url": "https://quantico.usmc-mccs.org/news/early-intervention-prevents-future-crisis",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Find Your People: Support Resources for Military Families",
+      "url": "https://quantico.usmc-mccs.org/news/find-your-people-support-resources-for-military-families",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Drive Sober This December",
+      "url": "https://quantico.usmc-mccs.org/news/drive-sober-this-december",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Life Skills Build Purpose and Strength",
+      "url": "https://quantico.usmc-mccs.org/news/life-skills-build-purpose-and-strength",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/e23c7213a8de466dbb41cbbc9fad3132.jpg?m=638848241455930000",
+      "alt": "Building Resilience to Cope with Stress"
+    }
+  ],
+  "notCaptured": "Page (published 11 Aug 2025) has no actual article body beyond the hero image and standard MCCS tagline; only related 'Other Stories' teaser links are present. Confirmed via a second fetch attempt.",
+  "url": "https://quantico.usmc-mccs.org/news/building-resilience-to-cope-with-stress",
+  "fetchedAt": "2026-10-26"
+}

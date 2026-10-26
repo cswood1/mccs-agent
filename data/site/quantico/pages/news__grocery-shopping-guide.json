@@ -1,0 +1,58 @@
+{
+  "title": "Grocery Shopping Guide",
+  "breadcrumb": [],
+  "intro": "Grocery shopping doesn't have to be intimidating. Planning your weekly meals can reduce stress and help you save money by buying only what you'll use, minimizing food waste. Start by focusing on four dinners throughout the week, allowing flexibility for dining out or leftovers.",
+  "sections": [
+    {
+      "heading": "What To Buy When Shopping and Meal Planning",
+      "level": 2,
+      "markdown": "**Produce:** Fresh produce is packed with nutrients but can perish quickly, so buy only what you need for the week. Opt for in-season fruits and vegetables to keep costs low. Remember, frozen and canned produce can be just as nutritious since they are harvested and processed at peak freshness.\n\n**Lean Proteins:** Proteins are typically the priciest items on your list. Stay on budget by choosing budget-friendly cuts (like roasts and loins), buying in bulk (to freeze for later), and selecting items on sale. Lean proteins help reduce saturated fat intake while supporting heart health. Incorporating beans and legumes can also increase meal volume and provide a budget-friendly protein source.\n\n**Whole Grains:** Incorporating brown rice, quinoa, whole wheat pasta, and oats adds fiber to your diet, promoting satiety and stable energy levels. Ensure the label reads \"whole grains\" for genuine options.\n\n**Healthy Fats:** Healthy fats like avocados, nuts, seeds, olive oil, and fatty fish (like salmon) are crucial for overall health and can enhance meal variety.\n\n**Dairy or dairy alternatives:** Dairy provides calcium, vitamin D, and probiotics, along with quick protein. Opt for low-fat or skim options to reduce calories and saturated fat, as well as options that are fortified with essential nutrients like calcium and vitamin D if you're choosing almond milk or other milk alternatives for dietary reasons. Don't overlook store-brand choices for savings.\n\nWith this plan, grocery shopping can be efficient, budget-friendly, and nutritious. To learn more about developing healthy habits, connect with your local [fitness](https://www.usmc-mccs.org/recreation-fitness/fitness) team."
+    }
+  ],
+  "cards": [
+    {
+      "title": "\"Dripping\" –A New Version of Vaping Among Teenagers",
+      "url": "https://quantico.usmc-mccs.org/news/dripping-a-new-version-of-vaping-among-teenagers",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Strategies to Improve Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/strategies-to-improve-sleep",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Dangers of Limited Sleep",
+      "url": "https://quantico.usmc-mccs.org/news/dangers-of-limited-sleep",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Routines that Help",
+      "url": "https://quantico.usmc-mccs.org/news/routines-that-help",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "fitness",
+      "url": "https://www.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/27a4a7644c4e4fb0b10f626bde4151de.png?m=638749739813870000",
+      "alt": "Grocery Shopping Guide"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://quantico.usmc-mccs.org/news/grocery-shopping-guide",
+  "fetchedAt": "2026-10-26"
+}

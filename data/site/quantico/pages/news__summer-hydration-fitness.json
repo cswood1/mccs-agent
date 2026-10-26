@@ -1,0 +1,54 @@
+{
+  "title": "Summer Hydration Fitness",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![Summer Hydration Fitness](https://quantico.usmc-mccs.org/modules/media/t/c8436d549d314dbbb7c17ef791afc24f.jpg?m=639100542980370000)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "2026 USMC Sleep Challenge March 2-13, 2026",
+      "url": "https://quantico.usmc-mccs.org/news/2026-usmc-sleep-challenge-march-2-13-2026",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Shape the Next Generation as a Youth Sports Coach",
+      "url": "https://quantico.usmc-mccs.org/news/shape-the-next-generation-as-a-youth-sports-coach",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Fueling the Mission: A Tactical Guide to Grocery Shopping",
+      "url": "https://quantico.usmc-mccs.org/news/fueling-the-mission-a-tactical-guide-to-grocery-shopping",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Get Back in the Fight: Athletic Training for Warrior Athletes",
+      "url": "https://quantico.usmc-mccs.org/news/get-back-in-the-fight-athletic-training-for-warrior-athletes",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/c8436d549d314dbbb7c17ef791afc24f.jpg?m=639100542980370000",
+      "alt": "Summer Hydration Fitness"
+    }
+  ],
+  "notCaptured": "Main content image appears to be a promotional graphic for Summer Hydration Fitness program; no descriptive text accompanies the image on this page.",
+  "url": "https://quantico.usmc-mccs.org/news/summer-hydration-fitness",
+  "fetchedAt": "2026-10-26"
+}

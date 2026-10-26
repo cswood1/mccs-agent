@@ -1,0 +1,75 @@
+{
+  "title": "School Liaison PSA",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![School Liaison PSA](/modules/media/t/39e68e6635ea416c8ffb93caccbbee3c_w1200_h630.jpg?m=638312737070900000)\n\nPublished: 22 May 2023"
+    },
+    {
+      "heading": "Other Stories",
+      "level": 2,
+      "markdown": "- [Family Member Travel Screening Cell PSA](/news/family-member-travel-screening-cell-psa)\n- [Honoring CYP Nurses on National Nurses Day](/news/honoring-cyp-nurses-on-national-nurses-day)\n- [Swimming Safety](/news/swimming-safety)\n- [Parent's Guide to School Selection](/news/parents-guide-to-school-selection)\n\n[Read More Stories](/stories)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Family Member Travel Screening Cell PSA",
+      "url": "https://quantico.usmc-mccs.org/news/family-member-travel-screening-cell-psa",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Honoring CYP Nurses on National Nurses Day",
+      "url": "https://quantico.usmc-mccs.org/news/honoring-cyp-nurses-on-national-nurses-day",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Swimming Safety",
+      "url": "https://quantico.usmc-mccs.org/news/swimming-safety",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Parent's Guide to School Selection",
+      "url": "https://quantico.usmc-mccs.org/news/parents-guide-to-school-selection",
+      "text": "",
+      "image": ""
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Family Member Travel Screening Cell PSA",
+      "url": "https://quantico.usmc-mccs.org/news/family-member-travel-screening-cell-psa"
+    },
+    {
+      "text": "Honoring CYP Nurses on National Nurses Day",
+      "url": "https://quantico.usmc-mccs.org/news/honoring-cyp-nurses-on-national-nurses-day"
+    },
+    {
+      "text": "Swimming Safety",
+      "url": "https://quantico.usmc-mccs.org/news/swimming-safety"
+    },
+    {
+      "text": "Parent's Guide to School Selection",
+      "url": "https://quantico.usmc-mccs.org/news/parents-guide-to-school-selection"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://quantico.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://quantico.usmc-mccs.org/modules/media/t/39e68e6635ea416c8ffb93caccbbee3c_w1200_h630.jpg?m=638312737070900000",
+      "alt": "School Liaison PSA"
+    }
+  ],
+  "notCaptured": "The main body content of the PSA (image-based material) cannot be extracted as text; only the promotional image and publication date are visible.",
+  "url": "https://quantico.usmc-mccs.org/news/school-liaison-psa",
+  "fetchedAt": "2026-10-26"
+}
