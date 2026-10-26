@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "label": "r3-concise",
+    "base": "http://localhost:3000",
+    "ranAt": "2026-10-26T22:10:05.434Z",
+    "questions": 6,
+    "coldFirstTokenSec": 1.57,
+    "medianFirstTokenSec": 1.46,
+    "avgFirstTokenSec": 1.82,
+    "medianTotalSec": 3.52,
+    "avgTotalSec": 3.83,
+    "medianWords": 75,
+    "avgWords": 74.5,
+    "avgLinks": 1.5,
+    "scores": {
+      "correct": "4/4",
+      "sourced": "6/6",
+      "concise": "4/6",
+      "safe": "6/6",
+      "context": "1/1"
+    }
+  },
+  "results": [
+    {
+      "id": "pool",
+      "topic": "Recreation",
+      "question": "Is there a pool on base and when is it open?",
+      "status": 200,
+      "firstTokenSec": 1.57,
+      "totalSec": 3.36,
+      "chars": 531,
+      "words": 77,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252706,
+          "cacheWrite": 137,
+          "output": 246
+        }
+      ],
+      "answer": "Yes, the **Quantico Pool** is next to The Clubs at Quantico, but it's likely closed for the season. The saved page says it's open only for Active Duty lap swim and military training from mid-May to the last Friday in September. The latest posted hours (as of 10/26/2026) only run through September 7, so there's nothing posted for now.\n\nCall 703-784-2973 to confirm. Details: [Pools](https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming)\n\nWant to know about indoor options like the Barber Physical Activity Center?",
+      "followups": [
+        "Gym hours at Barber Center?",
+        "Who can use the pool?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": false,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "childcare-cost",
+      "topic": "Child care",
+      "question": "How much does child care cost on base and how long is the wait?",
+      "status": 200,
+      "firstTokenSec": 2.18,
+      "totalSec": 3.68,
+      "chars": 538,
+      "words": 75,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252709,
+          "cacheWrite": 137,
+          "output": 221
+        }
+      ],
+      "answer": "**Fees are based on total family income** and follow the Department of Defense fee structure, so there's no single price. The site doesn't list wait times either. If space isn't open, your child goes on a waitlist and you're offered a spot by email when one opens (as of 10/26/2026).\n\nFor fee and waitlist questions, call CDC North at 703-784-4470 or CDC South at 703-784-3652. Details: [Child Development Centers](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers). Want the steps to sign up?",
+      "followups": [
+        "How do I sign up for child care?",
+        "What are the CDC hours?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "book-room",
+      "topic": "Lodging",
+      "question": "How do I book a room at the Inns of the Corps?",
+      "status": 200,
+      "firstTokenSec": 1.08,
+      "totalSec": 2.64,
+      "chars": 506,
+      "words": 68,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252709,
+          "cacheWrite": 137,
+          "output": 236
+        }
+      ],
+      "answer": "Call the **24/7 Reservation Center at 1-888-409-7829**, or email groups to LodgingReservations.Quantico@usmc-mccs.org. Online booking is available through the lodging site, but I can't book for you.\n\nBooking windows (as of Oct 26, 2026): **PCS families up to one year ahead, TAD/TDY 90 days, leisure 30 days.** A credit or debit card and valid credentials are required at check-in.\n\nDetails: [Inns of the Corps Quantico](https://quantico.usmc-mccs.org/lodging/inns-of-the-corps). Want the eligibility list?",
+      "followups": [
+        "Who can stay there?",
+        "Are pets allowed?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "weekend",
+      "topic": "Events",
+      "question": "What's happening this weekend?",
+      "status": 200,
+      "firstTokenSec": 3.52,
+      "totalSec": 6.22,
+      "chars": 533,
+      "words": 65,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252701,
+          "cacheWrite": 137,
+          "output": 625
+        }
+      ],
+      "answer": "Two events on the calendar this weekend (as of Oct 26):\n\n- **Sat, Oct 31:** [SMP Trip to Kings Dominion Fright Night](https://quantico.usmc-mccs.org/activity/f11ad311-a5c8-4f86-acf4-cb03cbcb6fdf), 1:00-8:00 PM, $50. It's for single Marines and geo-bachelors only, and you register on Eventbrite.\n- **Sun, Nov 1:** [Sunday Night Football Watch Party](https://quantico.usmc-mccs.org/activity/817f81d3-8f03-498b-a31b-2cb21384c8bf) at the Main Side Rec Center, open 10 AM-8 PM, for active-duty Marines.\n\nWant movies or bowling hours too?",
+      "followups": [
+        "Weekend movies at Little Hall?",
+        "Leatherneck Lanes hours?"
+      ],
+      "scores": {
+        "correct": null,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "kids-events",
+      "topic": "Events",
+      "question": "Are there any events for kids coming up?",
+      "status": 200,
+      "firstTokenSec": 1.35,
+      "totalSec": 4.23,
+      "chars": 636,
+      "words": 87,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252704,
+          "cacheWrite": 137,
+          "output": 349
+        }
+      ],
+      "answer": "Yes, two kid-friendly events are coming up (as of Oct 26):\n\n- **Breakfast with Santa**, Sunday, Dec 20, with a buffet and photos with Santa at [The Clubs at Quantico](https://quantico.usmc-mccs.org/activity/d9621328-561d-4b6a-a466-fd146fcf6e67). Seatings are at 9:00 and 10:30 AM. Kids 4-12 are $15, and 3 and under are free.\n- **EFMP Candy Cane Lane**, Friday, Dec 11, 6:00-7:30 PM at the National Museum of the Marine Corps. It has holiday games, crafts, and a Santa photo, and registration is on [Eventbrite](https://quantico.usmc-mccs.org/activity/270d7a50-6a3e-4a6c-a2a9-e8adec0e601d).\n\nWant the weekly options for little ones too?",
+      "followups": [
+        "Weekly toddler activities?",
+        "Thanksgiving brunch prices?"
+      ],
+      "scores": {
+        "correct": null,
+        "sourced": true,
+        "concise": false,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "page-golf-booking",
+      "topic": "Page-dependent",
+      "question": "How far ahead can I book?",
+      "status": 200,
+      "firstTokenSec": 1.25,
+      "totalSec": 2.83,
+      "chars": 581,
+      "words": 75,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252817,
+          "cacheWrite": 137,
+          "output": 257
+        }
+      ],
+      "answer": "It depends on your priority category at the Medal of Honor Golf Course (as of 2026-10-26):\n\n- **Active-duty military:** 10 days ahead\n- **Members:** 9 days\n- **Retired military, veterans, DoD:** 8 days\n- **General public:** 7 days\n\nFirst-time online users default to General Public. Show your ID at the Pro Shop so they can move you to the right category. Want the course hours?\n\n[Book a tee time](https://www.chronogolf.com/club/medal-of-honor-golf-course) or see the [Golf Course page](https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course).",
+      "followups": [
+        "What are the golf course hours?",
+        "What's the dress code?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    }
+  ]
+}

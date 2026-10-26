@@ -8,7 +8,7 @@ import { cleanClientText, pageInfo } from "@/lib/site/context";
 
 // docs/PRODUCT.md section 4, restated each turn.
 const REPLY_REMINDER =
-  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked. End with the <followups> line.";
+  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked. When there are several options or events, name the top two and offer the rest. End with the <followups> line.";
 
 // Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
 const FRAME = "\u001e";

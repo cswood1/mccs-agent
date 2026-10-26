@@ -171,7 +171,9 @@ disagrees with it, ask before changing either.
   57 older MCCS-wide news stories linked only from other stories (stopped after wave 3), the body
   composition PDF, and one story whose fetch returned only boilerplate. Pages that redirect off the
   site (careers, post offices, voting assistance, local area info) are mirrored as redirects.
-- **Agent:** ~247K prompt tokens, cached for an hour and shared by all visitors; warmed when the chat
-  opens. Latest eval (25 questions): correct 21/21, sourced 25/25, concise 24/25, safe 25/25; median
-  66 words, 1.7 s to first text, 3.3 s total.
+- **Agent:** ~250K prompt tokens, cached for an hour and shared by all visitors; warmed when the chat
+  opens. Round 3 full eval (33 questions, `tests/eval/results/round3.json`): correct 29/29, sourced
+  33/33, safe 33/33, context 8/8, concise 27/33; median 67 words, 1.9 s to first text, 3.8 s total.
+  After that run the per-turn reminder was tightened ("name the top two"); the 6 long answers re-checked
+  4/6 within length (`r3-concise.json`), not yet confirmed with a full run.
 - `/api/chat` has no rate limit; the access code is the only protection.

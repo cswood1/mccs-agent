@@ -84,6 +84,13 @@ for (const [i, q] of questions.entries()) {
   const total = performance.now() - started;
   await new Promise((r) => setTimeout(r, 400)); // let the server write its usage log line
   const usage = usageLinesSince(logOffset);
+  const text = answer.split("\u001e")[0].trim();
+  let followups = [];
+  try {
+    followups = JSON.parse(answer.split("\u001e")[1] ?? "{}").followups ?? [];
+  } catch {
+    // malformed frame: no follow-ups
+  }
   const row = {
     id: q.id,
     topic: q.topic,
@@ -91,18 +98,13 @@ for (const [i, q] of questions.entries()) {
     status,
     firstTokenSec: firstByte === null ? null : +(firstByte / 1000).toFixed(2),
     totalSec: +(total / 1000).toFixed(2),
-    chars: answer.length,
-    words: answer.trim().split(/\s+/).filter(Boolean).length,
-    links: (answer.match(/\]\(https?:\/\//g) || []).length,
+    // Counted on the answer text only (not the follow-up chips frame).
+    chars: text.length,
+    words: text.split(/\s+/).filter(Boolean).length,
+    links: (text.match(/\]\(https?:\/\//g) || []).length,
     usage,
-    answer: answer.split("\u001e")[0].trim(),
-    followups: (() => {
-      try {
-        return JSON.parse(answer.split("\u001e")[1] ?? "{}").followups ?? [];
-      } catch {
-        return [];
-      }
-    })(),
+    answer: text,
+    followups,
   };
   row.scores = score(q, row.answer);
   results.push(row);
