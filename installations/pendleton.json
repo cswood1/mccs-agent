@@ -16,7 +16,6 @@
     "Where can I eat on base?"
   ],
   "nudge": true,
-  "mascot": true,
   "trustedDomains": [
     "pendleton.usmc-mccs.org",
     "jst.doded.mil",

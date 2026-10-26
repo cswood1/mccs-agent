@@ -54,12 +54,11 @@
       '<button class="nudge-text" type="button"></button>' +
       '<button class="nudge-close" type="button" aria-label="Dismiss suggestion">' + icon("close") + "</button>" +
     "</div>" +
-    '<button class="launcher has-mascot" type="button" aria-label="Ask me anything" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel">' +
-      '<span class="launcher-icon">' + pupSvg() + "</span>" + '<span class="launcher-label" aria-hidden="true">Ask me anything</span>' +
+    '<button class="launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel">' +
+      icon("chat") + '<span class="launcher-label">Ask me anything</span>' +
     "</button>" +
     '<section class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="title" hidden>' +
       '<header class="head">' +
-        '<span class="avatar" aria-hidden="true">' + pupSvg() + "</span>" +
         '<div class="head-text"><h2 id="title">Assistant</h2><p class="subtitle"></p></div>' +
         '<button class="icon-btn reset" type="button" aria-label="Start a new chat" title="New chat">' + icon("refresh") + "</button>" +
         '<button class="icon-btn close" type="button" aria-label="Close assistant" title="Close">' + icon("close") + "</button>" +
@@ -85,8 +84,6 @@
   var input = root.querySelector("#input");
   var sendBtn = root.querySelector(".send");
   var chipsEl = root.querySelector(".chips");
-  var avatar = root.querySelector(".avatar");
-  var avatarPup = avatar.querySelector(".pup");
   var nudge = root.querySelector(".nudge");
   var nudgeText = root.querySelector(".nudge-text");
 
@@ -138,11 +135,6 @@
         host.style.setProperty("--primary", cfg.theme.primary);
         host.style.setProperty("--accent", cfg.theme.accent);
         titleEl.textContent = cfg.assistantName;
-        if (cfg.mascot === false) {
-          launcher.classList.remove("has-mascot");
-          launcher.querySelector(".launcher-icon").innerHTML = icon("chat");
-          avatar.hidden = true;
-        }
         sampleBanner.hidden = !cfg.sample;
         renderHeader();
         render();
@@ -208,12 +200,6 @@
     }, 20000);
   }
 
-  // Mascot: ears perk up when the panel opens; head tilts while an answer loads.
-  function perkEars() {
-    avatarPup.classList.add("perk");
-    setTimeout(function () { avatarPup.classList.remove("perk"); }, 1100);
-  }
-
   function hideNudge() {
     nudge.hidden = true;
   }
@@ -228,7 +214,6 @@
     document.documentElement.style.overflow = open && isPhone() ? "hidden" : "";
     if (open) {
       hideNudge();
-      perkEars();
       warmCache();
       render();
       scrollToEnd();
@@ -274,7 +259,6 @@
     var raw = "";
     state.messages.push(reply);
     state.busy = true;
-    avatarPup.classList.add("thinking");
     render();
     scrollToEnd();
 
@@ -342,7 +326,6 @@
           reply.content = "No answer came back. Please try again.";
         }
         state.busy = false;
-        avatarPup.classList.remove("thinking");
         saveMessages();
         render();
         scrollToEnd();
@@ -569,32 +552,6 @@
     return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
-  // Original cartoon bulldog pup (generic: no name, uniform, rank or insignia). Colors come
-  // from the installation theme: face in --accent on the --primary button, dark ink outline.
-  function pupSvg() {
-    return (
-      '<svg class="pup" viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
-        // floppy ears, hinged where they meet the head
-        '<path class="pup-ear pup-ear-l" d="M14.5 13.2C10.8 11.6 5.8 12.6 4.6 16.4c-.9 2.9 1 5.5 3.4 4.6 2.2-.8 3.6-2.7 7.4-3.6z"/>' +
-        '<path class="pup-ear pup-ear-r" d="M33.5 13.2c3.7-1.6 8.7-.6 9.9 3.2.9 2.9-1 5.5-3.4 4.6-2.2-.8-3.6-2.7-7.4-3.6z"/>' +
-        // chunky round head
-        '<ellipse class="pup-head" cx="24" cy="25.5" rx="15.5" ry="14.5"/>' +
-        // forehead wrinkle
-        '<path class="pup-line" d="M20.5 15.5q3.5-1.6 7 0"/>' +
-        // floppy jowls / muzzle
-        '<path class="pup-jowls" d="M11.5 30c1.5-5 6.5-6.5 12.5-6.5s11 1.5 12.5 6.5c.6 4.6-3.2 8.6-7.4 8.4-1.8 1.4-3.3 1.9-5.1 1.9s-3.3-.5-5.1-1.9c-4.2.2-8-3.8-7.4-8.4z"/>' +
-        // determined brows and dot eyes
-        '<path class="pup-line" d="M15.6 17.9l3.4 1M32.4 17.9l-3.4 1"/>' +
-        '<circle class="pup-eye" cx="18.4" cy="22.6" r="2.3"/>' +
-        '<circle class="pup-eye" cx="29.6" cy="22.6" r="2.3"/>' +
-        // nose and small determined grin with a tooth
-        '<path class="pup-nose" d="M21 27.2c0-1.3 1.4-1.9 3-1.9s3 .6 3 1.9c0 1.4-1.6 2.6-3 2.6s-3-1.2-3-2.6z"/>' +
-        '<path class="pup-line" d="M24 29.8v1.6M19.6 32.4c1.6 1.6 3 2.1 4.4 2.1s2.8-.5 4.4-2.1"/>' +
-        '<path class="pup-tooth" d="M21 33.1l.8-1.7.9 2z"/>' +
-      "</svg>"
-    );
-  }
-
   function icon(name) {
     var paths = {
       chat: '<path d="M4 5h16v11H8l-4 4z"/>',
@@ -617,38 +574,6 @@
       "  display: flex; align-items: center; gap: 8px; padding: 12px 18px 12px 14px; border: 0; border-radius: 999px; cursor: pointer;",
       "  background: var(--primary); color: #fff; font: 600 15px/1 inherit; font-family: inherit; box-shadow: 0 6px 20px rgba(0,0,0,.25); }",
       ".launcher:hover { filter: brightness(1.08); }",
-      ".launcher-icon { display: grid; place-items: center; }",
-      ".launcher.has-mascot { padding: 6px 18px 6px 6px; gap: 10px; }",
-      ".launcher.has-mascot .launcher-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.14); }",
-      // Phones: just the mascot, as a round button (the accessible name stays "Ask me anything").
-      "@media (max-width: 640px) {",
-      "  .launcher.has-mascot { padding: 6px; border-radius: 50%; }",
-      "  .launcher.has-mascot .launcher-label { display: none; }",
-      "  .launcher.has-mascot .launcher-icon { width: 48px; height: 48px; }",
-      "}",
-      // The pup: theme colors, ink outline.
-      ".pup { width: 34px; height: 34px; overflow: visible; --ink: #2b1d14; }",
-      ".launcher .pup { width: 36px; height: 36px; }",
-      ".pup .pup-head { fill: var(--accent); stroke: var(--ink); stroke-width: 1.6; }",
-      ".pup .pup-ear { fill: var(--accent); filter: brightness(.78); stroke: var(--ink); stroke-width: 1.6; stroke-linejoin: round;",
-      "  transform-box: fill-box; transition: transform .25s ease; }",
-      ".pup .pup-ear-l { transform-origin: 100% 15%; }",
-      ".pup .pup-ear-r { transform-origin: 0% 15%; }",
-      ".pup .pup-jowls { fill: #fff6e2; stroke: var(--ink); stroke-width: 1.6; stroke-linejoin: round; }",
-      ".pup .pup-line { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; }",
-      ".pup .pup-eye, .pup .pup-nose { fill: var(--ink); }",
-      ".pup .pup-tooth { fill: #fff; stroke: var(--ink); stroke-width: .8; stroke-linejoin: round; }",
-      // Occasional blink when idle.
-      ".pup .pup-eye { transform-box: fill-box; transform-origin: center; animation: pup-blink 6.5s infinite; }",
-      ".pup .pup-eye + .pup-eye { animation-delay: .02s; }",
-      "@keyframes pup-blink { 0%, 93%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.12); } }",
-      // Ears perk up on hover and when the panel opens.
-      ".launcher:hover .pup .pup-ear-l, .pup.perk .ear-l { transform: rotate(32deg) translateY(-1px); }",
-      ".launcher:hover .pup .pup-ear-r, .pup.perk .ear-r { transform: rotate(-32deg) translateY(-1px); }",
-      // Head tilt while an answer is loading.
-      ".pup.thinking { animation: pup-tilt .9s ease-in-out infinite alternate; transform-origin: 50% 70%; }",
-      "@keyframes pup-tilt { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }",
-      ".avatar { flex: none; display: grid; place-items: center; width: 40px; height: 40px; margin-right: 8px; border-radius: 50%; background: rgba(255,255,255,.14); }",
       ".launcher:focus-visible, button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
@@ -681,7 +606,7 @@
       ".chip { flex: none; text-align: left; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink);",
       "  font: inherit; font-size: 14px; white-space: nowrap; cursor: pointer; }",
       ".chip:hover { border-color: var(--primary); color: var(--primary); }",
-      ".nudge { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(16px, env(safe-area-inset-bottom)) + 70px);",
+      ".nudge { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(16px, env(safe-area-inset-bottom)) + 58px);",
       "  display: flex; align-items: center; max-width: min(280px, calc(100vw - 32px)); background: #fff; color: var(--ink); border: 1px solid var(--line);",
       "  border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.18); animation: pop .2s ease-out; }",
       "@keyframes pop { from { transform: translateY(6px); opacity: 0; } to { transform: none; opacity: 1; } }",
@@ -704,8 +629,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 12px; color: var(--muted); background: var(--bg); text-align: center; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge { animation: none; }",
-      "  .pup, .pup * { animation: none !important; transition: none !important; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge { animation: none; } }",
     ].join("\n");
   }
 })();

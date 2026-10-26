@@ -150,59 +150,6 @@ check("Deep Pendleton paths show coming soon too", deepComing.ok() && /coming so
 await p4.goto(base + "/albany", { waitUntil: "networkidle" });
 check("Installations without a config: coming soon, no widget", /Albany is coming soon/.test((await p4.locator("main").textContent()) ?? "") && (await p4.locator("#mccs-assistant").count()) === 0);
 
-// 8. Mascot (bulldog pup on the launcher and panel header).
-async function mascotContext(options = {}, { mascot = true, chatDelay = 0 } = {}) {
-  const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, ...options });
-  await c.addCookies(await ctx.cookies());
-  await c.route(/usmc-mccs\.org/, (r) => r.abort());
-  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
-  await c.route("**/api/chat", async (r) => {
-    await new Promise((res) => setTimeout(res, chatDelay));
-    await r.fulfill({ status: 200, contentType: "text/plain", body: "Stub answer." });
-  });
-  if (!mascot) {
-    await c.route("**/api/installations/quantico", async (r) => {
-      const real = await r.fetch();
-      await r.fulfill({ response: real, json: { ...(await real.json()), mascot: false } });
-    });
-  }
-  return c;
-}
-const m1 = await (await mascotContext({}, { chatDelay: 1500 })).newPage();
-await m1.goto(base + "/quantico", { waitUntil: "networkidle" });
-const launcher = m1.locator("#mccs-assistant button.launcher");
-check("Launcher shows the pup", (await launcher.locator("svg.pup").count()) === 1);
-check("Launcher's accessible name", (await launcher.getAttribute("aria-label")) === "Ask me anything");
-check("Label shown next to the pup on desktop", await launcher.locator(".launcher-label").isVisible());
-check("Pup is generic (no text or images inside)", (await launcher.locator("svg.pup text, svg.pup image").count()) === 0);
-await launcher.click();
-check("Ears perk when the panel opens", /\bperk\b/.test((await m1.locator("#mccs-assistant .avatar svg.pup").getAttribute("class")) ?? ""));
-await m1.locator("#mccs-assistant textarea").fill("hi");
-await m1.locator("#mccs-assistant textarea").press("Enter");
-await m1.waitForTimeout(300);
-check("Head tilts while the answer loads", /\bthinking\b/.test((await m1.locator("#mccs-assistant .avatar svg.pup").getAttribute("class")) ?? ""));
-await m1.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
-check("Tilt stops when the answer arrives", !/\bthinking\b/.test((await m1.locator("#mccs-assistant .avatar svg.pup").getAttribute("class")) ?? ""));
-const blink = await m1.locator("#mccs-assistant .avatar .pup-eye").first().evaluate((el) => getComputedStyle(el).animationName);
-check("Idle blink animation", blink === "pup-blink", blink);
-
-const m2 = await (await mascotContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage();
-await m2.goto(base + "/quantico", { waitUntil: "networkidle" });
-const pl = m2.locator("#mccs-assistant button.launcher");
-const box = await pl.boundingBox();
-check("Phone: round mascot-only button", !(await pl.locator(".launcher-label").isVisible()) && Math.abs(box.width - box.height) < 2, JSON.stringify(box));
-check("Phone: still labeled for screen readers", (await pl.getAttribute("aria-label")) === "Ask me anything");
-
-const m3 = await (await mascotContext({ reducedMotion: "reduce" })).newPage();
-await m3.goto(base + "/quantico", { waitUntil: "networkidle" });
-const still = await m3.locator("#mccs-assistant .launcher .pup-eye").first().evaluate((el) => getComputedStyle(el).animationName);
-check("Reduced motion: no animation", still === "none", still);
-
-const m4 = await (await mascotContext({}, { mascot: false })).newPage();
-await m4.goto(base + "/quantico", { waitUntil: "networkidle" });
-await m4.waitForTimeout(500);
-check("mascot: false shows the plain button", (await m4.locator("#mccs-assistant button.launcher svg.pup").count()) === 0 && (await m4.locator("#mccs-assistant button.launcher .launcher-label").isVisible()));
-
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
 
