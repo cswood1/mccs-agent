@@ -98,8 +98,16 @@ deployed on Vercel for demos.
 - `npm run build`, `npm run lint`
 - `vercel deploy --prod` — deploy
 
-## Status
-Prototype runs end to end on the real Quantico snapshot, with live fetch. Both example queries answer
-with correct, cited facts (verified against the snapshot 2026-10-26). Next: spot-check the snapshot,
-try the bookmarklet on the live site, iterate on look and feel. `/api/chat` is open (CORS `*`, no rate limit) — fine for local
-prototyping, must be locked down before any public deploy.
+## Status (2026-10-26)
+- **Live demo:** https://mccs-agent.vercel.app (Vercel team `nps-hackathon-mccs-agent`, project
+  `mccs-agent`). Access code is in Vercel's `DEMO_ACCESS_CODE` env var and the local `.env.local`.
+- **Crawl:** 439 pages captured with WebFetch in three waves from the home page, menus, and every
+  internal link found (85 program/section/facility/info pages, 53 events, 301 news stories). 39 pages
+  have little or no body text on the real site itself (image-only stories, dynamic lists).
+- **Not captured:** the event calendar and story lists (JavaScript; rebuilt from captured pages),
+  57 older MCCS-wide news stories linked only from other stories (stopped after wave 3), the body
+  composition PDF, and one story whose fetch returned only boilerplate. Pages that redirect off the
+  site (careers, post offices, voting assistance, local area info) are mirrored as redirects.
+- **Agent content:** ~318K tokens per new conversation (cache write); cached follow-ups are fast.
+  Measured ~7–8 s to first token on a cold cache, ~5 s warm.
+- `/api/chat` has no rate limit; the access code is the only protection.
