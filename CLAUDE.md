@@ -120,8 +120,8 @@ disagrees with it, ask before changing either.
 - `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
 - `npm run eval -- <label>` / `npm run eval:compare -- before after` — run and compare the test set
 - `npm run build`, `npm run lint`
-- Deploys: pushing to `main` deploys to production once the Vercel GitHub integration is connected;
-  `vercel deploy --prod` also works
+- Deploys: pushing to `main` auto-deploys to production (Vercel GitHub integration, connected
+  2026-10-26); `vercel deploy --prod` also works
 
 ## Status (2026-10-26)
 - **Live demo:** https://mccs-agent.vercel.app (Vercel team `nps-hackathon-mccs-agent`, project
