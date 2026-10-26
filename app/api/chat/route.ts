@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { corsHeaders, preflight } from "@/lib/cors";
 import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
+import { rateLimit } from "@/lib/ratelimit";
 import { buildContentBlock } from "@/lib/prompt";
 
 // docs/PRODUCT.md section 4, restated each turn.
@@ -32,6 +33,9 @@ export async function POST(request: Request) {
 
   const problem = validateMessages(body.messages);
   if (problem) return jsonError(problem, 400);
+
+  const limited = await rateLimit(request, "chat");
+  if (limited) return limited;
 
   if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN && !process.env.ANTHROPIC_PROFILE) {
     return jsonError("Server is missing ANTHROPIC_API_KEY. Add it to .env.local and restart the dev server.", 500);

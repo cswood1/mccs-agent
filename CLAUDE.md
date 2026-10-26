@@ -62,6 +62,22 @@ deployed on Vercel for demos.
   installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
 - **No embeddings / vector search / RAG.** The whole content file goes in the (cached) prompt.
 
+## API budget rules (follow these; added 2026-10-26)
+Every Claude API call here reads a ~250K-token prompt, so calls add up fast.
+- **Never run the full eval without asking first.** While iterating, use 3–5 questions relevant to the
+  change (`npm run eval -- <label> --only id1,id2,...`). Run the full set once, at the end of a round,
+  after asking.
+- **Before any step with more than ~10 API calls,** say the estimated number of calls and rough cost,
+  and wait for an OK.
+- **Test UI behavior with stubbed responses** (Playwright route mocks for `/api/chat`, `/api/warm`),
+  not live calls. Headless tests must also block every request to *.usmc-mccs.org.
+- **One-time batch jobs** (e.g. generating chips) use Claude Haiku 4.5 through the Message Batches API,
+  with results cached on disk so re-runs only process what changed.
+- **Prompt edits invalidate the shared cache** (one ~250K-token write, ~2× input price with the 1-hour
+  TTL). Batch prompt changes together instead of making them one at a time.
+- **Production is rate limited per visitor** (`lib/ratelimit.ts`): 20 chat messages and 6 warm-ups per
+  hour. Run evals against the local dev server, not production.
+
 ## Product spec
 `docs/PRODUCT.md` is the source of truth for how the assistant behaves (answer style, page awareness,
 chips, sensitive moments, out of scope, quality bar, demo script, roadmap). Where code or this file

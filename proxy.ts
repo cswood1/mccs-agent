@@ -1,9 +1,15 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { ACCESS_COOKIE, ACCESS_HEADER, accessCode, accessToken, safeEqual } from "@/lib/access";
 import { corsHeaders } from "@/lib/cors";
+import { VISITOR_COOKIE } from "@/lib/visitor";
 
-// Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
+// 1. Gives every browser an anonymous visitor id (a random cookie) for per-visitor rate limits.
+// 2. Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
 export async function proxy(request: NextRequest) {
+  return withVisitorId(request, await gate(request));
+}
+
+async function gate(request: NextRequest): Promise<NextResponse> {
   const code = accessCode();
   if (!code) return NextResponse.next();
 
@@ -25,6 +31,19 @@ export async function proxy(request: NextRequest) {
   url.pathname = "/access";
   url.search = `?next=${encodeURIComponent(pathname + request.nextUrl.search)}`;
   return NextResponse.redirect(url);
+}
+
+function withVisitorId(request: NextRequest, response: NextResponse): NextResponse {
+  if (!request.cookies.get(VISITOR_COOKIE)) {
+    response.cookies.set(VISITOR_COOKIE, crypto.randomUUID(), {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: request.nextUrl.protocol === "https:",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+  }
+  return response;
 }
 
 export const config = {

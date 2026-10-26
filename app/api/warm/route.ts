@@ -3,6 +3,7 @@ import { agentRequest } from "@/lib/agent";
 import { corsHeaders, preflight } from "@/lib/cors";
 import { getInstallation, loadContent } from "@/lib/installations";
 import { buildContentBlock } from "@/lib/prompt";
+import { rateLimit } from "@/lib/ratelimit";
 
 // Pre-warm the prompt cache (max_tokens: 0) so the first real question doesn't pay the
 // cold-cache delay. The widget calls this when someone opens the chat panel. If the cache
@@ -16,6 +17,8 @@ export async function POST(request: Request) {
   const { installationId } = await request.json().catch(() => ({}));
   const installation = getInstallation(String(installationId ?? ""));
   if (!installation) return Response.json({ error: "Unknown installation" }, { status: 404, headers: corsHeaders });
+  const limited = await rateLimit(request, "warm");
+  if (limited) return limited;
 
   const last = lastWarm.get(installation.id) ?? 0;
   if (Date.now() - last < MIN_INTERVAL_MS) return Response.json({ warmed: false, reason: "recent" }, { headers: corsHeaders });
