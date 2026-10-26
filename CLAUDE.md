@@ -176,4 +176,5 @@ disagrees with it, ask before changing either.
   33/33, safe 33/33, context 8/8, concise 27/33; median 67 words, 1.9 s to first text, 3.8 s total.
   After that run the per-turn reminder was tightened ("name the top two"); the 6 long answers re-checked
   4/6 within length (`r3-concise.json`), not yet confirmed with a full run.
-- `/api/chat` has no rate limit; the access code is the only protection.
+- `/api/chat` and `/api/warm` are protected by the access code and, on production, a per-visitor rate
+  limit (20 chat messages and 6 warm-ups per hour; see API budget rules).
