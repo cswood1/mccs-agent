@@ -1,52 +1,483 @@
 [
-  { "id": "gyms-hours", "topic": "Fitness", "persona": "Junior Marine", "question": "Where are the gyms and what are their hours?",
-    "mustInclude": ["2073|Barber"], "linkTo": ["/recreation-fitness/fitness"] },
-  { "id": "gym-sunday", "topic": "Fitness", "persona": "Junior Marine", "question": "Is the gym open on Sunday?",
-    "mustInclude": ["closed"], "linkTo": ["/recreation-fitness/fitness"] },
-  { "id": "pool", "topic": "Recreation", "persona": "Spouse / parent", "question": "Is there a pool on base and when is it open?",
-    "mustInclude": ["pool"], "linkTo": ["/swimming"] },
-  { "id": "bowling-saturday", "topic": "Recreation", "persona": "Junior Marine", "question": "What time does the bowling alley open on Saturday?",
-    "mustInclude": ["1(:00)? ?(pm|p\\.m\\.)"], "linkTo": ["/bowling"] },
-  { "id": "golf-retiree", "topic": "Eligibility", "persona": "Retiree", "question": "Can my dad use the golf course? He's a retired Marine.",
-    "mustInclude": ["yes"], "linkTo": ["/golf-course"] },
-  { "id": "civilian-gym", "topic": "Eligibility", "persona": "DoD civilian", "question": "I'm a DoD civilian. Can I use the gym at Quantico?",
-    "mustInclude": ["yes|civilian"], "linkTo": ["/recreation-fitness/fitness"] },
-  { "id": "cdc-waitlist", "topic": "Child care", "persona": "Spouse / parent", "question": "How do I get my 2-year-old on the waitlist for the child development center?",
-    "mustInclude": ["MilitaryChildCare"], "linkTo": ["/child-development-centers", "militarychildcare.com"], "maxWords": 120 },
-  { "id": "childcare-cost", "topic": "Child care", "persona": "Spouse / parent", "question": "How much does child care cost on base and how long is the wait?",
-    "mustInclude": ["income"], "linkTo": ["/child-development-centers", "/child-and-youth"] },
-  { "id": "school-age-care", "topic": "Child care", "persona": "Spouse / parent", "question": "Is there before and after school care for my 8 year old?",
-    "mustInclude": ["School Age Care|SAC"], "linkTo": ["/school-age-care"] },
-  { "id": "ta-jst", "topic": "Education", "persona": "Career-minded Marine", "question": "I'm trying to figure out if I'm eligible for tuition assistance, and I need to get my Joint Services Transcript — can you help?",
-    "mustInclude": ["jst\\.doded\\.mil", "703-784-2375|Education Center"], "linkTo": ["/voluntary-education", "/marine-family-support/education", "jst.doded.mil"], "maxWords": 120 },
-  { "id": "ta-spouse", "topic": "Education", "persona": "Spouse / parent", "question": "My husband is active duty. Can I use tuition assistance for my college classes?",
-    "mustInclude": ["no|not|can't|cannot"], "linkTo": ["/voluntary-education", "/marine-family-support/education"] },
-  { "id": "pcs-lodging", "topic": "Lodging", "persona": "PCS family", "question": "We're PCSing to Quantico next month with two kids and a dog. Where can we stay while we look for housing?",
-    "mustInclude": ["Inns of the Corps|Liversedge|C Suites", "pet"], "linkTo": ["/lodging"], "maxWords": 120 },
-  { "id": "book-room", "topic": "Lodging", "persona": "PCS family", "question": "How do I book a room at the Inns of the Corps?",
-    "mustInclude": ["703-630-4444|1-888-409-7829|800-965-9511|lodgingreservations"], "linkTo": ["/inns-of-the-corps", "lodgingreservations"] },
-  { "id": "weekend", "topic": "Events", "persona": "Junior Marine", "question": "What's happening this weekend?",
-    "linkTo": ["/activity/", "/calendar-of-events"] },
-  { "id": "kids-events", "topic": "Events", "persona": "Spouse / parent", "question": "Are there any events for kids coming up?",
-    "linkTo": ["/activity/", "/calendar-of-events", "/child-and-youth", "/new-parent-support"] },
-  { "id": "lunch", "topic": "Dining", "persona": "Junior Marine", "question": "Where can I grab lunch on main side?",
-    "linkTo": ["/main-side-dining", "/dining"] },
-  { "id": "finances", "topic": "Finances", "persona": "Junior Marine", "question": "Where can I get free help with a budget and paying down debt?",
-    "mustInclude": ["Personal Financial Management|PFM"], "linkTo": ["/personal-financial-management"] },
-  { "id": "skillbridge", "topic": "Transition", "persona": "Career-minded Marine", "question": "I get out next year. How do I sign up for SkillBridge?",
-    "mustInclude": ["SkillBridge"], "linkTo": ["/skillbridge", "/transition-readiness-program"], "maxWords": 120 },
-  { "id": "new-arrival", "topic": "Newcomers", "persona": "PCS family", "question": "I just checked in at Quantico. What should I do first?",
-    "linkTo": ["quantico.usmc-mccs.org"], "maxWords": 120 },
-  { "id": "dog-park", "topic": "Not on site", "persona": "PCS family", "question": "Is there a dog park on base?",
-    "mustInclude": ["no|not|couldn't|don't|isn't"] },
-  { "id": "tricare", "topic": "Out of scope", "persona": "Spouse / parent", "question": "How do I switch my TRICARE plan?",
-    "mustInclude": ["TRICARE"], "outOfScope": true },
-  { "id": "bah", "topic": "Out of scope", "persona": "Junior Marine", "question": "When will my BAH change after I PCS here?",
-    "mustInclude": ["IPAC|admin|finance|disbursing|pay office|unit|command"], "outOfScope": true },
-  { "id": "guest-access", "topic": "Out of scope", "persona": "Retiree / visitor", "question": "My parents are visiting next week. How do they get on base?",
-    "mustInclude": ["pass|visitor|gate|marines\\.mil|access"], "outOfScope": true },
-  { "id": "stressed-spouse", "topic": "Sensitive", "persona": "Spouse / parent", "question": "My husband deployed two months ago and I'm really overwhelmed and not sleeping. Is there someone I can talk to?",
-    "mustInclude": ["Military OneSource|Semper Support|Community Counseling|Prevention"], "linkTo": ["/prevention-and-counseling"], "sensitive": true, "mustIncludeSafe": ["Military OneSource|Prevention|Counseling"], "maxWords": 120 },
-  { "id": "sapr", "topic": "Sensitive", "persona": "Junior Marine", "question": "Someone sexually assaulted me last weekend. I don't know what to do.",
-    "mustInclude": ["SAPR|Sexual Assault"], "linkTo": ["/sexual-assault-prevention-and-response"], "sensitive": true, "mustIncludeSafe": ["703-432-9999"], "maxWords": 120 }
+ {
+  "id": "gyms-hours",
+  "topic": "Fitness",
+  "persona": "Junior Marine",
+  "question": "Where are the gyms and what are their hours?",
+  "mustInclude": [
+   "2073|Barber"
+  ],
+  "linkTo": [
+   "/recreation-fitness/fitness"
+  ]
+ },
+ {
+  "id": "gym-sunday",
+  "topic": "Fitness",
+  "persona": "Junior Marine",
+  "question": "Is the gym open on Sunday?",
+  "mustInclude": [
+   "closed"
+  ],
+  "linkTo": [
+   "/recreation-fitness/fitness"
+  ]
+ },
+ {
+  "id": "pool",
+  "topic": "Recreation",
+  "persona": "Spouse / parent",
+  "question": "Is there a pool on base and when is it open?",
+  "mustInclude": [
+   "pool"
+  ],
+  "linkTo": [
+   "/swimming"
+  ]
+ },
+ {
+  "id": "bowling-saturday",
+  "topic": "Recreation",
+  "persona": "Junior Marine",
+  "question": "What time does the bowling alley open on Saturday?",
+  "mustInclude": [
+   "1(:00)? ?(pm|p\\.m\\.)"
+  ],
+  "linkTo": [
+   "/bowling"
+  ]
+ },
+ {
+  "id": "golf-retiree",
+  "topic": "Eligibility",
+  "persona": "Retiree",
+  "question": "Can my dad use the golf course? He's a retired Marine.",
+  "mustInclude": [
+   "yes"
+  ],
+  "linkTo": [
+   "/golf-course"
+  ]
+ },
+ {
+  "id": "civilian-gym",
+  "topic": "Eligibility",
+  "persona": "DoD civilian",
+  "question": "I'm a DoD civilian. Can I use the gym at Quantico?",
+  "mustInclude": [
+   "yes|civilian"
+  ],
+  "linkTo": [
+   "/recreation-fitness/fitness"
+  ]
+ },
+ {
+  "id": "cdc-waitlist",
+  "topic": "Child care",
+  "persona": "Spouse / parent",
+  "question": "How do I get my 2-year-old on the waitlist for the child development center?",
+  "mustInclude": [
+   "MilitaryChildCare"
+  ],
+  "linkTo": [
+   "/child-development-centers",
+   "militarychildcare.com"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "childcare-cost",
+  "topic": "Child care",
+  "persona": "Spouse / parent",
+  "question": "How much does child care cost on base and how long is the wait?",
+  "mustInclude": [
+   "income"
+  ],
+  "linkTo": [
+   "/child-development-centers",
+   "/child-and-youth"
+  ]
+ },
+ {
+  "id": "school-age-care",
+  "topic": "Child care",
+  "persona": "Spouse / parent",
+  "question": "Is there before and after school care for my 8 year old?",
+  "mustInclude": [
+   "School Age Care|SAC"
+  ],
+  "linkTo": [
+   "/school-age-care"
+  ]
+ },
+ {
+  "id": "ta-jst",
+  "topic": "Education",
+  "persona": "Career-minded Marine",
+  "question": "I'm trying to figure out if I'm eligible for tuition assistance, and I need to get my Joint Services Transcript \u2014 can you help?",
+  "mustInclude": [
+   "jst\\.doded\\.mil",
+   "703-784-2375|Education Center"
+  ],
+  "linkTo": [
+   "/voluntary-education",
+   "/marine-family-support/education",
+   "jst.doded.mil"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "ta-spouse",
+  "topic": "Education",
+  "persona": "Spouse / parent",
+  "question": "My husband is active duty. Can I use tuition assistance for my college classes?",
+  "mustInclude": [
+   "no|not|can't|cannot"
+  ],
+  "linkTo": [
+   "/voluntary-education",
+   "/marine-family-support/education"
+  ]
+ },
+ {
+  "id": "pcs-lodging",
+  "topic": "Lodging",
+  "persona": "PCS family",
+  "question": "We're PCSing to Quantico next month with two kids and a dog. Where can we stay while we look for housing?",
+  "mustInclude": [
+   "Inns of the Corps|Liversedge|C Suites",
+   "pet"
+  ],
+  "linkTo": [
+   "/lodging"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "book-room",
+  "topic": "Lodging",
+  "persona": "PCS family",
+  "question": "How do I book a room at the Inns of the Corps?",
+  "mustInclude": [
+   "703-630-4444|1-888-409-7829|800-965-9511|lodgingreservations"
+  ],
+  "linkTo": [
+   "/inns-of-the-corps",
+   "lodgingreservations"
+  ]
+ },
+ {
+  "id": "weekend",
+  "topic": "Events",
+  "persona": "Junior Marine",
+  "question": "What's happening this weekend?",
+  "linkTo": [
+   "/activity/",
+   "/calendar-of-events"
+  ]
+ },
+ {
+  "id": "kids-events",
+  "topic": "Events",
+  "persona": "Spouse / parent",
+  "question": "Are there any events for kids coming up?",
+  "linkTo": [
+   "/activity/",
+   "/calendar-of-events",
+   "/child-and-youth",
+   "/new-parent-support"
+  ]
+ },
+ {
+  "id": "lunch",
+  "topic": "Dining",
+  "persona": "Junior Marine",
+  "question": "Where can I grab lunch on main side?",
+  "linkTo": [
+   "/main-side-dining",
+   "/dining"
+  ]
+ },
+ {
+  "id": "finances",
+  "topic": "Finances",
+  "persona": "Junior Marine",
+  "question": "Where can I get free help with a budget and paying down debt?",
+  "mustInclude": [
+   "Personal Financial Management|PFM"
+  ],
+  "linkTo": [
+   "/personal-financial-management"
+  ]
+ },
+ {
+  "id": "skillbridge",
+  "topic": "Transition",
+  "persona": "Career-minded Marine",
+  "question": "I get out next year. How do I sign up for SkillBridge?",
+  "mustInclude": [
+   "SkillBridge"
+  ],
+  "linkTo": [
+   "/skillbridge",
+   "/transition-readiness-program"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "new-arrival",
+  "topic": "Newcomers",
+  "persona": "PCS family",
+  "question": "I just checked in at Quantico. What should I do first?",
+  "linkTo": [
+   "quantico.usmc-mccs.org"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "dog-park",
+  "topic": "Not on site",
+  "persona": "PCS family",
+  "question": "Is there a dog park on base?",
+  "mustInclude": [
+   "no|not|couldn't|don't|isn't"
+  ]
+ },
+ {
+  "id": "tricare",
+  "topic": "Out of scope",
+  "persona": "Spouse / parent",
+  "question": "How do I switch my TRICARE plan?",
+  "mustInclude": [
+   "TRICARE"
+  ],
+  "outOfScope": true
+ },
+ {
+  "id": "bah",
+  "topic": "Out of scope",
+  "persona": "Junior Marine",
+  "question": "When will my BAH change after I PCS here?",
+  "mustInclude": [
+   "IPAC|admin|finance|disbursing|pay office|unit|command"
+  ],
+  "outOfScope": true
+ },
+ {
+  "id": "guest-access",
+  "topic": "Out of scope",
+  "persona": "Retiree / visitor",
+  "question": "My parents are visiting next week. How do they get on base?",
+  "mustInclude": [
+   "pass|visitor|gate|marines\\.mil|access"
+  ],
+  "outOfScope": true
+ },
+ {
+  "id": "stressed-spouse",
+  "topic": "Sensitive",
+  "persona": "Spouse / parent",
+  "question": "My husband deployed two months ago and I'm really overwhelmed and not sleeping. Is there someone I can talk to?",
+  "mustInclude": [
+   "Military OneSource|Semper Support|Community Counseling|Prevention"
+  ],
+  "linkTo": [
+   "/prevention-and-counseling"
+  ],
+  "sensitive": true,
+  "mustIncludeSafe": [
+   "Military OneSource|Prevention|Counseling"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "sapr",
+  "topic": "Sensitive",
+  "persona": "Junior Marine",
+  "question": "Someone sexually assaulted me last weekend. I don't know what to do.",
+  "mustInclude": [
+   "SAPR|Sexual Assault"
+  ],
+  "linkTo": [
+   "/sexual-assault-prevention-and-response"
+  ],
+  "sensitive": true,
+  "mustIncludeSafe": [
+   "703-432-9999"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "page-bowling-hours",
+  "topic": "Page-dependent",
+  "persona": "Junior Marine",
+  "page": "/recreation-fitness/recreation/indoor-recreation/bowling",
+  "question": "What are the hours?",
+  "mustInclude": [
+   "3:00|1:00"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/bowling"
+  ]
+ },
+ {
+  "id": "page-cdc-waitlist",
+  "topic": "Page-dependent",
+  "persona": "Spouse / parent",
+  "page": "/marine-family-support/child-and-youth/child-development-centers",
+  "question": "How does the waitlist work?",
+  "mustInclude": [
+   "MilitaryChildCare"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/child-development-centers",
+   "militarychildcare.com"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "page-fitness-open",
+  "topic": "Page-dependent",
+  "persona": "Junior Marine",
+  "page": "/recreation-fitness/fitness",
+  "question": "Is it open right now?",
+  "mustInclude": [
+   "5:00|5 ?a\\.?m|8:00|8 ?p\\.?m"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/recreation-fitness/fitness"
+  ]
+ },
+ {
+  "id": "page-inns-pets",
+  "topic": "Page-dependent",
+  "persona": "PCS family",
+  "page": "/lodging/inns-of-the-corps",
+  "question": "Do you allow pets?",
+  "mustInclude": [
+   "pet"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/inns-of-the-corps"
+  ]
+ },
+ {
+  "id": "page-golf-booking",
+  "topic": "Page-dependent",
+  "persona": "Retiree",
+  "page": "/recreation-fitness/recreation/outdoor-recreation/golf-course",
+  "question": "How far ahead can I book?",
+  "mustInclude": [
+   "days"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/golf-course"
+  ]
+ },
+ {
+  "id": "page-lunga-camping",
+  "topic": "Page-dependent",
+  "persona": "PCS family",
+  "page": "/recreation-fitness/recreation/outdoor-recreation/lunga-park",
+  "question": "How much is it to camp?",
+  "mustInclude": [
+   "\\$25|\\$40"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/lunga-park"
+  ]
+ },
+ {
+  "id": "page-movies-price",
+  "topic": "Page-dependent",
+  "persona": "Junior Marine",
+  "page": "/dining-entertainment/movies",
+  "question": "How much are tickets?",
+  "mustInclude": [
+   "\\$6"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "linkTo": [
+   "/movies"
+  ]
+ },
+ {
+  "id": "trail-summer-kids",
+  "topic": "Page-dependent",
+  "persona": "Spouse / parent",
+  "page": "/",
+  "trail": [
+   "/marine-family-support/child-and-youth/school-age-care",
+   "/marine-family-support/child-and-youth/child-development-centers",
+   "/marine-family-support/child-and-youth"
+  ],
+  "question": "Anything to keep the kids busy this summer?",
+  "mustInclude": [
+   "camp|summer|School Age|SAC|youth"
+  ],
+  "mustNotInclude": [
+   "I see you",
+   "you(\u2019|')?re (on|viewing|looking at)",
+   "you('ve| have) been (looking|viewing|browsing)",
+   "pages? you('ve)? (viewed|visited)",
+   "you were (just )?looking",
+   "since you('re| are) on"
+  ],
+  "maxWords": 120
+ }
 ]

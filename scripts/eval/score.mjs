@@ -2,7 +2,10 @@
  * Mechanical scoring against docs/PRODUCT.md section 9. Each check is pass / fail / null
  * (null = not applicable or needs a human: tone and page awareness are judged by reading).
  *
- * correct  every `mustInclude` pattern (regex, case-insensitive) appears in the answer
+ * correct  every `mustInclude` pattern (regex, case-insensitive) appears in the answer, and no
+ *          `mustNotInclude` pattern does
+ * context  page-dependent questions (`page` set): correct and sourced, i.e. resolved from the page
+ *          (and the visit trail never mentioned)
  * sourced  links 1–2 times, and at least one link matches a `linkTo` substring
  *          (out-of-scope questions: link count only)
  * concise  words <= maxWords * 1.25 ("about 60", "up to about 120")
@@ -17,7 +20,8 @@ export function score(q, answer) {
   const links = [...text.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)].map((m) => m[1]);
   const words = text.trim().split(/\s+/).filter(Boolean).length;
 
-  const correct = q.mustInclude?.length ? q.mustInclude.every(has) : null;
+  const forbidden = (q.mustNotInclude ?? []).some(has);
+  const correct = q.mustInclude?.length || q.mustNotInclude?.length ? (q.mustInclude ?? []).every(has) && !forbidden : null;
 
   let sourced;
   if (q.outOfScope) sourced = links.length <= 2;
@@ -30,12 +34,14 @@ export function score(q, answer) {
   let safe = !asksForId;
   if (q.sensitive) safe = safe && (q.mustIncludeSafe ?? []).every(has);
 
-  return { correct, sourced, concise, safe };
+  const context = q.page ? correct !== false && sourced : null;
+
+  return { correct, sourced, concise, safe, context };
 }
 
 export function tally(rows) {
   const out = {};
-  for (const k of ["correct", "sourced", "concise", "safe"]) {
+  for (const k of ["correct", "sourced", "concise", "safe", "context"]) {
     const scored = rows.map((r) => r.scores?.[k]).filter((v) => v !== null && v !== undefined);
     out[k] = scored.length ? `${scored.filter(Boolean).length}/${scored.length}` : "n/a";
   }

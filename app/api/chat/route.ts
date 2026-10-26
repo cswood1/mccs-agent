@@ -241,14 +241,13 @@ function longestTagPrefixSuffix(text: string, tag: string): number {
   return 0;
 }
 
+/** Date and local time at the installation, so "open right now?" can be answered. */
 function today() {
-  return new Date().toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "America/New_York",
-  });
+  const now = new Date();
+  const opts = { timeZone: "America/New_York" } as const;
+  const date = now.toLocaleDateString("en-US", { ...opts, weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  const time = now.toLocaleTimeString("en-US", { ...opts, hour: "numeric", minute: "2-digit" });
+  return `${date}, ${time} Eastern`;
 }
 
 function logTurn(installationId: string, final: Anthropic.Beta.BetaMessage) {

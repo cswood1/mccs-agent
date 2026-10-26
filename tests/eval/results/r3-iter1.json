@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "label": "r3-iter1",
+    "base": "http://localhost:3000",
+    "ranAt": "2026-10-26T22:03:55.655Z",
+    "questions": 5,
+    "coldFirstTokenSec": 2.48,
+    "medianFirstTokenSec": 3.92,
+    "avgFirstTokenSec": 4.28,
+    "medianTotalSec": 5.16,
+    "avgTotalSec": 5.6,
+    "medianWords": 69,
+    "avgWords": 71,
+    "avgLinks": 1,
+    "scores": {
+      "correct": "5/5",
+      "sourced": "5/5",
+      "concise": "5/5",
+      "safe": "5/5",
+      "context": "5/5"
+    }
+  },
+  "results": [
+    {
+      "id": "page-bowling-hours",
+      "topic": "Page-dependent",
+      "question": "What are the hours?",
+      "status": 200,
+      "firstTokenSec": 2.48,
+      "totalSec": 3.94,
+      "chars": 517,
+      "words": 76,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 0,
+          "cacheWrite": 252915,
+          "output": 274
+        }
+      ],
+      "answer": "**Leatherneck Lanes** is closed Mondays, so it's closed today. It reopens tomorrow at 3:00 PM. Hours (effective August 9, 2026, per the saved page):\n\n- Tue–Thu: 3:00 PM – 9:00 PM\n- Fri: 3:00 PM – 11:00 PM\n- Sat: 1:00 PM – 11:00 PM\n- Sun: 1:00 PM – 5:00 PM\n\nIt's at 2034 Barnett Ave (Lower Level), phone 703-784-2210. Want pricing too? Details: [Bowling](https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling)",
+      "followups": [
+        "How much does bowling cost?",
+        "Can I book a party there?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "page-cdc-waitlist",
+      "topic": "Page-dependent",
+      "question": "How does the waitlist work?",
+      "status": 200,
+      "firstTokenSec": 5.71,
+      "totalSec": 7.27,
+      "chars": 599,
+      "words": 77,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252692,
+          "cacheWrite": 221,
+          "output": 237
+        }
+      ],
+      "answer": "You join the waitlist through MilitaryChildCare.com. Enrollment is completed there, where you create an account, select your preferences, and join the waitlist. Fees follow the DoD fee structure, based on total family income.\n\nThe saved pages don't say how long the wait is or how spots are offered. For that, call CDC North at 703-784-4470 or CDC South at 703-784-3652.\n\nWant the CDC hours? Details: [Child Development Centers](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers)",
+      "followups": [
+        "What are the CDC hours?",
+        "How are CDC fees determined?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "page-fitness-open",
+      "topic": "Page-dependent",
+      "question": "Is it open right now?",
+      "status": 200,
+      "firstTokenSec": 3.87,
+      "totalSec": 5.16,
+      "chars": 482,
+      "words": 67,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252692,
+          "cacheWrite": 198,
+          "output": 415
+        }
+      ],
+      "answer": "The Barber Physical Activity Center is open **today (Monday) from 5:00 AM to 8:00 PM**, as of the page saved October 26. I can't see the current time, so if it's within those hours, it's open.\n\nActive-duty members can also sign up for unmanned access outside regular hours. Call 703-432-0590 with questions.\n\nDetails: [Fitness](https://quantico.usmc-mccs.org/recreation-fitness/fitness). Want the weekend hours?",
+      "followups": [
+        "What are the weekend hours?",
+        "Who can use the gym?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "page-inns-pets",
+      "topic": "Page-dependent",
+      "question": "Do you allow pets?",
+      "status": 200,
+      "firstTokenSec": 5.41,
+      "totalSec": 6.65,
+      "chars": 473,
+      "words": 69,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252692,
+          "cacheWrite": 212,
+          "output": 205
+        }
+      ],
+      "answer": "Yes, but only in a few rooms. **Inns of the Corps has a limited number of pet-friendly rooms**, per the [Inns of the Corps page](https://quantico.usmc-mccs.org/lodging/inns-of-the-corps) (as of Oct 26, 2026). The saved page doesn't list pet fees or room counts, so call **703-630-4444** or the 24/7 reservation line, **1-888-409-7829**, to reserve one.\n\nWant the reservation rules or eligibility?",
+      "followups": [
+        "How far ahead can I reserve?",
+        "Who can stay at the Inns?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "trail-summer-kids",
+      "topic": "Page-dependent",
+      "question": "Anything to keep the kids busy this summer?",
+      "status": 200,
+      "firstTokenSec": 3.92,
+      "totalSec": 4.97,
+      "chars": 501,
+      "words": 66,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 252692,
+          "cacheWrite": 310,
+          "output": 424
+        }
+      ],
+      "answer": "Summer is still a ways off, but two options run then. **School Age Care** offers seasonal camps for ages 5-12, and **Youth Sports** runs summer camps for ages 5-14. Youth Sports registration is typically mid-May to early August (as of Oct 26, 2026). Youth Sports is at 703-784-9756. Want the School Age Care details too? [Youth Sports](https://quantico.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports)",
+      "followups": [
+        "School Age Care camp details",
+        "Youth Sports camp sports offered"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 /**
  * Run the test questions against a running server and record answers, timing and length.
  *
- *   node --env-file=.env.local scripts/eval/run.mjs <label> [baseUrl]
+ *   node --env-file=.env.local scripts/eval/run.mjs <label> [baseUrl] [--only id1,id2,...]
  *
  * label    name for this run, e.g. "before" or "after" (results/<label>.json)
  * baseUrl  defaults to http://localhost:3000
@@ -15,14 +15,22 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { score, tally } from "./score.mjs";
 
-const [label, base = "http://localhost:3000"] = process.argv.slice(2);
+const args = process.argv.slice(2);
+const onlyArg = args.indexOf("--only");
+const only = onlyArg >= 0 ? new Set(args.splice(onlyArg, 2)[1].split(",")) : null;
+const [label, base = "http://localhost:3000"] = args;
 if (!label) {
   console.error("Usage: node --env-file=.env.local scripts/eval/run.mjs <label> [baseUrl]");
   process.exit(1);
 }
 
 const root = process.cwd();
-const questions = JSON.parse(readFileSync(path.join(root, "tests/eval/questions.json"), "utf8"));
+const allQuestions = JSON.parse(readFileSync(path.join(root, "tests/eval/questions.json"), "utf8"));
+const questions = only ? allQuestions.filter((q) => only.has(q.id)) : allQuestions;
+if (!questions.length) {
+  console.error("No questions match --only");
+  process.exit(1);
+}
 const code = process.env.DEMO_ACCESS_CODE?.trim();
 const cookie = code
   ? `mccs_demo_access=${createHash("sha256").update(`mccs-demo-access:${code}`).digest("hex")}`
@@ -54,7 +62,12 @@ for (const [i, q] of questions.entries()) {
     const res = await fetch(`${base}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...(cookie ? { Cookie: cookie } : {}) },
-      body: JSON.stringify({ installationId: "quantico", messages: [{ role: "user", content: q.question }] }),
+      body: JSON.stringify({
+        installationId: "quantico",
+        messages: [{ role: "user", content: q.question }],
+        // Page-dependent questions: asked from a page, optionally after visiting others.
+        ...(q.page ? { page: { path: q.page }, trail: (q.trail ?? []).map((p) => ({ path: p })) } : {}),
+      }),
     });
     status = res.status;
     const reader = res.body.getReader();
@@ -82,7 +95,14 @@ for (const [i, q] of questions.entries()) {
     words: answer.trim().split(/\s+/).filter(Boolean).length,
     links: (answer.match(/\]\(https?:\/\//g) || []).length,
     usage,
-    answer: answer.trim(),
+    answer: answer.split("\u001e")[0].trim(),
+    followups: (() => {
+      try {
+        return JSON.parse(answer.split("\u001e")[1] ?? "{}").followups ?? [];
+      } catch {
+        return [];
+      }
+    })(),
   };
   row.scores = score(q, row.answer);
   results.push(row);

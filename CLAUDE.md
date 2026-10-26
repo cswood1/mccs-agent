@@ -106,6 +106,25 @@ disagrees with it, ask before changing either.
   (`tests/eval/results/before-vs-after.md`). Time to first text varies run to run, mostly API-side;
   compare medians, not single runs. Not yet covered: page-dependent questions (round 3).
 
+## Page awareness and chips (round 3, 2026-10-26)
+- **Page context:** the widget sends the current page (URL, title, breadcrumb) and the last 5 pages
+  this session (sessionStorage). `buildPageNote` in `app/api/chat/route.ts` resolves titles from our own
+  page data by path (`lib/site/context.ts`; browser text only for unknown pages, cleaned) and puts a
+  `<page_context>` block in the latest user turn, after the cached prefix. The per-turn system note has
+  the date and Eastern time, so "open right now?" works.
+- **Follow-ups:** the model ends each reply with `<followups>[…]</followups>`; the route strips it from
+  the stream (`FollowupSplitter`) and sends `\u001e{"followups":[…]}` after the text. The widget shows
+  them as chips until the visitor navigates.
+- **Chips:** `scripts/chips/generate.mjs` (Haiku 4.5 + Message Batches; `--dry-run` / `--submit` /
+  `--collect`) writes 3–4 chips into each page file, keyed by a hash of the page text, and keeps raw
+  model output in `data/site/quantico/chips-raw.json`. 404 of 439 pages have chips; the rest fall back
+  to the nearest section page, then the installation's `defaultChips`.
+  `GET /api/installations/:id/page?path=` returns title, breadcrumb, chips and the welcome line.
+- **Widget:** "Viewing: <page>" line, page-specific welcome, chips bar, nudge bubble after 20 s on
+  non-home pages (once per session; `nudge` in the installation config), tap-to-call and map links.
+- **Tests:** `npm run test:ui` runs 22 browser checks against stubbed APIs (no Claude calls).
+  The eval has 33 questions; 8 are page-dependent (`page`, optional `trail`) and scored "context".
+
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
   differs from older versions — see `AGENTS.md` and `node_modules/next/dist/docs/`. Middleware is
@@ -134,7 +153,10 @@ disagrees with it, ask before changing either.
 - `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; set `DEMO_ACCESS_CODE` to test the gate)
 - `npm run build:content` — regenerate the agent's content file from `data/site/quantico/pages`
 - `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
-- `npm run eval -- <label>` / `npm run eval:compare -- before after` — run and compare the test set
+- `npm run eval -- <label> [--only id1,id2]` / `npm run eval:compare -- before after` — run and compare
+  the test set (ask before running all of it; see API budget rules)
+- `npm run test:ui` — stubbed browser checks of the widget
+- `node --env-file=.env.local scripts/chips/generate.mjs --dry-run` — chip generation estimate
 - `npm run build`, `npm run lint`
 - Deploys: pushing to `main` auto-deploys to production (Vercel GitHub integration, connected
   2026-10-26); `vercel deploy --prod` also works
