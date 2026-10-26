@@ -14,14 +14,18 @@ npm run dev
 ```
 
 Open http://localhost:3000 and tap **Ask me anything** in the bottom-right corner.
-Out of the box it answers from **sample (fake) data**; a yellow banner in the panel says so.
+It answers from a 71-page snapshot of quantico.usmc-mccs.org (`data/content/quantico.json`) and can
+fetch live pages from the site when it needs current details.
 
-## Add real pages
+## Try it on the live Quantico site
 
-1. Save pages from https://quantico.usmc-mccs.org in your browser (File > Save Page As...) into
-   `data/raw/quantico/`.
-2. `npm run convert -- quantico`
-3. Restart `npm run dev`. The sample banner disappears once `data/content/quantico.json` exists.
+Open http://localhost:3000/bookmarklet.html, drag the button to your bookmarks bar, then click it while
+on https://quantico.usmc-mccs.org (Chrome or Firefox). It adds the widget to your tab only.
+
+## Alternative content source
+
+Pages saved from a browser into `data/raw/quantico/` can be converted with `npm run convert -- quantico`.
+This overwrites `data/content/quantico.json`.
 
 ## Embed on another site
 

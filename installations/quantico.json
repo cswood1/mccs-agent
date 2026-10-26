@@ -13,6 +13,15 @@
     "What child care options are on base?",
     "What's happening this week?"
   ],
+  "trustedDomains": [
+    "quantico.usmc-mccs.org",
+    "jst.doded.mil",
+    "dantes.mil",
+    "militaryonesource.mil",
+    "militarychildcare.com",
+    "va.gov",
+    "marines.mil"
+  ],
   "theme": {
     "primary": "#9e1b32",
     "accent": "#ffc72c"

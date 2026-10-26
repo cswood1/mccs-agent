@@ -15,6 +15,12 @@ export type InstallationConfig = {
   localContext: string;
   welcomeMessage: string;
   suggestedQuestions: string[];
+  /**
+   * The only domains the agent's live web_fetch / web_search may reach: the installation
+   * site plus official sites for education/benefits questions. Plain hostnames; subdomains
+   * are included automatically.
+   */
+  trustedDomains: string[];
   theme: { primary: string; accent: string };
   /** Hints for scripts/convert-html.ts on where the page body lives in saved HTML. */
   html: { contentSelectors: string[]; removeSelectors: string[] };
