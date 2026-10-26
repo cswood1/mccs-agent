@@ -1,0 +1,454 @@
+{
+  "summary": {
+    "label": "before",
+    "base": "http://localhost:3000",
+    "ranAt": "2026-10-26T21:17:21.694Z",
+    "questions": 20,
+    "avgFirstTokenSec": 4.8,
+    "avgTotalSec": 9,
+    "avgWords": 201.75,
+    "avgLinks": 2.75
+  },
+  "results": [
+    {
+      "id": "gyms-hours",
+      "topic": "Fitness",
+      "question": "Where are the gyms and what are their hours?",
+      "status": 200,
+      "firstTokenSec": 8.27,
+      "totalSec": 11.69,
+      "chars": 1423,
+      "words": 219,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 0,
+          "cacheWrite": 324776,
+          "output": 605
+        }
+      ],
+      "answer": "Quantico has two gyms on the saved pages, and both are for active-duty Marines or have restrictions. These hours are as of the saved pages (Oct 26, 2026), so confirm them before you go.\n\n**Barber Physical Activity Center (BPAC)**, Building 2073, Barnett Ave, 703-432-0590\n- Mon-Fri: 5:00 AM - 8:00 PM\n- Sat: 8:00 AM - 3:00 PM\n- Sun and holidays: closed\n- It has a fitness deck, group exercise room, spin studio, functional fitness room, racquetball courts, a basketball court, and saunas.\n- Bring your ID, because every patron is checked at the front desk.\n- Active duty, including those TAD at Quantico, can sign up for unmanned after-hours access.\n- Kids under 10 can't enter unless it's an organized event. Ages 12-15 need an adult over 18.\n- Contractors pay $5 per day or $40 per month.\n\n**HITT Center**, Building 3117, 703-784-5799\n- This center is for active duty and reservists only.\n- Instructor-led classes run Mon-Fri, 11:30 AM - 12:30 PM.\n- Open gym runs Mon-Fri, 5:00-8:00 AM and 11:00 AM - 1:00 PM.\n- It is closed on federal holidays, and hours can change, so call the HITT Coordinator (703-432-0592) to check.\n\nMore details are on the [Fitness page](https://quantico.usmc-mccs.org/recreation-fitness/fitness) and the [HITT page](https://quantico.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/high-intensity-tactical-training). For weather delays or closures, check the MCCS Quantico Facebook page."
+    },
+    {
+      "id": "gym-sunday",
+      "topic": "Fitness",
+      "question": "Is the gym open on Sunday?",
+      "status": 200,
+      "firstTokenSec": 9.08,
+      "totalSec": 11.82,
+      "chars": 1077,
+      "words": 150,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 30,
+          "output": 434
+        }
+      ],
+      "answer": "No, the main gym is closed on Sundays. The [Barber Physical Activity Center (BPAC)](https://quantico.usmc-mccs.org/recreation-fitness/fitness) is **closed Sunday and on holidays**. Its regular hours, as of the page's saved date of Oct 26, 2026, are:\n\n- **Monday-Friday:** 5:00am - 8:00pm\n- **Saturday:** 8:00am - 3:00pm\n\nThere is one option for active-duty members. They can sign up for **Unmanned Fitness Access** during regular hours. Active duty, MCINCR-MCBQ PMO civilians, and Fire Department personnel are the only authorized users. The page says BPAC is open for unmanned access registrants only on federal holidays. It doesn't say outright that this covers Sundays, so I'd check before counting on it.\n\nIf you need something else on a Sunday, the [Main Side Rec Center](https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/recreation-centers) is open 10:00am - 8:00pm daily, but it's for active-duty personnel only.\n\nHours can change, so call BPAC at 703-432-0590 to confirm. Check MCCS Quantico's Facebook page for weather delays and closures."
+    },
+    {
+      "id": "pool",
+      "topic": "Recreation",
+      "question": "Is there a pool on base and when is it open?",
+      "status": 200,
+      "firstTokenSec": 2.35,
+      "totalSec": 5.56,
+      "chars": 1137,
+      "words": 184,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 32,
+          "output": 466
+        }
+      ],
+      "answer": "Yes, Quantico has a pool, but it's most likely closed for the season right now.\n\n- **What it has:** A 50-meter pool, one- and three-meter diving boards, and a zero-entry wading pool with a slide and water feature, plus locker rooms with showers.\n- **Season:** The [Pools page](https://quantico.usmc-mccs.org/recreation-fitness/recreation/swimming) says the pool is open for Active Duty lap swim and military training from mid-May to the last Friday in September. That means it's outside the season now.\n- **Last posted hours:** August 10 – September 7, as of the page's saved date (Oct 26, 2026):\n  - Weekdays: 5:30am – 1:00pm, PT/lap swim only\n  - Saturday: 11:00am – 6:00pm\n  - Sunday: 12:00pm – 6:00pm\n  - Weekends are open for recreational and lap swim, and the pool is open to all DoD ID card holders.\n- **Location:** Next to The Clubs at Quantico.\n- **Weather:** The pool closes for thunder, lightning, or other bad weather. Hours can also change with staffing.\n\nI didn't find off-season hours on the saved page. To check whether it's open or when it reopens, call the pool at 703-784-2973 or email quantico.aquatics@usmc-mccs.org."
+    },
+    {
+      "id": "bowling-saturday",
+      "topic": "Recreation",
+      "question": "What time does the bowling alley open on Saturday?",
+      "status": 200,
+      "firstTokenSec": 2.56,
+      "totalSec": 3.74,
+      "chars": 471,
+      "words": 65,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 34,
+          "output": 202
+        }
+      ],
+      "answer": "Leatherneck Lanes opens at **1:00 PM on Saturday** and stays open until 11:00 PM, according to the [Bowling page](https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling). The page lists those hours as effective August 9, 2026, and it was saved on October 26, 2026. It's worth confirming before you go.\n\n- **Address:** 2034 Barnett Ave (Lower Level)\n- **Phone:** 703-784-2210\n- **Cost:** $13 per person for 1 hour of bowling, shoes included"
+    },
+    {
+      "id": "golf-retiree",
+      "topic": "Eligibility",
+      "question": "Can my dad use the golf course? He's a retired Marine.",
+      "status": 200,
+      "firstTokenSec": 2.29,
+      "totalSec": 5.32,
+      "chars": 1259,
+      "words": 162,
+      "links": 3,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 38,
+          "output": 472
+        }
+      ],
+      "answer": "Yes. Retired military are specifically listed as eligible at the Medal of Honor Golf Course. According to the [Golf Course page](https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/golf-course), it's open year-round to active duty and retired military, DoD civilians, family members, FBI Academy, National Guard and Reserve, and the public.\n\n**Booking:**\n- Retired Military/Veterans/DoD can book tee times up to 8 days in advance.\n- Book online through [Chronogolf](https://www.chronogolf.com/club/medal-of-honor-golf-course). First-time users default to the General Public category (7 days ahead). Your dad should show his ID at the Pro Shop on arrival so he's moved to the right priority category.\n- Proper attire is required: collared shirts and Bermuda shorts or skirts.\n\n**Getting on base:** Golf course access follows base access rules. If he doesn't have a current military ID, he should check the [MCBQ Visitor Control Center](https://www.quantico.marines.mil/Info/Base-Access/Visitor-Control-Center/) before he comes.\n\n**Hours:** From the saved page (Oct 26, 2026), October-November hours are 7:30am-4:00pm daily. December-February hours are 10:00am-4:00pm. Hours can change, so call the course at 703-784-2424 to confirm."
+    },
+    {
+      "id": "cdc-waitlist",
+      "topic": "Child care",
+      "question": "How do I get my 2-year-old on the waitlist for the child development center?",
+      "status": 200,
+      "firstTokenSec": 6.16,
+      "totalSec": 10.01,
+      "chars": 1557,
+      "words": 226,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 41,
+          "output": 570
+        }
+      ],
+      "answer": "To get your 2-year-old on the waitlist, you request care through MilitaryChildCare.com. Quantico's [Child Development Centers](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers) serve children from 6 weeks to 5 years old, so your child is in range.\n\n1. **Create an account** at [MilitaryChildCare.com](https://militarychildcare.com/). Log in and complete your household profile.\n2. **Submit a care request** for the Quantico CDC. Enrollment, preferences, and waitlist placement all happen on that site.\n3. **Gather the forms.** The Child Development Centers page lists a Health Assessment, a Registration Form, a Non-Medicated Topical Products Form, and an Application for DoD Childcare Fees. Immunization records are also needed at registration.\n4. **Attend the parent orientation.** It's mandatory before your child's start date.\n\nFees are based on total family income under the DoD fee structure.\n\nIf you'd like a tour or have questions, call the centers directly. The saved page says tours aren't available at every location, so ask when you call.\n- CDC North: 703-784-4470 (3311 Purvis Rd)\n- CDC South: 703-784-3652 (3314 Purvis Rd)\n- Resource & Referral, based at CDC South: 703-784-0674 or 4453\n\nBoth centers are listed as open Monday to Friday, 6:00am to 6:00pm. This is from the page as saved October 26, 2026, so confirm before you go.\n\nIf you're placed on a waitlist, you can also contact MCCYN. It offers fee assistance for community-based care in the meantime. MilitaryChildCare.com has the details."
+    },
+    {
+      "id": "childcare-cost",
+      "topic": "Child care",
+      "question": "How much does child care cost on base and how long is the wait?",
+      "status": 200,
+      "firstTokenSec": 14.46,
+      "totalSec": 18.08,
+      "chars": 1484,
+      "words": 232,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 35,
+          "output": 516
+        }
+      ],
+      "answer": "The saved MCCS pages don't list actual dollar amounts or wait times, so I can't give you a number for either.\n\n**Cost:** Fees are based on total family income and follow the Department of Defense fee structure. The family fee application form is on the [Child Development Centers](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers) page, under \"Application for Department of Defense Childcare Fees.\" Hourly care, where offered, is charged at an hourly rate per child. It depends on space and may not be available, so call the CDC to check.\n\n**Wait:** There's no posted wait time. The site says that if no space is open, your child goes on a waitlist and you get an offer by email when a spot opens. Waits can vary by age and by DoD priority placement, so it helps to register early.\n\n**How to start:**\n1. Create an account at [MilitaryChildCare.com](https://militarychildcare.com/) and complete your household profile.\n2. Request care at Quantico and join the waitlist if needed.\n3. Accept the offer within the time given, then complete the forms and attend parent orientation.\n\nIf you're on a waitlist, the page mentions fee assistance for community-based care through MCCYN.\n\nFor current fees and the likely wait for your child's age, call:\n- CDC North: 703-784-4470\n- CDC South: 703-784-3652\n- Resource and Referral: 703-784-0674 or 4453\n\nThis is from the saved copy of the pages (dated 2026-10-26), so confirm details with the centers."
+    },
+    {
+      "id": "school-age-care",
+      "topic": "Child care",
+      "question": "Is there before and after school care for my 8 year old?",
+      "status": 200,
+      "firstTokenSec": 2.33,
+      "totalSec": 6.27,
+      "chars": 1656,
+      "words": 243,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 34,
+          "output": 588
+        }
+      ],
+      "answer": "Yes. Quantico has **School Age Care (SAC)** for children ages 5-12 who are in kindergarten through 6th grade, so an 8-year-old fits. The [School Age Care page](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care) says it offers before and after school care, full-day care on school breaks, and summer camp, with homework help and activities.\n\n**Who can enroll:** Children of active-duty service members, DoD civilian employees, reservists, and DoD contractors. Spaces are assigned by DoD priority.\n\n**How to sign up:**\n1. Create an account at [MilitaryChildCare.com](https://militarychildcare.com/), add your child, and request care at Quantico.\n2. If there's no opening, your child goes on a waitlist and you'll get an offer when a spot opens.\n3. Accept the offer within the time given.\n4. Complete the registration forms and provide documents such as proof of eligibility, flu shot records, and emergency contacts.\n5. Attend parent orientation if required, then start care.\n\n**Good to know:**\n- Breakfast and an afternoon snack are provided on school days. Breakfast, lunch, and a snack are provided on early-release days, teacher workdays, and school breaks.\n- Transportation is typically provided for on-base schools. Off-base school transportation varies, so ask the center.\n\n**Location and hours** (as of the page's saved date, Oct 26, 2026, so worth confirming): the center is at 3312 Purvis Rd, open Monday-Friday 6:00am-6:00pm and closed weekends and federal holidays. The phone number is 703-784-2249. You can also call the Resource and Referral office at CDC South at 703.784.0674/4453 for help with the process."
+    },
+    {
+      "id": "ta-jst",
+      "topic": "Education",
+      "question": "I'm trying to figure out if I'm eligible for tuition assistance, and I need to get my Joint Services Transcript — can you help?",
+      "status": 200,
+      "firstTokenSec": 1.15,
+      "totalSec": 7.08,
+      "chars": 2196,
+      "words": 326,
+      "links": 3,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 62,
+          "output": 846
+        }
+      ],
+      "answer": "Here's what the Quantico MCCS site says, based on pages saved on 2026-10-26.\n\n**Tuition Assistance (TA) eligibility**\n\n- TA is a higher education benefit for active duty service members pursuing college-level coursework. It covers up to $4,500 per fiscal year (Oct 1 to Sep 30), up to $250 per semester hour.\n- DoD civilians and family members can't submit TA applications.\n- Restrictions: no flight training, no duty-under-instruction status, and no repeating a course that was already funded.\n- Only 1 class is funded if you're a first-time user, have a GPA below 2.5, or failed your last class. Otherwise it's 2 classes at a time.\n\n**First-time steps, with the JST included**\n\n1. Complete the Personal Readiness Seminar (in person or online through JKO).\n2. Attend the USMC TA Brief. The Education Center has dates and registration.\n3. Complete the Career Path Decide surveys and upload a screenshot to your TA portal.\n4. Meet with an Education Center advisor to choose a program.\n5. Enroll in a school, send your transcripts, and **send your Joint Services Transcript**.\n6. Identify your command approver, then submit your request in the WebTA portal.\n\nTA must be approved before the class starts, and only for courses starting within 60 days.\n\n**Getting your JST**\n\nThis part comes from outside the MCCS site. The JST is requested online at the official [Joint Services Transcript site](https://jst.doded.mil/jst/). It's typically sent to the college you choose. The Education Center can help if you get stuck. Colleges decide for themselves which credits they accept.\n\n**Next steps**\n\nThe [Voluntary Education Center](https://quantico.usmc-mccs.org/marine-family-support/voluntary-education) is at 3088 Roan St. Its phone number is 703-784-2375, and it's open Mon–Thu 8:00am–4:30pm and Fri 8:00am–12:00pm. For TA questions, email SMB_MCCSQuanticoEdCenter@usmc.mil.\n\nThere's also a [Tuition Assistance Orientation Class](https://quantico.usmc-mccs.org/activity/8a34b265-4909-4f80-9907-44f6632e735d). Its saved dates include Nov 6 and Dec 11, 2026, from 10:00 to 11:00 AM, and you register on Eventbrite. Please confirm those dates with the Education Center, since my copy may be out of date."
+    },
+    {
+      "id": "ta-spouse",
+      "topic": "Education",
+      "question": "My husband is active duty. Can I use tuition assistance for my college classes?",
+      "status": 200,
+      "firstTokenSec": 1.9,
+      "totalSec": 6.41,
+      "chars": 1597,
+      "words": 208,
+      "links": 4,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 42,
+          "output": 618
+        }
+      ],
+      "answer": "No, military Tuition Assistance (TA) is for the service member only. The [Voluntary Education page](https://quantico.usmc-mccs.org/marine-family-support/voluntary-education) says \n\nDoD civilians and family members are not able to submit TA applications.\n\n That is as of the page's saved date of Oct 26, 2026.\n\nYou still have good options as a spouse:\n\n- **MyCAA scholarship:** It covers tuition for associate degrees, licenses, and certifications. The page says it's for spouses of active-duty members in pay grades E-1 to E-9, W-1 to W-2, and O-1 to O-3 who have finished high school. Details and applications are at the [MyCAA site](https://mycaa.militaryonesource.mil/mycaa/).\n- **Federal student aid (FAFSA):** The page links to [Federal Student Aid](https://studentaid.gov/h/apply-for-aid/fafsa).\n- **Education Center advising:** The page lists spouses and family members as eligible for the Voluntary Education program's services, such as advising, financial aid help, and school research.\n- **GI Bill transfer:** If your husband qualifies, he can transfer Post-9/11 GI Bill benefits to dependents. He would need to meet eligibility rules and ask the Education Center for details.\n\n**Voluntary Education Center**\n- Phone: 703-784-2375\n- Address: 3088 Roan St\n- Hours: Mon-Thu 8:00am-4:30pm, Fri 8:00am-12:00pm (as of the saved page, so worth confirming)\n\nYou can also contact the [Family Member Employment Assistance Program](https://quantico.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program) at 703-784-3306 for career and education help."
+    },
+    {
+      "id": "pcs-lodging",
+      "topic": "Lodging",
+      "question": "We're PCSing to Quantico next month with two kids and a dog. Where can we stay while we look for housing?",
+      "status": 200,
+      "firstTokenSec": 1.62,
+      "totalSec": 6.99,
+      "chars": 1863,
+      "words": 270,
+      "links": 5,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 53,
+          "output": 732
+        }
+      ],
+      "answer": "Your best bet is **Inns of the Corps Quantico**, which has a limited number of pet-friendly rooms. Here's what the [Lodging page](https://quantico.usmc-mccs.org/lodging) and its sub-pages say (as of the saved date of 10/26/2026, so confirm before booking):\n\n- **[Inns of the Corps](https://quantico.usmc-mccs.org/lodging/inns-of-the-corps):** It has standard rooms, efficiencies and suites. PCS families can book up to one year in advance. Active duty, Guard, Reserve and retirees on leave or official duty are eligible, as are DoD civilians. Reservations are at 703-630-4444 or 1-888-409-7829 (24/7). Pet rooms are limited, so ask for one when you book.\n- **[C Suites](https://quantico.usmc-mccs.org/lodging/c-suites):** These are 2-queen-bedroom apartments with a full kitchen, which suits a family of four. There is only one pet room, and it needs to be reserved specifically. The building has stairs and no elevator. It is classed as recreational lodging, so per diem doesn't apply. Call 888-409-7829.\n- **[Marine Lodge Liversedge](https://quantico.usmc-mccs.org/lodging/liversedge-hall):** It lists TAD/TDY as its focus and doesn't mention pets, so it's likely not your best fit. Check-in is at Inns of the Corps.\n\nFor finding housing, the [Information, Referral, and Relocation office](https://quantico.usmc-mccs.org/marine-family-support/information-referral-and-relocation) can help:\n\n1. Contact the base housing office within 72 hours of arriving.\n2. Ask about the Lending Locker, which loans kitchenware and small appliances while your household goods are in transit.\n3. Note that the PCS Workshop is mandatory (every rank, 90 days before the move).\n\nBooking soon is wise because the pages say occupancy is high. Pet fees at the C Suites are $30 for 1 night, $65 for 2–6 nights, or $125 for 7–30 nights. I don't have Inns pet fees, so ask when you call."
+    },
+    {
+      "id": "book-room",
+      "topic": "Lodging",
+      "question": "How do I book a room at the Inns of the Corps?",
+      "status": 200,
+      "firstTokenSec": 1.65,
+      "totalSec": 4.85,
+      "chars": 1161,
+      "words": 179,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 35,
+          "output": 436
+        }
+      ],
+      "answer": "You can book by phone or online. Here's how:\n\n1. **Check you're eligible.** The [Inns of the Corps page](https://quantico.usmc-mccs.org/lodging/inns-of-the-corps) lists active duty, National Guard, Reserves and retirees on leave or official duty, DoD civilians, FBI/DEA, and Officer Candidates School students (with a valid picture ID and orders).\n2. **Know your booking window.** PCS families can reserve up to one year ahead. TAD/TDY can book 90 days ahead. Leisure stays can only be booked 30 days ahead. The page recommends booking early because occupancy is high.\n3. **Reserve.** Call the 24/7 Reservation Center at 1-888-409-7829. You can also call the Inns directly at 703-630-4444. For group reservations, email LodgingReservations.Quantico@usmc-mccs.org.\n4. **At check-in,** bring a valid credit or debit card and your credentials. Guests can't check in without credentials.\n\nThe Inns are at 3018 Russell Rd, next to The Clubs at Quantico.\n\nThis is from the saved page (dated Oct 26, 2026). The page I have doesn't list an online booking link for the Inns specifically, so use the phone line or email above. It's worth confirming details when you call."
+    },
+    {
+      "id": "weekend",
+      "topic": "Events",
+      "question": "What's happening this weekend?",
+      "status": 200,
+      "firstTokenSec": 5.08,
+      "totalSec": 10.34,
+      "chars": 1606,
+      "words": 178,
+      "links": 7,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 27,
+          "output": 1168
+        }
+      ],
+      "answer": "Here's what the saved calendar shows for this weekend (Oct 31 – Nov 1). It was saved today, but I didn't check the live page, so confirm details before you go.\n\n**Saturday, Oct 31**\n- **SMP Trip: Fright Night at Kings Dominion**, 1:00–8:00 PM, $50. It's for single Marines and geo-bachelors only, with SMP transportation and Eventbrite registration. Call 703-432-0363. [Details](https://quantico.usmc-mccs.org/activity/f11ad311-a5c8-4f86-acf4-cb03cbcb6fdf)\n\n**Sunday, Nov 1**\n- **Sunday Night Football Watch Party** at the Main Side Rec Center, for active-duty Marines. Bring your own snacks and drinks, and call 703-432-0363 if you need a ride. [Details](https://quantico.usmc-mccs.org/activity/817f81d3-8f03-498b-a31b-2cb21384c8bf)\n\n**Open all weekend**\n- **Leatherneck Lanes bowling:** Sat 1–11 PM, Sun 1–5 PM. [Bowling](https://quantico.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling)\n- **Little Hall Theater** shows movies Thursday through Sunday. Register on Eventbrite first and pay at the door. [Movies](https://quantico.usmc-mccs.org/dining-entertainment/movies)\n- **Barber Physical Activity Center** is open Saturday 8 AM–3 PM and closed Sunday. [Fitness](https://quantico.usmc-mccs.org/recreation-fitness/fitness)\n\n**Just before the weekend:** on Friday, Oct 30 there's a Family Advocacy \"Seven Principles for Making Marriage Work\" workshop, 9 AM–4 PM. Call 703-784-2570 to register. [Details](https://quantico.usmc-mccs.org/activity/49ca4507-d036-4f87-a322-a0f142c124c9)\n\nFor the full list, see the [Calendar of Events](https://quantico.usmc-mccs.org/calendar-of-events)."
+    },
+    {
+      "id": "kids-events",
+      "topic": "Events",
+      "question": "Are there any events for kids coming up?",
+      "status": 200,
+      "firstTokenSec": 6.31,
+      "totalSec": 14.98,
+      "chars": 198,
+      "words": 35,
+      "links": 0,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 30,
+          "output": 1706
+        }
+      ],
+      "answer": "Yes, there are several family and kid-friendly events coming up. This is from the site's pages as saved today (Oct 26, 2026), so please confirm details before you go.\n\n- **Tots in Tow** (ages 0-5):"
+    },
+    {
+      "id": "lunch",
+      "topic": "Dining",
+      "question": "Where can I grab lunch on main side?",
+      "status": 200,
+      "firstTokenSec": 1.4,
+      "totalSec": 4.26,
+      "chars": 952,
+      "words": 137,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 31,
+          "output": 489
+        }
+      ],
+      "answer": "Here are your main side lunch options, from the [Main Side Dining](https://quantico.usmc-mccs.org/dining-entertainment/dining/main-side-dining) page. Hours are as of the page's saved date (Oct 26, 2026), so confirm before you go.\n\n- **The Clubs at Quantico** (3017 Russell Rd): Lunch is Mon-Fri, 11am-1pm, 703-784-4264. The Officers/SNCO Pub is open to all. Every Tuesday, 11am-1pm, there's a Mongolian BBQ lunch, priced per ounce. There's also a $13 Jersey Cheesesteak Melt this month, Mon-Fri.\n- **Quigley's Main Side** (3048 Bordelon St): Mon-Fri 6am-6pm, Sat 10:30am-4pm, closed Sunday. 703-432-3212.\n- **McDonald's** (3500 A Russell Rd): Mon-Sat 5am-11pm, Sun 6am-10pm.\n- **Mobile Canteen** (3017 Russell Rd): Grab-and-go breakfast and lunch, Mon-Fri 7am-12pm.\n- **We Proudly Serve** (2034 Barnett Ave): Mon-Fri 7am-1pm.\n\nThe Clubs and Quigley's are the closest to a sit-down lunch. If you're short on time, McDonald's or the Canteen are quickest."
+    },
+    {
+      "id": "stressed-spouse",
+      "topic": "Sensitive",
+      "question": "My husband deployed two months ago and I'm really overwhelmed and not sleeping. Is there someone I can talk to?",
+      "status": 200,
+      "firstTokenSec": 1.63,
+      "totalSec": 7.29,
+      "chars": 2139,
+      "words": 258,
+      "links": 5,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 57,
+          "output": 809
+        }
+      ],
+      "answer": "I'm sorry, that's a lot to carry. Yes, there are people you can talk to, and several of them are free and confidential.\n\n**If you ever feel unsafe or have thoughts of hurting yourself:** call 911, or dial 988 and press 1 for the Military/Veterans Crisis Line, any time of day or night.\n\n**For support right now:**\n- **Semper Support** gives free, confidential, non-medical counseling by phone or video, usually up to 12 sessions. It's open to Marine families and needs no appointment. Call 800-342-9647. See [Semper Support](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/semper-support).\n- **Military OneSource** is confidential phone and chat support, 24/7, at 1-800-342-9647. See [Military OneSource](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource).\n- **Community Counseling** at Quantico offers in-person, non-medical counseling with a clinician for spouses and families. It covers deployment stress, worry, and sleep. Call 703-784-2570. The saved page lists hours as Mon–Fri 7:30am–4:30pm (Tuesdays until 7:00pm), so confirm before you go. See [Community Counseling](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling).\n\n**Other things that may help:**\n- Marine Corps Family Team Building runs deployment support workshops, including Mid-Deployment Success for the spouse at home. Call 703-784-1303. See [MCFTB](https://quantico.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building).\n- Your unit's Family Readiness contact can connect you with other spouses. MCFTB can give you their details.\n- If you have kids 0–5, New Parent Support (703-784-4248) hosts a free Wednesday stroller walk at Butler Stadium Track at 10am. See [New Parent Support](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support).\n\nIf the sleep trouble keeps up, it's also worth mentioning to your own doctor. MCCS counselors are non-medical, so they can't treat that part.\n\nI'm glad you asked. Would you like help finding childcare or a spouse group as well?"
+    },
+    {
+      "id": "finances",
+      "topic": "Finances",
+      "question": "Where can I get free help with a budget and paying down debt?",
+      "status": 200,
+      "firstTokenSec": 10.62,
+      "totalSec": 13.84,
+      "chars": 1523,
+      "words": 209,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 36,
+          "output": 530
+        }
+      ],
+      "answer": "The best fit is the **Personal Financial Management Program (PFMP)** at MCCS Quantico. According to the [Personal Financial Management](https://quantico.usmc-mccs.org/marine-family-support/personal-financial-management) page, its services are free to eligible people and their families.\n\n**What they help with:**\n- Developing a spending plan (budgeting)\n- Credit and debt management\n- Credit report and credit score analysis\n- Individual and couple financial counseling\n- Saving and investing, plus retirement topics like the Thrift Savings Plan\n\n**Who can use it:** service members, family members, and DoD employees. The page says family members can join workshops and counseling too.\n\n**How to get started:**\n1. Contact the PFMP office to make an appointment for a one-on-one consultation. You can also register for a workshop.\n2. Office location: 3019 Embry Loop, Quantico, VA 22134. Hours are Monday to Friday, 8:00am to 4:30pm.\n3. Email: mccsquanticoppdregistration@usmc.mil. The page lists no direct phone number for PFMP, so email or stop by.\n\nThe page also links to free self-serve tools, such as a spending plan worksheet and financial calculators. If you're a Marine, your unit's Command Financial Specialist can also help.\n\nThis info comes from the page's saved copy dated 2026-10-26, so confirm hours before you go. If money stress is weighing on you, [Community Counseling](https://quantico.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling) is also available at 703-784-2570."
+    },
+    {
+      "id": "skillbridge",
+      "topic": "Transition",
+      "question": "I get out next year. How do I sign up for SkillBridge?",
+      "status": 200,
+      "firstTokenSec": 6.66,
+      "totalSec": 11.97,
+      "chars": 2198,
+      "words": 305,
+      "links": 3,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 38,
+          "output": 812
+        }
+      ],
+      "answer": "Congrats on getting close to your EAS. SkillBridge is run through Transition Readiness here at Quantico. Here's the process, from the [SkillBridge page](https://quantico.usmc-mccs.org/marine-family-support/transition-readiness-program/skillbridge) (saved Oct 26, 2026).\n\n1. **Attend the SkillBridge Information Session.** This is required before you can submit anything. Registration is required, there are no walk-ins, and it closes 2 days before the session. The saved calendar lists sessions on Oct 27, Nov 10, Dec 1 and Dec 15 (1:00-3:00 PM, 3019 Embry Loop). Register through the [Information Session page](https://quantico.usmc-mccs.org/activity/460e36d4-c93c-4d3f-becc-41e88e504b29). The Oct 27 session is tomorrow, so registration for it has likely closed.\n2. **Confirm you're eligible.** You must be active duty, with at least 180 days served. You also have to finish the Transition Readiness Seminar at least 180 days before you separate.\n3. **Get command approval.** SkillBridge isn't an entitlement. It's at your commander's discretion.\n4. **Research MOU-approved programs** at skillbridge.mil. You contact the industry partners yourself.\n5. **Get an acceptance letter** from the program. It needs dates, times, location and a point of contact.\n6. **Submit your packet** to the installation SkillBridge office for review. Then route it through MyMarineEducation for final command authorization.\n\n**Timing matters.** How early you can start depends on your category:\n- E1-E5: up to 120 days before separation\n- E6-E7, WO-CWO3, O1-O4: up to 90 days\n- E8-E9, W4-W5, O5 and above: up to 90 days or less, with General Officer approval\n\nYou keep your military pay and benefits while in the program. You can't do it on terminal leave.\n\nSince you get out next year, also check your Transition Readiness steps, like Initial Counseling by 365 days before EAS. They're on the [Transition Readiness page](https://quantico.usmc-mccs.org/marine-family-support/transition-readiness-program).\n\nFor questions, call Transition Readiness at 703-784-4963 or email mccsquanticoppdregistration@usmc.mil. Session dates and hours are as of the saved page and worth confirming. I didn't check the live calendar."
+    },
+    {
+      "id": "new-arrival",
+      "topic": "Newcomers",
+      "question": "I just checked in at Quantico. What should I do first?",
+      "status": 200,
+      "firstTokenSec": 1.79,
+      "totalSec": 7.8,
+      "chars": 2206,
+      "words": 284,
+      "links": 6,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 35,
+          "output": 856
+        }
+      ],
+      "answer": "Welcome aboard! Here's a short checklist for your first days. It's from the [Marine for Life Cycle checklists](https://quantico.usmc-mccs.org/about/marine-for-life-cycle) and the [Information, Referral, and Relocation page](https://quantico.usmc-mccs.org/marine-family-support/information-referral-and-relocation), as saved Oct 26, 2026.\n\n1. **Attend the mandatory newcomer brief.** [MCBQ's New Join Brief](https://quantico.usmc-mccs.org/activity/a4aea17d-2d40-466c-bd6b-f6cc184b7691) is required within 90 days of arrival for E-1 through E-6, WO-1 and O-1 through O-3. Families are welcome. The next date listed is **Wednesday, Nov 18, 9 AM to noon** at The Clubs at Quantico. Call 703.784.2659 to confirm.\n2. **Do the Personal Readiness Seminar (PRS)** within 90 days of arriving at your first duty station. It covers personal finance and career programs.\n3. **Meet with a Personal and Professional Development advisor** and your **Education Services Officer** to go over education, Tuition Assistance and your development plan.\n4. **Take care of admin.** Update your address, insurance and myPay. Register your vehicle for base access. Also meet your Command Financial Specialist.\n5. **Bring your family into the system.** Check that they're in DEERS and TRICARE, and get ID cards for them. Make or update your Family Care Plan if you need one.\n6. **Look at housing and lodging if you need it.** Information & Referral can help with housing and the Lending Locker for borrowed kitchen items. You can reach them at mccsquanticoppdregistration@usmc.mil, 3019 Embry Loop.\n7. **If you're single,** stop by the [Single Marine Program](https://quantico.usmc-mccs.org/marine-family-support/single-marine-program) at the Main Side Rec Center (703-432-0363).\n\nIf you have kids, the [School Liaison](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/school-liaison) (703-784-4729) and [Child and Youth](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth) offices can start enrollment.\n\nSome of these steps, like orders, pay and insurance, are handled by your unit rather than MCCS. Your sponsor or admin shop can confirm what applies to you.\n\nWant details on any one of these?"
+    },
+    {
+      "id": "dog-park",
+      "topic": "Not on site",
+      "question": "Is there a dog park on base?",
+      "status": 200,
+      "firstTokenSec": 8.76,
+      "totalSec": 11.69,
+      "chars": 1173,
+      "words": 165,
+      "links": 3,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 324744,
+          "cacheWrite": 28,
+          "output": 465
+        }
+      ],
+      "answer": "I don't see a dedicated dog park listed on the MCCS site, so I can't confirm one exists.\n\nHere's what the site does say about pets:\n\n- **Lunga Park:** Pets are allowed but must stay on a leash at all times. The park is open sunrise to sunset, seven days a week, and has a playground, grills, and pavilions. Swimming and wading aren't allowed there. Hours and details are as of the page's saved date (Oct 26, 2026), so it's worth calling to confirm at 703-784-5270. See [Lunga Park](https://quantico.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lunga-park).\n- **Lodging:** The C Suites has one pet-friendly room, and the Inns of the Corps has a limited number of pet-friendly rooms. Details are on the [Lodging](https://quantico.usmc-mccs.org/lodging) page.\n\nFor a fenced dog park, I'd ask the Information, Referral, and Relocation office. They're at 3019 Embry Loop and can be reached at mccsquanticoppdregistration@usmc.mil. If you live in base housing, the housing office may also know. You can find the office on the [Information, Referral, and Relocation](https://quantico.usmc-mccs.org/marine-family-support/information-referral-and-relocation) page."
+    }
+  ]
+}

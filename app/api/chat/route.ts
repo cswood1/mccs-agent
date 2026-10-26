@@ -1,12 +1,12 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { corsHeaders, preflight } from "@/lib/cors";
 import { getInstallation, loadContent } from "@/lib/installations";
-import { buildContentBlock, buildSystemPrompt } from "@/lib/prompt";
+import { agentRequest } from "@/lib/agent";
+import { buildContentBlock } from "@/lib/prompt";
 
-const MODEL = process.env.CLAUDE_MODEL || "claude-opus-5";
-// Chat answers are short lookups; low effort keeps them fast. Raise if answers to
-// multi-step questions get thin.
-const EFFORT = (process.env.CLAUDE_EFFORT || "low") as "low" | "medium" | "high" | "xhigh" | "max";
+// docs/PRODUCT.md section 4, restated each turn.
+const REPLY_REMINDER =
+  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked.";
 
 const MAX_MESSAGES = 30;
 const MAX_CONTINUATIONS = 2;
@@ -39,8 +39,7 @@ export async function POST(request: Request) {
   const client = new Anthropic();
 
   const content = await loadContent(installation.id);
-  const system = buildSystemPrompt(installation, content);
-  const tools = liveWebTools(installation.trustedDomains);
+  const shared = agentRequest(installation, content);
 
   // Saved site content goes first in the first user turn (cached), then the conversation.
   // A trailing system note carries today's date without breaking the cached prefix.
@@ -48,7 +47,9 @@ export async function POST(request: Request) {
   let messages: Anthropic.Beta.BetaMessageParam[] = [
     { role: "user", content: [buildContentBlock(installation, content), { type: "text", text: first.content }] },
     ...rest,
-    { role: "system", content: `Today is ${today()}.` },
+    // Per-turn note after the cached prefix: today's date, plus the length rule, which the
+    // model follows far better when it's restated right before it answers.
+    { role: "system", content: `Today is ${today()}. ${REPLY_REMINDER}` },
   ];
 
   const abort = new AbortController();
@@ -64,26 +65,26 @@ export async function POST(request: Request) {
         for (let attempt = 0; attempt < MAX_CONTINUATIONS + 1; attempt++) {
           const stream = client.beta.messages.stream(
             {
-              model: MODEL,
+              ...shared,
               max_tokens: 16000,
-              thinking: { type: "adaptive" },
-              output_config: { effort: EFFORT },
-              // On a safety-classifier decline, the API re-runs the request on a recommended model.
-              betas: ["server-side-fallback-2026-07-01"],
-              fallbacks: "default",
-              system,
-              tools,
-              // Also cache the growing conversation, so follow-up turns are cheap.
+              // Also cache the growing conversation (5-minute TTL), so follow-up turns are cheap.
               cache_control: { type: "ephemeral" },
               messages,
             },
             { signal: abort.signal },
           );
 
+          let afterTool = false;
           for await (const event of stream) {
-            // Separate text written before and after a tool call.
-            if (event.type === "content_block_start" && event.content_block.type === "text" && sentText) {
-              send("\n\n");
+            // Separate text written before and after a tool call. (Consecutive text blocks,
+            // e.g. around a quoted passage, are one flow of text and need no break.)
+            if (event.type === "content_block_start") {
+              if (event.content_block.type === "text") {
+                if (afterTool && sentText) send("\n\n");
+                afterTool = false;
+              } else if (event.content_block.type !== "thinking") {
+                afterTool = true;
+              }
             }
             if (event.type === "content_block_delta" && event.delta.type === "text_delta") {
               send(event.delta.text);
@@ -130,28 +131,6 @@ export async function POST(request: Request) {
   });
 }
 
-/**
- * Live lookups, restricted to the installation site and a few official sites.
- * Both run on Anthropic's servers; nothing to execute here.
- */
-function liveWebTools(trustedDomains: string[]): Anthropic.Beta.BetaToolUnion[] {
-  return [
-    {
-      type: "web_fetch_20260318",
-      name: "web_fetch",
-      allowed_domains: trustedDomains,
-      max_uses: 3,
-      max_content_tokens: 20000,
-    },
-    {
-      type: "web_search_20260318",
-      name: "web_search",
-      allowed_domains: trustedDomains,
-      max_uses: 2,
-    },
-  ];
-}
-
 function today() {
   return new Date().toLocaleDateString("en-US", {
     weekday: "long",
@@ -164,8 +143,9 @@ function today() {
 
 function logTurn(installationId: string, final: Anthropic.Beta.BetaMessage) {
   const u = final.usage;
+  const blocks = final.content.map((b) => b.type).join(",");
   console.log(
-    `[chat] ${installationId} model=${final.model} stop=${final.stop_reason} in=${u.input_tokens} cache_read=${u.cache_read_input_tokens ?? 0} cache_write=${u.cache_creation_input_tokens ?? 0} out=${u.output_tokens}`,
+    `[chat] ${installationId} model=${final.model} stop=${final.stop_reason} in=${u.input_tokens} cache_read=${u.cache_read_input_tokens ?? 0} cache_write=${u.cache_creation_input_tokens ?? 0} out=${u.output_tokens} blocks=${blocks}`,
   );
   for (const block of final.content) {
     if (block.type === "server_tool_use") {

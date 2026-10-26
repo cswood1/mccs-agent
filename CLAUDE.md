@@ -62,10 +62,33 @@ deployed on Vercel for demos.
   installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
 - **No embeddings / vector search / RAG.** The whole content file goes in the (cached) prompt.
 
-## Cost and speed notes
-- First question in a conversation writes the content file (~180K tokens) to the prompt cache;
-  follow-ups within 5 minutes read it back at ~10% of the price. A live fetch adds a few extra model
-  passes, each re-reading the cache.
+## Product spec
+`docs/PRODUCT.md` is the source of truth for how the assistant behaves (answer style, page awareness,
+chips, sensitive moments, out of scope, quality bar, demo script, roadmap). Where code or this file
+disagrees with it, ask before changing either.
+
+## Agent implementation notes (round 2, 2026-10-26)
+- **Answer style** follows PRODUCT.md section 4, 7 and 8 in `lib/prompt.ts`. The model follows the
+  length rule much better when it's restated right before it answers, so the per-turn system note in
+  `app/api/chat/route.ts` (`REPLY_REMINDER`, after the cached prefix) repeats it with today's date.
+  The prompt's style example uses placeholders — the template is shared by every installation.
+- **Content size** (`scripts/build-content.mjs`): news stories are title + one-line summary (the agent
+  fetches full stories live), pages over 40K chars (the Marine for Life Cycle checklists) are cut to each
+  section's opening, paragraphs repeated across pages are kept once, `/privacy` is skipped.
+  ~247K prompt tokens (was ~318K).
+- **Caching:** the prefix (tools, system prompt, content block) has no per-user data, so every
+  visitor's conversation shares one cache entry (verified: different questions read the same ~252K
+  cached tokens). The content breakpoint uses the 1-hour TTL; the conversation tail uses the default
+  5 minutes. `lib/agent.ts` holds the request settings shared by chat and warm-up.
+- **Pre-warming:** the widget calls `POST /api/warm` when the chat panel opens (at most once per browser
+  per 50 min; the server also throttles). It sends the same prefix with `max_tokens: 0`, so the cache is
+  written while the person types.
+- **Eval:** `tests/eval/questions.json` (25 questions across personas, out-of-scope and sensitive cases,
+  each with mechanical checks). `npm run eval -- <label> [baseUrl]` runs them and scores correct /
+  sourced / concise / safe (`scripts/eval/score.mjs`, PRODUCT.md section 9); tone and page awareness
+  are judged by reading. `npm run eval:compare -- before after` writes a side-by-side report
+  (`tests/eval/results/before-vs-after.md`). Time to first text varies run to run, mostly API-side;
+  compare medians, not single runs. Not yet covered: page-dependent questions (round 3).
 
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
@@ -95,8 +118,10 @@ deployed on Vercel for demos.
 - `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; set `DEMO_ACCESS_CODE` to test the gate)
 - `npm run build:content` — regenerate the agent's content file from `data/site/quantico/pages`
 - `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
+- `npm run eval -- <label>` / `npm run eval:compare -- before after` — run and compare the test set
 - `npm run build`, `npm run lint`
-- `vercel deploy --prod` — deploy
+- Deploys: pushing to `main` deploys to production once the Vercel GitHub integration is connected;
+  `vercel deploy --prod` also works
 
 ## Status (2026-10-26)
 - **Live demo:** https://mccs-agent.vercel.app (Vercel team `nps-hackathon-mccs-agent`, project
@@ -108,6 +133,7 @@ deployed on Vercel for demos.
   57 older MCCS-wide news stories linked only from other stories (stopped after wave 3), the body
   composition PDF, and one story whose fetch returned only boilerplate. Pages that redirect off the
   site (careers, post offices, voting assistance, local area info) are mirrored as redirects.
-- **Agent content:** ~318K tokens per new conversation (cache write); cached follow-ups are fast.
-  Measured ~7–8 s to first token on a cold cache, ~5 s warm.
+- **Agent:** ~247K prompt tokens, cached for an hour and shared by all visitors; warmed when the chat
+  opens. Latest eval (25 questions): correct 21/21, sourced 25/25, concise 24/25, safe 25/25; median
+  66 words, 1.7 s to first text, 3.3 s total.
 - `/api/chat` has no rate limit; the access code is the only protection.

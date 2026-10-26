@@ -125,12 +125,28 @@
     // Full-screen on phones: stop the page underneath from scrolling.
     document.documentElement.style.overflow = open && isPhone() ? "hidden" : "";
     if (open) {
+      warmCache();
       render();
       scrollToEnd();
       if (!(restoring && isPhone())) input.focus({ preventScroll: true });
     } else {
       launcher.focus();
     }
+  }
+
+  // Ask the server to pre-load the assistant's knowledge into the prompt cache while the
+  // person types. At most once per browser per 50 minutes (the cache lasts an hour).
+  function warmCache() {
+    var key = storageKey + ":warmed";
+    try {
+      if (Date.now() - Number(localStorage.getItem(key) || 0) < 50 * 60 * 1000) return;
+      localStorage.setItem(key, String(Date.now()));
+    } catch { /* storage unavailable: warm anyway */ }
+    fetch(apiBase + "/api/warm", {
+      method: "POST",
+      headers: Object.assign({ "Content-Type": "application/json" }, apiHeaders),
+      body: JSON.stringify({ installationId: installationId }),
+    }).catch(function () { /* best effort */ });
   }
 
   function resetChat() {
