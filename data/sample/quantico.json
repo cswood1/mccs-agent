@@ -1,0 +1,44 @@
+{
+  "_comment": "SAMPLE DATA ONLY. Invented placeholder content for testing the assistant before real pages are added. Hours, phone numbers, names, and events below are NOT real. Once data/content/quantico.json exists (npm run convert -- quantico), this file is ignored.",
+  "installationId": "quantico",
+  "sample": true,
+  "generatedAt": "2026-10-26T00:00:00.000Z",
+  "pages": [
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-fitness",
+      "title": "[SAMPLE] Fitness Centers",
+      "savedAt": "2026-10-26",
+      "text": "# Fitness Centers (SAMPLE DATA — not real)\n\nMCCS Quantico operates fitness centers open to active duty, family members 16+, retirees, and DoD civilians with a valid ID.\n\n## Sample Fitness Center A\n- Location: Building 0000, Sample Road (placeholder)\n- Phone: 555-0100 (placeholder)\n- Hours: Monday–Friday 5 a.m.–9 p.m.; Saturday–Sunday 7 a.m.–5 p.m.; closed federal holidays\n- Amenities: cardio and strength floor, group fitness studio, locker rooms\n\n## Sample Fitness Center B\n- Location: Building 0001, Example Avenue (placeholder)\n- Phone: 555-0101 (placeholder)\n- Hours: Monday–Friday 5:30 a.m.–8 p.m.; Saturday 8 a.m.–4 p.m.; closed Sunday\n- Amenities: indoor pool, turf area, sauna\n\nGroup fitness class schedules change monthly. Check the Fitness page for the current schedule."
+    },
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-education",
+      "title": "[SAMPLE] Education Center — Tuition Assistance",
+      "savedAt": "2026-10-26",
+      "text": "# Education Center (SAMPLE DATA — not real)\n\nThe Education Center helps Marines plan their off-duty education, use Tuition Assistance (TA), and get academic counseling.\n\n- Location: Building 0002, Placeholder Hall\n- Phone: 555-0102 (placeholder)\n- Hours: Monday–Friday 7:30 a.m.–4:30 p.m.\n\n## Tuition Assistance\nTA eligibility rules are set by the Marine Corps and can change. Marines should meet with an education counselor before their first TA request. Requirements commonly include completing a TA orientation and having an approved education plan on file. See the Education Center for current eligibility details.\n\n## Joint Services Transcript (JST)\nThe JST documents military training and experience with recommended college credit. Marines can view and request their JST online at https://jst.doded.mil. Counselors at the Education Center can help you read your JST and send it to a school."
+    },
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-cyp",
+      "title": "[SAMPLE] Child & Youth Programs",
+      "savedAt": "2026-10-26",
+      "text": "# Child & Youth Programs (SAMPLE DATA — not real)\n\nChild & Youth Programs (CYP) provide child care and youth activities for eligible military and DoD civilian families.\n\n- Sample Child Development Center: ages 6 weeks–5 years, Monday–Friday 6 a.m.–6 p.m., phone 555-0103 (placeholder)\n- Sample School Age Care: before/after school for grades K–6, phone 555-0104 (placeholder)\n- Sample Youth & Teen Center: ages 9–18, phone 555-0105 (placeholder)\n\nRequest child care through MilitaryChildCare.com. Priority and fees are based on DoD policy and total family income."
+    },
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-dining",
+      "title": "[SAMPLE] Dining",
+      "savedAt": "2026-10-26",
+      "text": "# Dining (SAMPLE DATA — not real)\n\n- Sample Club & Grill: lunch Monday–Friday 11 a.m.–1:30 p.m.; dinner Friday 5–9 p.m. Phone 555-0106 (placeholder)\n- Sample Food Court: daily 10 a.m.–7 p.m., located in the sample main exchange (placeholder)\n- Sample Golf Course Snack Bar: daily 7 a.m.–3 p.m., seasonal hours"
+    },
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-lodging",
+      "title": "[SAMPLE] Lodging",
+      "savedAt": "2026-10-26",
+      "text": "# Lodging (SAMPLE DATA — not real)\n\nThe sample lodge offers rooms and suites for PCS, TDY, and leisure travelers with base access.\n\n- Front desk open 24 hours\n- Phone: 555-0107 (placeholder)\n- Pet-friendly rooms available for PCS travelers (limited)\n\nReservations can be made by phone. Rates vary by room type and orders status."
+    },
+    {
+      "url": "https://quantico.usmc-mccs.org/#sample-events",
+      "title": "[SAMPLE] Upcoming Events",
+      "savedAt": "2026-10-26",
+      "text": "# Upcoming Events (SAMPLE DATA — not real)\n\n- Sample Fall Festival — Saturday, Nov. 1, 2026, 11 a.m.–3 p.m., Sample Park. Free, open to all authorized patrons.\n- Sample 5K Fun Run — Saturday, Nov. 8, 2026, 7:30 a.m., Sample Fitness Center A. Registration required.\n- Sample Marine Corps Birthday Ball ticket sales — through Nov. 5, 2026, at the sample ITT office (phone 555-0108, placeholder)."
+    }
+  ]
+}

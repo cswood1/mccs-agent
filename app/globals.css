@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-scarlet: #9e1b32;
+  --color-scarlet-dark: #7a1426;
+  --color-gold: #ffc72c;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #1c1c1e;
+}

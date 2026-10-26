@@ -1,0 +1,62 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import quantico from "@/installations/quantico.json";
+
+/** Per-installation settings. One JSON file per base in /installations. */
+export type InstallationConfig = {
+  id: string;
+  /** Site name as shown to users, e.g. "MCCS Quantico". */
+  name: string;
+  installationName: string;
+  assistantName: string;
+  siteUrl: string;
+  location: string;
+  /** Short background on the base and its local area, injected into the system prompt. */
+  localContext: string;
+  welcomeMessage: string;
+  suggestedQuestions: string[];
+  theme: { primary: string; accent: string };
+  /** Hints for scripts/convert-html.ts on where the page body lives in saved HTML. */
+  html: { contentSelectors: string[]; removeSelectors: string[] };
+};
+
+export type ContentPage = {
+  url: string;
+  title: string;
+  /** When the HTML was saved from the live site (ISO date). */
+  savedAt?: string;
+  /** Clean markdown-ish text of the page body. */
+  text: string;
+};
+
+export type InstallationContent = {
+  installationId: string;
+  /** True for the placeholder file in data/sample — never real MCCS data. */
+  sample: boolean;
+  generatedAt: string;
+  pages: ContentPage[];
+};
+
+const installations: Record<string, InstallationConfig> = {
+  [quantico.id]: quantico,
+};
+
+export function getInstallation(id: string): InstallationConfig | undefined {
+  return Object.hasOwn(installations, id) ? installations[id] : undefined;
+}
+
+/**
+ * Real content (data/content/<id>.json, produced by `npm run convert`) wins;
+ * otherwise fall back to the sample placeholder so the app runs out of the box.
+ */
+export async function loadContent(id: string): Promise<InstallationContent> {
+  for (const dir of ["content", "sample"]) {
+    try {
+      const raw = await readFile(path.join(process.cwd(), "data", dir, `${id}.json`), "utf8");
+      return JSON.parse(raw) as InstallationContent;
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    }
+  }
+  throw new Error(`No content found for installation "${id}" in data/content or data/sample`);
+}

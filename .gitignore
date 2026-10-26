@@ -1,8 +1,19 @@
+# dependencies
 node_modules/
+
+# next.js / vercel
 .next/
 out/
+build/
 .vercel/
+next-env.d.ts
+*.tsbuildinfo
+
+# env (keep the example)
 .env*
 !.env.example
+
+# misc
 .DS_Store
 *.log
+*.pem
