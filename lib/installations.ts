@@ -19,6 +19,8 @@ export type InstallationConfig = {
   defaultChips: string[];
   /** Show the nudge bubble on non-home pages (docs/PRODUCT.md §5). */
   nudge: boolean;
+  /** Bulldog pup mascot on the launcher and panel header; false = the plain chat button. */
+  mascot: boolean;
   /**
    * The only domains the agent's live web_fetch / web_search may reach: the installation
    * site plus official sites for education/benefits questions. Plain hostnames; subdomains

@@ -19,6 +19,7 @@ export async function GET(_request: Request, ctx: RouteContext<"/api/installatio
       welcomeMessage: inst.welcomeMessage,
       defaultChips: inst.defaultChips,
       nudge: inst.nudge,
+      mascot: inst.mascot,
       location: inst.location,
       theme: inst.theme,
       sample: content?.sample ?? false,

@@ -16,6 +16,7 @@
     "Where can I eat on base?"
   ],
   "nudge": true,
+  "mascot": true,
   "trustedDomains": [
     "quantico.usmc-mccs.org",
     "jst.doded.mil",
