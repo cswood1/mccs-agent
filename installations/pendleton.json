@@ -1,0 +1,32 @@
+{
+  "id": "pendleton",
+  "name": "MCCS Camp Pendleton",
+  "installationName": "Marine Corps Base Camp Pendleton",
+  "assistantName": "Camp Pendleton Assistant",
+  "siteUrl": "https://pendleton.usmc-mccs.org",
+  "location": "Camp Pendleton, California",
+  "localContext": "Marine Corps Base Camp Pendleton is on the Southern California coast in northern San Diego County, between Oceanside and San Clemente. Visitors include active-duty Marines and Sailors, their families, retirees, DoD civilians, and guests.",
+  "welcomeMessage": "Hi! I can help you find facilities, hours, programs, and events at MCCS Camp Pendleton. What are you looking for?",
+  "defaultChips": [
+    "Just PCS’d here, where do I start?",
+    "Which gyms are open today?",
+    "What’s happening this weekend?",
+    "Child care options on base",
+    "Help me use Tuition Assistance",
+    "Where can I eat on base?"
+  ],
+  "nudge": true,
+  "trustedDomains": [
+    "pendleton.usmc-mccs.org",
+    "jst.doded.mil",
+    "dantes.mil",
+    "militaryonesource.mil",
+    "militarychildcare.com",
+    "va.gov",
+    "marines.mil"
+  ],
+  "theme": {
+    "primary": "#9e1b32",
+    "accent": "#ffc72c"
+  }
+}

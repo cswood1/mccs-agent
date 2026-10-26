@@ -11,14 +11,14 @@ const nextConfig: NextConfig = {
   // Same redirects the real site sends (recorded during the WebFetch crawl).
   async redirects() {
     return [
-      { source: "/careers", destination: "https://careers.usmc-mccs.org/", permanent: false },
-      { source: "/services/post-offices", destination: "https://www.quantico.marines.mil/Offices-Staff/Military-Post-Office/", permanent: false },
-      { source: "/marine-family-support/military-family-life/voting-assistance", destination: "https://www.quantico.marines.mil/Resources/Voter-Assistance/", permanent: false },
-      { source: "/marine-family-support/voting-assistance", destination: "https://www.quantico.marines.mil/Resources/Voter-Assistance/", permanent: false },
-      { source: "/about/local-area-information", destination: "https://www.quantico.marines.mil/Resources/Weather/", permanent: false },
+      { source: "/quantico/careers", destination: "https://careers.usmc-mccs.org/", permanent: false },
+      { source: "/quantico/services/post-offices", destination: "https://www.quantico.marines.mil/Offices-Staff/Military-Post-Office/", permanent: false },
+      { source: "/quantico/marine-family-support/military-family-life/voting-assistance", destination: "https://www.quantico.marines.mil/Resources/Voter-Assistance/", permanent: false },
+      { source: "/quantico/marine-family-support/voting-assistance", destination: "https://www.quantico.marines.mil/Resources/Voter-Assistance/", permanent: false },
+      { source: "/quantico/about/local-area-information", destination: "https://www.quantico.marines.mil/Resources/Weather/", permanent: false },
       // These two serve their parent/sibling page on the real site.
-      { source: "/recreation-fitness/sports/youth-sports", destination: "/recreation-fitness/recreation/sports/youth-sports", permanent: false },
-      { source: "/marine-family-support/child-and-youth/k-12-school-liaison-program", destination: "/marine-family-support/child-and-youth", permanent: false },
+      { source: "/quantico/recreation-fitness/sports/youth-sports", destination: "/quantico/recreation-fitness/recreation/sports/youth-sports", permanent: false },
+      { source: "/quantico/marine-family-support/child-and-youth/k-12-school-liaison-program", destination: "/quantico/marine-family-support/child-and-youth", permanent: false },
     ];
   },
   // Prototype demo of a real site: keep it out of search engines.

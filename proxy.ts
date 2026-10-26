@@ -2,11 +2,29 @@ import { NextResponse, type NextRequest } from "next/server";
 import { ACCESS_COOKIE, ACCESS_HEADER, accessCode, accessToken, safeEqual } from "@/lib/access";
 import { corsHeaders } from "@/lib/cors";
 import { VISITOR_COOKIE } from "@/lib/visitor";
+import registry from "@/site/installations.json";
 
-// 1. Gives every browser an anonymous visitor id (a random cookie) for per-visitor rate limits.
-// 2. Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
+// 1. Sends pre-multi-installation URLs (/lodging, /recreation-fitness/...) to /quantico/...
+// 2. Gives every browser an anonymous visitor id (a random cookie) for per-visitor rate limits.
+// 3. Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
 export async function proxy(request: NextRequest) {
+  const moved = legacyRedirect(request);
+  if (moved) return withVisitorId(request, moved);
   return withVisitorId(request, await gate(request));
+}
+
+const INSTALLATION_SLUGS = new Set(registry.map((i) => i.slug));
+// First path segments that belong to the app itself, not to an installation's pages.
+const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html"]);
+
+/** "/" -> "/quantico"; "/lodging/c-suites" -> "/quantico/lodging/c-suites" (308). */
+function legacyRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const first = pathname.split("/")[1] ?? "";
+  if (INSTALLATION_SLUGS.has(first) || APP_PATHS.has(first)) return null;
+  const url = request.nextUrl.clone();
+  url.pathname = pathname === "/" ? "/quantico" : `/quantico${pathname}`;
+  return NextResponse.redirect(url, pathname === "/" ? 307 : 308);
 }
 
 async function gate(request: NextRequest): Promise<NextResponse> {

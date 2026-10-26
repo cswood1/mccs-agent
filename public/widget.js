@@ -22,8 +22,11 @@
   var apiBase = script.getAttribute("data-api-base") || new URL(script.src, location.href).origin;
   var storageKey = "mccs-assistant:" + installationId;
   var openKey = storageKey + ":open";
-  // On a copy of the installation site (our demo), links to the real site stay in this site and tab.
-  var siteHost = script.getAttribute("data-site-host") || "";
+  // On the demo app (data-demo-host), pages of any installation's real site live at /<slug>/...,
+  // so links to them in answers stay in this site and tab. data-path-prefix is this installation's
+  // prefix ("/quantico"), so its home page is recognized.
+  var demoHost = script.getAttribute("data-demo-host") === "1";
+  var pathPrefix = script.getAttribute("data-path-prefix") || "";
   // Demo access code, for when the widget runs on another site (bookmarklet) and our cookie isn't sent.
   var accessCode = script.getAttribute("data-access-code") || "";
   var apiHeaders = accessCode ? { "X-Demo-Access": accessCode } : {};
@@ -156,9 +159,13 @@
       .catch(function () { /* chips just won't show */ });
   }
 
+  function isHome() {
+    return currentPath === "/" || (pathPrefix && currentPath === pathPrefix);
+  }
+
   function renderHeader() {
     var page = state.page;
-    subtitleEl.textContent = page && page.known && currentPath !== "/" ? "Viewing: " + page.title : (state.config ? state.config.name : "");
+    subtitleEl.textContent = page && page.known && !isHome() ? "Viewing: " + page.title : (state.config ? state.config.name : "");
   }
 
   // ---------- page trail (last 5 pages this session; sent with each question, never shown) ----------
@@ -183,7 +190,7 @@
     if (scheduleNudge.done || !state.config || !state.page) return;
     scheduleNudge.done = true;
     var chip = state.page.chips && state.page.chips[0];
-    if (!state.config.nudge || currentPath === "/" || !chip || state.page.chipsFrom === "home") return;
+    if (!state.config.nudge || isHome() || !chip || state.page.chipsFrom === "home") return;
     if (loadJSON(storageKey + ":nudged", false)) return;
     setTimeout(function () {
       if (state.open || loadJSON(storageKey + ":nudged", false)) return;
@@ -531,10 +538,14 @@
       return null;
     }
     if (!/^https?:$/.test(u.protocol)) return null;
-    var host = u.hostname.replace(/^www\./, "");
-    if (host !== location.hostname.replace(/^www\./, "") && host !== siteHost) return null;
     if (u.pathname.indexOf("/modules/") === 0) return null; // files (PDFs, menus) only exist on the real site
-    return (u.pathname.replace(/\/+$/, "") || "/") + u.search + u.hash;
+    var path = (u.pathname.replace(/\/+$/, "") || "/") + u.search + u.hash;
+    var host = u.hostname.replace(/^www\./, "");
+    if (host === location.hostname.replace(/^www\./, "")) return path;
+    // Demo app: <slug>.usmc-mccs.org/<path> -> /<slug>/<path>. (usmc-mccs.org itself is Corps-wide.)
+    var m = /^([a-z0-9]+)\.usmc-mccs\.org$/.exec(host);
+    if (demoHost && m) return "/" + m[1] + (path === "/" ? "" : path);
+    return null;
   }
 
   function escapeHtml(s) {

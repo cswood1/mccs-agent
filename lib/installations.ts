@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import pendleton from "@/installations/pendleton.json";
 import quantico from "@/installations/quantico.json";
 
 /** Per-installation settings. One JSON file per base in /installations. */
@@ -46,6 +47,7 @@ export type InstallationContent = {
 
 const installations: Record<string, InstallationConfig> = {
   [quantico.id]: quantico,
+  [pendleton.id]: pendleton,
 };
 
 export function getInstallation(id: string): InstallationConfig | undefined {
@@ -53,10 +55,10 @@ export function getInstallation(id: string): InstallationConfig | undefined {
 }
 
 /**
- * Real content (data/content/<id>.json, produced by `npm run build:content`) wins;
- * otherwise fall back to the sample placeholder so the app runs out of the box.
+ * Real content (data/content/<id>.json, produced by `npm run build:content`) wins; otherwise the
+ * sample placeholder if there is one. Null when an installation has no content yet.
  */
-export async function loadContent(id: string): Promise<InstallationContent> {
+export async function loadContent(id: string): Promise<InstallationContent | null> {
   for (const dir of ["content", "sample"]) {
     try {
       const raw = await readFile(path.join(process.cwd(), "data", dir, `${id}.json`), "utf8");
@@ -65,5 +67,5 @@ export async function loadContent(id: string): Promise<InstallationContent> {
       if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
     }
   }
-  throw new Error(`No content found for installation "${id}" in data/content or data/sample`);
+  return null;
 }

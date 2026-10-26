@@ -1,11 +1,15 @@
-import { fragment, loadPage, localHref } from "@/lib/site/data";
+import { fragment, hasSiteContent, installationHref, loadPage, localHref } from "@/lib/site/data";
 import { Raw } from "@/app/(site)/raw";
 import Photo from "@/app/(site)/photo";
+import { ComingSoon } from "@/app/(site)/templates";
 
-// Home page. Slides, tile artwork and partner logos come from the captured theme
+// Installation home page. Slides, tile artwork and partner logos come from the captured theme
 // (site/fragments); the story cards come from the WebFetch capture of the home page.
-export default function Home() {
-  const home = loadPage("/");
+// Installations without captured content get the "coming soon" page.
+export default async function Home({ params }: { params: Promise<{ installation: string }> }) {
+  const { installation: inst } = await params;
+  if (!hasSiteContent(inst)) return <ComingSoon inst={inst} />;
+  const home = loadPage(inst, "/");
   const stories = (home?.cards ?? []).filter((c) => c.url.includes("/news/"));
 
   return (
@@ -16,9 +20,9 @@ export default function Home() {
             <a id="main-content" tabIndex={-1} />
             <div id="block-mccs-content" className="block block-system block-system-main-block">
               <div className="content">
-                <Raw html={fragment("home-carousel-desktop")} />
-                <Raw html={fragment("home-carousel-mobile")} />
-                <Raw html={fragment("home-tiles")} />
+                <Raw html={fragment(inst, "home-carousel-desktop")} />
+                <Raw html={fragment(inst, "home-carousel-mobile")} />
+                <Raw html={fragment(inst, "home-tiles")} />
 
                 <div className="pb-2 pt-2 m-0" style={{ backgroundColor: "#0C2340" }}>
                   <div>
@@ -39,7 +43,7 @@ export default function Home() {
                                   <div className="gradient-overlay" />
                                   <div className="card-img-overlay d-flex flex-column justify-content-end">
                                     {s.text && <span className="story-badge">{s.text}</span>}
-                                    <a className="stretched-link text-light" href={localHref(s.url)}>
+                                    <a className="stretched-link text-light" href={localHref(s.url, inst)}>
                                       <h5 className="card-title">{s.title}</h5>
                                     </a>
                                   </div>
@@ -53,10 +57,10 @@ export default function Home() {
                     <div className="container" style={{ margin: "10px auto" }} />
                   </div>
                   {/* The real site nests links in buttons; kept as raw markup to match it exactly. */}
-                  <Raw html={MORE_BUTTONS} />
+                  <Raw html={moreButtons(inst)} />
                 </div>
 
-                <Raw html={fragment("home-important-links")} />
+                <Raw html={fragment(inst, "home-important-links")} />
               </div>
             </div>
           </section>
@@ -66,7 +70,7 @@ export default function Home() {
   );
 }
 
-const MORE_BUTTONS = `<div class="text-center">
-<button class="btn btn-primary" style="margin-right:10px;border-radius:5px;"><a href="/calendar-of-events" style="color: white;">View More Events</a></button>
-<button class="btn btn-primary" style="border-radius:5px;"><a href="/stories" style="color: white;">Read More Stories</a></button>
+const moreButtons = (inst: string) => `<div class="text-center">
+<button class="btn btn-primary" style="margin-right:10px;border-radius:5px;"><a href="${installationHref(inst, "/calendar-of-events")}" style="color: white;">View More Events</a></button>
+<button class="btn btn-primary" style="border-radius:5px;"><a href="${installationHref(inst, "/stories")}" style="color: white;">Read More Stories</a></button>
 </div>`;

@@ -1,4 +1,4 @@
-import { loadPage, SITE_ORIGIN } from "@/lib/site/data";
+import { loadPage, siteOrigin } from "@/lib/site/data";
 
 // Page awareness (docs/PRODUCT.md §5–6): what the widget shows and what the agent is told
 // about the page someone is on. Titles and breadcrumbs come from our own captured page data
@@ -14,19 +14,25 @@ export type PageInfo = {
   chipsFrom: "page" | "section" | "home";
 };
 
-export function normalizePath(p: string): string {
+/**
+ * Site path for a page of `inst`: accepts a path or URL from the demo app ("/quantico/lodging")
+ * or from the real site ("/lodging"), and returns "/lodging".
+ */
+export function normalizePath(inst: string, p: string): string {
   try {
-    const u = new URL(p, SITE_ORIGIN);
-    return u.pathname.replace(/\/+$/, "") || "/";
+    let path = new URL(p, siteOrigin(inst)).pathname.replace(/\/+$/, "") || "/";
+    if (path === `/${inst}`) path = "/";
+    else if (path.startsWith(`/${inst}/`)) path = path.slice(inst.length + 1);
+    return path;
   } catch {
     return "/";
   }
 }
 
 /** Chips for a path: the page's own, else the nearest ancestor's (section), else the home set. */
-export function pageInfo(rawPath: string, defaultChips: string[]): PageInfo {
-  const path = normalizePath(rawPath);
-  const page = loadPage(path);
+export function pageInfo(inst: string, rawPath: string, defaultChips: string[]): PageInfo {
+  const path = normalizePath(inst, rawPath);
+  const page = loadPage(inst, path);
   const ancestors = path.split("/").filter(Boolean).map((_, i, parts) => "/" + parts.slice(0, parts.length - 1 - i).join("/"));
 
   let chips: string[] = [];
@@ -37,7 +43,7 @@ export function pageInfo(rawPath: string, defaultChips: string[]): PageInfo {
   } else if (path !== "/") {
     for (const a of ancestors) {
       if (a === "/") break;
-      const parent = loadPage(a);
+      const parent = loadPage(inst, a);
       if (parent?.chips?.length) {
         chips = parent.chips;
         chipsFrom = "section";
@@ -52,12 +58,12 @@ export function pageInfo(rawPath: string, defaultChips: string[]): PageInfo {
     : ancestors
         .filter((a) => a !== "/")
         .reverse()
-        .map((a) => loadPage(a)?.title)
+        .map((a) => loadPage(inst, a)?.title)
         .filter((t): t is string => !!t);
 
   return {
     path,
-    url: SITE_ORIGIN + (path === "/" ? "/" : path),
+    url: siteOrigin(inst) + (path === "/" ? "/" : path),
     known: !!page,
     title: page?.title || "",
     breadcrumb,

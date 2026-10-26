@@ -21,7 +21,8 @@ export async function GET(_request: Request, ctx: RouteContext<"/api/installatio
       nudge: inst.nudge,
       location: inst.location,
       theme: inst.theme,
-      sample: content.sample,
+      sample: content?.sample ?? false,
+      ready: !!content,
     },
     { headers: { ...corsHeaders, "Cache-Control": "no-store" } },
   );

@@ -73,6 +73,22 @@ out(`${F}/home-carousel-mobile.html`, blockHtml(2));
 out(`${F}/home-tiles.html`, blockHtml(3));
 out(`${F}/home-important-links.html`, blocks.slice(5).map((_, i) => blockHtml(5 + i)).join("\n"));
 
+// Installation registry from the real location picker: one entry per site (slug = subdomain).
+// The app serves each at /<slug>; ones without captured content show a "coming soon" page.
+const registry = new Map();
+$("#modal-block-views-block-change-location-change-location a[href]").each((_, a) => {
+  const href = $(a).attr("href");
+  const name = $(a).text().replace(/\s+/g, " ").trim();
+  const url = new URL(href, SITE);
+  const host = url.hostname.replace(/^www\./, "");
+  const slug = host === "quantico.usmc-mccs.org" ? "quantico" : host.endsWith(".usmc-mccs.org") ? host.split(".")[0] : host.split(".")[0].replace(/^mccs/, "");
+  const prev = registry.get(slug);
+  // Camp Lejeune and New River share one site.
+  registry.set(slug, { slug, name: prev ? `${prev.name}–${name}` : name, siteUrl: `${url.protocol}//${url.hostname}/` });
+});
+const installations = [...registry.values()].sort((a, b) => a.name.localeCompare(b.name));
+out("site/installations.json", JSON.stringify(installations, null, 2) + "\n");
+
 // Stylesheets, in the order the README lists them. Theme asset URLs point at /theme/images.
 const css = home.css;
 for (const name of ["tokens.css", "all3.css", "mccs-style.css", "inline-style-tags.css"]) {

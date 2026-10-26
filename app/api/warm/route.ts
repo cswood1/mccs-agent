@@ -17,6 +17,9 @@ export async function POST(request: Request) {
   const { installationId } = await request.json().catch(() => ({}));
   const installation = getInstallation(String(installationId ?? ""));
   if (!installation) return Response.json({ error: "Unknown installation" }, { status: 404, headers: corsHeaders });
+  const content = await loadContent(installation.id);
+  if (!content) return Response.json({ warmed: false, reason: "no content" }, { headers: corsHeaders });
+
   const limited = await rateLimit(request, "warm");
   if (limited) return limited;
 
@@ -25,7 +28,6 @@ export async function POST(request: Request) {
   lastWarm.set(installation.id, Date.now());
 
   try {
-    const content = await loadContent(installation.id);
     const res = await new Anthropic().beta.messages.create({
       ...agentRequest(installation, content),
       max_tokens: 0,

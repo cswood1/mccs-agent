@@ -1,11 +1,13 @@
 import { Marked } from "marked";
-import { localHref } from "@/lib/site/data";
+import { DEFAULT_INSTALLATION, localHref } from "@/lib/site/data";
 
 const escape = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 // Captured page text is markdown from WebFetch. Render it without any raw HTML, keep
 // links on the real site inside the recreation, and open other sites in a new tab.
+let currentInst = DEFAULT_INSTALLATION;
+
 const md = new Marked({
   gfm: true,
   breaks: false,
@@ -16,7 +18,7 @@ const md = new Marked({
     link({ href, tokens }) {
       const label = this.parser.parseInline(tokens);
       if (!/^(https?:|mailto:|tel:|\/)/i.test(href)) return label;
-      const local = localHref(href);
+      const local = localHref(href, currentInst);
       const external = /^https?:/i.test(local);
       return `<a href="${escape(local)}"${external ? ' target="_blank" rel="noopener" class="external-link"' : ""}>${label}</a>`;
     },
@@ -35,7 +37,8 @@ const md = new Marked({
   },
 });
 
-export function renderMarkdown(src: string): string {
+export function renderMarkdown(src: string, inst: string = DEFAULT_INSTALLATION): string {
+  currentInst = inst; // parse is synchronous, so this can't interleave with another render
   // Some captures flatten "•" bullet lines into one paragraph; turn them back into a list.
   const text = (src ?? "").replace(/(^|\s)•\s+/g, "\n- ").replace(/^\n/, "");
   return md.parse(text, { async: false }) as string;

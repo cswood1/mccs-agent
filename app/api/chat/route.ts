@@ -43,6 +43,11 @@ export async function POST(request: Request) {
   const problem = validateMessages(body.messages);
   if (problem) return jsonError(problem, 400);
 
+  const content = await loadContent(installation.id);
+  if (!content) {
+    return jsonError(`The ${installation.name} assistant isn't loaded in this demo yet. Try the Quantico demo for now.`, 503);
+  }
+
   const limited = await rateLimit(request, "chat");
   if (limited) return limited;
 
@@ -51,13 +56,12 @@ export async function POST(request: Request) {
   }
   const client = new Anthropic();
 
-  const content = await loadContent(installation.id);
   const shared = agentRequest(installation, content);
 
   // Saved site content goes first in the first user turn (cached), then the conversation.
   // The latest question carries a page-context note (after the cached prefix), and a trailing
   // system note carries today's date and the length rule.
-  const pageNote = buildPageNote(body, installation.defaultChips);
+  const pageNote = buildPageNote(body, installation.id, installation.defaultChips);
   const turns: Anthropic.Beta.BetaMessageParam[] = body.messages.map((m, i) => {
     if (m.role !== "user") return { role: "assistant", content: m.content };
     const blocks: Anthropic.Beta.BetaTextBlockParam[] = [];
@@ -163,10 +167,10 @@ export async function POST(request: Request) {
  * known; anything from the browser is cleaned and capped. Wrapped as website data so it can't
  * pass for instructions.
  */
-function buildPageNote(body: ChatRequest, defaultChips: string[]): string | null {
+function buildPageNote(body: ChatRequest, inst: string, defaultChips: string[]): string | null {
   const describe = (ref: PageRef | undefined) => {
     if (!ref || (!ref.path && !ref.url)) return null;
-    const info = pageInfo(String(ref.path || ref.url), defaultChips);
+    const info = pageInfo(inst, String(ref.path || ref.url), defaultChips);
     const title = info.known ? info.title : cleanClientText(ref.title);
     const breadcrumb = info.breadcrumb.length ? info.breadcrumb : (Array.isArray(ref.breadcrumb) ? ref.breadcrumb : []).map((b) => cleanClientText(b, 60)).filter(Boolean).slice(0, 6);
     return { title: title || (info.path === "/" ? "Home" : info.path), url: info.url, breadcrumb };

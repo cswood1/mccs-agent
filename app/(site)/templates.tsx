@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- plain links give full page loads, like the real site */
-import { localHref, pagesUnder, SITE_ORIGIN, type SitePage } from "@/lib/site/data";
+import { installationHref, localHref, pagesUnder, siteInstallation, siteOrigin, type SitePage } from "@/lib/site/data";
 import { renderMarkdown, renderInline } from "@/lib/site/markdown";
 import { isWithin, sectionFor, type NavItem } from "@/lib/site/nav";
 import Photo from "@/app/(site)/photo";
@@ -7,13 +7,14 @@ import Photo from "@/app/(site)/photo";
 // Page templates recreated from the captured theme (design/reference). Class names and
 // structure follow the real markup so the site's own CSS styles them.
 
-type Props = { path: string; page: SitePage };
+/** inst: installation slug; path: the page's site path ("/lodging"), without the /<slug> prefix. */
+type Props = { inst: string; path: string; page: SitePage };
 
 export type TemplateName = "section" | "detail" | "article";
 
-export function templateFor(path: string, page: SitePage): TemplateName {
+export function templateFor(inst: string, path: string, page: SitePage): TemplateName {
   if (/^\/(news|activity)\//.test(path)) return "article";
-  const section = sectionFor(path);
+  const section = sectionFor(inst, path);
   if (section?.href === path && page.contacts.length === 0) return "section";
   return "detail";
 }
@@ -71,7 +72,7 @@ function Toc({ items }: { items: { id: string; heading: string }[] }) {
   );
 }
 
-function Body({ page }: { page: SitePage }) {
+function Body({ inst, page }: { inst: string; page: SitePage }) {
   const sections = sectionsWithIds(page);
   return (
     <>
@@ -85,7 +86,7 @@ function Body({ page }: { page: SitePage }) {
                 <strong>{s.heading}</strong>
               </p>
             )}
-            {s.markdown.trim() && <div dangerouslySetInnerHTML={{ __html: renderMarkdown(s.markdown) }} />}
+            {s.markdown.trim() && <div dangerouslySetInnerHTML={{ __html: renderMarkdown(s.markdown, inst) }} />}
           </div>
         ))}
         {page.notCaptured && /failed|no real main content|only navigation/i.test(page.notCaptured) && (
@@ -97,10 +98,11 @@ function Body({ page }: { page: SitePage }) {
 }
 
 export function NotCaptured({ url }: { url: string }) {
+  // url is the page on the real site.
   return (
     <p className="capture-note border rounded p-3 bg-light">
       This page&apos;s content wasn&apos;t captured for the demo.{" "}
-      <a href={url || SITE_ORIGIN} target="_blank" rel="noopener" className="external-link">
+      <a href={url || "https://usmc-mccs.org/"} target="_blank" rel="noopener" className="external-link">
         View it on the real MCCS site
       </a>
       .
@@ -124,13 +126,13 @@ function HeaderCard({ title }: { title: string }) {
 const isStory = (url: string) => /\/(news|activity)\//.test(url);
 
 /** Teaser cards that link to pages (not stories), in the site's "cards-grid" style. */
-function CardsGrid({ cards }: { cards: SitePage["cards"] }) {
+function CardsGrid({ inst, cards }: { inst: string; cards: SitePage["cards"] }) {
   const pages = cards.filter((c) => c.url && !isStory(c.url));
   if (!pages.length) return null;
   return (
     <div className="view-content row g-0">
       {pages.map((c) => {
-        const href = localHref(c.url);
+        const href = localHref(c.url, inst);
         return (
           <div key={c.url + c.title} className="col-12 col-sm-12 col-md-4 col-xl-3 d-md-flex" style={{ padding: "0px 3px 10px 3px" }}>
             <div className="cards-grid">
@@ -162,7 +164,7 @@ function CardsGrid({ cards }: { cards: SitePage["cards"] }) {
   );
 }
 
-function RelatedStories({ cards, title = "Related Stories" }: { cards: SitePage["cards"]; title?: string }) {
+function RelatedStories({ inst, cards, title = "Related Stories" }: { inst: string; cards: SitePage["cards"]; title?: string }) {
   const stories = cards.filter((c) => isStory(c.url)).slice(0, 5);
   if (!stories.length) return null;
   return (
@@ -182,7 +184,7 @@ function RelatedStories({ cards, title = "Related Stories" }: { cards: SitePage[
                     <div className="col-8">
                       <div className="card-body">
                         <p className="card-title">
-                          <a className="stretched-link" href={localHref(s.url)}>
+                          <a className="stretched-link" href={localHref(s.url, inst)}>
                             {s.title}
                           </a>
                         </p>
@@ -195,7 +197,7 @@ function RelatedStories({ cards, title = "Related Stories" }: { cards: SitePage[
           </div>
         </div>
         <div className="more-link col-auto">
-          <a className="btn btn-primary" href="/stories">
+          <a className="btn btn-primary" href={installationHref(inst, "/stories")}>
             Read More Stories
           </a>
         </div>
@@ -204,20 +206,20 @@ function RelatedStories({ cards, title = "Related Stories" }: { cards: SitePage[
   );
 }
 
-function SideNav({ path }: Props) {
-  const section = sectionFor(path);
+function SideNav({ inst, path }: Props) {
+  const section = sectionFor(inst, path);
   if (!section) return null;
   return (
     <nav className="sidenav-container desktop border-0 rounded d-none d-md-block" aria-label="Side navigation">
       <div className="sidenav rounded">
         <ul style={{ marginBottom: 0 }} aria-label="Primary menu">
           <li>
-            <a className="side-nav-title" href={section.href}>
+            <a className="side-nav-title" href={installationHref(inst, section.href)}>
               <strong>{section.label}</strong>
             </a>
           </li>
           {section.children.map((item, i) => (
-            <SideNavItem key={item.href + i} item={item} path={path} index={i} />
+            <SideNavItem key={item.href + i} inst={inst} item={item} path={path} index={i} />
           ))}
         </ul>
       </div>
@@ -225,12 +227,12 @@ function SideNav({ path }: Props) {
   );
 }
 
-function SideNavItem({ item, path, index }: { item: NavItem; path: string; index: number }) {
+function SideNavItem({ inst, item, path, index }: { inst: string; item: NavItem; path: string; index: number }) {
   const active = isWithin(path, item.href);
   if (!item.children.length) {
     return (
       <li>
-        <a href={item.href} className={`dropdown-btn ${path === item.href ? "active" : ""}`}>
+        <a href={installationHref(inst, item.href)} className={`dropdown-btn ${path === item.href ? "active" : ""}`}>
           {item.label}
         </a>
       </li>
@@ -240,7 +242,7 @@ function SideNavItem({ item, path, index }: { item: NavItem; path: string; index
   return (
     <li>
       <div className="sidenav-btn-group sidenav-btn-group-lvl1">
-        <a className={`dropdown-main-button-a btn sidenav-main-button ${path === item.href ? "active" : ""}`} href={item.href}>
+        <a className={`dropdown-main-button-a btn sidenav-main-button ${path === item.href ? "active" : ""}`} href={installationHref(inst, item.href)}>
           {item.label}
         </a>
         <button
@@ -256,7 +258,7 @@ function SideNavItem({ item, path, index }: { item: NavItem; path: string; index
       <ul id={id} className="sidenavUL dropdown-container dropdown-container-lvl2" style={{ display: active ? "block" : "none" }}>
         {item.children.map((c) => (
           <li key={c.href}>
-            <a href={c.href} className={`dropdown-btn ${isWithin(path, c.href) ? "active" : ""}`}>
+            <a href={installationHref(inst, c.href)} className={`dropdown-btn ${isWithin(path, c.href) ? "active" : ""}`}>
               {c.label}
             </a>
           </li>
@@ -367,23 +369,23 @@ function ContactCard({ page }: { page: SitePage }) {
 // ---------- templates ----------
 
 /** Section landing (e.g. /recreation-fitness): side nav + title + child-page cards. */
-export function SectionTemplate({ path, page }: Props) {
+export function SectionTemplate({ inst, path, page }: Props) {
   return (
     <Main>
       <div className="col-sm-12 bs-region bs-region--top">
         <div className="row pt-2 g-0">
           <div className="col-lg-3 order-2 order-lg-1 px-2">
             <div className="col-auto">
-              <SideNav path={path} page={page} />
-              <RelatedStories cards={page.cards} title="Other Stories" />
+              <SideNav inst={inst} path={path} page={page} />
+              <RelatedStories inst={inst} cards={page.cards} title="Other Stories" />
             </div>
           </div>
           <div className="col-lg-9 order-1 order-lg-2 px-2">
             <div className="col-auto">
               <h1>{page.title}</h1>
               <hr />
-              <Body page={page} />
-              <CardsGrid cards={page.cards} />
+              <Body inst={inst} page={page} />
+              <CardsGrid inst={inst} cards={page.cards} />
             </div>
           </div>
         </div>
@@ -393,22 +395,22 @@ export function SectionTemplate({ path, page }: Props) {
 }
 
 /** Program and facility pages (e.g. /recreation-fitness/fitness, /lodging/inns-of-the-corps). */
-export function DetailTemplate({ path, page }: Props) {
+export function DetailTemplate({ inst, path, page }: Props) {
   const hasContacts = page.contacts.length > 0;
   return (
     <Main>
       <div className="container-fluid mt-2">
         <div className="row g-3">
           <div className="col-lg-3 col-md-4 col-12 order-lg-1 order-md-1 order-2">
-            <SideNav path={path} page={page} />
-            <RelatedStories cards={page.cards} />
+            <SideNav inst={inst} path={path} page={page} />
+            <RelatedStories inst={inst} cards={page.cards} />
           </div>
           <div className="col-lg-9 col-md-8 col-12 order-lg-2 order-md-2 order-1">
             <div className="row g-3">
               <div className={`${hasContacts ? "col-lg-8" : "col-lg-12"} col-12 order-lg-1 order-1`}>
                 <HeaderCard title={page.title} />
-                <Body page={page} />
-                <CardsGrid cards={page.cards} />
+                <Body inst={inst} page={page} />
+                <CardsGrid inst={inst} cards={page.cards} />
               </div>
               {hasContacts && (
                 <div className="col-lg-4 col-12 order-lg-2 order-2">
@@ -424,7 +426,7 @@ export function DetailTemplate({ path, page }: Props) {
 }
 
 /** Stories (/news/...) and events (/activity/...). Same frame, no side nav. */
-export function ArticleTemplate({ page }: Props) {
+export function ArticleTemplate({ inst, page }: Props) {
   const hero = page.images.find((i) => i.src && !page.cards.some((c) => c.image === i.src));
   return (
     <Main>
@@ -437,11 +439,11 @@ export function ArticleTemplate({ page }: Props) {
                 <Photo src={hero.src} alt={hero.alt} className="img-fluid rounded" />
               </p>
             )}
-            <Body page={page} />
+            <Body inst={inst} page={page} />
             <ContactCard page={page} />
           </div>
           <div className="col-lg-4 col-12">
-            <RelatedStories cards={page.cards} title="Other Stories" />
+            <RelatedStories inst={inst} cards={page.cards} title="Other Stories" />
           </div>
         </div>
       </div>
@@ -453,8 +455,8 @@ export function ArticleTemplate({ page }: Props) {
  * /stories and /calendar-of-events load their lists dynamically on the real site (not
  * captured), so these are built from every story / event page we did capture.
  */
-export function ListingTemplate({ page, kind }: Props & { kind: "stories" | "events" }) {
-  const items = pagesUnder(kind === "stories" ? "/news/" : "/activity/").map(({ path, page: p }) => {
+export function ListingTemplate({ inst, page, kind }: Props & { kind: "stories" | "events" }) {
+  const items = pagesUnder(inst, kind === "stories" ? "/news/" : "/activity/").map(({ path, page: p }) => {
     const when = p.contacts.flatMap((c) => c.hours.flatMap((h) => h.rows)).find((r) => /\d/.test(r.days + r.time));
     return {
       path,
@@ -480,12 +482,12 @@ export function ListingTemplate({ page, kind }: Props & { kind: "stories" | "eve
             <div key={it.path} className="col-12 col-sm-6 col-md-4 col-xl-3 d-md-flex" style={{ padding: "0px 3px 10px 3px" }}>
               <div className="cards-grid">
                 <div className="cards-grid-image">
-                  <a href={it.path} aria-hidden="true" tabIndex={-1}>
+                  <a href={installationHref(inst, it.path)} aria-hidden="true" tabIndex={-1}>
                     <Photo src={it.image} alt="" />
                   </a>
                 </div>
                 <h4 className="cards-grid-title">
-                  <a style={{ color: "black" }} href={it.path}>
+                  <a style={{ color: "black" }} href={installationHref(inst, it.path)}>
                     {it.title}
                   </a>
                 </h4>
@@ -494,7 +496,7 @@ export function ListingTemplate({ page, kind }: Props & { kind: "stories" | "eve
                     <p className="roll-up-description-no-children">{it.meta}</p>
                   </div>
                 )}
-                <a href={it.path}>
+                <a href={installationHref(inst, it.path)}>
                   <div className="btn btn-primary btn-cards-grid-read-more" style={{ width: "95%" }}>
                     <span>Read More</span>
                   </div>
@@ -502,6 +504,33 @@ export function ListingTemplate({ page, kind }: Props & { kind: "stories" | "eve
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </Main>
+  );
+}
+
+/**
+ * Installations in the location picker whose content isn't captured yet (docs/PRODUCT.md §12).
+ * Same theme and chrome; points to the real site and to an installation that's ready.
+ */
+export function ComingSoon({ inst }: { inst: string }) {
+  const site = siteInstallation(inst);
+  const name = site?.name ?? inst;
+  return (
+    <Main>
+      <div className="container my-4" style={{ maxWidth: 900 }}>
+        <HeaderCard title={`MCCS ${name}`} />
+        <div className="container my-4">
+          <p className="lead">{name} is coming soon in this demo.</p>
+          <p>
+            Every MCCS installation site runs on the same CMS theme, so the same assistant works here once this
+            site&apos;s content is captured. Until then, you can visit the{" "}
+            <a href={site?.siteUrl ?? siteOrigin(inst)} target="_blank" rel="noopener" className="external-link">
+              real MCCS {name} site
+            </a>{" "}
+            or try the demo on <a href={installationHref("quantico", "/")}>MCCS Quantico</a>.
+          </p>
         </div>
       </div>
     </Main>

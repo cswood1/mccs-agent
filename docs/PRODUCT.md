@@ -130,7 +130,7 @@ every run on:
 
 ## 10. Demo script (about 3 minutes)
 
-1. **Home page.** Point out the chips. Tap "I just PCS'd here, where do I start?" and get a short
+1. **Home page.** Point out the chips. Tap "Just PCS’d here, where do I start?" and get a short
    orientation with links.
 2. Tap a link in the answer (for example Child & Youth). The page changes in the same tab, the chat stays
    open, and the chips and context line update.

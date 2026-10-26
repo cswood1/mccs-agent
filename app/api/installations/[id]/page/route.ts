@@ -10,7 +10,7 @@ export async function GET(request: Request, ctx: RouteContext<"/api/installation
   const inst = getInstallation(id);
   if (!inst) return Response.json({ error: "Unknown installation" }, { status: 404, headers: corsHeaders });
   const path = new URL(request.url).searchParams.get("path") || "/";
-  const info = pageInfo(path, inst.defaultChips);
+  const info = pageInfo(inst.id, path, inst.defaultChips);
   return Response.json(
     { ...info, welcome: info.known && info.path !== "/" ? `Questions about ${info.title}? I can help.` : inst.welcomeMessage },
     { headers: { ...corsHeaders, "Cache-Control": "no-store" } },

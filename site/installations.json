@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "29palms",
+    "name": "29 Palms",
+    "siteUrl": "https://29palms.usmc-mccs.org/"
+  },
+  {
+    "slug": "8thandi",
+    "name": "8th & I",
+    "siteUrl": "https://8thandi.usmc-mccs.org/"
+  },
+  {
+    "slug": "albany",
+    "name": "Albany",
+    "siteUrl": "https://albany.usmc-mccs.org/"
+  },
+  {
+    "slug": "barstow",
+    "name": "Barstow",
+    "siteUrl": "https://barstow.usmc-mccs.org/"
+  },
+  {
+    "slug": "bridgeport",
+    "name": "Bridgeport",
+    "siteUrl": "https://bridgeport.usmc-mccs.org/"
+  },
+  {
+    "slug": "campfuji",
+    "name": "Camp Fuji",
+    "siteUrl": "https://campfuji.usmc-mccs.org/"
+  },
+  {
+    "slug": "lejeunenewriver",
+    "name": "Camp Lejeune–New River",
+    "siteUrl": "https://lejeunenewriver.usmc-mccs.org/"
+  },
+  {
+    "slug": "pendleton",
+    "name": "Camp Pendleton",
+    "siteUrl": "https://pendleton.usmc-mccs.org/"
+  },
+  {
+    "slug": "cherrypoint",
+    "name": "Cherry Point",
+    "siteUrl": "https://cherrypoint.usmc-mccs.org/"
+  },
+  {
+    "slug": "err",
+    "name": "Eastern Recruiting Region",
+    "siteUrl": "https://err.usmc-mccs.org/"
+  },
+  {
+    "slug": "hamptonroads",
+    "name": "Hampton Roads",
+    "siteUrl": "https://hamptonroads.usmc-mccs.org/"
+  },
+  {
+    "slug": "hawaii",
+    "name": "Hawaii",
+    "siteUrl": "https://hawaii.usmc-mccs.org/"
+  },
+  {
+    "slug": "hendersonhall",
+    "name": "Henderson Hall",
+    "siteUrl": "https://hendersonhall.usmc-mccs.org/"
+  },
+  {
+    "slug": "iwakuni",
+    "name": "Iwakuni",
+    "siteUrl": "https://iwakuni.usmc-mccs.org/"
+  },
+  {
+    "slug": "miramar",
+    "name": "Miramar",
+    "siteUrl": "https://miramar.usmc-mccs.org/"
+  },
+  {
+    "slug": "mujuk",
+    "name": "Mujuk",
+    "siteUrl": "https://mujuk.usmc-mccs.org/"
+  },
+  {
+    "slug": "okinawa",
+    "name": "Okinawa",
+    "siteUrl": "https://www.okinawa.usmc-mccs.org/"
+  },
+  {
+    "slug": "quantico",
+    "name": "Quantico",
+    "siteUrl": "https://quantico.usmc-mccs.org/"
+  },
+  {
+    "slug": "mcrd",
+    "name": "San Diego",
+    "siteUrl": "http://www.mccsmcrd.com/"
+  },
+  {
+    "slug": "southcarolina",
+    "name": "South Carolina",
+    "siteUrl": "https://southcarolina.usmc-mccs.org/"
+  },
+  {
+    "slug": "wrr",
+    "name": "Western Recruiting Region",
+    "siteUrl": "https://wrr.usmc-mccs.org/"
+  },
+  {
+    "slug": "yuma",
+    "name": "Yuma",
+    "siteUrl": "https://yuma.usmc-mccs.org/"
+  }
+]
