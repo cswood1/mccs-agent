@@ -169,8 +169,8 @@
 
   function renderHeader() {
     var page = state.page;
-    // Subtitle: the installation ("MCCS Quantico"); context line: the page they're on (§5, §13).
-    subtitleEl.textContent = state.config ? state.config.name : "";
+    // Subtitle: the installation's short name ("MCB Quantico"); context line: the page they're on (§5, §13).
+    subtitleEl.textContent = state.config ? state.config.shortName || state.config.name : "";
     var viewing = page && page.known && !isHome();
     contextEl.hidden = !viewing;
     contextEl.textContent = viewing ? "Viewing: " + page.title : "";

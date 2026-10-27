@@ -1,6 +1,7 @@
 {
   "id": "pendleton",
   "name": "MCCS Camp Pendleton",
+  "shortName": "MCB Camp Pendleton",
   "installationName": "Marine Corps Base Camp Pendleton",
   "assistantName": "Ask MCCS",
   "siteUrl": "https://pendleton.usmc-mccs.org",

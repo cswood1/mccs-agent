@@ -47,7 +47,7 @@ const viewing = await w.locator(".context-line").textContent();
 check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(viewing), viewing);
 // docs/PRODUCT.md §13: name and AI signal.
 check("Panel title is Ask MCCS", (await w.locator("#title").textContent())?.trim() === "Ask MCCS", await w.locator("#title").textContent());
-check("Subtitle is the installation", (await w.locator(".subtitle").textContent()) === "MCCS Quantico", await w.locator(".subtitle").textContent());
+check("Subtitle is the installation's short name", (await w.locator(".subtitle").textContent()) === "MCB Quantico", await w.locator(".subtitle").textContent());
 check("Sparkle next to the title", (await w.locator("#title svg.sparkle").count()) === 1);
 check("Composer placeholder", (await w.locator("textarea").getAttribute("placeholder")) === "Ask me anything…");
 const welcome = await w.locator(".msg.assistant").first().textContent();
@@ -160,7 +160,7 @@ check("Banner links to the Pendleton site", (await p4.locator(".demo-banner a").
 await p4.locator("#mccs-assistant button.launcher").click();
 await p4.waitForTimeout(500);
 const pSub = await p4.locator("#mccs-assistant .subtitle").textContent();
-check("Widget on Pendleton uses the Pendleton config", pSub === "MCCS Camp Pendleton", pSub);
+check("Widget on Pendleton uses the Pendleton config", pSub === "MCB Camp Pendleton", pSub);
 check("Pendleton panel is also Ask MCCS", (await p4.locator("#mccs-assistant #title").textContent())?.trim() === "Ask MCCS");
 const deepComing = await p4.goto(base + "/pendleton/lodging", { waitUntil: "networkidle" });
 check("Deep Pendleton paths show coming soon too", deepComing.ok() && /coming soon in this demo/.test((await p4.locator("main").textContent()) ?? ""));

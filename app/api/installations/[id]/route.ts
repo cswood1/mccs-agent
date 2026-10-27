@@ -14,6 +14,7 @@ export async function GET(_request: Request, ctx: RouteContext<"/api/installatio
     {
       id: inst.id,
       name: inst.name,
+      shortName: inst.shortName,
       assistantName: inst.assistantName,
       siteUrl: inst.siteUrl,
       welcomeMessage: inst.welcomeMessage,

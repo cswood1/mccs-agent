@@ -211,7 +211,8 @@ The recruiting-region sites are out of scope unless time allows.
 ## 13. Entry points, naming and the AI signal (decided 2026-10-27)
 
 **Name:** the assistant is **"Ask MCCS"** everywhere. Panel title: "Ask MCCS", with the subtitle
-"MCCS <Installation>" (for example "MCCS Quantico"). The floating button label is "Ask MCCS". The
+being the installation's short name only (for example "MCB Quantico", "MCB Camp Pendleton"), so "MCCS" isn't
+repeated. The short name is display-only config and is never part of the cached prompt. The floating button label is "Ask MCCS". The
 composer placeholder stays "Ask me anything…". Never "<Installation> Assistant".
 
 **AI signal:** an original, simple four-point sparkle icon, in the theme's scarlet and gold. It

@@ -1,6 +1,7 @@
 {
   "id": "quantico",
   "name": "MCCS Quantico",
+  "shortName": "MCB Quantico",
   "installationName": "Marine Corps Base Quantico",
   "assistantName": "Ask MCCS",
   "siteUrl": "https://quantico.usmc-mccs.org",

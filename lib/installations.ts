@@ -8,6 +8,9 @@ export type InstallationConfig = {
   id: string;
   /** Site name as shown to users, e.g. "MCCS Quantico". */
   name: string;
+  /** Display-only short name for the panel subtitle, e.g. "MCB Quantico" (docs/PRODUCT.md §13).
+   *  Never used in the system prompt, so changing it doesn't rewrite the prompt cache. */
+  shortName: string;
   installationName: string;
   assistantName: string;
   siteUrl: string;
