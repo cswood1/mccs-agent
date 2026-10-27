@@ -220,12 +220,12 @@ check("Enter opens the panel with the question sent", (await sp.locator("#mccs-a
 check("Asked with this page as context", searchBodies.at(-1)?.page?.path === "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", JSON.stringify(searchBodies.at(-1)?.page));
 check("Search box cleared after asking", (await sp.locator("#main-search-input").inputValue()) === "");
 check("Old search modal never opens", (await sp.locator("#searchModal.show").count()) === 0);
-await sp.locator("#mccs-assistant .close").click();
+await sp.locator("#mccs-assistant .minimize").click();
 await sp.keyboard.press(process.platform === "darwin" ? "Meta+k" : "Control+k");
 check("Cmd/Ctrl+K focuses the search box", await sp.locator("#main-search-input").evaluate((el) => document.activeElement === el));
-// The floating button shows the same conversation.
-await sp.locator("#mccs-assistant button.launcher").click();
-check("Floating button opens the same conversation", (await sp.locator("#mccs-assistant .msg.user").count()) >= 1);
+// The edge tab shows the same conversation.
+await sp.locator("#mccs-assistant button.edge-tab").click();
+check("Edge tab opens the same conversation", (await sp.locator("#mccs-assistant .msg.user").count()) >= 1);
 
 // Phones: the header search icon becomes the sparkle and opens the same experience.
 const phCtx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
@@ -288,6 +288,56 @@ await rmp.goto(base + "/quantico", { waitUntil: "networkidle" });
 await rmp.clock.runFor(12000);
 check("Reduced motion: placeholder stays on the invitation", (await rmp.locator("#main-search-input").getAttribute("placeholder")) === "Ask MCCS anything…");
 
+// Floating button and panel: full button → minimize → edge tab → reopen → navigation keeps the tab → reload shows the full button.
+async function edgeFlow(label, viewport, mobile) {
+  const c = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile });
+  await c.addCookies(await ctx.cookies());
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  await c.route("**/api/chat", (r) => r.fulfill({ status: 200, contentType: "text/plain", body: "Stub answer." }));
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  const wx = p.locator("#mccs-assistant");
+  const full = wx.locator("button.launcher");
+  const tab = wx.locator("button.edge-tab");
+  await p.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
+  check(`${label}: full button on first visit`, (await full.isVisible()) && !(await tab.isVisible()));
+  const fullBox = await full.boundingBox();
+  await full.click();
+  const min = wx.locator("button.minimize");
+  check(`${label}: header has a minimize button, no close X`, (await min.getAttribute("aria-label")) === "Minimize Ask MCCS" && (await wx.locator(".panel button.close").count()) === 0);
+  const disc = wx.locator(".disclaimer");
+  const discStyle = await disc.evaluate((el) => ({ size: getComputedStyle(el).fontSize, wrap: getComputedStyle(el).textWrap || getComputedStyle(el).textWrapStyle }));
+  check(`${label}: disclaimer text, smaller, balanced`, (await disc.textContent()) === "SI answers can be wrong. Check the linked MCCS page before you go." && discStyle.size === "11px" && /balance/.test(discStyle.wrap), JSON.stringify(discStyle));
+  await wx.locator("textarea").fill("Is it open late?");
+  await wx.locator("textarea").press("Enter");
+  await wx.locator(".msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
+  await min.click();
+  check(`${label}: minimize hides the panel and shows the edge tab`, !(await wx.locator(".panel").isVisible()) && !(await full.isVisible()) && (await tab.isVisible()));
+  check(`${label}: edge tab label and focus`, (await tab.getAttribute("aria-label")) === "Open Ask MCCS" && (await tab.evaluate((el) => el.getRootNode().activeElement === el)));
+  const tabBox = await tab.boundingBox();
+  check(`${label}: edge tab flush right, at the full button's height`, Math.abs(tabBox.x + tabBox.width - viewport.width) < 1 && Math.abs(tabBox.y + tabBox.height - (fullBox.y + fullBox.height)) <= 4 && tabBox.width <= 44, JSON.stringify({ tabBox, fullBox }));
+  check(`${label}: edge tab pulses`, (await tab.evaluate((el) => getComputedStyle(el).animationName)) === "edge-glow");
+  await tab.click();
+  check(`${label}: edge tab reopens the panel with the chat`, (await wx.locator(".panel").isVisible()) && (await wx.locator(".msg.user").count()) === 1 && !(await tab.isVisible()));
+  await wx.locator("textarea").press("Escape");
+  check(`${label}: Escape minimizes to the edge tab`, !(await wx.locator(".panel").isVisible()) && (await tab.isVisible()));
+  await p.goto(base + "/quantico/lodging", { waitUntil: "networkidle" });
+  check(`${label}: navigation keeps the edge tab`, (await tab.isVisible()) && !(await full.isVisible()) && !(await wx.locator(".panel").isVisible()));
+  await tab.click();
+  await p.waitForTimeout(400);
+  check(`${label}: chat history and page awareness after navigation`, (await wx.locator(".msg.user").count()) === 1 && /^Viewing: Lodging/i.test((await wx.locator(".context-line").textContent()) ?? ""));
+  await p.reload({ waitUntil: "networkidle" });
+  check(`${label}: reload shows the full button, panel closed`, (await full.isVisible()) && !(await tab.isVisible()) && !(await wx.locator(".panel").isVisible()));
+  await full.click();
+  check(`${label}: chat kept after reload`, (await wx.locator(".msg.user").count()) === 1);
+  await min.click();
+  check(`${label}: minimizing after reload shows the edge tab again`, await tab.isVisible());
+  return c;
+}
+await edgeFlow("Desktop", { width: 1280, height: 800 }, false);
+await edgeFlow("Phone", { width: 390, height: 844 }, true);
+
 // Reduced motion: no shimmer.
 const rmCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
 await rmCtx.addCookies(await ctx.cookies());
@@ -297,6 +347,10 @@ const rm = await rmCtx.newPage();
 await rm.goto(base + "/quantico", { waitUntil: "networkidle" });
 const rmAnim = await rm.locator("#mccs-assistant button.launcher").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: no shimmer", rmAnim === "none", rmAnim);
+await rm.locator("#mccs-assistant button.launcher").click();
+await rm.locator("#mccs-assistant button.minimize").click();
+const rmGlow = await rm.locator("#mccs-assistant button.edge-tab").evaluate((el) => getComputedStyle(el).animationName);
+check("Reduced motion: edge tab glow is static", rmGlow === "none", rmGlow);
 
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();

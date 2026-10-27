@@ -74,6 +74,9 @@
     '<button class="launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel">' +
       sparkle() + '<span class="launcher-label">Ask MCCS</span>' +
     "</button>" +
+    '<button class="edge-tab" type="button" aria-label="Open Ask MCCS" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel" hidden>' +
+      sparkle() +
+    "</button>" +
     '<section class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="title" hidden>' +
       '<header class="head">' +
         '<div class="head-text">' +
@@ -81,7 +84,7 @@
           '<p class="subtitle"></p><p class="context-line" hidden></p>' +
         "</div>" +
         '<button class="icon-btn reset" type="button" aria-label="Start a new chat" title="New chat">' + icon("refresh") + "</button>" +
-        '<button class="icon-btn close" type="button" aria-label="Close assistant" title="Close">' + icon("close") + "</button>" +
+        '<button class="icon-btn minimize" type="button" aria-label="Minimize Ask MCCS" title="Minimize">' + icon("minimize") + "</button>" +
       "</header>" +
       '<div class="sample-banner" hidden>Sample data — answers use placeholder content, not real MCCS information.</div>' +
       '<div class="log" role="log" aria-live="polite" aria-relevant="additions text"></div>' +
@@ -91,10 +94,11 @@
         '<textarea id="input" rows="1" placeholder="Ask me anything…" autocomplete="off" enterkeyhint="send"></textarea>' +
         '<button class="send" type="submit" aria-label="Send">' + icon("send") + "</button>" +
       "</form>" +
-      '<p class="disclaimer">AI answers can be wrong. Check the linked MCCS page before you go.</p>' +
+      '<p class="disclaimer">SI answers can be wrong. Check the linked MCCS page before you go.</p>' +
     "</section>";
 
   var launcher = root.querySelector(".launcher");
+  var edgeTab = root.querySelector(".edge-tab");
   var panel = root.querySelector(".panel");
   var subtitleEl = root.querySelector(".subtitle");
   var contextEl = root.querySelector(".context-line");
@@ -116,7 +120,8 @@
   root.querySelector(".nudge-close").addEventListener("click", hideNudge);
 
   launcher.addEventListener("click", function () { setOpen(true); });
-  root.querySelector(".close").addEventListener("click", function () { setOpen(false); });
+  edgeTab.addEventListener("click", function () { setOpen(true); });
+  root.querySelector(".minimize").addEventListener("click", function () { setOpen(false); });
   root.querySelector(".reset").addEventListener("click", resetChat);
   panel.addEventListener("keydown", function (e) {
     if (e.key === "Escape") setOpen(false);
@@ -137,8 +142,14 @@
   fetchConfig();
   fetchPage();
   enhanceHeaderSearch();
-  // Reopen after navigating to another page if the chat was open.
+  // A manual refresh starts over with the full button and the panel closed (the chat itself is
+  // kept). Navigating to another page keeps the panel open, or the edge tab if it was minimized.
+  if (isReload()) {
+    saveOpen(false);
+    saveTab(false);
+  }
   if (loadOpen()) setOpen(true, true);
+  else showButton();
 
   // Lets the host page open the chat (e.g. from its search box) or ask a question.
   window.mccsAssistant = {
@@ -567,8 +578,9 @@
     state.open = open;
     saveOpen(open);
     panel.hidden = !open;
-    launcher.hidden = open;
-    launcher.setAttribute("aria-expanded", String(open));
+    // Once the chat has been opened this session, minimizing leaves the compact edge tab.
+    if (open) saveTab(true);
+    showButton();
     // Full-screen on phones: stop the page underneath from scrolling.
     document.documentElement.style.overflow = open && isPhone() ? "hidden" : "";
     if (open) {
@@ -578,7 +590,29 @@
       scrollToEnd();
       if (!(restoring && isPhone())) input.focus({ preventScroll: true });
     } else {
-      launcher.focus();
+      (edgeTab.hidden ? launcher : edgeTab).focus();
+    }
+  }
+
+  // The full "Ask MCCS" button, or the edge tab once the chat has been used this session.
+  function showButton() {
+    var tab = loadJSON(storageKey + ":tab", false);
+    launcher.hidden = state.open || tab;
+    edgeTab.hidden = state.open || !tab;
+    launcher.setAttribute("aria-expanded", String(state.open));
+    edgeTab.setAttribute("aria-expanded", String(state.open));
+  }
+
+  function saveTab(on) {
+    try { sessionStorage.setItem(storageKey + ":tab", String(on)); } catch { /* ignore */ }
+  }
+
+  function isReload() {
+    try {
+      var nav = performance.getEntriesByType("navigation")[0];
+      return !!nav && nav.type === "reload";
+    } catch {
+      return false;
     }
   }
 
@@ -924,6 +958,7 @@
     var paths = {
       chat: '<path d="M4 5h16v11H8l-4 4z"/>',
       close: '<path d="M6 6l12 12M18 6L6 18"/>',
+      minimize: '<path d="M9 5l7 7-7 7"/>',
       send: '<path d="M4 12l16-8-6 16-2.5-6.5z"/>',
       refresh: '<path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/>',
     };
@@ -952,6 +987,19 @@
       ".sparkle { width: 20px; height: 20px; flex: none; fill: var(--accent); }",
       ".launcher .sparkle { width: 22px; height: 22px; }",
       ".launcher:focus-visible, button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
+
+      // Compact edge tab: a half-pill flush with the right edge, at the full button's height.
+      // Kept small (40 x 48) so it covers little page content and stays clear of the
+      // phone's edge swipe-back strip above it.
+      ".edge-tab { position: fixed; z-index: 2147483000; right: 0; bottom: max(16px, env(safe-area-inset-bottom));",
+      "  display: grid; place-items: center; width: calc(40px + env(safe-area-inset-right)); height: 48px; padding: 0 env(safe-area-inset-right) 0 2px;",
+      "  border: 0; border-radius: 24px 0 0 24px; background: var(--primary); cursor: pointer;",
+      "  box-shadow: -2px 4px 14px rgba(0,0,0,.22); animation: edge-glow 2.4s ease-in-out infinite; }",
+      "@keyframes edge-glow { 0%, 100% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 0 0 rgba(255,199,44,0); }",
+      "  50% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 14px 3px rgba(255,199,44,.55); } }",
+      ".edge-tab:hover { filter: brightness(1.08); }",
+      ".edge-tab .sparkle { width: 22px; height: 22px; }",
+      ".edge-tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
       "  display: flex; flex-direction: column; background: var(--bg); box-shadow: -8px 0 30px rgba(0,0,0,.18); animation: slide .2s ease-out; }",
@@ -1006,9 +1054,9 @@
       ".send { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%;",
       "  background: var(--primary); color: #fff; cursor: pointer; }",
       ".send:disabled { opacity: .45; cursor: default; }",
-      ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 12px; color: var(--muted); background: var(--bg); text-align: center; }",
+      ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 11px; color: var(--muted); background: var(--bg); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher { animation: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab { animation: none; } }",
     ].join("\n");
   }
 })();
