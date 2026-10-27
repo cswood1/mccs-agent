@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { corsHeaders, preflight } from "@/lib/cors";
 import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
-import { CROSS_BASE_TOOL, runCrossBaseTool } from "@/lib/crossbase";
+import { CROSS_BASE_TOOL, crossBaseStatus, runCrossBaseTool } from "@/lib/crossbase";
 import { rateLimit } from "@/lib/ratelimit";
 import { buildContentBlock } from "@/lib/prompt";
 import { cleanClientText, pageInfo } from "@/lib/site/context";
@@ -13,6 +13,13 @@ const REPLY_REMINDER =
 
 // Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
 const FRAME = "\u001e";
+// Wraps a status line ("Checking the live MCCS page…") shown while a tool runs (ASCII group
+// separator, before and after). The widget shows it until answer text arrives; it's never saved.
+const STATUS = "\u001d";
+const SERVER_TOOL_STATUS: Record<string, string> = {
+  web_fetch: "Checking the live MCCS page…",
+  web_search: "Searching the live MCCS site…",
+};
 
 const MAX_MESSAGES = 30;
 // Extra model calls per answer: server-tool pauses, plus our own tool (other installations' pages).
@@ -105,7 +112,20 @@ export async function POST(request: Request) {
           );
 
           let afterTool = false;
+          // Input of a cross-base tool call as it streams, by content block index.
+          const toolInput = new Map<number, string>();
           for await (const event of stream) {
+            if (event.type === "content_block_start") {
+              const b = event.content_block;
+              if (b.type === "server_tool_use" && SERVER_TOOL_STATUS[b.name]) answer.status(SERVER_TOOL_STATUS[b.name]);
+              if (b.type === "tool_use" && b.name === CROSS_BASE_TOOL) toolInput.set(event.index, "");
+            }
+            if (event.type === "content_block_delta" && event.delta.type === "input_json_delta" && toolInput.has(event.index)) {
+              toolInput.set(event.index, toolInput.get(event.index) + event.delta.partial_json);
+            }
+            if (event.type === "content_block_stop" && toolInput.has(event.index)) {
+              answer.status(crossBaseStatus(toolInput.get(event.index) ?? ""));
+            }
             // Separate text written before and after a tool call. (Consecutive text blocks,
             // e.g. around a quoted passage, are one flow of text and need no break.)
             if (event.type === "content_block_start") {
@@ -235,6 +255,13 @@ class FollowupSplitter {
     const hold = longestTagPrefixSuffix(this.buffer, "<followups>");
     this.out(this.buffer.slice(0, this.buffer.length - hold));
     this.buffer = this.buffer.slice(this.buffer.length - hold);
+  }
+
+  /** A status frame, in order after any text held back so far. */
+  status(text: string) {
+    if (this.captured !== null) return;
+    this.out(this.buffer + STATUS + text + STATUS);
+    this.buffer = "";
   }
 
   /** Flush any held text and return the parsed follow-ups. */

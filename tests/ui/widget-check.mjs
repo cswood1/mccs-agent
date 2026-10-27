@@ -470,6 +470,77 @@ await rm.locator("#mccs-assistant button.minimize").click();
 const rmGlow = await rm.locator("#mccs-assistant button.edge-tab").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: edge tab glow is static", rmGlow === "none", rmGlow);
 
+// Tool status line: shown in place of the typing dots while a tool runs, gone once text arrives,
+// never saved. /api/chat is stubbed in the page with a stream that waits until the test releases it.
+async function statusPage(extra = {}) {
+  const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, ...extra });
+  await c.addCookies(await ctx.cookies());
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  await c.addInitScript(() => {
+    const realFetch = window.fetch;
+    window.fetch = (url, opts) => {
+      if (!String(url).includes("/api/chat")) return realFetch(url, opts);
+      const enc = new TextEncoder();
+      const body = new ReadableStream({
+        async start(ctl) {
+          ctl.enqueue(enc.encode(window.__before ?? ""));
+          ctl.enqueue(enc.encode("\u001dChecking Camp Pendleton’s pages…\u001d"));
+          while (!window.__release) await new Promise((r) => setTimeout(r, 50));
+          ctl.enqueue(enc.encode("Pendleton's relocation office handles sponsors."));
+          ctl.enqueue(enc.encode("\u001e" + JSON.stringify({ followups: ["Pendleton lodging?"] })));
+          ctl.close();
+        },
+      });
+      return Promise.resolve(new Response(body, { status: 200, headers: { "Content-Type": "text/plain" } }));
+    };
+  });
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  await p.goto(base + "/quantico", { waitUntil: "networkidle" });
+  await p.locator("#mccs-assistant button.launcher").click();
+  return { c, p, last: p.locator("#mccs-assistant .msg.assistant").last() };
+}
+{
+  const { c, p, last } = await statusPage();
+  await p.locator("#mccs-assistant textarea").fill("I'm PCSing to Pendleton next month, what should I set up?");
+  await p.locator("#mccs-assistant textarea").press("Enter");
+  await last.locator(".status").waitFor();
+  check("Tool status shown while waiting", (await last.locator(".status").textContent()) === "Checking Camp Pendleton’s pages…" && (await last.locator(".status").getAttribute("role")) === "status");
+  check("Tool status replaces the typing dots", (await last.locator(".typing").count()) === 0);
+  await p.evaluate(() => { window.__release = true; });
+  await last.filter({ hasText: "relocation office" }).waitFor();
+  await p.waitForTimeout(300);
+  check("Status disappears when the answer arrives", (await last.locator(".status").count()) === 0 && !/Checking/.test((await last.textContent()) ?? ""));
+  const saved = await p.evaluate(() => sessionStorage.getItem("mccs-assistant:quantico") ?? "");
+  check("Status never saved in the chat history", saved.includes("relocation office") && !saved.includes("Checking") && !saved.includes("\u001d") && !saved.includes('"status"'), saved.slice(0, 160));
+  check("Follow-ups still parsed after a status", (await p.locator("#mccs-assistant .chips .chip").allTextContents()).includes("Pendleton lodging?"));
+  await c.close();
+}
+{
+  // Text before the tool call: the status shows under it, then goes when more text comes.
+  const { c, p, last } = await statusPage();
+  await p.evaluate(() => { window.__before = "Sure. "; });
+  await p.locator("#mccs-assistant textarea").fill("PCS to Pendleton?");
+  await p.locator("#mccs-assistant textarea").press("Enter");
+  await last.locator(".status").waitFor();
+  check("Status shows under text written before the tool", /^Sure\./.test(((await last.textContent()) ?? "").trim()) && (await last.locator("p.status").count()) === 1);
+  await p.evaluate(() => { window.__release = true; });
+  await last.filter({ hasText: "relocation office" }).waitFor();
+  check("…and goes when the answer continues", (await last.locator(".status").count()) === 0);
+  await c.close();
+}
+{
+  const { c, p, last } = await statusPage({ reducedMotion: "reduce" });
+  await p.locator("#mccs-assistant textarea").fill("PCS to Pendleton?");
+  await p.locator("#mccs-assistant textarea").press("Enter");
+  await last.locator(".status").waitFor();
+  const anim = await last.locator(".status").evaluate((el) => getComputedStyle(el).animationName);
+  check("Reduced motion: status line doesn't pulse", anim === "none", anim);
+  await p.evaluate(() => { window.__release = true; });
+  await c.close();
+}
+
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
 

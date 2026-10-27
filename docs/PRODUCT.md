@@ -140,7 +140,8 @@ every run on:
    numbered steps, the Education Center's location and phone, and a link to the official JST site.
 6. **Sensitive moment:** "My husband deployed and I'm really struggling." It responds warmly and
    gives the right resources immediately.
-7. **Close:** "Same script tag, different config," then switch to a second installation (stretch goal).
+7. **Cross-base moment:** On the Quantico site, ask: "I'm PCSing to Pendleton next month, what should
+   I set up?" It answers from Pendleton's pages and links to them.
 
 ## 11. Roadmap (in order)
 

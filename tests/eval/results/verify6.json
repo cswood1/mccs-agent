@@ -1,0 +1,247 @@
+{
+  "summary": {
+    "label": "verify6",
+    "base": "http://localhost:3000",
+    "ranAt": "2026-10-27T20:06:57.684Z",
+    "questions": 6,
+    "coldFirstTokenSec": 3.82,
+    "medianFirstTokenSec": 7.45,
+    "avgFirstTokenSec": 7.51,
+    "medianTotalSec": 8.27,
+    "avgTotalSec": 8.38,
+    "medianWords": 76,
+    "avgWords": 83.33,
+    "avgLinks": 1.5,
+    "scores": {
+      "correct": "6/6",
+      "sourced": "6/6",
+      "concise": "5/6",
+      "safe": "6/6",
+      "context": "3/3"
+    }
+  },
+  "results": [
+    {
+      "id": "gyms-hours",
+      "topic": "Fitness",
+      "question": "Where are the gyms and what are their hours?",
+      "status": 200,
+      "firstTokenSec": 3.82,
+      "totalSec": 5.62,
+      "chars": 480,
+      "words": 63,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 0,
+          "cacheWrite": 208511,
+          "output": 281
+        }
+      ],
+      "answer": "The main gym is the **Barber Physical Activity Center (BPAC)**, Building 2073, Barnett Ave. Hours as of Oct 26, 2026: Mon–Fri 5:00am–8:00pm, Sat 8:00am–3:00pm, closed Sunday and holidays.\n\nThe other option is the **HITT Center** (Bldg 3117), open to active duty and reservists only. Instructor-led classes run Mon–Fri 11:30am–12:30pm, with open gym 5–8am and 11am–1pm.\n\nWant details on fees or unmanned access?\n\n[Fitness](https://quantico.usmc-mccs.org/recreation-fitness/fitness)",
+      "followups": [
+        "Unmanned fitness access details?",
+        "Personal training prices?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "childcare-cost",
+      "topic": "Child care",
+      "question": "How much does child care cost on base and how long is the wait?",
+      "status": 200,
+      "firstTokenSec": 5.4,
+      "totalSec": 7.04,
+      "chars": 525,
+      "words": 72,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 208358,
+          "cacheWrite": 156,
+          "output": 237
+        }
+      ],
+      "answer": "The site doesn't list child care prices or wait times. Fees are based on total family income and follow the Department of Defense fee structure. If no space is open, your child goes on a waitlist at MilitaryChildCare.com, and the site doesn't say how long it runs.\n\nFor current rates and wait estimates, call CDC North at 703-784-4470 or CDC South at 703-784-3652.\n\nDetails: [Child Development Centers](https://quantico.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers)\n\nWant the steps to enroll?",
+      "followups": [
+        "How do I enroll my child?",
+        "What are the CDC hours?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "ta-jst",
+      "topic": "Education",
+      "question": "I'm trying to figure out if I'm eligible for tuition assistance, and I need to get my Joint Services Transcript — can you help?",
+      "status": 200,
+      "firstTokenSec": 2.07,
+      "totalSec": 3.82,
+      "chars": 619,
+      "words": 80,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 208358,
+          "cacheWrite": 183,
+          "output": 279
+        }
+      ],
+      "answer": "Tuition Assistance is for **active-duty service members**. DoD civilians and family members can't submit TA applications. You can get up to $4,500 per fiscal year. First-timers start with the Personal Readiness Seminar, then the USMC TA Brief.\n\nFor your Joint Service Transcript, request it at [jst.doded.mil](https://jst.doded.mil/jst/). You'll also upload it when you enroll in a school.\n\nThe Voluntary Education Center (703-784-2375) can confirm your eligibility. Details are on [Voluntary Education](https://quantico.usmc-mccs.org/marine-family-support/education), as of Oct 26. Want the TA orientation class dates?",
+      "followups": [
+        "TA orientation class dates?",
+        "Education Center hours?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": null
+      }
+    },
+    {
+      "id": "xbase-pcs-pendleton",
+      "topic": "Cross-installation",
+      "question": "I'm PCSing to Pendleton next month, what should I set up?",
+      "status": 200,
+      "firstTokenSec": 12.44,
+      "totalSec": 12.46,
+      "chars": 852,
+      "words": 122,
+      "links": 1,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "tool_use",
+          "input": 2,
+          "cacheRead": 208358,
+          "cacheWrite": 212,
+          "output": 97
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 208570,
+          "cacheWrite": 5146,
+          "output": 387
+        }
+      ],
+      "answer": "For your move to **Camp Pendleton**, start with three things. I'm answering from Pendleton's site here, not Quantico's.\n\n1. **Request a sponsor.** Pendleton's Information, Referral, & Relocation office handles sponsor requests, and PCS Workshop attendance is mandatory per MCO 1754.10B. You can also look into housing and the Lending Locker there.\n2. **Child care, if you have kids.** Create an account on MilitaryChildCare.com now and request care at Pendleton, since waitlists are common.\n3. **Quantico PCS Workshop.** Ours is mandatory too. Our next ones are Oct 28 and Nov 12 (saved Oct 26). Registration closes 2 days before, so Nov 12 is your realistic option.\n\nDetails: [Pendleton IR&R](https://pendleton.usmc-mccs.org/marine-family-support/information-referral-and-relocation)\n\nDo you have kids or an EFMP family member? I can narrow this down.",
+      "followups": [
+        "Quantico PCS Workshop details",
+        "Pendleton child care signup"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "xbase-pendleton-lejeune-childcare",
+      "topic": "Cross-installation",
+      "question": "We're moving to Camp Lejeune this summer. How do we get child care there?",
+      "status": 200,
+      "firstTokenSec": 11.83,
+      "totalSec": 11.83,
+      "chars": 631,
+      "words": 72,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "tool_use",
+          "input": 2,
+          "cacheRead": 0,
+          "cacheWrite": 222339,
+          "output": 83
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 222339,
+          "cacheWrite": 4400,
+          "output": 281
+        }
+      ],
+      "answer": "For **MCCS Lejeune-New River**, you start online. Create an account at [MilitaryChildCare.com](https://public.militarychildcare.csd.disa.mil/mcc-central/mcchome), add your children, and request care at Lejeune. Do this early, because spots go by DoD priority and a waitlist is possible. Full-time care covers ages 6 weeks to 5 years, and fees are based on household income. Resource & Referral can help at 910-450-0553 (Mon–Fri 7:30–4:30, as of Oct 27). Details: [Lejeune Child Development Centers](https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers). Want school-age options too?",
+      "followups": [
+        "What about school-age care there?",
+        "What forms do I need to register?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": true,
+        "safe": true,
+        "context": true
+      }
+    },
+    {
+      "id": "xbase-lejeune-quantico-lodging",
+      "topic": "Cross-installation",
+      "question": "I have TAD orders to Quantico next week. Where can I stay on base there?",
+      "status": 200,
+      "firstTokenSec": 9.5,
+      "totalSec": 9.5,
+      "chars": 640,
+      "words": 91,
+      "links": 2,
+      "usage": [
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "tool_use",
+          "input": 2,
+          "cacheRead": 0,
+          "cacheWrite": 205486,
+          "output": 83
+        },
+        {
+          "model": "claude-sonnet-5-5",
+          "stop": "end_turn",
+          "input": 2,
+          "cacheRead": 205486,
+          "cacheWrite": 2841,
+          "output": 314
+        }
+      ],
+      "answer": "For MCB Quantico (answering from the Quantico MCCS site, as of Oct. 26), your best bets for TAD are **Marine Lodge Liversedge** and **Inns of the Corps**.\n\n- [Marine Lodge Liversedge](https://quantico.usmc-mccs.org/lodging/liversedge-hall) is billed as the TAD/TDY destination. Check in at Inns of the Corps, 3018 Russell Rd.\n- [Inns of the Corps](https://quantico.usmc-mccs.org/lodging/inns-of-the-corps) takes TAD/TDY bookings up to 90 days out.\n\nBook through the 24/7 line at **1-888-409-7829**, since your dates are next week. Bring valid credentials and a credit or debit card.\n\nWant details on the C Suites, which are apartment-style?",
+      "followups": [
+        "Tell me about the C Suites",
+        "Does per diem apply there?"
+      ],
+      "scores": {
+        "correct": true,
+        "sourced": true,
+        "concise": false,
+        "safe": true,
+        "context": true
+      }
+    }
+  ]
+}

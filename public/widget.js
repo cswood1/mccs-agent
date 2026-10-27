@@ -33,6 +33,7 @@
 
   var currentPath = (location.pathname.replace(/\/+$/, "") || "/");
   var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
+  var STATUS = "\u001d"; // wraps a status line ("Checking the live MCCS page…") sent while a tool runs
 
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
   // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
@@ -713,7 +714,9 @@
           return reader.read().then(function (chunk) {
             if (chunk.done) return;
             raw += decoder.decode(chunk.value, { stream: true });
-            reply.content = raw.split(FRAME)[0];
+            var parsed = parseStream(raw.split(FRAME)[0]);
+            reply.content = parsed.text;
+            reply.status = parsed.status;
             if (!pending) {
               pending = true;
               requestAnimationFrame(function () {
@@ -732,6 +735,7 @@
         reply.content = (reply.content ? reply.content + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again.");
       })
       .then(function () {
+        delete reply.status; // display only, never saved
         reply.content = reply.content.trim();
         var frame = raw.split(FRAME)[1];
         if (frame) {
@@ -753,6 +757,25 @@
         scrollToEnd();
         if (state.open && !isPhone()) input.focus();
       });
+  }
+
+  /**
+   * Answer text without status frames, and the status to show: the latest complete one, until
+   * answer text arrives after it. A frame still arriving is left out.
+   */
+  function parseStream(answer) {
+    var parts = answer.split(STATUS);
+    var text = "";
+    var status = "";
+    for (var i = 0; i < parts.length; i++) {
+      if (i % 2 === 0) {
+        text += parts[i];
+        if (parts[i].trim()) status = "";
+      } else if (i < parts.length - 1) {
+        status = parts[i];
+      }
+    }
+    return { text: text, status: status };
   }
 
   // ---------- rendering ----------
@@ -805,10 +828,14 @@
     if (m.role === "user") {
       el.textContent = m.content;
     } else if (!m.content) {
-      el.innerHTML = '<span class="typing" aria-label="Assistant is typing"><i></i><i></i><i></i></span>';
+      el.innerHTML = m.status
+        ? '<span class="status" role="status"></span>'
+        : '<span class="typing" aria-label="Assistant is typing"><i></i><i></i><i></i></span>';
     } else {
       el.innerHTML = markdown(m.content);
+      if (m.status) el.insertAdjacentHTML("beforeend", '<p class="status" role="status"></p>');
     }
+    if (m.status) el.querySelector(".status").textContent = m.status;
     return el;
   }
 
@@ -864,7 +891,9 @@
 
   function saveMessages() {
     try {
-      sessionStorage.setItem(storageKey, JSON.stringify(state.messages.slice(-30)));
+      // Only what the conversation needs; a tool status line is display-only.
+      var saved = state.messages.slice(-30).map(function (m) { return m.error ? { role: m.role, content: m.content, error: true } : { role: m.role, content: m.content }; });
+      sessionStorage.setItem(storageKey, JSON.stringify(saved));
     } catch { /* storage unavailable: chat just won't persist */ }
   }
 
@@ -1079,6 +1108,10 @@
       ".typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite both; }",
       ".typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }",
       "@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }",
+      // Tool status ("Checking Camp Pendleton’s pages…") in place of the typing dots.
+      ".status { display: block; color: var(--muted); font-size: 14px; font-style: italic; animation: status-pulse 1.6s ease-in-out infinite; }",
+      ".msg p.status { margin: 8px 0 0; }",
+      "@keyframes status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }",
 
       ".composer { display: flex; align-items: flex-end; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: var(--bg); }",
       ".chips:not([hidden]) + .composer { border-top: 0; }",
@@ -1090,7 +1123,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 11px; color: var(--muted); background: var(--bg); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab { animation: none; } .edge-label { transition: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab, .status { animation: none; } .edge-label { transition: none; } }",
     ].join("\n");
   }
 })();
