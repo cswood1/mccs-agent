@@ -79,7 +79,7 @@
       sparkle() + '<span class="launcher-label">Ask MCCS</span>' +
     "</button>" +
     '<button class="edge-tab" type="button" aria-label="Open Ask MCCS" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel" hidden>' +
-      sparkle() +
+      sparkle() + '<span class="edge-label" aria-hidden="true">Ask MCCS</span>' +
     "</button>" +
     '<section class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="title" hidden>' +
       '<header class="head">' +
@@ -1017,15 +1017,20 @@
 
       // Compact edge tab: a half-pill flush with the right edge, at the full button's height.
       // Kept small (40 x 48) so it covers little page content and stays clear of the
-      // phone's edge swipe-back strip above it.
+      // phone's edge swipe-back strip above it. On hover or keyboard focus it slides out to the
+      // left to show the label; touch screens have no hover, so a tap just opens the panel.
       ".edge-tab { position: fixed; z-index: 2147483000; right: 0; bottom: max(16px, env(safe-area-inset-bottom));",
-      "  display: grid; place-items: center; width: calc(40px + env(safe-area-inset-right)); height: 48px; padding: 0 env(safe-area-inset-right) 0 2px;",
-      "  border: 0; border-radius: 24px 0 0 24px; background: var(--primary); cursor: pointer;",
+      "  display: flex; align-items: center; height: 48px; padding: 0 calc(9px + env(safe-area-inset-right)) 0 10px;",
+      "  border: 0; border-radius: 24px 0 0 24px; background: var(--primary); color: #fff; font: 600 15px/1 inherit; font-family: inherit; cursor: pointer;",
       "  box-shadow: -2px 4px 14px rgba(0,0,0,.22); animation: edge-glow 2.4s ease-in-out infinite; }",
       "@keyframes edge-glow { 0%, 100% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 0 0 rgba(255,199,44,0); }",
       "  50% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 14px 3px rgba(255,199,44,.55); } }",
       ".edge-tab:hover { filter: brightness(1.08); }",
       ".edge-tab .sparkle { width: 22px; height: 22px; }",
+      ".edge-label { display: block; max-width: 0; margin-left: 0; overflow: hidden; white-space: nowrap; opacity: 0;",
+      "  transition: max-width .2s ease-out, margin-left .2s ease-out, opacity .2s ease-out; }",
+      "@media (hover: hover) { .edge-tab:hover .edge-label { max-width: 90px; margin-left: 8px; opacity: 1; } }",
+      ".edge-tab:focus-visible .edge-label { max-width: 90px; margin-left: 8px; opacity: 1; }",
       ".edge-tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
@@ -1083,7 +1088,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 11px; color: var(--muted); background: var(--bg); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab { animation: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab { animation: none; } .edge-label { transition: none; } }",
     ].join("\n");
   }
 })();

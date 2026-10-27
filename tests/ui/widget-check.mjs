@@ -361,6 +361,72 @@ async function edgeFlow(label, viewport, mobile) {
 await edgeFlow("Desktop", { width: 1280, height: 800 }, false);
 await edgeFlow("Phone", { width: 390, height: 844 }, true);
 
+// Edge tab hover/focus expansion (desktop) and tap-to-open (touch).
+async function tabPage(viewport, mobile, extra = {}) {
+  const c = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, ...extra });
+  await c.addCookies(await ctx.cookies());
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  await p.goto(base + "/quantico/lodging", { waitUntil: "networkidle" });
+  const wx = p.locator("#mccs-assistant");
+  await wx.locator("button.launcher").click();
+  await wx.locator("button.minimize").click();
+  return { p, wx, tab: wx.locator("button.edge-tab"), label: wx.locator(".edge-label") };
+}
+const tabState = (tab) => tab.evaluate((el) => {
+  const r = el.getBoundingClientRect(), cs = getComputedStyle(el), lab = el.querySelector(".edge-label"), ls = getComputedStyle(lab);
+  return { width: r.width, right: r.right, vw: innerWidth, labelOpacity: ls.opacity, labelWidth: lab.getBoundingClientRect().width,
+    radius: [cs.borderTopLeftRadius, cs.borderTopRightRadius, cs.borderBottomRightRadius, cs.borderBottomLeftRadius], glow: cs.animationName,
+    transition: ls.transitionDuration + " " + ls.transitionTimingFunction };
+});
+{
+  const { p, wx, tab, label } = await tabPage({ width: 1280, height: 800 }, false);
+  await p.mouse.move(400, 400);
+  await p.waitForTimeout(300);
+  const collapsed = await tabState(tab);
+  check("Edge tab collapsed: compact sparkle only", collapsed.width <= 44 && collapsed.labelOpacity === "0" && collapsed.labelWidth === 0, JSON.stringify(collapsed));
+  check("Edge tab label slides with ~200ms ease-out", /^0\.2s/.test(collapsed.transition) && /ease-out/.test(collapsed.transition), collapsed.transition);
+  await tab.hover();
+  await p.waitForTimeout(350);
+  const hovered = await tabState(tab);
+  check("Hover expands the tab to show “Ask MCCS”", hovered.width > 100 && hovered.labelOpacity === "1" && (await label.textContent()) === "Ask MCCS" && (await label.isVisible()), JSON.stringify(hovered));
+  check("Expanded tab stays flush with the right edge, rounded on the left only", Math.abs(hovered.right - hovered.vw) < 1 && hovered.radius[1] === "0px" && hovered.radius[2] === "0px" && hovered.radius[0] !== "0px" && hovered.radius[3] !== "0px", JSON.stringify(hovered));
+  check("Expanded tab keeps the glow", hovered.glow === "edge-glow", hovered.glow);
+  check("Expanded tab keeps its accessible name", (await tab.getAttribute("aria-label")) === "Open Ask MCCS");
+  await p.mouse.move(400, 400);
+  await p.waitForTimeout(350);
+  check("Mouse leave tucks it back", (await tabState(tab)).width <= 44);
+  // Keyboard: Escape from the panel puts keyboard focus on the tab, which expands it.
+  await tab.click();
+  await p.mouse.move(400, 400); // not hovering the tab, so only focus can expand it
+  await wx.locator("textarea").press("Escape");
+  await p.waitForTimeout(350);
+  const focused = await tabState(tab);
+  check("Keyboard focus expands the tab", focused.width > 100 && focused.labelOpacity === "1" && (await tab.evaluate((el) => el.matches(":focus-visible"))), JSON.stringify(focused));
+  await p.keyboard.press("Shift+Tab");
+  await p.waitForTimeout(350);
+  check("Blur tucks it back", (await tabState(tab)).width <= 44);
+  await p.context().close();
+}
+{
+  const { p, wx, tab } = await tabPage({ width: 390, height: 844 }, true);
+  check("Touch: no hover state", await p.evaluate(() => !matchMedia("(hover: hover)").matches));
+  const before = await tabState(tab);
+  await tab.tap();
+  await p.waitForTimeout(300);
+  check("Touch: a tap opens the panel directly", before.width <= 44 && (await wx.locator(".panel").isVisible()) && !(await tab.isVisible()), JSON.stringify(before));
+  await p.context().close();
+}
+{
+  const { p, tab } = await tabPage({ width: 1280, height: 800 }, false, { reducedMotion: "reduce" });
+  await tab.hover();
+  const instant = await tabState(tab);
+  check("Reduced motion: tab expands instantly, no slide", instant.width > 100 && /^0s/.test(instant.transition), JSON.stringify(instant));
+  await p.context().close();
+}
+
 // Reduced motion: no shimmer.
 const rmCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
 await rmCtx.addCookies(await ctx.cookies());
