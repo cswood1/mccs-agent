@@ -250,8 +250,8 @@ await ph.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answe
 check("Phone: Enter asks in the panel", (await ph.locator("#mccs-assistant .panel").isVisible()) && !(await ph.locator("#mccs-ask-sheet").isVisible()));
 check("Phone: old search modal never opens", (await ph.locator("#searchModal.show").count()) === 0);
 
-// Placeholder rotation: invitation first, then the example questions every 4 s, paused on focus.
-const PLACEHOLDERS = ["Ask MCCS anything…", "Is the gym open now?", "What’s on this weekend?", "Where can I eat lunch?", "Find child care on base", "Book a room for my PCS", "Am I eligible for TA?"];
+// Placeholder rotation: invitation first, then the examples every 2.5 s with a quick fade, paused on focus.
+const PLACEHOLDERS = ["Ask MCCS anything…", "Ask MCCS… Gym hours today", "Ask MCCS… Events this weekend", "Ask MCCS… Child care on base", "Ask MCCS… Where to eat lunch", "Ask MCCS… Things to do on base", "Ask MCCS… Lodging on base"];
 const rotCtx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
 await rotCtx.addCookies(await ctx.cookies());
 await rotCtx.route(/usmc-mccs\.org/, (r) => r.abort());
@@ -259,15 +259,22 @@ await rotCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "
 const rp = await rotCtx.newPage();
 await rp.clock.install();
 await rp.goto(base + "/quantico", { waitUntil: "networkidle" });
+// Record the fade class going on and off around each switch.
+await rp.locator("#main-search-input").evaluate((el) => {
+  window.__fades = [];
+  new MutationObserver(() => window.__fades.push(el.classList.contains("mccs-ph-fade"))).observe(el, { attributes: true, attributeFilter: ["class"] });
+});
 const seen = [await rp.locator("#main-search-input").getAttribute("placeholder")];
 for (let i = 1; i < PLACEHOLDERS.length + 1; i++) {
-  await rp.clock.runFor(4000);
+  await rp.clock.runFor(2500);
   seen.push(await rp.locator("#main-search-input").getAttribute("placeholder"));
 }
+const fades = await rp.evaluate(() => window.__fades);
+check("Quick fade between placeholders", fades.length >= 2 * (PLACEHOLDERS.length - 1) && fades[0] === true && fades.includes(false), JSON.stringify(fades.slice(0, 6)));
 check("Rotates through the questions in order, then repeats", JSON.stringify(seen) === JSON.stringify([...PLACEHOLDERS, PLACEHOLDERS[0]]), JSON.stringify(seen));
 await rp.locator("#main-search-input").focus();
 const before = await rp.locator("#main-search-input").getAttribute("placeholder");
-await rp.clock.runFor(12000);
+await rp.clock.runFor(8000);
 check("Rotation pauses while focused", (await rp.locator("#main-search-input").getAttribute("placeholder")) === before);
 const rmp = await (await (async () => {
   const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });

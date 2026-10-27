@@ -39,13 +39,15 @@
   // already signals Ask MCCS, so the questions stand on their own.
   var PLACEHOLDERS = [
     "Ask MCCS anything…",
-    "Is the gym open now?",
-    "What’s on this weekend?",
-    "Where can I eat lunch?",
-    "Find child care on base",
-    "Book a room for my PCS",
-    "Am I eligible for TA?",
+    "Ask MCCS… Gym hours today",
+    "Ask MCCS… Events this weekend",
+    "Ask MCCS… Child care on base",
+    "Ask MCCS… Where to eat lunch",
+    "Ask MCCS… Things to do on base",
+    "Ask MCCS… Lodging on base",
   ];
+  var PLACEHOLDER_MS = 2500; // time each one shows
+  var PLACEHOLDER_FADE_MS = 160; // quick fade between them
   var searchIndex = null;
   var search = { input: null, listbox: null, sheet: null, options: [], active: -1 };
 
@@ -262,9 +264,14 @@
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setInterval(function () {
       if (document.activeElement === input || input.value) return;
-      i++;
-      set();
-    }, 4000);
+      // Quick fade out, swap the text, fade back in.
+      input.classList.add("mccs-ph-fade");
+      setTimeout(function () {
+        i++;
+        set();
+        input.classList.remove("mccs-ph-fade");
+      }, PLACEHOLDER_FADE_MS);
+    }, PLACEHOLDER_MS);
   }
 
   function setupCombobox(input) {
@@ -493,6 +500,8 @@
     st.id = "mccs-ask-style";
     st.textContent = [
       "#main-search-input[role=combobox] { cursor: text; padding-right: 2.6rem; text-overflow: ellipsis; }",
+      "#main-search-input[role=combobox]::placeholder, #mccs-ask-sheet input::placeholder { opacity: 1; transition: opacity .16s ease; }",
+      "#main-search-input.mccs-ph-fade::placeholder, #mccs-ask-sheet input.mccs-ph-fade::placeholder { opacity: 0; }",
       "#mccs-ask-listbox { position: fixed; z-index: 2147482990; box-sizing: border-box; max-height: min(70vh, 460px); overflow-y: auto; padding: 6px;",
       "  background: #fff; color: #212529; border: 1px solid #dee2e6; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.2);",
       "  font: 15px/1.35 'Noto Sans', system-ui, -apple-system, sans-serif; text-align: left; }",
