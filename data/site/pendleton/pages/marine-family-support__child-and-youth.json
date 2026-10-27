@@ -159,5 +159,12 @@
   ],
   "notCaptured": "Story cards (Read More Stories) not listed.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Child care options for my kids",
+    "How do I get on the waitlist?",
+    "Before and after school care",
+    "Summer camps for my kids"
+  ],
+  "chipsManual": true
 }

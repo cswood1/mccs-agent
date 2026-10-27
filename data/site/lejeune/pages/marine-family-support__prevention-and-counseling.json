@@ -110,5 +110,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "I need someone to talk to",
+    "Is counseling confidential?",
+    "Help with stress or anger",
+    "How do I reach a victim advocate?"
+  ],
+  "chipsManual": true
 }

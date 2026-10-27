@@ -211,5 +211,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Child care options on base",
+    "I need someone to talk to",
+    "Free financial counseling",
+    "Help leaving the military"
+  ],
+  "chipsManual": true
 }
