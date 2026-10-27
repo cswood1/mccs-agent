@@ -207,3 +207,35 @@ The recruiting-region sites are out of scope unless time allows.
 **Risks:**
 - Accuracy is harder to spot-check at scale, so spot-check the deep sites only.
 - A copy of the whole network is more exposure. The access code, banner and noindex stay mandatory.
+
+## 13. Entry points, naming and the AI signal (decided 2026-10-27)
+
+**Name:** the assistant is **"Ask MCCS"** everywhere. Panel title: "Ask MCCS", with the subtitle
+"MCCS <Installation>" (for example "MCCS Quantico"). The floating button label is "Ask MCCS". The
+composer placeholder stays "Ask me anything…". Never "<Installation> Assistant".
+
+**AI signal:** an original, simple four-point sparkle icon, in the theme's scarlet and gold. It
+appears on the floating button, in the panel header next to the title, and in the search bar. The
+floating button gets a soft gradient border that shimmers once on page load (no shimmer with
+prefers-reduced-motion). Keep it subtle; no characters or mascots.
+
+**Two entry points, one assistant.** The floating button and the header search bar open the same
+panel and the same conversation.
+
+**Header search bar becomes Ask MCCS:**
+- **Looks like search.** It keeps the site's search bar position and shape. The sparkle replaces the
+  magnifier. Placeholder text rotates through examples ("Ask MCCS anything, like 'Is the gym open
+  now?'").
+- **On focus,** a dropdown shows the current page's chips (same source as the panel).
+- **While typing** (no AI calls):
+  - The first row is always "✦ Ask MCCS: '<what they typed>'".
+  - Below it, up to 5 instant page matches from the captured page titles and breadcrumbs, as plain
+    same-tab links.
+- **Submitting:** Enter, or choosing the Ask row, opens the panel with the question already sent.
+  Choosing a page row navigates normally.
+- **Phones:** the header search icon becomes the sparkle and opens the same experience.
+- **Accessibility:** keyboard navigation through the rows, standard combobox semantics.
+
+**Why:** a plain "Ask me anything" bubble reads as a legacy help chat. Making the search bar the
+front door shows the assistant replacing site search: one box handles both "take me to a page" and
+"answer my question".

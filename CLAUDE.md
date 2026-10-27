@@ -4,8 +4,8 @@
 An AI chat assistant embedded on Marine Corps Community Services (MCCS) installation websites
 (e.g. https://quantico.usmc-mccs.org/, Camp Pendleton, etc.).
 
-- **UI:** an embeddable widget — a launcher button that opens a right-side pop-out panel with an
-  "Ask me anything..." chat input. It must drop onto an existing site with a single `<script>` tag.
+- **UI:** an embeddable widget — an "Ask MCCS" launcher button that opens a right-side pop-out panel
+  with an "Ask me anything…" chat input (naming and AI signal: docs/PRODUCT.md §13). It must drop onto an existing site with a single `<script>` tag.
 - **Knowledge:** everything on that installation's MCCS site — facilities, hours, locations, events,
   programs (fitness, child & youth, education, family readiness, MWR, dining, lodging, etc.).
 - **Template + instance:** one shared agent "template" (behavior, tone, tools, guardrails), configured

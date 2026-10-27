@@ -55,11 +55,14 @@
       '<button class="nudge-close" type="button" aria-label="Dismiss suggestion">' + icon("close") + "</button>" +
     "</div>" +
     '<button class="launcher" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel">' +
-      icon("chat") + '<span class="launcher-label">Ask me anything</span>' +
+      sparkle() + '<span class="launcher-label">Ask MCCS</span>' +
     "</button>" +
     '<section class="panel" id="panel" role="dialog" aria-modal="false" aria-labelledby="title" hidden>' +
       '<header class="head">' +
-        '<div class="head-text"><h2 id="title">Assistant</h2><p class="subtitle"></p></div>' +
+        '<div class="head-text">' +
+          '<h2 id="title">' + sparkle() + '<span class="title-text">Ask MCCS</span></h2>' +
+          '<p class="subtitle"></p><p class="context-line" hidden></p>' +
+        "</div>" +
         '<button class="icon-btn reset" type="button" aria-label="Start a new chat" title="New chat">' + icon("refresh") + "</button>" +
         '<button class="icon-btn close" type="button" aria-label="Close assistant" title="Close">' + icon("close") + "</button>" +
       "</header>" +
@@ -68,7 +71,7 @@
       '<div class="chips" role="group" aria-label="Suggested questions" hidden></div>' +
       '<form class="composer">' +
         '<label class="sr-only" for="input">Message</label>' +
-        '<textarea id="input" rows="1" placeholder="Ask me anything..." autocomplete="off" enterkeyhint="send"></textarea>' +
+        '<textarea id="input" rows="1" placeholder="Ask me anything…" autocomplete="off" enterkeyhint="send"></textarea>' +
         '<button class="send" type="submit" aria-label="Send">' + icon("send") + "</button>" +
       "</form>" +
       '<p class="disclaimer">AI answers can be wrong. Check the linked MCCS page before you go.</p>' +
@@ -78,6 +81,7 @@
   var panel = root.querySelector(".panel");
   var titleEl = root.querySelector("#title");
   var subtitleEl = root.querySelector(".subtitle");
+  var contextEl = root.querySelector(".context-line");
   var sampleBanner = root.querySelector(".sample-banner");
   var log = root.querySelector(".log");
   var form = root.querySelector(".composer");
@@ -134,7 +138,7 @@
         state.config = cfg;
         host.style.setProperty("--primary", cfg.theme.primary);
         host.style.setProperty("--accent", cfg.theme.accent);
-        titleEl.textContent = cfg.assistantName;
+        root.querySelector(".title-text").textContent = cfg.assistantName;
         sampleBanner.hidden = !cfg.sample;
         renderHeader();
         render();
@@ -165,7 +169,11 @@
 
   function renderHeader() {
     var page = state.page;
-    subtitleEl.textContent = page && page.known && !isHome() ? "Viewing: " + page.title : (state.config ? state.config.name : "");
+    // Subtitle: the installation ("MCCS Quantico"); context line: the page they're on (§5, §13).
+    subtitleEl.textContent = state.config ? state.config.name : "";
+    var viewing = page && page.known && !isHome();
+    contextEl.hidden = !viewing;
+    contextEl.textContent = viewing ? "Viewing: " + page.title : "";
   }
 
   // ---------- page trail (last 5 pages this session; sent with each question, never shown) ----------
@@ -552,6 +560,15 @@
     return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
+  // Original four-point sparkle: the AI signal (docs/PRODUCT.md §13). Gold on the scarlet theme.
+  function sparkle() {
+    return (
+      '<svg class="sparkle" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+        '<path d="M12 2.5c.7 5.2 4.3 8.8 9.5 9.5-5.2.7-8.8 4.3-9.5 9.5-.7-5.2-4.3-8.8-9.5-9.5 5.2-.7 8.8-4.3 9.5-9.5z"/>' +
+      "</svg>"
+    );
+  }
+
   function icon(name) {
     var paths = {
       chat: '<path d="M4 5h16v11H8l-4 4z"/>',
@@ -571,9 +588,18 @@
       ".sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }",
 
       ".launcher { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));",
-      "  display: flex; align-items: center; gap: 8px; padding: 12px 18px 12px 14px; border: 0; border-radius: 999px; cursor: pointer;",
-      "  background: var(--primary); color: #fff; font: 600 15px/1 inherit; font-family: inherit; box-shadow: 0 6px 20px rgba(0,0,0,.25); }",
+      "  display: flex; align-items: center; gap: 8px; padding: 11px 18px 11px 14px; border: 2px solid transparent; border-radius: 999px; cursor: pointer;",
+      // Soft scarlet-to-gold gradient border (the outer layer shows only through the transparent border).
+      "  background: linear-gradient(var(--primary), var(--primary)) padding-box,",
+      "    linear-gradient(110deg, var(--primary) 0%, var(--accent) 45%, #fff3c4 50%, var(--accent) 55%, var(--primary) 100%) border-box;",
+      "  background-size: 100% 100%, 250% 100%; background-position: 0 0, 100% 0;",
+      "  color: #fff; font: 600 15px/1 inherit; font-family: inherit; box-shadow: 0 6px 20px rgba(0,0,0,.25);",
+      // The border shimmers once on page load.
+      "  animation: launcher-shimmer 1.6s ease-in-out .6s 1 both; }",
+      "@keyframes launcher-shimmer { from { background-position: 0 0, 100% 0; } to { background-position: 0 0, 0% 0; } }",
       ".launcher:hover { filter: brightness(1.08); }",
+      ".sparkle { width: 20px; height: 20px; flex: none; fill: var(--accent); }",
+      ".launcher .sparkle { width: 22px; height: 22px; }",
       ".launcher:focus-visible, button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
@@ -584,8 +610,10 @@
       ".head { display: flex; align-items: center; gap: 4px; padding: 14px 10px 14px 18px; padding-top: max(14px, env(safe-area-inset-top));",
       "  background: var(--primary); color: #fff; }",
       ".head-text { flex: 1; min-width: 0; }",
-      "h2 { margin: 0; font-size: 17px; font-weight: 700; }",
+      "h2 { margin: 0; display: flex; align-items: center; gap: 7px; font-size: 17px; font-weight: 700; }",
+      "h2 .sparkle { width: 18px; height: 18px; }",
       ".subtitle { margin: 2px 0 0; font-size: 13px; opacity: .85; }",
+      ".context-line { margin: 1px 0 0; font-size: 12px; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }",
       ".icon-btn { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 10px; background: transparent; color: inherit; cursor: pointer; }",
       ".icon-btn:hover { background: rgba(255,255,255,.15); }",
 
@@ -629,7 +657,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 12px; color: var(--muted); background: var(--bg); text-align: center; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge { animation: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher { animation: none; } }",
     ].join("\n");
   }
 })();

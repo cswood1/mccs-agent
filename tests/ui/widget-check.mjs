@@ -43,12 +43,28 @@ const w = page.locator("#mccs-assistant");
 await page.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
 await w.locator("button.launcher").click();
 await page.waitForTimeout(400);
-const subtitle = await w.locator(".subtitle").textContent();
-check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(subtitle), subtitle);
+const viewing = await w.locator(".context-line").textContent();
+check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(viewing), viewing);
+// docs/PRODUCT.md §13: name and AI signal.
+check("Panel title is Ask MCCS", (await w.locator("#title").textContent())?.trim() === "Ask MCCS", await w.locator("#title").textContent());
+check("Subtitle is the installation", (await w.locator(".subtitle").textContent()) === "MCCS Quantico", await w.locator(".subtitle").textContent());
+check("Sparkle next to the title", (await w.locator("#title svg.sparkle").count()) === 1);
+check("Composer placeholder", (await w.locator("textarea").getAttribute("placeholder")) === "Ask me anything…");
 const welcome = await w.locator(".msg.assistant").first().textContent();
 check("Page-specific welcome", /Questions about .*Bowling.*\? I can help\./i.test(welcome), welcome);
 const pageChips = await w.locator(".chips .chip").allTextContents();
 check("3–4 of the page's own chips shown", pageChips.length >= 3 && pageChips.length <= 4 && !pageChips.includes("Just PCS’d here, where do I start?"), JSON.stringify(pageChips));
+
+// Launcher (§13): label, sparkle, gradient border that shimmers once.
+const launcherCheck = page.locator("#mccs-assistant button.launcher");
+check("Launcher label is Ask MCCS", (await launcherCheck.textContent())?.trim() === "Ask MCCS", await launcherCheck.textContent());
+check("Launcher has the sparkle", (await launcherCheck.locator("svg.sparkle").count()) === 1);
+const shimmer = await launcherCheck.evaluate((el) => {
+  const cs = getComputedStyle(el);
+  return { name: cs.animationName, count: cs.animationIterationCount, image: cs.backgroundImage };
+});
+check("Launcher shimmers once on load", shimmer.name === "launcher-shimmer" && shimmer.count === "1", JSON.stringify(shimmer));
+check("Launcher has a gradient border", (shimmer.image.match(/linear-gradient/g) || []).length === 2, shimmer.image.slice(0, 80));
 
 // 2. Ask via a chip: page context sent, follow-ups replace page chips, links rendered.
 await w.locator(".chips .chip").first().click();
@@ -73,7 +89,7 @@ await page.waitForURL(/\/quantico\/lodging$/);
 await page.waitForTimeout(800);
 check("Panel still open after navigation", await w.locator(".panel").isVisible());
 check("History kept", (await w.locator(".msg").count()) === 2, String(await w.locator(".msg").count()));
-const sub2 = await w.locator(".subtitle").textContent();
+const sub2 = await w.locator(".context-line").textContent();
 check("Viewing line updates", /^Viewing: Lodging/i.test(sub2), sub2);
 const chips2 = await w.locator(".chips .chip").allTextContents();
 check("Chips switch to the new page", chips2.length >= 3 && JSON.stringify(chips2) !== JSON.stringify(FOLLOWUPS), JSON.stringify(chips2));
@@ -98,7 +114,7 @@ await p2.clock.install();
 await p2.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
 const w2 = p2.locator("#mccs-assistant");
 // Let the widget finish loading its config and page info before moving the fake clock.
-await p2.waitForFunction(() => !!document.querySelector("#mccs-assistant")?.shadowRoot?.querySelector(".subtitle")?.textContent?.startsWith("Viewing"));
+await p2.waitForFunction(() => !!document.querySelector("#mccs-assistant")?.shadowRoot?.querySelector(".context-line")?.textContent?.startsWith("Viewing"));
 check("No nudge before 20 s", !(await w2.locator(".nudge").isVisible()));
 await p2.clock.runFor(21000);
 await p2.waitForTimeout(200);
@@ -145,10 +161,21 @@ await p4.locator("#mccs-assistant button.launcher").click();
 await p4.waitForTimeout(500);
 const pSub = await p4.locator("#mccs-assistant .subtitle").textContent();
 check("Widget on Pendleton uses the Pendleton config", pSub === "MCCS Camp Pendleton", pSub);
+check("Pendleton panel is also Ask MCCS", (await p4.locator("#mccs-assistant #title").textContent())?.trim() === "Ask MCCS");
 const deepComing = await p4.goto(base + "/pendleton/lodging", { waitUntil: "networkidle" });
 check("Deep Pendleton paths show coming soon too", deepComing.ok() && /coming soon in this demo/.test((await p4.locator("main").textContent()) ?? ""));
 await p4.goto(base + "/albany", { waitUntil: "networkidle" });
 check("Installations without a config: coming soon, no widget", /Albany is coming soon/.test((await p4.locator("main").textContent()) ?? "") && (await p4.locator("#mccs-assistant").count()) === 0);
+
+// Reduced motion: no shimmer.
+const rmCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
+await rmCtx.addCookies(await ctx.cookies());
+await rmCtx.route(/usmc-mccs\.org/, (r) => r.abort());
+await rmCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+const rm = await rmCtx.newPage();
+await rm.goto(base + "/quantico", { waitUntil: "networkidle" });
+const rmAnim = await rm.locator("#mccs-assistant button.launcher").evaluate((el) => getComputedStyle(el).animationName);
+check("Reduced motion: no shimmer", rmAnim === "none", rmAnim);
 
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
