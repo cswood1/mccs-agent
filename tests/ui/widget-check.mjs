@@ -173,6 +173,16 @@ check("Lejeune picker label", (await p4.locator("button.btn-modal span.text-uppe
 await p4.locator("#mccs-assistant button.launcher").click();
 await p4.waitForTimeout(500);
 check("Widget on Lejeune uses the Lejeune config", (await p4.locator("#mccs-assistant .subtitle").textContent()) === "MCB Camp Lejeune");
+// Each base's pages show their own generated chips, not the home set.
+for (const [inst, path] of [["pendleton", "/recreation-fitness/fitness/fitness-centers"], ["lejeune", "/marine-family-support/child-and-youth/child-development-centers"]]) {
+  const info = await (await p4.request.get(`${base}/api/installations/${inst}/page?path=${path}`)).json();
+  const home = await (await p4.request.get(`${base}/api/installations/${inst}/page?path=/`)).json();
+  await p4.goto(`${base}/${inst}${path}`, { waitUntil: "networkidle" });
+  if (!(await p4.locator("#mccs-assistant .panel").isVisible())) await p4.locator("#mccs-assistant button.launcher, #mccs-assistant button.edge-tab").first().click();
+  await p4.locator("#mccs-assistant .chips .chip").first().waitFor();
+  const shown = await p4.locator("#mccs-assistant .chips .chip").allTextContents();
+  check(`${inst}: page shows its own chips`, info.chipsFrom === "page" && shown.length >= 2 && JSON.stringify(shown) === JSON.stringify(info.chips.slice(0, shown.length)) && !shown.some((c) => home.chips.includes(c)), JSON.stringify({ chipsFrom: info.chipsFrom, shown }));
+}
 await p4.goto(base + "/lejeunenewriver/dining-entertainment", { waitUntil: "networkidle" });
 check("Old /lejeunenewriver paths redirect to /lejeune", p4.url().endsWith("/lejeune/dining-entertainment"), p4.url());
 await p4.goto(base + "/albany", { waitUntil: "networkidle" });
