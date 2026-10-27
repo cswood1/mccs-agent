@@ -127,5 +127,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-assessment-and-counseling-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I schedule an appointment?",
+    "What happens at my first visit?",
+    "Do you offer group counseling?",
+    "What if I need more intensive care?"
+  ],
+  "chipsSourceHash": "c20984bfdd11be6e"
 }

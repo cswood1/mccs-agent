@@ -96,5 +96,12 @@
   ],
   "notCaptured": "Unit request form not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can use Outdoor Adventures?",
+    "What activities are available?",
+    "How do I book a unit event?",
+    "Are there fees for activities?"
+  ],
+  "chipsSourceHash": "e951fc31f65457c4"
 }

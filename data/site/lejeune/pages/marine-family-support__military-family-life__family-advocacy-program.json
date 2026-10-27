@@ -171,5 +171,12 @@
   ],
   "notCaptured": "Upcoming Events calendar (dynamic) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I sign up for classes?",
+    "What does Anger Management cover?",
+    "Is Grow Parenting right for me?",
+    "What's the POWER Workshop about?"
+  ],
+  "chipsSourceHash": "4589d447bf6a235e"
 }

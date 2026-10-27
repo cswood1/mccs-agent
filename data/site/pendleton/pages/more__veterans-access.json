@@ -106,5 +106,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/more/veterans-access",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Do I qualify as a veteran?",
+    "Where's the biggest MCX located?",
+    "Can I book a Beach Cottage?",
+    "How do I become a volunteer?"
+  ],
+  "chipsSourceHash": "e336c2e8a24dd40c"
 }

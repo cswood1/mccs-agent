@@ -57,5 +57,12 @@
   "images": [],
   "notCaptured": "PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I get 24/7 access?",
+    "Can I bring a guest with me?",
+    "What happens if I break a rule?",
+    "How do I report broken equipment?"
+  ],
+  "chipsSourceHash": "8cdc9b9110b82fca"
 }

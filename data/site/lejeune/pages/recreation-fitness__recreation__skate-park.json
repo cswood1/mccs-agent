@@ -61,5 +61,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/skate-park",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the minimum age?",
+    "Where is the skate park located?",
+    "What protective gear is required?",
+    "What features does the park have?"
+  ],
+  "chipsSourceHash": "7090358091917721"
 }

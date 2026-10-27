@@ -93,5 +93,12 @@
   "images": [],
   "notCaptured": "Only the first page of the story list was captured (list is paginated/filterable).",
   "url": "https://lejeunenewriver.usmc-mccs.org/stories",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What stories are on this page?",
+    "How do I find Marine stories?",
+    "Are there family resources here?",
+    "What topics can I browse?"
+  ],
+  "chipsSourceHash": "d4f89a0f1ac61c91"
 }

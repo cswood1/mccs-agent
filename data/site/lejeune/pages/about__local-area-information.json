@@ -65,5 +65,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/local-area-information",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What counties are nearby?",
+    "Which towns can I visit?",
+    "Where's the closest beach town?",
+    "What local resources are listed?"
+  ],
+  "chipsSourceHash": "306ab4cc8a694ccb"
 }

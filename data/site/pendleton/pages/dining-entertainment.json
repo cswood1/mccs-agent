@@ -39,5 +39,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does a movie ticket cost?",
+    "Where can I eat on base?",
+    "Can you help plan my event?",
+    "Do you offer military travel deals?"
+  ],
+  "chipsSourceHash": "f29e0c8ac6acb3b4"
 }

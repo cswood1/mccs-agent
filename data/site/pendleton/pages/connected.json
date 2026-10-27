@@ -106,5 +106,12 @@
   "images": [],
   "notCaptured": "The installation help guide PDF list appears three times on the real page; kept once. Training video and Google Forms not captured",
   "url": "https://pendleton.usmc-mccs.org/connected",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What is Semper Connected?",
+    "How do I set up the contact form?",
+    "Can I call spouses by phone?",
+    "What should I say on my first call?"
+  ],
+  "chipsSourceHash": "a43126c1caaf8421"
 }

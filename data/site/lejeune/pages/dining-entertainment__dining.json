@@ -175,5 +175,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where's the closest food spot?",
+    "What restaurants deliver here?",
+    "Which place has breakfast?",
+    "Can I get sushi on base?"
+  ],
+  "chipsSourceHash": "5d08e14ebd958821"
 }

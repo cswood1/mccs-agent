@@ -322,5 +322,11 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I find relocation help?",
+    "Can I get financial counseling?",
+    "What's the Single Marine Program?"
+  ],
+  "chipsSourceHash": "8896630a4d6529df"
 }

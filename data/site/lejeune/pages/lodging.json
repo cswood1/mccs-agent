@@ -98,5 +98,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/lodging",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the Marine Lodge?",
+    "Can I bring my RV?",
+    "Where is Onslow Beach?",
+    "How do I book a stay?"
+  ],
+  "chipsSourceHash": "a4a2d06ff7991223"
 }

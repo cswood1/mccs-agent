@@ -49,5 +49,11 @@
   "images": [],
   "notCaptured": "Volunteer opportunities calendar (dynamic) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-volunteer-opportunities",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can volunteer here?",
+    "How do I track my volunteer hours?",
+    "How do I request volunteers?"
+  ],
+  "chipsSourceHash": "cffb2eeab786fe99"
 }

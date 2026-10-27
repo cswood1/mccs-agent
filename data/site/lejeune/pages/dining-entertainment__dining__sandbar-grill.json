@@ -92,5 +92,11 @@
   ],
   "notCaptured": "Menu is a linked file (not captured); page has little body text beyond the contact box",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/sandbar-grill",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does Sandbar Grill open?",
+    "Is Sandbar Grill open on weekends?",
+    "Where is Sandbar Grill located?"
+  ],
+  "chipsSourceHash": "72bb0595a25f9e3a"
 }

@@ -108,5 +108,11 @@
   ],
   "notCaptured": "ITT price list (PDF)",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is ITT open at Mainside?",
+    "How do I contact Latitudes Travel?",
+    "What's American Forces Travel?"
+  ],
+  "chipsSourceHash": "2e1986d3b0a9b71d"
 }

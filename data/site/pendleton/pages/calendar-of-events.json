@@ -30,5 +30,11 @@
   "images": [],
   "notCaptured": "Calendar is a dynamic JavaScript list; no events rendered for October 2026 in the fetch",
   "url": "https://pendleton.usmc-mccs.org/calendar-of-events",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When are events coming up?",
+    "How do I register for events?",
+    "Can I filter events by category?"
+  ],
+  "chipsSourceHash": "fdea90daa5ee35c5"
 }

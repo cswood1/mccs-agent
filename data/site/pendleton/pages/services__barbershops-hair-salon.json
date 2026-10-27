@@ -788,5 +788,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/barbershops-hair-salon",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which barbershop is near me?",
+    "What time does 15 Area open?",
+    "Can I book online in advance?",
+    "Why are Sunday walk-ins only?"
+  ],
+  "chipsSourceHash": "5938c0353d6f7c06"
 }

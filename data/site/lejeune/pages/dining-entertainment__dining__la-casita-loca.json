@@ -121,5 +121,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/la-casita-loca",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does La Casita Loca open?",
+    "Are they open on weekends?",
+    "Where's the Camp Lejeune location?",
+    "What's their phone number?"
+  ],
+  "chipsSourceHash": "79b95b24c57517ba"
 }

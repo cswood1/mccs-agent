@@ -35,5 +35,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What venues are available?",
+    "Can I book a wedding here?",
+    "How do I reserve a space?",
+    "What's included in packages?"
+  ],
+  "chipsSourceHash": "4f752d622c6342e8"
 }

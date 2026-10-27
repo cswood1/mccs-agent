@@ -132,5 +132,12 @@
   ],
   "notCaptured": "Waiver PDF not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does pistol rental cost?",
+    "What guns can I rent here?",
+    "Do I need to bring eye protection?",
+    "Can civilians use this range?"
+  ],
+  "chipsSourceHash": "3815efcfb6dd1f44"
 }

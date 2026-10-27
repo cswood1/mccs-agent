@@ -61,5 +61,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/iron-mikes",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book Iron Mike's?",
+    "What's included in catering?",
+    "Can I bring my own caterer?",
+    "Is there a food minimum?"
+  ],
+  "chipsSourceHash": "30c07d06ba74c477"
 }

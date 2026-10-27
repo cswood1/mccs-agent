@@ -66,5 +66,10 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/follow-us",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I follow MCCS on Facebook?",
+    "What is MCCS Connect?"
+  ],
+  "chipsSourceHash": "389a827d51a93daa"
 }

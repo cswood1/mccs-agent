@@ -173,5 +173,12 @@
   "images": [],
   "notCaptured": "Upcoming events list is a dynamic calendar widget; captured as a condensed list.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the STARS workshop about?",
+    "Who can use FMEAP?",
+    "When's the next resume workshop?",
+    "How do I get started?"
+  ],
+  "chipsSourceHash": "9e592292e81babcd"
 }

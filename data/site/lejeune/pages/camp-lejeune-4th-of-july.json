@@ -95,5 +95,12 @@
   ],
   "notCaptured": "Past event (July 4, 2026); page content is still live on the site.",
   "url": "https://lejeunenewriver.usmc-mccs.org/camp-lejeune-4th-of-july",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time do gates open on July 4?",
+    "Can I bring a cooler?",
+    "Who can enter the base?",
+    "When does the fun zone close?"
+  ],
+  "chipsSourceHash": "45c363f2a7f7eb21"
 }

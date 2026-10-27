@@ -123,5 +123,12 @@
   ],
   "notCaptured": "Upcoming events list is dynamic",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When are you open?",
+    "How much is bowling on Friday?",
+    "Can I book a party room?",
+    "What's the His & Hers League night?"
+  ],
+  "chipsSourceHash": "35b60f23a2b42559"
 }

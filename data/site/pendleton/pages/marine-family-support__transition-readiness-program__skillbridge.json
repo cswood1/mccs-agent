@@ -171,5 +171,12 @@
   "images": [],
   "notCaptured": "DOW SkillBridge opportunities list (dynamic) and download links for the sample acceptance letter not captured.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/transition-readiness-program/skillbridge",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can join SkillBridge?",
+    "What's the first step to apply?",
+    "Do I need command approval?",
+    "When is the information session?"
+  ],
+  "chipsSourceHash": "5324009f644f8e70"
 }

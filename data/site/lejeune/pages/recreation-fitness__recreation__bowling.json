@@ -276,5 +276,12 @@
   ],
   "notCaptured": "Snack bar / grill menus (PDF) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When's Bonnyman open on weekends?",
+    "How much for open bowling?",
+    "Can my 8-year-old bowl alone?",
+    "What's the glow bowling price?"
+  ],
+  "chipsSourceHash": "6df490b589493947"
 }

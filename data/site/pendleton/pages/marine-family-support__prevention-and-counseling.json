@@ -143,5 +143,11 @@
   ],
   "notCaptured": "Story cards (Read More Stories) not listed.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I call the crisis line?",
+    "Does my family qualify for support?",
+    "What is Semper Support?"
+  ],
+  "chipsSourceHash": "c43bd0e5dd65132b"
 }

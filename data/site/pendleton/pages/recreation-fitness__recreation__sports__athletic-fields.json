@@ -78,5 +78,12 @@
   "images": [],
   "notCaptured": "The list of fields appears only as contact phone lines on the real page",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I reserve a field?",
+    "What's the phone for soccer?",
+    "Can I use the fields for CFT?",
+    "What info do you need for booking?"
+  ],
+  "chipsSourceHash": "5636ddbdb0010ea1"
 }

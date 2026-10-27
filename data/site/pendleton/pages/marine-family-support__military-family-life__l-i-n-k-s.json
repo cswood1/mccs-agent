@@ -109,5 +109,12 @@
   "images": [],
   "notCaptured": "Upcoming events list is a dynamic calendar widget; captured as a condensed list.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/l-i-n-k-s",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What topics does L.I.N.K.S. cover?",
+    "How do I sign up for a workshop?",
+    "What are the mentor requirements?",
+    "When is Foundations for Spouses?"
+  ],
+  "chipsSourceHash": "1ddc69e987eb0fbe"
 }

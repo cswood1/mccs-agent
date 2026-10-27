@@ -256,5 +256,12 @@
   ],
   "notCaptured": "Command resource PDFs and upcoming events calendar (dynamic) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What makes my family eligible?",
+    "What forms do I need to fill out?",
+    "How does EFMP affect my assignment?",
+    "What support does EFMP provide?"
+  ],
+  "chipsSourceHash": "d991825d3334ab73"
 }

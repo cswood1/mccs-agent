@@ -369,5 +369,12 @@
   "images": [],
   "notCaptured": "Checklists are in tabs/accordions on the real page; captured as sections. Downloadable forms linked, not captured.",
   "url": "https://pendleton.usmc-mccs.org/about/marine-for-life-cycle",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When do I need to finish PRS?",
+    "How do I meet with a P&PD Advisor?",
+    "What's the Single Marine Program?",
+    "Where do I register my vehicle?"
+  ],
+  "chipsSourceHash": "1c235c8fcfa95394"
 }

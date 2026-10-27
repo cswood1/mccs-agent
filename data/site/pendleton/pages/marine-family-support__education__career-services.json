@@ -95,5 +95,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/education/career-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where are the career centers?",
+    "What's included in career services?",
+    "Can I use computers here?",
+    "When's the CalTAP seminar?"
+  ],
+  "chipsSourceHash": "9568ad48eeb21ae7"
 }

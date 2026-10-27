@@ -128,5 +128,12 @@
   ],
   "notCaptured": "Photo gallery images (25) not captured individually; Welcome PDF not captured",
   "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I bring my dog?",
+    "What's included in a suite?",
+    "How far ahead can I book?",
+    "What are the room amenities?"
+  ],
+  "chipsSourceHash": "0afd891ee782107d"
 }

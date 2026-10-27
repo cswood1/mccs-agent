@@ -92,5 +92,12 @@
   "images": [],
   "notCaptured": "Upcoming events list (17 Life Skills / L.I.N.K.S. events, Oct 27 - Dec 17) is a dynamic calendar widget; not captured here (same events appear on the Life Skills and L.I.N.K.S. pages).",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What workshops does MCFTB offer?",
+    "Who can join MCFTB programs?",
+    "How do I contact MCFTB?",
+    "What is the Four Lenses workshop?"
+  ],
+  "chipsSourceHash": "a442a413794fc6ed"
 }

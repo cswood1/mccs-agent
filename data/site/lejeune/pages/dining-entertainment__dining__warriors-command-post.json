@@ -82,5 +82,11 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/warriors-command-post",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What meat options are on the grill?",
+    "Is it open on weekends?",
+    "What's the phone number?"
+  ],
+  "chipsSourceHash": "35fc081abac6c5ad"
 }

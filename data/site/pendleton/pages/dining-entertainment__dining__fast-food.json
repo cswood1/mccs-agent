@@ -1989,5 +1989,10 @@
   "images": [],
   "notCaptured": "Menu (PDF). Area grouping of locations is shown via the area list; each contact name carries its area.",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/fast-food",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is Domino's open late on Friday?",
+    "Where's Raising Cane's located?"
+  ],
+  "chipsSourceHash": "88bccb4049586f30"
 }

@@ -385,5 +385,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/recreation-centers",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which rec center is open now?",
+    "What's at these recreation centers?",
+    "When does French Creek close?",
+    "Can I use the pool tables?"
+  ],
+  "chipsSourceHash": "3bb50250714a83a9"
 }

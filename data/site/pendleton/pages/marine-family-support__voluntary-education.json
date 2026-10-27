@@ -359,5 +359,10 @@
   "images": [],
   "notCaptured": "Upcoming event cards are a dynamic list; dates not captured.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/voluntary-education",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can use Voluntary Education?",
+    "How do I start my education plan?"
+  ],
+  "chipsSourceHash": "b784dcc05eac8ff8"
 }

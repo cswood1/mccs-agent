@@ -182,5 +182,11 @@
   "images": [],
   "notCaptured": "Upcoming Briefs list (dynamic) and several infographic images not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-misuse",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the SAMSHA helpline number?",
+    "Can I call 988 for a crisis?",
+    "What counts as one standard drink?"
+  ],
+  "chipsSourceHash": "a40924e4c8740df4"
 }

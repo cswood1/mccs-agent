@@ -274,5 +274,12 @@
   ],
   "notCaptured": "Onslow Beach map, live water-conditions widget, RV Park SOP (PDF), and the Hide & Seek Rock Game details were not captured. Repeated amenity/reservation/payment/cancellation blocks under each lodging tab were kept once where identical.",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the check-in time?",
+    "How much for a Lodge in May?",
+    "Can I bring my dog?",
+    "What days can I check in?"
+  ],
+  "chipsSourceHash": "f223f48dde6d59de"
 }

@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/careers/employer-recruiting",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where do recruiting events happen?",
+    "How do I register my company?",
+    "What jobs can I recruit for?",
+    "Do I need a DoD agreement?"
+  ],
+  "chipsSourceHash": "cce4ecb88f8fe991"
 }

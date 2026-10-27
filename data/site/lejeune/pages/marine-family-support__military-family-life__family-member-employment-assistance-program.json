@@ -140,5 +140,12 @@
   ],
   "notCaptured": "Related stories and events lists (dynamic) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What services does FMEAP offer?",
+    "Am I eligible for this program?",
+    "When is FMEAP open?",
+    "How do I get started?"
+  ],
+  "chipsSourceHash": "0ff811a10368766f"
 }

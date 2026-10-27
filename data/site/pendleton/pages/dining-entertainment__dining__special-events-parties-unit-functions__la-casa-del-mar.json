@@ -145,5 +145,12 @@
   ],
   "notCaptured": "Pricing guide, FAQs, catering vendor list, map and request forms (PDF downloads).",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/la-casa-del-mar",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book La Casa Del Mar?",
+    "Can I get catering here?",
+    "What are your booking hours?",
+    "Where is this located?"
+  ],
+  "chipsSourceHash": "c7485aeca2694250"
 }

@@ -97,5 +97,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I rent camping gear?",
+    "Do you have a golf course?",
+    "What's at Onslow Beach?",
+    "Where's the inline hockey rink?"
+  ],
+  "chipsSourceHash": "d7695a72409547fd"
 }

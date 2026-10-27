@@ -175,5 +175,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When can I schedule an appointment?",
+    "Who can use counseling here?",
+    "What issues do you help with?",
+    "Where is the New River location?"
+  ],
+  "chipsSourceHash": "6a8fc300890b09a7"
 }

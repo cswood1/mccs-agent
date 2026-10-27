@@ -451,5 +451,12 @@
   "images": [],
   "notCaptured": "Embedded videos (Welcome to Camp Pendleton, Our Mission, MCB Camp Pendleton Local Hazards Brief, Semper Fit) not captured; upcoming events list is dynamic (3 shown as cards)",
   "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where do I check in when I arrive?",
+    "How do I apply for on-base housing?",
+    "What are IPAC hours?",
+    "Where's the Lending Locker?"
+  ],
+  "chipsSourceHash": "2b926e62163d678c"
 }

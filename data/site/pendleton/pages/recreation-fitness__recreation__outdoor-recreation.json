@@ -143,5 +143,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I camp?",
+    "How much is golf?",
+    "Can I rent a kayak?",
+    "What gear can I rent?"
+  ],
+  "chipsSourceHash": "a058a4aa03b6d41d"
 }

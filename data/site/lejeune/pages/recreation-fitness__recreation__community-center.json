@@ -132,5 +132,12 @@
   ],
   "notCaptured": "Upcoming Events list (dynamic) and sponsor banners not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/community-center",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much to rent the Event Room?",
+    "When are karate classes?",
+    "What's piano lesson pricing?",
+    "How far ahead do I book?"
+  ],
+  "chipsSourceHash": "a81033013770d08c"
 }

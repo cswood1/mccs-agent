@@ -124,5 +124,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/family-readiness-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When are DRC/URC trainings offered?",
+    "How do I sign up for classes?",
+    "What building is this program in?"
+  ],
+  "chipsSourceHash": "c55df926168c139d"
 }

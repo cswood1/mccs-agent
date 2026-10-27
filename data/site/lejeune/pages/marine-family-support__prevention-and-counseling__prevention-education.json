@@ -194,5 +194,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/prevention-education",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What classes are available?",
+    "How do I find a class schedule?",
+    "Where is this located?",
+    "Can couples take classes together?"
+  ],
+  "chipsSourceHash": "206812ff37c2e2bb"
 }

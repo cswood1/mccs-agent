@@ -268,5 +268,12 @@
   ],
   "notCaptured": "Upcoming events list is dynamic.",
   "url": "https://lejeunenewriver.usmc-mccs.org",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What events are happening soon?",
+    "Where can I catch a movie?",
+    "How do I book temporary lodging?",
+    "Who do I call if I need help?"
+  ],
+  "chipsSourceHash": "bd82d2571cfa94b7"
 }

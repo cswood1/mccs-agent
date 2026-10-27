@@ -95,5 +95,12 @@
   "images": [],
   "notCaptured": "Menus (PDF).",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/windmill-canyon",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When does Windmill Canyon reopen?",
+    "Can I make a reservation?",
+    "Where is Windmill Canyon located?",
+    "Is it open on Mondays?"
+  ],
+  "chipsSourceHash": "896ee27be7335b7d"
 }

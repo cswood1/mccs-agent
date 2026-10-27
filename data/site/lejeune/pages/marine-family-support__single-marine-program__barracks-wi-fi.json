@@ -62,5 +62,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/barracks-wi-fi",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How fast is the Wi-Fi?",
+    "Which barracks have it?",
+    "How do I set it up?",
+    "Can I use it off base?"
+  ],
+  "chipsSourceHash": "b346764a61f6779f"
 }

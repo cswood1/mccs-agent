@@ -140,5 +140,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-landing",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time is lunch on weekdays?",
+    "Can I make a burger into a wrap?",
+    "When is First Friday this month?",
+    "Do I need base access to visit?"
+  ],
+  "chipsSourceHash": "7a38903116ece52b"
 }

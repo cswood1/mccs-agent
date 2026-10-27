@@ -160,5 +160,12 @@
   "images": [],
   "notCaptured": "Upcoming events list is a dynamic calendar widget; captured as a condensed list (date, title, time, location).",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What does EFMP help with?",
+    "How do I enroll in EFMP?",
+    "When's the next playgroup?",
+    "What forms do I need?"
+  ],
+  "chipsSourceHash": "ead26d109f7e0846"
 }

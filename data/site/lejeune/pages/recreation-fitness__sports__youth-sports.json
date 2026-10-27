@@ -227,5 +227,11 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/youth-sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is youth basketball?",
+    "When is baseball season?",
+    "What sports are available in fall?"
+  ],
+  "chipsSourceHash": "2f2024a0791313d4"
 }

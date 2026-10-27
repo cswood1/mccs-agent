@@ -1,0 +1,534 @@
+{
+ "about__business-partners.json": {
+  "hash": "2d2f7324e1a30081",
+  "text": "```json\n[\"How do I become a business partner?\", \"What types of services do you contract?\", \"Where do I send my vendor info?\", \"What's the email for procurement?\", \"Do you have contract templates?\"]\n```"
+ },
+ "shopping__micro-marts.json": {
+  "hash": "77492d99fbc1fa30",
+  "text": "[\"What are the Micro Mart hours?\", \"Where is the Air Wing location?\", \"Do Micro Marts sell hot food?\", \"Which Micro Mart is closest to me?\", \"Can I shop at Micro Marts 24/7?\"]"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__pacific-views-event-center.json": {
+  "hash": "0b9d38846d068379",
+  "text": "[\"When is Pacific Views closed?\", \"What's the address and phone?\", \"Can I host my event there?\", \"What dining options are available?\", \"How do I book the Seaview Room?\"]"
+ },
+ "recreation-fitness__recreation__indoor-recreation.json": {
+  "hash": "372292dc2fa38051",
+  "text": "[\"What's at the Active Duty Recreation Centers?\", \"Can I use the Auto Skills Center?\", \"When is Leatherneck Lanes open?\", \"How much does bowling cost?\", \"What tools are at Auto Skills?\"]"
+ },
+ "shopping.json": {
+  "hash": "65473c8af84ec644",
+  "text": "```json\n[\"Where can I buy uniforms?\", \"Is the MCX open 24 hours?\", \"What's at Marine Marts?\", \"How do I get a military discount?\", \"Which store has grab-and-go food?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__sexual-assault-prevention-and-response.json": {
+  "hash": "9a3b99cf943a09cb",
+  "text": "```json\n[\"What's the Camp Pendleton support line?\", \"What counts as consent?\", \"What should I do right after?\", \"Can I call anonymously?\", \"What's a restricted report?\"]\n```"
+ },
+ "services__rv-storage.json": {
+  "hash": "68fc0e03c93af0ed",
+  "text": "```json\n[\"How much is RV storage monthly?\", \"What size RV can I store?\", \"Can I store a project RV?\", \"What do I bring to sign up?\", \"Are you open on weekends?\"]\n```"
+ },
+ "recreation-fitness__fitness.json": {
+  "hash": "30598f0d3757d3e1",
+  "text": "[\"Which fitness center is closest?\", \"How much does a membership cost?\", \"Can family members use the gym?\", \"What fitness programs do you offer?\", \"How do I get 24/7 access?\"]"
+ },
+ "activity__e4f2a78d-a754-43a3-a902-195667b060d1.json": {
+  "hash": "52e018612729c3d8",
+  "text": "[\"What time does Halloween Bash start?\", \"Where is the Halloween Bash?\", \"Can I wear a costume?\", \"What activities are there?\", \"How do I get more info?\"]"
+ },
+ "dining-entertainment__event-planning-multimedia__multimedia__tv-gaming-wireless-internet.json": {
+  "hash": "f2751635805a74d2",
+  "text": "```json\n[\"What time does GameStop close?\", \"Is Boingo Wireless open on weekends?\", \"What's the GameStop phone number?\", \"Where is GameStop located?\", \"When does Boingo Wireless open?\"]\n```"
+ },
+ "recreation-fitness__recreation__indoor-recreation__active-duty-recreation-centers.json": {
+  "hash": "aea8e018042cf30d",
+  "text": "[\"Which rec center is open latest?\", \"What games can I play there?\", \"Is the 21 Area open Sunday?\", \"What's the phone for 33 Area?\", \"Do they have pool tables?\"]"
+ },
+ "marine-family-support__child-and-youth.json": {
+  "hash": "bd4f53f8473bf799",
+  "text": "[\"What age kids does family child care take?\", \"How do I enroll my teen in the program?\", \"What's the New Parent Support Program?\", \"Do you help with special needs?\", \"What activities are in school age care?\"]"
+ },
+ "dining-entertainment__dining__restaurants.json": {
+  "hash": "aa06b6b117e471e3",
+  "text": "```json\n[\"Can I book Iron Mike's for a party?\", \"What restaurants host events here?\", \"How do I reserve Windmill Canyon?\", \"Do they do unit functions?\", \"Can I have a private event at Pub 1795?\"]\n```"
+ },
+ "lodging__beach-cottages.json": {
+  "hash": "49416f3f15816261",
+  "text": "```json\n[\"What's the difference between Del Mar and San Onofre?\", \"Are pets allowed at beach cottages?\", \"How do I book a cottage?\", \"What's included in the cottages?\", \"Can I see pictures of the cottages?\"]\n```"
+ },
+ "marine-family-support__child-and-youth__school-liaison.json": {
+  "hash": "ee0444ce8e627939",
+  "text": "[\"What does the School Liaison do?\", \"Who can use this program?\", \"How do I contact my local liaison?\", \"What happens during a consultation?\", \"Where can I find other family support?\"]"
+ },
+ "dining-entertainment__dining__restaurants__windmill-canyon.json": {
+  "hash": "896ee27be7335b7d",
+  "text": "```json\n[\"When does Windmill Canyon reopen?\", \"What time does it open on Wednesday?\", \"Can I make a reservation?\", \"Where is Windmill Canyon located?\", \"Is it open on Mondays?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__domestic-abuse.json": {
+  "hash": "4374e379d248a31b",
+  "text": "```json\n[\"What counts as domestic abuse?\", \"How do I call for help right now?\", \"What's a restricted report?\", \"Can I get a protective order?\", \"How do I find my local FAP office?\"]\n```"
+ },
+ "more__veterans-access.json": {
+  "hash": "e336c2e8a24dd40c",
+  "text": "[\"Do I qualify as a veteran?\", \"What recreation activities are available?\", \"Where's the biggest MCX located?\", \"Can I book a Beach Cottage?\", \"How do I become a volunteer?\"]"
+ },
+ "connected.json": {
+  "hash": "a43126c1caaf8421",
+  "text": "```json\n[\"What is Semper Connected?\", \"How do I set up the contact form?\", \"Can I call spouses by phone?\", \"What should I say on my first call?\", \"Where's the installation guide for my base?\"]\n```"
+ },
+ "more__mccs-employee-training.json": {
+  "hash": "e59399cd8a112cd0",
+  "text": "[\"How do I access Ethos training?\", \"What are the office hours?\", \"Where is employee training located?\", \"Can I get tuition assistance?\", \"What's the phone number to call?\"]"
+ },
+ "more.json": {
+  "hash": "8d2a8359fc8bccff",
+  "text": "[\"Where can I find Chesty Deals?\", \"How do I sign up for emails?\", \"What training does MCCS offer?\", \"How do I give feedback?\", \"What benefits do veterans get?\"]"
+ },
+ "lodging.json": {
+  "hash": "b8424c563d10e700",
+  "text": "```json\n[\"What's the difference between Pacific Views and Ward Lodge?\", \"How much does a room cost?\", \"Can I book online?\", \"Where is Ward Lodge located?\", \"What amenities does Pacific Views have?\"]\n```"
+ },
+ "services__automotive-services.json": {
+  "hash": "69f43ebc08c4dd48",
+  "text": "[\"When's the Auto Skills Center open?\", \"Can I store my RV here?\", \"Where can I get an oil change?\", \"What fuel stations open earliest?\", \"How do I rent a car?\"]"
+ },
+ "dining-entertainment__event-planning-multimedia.json": {
+  "hash": "037a92cfe849162a",
+  "text": "```json\n[\"How do I book an event here?\", \"What multimedia services do you offer?\", \"Can I host a birthday party?\", \"Do you have gaming options?\", \"What events can I plan with you?\"]\n```"
+ },
+ "dining-entertainment__dining__fast-food.json": {
+  "hash": "88bccb4049586f30",
+  "text": "```json\n[\"What time does Starbucks open on weekdays?\", \"Is Domino's open late on Friday?\", \"Where's Raising Cane's located?\", \"Does Moe's Southwest Grill open on Sunday?\", \"What's the phone number for McDonald's?\"]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__recreation-checkout.json": {
+  "hash": "4993b2e515a7a559",
+  "text": "```json\n[\"How much does propane cost?\", \"Can I rent an inflatable Saturday?\", \"What time do inflatables need back?\", \"What do I need to store my RV?\", \"Can my spouse pick up my stored vehicle?\"]\n```"
+ },
+ "recreation-fitness__fitness__fitness-programs.json": {
+  "hash": "0fc08927c7eaf2bc",
+  "text": "[\"What group exercise classes are offered?\", \"How do I book a massage?\", \"What's the Warrior Athlete program?\", \"Who can use these fitness programs?\", \"Where are the fitness programs located?\"]"
+ },
+ "dining-entertainment__dining__restaurants__pub-1795.json": {
+  "hash": "b84627934c487e9f",
+  "text": "[\"What are Pub 1795's hours?\", \"Can I book a private event?\", \"When's the next First Friday?\", \"What's the phone number?\", \"Is Pub 1795 open today?\"]"
+ },
+ "recreation-fitness__recreation__outdoor-recreation.json": {
+  "hash": "a058a4aa03b6d41d",
+  "text": "[\"Where can I camp?\", \"How much is golf?\", \"Can I rent a kayak?\", \"What gear can I rent?\", \"Do you have horseback riding?\"]"
+ },
+ "marine-family-support__child-and-youth__youth-teen-program.json": {
+  "hash": "34f31308e8f308ce",
+  "text": "```json\n[\"What age kids can join?\", \"When is Abby Reinke open?\", \"What activities do you offer?\", \"How do I enroll my teen?\", \"Which center is closest?\"]\n```"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__the-vineyard.json": {
+  "hash": "1c8ee8c4219e49df",
+  "text": "[\"What time does The Vineyard close Friday?\", \"Can I get catering here?\", \"How many people fit in the reception room?\", \"What's the address and phone number?\", \"Do you have a bar for events?\"]"
+ },
+ "marine-family-support__retired-affairs.json": {
+  "hash": "e08a97d02d62e0b6",
+  "text": "[\"What help do you give retirees?\", \"Where is Retired Affairs located?\", \"What are your hours on Friday?\", \"Can you help with VA benefits?\", \"How do I get funeral honors?\"]"
+ },
+ "recreation-fitness__recreation__sports__youth-sports.json": {
+  "hash": "110cb93a9872f024",
+  "text": "[\"How much does youth sports cost?\", \"When can I register my kid?\", \"Who is eligible to join?\", \"What are your office hours?\", \"Can I get a discount for multiple kids?\"]"
+ },
+ "marine-family-support__prevention-and-counseling.json": {
+  "hash": "c43bd0e5dd65132b",
+  "text": "[\"What counseling services are available?\", \"How do I call the crisis line?\", \"Does my family qualify for support?\", \"What is Semper Support?\", \"Where do I find domestic abuse help?\"]"
+ },
+ "recreation-fitness__fitness__fitness-programs__group-exercise.json": {
+  "hash": "97b7f578a5ff831c",
+  "text": "```json\n[\"What classes are free?\", \"When is Zumba at Paige?\", \"Can I bring my kids?\", \"What's the STRONG Nation class?\", \"Where is Paige Field House?\"]\n```"
+ },
+ "recreation-fitness__fitness__races-family-fitness-events.json": {
+  "hash": "3304b91c4a73feae",
+  "text": "```json\n[\"What races are coming up?\", \"Can I bring my dog?\", \"How do I register?\", \"What's the entry fee?\", \"Where do races start?\"]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__recreational-shooting.json": {
+  "hash": "3815efcfb6dd1f44",
+  "text": "```json\n[\"What days is the shooting range open?\", \"How much does pistol rental cost?\", \"What guns can I rent here?\", \"Do I need to bring eye protection?\", \"Can civilians use this range?\"]\n```"
+ },
+ "about__marine-for-life-cycle.json": {
+  "hash": "1c235c8fcfa95394",
+  "text": "```json\n[\"What's the Personal Readiness Seminar?\", \"When do I need to finish PRS?\", \"How do I meet with a P&PD Advisor?\", \"What's the Single Marine Program?\", \"Where do I register my vehicle?\"]\n```"
+ },
+ "marine-family-support__military-family-life__family-member-employment-assistance-program.json": {
+  "hash": "9e592292e81babcd",
+  "text": "```json\n[\"What's the STARS workshop about?\", \"Who can use FMEAP?\", \"When's the next resume workshop?\", \"How do I get started?\", \"What's the phone number?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__semper-support.json": {
+  "hash": "8473a2a6a5333690",
+  "text": "[\"How many free sessions do I get?\", \"Can my family use Semper Support?\", \"Do I need to book ahead?\", \"Is there a cost?\", \"How do I get started?\"]"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__catering.json": {
+  "hash": "56c725d6725f99cd",
+  "text": "```json\n[\"What food trucks are available?\", \"How do I book Pacific Views?\", \"Which vendors serve alcohol?\", \"What's Hibachi-San's number?\", \"Can I see the event venues?\"]\n```"
+ },
+ "dining-entertainment__event-planning-multimedia__event-planning.json": {
+  "hash": "4f752d622c6342e8",
+  "text": "```json\n[\"How much does a birthday party cost?\", \"What venues are available?\", \"Can I book a wedding here?\", \"How do I reserve a space?\", \"What's included in packages?\"]\n```"
+ },
+ "marine-family-support__military-family-life__life-skills.json": {
+  "hash": "ab029b1ceeb604a1",
+  "text": "[\"What life skills workshops are coming up?\", \"When is the 7 Habits workshop?\", \"How much does the 7 Habits program cost?\", \"Where do I go for the Nov 3 event?\", \"Can couples take relationship classes?\"]"
+ },
+ "marine-family-support__child-and-youth__family-child-care.json": {
+  "hash": "ef4c605a6675c495",
+  "text": "[\"What age kids does FCC take?\", \"How do I sign up for care?\", \"What if there's no space available?\", \"Do providers work evenings?\", \"Who can use Family Child Care?\"]"
+ },
+ "marine-family-support__military-family-life__family-readiness-program.json": {
+  "hash": "c55df926168c139d",
+  "text": "[\"What are the volunteer roles available?\", \"When are DRC/URC trainings offered?\", \"How do I sign up for classes?\", \"What building is this program in?\", \"What hours are you open Monday-Friday?\"]"
+ },
+ "marine-family-support__prevention-and-counseling__suicide-prevention.json": {
+  "hash": "91fa2e183c5cd7c5",
+  "text": "```json\n[\"How do I call for help right now?\", \"What's the 988 number for?\", \"How do I secure my firearms?\", \"Who can I talk to in my unit?\", \"What should I watch for in others?\"]\n```"
+ },
+ "recreation-fitness.json": {
+  "hash": "2beaa036d519860f",
+  "text": "[\"What fitness programs are available?\", \"How do I get 24/7 gym access?\", \"Where's the Auto Skills Center?\", \"What sports activities can I do?\", \"Do you offer travel tickets?\"]"
+ },
+ "marine-family-support__personal-financial-management.json": {
+  "hash": "49f916719f62ebce",
+  "text": "```json\n[\"When's the next Personal Readiness Seminar?\", \"Who can use this program?\", \"How do I book a financial consultation?\", \"What's required to become a Command Financial Specialist?\", \"What financial topics do you cover?\"]\n```"
+ },
+ "dining-entertainment__theater.json": {
+  "hash": "ecd8e3316ce296cc",
+  "text": "```json\n[\"What movies are playing this week?\", \"How much is a ticket for kids?\", \"What time does the theater open Saturday?\", \"Can I rent the theater for an event?\", \"What's in the VIP combo?\"]\n```"
+ },
+ "recreation-fitness__recreation__sports__athletic-fields.json": {
+  "hash": "5636ddbdb0010ea1",
+  "text": "[\"How do I reserve a field?\", \"What's the phone for soccer?\", \"Can I use the fields for CFT?\", \"What info do you need for booking?\", \"Where's the football field?\"]"
+ },
+ "lodging__beach-cottages__san-onofre-beach.json": {
+  "hash": "d6ca4b414de9c3f8",
+  "text": "```json\n[\"How far ahead can I book?\", \"What's included in the cottages?\", \"How do I cancel my reservation?\", \"Are pit bulls allowed?\", \"How do I book a future date?\"]\n```"
+ },
+ "lodging__inns-of-the-corps__ward-lodge.json": {
+  "hash": "d2275568a7f1e0e8",
+  "text": "```json\n[\"Can I bring my dog?\", \"What's included in the rooms?\", \"How far ahead can I book?\", \"What are the pet fees?\", \"When are you open?\"]\n```"
+ },
+ "recreation-fitness__recreation.json": {
+  "hash": "f2f60ee90f7cf6cb",
+  "text": "[\"What outdoor activities are available?\", \"Where can I bowl?\", \"Do you have swimming?\", \"What sports programs exist?\", \"Are activities climate controlled?\"]"
+ },
+ "marine-family-support__child-and-youth__school-age-care.json": {
+  "hash": "d61ab30abbe9ef8d",
+  "text": "```json\n[\"What ages can join School Age Care?\", \"How do I sign up my child?\", \"Is there a waitlist?\", \"What meals are provided?\", \"Who is eligible for SAC?\"]\n```"
+ },
+ "dining-entertainment__dining.json": {
+  "hash": "f4044ede3d9dbabb",
+  "text": "[\"Where are the base restaurants?\", \"What food trucks come here?\", \"How do I book an event?\", \"What fast food places are open?\", \"Can I host a party here?\"]"
+ },
+ "marine-family-support__child-and-youth__new-parent-support.json": {
+  "hash": "80609016cc475709",
+  "text": "```json\n[\"What's Baby Boot Camp about?\", \"Do I need to sign up for parenting class?\", \"When's playgroup and where?\", \"How much does NPSP cost?\", \"What's in the Welcome Baby Bag?\"]\n```"
+ },
+ "dining-entertainment__dining__restaurants__iron-mikes.json": {
+  "hash": "30c07d06ba74c477",
+  "text": "[\"How do I book Iron Mike's?\", \"What's included in catering?\", \"Can I bring my own caterer?\", \"Is there a food minimum?\", \"What's the venue space cost?\"]"
+ },
+ "more__email-signup.json": {
+  "hash": "0bf6137d78413bc5",
+  "text": "```json\n[\"How do I sign up for emails?\", \"What kind of stuff do you send?\", \"Is this for active duty only?\", \"How often will I get emails?\", \"Can families sign up too?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__military-onesource.json": {
+  "hash": "6ba1b6a88d874a25",
+  "text": "[\"What services does Military OneSource offer?\", \"Is Military OneSource really free?\", \"How do I contact Military OneSource?\", \"Who can use Military OneSource?\", \"What if I'm in crisis right now?\"]"
+ },
+ "shopping__uniform-clothing-services.json": {
+  "hash": "2f9ec0a018f36fd4",
+  "text": "```json\n[\"What time does Pacific Views open?\", \"Do you have maternity uniforms?\", \"Which location is open on Sunday?\", \"Can I get dress blues here?\", \"Where's the School of Infantry tailor?\"]\n```"
+ },
+ "marine-family-support.json": {
+  "hash": "6a8c57ef78b03c0b",
+  "text": "```json\n[\"What childcare programs are available?\", \"How do I get financial management help?\", \"What counseling services do you offer?\", \"Can I volunteer here?\", \"How does the transition program work?\"]\n```"
+ },
+ "more__payments.json": {
+  "hash": "75a98f819c348cca",
+  "text": "[\"What payments can I make here?\", \"How do I pay for youth programs?\", \"Where's the contact info?\", \"Can I pay event fees online?\", \"What's the Arrive Alive payment for?\"]"
+ },
+ "services__dry-cleaning-laundromat.json": {
+  "hash": "2fcc0b5fb90a48c3",
+  "text": "```json\n[\"Which dry cleaners open earliest?\", \"Where can I get alterations?\", \"Is there a 24-hour laundromat?\", \"What's the Horno 53 dry cleaning number?\", \"Which locations are open Sunday?\"]\n```"
+ },
+ "more__advertising-sponsorship.json": {
+  "hash": "4351af90215a59ca",
+  "text": "```json\n[\"What's the minimum cost to advertise?\", \"How many people see ads here daily?\", \"What types of ads do you offer?\", \"How long before my ad goes live?\", \"Where are the video monitors located?\"]\n```"
+ },
+ "services__rotating-vendor.json": {
+  "hash": "f52c152fbf6bac43",
+  "text": "[\"Which vendors are coming?\", \"Does Aeva's sell food?\", \"Where do vendors set up?\", \"When do rotating vendors come?\", \"Can I buy Pokémon cards here?\"]"
+ },
+ "shopping__marine-corps-exchange.json": {
+  "hash": "e4436aa68551c848",
+  "text": "```json\n[\"What time does Pacific Views MCX open?\", \"How do I get a Super Star gift card?\", \"Can I ship my online order here?\", \"Do you sell firearms and ammo?\", \"When's San Onofre Marine Mart open?\"]\n```"
+ },
+ "calendar-of-events.json": {
+  "hash": "fdea90daa5ee35c5",
+  "text": "```json\n[\"When are events coming up?\", \"How do I register for events?\", \"What types of events does MCCS offer?\", \"Can I filter events by category?\", \"Why is registration showing as closed?\"]\n```"
+ },
+ "services__barbershops-hair-salon.json": {
+  "hash": "5938c0353d6f7c06",
+  "text": "[\"Which barbershop is near me?\", \"What time does 15 Area open?\", \"Can I book online in advance?\", \"Why are Sunday walk-ins only?\", \"What area has recruits?\"]"
+ },
+ "more__recycle.json": {
+  "hash": "28d034d6281251a1",
+  "text": "[\"Where do I drop off electronics?\", \"What goes in my housing bin?\", \"Can I recycle old eyeglasses?\", \"Where's the nearest recycling center?\", \"How does recycling help the base?\"]"
+ },
+ "home.json": {
+  "hash": "a35c13924cdb6ff3",
+  "text": "[\"What programs does MCCS offer?\", \"How do I find a counselor?\", \"Where can I book lodging?\", \"What recreation options exist?\", \"How do I contact support?\"]"
+ },
+ "marine-family-support__military-family-life__l-i-n-k-s.json": {
+  "hash": "1ddc69e987eb0fbe",
+  "text": "```json\n[\n  \"What topics does L.I.N.K.S. cover?\",\n  \"How do I sign up for a workshop?\",\n  \"What are the mentor requirements?\",\n  \"When is Foundations for Spouses?\",\n  \"Can civilians take L.I.N.K.S.?\"\n]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__marine-memorial-golf-course.json": {
+  "hash": "4c0181e9ddc55b2b",
+  "text": "[\"How do I book a tee time?\", \"What's the membership cost?\", \"Can I take golf lessons?\", \"What is foot golf?\", \"Do I need base access?\"]"
+ },
+ "dining-entertainment__dining__food-trucks.json": {
+  "hash": "0c0faf7367749c26",
+  "text": "[\"What food trucks are here today?\", \"Where do food trucks park?\", \"What time do they close?\", \"Can I pay with a card?\", \"How often do they come?\"]"
+ },
+ "more__welcome-to-camp-pendleton.json": {
+  "hash": "2b926e62163d678c",
+  "text": "```json\n[\"Where do I check in when I arrive?\", \"How do I apply for on-base housing?\", \"What are IPAC hours?\", \"Can I get help finding off-base housing?\", \"Where's the Lending Locker?\"]\n```"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__san-onofre-beach-club.json": {
+  "hash": "4414fbdd53891264",
+  "text": "[\"How many people fit in Trestles Room?\", \"What's the Laguna Cliff space like?\", \"Can I have a wedding here?\", \"Where is San Onofre Beach Club?\", \"How do I book an event?\"]"
+ },
+ "lodging__beach-cottages__del-mar-beach-marina.json": {
+  "hash": "3a8ae19e8d41e356",
+  "text": "```json\n[\"What time can I check in?\", \"How much is a cottage deposit?\", \"Can I bring my dog to the beach?\", \"How long can I book a cottage?\", \"Can I cancel my reservation?\"]\n```"
+ },
+ "recreation-fitness__recreation__aquatics__21-area-pool.json": {
+  "hash": "831d3a1ffccafda5",
+  "text": "```json\n[\"What age do I need to be?\", \"How much does S3T cost?\", \"What time does the pool open?\", \"How do I sign up for S3T?\", \"What do I need to bring to swim?\"]\n```"
+ },
+ "marine-family-support__military-family-life__marine-corps-family-team-building.json": {
+  "hash": "a442a413794fc6ed",
+  "text": "[\"What workshops does MCFTB offer?\", \"Who can join MCFTB programs?\", \"How do I contact MCFTB?\", \"What is the Four Lenses workshop?\", \"Can spouses attend these classes?\"]"
+ },
+ "about.json": {
+  "hash": "c969b57a7689beb8",
+  "text": "```json\n[\n  \"How do I find base services?\",\n  \"What's the Marine For Life Cycle?\",\n  \"Can I see a map of Camp Pendleton?\",\n  \"Where do I get base info?\",\n  \"What programs are available?\"\n]\n```"
+ },
+ "marine-family-support__military-family-life__readiness-and-deployment-support.json": {
+  "hash": "24094002d32893a3",
+  "text": "[\"When's the reintegration workshop?\", \"What topics cover pre-deployment?\", \"How do I sign up for classes?\", \"When are deployment support groups?\", \"What's in the mid-deployment workshop?\"]"
+ },
+ "recreation-fitness__recreation__aquatics__13-area-pool.json": {
+  "hash": "890c8011e4d59e5f",
+  "text": "```json\n[\"What does it cost for my kid?\", \"How much for a private swim lesson?\", \"When can I do lap swim?\", \"What do I need to bring to the pool?\", \"How do I sign up for S3T?\"]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__stepp-stables.json": {
+  "hash": "9129041816485de6",
+  "text": "```json\n[\"How much is self-service boarding?\", \"When does Stepp Stables close?\", \"Can civilians board horses here?\", \"What do I need to ride lessons?\", \"How do I sign up for trail rides?\"]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__marina.json": {
+  "hash": "02cd1f2361b9f6f7",
+  "text": "```json\n[\"What boats do you rent?\", \"How much is Learn to Sail?\", \"When are classes offered?\", \"Do I need experience to start?\", \"What do I get after completing Keelboat?\"]\n```"
+ },
+ "more__chesty-deals.json": {
+  "hash": "32e788dcc37dda48",
+  "text": "```json\n[\"What's free on my birthday at Lake O'Neill?\", \"When is bowling only $1?\", \"How much is miniature golf?\", \"What are the Veterans Day food deals?\", \"Where can I rent a kayak?\"]\n```"
+ },
+ "marine-family-support__education__career-services.json": {
+  "hash": "9568ad48eeb21ae7",
+  "text": "[\"Where are the career centers?\", \"What's included in career services?\", \"Can I use computers here?\", \"When's the CalTAP seminar?\", \"What are your hours Friday?\"]"
+ },
+ "recreation-fitness__recreation__aquatics.json": {
+  "hash": "e98bf98bb6c4a008",
+  "text": "[\"How much are swim lessons?\", \"What's S3T training?\", \"When's lap swim at 13 Area?\", \"Can my unit book the pool?\", \"Do beaches have lifeguards?\"]"
+ },
+ "marine-family-support__prevention-and-counseling__substance-misuse.json": {
+  "hash": "a6f4b116a4b5111c",
+  "text": "```json\n[\"What are signs of a drinking problem?\", \"How do I call for help right now?\", \"What's a standard drink size?\", \"Who can I talk to for support?\", \"How do I help a friend struggling?\"]\n```"
+ },
+ "marine-family-support__military-family-life.json": {
+  "hash": "659530cd72a471a5",
+  "text": "[\"What programs help with deployment?\", \"How can my spouse find a job?\", \"What is L.I.N.K.S.?\", \"Does EFMP help with childcare?\", \"Where do I find life skills training?\"]"
+ },
+ "marine-family-support__information-referral-and-relocation.json": {
+  "hash": "03e48ed0885e8a26",
+  "text": "```json\n[\"When is the Welcome Aboard Brief?\", \"Is the PCS Workshop required?\", \"How do I request a sponsor?\", \"What's in the Lending Locker?\", \"What does a sponsor help with?\"]\n```"
+ },
+ "about__explore.json": {
+  "hash": "a6172a7d589c81ed",
+  "text": "[\"What locations are available?\", \"How do I find my installation?\", \"Can I access other bases' services?\", \"Where's the recruiting region info?\", \"Is Camp Pendleton listed here?\"]"
+ },
+ "dining-entertainment__information-tickets-and-tours.json": {
+  "hash": "2e1986d3b0a9b71d",
+  "text": "```json\n[\"What discount tickets does ITT sell?\", \"How do I book recruit family travel?\", \"When is ITT open at Mainside?\", \"How do I contact Latitudes Travel?\", \"What's American Forces Travel?\"]\n```"
+ },
+ "marine-family-support__child-and-youth__child-development-centers.json": {
+  "hash": "a109aa6ccc9b58d5",
+  "text": "```json\n[\"What ages can use the CDC?\", \"How do I sign up for child care?\", \"Can I tour a center first?\", \"What's included in full-time care?\", \"Does school age care help with homework?\"]\n```"
+ },
+ "marine-family-support__military-family-life__chaplains-religious-enrichment-development-operation.json": {
+  "hash": "4ff91fa0e1bdeb95",
+  "text": "```json\n[\"What does CREDO MCIWEST cost?\", \"Who can go to these retreats?\", \"How do I sign up for a retreat?\", \"What's included in the cost?\", \"When do retreats start and end?\"]\n```"
+ },
+ "shopping__marine-marts-package-wine-stores.json": {
+  "hash": "3dc4231041b7135d",
+  "text": "```json\n[\"What's open 24 hours?\", \"When does Chappo close?\", \"Where's the nearest Micro Mart?\", \"Can I rent a private room?\", \"What time does Del Mar open?\"]\n```"
+ },
+ "recreation-fitness__recreation__indoor-recreation__leatherneck-lanes.json": {
+  "hash": "35b60f23a2b42559",
+  "text": "```json\n[\"When are you open?\", \"How much is bowling on Friday?\", \"Can I book a party room?\", \"What's the His & Hers League night?\", \"Do I need base access?\"]\n```"
+ },
+ "stories.json": {
+  "hash": "90abd5c668279a3f",
+  "text": "```json\n[\"What stories are featured here?\", \"How do I submit my story?\", \"Who can share a story?\", \"When are new stories posted?\", \"How do I find stories about fitness?\"]\n```"
+ },
+ "marine-family-support__volunteer-opportunities.json": {
+  "hash": "2b7f39f9599d1fe6",
+  "text": "[\"How old do I need to be?\", \"What's the deadline to apply?\", \"How do I start volunteering?\", \"Can I volunteer off base?\", \"What skills will I learn?\"]"
+ },
+ "marine-family-support__single-marine-program.json": {
+  "hash": "bba7d8d21678d8d7",
+  "text": "[\"When are the monthly meetings?\", \"What volunteer options are there?\", \"How much do trips cost?\", \"What recreation trips are offered?\", \"How do I sign up for a trip?\"]"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__la-casa-del-mar.json": {
+  "hash": "c7485aeca2694250",
+  "text": "[\"What's the max capacity for Pacifico Room?\", \"How do I book La Casa Del Mar?\", \"Can I get catering here?\", \"What are your booking hours?\", \"Where is this located?\"]"
+ },
+ "recreation-fitness__fitness__fitness-centers.json": {
+  "hash": "cb7506991416d607",
+  "text": "```json\n[\"What time does 41 Area open on Saturday?\", \"Is 21 Area open on weekends?\", \"Which fitness center is open latest?\", \"Why is 33 Area closed Oct 27?\", \"What's the phone number for 62 Area?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__community-counseling.json": {
+  "hash": "9bf0d0a4a87a9407",
+  "text": "```json\n[\"What's the phone number to call?\", \"Can my spouse come too?\", \"When are walk-in hours?\", \"What does the intake assessment involve?\", \"Can family members get counseling?\"]\n```"
+ },
+ "dining-entertainment.json": {
+  "hash": "f29e0c8ac6acb3b4",
+  "text": "[\"What movies are playing at the theater?\", \"How much does a movie ticket cost?\", \"Where can I eat on base?\", \"Can you help plan my event?\", \"Do you offer military travel deals?\"]"
+ },
+ "recreation-fitness__recreation__sports.json": {
+  "hash": "6812f10d73329a1a",
+  "text": "```json\n[\"How do I join an adult league?\", \"What youth sports are available?\", \"Can I reserve athletic fields?\", \"What are All-Marine Sports?\", \"How do I sign up for tournaments?\"]\n```"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions__eagles-landing.json": {
+  "hash": "ab993cd98f20c096",
+  "text": "```json\n[\"What's the address of Eagle's Landing?\", \"How do I book an event here?\", \"What food options are available?\", \"Does the venue have outdoor space?\", \"Who do I call to plan my event?\"]\n```"
+ },
+ "services__gamestop.json": {
+  "hash": "66b78335cb3ee3e7",
+  "text": "[\"What are GameStop's hours on Sunday?\", \"Where is GameStop located?\", \"Is GameStop open on weekdays?\", \"What's the phone number to call?\", \"Does GameStop close early any day?\"]"
+ },
+ "marine-family-support__military-family-life__family-advocacy-program.json": {
+  "hash": "b75fab23a87bf2b0",
+  "text": "```json\n[\"How do I sign up for classes?\", \"What's the Anger Management class about?\", \"When is FAP closed on Nov 19?\", \"Do you have parenting classes?\", \"What's the domestic violence hotline?\"]\n```"
+ },
+ "services__postal-shipping.json": {
+  "hash": "60776fb56406f106",
+  "text": "```json\n[\"Where's the nearest Amazon Locker?\", \"What time does USPS 16 Area close?\", \"Which post office is open Saturday?\", \"How do I pick up my Amazon package?\", \"What's the number for USPS 13 Area?\"]\n```"
+ },
+ "services__tax-services.json": {
+  "hash": "1e5ae946979905a8",
+  "text": "[\"What are H&R Block's hours?\", \"Where is tax prep located?\", \"Can I go on Sunday?\", \"What's the phone number?\", \"Is it open late on weekdays?\"]"
+ },
+ "lodging__inns-of-the-corps__pacific-views.json": {
+  "hash": "0afd891ee782107d",
+  "text": "```json\n[\"Can I bring my dog?\", \"What's included in a suite?\", \"How far ahead can I book?\", \"What are the room amenities?\", \"When's the front desk open?\"]\n```"
+ },
+ "recreation-fitness__recreation__outdoor-recreation__outdoor-adventures.json": {
+  "hash": "e951fc31f65457c4",
+  "text": "[\"Who can use Outdoor Adventures?\", \"What activities are available?\", \"How do I book a unit event?\", \"Are there fees for activities?\", \"What are your hours?\"]"
+ },
+ "dining-entertainment__event-planning-multimedia__event-planning__weddings.json": {
+  "hash": "9ed94cf3764f33f4",
+  "text": "```json\n[\"What venues do you have?\", \"Can I get married on the beach?\", \"How much does a wedding cost?\", \"How do I book a venue?\", \"Does Pacific Views have ocean views?\"]\n```"
+ },
+ "dining-entertainment__event-planning-multimedia__event-planning__birthday-parties-unit-functions.json": {
+  "hash": "50c94725d8392657",
+  "text": "[\"What venues can I book for a party?\", \"How do I reserve a cabana at Lake O'Neill?\", \"Can I rent a bounce house?\", \"Where's the event room at Leatherneck Lanes?\", \"Do you offer pony parties?\"]"
+ },
+ "services__idevice.json": {
+  "hash": "1fdfa45cedf62a8e",
+  "text": "[\"What time does iDevicePROS close on Friday?\", \"Is iDevicePROS open on Sunday?\", \"Where is iDevicePROS located?\", \"What's the phone number for iDevicePROS?\", \"When does iDevicePROS open on Saturday?\"]"
+ },
+ "marine-family-support__transition-readiness-program__marine-for-life-network.json": {
+  "hash": "bff724ce33e24c7e",
+  "text": "```json\n[\"How do M4L Reps help with jobs?\", \"What industries are in my region?\", \"How do I connect with a rep?\", \"Are there networking events?\", \"Can family members join?\"]\n```"
+ },
+ "lodging__campgrounds-rvs__lake-oneill.json": {
+  "hash": "f377e4588b0eda81",
+  "text": "```json\n[\"What's the cost per night?\", \"When can I rent boats?\", \"How do I book a campsite?\", \"What activities are included?\", \"Do you allow pets?\"]\n```"
+ },
+ "dining-entertainment__event-planning-multimedia__multimedia.json": {
+  "hash": "f6869e2395a5f41a",
+  "text": "```json\n[\"What movies are playing?\", \"How much do movie tickets cost?\", \"Where's the movie theater?\", \"Can I rent the theater for events?\", \"What gaming options are available?\"]\n```"
+ },
+ "recreation-fitness__recreation__indoor-recreation__auto-skills.json": {
+  "hash": "46214e7623f83096",
+  "text": "[\"How much for a flat stall?\", \"What ID do I need to use this?\", \"Can I do welding here?\", \"How much to mount a tire?\", \"Do you have long-term rentals?\"]"
+ },
+ "dining-entertainment__dining__special-events-parties-unit-functions.json": {
+  "hash": "c43f2edbc577c9dd",
+  "text": "[\"What venues does MCCS have?\", \"Can I book Pacific Views?\", \"Do you offer catering?\", \"Which place has ocean views?\", \"How do I reserve a venue?\"]"
+ },
+ "marine-family-support__libraries.json": {
+  "hash": "5df06440ee739c68",
+  "text": "```json\n[\"What events are coming up?\", \"Can I bring my kids under 10?\", \"How long can I borrow books?\", \"What do I need to get a library card?\", \"Are the libraries open right now?\"]\n```"
+ },
+ "lodging__campgrounds-rvs.json": {
+  "hash": "7e0ae5dddedc9018",
+  "text": "[\"Which campground has full hookups?\", \"What activities are at Lake O'Neill?\", \"How many campsites at Del Mar?\", \"Where is San Onofre Beach located?\", \"Can I fish at any campground?\"]"
+ },
+ "services.json": {
+  "hash": "9efe443d7ae713fd",
+  "text": "[\"Where can I get my phone fixed?\", \"How do I book a haircut?\", \"What does dry cleaning offer?\", \"Can I store my RV here?\", \"Where's the nearest GameStop?\"]"
+ },
+ "marine-family-support__voluntary-education.json": {
+  "hash": "b784dcc05eac8ff8",
+  "text": "```json\n[\"Where is the Education Center located?\", \"What's the Tuition Assistance orientation schedule?\", \"Who can use Voluntary Education?\", \"How do I start my education plan?\", \"What testing services are available?\"]\n```"
+ },
+ "tree-lighting.json": {
+  "hash": "5518c29aed47d2cd",
+  "text": "```json\n[\"When is the tree lighting ceremony?\", \"What time does the event start?\", \"Can I bring my dog?\", \"How do I enter to win gift cards?\", \"Is parking free at Naval Hospital?\"]\n```"
+ },
+ "recreation-fitness__fitness__24-7-access.json": {
+  "hash": "8cdc9b9110b82fca",
+  "text": "[\"How do I get 24/7 access?\", \"Can I bring a guest with me?\", \"What happens if I break a rule?\", \"How do I report broken equipment?\", \"Do I need to renew my access?\"]"
+ },
+ "more__event-facility-fundraising-forms.json": {
+  "hash": "76a14c538386b36a",
+  "text": "[\"How early must I submit?\", \"What facilities can I request?\", \"Is fundraising allowed on base?\", \"Where do I download the form?\", \"Who reviews these requests?\"]"
+ },
+ "holidays.json": {
+  "hash": "b6893d9864ee743d",
+  "text": "```json\n[\"What holiday events are coming up?\", \"Are there races this fall or winter?\", \"How do I sign up for activities?\", \"What should I wear to events?\", \"Where can I give feedback?\"]\n```"
+ },
+ "marine-family-support__military-family-life__exceptional-family-member-program.json": {
+  "hash": "ead26d109f7e0846",
+  "text": "```json\n[\"What does EFMP help with?\", \"How do I enroll in EFMP?\", \"When's the next playgroup?\", \"What forms do I need?\", \"Can EFMP help with moving?\"]\n```"
+ },
+ "lodging__inns-of-the-corps.json": {
+  "hash": "d1ba2900adf18a88",
+  "text": "```json\n[\"What's the difference between Pacific Views and Ward Lodge?\", \"How much does Pacific Views cost?\", \"Where is Ward Lodge located?\", \"Can I book a room online?\", \"What amenities does Ward Lodge have?\"]\n```"
+ },
+ "marine-family-support__transition-readiness-program__skillbridge.json": {
+  "hash": "5324009f644f8e70",
+  "text": "```json\n[\"Who can join SkillBridge?\", \"How long before separation can I start?\", \"What's the first step to apply?\", \"Do I need command approval?\", \"When is the information session?\"]\n```"
+ },
+ "marine-family-support__prevention-and-counseling__substance-assessment-and-counseling-program.json": {
+  "hash": "c20984bfdd11be6e",
+  "text": "[\"How do I schedule an appointment?\", \"What happens at my first visit?\", \"Do you offer group counseling?\", \"What if I need more intensive care?\", \"What are the PFL 16 Hour courses?\"]"
+ },
+ "recreation-fitness__other-recreation-options.json": {
+  "hash": "f9562730aeed447f",
+  "text": "```json\n[\"What's included at Auto Skills?\", \"How do I book a tour?\", \"Do military rates apply?\", \"Where is Auto Skills located?\", \"What tools does Auto Skills have?\"]\n```"
+ },
+ "marine-family-support__transition-readiness-program.json": {
+  "hash": "0541205f00009f4e",
+  "text": "```json\n[\"What's the first step I need to do?\", \"When do I need to start this program?\", \"How do I schedule my counseling?\", \"What if I need help with SkillBridge?\", \"What are the office hours?\"]\n```"
+ },
+ "services__mbling.json": {
+  "hash": "d5437d9b664071a5",
+  "text": "```json\n[\"Where is M'Bling located?\", \"What time does M'Bling close on Friday?\", \"Is M'Bling open on Sunday?\", \"When can I go on Saturday?\", \"Do you fix watches here?\"]\n```"
+ }
+}

@@ -87,5 +87,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/rv-storage",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is RV storage monthly?",
+    "What size RV can I store?",
+    "Can I store a project RV?",
+    "What do I bring to sign up?"
+  ],
+  "chipsSourceHash": "68fc0e03c93af0ed"
 }

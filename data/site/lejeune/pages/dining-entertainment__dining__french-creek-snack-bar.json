@@ -92,5 +92,12 @@
   ],
   "notCaptured": "Menu is a linked file (not captured)",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/french-creek-snack-bar",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does French Creek open?",
+    "Is French Creek open on weekends?",
+    "What food does French Creek serve?",
+    "Where is French Creek located?"
+  ],
+  "chipsSourceHash": "65b4d26b51a4ff36"
 }

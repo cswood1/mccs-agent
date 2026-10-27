@@ -55,5 +55,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/other-recreation-options",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's included at Auto Skills?",
+    "How do I book a tour?",
+    "Do military rates apply?",
+    "Where is Auto Skills located?"
+  ],
+  "chipsSourceHash": "f9562730aeed447f"
 }

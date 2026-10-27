@@ -87,5 +87,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I join an adult league?",
+    "What youth sports are available?",
+    "Can I reserve athletic fields?",
+    "What are All-Marine Sports?"
+  ],
+  "chipsSourceHash": "6812f10d73329a1a"
 }

@@ -132,5 +132,11 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/amp-it",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When are AMP-IT classes at Area 2?",
+    "What's the cost for group exercise?",
+    "Can my unit request a session?"
+  ],
+  "chipsSourceHash": "9cea8244b2a870af"
 }

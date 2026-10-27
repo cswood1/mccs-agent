@@ -148,5 +148,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/chaplains-religious-enrichment-development-operation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What does CREDO offer?",
+    "How much do retreats cost?",
+    "Can I bring my kids?",
+    "How do I sign up for a program?"
+  ],
+  "chipsSourceHash": "fea98326fc629f57"
 }

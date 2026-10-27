@@ -83,5 +83,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which fitness center is closest?",
+    "How much does a membership cost?",
+    "Can family members use the gym?",
+    "What fitness programs do you offer?"
+  ],
+  "chipsSourceHash": "30598f0d3757d3e1"
 }

@@ -149,5 +149,12 @@
   "images": [],
   "notCaptured": "Several infographic images and the \"Exit Site\" button (quick exit to Weather.com) not captured; Warfighter Mental Readiness Playbook is a PDF.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I report domestic abuse?",
+    "What is a restricted report?",
+    "Can I call someone 24/7?",
+    "How do I help a friend?"
+  ],
+  "chipsSourceHash": "81a3c731a425d763"
 }

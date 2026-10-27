@@ -50,5 +50,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What sports programs do you have?",
+    "Can my kid join youth sports?",
+    "How do I sign up for adult leagues?",
+    "Where are sports events held?"
+  ],
+  "chipsSourceHash": "1964cd49fdfdc1da"
 }

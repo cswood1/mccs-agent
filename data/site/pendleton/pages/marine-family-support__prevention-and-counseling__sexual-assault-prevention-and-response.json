@@ -209,5 +209,12 @@
   "images": [],
   "notCaptured": "Content sits in tabbed panels on the real page.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What counts as consent?",
+    "What should I do right after?",
+    "Can I call anonymously?",
+    "What's a restricted report?"
+  ],
+  "chipsSourceHash": "9a3b99cf943a09cb"
 }

@@ -231,5 +231,12 @@
   ],
   "notCaptured": "Policy PDFs (DoDI 6060.02, MCO 1710.30A), FCC application download, and upcoming events list (dynamic) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What age kids do you take?",
+    "How do I sign up for care?",
+    "Can my kid go evenings?",
+    "What if there's no space?"
+  ],
+  "chipsSourceHash": "2eb98e7242942f02"
 }

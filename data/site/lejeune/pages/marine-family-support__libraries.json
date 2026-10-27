@@ -85,5 +85,12 @@
   ],
   "notCaptured": "Upcoming Events list (dynamic). The page lists no individual library locations, phones, or hours.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/libraries",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can use the library?",
+    "How do I create a library account?",
+    "What's the checkout limit for DVDs?",
+    "How long can I keep books?"
+  ],
+  "chipsSourceHash": "9f71067035d433fa"
 }

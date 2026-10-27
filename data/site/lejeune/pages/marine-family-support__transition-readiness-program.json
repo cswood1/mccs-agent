@@ -184,5 +184,12 @@
   "images": [],
   "notCaptured": "Tier level checklists and participant guide documents are downloads (not captured); related stories not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/transition-readiness-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the first step I need to do?",
+    "When do I need to complete IC?",
+    "How do I sign up for the seminar?",
+    "What's the SkillBridge program?"
+  ],
+  "chipsSourceHash": "54e13f08e284d8f6"
 }

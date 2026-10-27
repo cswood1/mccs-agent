@@ -145,5 +145,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-shooting",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is archery per day?",
+    "Can I get free shotgun lessons?",
+    "What time does skeet open Friday?",
+    "Do you rent bows here?"
+  ],
+  "chipsSourceHash": "ccb540561ab5d15f"
 }

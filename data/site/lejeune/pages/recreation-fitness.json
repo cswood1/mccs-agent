@@ -51,5 +51,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Who can use recreation programs?",
+    "How do I join a sports program?",
+    "Tell me about the Car & Bike Show?"
+  ],
+  "chipsSourceHash": "26b0ffc1ff32f0b6"
 }

@@ -301,5 +301,11 @@
   ],
   "notCaptured": "Store directory (PDF).",
   "url": "https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I ship my online order here?",
+    "Do you sell firearms and ammo?",
+    "When's San Onofre Marine Mart open?"
+  ],
+  "chipsSourceHash": "e4436aa68551c848"
 }

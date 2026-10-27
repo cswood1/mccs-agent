@@ -87,5 +87,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I get my phone fixed?",
+    "How do I book a haircut?",
+    "What does dry cleaning offer?",
+    "Can I store my RV here?"
+  ],
+  "chipsSourceHash": "9efe443d7ae713fd"
 }

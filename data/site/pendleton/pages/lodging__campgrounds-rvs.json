@@ -69,5 +69,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which campground has full hookups?",
+    "How many campsites at Del Mar?",
+    "Where is San Onofre Beach located?",
+    "Can I fish at any campground?"
+  ],
+  "chipsSourceHash": "7e0ae5dddedc9018"
 }

@@ -105,5 +105,10 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/the-vineyard",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I get catering here?",
+    "Do you have a bar for events?"
+  ],
+  "chipsSourceHash": "1c8ee8c4219e49df"
 }

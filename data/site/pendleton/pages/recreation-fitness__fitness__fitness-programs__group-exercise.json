@@ -96,5 +96,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/group-exercise",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What classes are free?",
+    "When is Zumba at Paige?",
+    "Can I bring my kids?",
+    "What's the STRONG Nation class?"
+  ],
+  "chipsSourceHash": "97b7f578a5ff831c"
 }

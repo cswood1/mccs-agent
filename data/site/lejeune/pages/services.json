@@ -81,5 +81,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where's the barber shop?",
+    "How much do haircuts cost?",
+    "Can iFix repair my phone?",
+    "What's at the dry cleaner?"
+  ],
+  "chipsSourceHash": "6f6928df4bcdc5d1"
 }

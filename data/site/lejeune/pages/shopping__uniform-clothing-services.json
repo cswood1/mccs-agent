@@ -313,5 +313,10 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/shopping/uniform-clothing-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is Camp Johnson open?",
+    "Where's the Camp Lejeune location?"
+  ],
+  "chipsSourceHash": "31e6b47e6d5ef550"
 }

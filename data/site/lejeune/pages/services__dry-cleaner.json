@@ -121,5 +121,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/dry-cleaner",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Do you do alterations?",
+    "Where's the New River location?",
+    "Which location is open Saturday?"
+  ],
+  "chipsSourceHash": "ab06713e8e2ed135"
 }

@@ -295,5 +295,12 @@
   "images": [],
   "notCaptured": "Page uses tabs (Amazon Lockers, UPS, USPS); the UPS tab showed no listing in the fetched text.",
   "url": "https://pendleton.usmc-mccs.org/services/postal-shipping",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where's the nearest Amazon Locker?",
+    "What time does USPS 16 Area close?",
+    "Which post office is open Saturday?",
+    "How do I pick up my Amazon package?"
+  ],
+  "chipsSourceHash": "60776fb56406f106"
 }

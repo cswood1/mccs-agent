@@ -184,5 +184,12 @@
   ],
   "notCaptured": "Boarding Requirements, Rules & Regulations and trail map PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is self-service boarding?",
+    "When does Stepp Stables close?",
+    "Can civilians board horses here?",
+    "What do I need to ride lessons?"
+  ],
+  "chipsSourceHash": "9129041816485de6"
 }

@@ -52,5 +52,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/shopping",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I buy uniforms?",
+    "Is the MCX open 24 hours?",
+    "What's at Marine Marts?",
+    "How do I get a military discount?"
+  ],
+  "chipsSourceHash": "65473c8af84ec644"
 }

@@ -53,5 +53,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/resale-lot",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does it cost to list?",
+    "What do I need to bring?",
+    "Where is the resale lot?",
+    "Can someone list my vehicle for me?"
+  ],
+  "chipsSourceHash": "e8d3bc7043379879"
 }

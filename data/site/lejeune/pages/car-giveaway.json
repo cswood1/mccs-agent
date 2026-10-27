@@ -74,5 +74,12 @@
   ],
   "notCaptured": "The online entry form is embedded and was not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/car-giveaway",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When does entry close?",
+    "Who can enter this giveaway?",
+    "How many finalists are selected?",
+    "When is the HolidayFest event?"
+  ],
+  "chipsSourceHash": "21fbec4c8f9e00ca"
 }

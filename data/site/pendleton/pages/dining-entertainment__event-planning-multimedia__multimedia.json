@@ -35,5 +35,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What movies are playing?",
+    "How much do movie tickets cost?",
+    "Where's the movie theater?",
+    "Can I rent the theater for events?"
+  ],
+  "chipsSourceHash": "f6869e2395a5f41a"
 }

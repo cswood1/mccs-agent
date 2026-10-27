@@ -71,5 +71,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/gamestop",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is GameStop located?",
+    "Is GameStop open on weekdays?",
+    "What's the phone number to call?",
+    "Does GameStop close early any day?"
+  ],
+  "chipsSourceHash": "66b78335cb3ee3e7"
 }

@@ -50,5 +50,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/activity/e4f2a78d-a754-43a3-a902-195667b060d1",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is the Halloween Bash?",
+    "Can I wear a costume?",
+    "What activities are there?",
+    "How do I get more info?"
+  ],
+  "chipsSourceHash": "52e018612729c3d8"
 }

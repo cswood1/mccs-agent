@@ -65,5 +65,11 @@
   "images": [],
   "notCaptured": "Advertising guide PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/more/advertising-sponsorship",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How many people see ads here daily?",
+    "What types of ads do you offer?",
+    "How long before my ad goes live?"
+  ],
+  "chipsSourceHash": "4351af90215a59ca"
 }

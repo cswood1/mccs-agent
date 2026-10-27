@@ -87,5 +87,12 @@
   "images": [],
   "notCaptured": "Story list is dynamic (paged); first 12 stories captured as cards",
   "url": "https://pendleton.usmc-mccs.org/stories",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What stories are featured here?",
+    "How do I submit my story?",
+    "Who can share a story?",
+    "When are new stories posted?"
+  ],
+  "chipsSourceHash": "90abd5c668279a3f"
 }

@@ -49,5 +49,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I get my car inspected?",
+    "Do you sell used vehicles here?",
+    "What services does Firestone offer?",
+    "Can I rent a car on base?"
+  ],
+  "chipsSourceHash": "c4cc3b1388c77dcc"
 }

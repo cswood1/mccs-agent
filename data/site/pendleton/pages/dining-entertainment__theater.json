@@ -87,5 +87,11 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What movies are playing this week?",
+    "How much is a ticket for kids?",
+    "What's in the VIP combo?"
+  ],
+  "chipsSourceHash": "ecd8e3316ce296cc"
 }

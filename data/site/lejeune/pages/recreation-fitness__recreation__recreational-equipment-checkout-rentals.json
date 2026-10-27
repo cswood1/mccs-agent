@@ -157,5 +157,12 @@
   ],
   "notCaptured": "Equipment catalogs (external Canva links) not captured; a West Road closure alert banner was present but its text was not returned (see Outdoor Adventures page for the same notice).",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-equipment-checkout-rentals",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the cancellation policy?",
+    "How far can I take towable items?",
+    "When can I pick up equipment?",
+    "Who's allowed to reserve items?"
+  ],
+  "chipsSourceHash": "791770dab8c2bdea"
 }

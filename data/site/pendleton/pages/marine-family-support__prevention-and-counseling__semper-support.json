@@ -73,5 +73,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/semper-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How many free sessions do I get?",
+    "Can my family use Semper Support?",
+    "Do I need to book ahead?",
+    "Is there a cost?"
+  ],
+  "chipsSourceHash": "8473a2a6a5333690"
 }

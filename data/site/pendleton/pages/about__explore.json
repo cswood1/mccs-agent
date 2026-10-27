@@ -30,5 +30,12 @@
   "images": [],
   "notCaptured": "Page body is only the installation location picker",
   "url": "https://pendleton.usmc-mccs.org/about/explore",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What locations are available?",
+    "How do I find my installation?",
+    "Can I access other bases' services?",
+    "Where's the recruiting region info?"
+  ],
+  "chipsSourceHash": "a6172a7d589c81ed"
 }

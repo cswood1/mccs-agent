@@ -130,5 +130,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/retired-affairs",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What help do you give retirees?",
+    "Where is Retired Affairs located?",
+    "What are your hours on Friday?",
+    "Can you help with VA benefits?"
+  ],
+  "chipsSourceHash": "e08a97d02d62e0b6"
 }

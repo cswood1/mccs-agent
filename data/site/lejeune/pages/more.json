@@ -45,5 +45,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/more",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What events are coming up?",
+    "How do I give feedback?",
+    "Can veterans access this?",
+    "Want to sponsor us?"
+  ],
+  "chipsSourceHash": "97e174b04a16ca76"
 }

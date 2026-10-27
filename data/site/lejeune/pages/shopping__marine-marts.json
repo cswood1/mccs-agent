@@ -777,5 +777,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-marts",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When does Hwy 172 Marine Mart open?",
+    "Which mart is open 24/7?",
+    "What time does French Creek close?",
+    "Where is Camp Geiger Marine Mart?"
+  ],
+  "chipsSourceHash": "4a43ec50bb68b009"
 }

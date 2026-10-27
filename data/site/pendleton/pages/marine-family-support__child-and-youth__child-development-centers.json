@@ -403,5 +403,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What ages can use the CDC?",
+    "How do I sign up for child care?",
+    "Can I tour a center first?",
+    "What's included in full-time care?"
+  ],
+  "chipsSourceHash": "a109aa6ccc9b58d5"
 }

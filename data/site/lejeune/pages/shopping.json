@@ -112,5 +112,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/shopping",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where's the Commissary located?",
+    "Can I buy video games here?",
+    "Does MCX sell uniforms?",
+    "What's at Tun Alley?"
+  ],
+  "chipsSourceHash": "74c801014bdcb5f0"
 }

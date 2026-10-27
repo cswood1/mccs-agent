@@ -183,5 +183,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/community-counseling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the phone number to call?",
+    "Can my spouse come too?",
+    "When are walk-in hours?",
+    "Can family members get counseling?"
+  ],
+  "chipsSourceHash": "9bf0d0a4a87a9407"
 }

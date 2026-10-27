@@ -55,5 +55,11 @@
   ],
   "notCaptured": "The real /lodging URL renders the Inns of the Corps listing (H1 and breadcrumb 'Lodging > Inns of the Corps'); Beach Cottages and Campgrounds & RVs are only in the menu",
   "url": "https://pendleton.usmc-mccs.org/lodging",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does a room cost?",
+    "Can I book online?",
+    "Where is Ward Lodge located?"
+  ],
+  "chipsSourceHash": "b8424c563d10e700"
 }

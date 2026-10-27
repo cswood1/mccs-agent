@@ -37,5 +37,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/tax-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where's the tax center located?",
+    "When are tax services open?",
+    "Can I get help online?",
+    "Do I need an appointment?"
+  ],
+  "chipsSourceHash": "88023c05a328c184"
 }

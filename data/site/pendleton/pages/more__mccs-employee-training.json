@@ -90,5 +90,12 @@
   "images": [],
   "notCaptured": "Resource PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/more/mccs-employee-training",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I access Ethos training?",
+    "What are the office hours?",
+    "Where is employee training located?",
+    "Can I get tuition assistance?"
+  ],
+  "chipsSourceHash": "e59399cd8a112cd0"
 }

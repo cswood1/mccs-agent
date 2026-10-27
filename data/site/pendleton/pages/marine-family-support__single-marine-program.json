@@ -89,5 +89,12 @@
   "images": [],
   "notCaptured": "The second SMP Council's heading (likely the base-wide council) was not returned by the fetch tool. No hours listed on the page.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/single-marine-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When are the monthly meetings?",
+    "What volunteer options are there?",
+    "How much do trips cost?",
+    "What recreation trips are offered?"
+  ],
+  "chipsSourceHash": "bba7d8d21678d8d7"
 }

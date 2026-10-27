@@ -30,5 +30,12 @@
   "images": [],
   "notCaptured": "Embedded calendar of events is dynamic and showed no entries; no breadcrumb on the real page",
   "url": "https://pendleton.usmc-mccs.org/holidays",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What holiday events are coming up?",
+    "How do I sign up for activities?",
+    "What should I wear to events?",
+    "Where can I give feedback?"
+  ],
+  "chipsSourceHash": "b6893d9864ee743d"
 }

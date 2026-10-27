@@ -99,5 +99,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/shopping/package-store",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does Tun Alley open?",
+    "How do I order kegs?",
+    "What's the wine bulk discount?",
+    "Can I order beer by the bottle?"
+  ],
+  "chipsSourceHash": "316f9a5b8db67e5e"
 }

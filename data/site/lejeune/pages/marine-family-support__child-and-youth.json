@@ -136,5 +136,12 @@
   ],
   "notCaptured": "Upcoming Events list (dynamic) and related news cards; PDF downloads (CDC/SAC/Infant menus, menu substitutions, food analysis, USDA forms, CYP Handbook, authorization forms) not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does childcare cost?",
+    "Is care available on weekends?",
+    "Do you offer summer camps?",
+    "What's the phone number to call?"
+  ],
+  "chipsSourceHash": "319f491333efe7c9"
 }

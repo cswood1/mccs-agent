@@ -195,5 +195,12 @@
   "images": [],
   "notCaptured": "Volunteer of the Year Nomination form download link not captured.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/volunteer-opportunities",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How old do I need to be?",
+    "What's the deadline to apply?",
+    "How do I start volunteering?",
+    "Can I volunteer off base?"
+  ],
+  "chipsSourceHash": "2b7f39f9599d1fe6"
 }

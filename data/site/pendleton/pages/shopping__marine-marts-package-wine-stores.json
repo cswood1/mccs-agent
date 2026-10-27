@@ -1090,5 +1090,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/shopping/marine-marts-package-wine-stores",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's open 24 hours?",
+    "When does Chappo close?",
+    "Where's the nearest Micro Mart?",
+    "Can I rent a private room?"
+  ],
+  "chipsSourceHash": "3dc4231041b7135d"
 }

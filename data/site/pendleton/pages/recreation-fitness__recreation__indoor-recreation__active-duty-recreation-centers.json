@@ -243,5 +243,12 @@
   "images": [],
   "notCaptured": "Newsletter and facility usage request PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which rec center is open latest?",
+    "What games can I play there?",
+    "Is the 21 Area open Sunday?",
+    "What's the phone for 33 Area?"
+  ],
+  "chipsSourceHash": "aea8e018042cf30d"
 }

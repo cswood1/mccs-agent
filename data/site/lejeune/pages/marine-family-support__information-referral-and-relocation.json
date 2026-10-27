@@ -282,5 +282,11 @@
   "images": [],
   "notCaptured": "Embedded video in 'Welcome Aboard Lejeune-New River'; event calendar (dynamic).",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/information-referral-and-relocation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is the PCS Workshop required?",
+    "How do I request a sponsor?",
+    "Can I borrow household items?"
+  ],
+  "chipsSourceHash": "14b15bbddd3574d3"
 }

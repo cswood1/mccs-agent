@@ -31,5 +31,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the lunch buffet schedule?",
+    "Can I book The Landing for events?",
+    "Which club serves lunch daily?",
+    "Do both clubs allow all ranks?"
+  ],
+  "chipsSourceHash": "82762daeca8d09d2"
 }

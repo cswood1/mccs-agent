@@ -124,5 +124,12 @@
   ],
   "notCaptured": "Tabbed content flattened; some course descriptions may be lightly condensed by the fetch tool; PDFs (tri-fold, map, powerboat study guide) not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What boats do you rent?",
+    "How much is Learn to Sail?",
+    "When are classes offered?",
+    "Do I need experience to start?"
+  ],
+  "chipsSourceHash": "02cd1f2361b9f6f7"
 }

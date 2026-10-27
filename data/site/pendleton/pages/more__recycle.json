@@ -143,5 +143,12 @@
   "images": [],
   "notCaptured": "Long lists and FAQ answers may be lightly condensed by the fetch tool; resource PDFs (Waste Streams, MCIWEST-MCB CAMPENO 6280.1) not captured",
   "url": "https://pendleton.usmc-mccs.org/more/recycle",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where do I drop off electronics?",
+    "What goes in my housing bin?",
+    "Can I recycle old eyeglasses?",
+    "How does recycling help the base?"
+  ],
+  "chipsSourceHash": "28d034d6281251a1"
 }

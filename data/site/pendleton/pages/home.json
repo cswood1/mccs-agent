@@ -200,5 +200,12 @@
   ],
   "notCaptured": "Home page carousel slides are images only; event list area showed no upcoming events; location picker modal omitted (theme)",
   "url": "https://pendleton.usmc-mccs.org",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What programs does MCCS offer?",
+    "How do I find a counselor?",
+    "Where can I book lodging?",
+    "What recreation options exist?"
+  ],
+  "chipsSourceHash": "a35c13924cdb6ff3"
 }

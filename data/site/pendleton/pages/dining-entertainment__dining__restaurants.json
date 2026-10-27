@@ -41,5 +41,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I book Iron Mike's for a party?",
+    "What restaurants host events here?",
+    "How do I reserve Windmill Canyon?",
+    "Do they do unit functions?"
+  ],
+  "chipsSourceHash": "aa06b6b117e471e3"
 }

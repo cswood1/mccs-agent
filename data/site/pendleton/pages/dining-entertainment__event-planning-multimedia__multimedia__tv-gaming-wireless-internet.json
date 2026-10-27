@@ -121,5 +121,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia/tv-gaming-wireless-internet",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does GameStop close?",
+    "What's the GameStop phone number?",
+    "Where is GameStop located?",
+    "When does Boingo Wireless open?"
+  ],
+  "chipsSourceHash": "f2751635805a74d2"
 }

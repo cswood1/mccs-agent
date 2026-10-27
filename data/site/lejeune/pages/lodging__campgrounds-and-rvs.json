@@ -40,5 +40,12 @@
   "images": [],
   "notCaptured": "Thin landing page on the real site: no body text, only two cards linking to Onslow Beach and Outdoor Adventures (campground details live on those pages).",
   "url": "https://lejeunenewriver.usmc-mccs.org/lodging/campgrounds-and-rvs",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I camp near the beach?",
+    "How do I book an RV site?",
+    "What's included in camping here?",
+    "Are pets allowed at campgrounds?"
+  ],
+  "chipsSourceHash": "374794f8cd98ed6b"
 }

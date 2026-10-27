@@ -247,5 +247,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What ages can join School Age Care?",
+    "How do I sign up my child?",
+    "Is there a waitlist?",
+    "What meals are provided?"
+  ],
+  "chipsSourceHash": "d61ab30abbe9ef8d"
 }

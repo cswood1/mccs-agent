@@ -151,5 +151,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-corps-exchange",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is the firearms counter open?",
+    "Where is New River MCX located?",
+    "Can I shop online and get delivery?"
+  ],
+  "chipsSourceHash": "0586f04e81c9bfb0"
 }

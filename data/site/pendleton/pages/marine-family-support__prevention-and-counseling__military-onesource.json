@@ -92,5 +92,11 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is Military OneSource really free?",
+    "Who can use Military OneSource?",
+    "What if I'm in crisis right now?"
+  ],
+  "chipsSourceHash": "6ba1b6a88d874a25"
 }

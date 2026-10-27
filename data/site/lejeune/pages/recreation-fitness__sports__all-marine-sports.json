@@ -178,5 +178,10 @@
   "images": [],
   "notCaptured": "FAQ answers that repeat word-for-word across the Athletic Directors / Athletes / Coaches / Commanders tabs are kept once (noted in each tab).",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/all-marine-sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Does the military pay for travel?",
+    "Who can join All-Marine Sports?"
+  ],
+  "chipsSourceHash": "6a319a45a3d87563"
 }

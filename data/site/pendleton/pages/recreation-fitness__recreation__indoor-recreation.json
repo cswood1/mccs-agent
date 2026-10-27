@@ -73,5 +73,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I use the Auto Skills Center?",
+    "When is Leatherneck Lanes open?",
+    "How much does bowling cost?",
+    "What tools are at Auto Skills?"
+  ],
+  "chipsSourceHash": "372292dc2fa38051"
 }

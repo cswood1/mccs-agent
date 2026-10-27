@@ -180,5 +180,12 @@
   "images": [],
   "notCaptured": "Content sits in tabbed panels on the real page.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-misuse",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I call for help right now?",
+    "What's a standard drink size?",
+    "Who can I talk to for support?",
+    "How do I help a friend struggling?"
+  ],
+  "chipsSourceHash": "a6f4b116a4b5111c"
 }

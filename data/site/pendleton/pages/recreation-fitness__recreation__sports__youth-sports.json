@@ -111,5 +111,12 @@
   ],
   "notCaptured": "Season schedules are on the external LeagueApps site",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does youth sports cost?",
+    "When can I register my kid?",
+    "Who is eligible to join?",
+    "What are your office hours?"
+  ],
+  "chipsSourceHash": "110cb93a9872f024"
 }

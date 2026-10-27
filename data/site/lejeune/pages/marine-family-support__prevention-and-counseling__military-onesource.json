@@ -68,5 +68,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-onesource",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is Military OneSource really free?",
+    "What times can I call the hotline?",
+    "How do I start a chat session?",
+    "What if I'm having a crisis?"
+  ],
+  "chipsSourceHash": "de7beb28816778c4"
 }

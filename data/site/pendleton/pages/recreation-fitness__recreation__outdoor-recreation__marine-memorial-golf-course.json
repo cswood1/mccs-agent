@@ -226,5 +226,12 @@
   ],
   "notCaptured": "Menus (PDF) not captured; the Foot Golf fee table on the real page is partly empty; green-fee tables copied as labeled by the fetch (18-hole rates are lower than 9-hole rates, so the labels may be swapped - verify on the live page)",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marine-memorial-golf-course",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book a tee time?",
+    "What's the membership cost?",
+    "Can I take golf lessons?",
+    "What is foot golf?"
+  ],
+  "chipsSourceHash": "4c0181e9ddc55b2b"
 }

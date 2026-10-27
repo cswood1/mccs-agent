@@ -61,5 +61,12 @@
   "images": [],
   "notCaptured": "The real page's hours table lists only Sunday, Monday and Saturday (no Tuesday-Friday rows).",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/the-honeybaked-ham-co",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does Honeybaked close?",
+    "Where is this located?",
+    "Are you open on weekdays?",
+    "What kind of food do you have?"
+  ],
+  "chipsSourceHash": "5985b1d140b9c82d"
 }

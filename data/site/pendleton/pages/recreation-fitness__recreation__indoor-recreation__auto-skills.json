@@ -123,5 +123,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much for a flat stall?",
+    "What ID do I need to use this?",
+    "Can I do welding here?",
+    "How much to mount a tire?"
+  ],
+  "chipsSourceHash": "46214e7623f83096"
 }

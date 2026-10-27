@@ -55,5 +55,12 @@
   "images": [],
   "notCaptured": "General provisions PDFs not captured",
   "url": "https://pendleton.usmc-mccs.org/about/business-partners",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I become a business partner?",
+    "Where do I send my vendor info?",
+    "What's the email for procurement?",
+    "Do you have contract templates?"
+  ],
+  "chipsSourceHash": "2d2f7324e1a30081"
 }

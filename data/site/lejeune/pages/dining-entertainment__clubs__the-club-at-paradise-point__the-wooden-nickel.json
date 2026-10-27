@@ -102,5 +102,12 @@
   ],
   "notCaptured": "Weekly menu event listings (dynamic)",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is The Wooden Nickel open?",
+    "What's the Nickel Special?",
+    "Can I order takeout?",
+    "Does the menu change?"
+  ],
+  "chipsSourceHash": "97315b8d2b9e8f57"
 }

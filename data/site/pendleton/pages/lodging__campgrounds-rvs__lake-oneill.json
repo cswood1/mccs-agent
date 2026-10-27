@@ -167,5 +167,12 @@
   ],
   "notCaptured": "Pricing tabs (standard and seasonal tables) merged into the seasonal table; maps/forms (files) not captured",
   "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the cost per night?",
+    "When can I rent boats?",
+    "How do I book a campsite?",
+    "What activities are included?"
+  ],
+  "chipsSourceHash": "f377e4588b0eda81"
 }

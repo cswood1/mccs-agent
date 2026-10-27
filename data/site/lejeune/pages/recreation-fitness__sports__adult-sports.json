@@ -234,5 +234,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/adult-sports",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is soccer tournament?",
+    "Can spouses join the leagues?",
+    "When does flag football start?",
+    "How do I register my team?"
+  ],
+  "chipsSourceHash": "752ba80be33386ab"
 }

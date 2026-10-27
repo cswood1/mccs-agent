@@ -71,5 +71,12 @@
   ],
   "notCaptured": "Related stories cards not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I get 24/7 gym access?",
+    "Where's the Auto Skills Center?",
+    "What sports activities can I do?",
+    "Do you offer travel tickets?"
+  ],
+  "chipsSourceHash": "2beaa036d519860f"
 }

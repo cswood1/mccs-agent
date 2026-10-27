@@ -44,5 +44,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/holiday-hours",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is CLOC open Oct. 10-13?",
+    "What time does Starbucks close?",
+    "When does The Landing open?",
+    "Which clubs are closed Oct. 10-13?"
+  ],
+  "chipsSourceHash": "96550eade4f4a01e"
 }

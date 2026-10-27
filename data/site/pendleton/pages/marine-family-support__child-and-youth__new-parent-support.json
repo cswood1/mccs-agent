@@ -146,5 +146,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's Baby Boot Camp about?",
+    "When's playgroup and where?",
+    "How much does NPSP cost?",
+    "What's in the Welcome Baby Bag?"
+  ],
+  "chipsSourceHash": "80609016cc475709"
 }

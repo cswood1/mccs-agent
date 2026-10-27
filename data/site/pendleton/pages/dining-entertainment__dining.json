@@ -43,5 +43,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where are the base restaurants?",
+    "What food trucks come here?",
+    "How do I book an event?",
+    "What fast food places are open?"
+  ],
+  "chipsSourceHash": "f4044ede3d9dbabb"
 }

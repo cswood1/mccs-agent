@@ -78,5 +78,12 @@
   "images": [],
   "notCaptured": "Countdown timer and registration forms are dynamic; no breadcrumb on the real page",
   "url": "https://pendleton.usmc-mccs.org/tree-lighting",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is the tree lighting ceremony?",
+    "What time does the event start?",
+    "Can I bring my dog?",
+    "How do I enter to win gift cards?"
+  ],
+  "chipsSourceHash": "5518c29aed47d2cd"
 }

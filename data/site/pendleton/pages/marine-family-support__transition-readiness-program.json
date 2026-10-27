@@ -172,5 +172,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/transition-readiness-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the first step I need to do?",
+    "How do I schedule my counseling?",
+    "What are the office hours?"
+  ],
+  "chipsSourceHash": "0541205f00009f4e"
 }

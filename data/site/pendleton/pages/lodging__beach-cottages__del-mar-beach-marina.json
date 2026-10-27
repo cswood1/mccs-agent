@@ -194,5 +194,12 @@
   ],
   "notCaptured": "Tabbed content flattened; the page shows two cottage-rate tables (likely standard vs dynamic pricing) - both kept; resource PDFs and photo gallery not captured",
   "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time can I check in?",
+    "How much is a cottage deposit?",
+    "Can I bring my dog to the beach?",
+    "How long can I book a cottage?"
+  ],
+  "chipsSourceHash": "3a8ae19e8d41e356"
 }

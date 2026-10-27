@@ -50,5 +50,12 @@
   "images": [],
   "notCaptured": "Linked PDF documents not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/business-partners",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I become a business partner?",
+    "Where do I send my vendor info?",
+    "What contract documents do I need?",
+    "Can I sell retail through MCCS?"
+  ],
+  "chipsSourceHash": "917f9e387ee58966"
 }

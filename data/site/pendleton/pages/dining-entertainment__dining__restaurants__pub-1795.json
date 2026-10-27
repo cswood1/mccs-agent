@@ -104,5 +104,12 @@
   ],
   "notCaptured": "Menu (PDF).",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/pub-1795",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What are Pub 1795's hours?",
+    "Can I book a private event?",
+    "When's the next First Friday?",
+    "What's the phone number?"
+  ],
+  "chipsSourceHash": "b84627934c487e9f"
 }

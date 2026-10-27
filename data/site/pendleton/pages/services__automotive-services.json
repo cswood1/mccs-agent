@@ -858,5 +858,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/automotive-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When's the Auto Skills Center open?",
+    "Can I store my RV here?",
+    "Where can I get an oil change?",
+    "What fuel stations open earliest?"
+  ],
+  "chipsSourceHash": "69f43ebc08c4dd48"
 }

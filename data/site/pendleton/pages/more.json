@@ -135,5 +135,12 @@
   ],
   "notCaptured": "No page H1 or breadcrumb on the real page (H1 is the generic 'Hello.' banner); title set to More",
   "url": "https://pendleton.usmc-mccs.org/more",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where can I find Chesty Deals?",
+    "How do I sign up for emails?",
+    "What training does MCCS offer?",
+    "How do I give feedback?"
+  ],
+  "chipsSourceHash": "8d2a8359fc8bccff"
 }

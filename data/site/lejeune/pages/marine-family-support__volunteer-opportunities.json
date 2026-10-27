@@ -179,5 +179,10 @@
   "images": [],
   "notCaptured": "Volunteer Application (NAVMC 5380.2) and Volunteer Hours (NAVMC 5380.1) are downloads (not captured); volunteer calendar is dynamic.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/volunteer-opportunities",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How old do I need to be?",
+    "Can active duty members volunteer?"
+  ],
+  "chipsSourceHash": "7febafb6dc1da188"
 }

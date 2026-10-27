@@ -79,5 +79,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/about",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I find base services?",
+    "What's the Marine For Life Cycle?",
+    "Can I see a map of Camp Pendleton?",
+    "Where do I get base info?"
+  ],
+  "chipsSourceHash": "c969b57a7689beb8"
 }

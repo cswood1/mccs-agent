@@ -66,5 +66,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/mbling",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is M'Bling located?",
+    "Is M'Bling open on Sunday?",
+    "When can I go on Saturday?",
+    "Do you fix watches here?"
+  ],
+  "chipsSourceHash": "d5437d9b664071a5"
 }

@@ -83,5 +83,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/babas-mediterranean-grill",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is Baba's located?",
+    "Do you have vegetarian options?",
+    "What's the phone number?",
+    "Are they open on Sunday?"
+  ],
+  "chipsSourceHash": "1eb0561bce6de2cc"
 }

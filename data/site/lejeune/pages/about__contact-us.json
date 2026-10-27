@@ -73,5 +73,12 @@
   "images": [],
   "notCaptured": "The Contact Us page shows the general About MCCS text (H1 \"About\") with an email link; there is no contact directory on the page.",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/contact-us",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What does MCCS do?",
+    "How do I contact MCCS?",
+    "What are MCCS core values?",
+    "Where can I sign up for updates?"
+  ],
+  "chipsSourceHash": "0db8800acf27efc2"
 }

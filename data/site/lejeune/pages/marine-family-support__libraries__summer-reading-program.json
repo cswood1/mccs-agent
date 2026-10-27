@@ -55,5 +55,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/libraries/summer-reading-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When does online registration open?",
+    "What age groups can join?",
+    "How do I log my reading time?",
+    "Where do I pick up my prize?"
+  ],
+  "chipsSourceHash": "11b061b408195144"
 }

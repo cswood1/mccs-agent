@@ -167,5 +167,12 @@
   "images": [],
   "notCaptured": "Sailboat rental table (referenced by footnotes) may not have been fully captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/marinas",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the cost for a single kayak?",
+    "Do I need a boating license?",
+    "What are Gottschalk Marina hours?",
+    "Can I rent a motorized boat?"
+  ],
+  "chipsSourceHash": "a7eaf093167a60e6"
 }

@@ -18,5 +18,12 @@
   "images": [],
   "notCaptured": "The interactive map is rendered dynamically and was not visible to the fetch; the page has no other body text.",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/explore",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I use this map?",
+    "What can I find here?",
+    "Is there a mobile version?",
+    "Who made this map?"
+  ],
+  "chipsSourceHash": "f2773cac7aea18ee"
 }

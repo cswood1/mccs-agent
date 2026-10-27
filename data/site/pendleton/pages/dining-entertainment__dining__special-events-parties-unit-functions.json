@@ -65,5 +65,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What venues does MCCS have?",
+    "Can I book Pacific Views?",
+    "Do you offer catering?",
+    "Which place has ocean views?"
+  ],
+  "chipsSourceHash": "c43f2edbc577c9dd"
 }

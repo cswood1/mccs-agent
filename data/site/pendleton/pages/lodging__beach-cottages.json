@@ -55,5 +55,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Are pets allowed at beach cottages?",
+    "How do I book a cottage?",
+    "What's included in the cottages?",
+    "Can I see pictures of the cottages?"
+  ],
+  "chipsSourceHash": "49416f3f15816261"
 }

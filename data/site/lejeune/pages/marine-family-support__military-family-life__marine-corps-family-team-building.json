@@ -148,5 +148,11 @@
   "images": [],
   "notCaptured": "Downloadable PDFs (Pre-Deployment Handbook, Our Journey as a Military Family, L.I.N.K.S. Guide) and events calendar not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What workshops does MCFTB offer?",
+    "How do I connect with MCFTB?",
+    "Can spouses attend the programs?"
+  ],
+  "chipsSourceHash": "b740b59c9919db6c"
 }

@@ -63,5 +63,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What movies are showing?",
+    "How do I book Marston Pavilion?",
+    "Where can I get discount tickets?",
+    "Do clubs do catering?"
+  ],
+  "chipsSourceHash": "1d83332e4a5d0825"
 }

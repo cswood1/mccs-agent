@@ -326,5 +326,11 @@
   "images": [],
   "notCaptured": "Calendar of events (dynamic) not captured. Personal Financial Counselor contact names were labeled by location on the page; prefix 'Personal Financial Counselor' added for clarity.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/personal-financial-management",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I make an appointment?",
+    "Who can use this program?",
+    "What budgeting tools are available?"
+  ],
+  "chipsSourceHash": "e8fcea0ea6b2a9ac"
 }

@@ -397,5 +397,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/barber",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much for a regulation haircut?",
+    "Which barber shop is open Sundays?",
+    "What are Corner Barber hours?",
+    "Where's the Main Exchange barber?"
+  ],
+  "chipsSourceHash": "c1455baa741ae8b5"
 }

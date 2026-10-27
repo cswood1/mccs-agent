@@ -101,5 +101,11 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book a massage?",
+    "What's the Warrior Athlete program?",
+    "Who can use these fitness programs?"
+  ],
+  "chipsSourceHash": "0fc08927c7eaf2bc"
 }

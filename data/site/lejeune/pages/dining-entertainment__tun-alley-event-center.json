@@ -61,5 +61,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/tun-alley-event-center",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What events can I host here?",
+    "Can I bring outside food?",
+    "How do I book Tun Alley?",
+    "What's included with catering?"
+  ],
+  "chipsSourceHash": "b0a6ac27dc34c56f"
 }

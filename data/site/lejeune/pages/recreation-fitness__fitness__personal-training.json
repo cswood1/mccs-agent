@@ -35,5 +35,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/personal-training",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where do I book a session?",
+    "What trainers are available?",
+    "Can I try a free session?",
+    "How do I contact a trainer?"
+  ],
+  "chipsSourceHash": "b3b16cfc04fa9d6c"
 }

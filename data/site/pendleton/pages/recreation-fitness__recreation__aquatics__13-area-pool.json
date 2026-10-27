@@ -124,5 +124,12 @@
   "images": [],
   "notCaptured": "Tab text for Recreation Swim, Swim Lessons and Parent and Child Swim Lessons was not returned by the fetch (fees captured); gallery not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/13-area-pool",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What does it cost for my kid?",
+    "How much for a private swim lesson?",
+    "When can I do lap swim?",
+    "How do I sign up for S3T?"
+  ],
+  "chipsSourceHash": "890c8011e4d59e5f"
 }

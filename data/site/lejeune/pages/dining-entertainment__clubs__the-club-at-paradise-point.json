@@ -165,5 +165,12 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the lunch buffet price?",
+    "When's the fresh bread ready?",
+    "Is The Wooden Nickel open Sundays?",
+    "Can I get buffet to go?"
+  ],
+  "chipsSourceHash": "a88eb7ed77a0da98"
 }

@@ -78,5 +78,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/services/optometry",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What are the optometry hours?",
+    "Is Lane Optometry open Sunday?",
+    "How do I book an appointment?",
+    "Where is Lane Optometry located?"
+  ],
+  "chipsSourceHash": "e2162cd1d0b6195a"
 }

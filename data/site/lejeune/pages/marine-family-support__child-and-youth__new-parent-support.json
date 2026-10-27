@@ -154,5 +154,12 @@
   ],
   "notCaptured": "Class schedule referenced (\"See schedule below\") is an events list (dynamic) and was not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is infant massage really free?",
+    "When does Baby Boot Camp start?",
+    "Can I do home visits online?",
+    "Who can join this program?"
+  ],
+  "chipsSourceHash": "f045a87efa702fe7"
 }

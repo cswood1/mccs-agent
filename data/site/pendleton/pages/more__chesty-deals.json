@@ -94,5 +94,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/more/chesty-deals",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is bowling only $1?",
+    "How much is miniature golf?",
+    "Where can I rent a kayak?"
+  ],
+  "chipsSourceHash": "32e788dcc37dda48"
 }

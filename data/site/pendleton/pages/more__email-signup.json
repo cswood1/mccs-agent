@@ -29,5 +29,12 @@
   ],
   "notCaptured": "The email signup form is an embedded widget and was not captured",
   "url": "https://pendleton.usmc-mccs.org/more/email-signup",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I sign up for emails?",
+    "What kind of stuff do you send?",
+    "Is this for active duty only?",
+    "How often will I get emails?"
+  ],
+  "chipsSourceHash": "0bf6137d78413bc5"
 }

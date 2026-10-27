@@ -175,5 +175,10 @@
   "images": [],
   "notCaptured": "Upcoming events are a dynamic calendar widget (condensed list). Workshop descriptions sit in collapsed accordions; the fetch tool may have condensed some descriptions.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/life-skills",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is the 7 Habits workshop?",
+    "Where do I go for the Nov 3 event?"
+  ],
+  "chipsSourceHash": "ab029b1ceeb604a1"
 }

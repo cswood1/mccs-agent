@@ -636,5 +636,10 @@
   "images": [],
   "notCaptured": "Alerts are the site alert banner as of fetch; PDFs (usage request, policy) not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Is 21 Area open on weekends?",
+    "Why is 33 Area closed Oct 27?"
+  ],
+  "chipsSourceHash": "cb7506991416d607"
 }

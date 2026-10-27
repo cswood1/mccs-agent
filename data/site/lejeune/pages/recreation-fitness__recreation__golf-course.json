@@ -186,5 +186,12 @@
   ],
   "notCaptured": "Green fees are in the linked Golf Prices PDF (not captured).",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/golf-course",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much is a golf lesson?",
+    "What's the handicap requirement?",
+    "Can I book a tee time online?",
+    "Are kids allowed on the course?"
+  ],
+  "chipsSourceHash": "599c47f894b87dd4"
 }

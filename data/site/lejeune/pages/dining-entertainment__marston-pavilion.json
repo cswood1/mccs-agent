@@ -85,5 +85,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/marston-pavilion",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I bring outside food?",
+    "How do I book Marston Pavilion?",
+    "What's the address?",
+    "Does catering come with it?"
+  ],
+  "chipsSourceHash": "cb1188ae110ca42c"
 }

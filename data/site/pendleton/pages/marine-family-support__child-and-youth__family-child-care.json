@@ -177,5 +177,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What age kids does FCC take?",
+    "How do I sign up for care?",
+    "What if there's no space available?",
+    "Do providers work evenings?"
+  ],
+  "chipsSourceHash": "ef4c605a6675c495"
 }

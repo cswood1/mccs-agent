@@ -58,5 +58,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/more/payments",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What payments can I make here?",
+    "How do I pay for youth programs?",
+    "Where's the contact info?",
+    "Can I pay event fees online?"
+  ],
+  "chipsSourceHash": "75a98f819c348cca"
 }

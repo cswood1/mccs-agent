@@ -71,5 +71,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/san-onofre-beach-club",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the Laguna Cliff space like?",
+    "Can I have a wedding here?",
+    "Where is San Onofre Beach Club?",
+    "How do I book an event?"
+  ],
+  "chipsSourceHash": "4414fbdd53891264"
 }

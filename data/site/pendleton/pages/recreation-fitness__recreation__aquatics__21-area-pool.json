@@ -102,5 +102,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/21-area-pool",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What age do I need to be?",
+    "How much does S3T cost?",
+    "What time does the pool open?",
+    "How do I sign up for S3T?"
+  ],
+  "chipsSourceHash": "831d3a1ffccafda5"
 }

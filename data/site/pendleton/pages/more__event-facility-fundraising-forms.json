@@ -29,5 +29,12 @@
   "images": [],
   "notCaptured": "Request form (download) not captured",
   "url": "https://pendleton.usmc-mccs.org/more/event-facility-fundraising-forms",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How early must I submit?",
+    "What facilities can I request?",
+    "Is fundraising allowed on base?",
+    "Where do I download the form?"
+  ],
+  "chipsSourceHash": "76a14c538386b36a"
 }

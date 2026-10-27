@@ -355,5 +355,12 @@
   ],
   "notCaptured": "Calendar of Events (upcoming workshops and classes) is dynamic and was not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/voluntary-education",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book an advisor?",
+    "Who can use Voluntary Education?",
+    "What's Tuition Assistance?",
+    "How do I start my education plan?"
+  ],
+  "chipsSourceHash": "75f156ba5cda18b7"
 }

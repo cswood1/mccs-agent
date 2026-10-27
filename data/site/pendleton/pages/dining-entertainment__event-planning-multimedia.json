@@ -48,5 +48,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book an event here?",
+    "Can I host a birthday party?",
+    "Do you have gaming options?",
+    "What events can I plan with you?"
+  ],
+  "chipsSourceHash": "037a92cfe849162a"
 }

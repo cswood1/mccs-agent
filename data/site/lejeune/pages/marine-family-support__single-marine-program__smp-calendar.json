@@ -41,5 +41,12 @@
   "images": [],
   "notCaptured": "The SMP event calendar is a dynamic widget and was not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-calendar",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What events have prizes?",
+    "How do I find SMP activities?",
+    "When is the next SMP event?",
+    "Can I bring my family?"
+  ],
+  "chipsSourceHash": "76630e27f6381e9f"
 }

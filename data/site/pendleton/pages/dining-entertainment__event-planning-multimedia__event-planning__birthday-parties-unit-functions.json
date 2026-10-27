@@ -89,5 +89,11 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/birthday-parties-unit-functions",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What venues can I book for a party?",
+    "Can I rent a bounce house?",
+    "Do you offer pony parties?"
+  ],
+  "chipsSourceHash": "50c94725d8392657"
 }

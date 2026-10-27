@@ -75,5 +75,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/st-paddys-engineer-5-mile-challenge",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is St. Paddy's Engineer 5K?",
+    "How old do you need to be?",
+    "What terrain will we run?",
+    "Do I need a base pass?"
+  ],
+  "chipsSourceHash": "ac9c26c825c17b33"
 }

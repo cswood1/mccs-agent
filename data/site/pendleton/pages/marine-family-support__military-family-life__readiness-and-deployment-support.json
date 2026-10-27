@@ -112,5 +112,12 @@
   ],
   "notCaptured": "Upcoming events list is a dynamic calendar widget; captured as a condensed list.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/readiness-and-deployment-support",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When's the reintegration workshop?",
+    "What topics cover pre-deployment?",
+    "How do I sign up for classes?",
+    "When are deployment support groups?"
+  ],
+  "chipsSourceHash": "24094002d32893a3"
 }

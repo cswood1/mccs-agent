@@ -76,5 +76,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What fitness programs do you offer?",
+    "Where are the fitness centers?",
+    "How do I get personal training?",
+    "What's AMP-IT?"
+  ],
+  "chipsSourceHash": "2b54c5472eb86799"
 }

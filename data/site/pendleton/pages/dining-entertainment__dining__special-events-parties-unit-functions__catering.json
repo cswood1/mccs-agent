@@ -47,5 +47,12 @@
   "images": [],
   "notCaptured": "Tabbed layout; the * / † key markers next to individual vendors did not come through in the fetched text.",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/catering",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What food trucks are available?",
+    "How do I book Pacific Views?",
+    "Which vendors serve alcohol?",
+    "What's Hibachi-San's number?"
+  ],
+  "chipsSourceHash": "56c725d6725f99cd"
 }

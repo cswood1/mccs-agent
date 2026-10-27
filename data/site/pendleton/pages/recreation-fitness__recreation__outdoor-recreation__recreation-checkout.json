@@ -135,5 +135,12 @@
   ],
   "notCaptured": "Pricing is in tabs on the real page and the fetch returned some tab labels out of place (storage-size, motorcycle and backpacking tables); tables kept as returned. Per-inflatable photo links and PDFs (Inflatables Packet, Unit Gear Request Form) not captured",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreation-checkout",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does propane cost?",
+    "Can I rent an inflatable Saturday?",
+    "What time do inflatables need back?",
+    "What do I need to store my RV?"
+  ],
+  "chipsSourceHash": "4993b2e515a7a559"
 }

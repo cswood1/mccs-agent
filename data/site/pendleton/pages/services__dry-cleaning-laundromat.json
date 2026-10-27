@@ -426,5 +426,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/services/dry-cleaning-laundromat",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Which dry cleaners open earliest?",
+    "Where can I get alterations?",
+    "Is there a 24-hour laundromat?",
+    "Which locations are open Sunday?"
+  ],
+  "chipsSourceHash": "2fcc0b5fb90a48c3"
 }

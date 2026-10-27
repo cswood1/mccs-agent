@@ -167,5 +167,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What programs help with deployment?",
+    "How can my spouse find a job?",
+    "What is L.I.N.K.S.?",
+    "Does EFMP help with childcare?"
+  ],
+  "chipsSourceHash": "659530cd72a471a5"
 }

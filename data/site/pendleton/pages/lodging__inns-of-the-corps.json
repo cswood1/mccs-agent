@@ -55,5 +55,11 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does Pacific Views cost?",
+    "Where is Ward Lodge located?",
+    "Can I book a room online?"
+  ],
+  "chipsSourceHash": "d1ba2900adf18a88"
 }

@@ -80,5 +80,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/eagles-landing",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I book an event here?",
+    "What food options are available?",
+    "Does the venue have outdoor space?",
+    "Who do I call to plan my event?"
+  ],
+  "chipsSourceHash": "ab993cd98f20c096"
 }

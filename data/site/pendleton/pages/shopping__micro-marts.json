@@ -29,5 +29,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/shopping/micro-marts",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What are the Micro Mart hours?",
+    "Where is the Air Wing location?",
+    "Do Micro Marts sell hot food?",
+    "Which Micro Mart is closest to me?"
+  ],
+  "chipsSourceHash": "77492d99fbc1fa30"
 }

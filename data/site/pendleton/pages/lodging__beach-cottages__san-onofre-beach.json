@@ -155,5 +155,12 @@
   ],
   "notCaptured": "Tabbed content flattened; the page shows two cottage-rate tables (likely standard vs dynamic pricing) - both kept; resource PDFs and gallery not captured",
   "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How far ahead can I book?",
+    "What's included in the cottages?",
+    "How do I cancel my reservation?",
+    "Are pit bulls allowed?"
+  ],
+  "chipsSourceHash": "d6ca4b414de9c3f8"
 }

@@ -241,5 +241,12 @@
   "images": [],
   "notCaptured": "Resource downloads are PDFs (not captured).",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the helpline number?",
+    "Can I report anonymously?",
+    "What happens after I call?",
+    "Where do I go for a medical exam?"
+  ],
+  "chipsSourceHash": "7f98b5f7cf879a62"
 }

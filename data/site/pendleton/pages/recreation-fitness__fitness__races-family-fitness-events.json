@@ -45,5 +45,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What races are coming up?",
+    "Can I bring my dog?",
+    "How do I register?",
+    "What's the entry fee?"
+  ],
+  "chipsSourceHash": "3304b91c4a73feae"
 }

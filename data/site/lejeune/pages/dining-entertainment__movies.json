@@ -106,5 +106,12 @@
   ],
   "notCaptured": "Dynamic movie showtimes calendar/listings (embedded event calendar), movie rotator carousel",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much does a movie ticket cost?",
+    "What's included in Package 1?",
+    "Can I rent a theater for my event?",
+    "What's the cancellation policy?"
+  ],
+  "chipsSourceHash": "bcc88be49d2df0f9"
 }

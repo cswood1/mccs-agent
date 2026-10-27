@@ -280,5 +280,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/shopping/uniform-clothing-services",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What time does Pacific Views open?",
+    "Do you have maternity uniforms?",
+    "Which location is open on Sunday?",
+    "Can I get dress blues here?"
+  ],
+  "chipsSourceHash": "2f9ec0a018f36fd4"
 }

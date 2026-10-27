@@ -129,5 +129,12 @@
   "images": [],
   "notCaptured": "Embedded training video and the installation help-guide PDFs not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/connected",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I set up a contact form?",
+    "What if someone doesn't want calls?",
+    "Should I text before calling?",
+    "Where do I find upcoming events?"
+  ],
+  "chipsSourceHash": "81cd9cf1568e4a5c"
 }

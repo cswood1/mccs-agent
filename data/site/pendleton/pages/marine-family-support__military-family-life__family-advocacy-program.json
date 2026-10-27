@@ -253,5 +253,11 @@
   "images": [],
   "notCaptured": "Upcoming event cards are a dynamic list; dates not captured.",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How do I sign up for classes?",
+    "When is FAP closed on Nov 19?",
+    "Do you have parenting classes?"
+  ],
+  "chipsSourceHash": "b75fab23a87bf2b0"
 }

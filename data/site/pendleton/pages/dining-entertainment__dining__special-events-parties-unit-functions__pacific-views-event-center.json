@@ -69,5 +69,12 @@
   "images": [],
   "notCaptured": "Planner's Guide (PDF).",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When is Pacific Views closed?",
+    "What's the address and phone?",
+    "Can I host my event there?",
+    "What dining options are available?"
+  ],
+  "chipsSourceHash": "0b9d38846d068379"
 }

@@ -126,5 +126,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/chaplains-religious-enrichment-development-operation",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What does CREDO MCIWEST cost?",
+    "Who can go to these retreats?",
+    "How do I sign up for a retreat?",
+    "What's included in the cost?"
+  ],
+  "chipsSourceHash": "4ff91fa0e1bdeb95"
 }

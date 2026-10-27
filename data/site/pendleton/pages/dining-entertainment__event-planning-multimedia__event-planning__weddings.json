@@ -58,5 +58,12 @@
   ],
   "notCaptured": "",
   "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/weddings",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What venues do you have?",
+    "Can I get married on the beach?",
+    "How much does a wedding cost?",
+    "How do I book a venue?"
+  ],
+  "chipsSourceHash": "9ed94cf3764f33f4"
 }

@@ -102,5 +102,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-family-life-counselors",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What issues can MFLCs help with?",
+    "Is MFLC counseling free?",
+    "How do I contact an MFLC?",
+    "Can I meet after work hours?"
+  ],
+  "chipsSourceHash": "d7b37a5cd1d8ce44"
 }

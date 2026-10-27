@@ -99,5 +99,12 @@
   ],
   "notCaptured": "Related stories cards captured as links only",
   "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "How much are swim lessons?",
+    "What's S3T training?",
+    "When's lap swim at 13 Area?",
+    "Can my unit book the pool?"
+  ],
+  "chipsSourceHash": "e98bf98bb6c4a008"
 }

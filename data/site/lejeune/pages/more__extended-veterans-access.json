@@ -62,5 +62,12 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/more/extended-veterans-access",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Can I use the fitness center?",
+    "What can I buy at the exchange?",
+    "Where can I bowl?",
+    "Can I go to the pool?"
+  ],
+  "chipsSourceHash": "13fe10a1556e374a"
 }

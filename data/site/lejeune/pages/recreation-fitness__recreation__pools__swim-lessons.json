@@ -128,5 +128,12 @@
   "images": [],
   "notCaptured": "Online registration widget / class schedule not captured; Group Swim Levels & Descriptions page not fetched (two levels deep).",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools/swim-lessons",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "What's the cancellation policy?",
+    "Do I need base access?",
+    "How do I request a refund?",
+    "Which pool has swim lessons?"
+  ],
+  "chipsSourceHash": "b5bec4400b1ebe5c"
 }

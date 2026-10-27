@@ -77,5 +77,11 @@
   "images": [],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/impulse-smoothies",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is Impulse Smoothies located?",
+    "What are the Saturday hours?",
+    "What's the phone number?"
+  ],
+  "chipsSourceHash": "fa394637a14eac46"
 }

@@ -191,5 +191,10 @@
   ],
   "notCaptured": "",
   "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "Where is the kayaking location?",
+    "Can I rent the bounce house?"
+  ],
+  "chipsSourceHash": "4d33161642a7c2eb"
 }

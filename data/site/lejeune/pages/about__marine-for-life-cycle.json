@@ -44,5 +44,12 @@
   "images": [],
   "notCaptured": "Page is too long for a single fetch: the Mobilization / Demobilization, A Major Life Event, Transition, and Veteran checklists (tabs 6-9) were not captured, and the PCS checklist may be cut short. Linked PDFs not captured.",
   "url": "https://lejeunenewriver.usmc-mccs.org/about/marine-for-life-cycle",
-  "fetchedAt": "2026-10-27"
+  "fetchedAt": "2026-10-27",
+  "chips": [
+    "When do I need to attend PRS?",
+    "How do I update my address?",
+    "What's the Single Marine Program?",
+    "Who helps with education options?"
+  ],
+  "chipsSourceHash": "2aa3f8e50cd3dbcd"
 }
