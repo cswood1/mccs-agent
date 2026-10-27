@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Ubuntu:wght@400;500;700&family=Black+Ops+One&display=swap"
         />
         {stylesheets.map((href) => (
           <link key={href} rel="stylesheet" href={href} />

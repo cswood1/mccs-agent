@@ -49,7 +49,8 @@ deployed on Vercel for demos.
   pages). Side nav comes from the MENU drawer markup. Unknown paths render a "not part of the demo" page
   linking to the real one. Photos are hotlinked from the real site (they load in a normal browser),
   with a neutral placeholder fallback (`<Photo>` and `app/(site)/site-enhancements.tsx`).
-- **Safeguards.** Yellow "Prototype demo — not the official MCCS site" banner on every page, footer's
+- **Safeguards.** Yellow "NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo" banner on every page
+  (Black Ops One, all caps; short version under 640px), footer's
   "Official U.S. Marine Corps Website" line replaced, noindex (meta tag, X-Robots-Tag header,
   robots.txt).
 - **Access code.** `proxy.ts` gates every page and API route when `DEMO_ACCESS_CODE` is set (unset =

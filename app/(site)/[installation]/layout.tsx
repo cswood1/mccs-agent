@@ -28,10 +28,8 @@ export default async function InstallationLayout({ children, params }: LayoutPro
   return (
     <>
       <div className="demo-banner" role="note">
-        Prototype demo — not the official MCCS site.{" "}
-        <a href={site.siteUrl} rel="noopener">
-          Go to the real site
-        </a>
+        <span className="demo-banner-full">NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo</span>
+        <span className="demo-banner-short">NPS SI Hackathon · Team 2 · Prototype Demo</span>
       </div>
       <div className="dialog-off-canvas-main-canvas">
         <div id="page-wrapper">

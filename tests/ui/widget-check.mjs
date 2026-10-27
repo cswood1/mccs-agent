@@ -156,7 +156,7 @@ const body = (await p4.locator("main").textContent()) ?? "";
 check("Pendleton shows the coming-soon page", /Camp Pendleton is coming soon in this demo/.test(body), body.slice(0, 120));
 const pickerLabel = (await p4.locator("button.btn-modal span.text-uppercase").last().textContent())?.trim();
 check("Picker button shows the current installation", pickerLabel === "Camp Pendleton", pickerLabel);
-check("Banner links to the Pendleton site", (await p4.locator(".demo-banner a").getAttribute("href")) === "https://pendleton.usmc-mccs.org/");
+check("Demo banner on every installation, no link", (await p4.locator(".demo-banner .demo-banner-full").textContent()) === "NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo" && (await p4.locator(".demo-banner a").count()) === 0);
 await p4.locator("#mccs-assistant button.launcher").click();
 await p4.waitForTimeout(500);
 const pSub = await p4.locator("#mccs-assistant .subtitle").textContent();
