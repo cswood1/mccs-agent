@@ -34,6 +34,11 @@
   var currentPath = (location.pathname.replace(/\/+$/, "") || "/");
   var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
 
+  // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
+  var EXAMPLES = ["Gym open now?", "Child care options?", "This weekend?", "Lunch on base?", "Book lodging?"];
+  var searchIndex = null;
+  var search = { input: null, listbox: null, sheet: null, options: [], active: -1 };
+
   var state = {
     open: false,
     busy: false,
@@ -79,7 +84,6 @@
 
   var launcher = root.querySelector(".launcher");
   var panel = root.querySelector(".panel");
-  var titleEl = root.querySelector("#title");
   var subtitleEl = root.querySelector(".subtitle");
   var contextEl = root.querySelector(".context-line");
   var sampleBanner = root.querySelector(".sample-banner");
@@ -120,6 +124,7 @@
   document.body.appendChild(host);
   fetchConfig();
   fetchPage();
+  enhanceHeaderSearch();
   // Reopen after navigating to another page if the chat was open.
   if (loadOpen()) setOpen(true, true);
 
@@ -174,6 +179,339 @@
     var viewing = page && page.known && !isHome();
     contextEl.hidden = !viewing;
     contextEl.textContent = viewing ? "Viewing: " + page.title : "";
+  }
+
+  // ---------- header search bar becomes Ask MCCS (docs/PRODUCT.md §13) ----------
+  // The site's own search box (same CMS theme on every MCCS site) turns into a second entry point
+  // to the same assistant and conversation: page chips on focus; while typing, an "Ask MCCS" row
+  // plus instant matches from captured page titles and breadcrumbs (no AI calls). The dropdown
+  // lives in the page's own DOM so combobox ARIA references work.
+
+  function enhanceHeaderSearch() {
+    if (script.getAttribute("data-header-search") === "0") return;
+    var desktopInput = document.getElementById("main-search-input");
+    var mobileTrigger = document.querySelector(".mobile-search-trigger");
+    if (!desktopInput && !mobileTrigger) return;
+    injectSearchStyles();
+
+    var listbox = document.createElement("div");
+    listbox.id = "mccs-ask-listbox";
+    listbox.setAttribute("role", "listbox");
+    listbox.setAttribute("aria-label", "Ask MCCS suggestions");
+    listbox.hidden = true;
+    document.body.appendChild(listbox);
+    search.listbox = listbox;
+
+    if (desktopInput) {
+      desktopInput.removeAttribute("readonly");
+      desktopInput.removeAttribute("data-bs-toggle");
+      desktopInput.removeAttribute("data-bs-target");
+      desktopInput.style.cursor = "";
+      var magnifier = desktopInput.parentNode.querySelector("svg.bi-search");
+      if (magnifier) magnifier.outerHTML = lightSparkle("mccs-ask-icon position-absolute top-50 end-0 translate-middle-y me-3", "#ffc72c", 18);
+      setupCombobox(desktopInput);
+      rotatePlaceholder(desktopInput);
+    }
+
+    if (mobileTrigger) {
+      mobileTrigger.removeAttribute("data-bs-toggle");
+      mobileTrigger.removeAttribute("data-bs-target");
+      mobileTrigger.setAttribute("aria-label", "Ask MCCS");
+      var micon = mobileTrigger.querySelector("svg");
+      if (micon) micon.outerHTML = lightSparkle("mccs-ask-icon", "#ffc72c", 24);
+      search.sheet = createSheet();
+      mobileTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openSheet();
+      }, true);
+    }
+
+    // Cmd/Ctrl+K, as the real site's badge suggests.
+    document.addEventListener("keydown", function (e) {
+      if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) {
+        e.preventDefault();
+        if (desktopInput && desktopInput.offsetParent !== null) desktopInput.focus();
+        else if (search.sheet) openSheet();
+      }
+    });
+    window.addEventListener("resize", positionListbox);
+    window.addEventListener("scroll", positionListbox, true);
+  }
+
+  function lightSparkle(cls, color, size) {
+    return '<svg class="' + cls + '" viewBox="0 0 24 24" width="' + size + '" height="' + size + '" aria-hidden="true" focusable="false" style="pointer-events: none; fill: ' + color + ';">' +
+      '<path d="M12 2.5c.7 5.2 4.3 8.8 9.5 9.5-5.2.7-8.8 4.3-9.5 9.5-.7-5.2-4.3-8.8-9.5-9.5 5.2-.7 8.8-4.3 9.5-9.5z"/></svg>';
+  }
+
+  function rotatePlaceholder(input) {
+    var i = 0;
+    // Short enough to fit the box; boxes under 440px (the header bar, phones) drop "anything".
+    var set = function () {
+      var lead = input.clientWidth && input.clientWidth < 440 ? "Ask MCCS, like ‘" : "Ask MCCS anything, like ‘";
+      input.placeholder = lead + EXAMPLES[i % EXAMPLES.length] + "’";
+    };
+    set();
+    // Rotating text is motion too: keep it still for people who ask for reduced motion.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setInterval(function () {
+      if (document.activeElement === input || input.value) return;
+      i++;
+      set();
+    }, 4000);
+  }
+
+  function setupCombobox(input) {
+    input.setAttribute("role", "combobox");
+    input.setAttribute("aria-autocomplete", "list");
+    input.setAttribute("aria-haspopup", "listbox");
+    input.setAttribute("aria-expanded", "false");
+    input.setAttribute("aria-controls", search.listbox.id);
+    input.setAttribute("aria-label", "Ask MCCS or find a page");
+    input.setAttribute("autocomplete", "off");
+    input.addEventListener("focus", function () {
+      search.input = input;
+      loadSearchIndex();
+      buildOptions();
+    });
+    input.addEventListener("input", buildOptions);
+    input.addEventListener("blur", function () {
+      // Option clicks keep focus (mousedown is cancelled), so a blur means leaving the box.
+      setTimeout(function () { if (document.activeElement !== input) closeListbox(); }, 0);
+    });
+    input.addEventListener("keydown", function (e) {
+      var n = search.options.length;
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (search.listbox.hidden) buildOptions();
+        if (!n) return;
+        search.active = e.key === "ArrowDown" ? (search.active + 1) % n : (search.active <= 0 ? n - 1 : search.active - 1);
+        renderListbox();
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (search.active >= 0 && search.options[search.active]) choose(search.options[search.active]);
+        else if (input.value.trim()) choose({ type: "ask", text: input.value.trim() });
+      } else if (e.key === "Escape") {
+        if (!search.listbox.hidden) {
+          e.preventDefault();
+          closeListbox();
+        } else if (search.sheet && !search.sheet.hidden) {
+          closeSheet();
+        } else {
+          input.blur();
+        }
+      } else if (e.key === "Tab") {
+        closeListbox();
+      }
+    });
+  }
+
+  function loadSearchIndex() {
+    if (searchIndex) return;
+    searchIndex = loadJSON(storageKey + ":pages", null);
+    if (searchIndex) return;
+    searchIndex = [];
+    fetch(apiBase + "/api/installations/" + encodeURIComponent(installationId) + "/pages", { headers: apiHeaders })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !Array.isArray(d.pages)) return;
+        searchIndex = d.pages;
+        try { sessionStorage.setItem(storageKey + ":pages", JSON.stringify(d.pages)); } catch { /* ignore */ }
+        if (search.input && document.activeElement === search.input) buildOptions();
+      })
+      .catch(function () { /* page matches just won't show */ });
+  }
+
+  /** Up to 5 captured pages whose title (best) or breadcrumb matches every word typed. */
+  function pageMatches(q) {
+    var words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!words.length || !searchIndex) return [];
+    var kindPenalty = { page: 0, event: 0.5, story: 1 };
+    return searchIndex
+      .map(function (p) {
+        var title = p.title.toLowerCase();
+        var all = title + " " + (p.breadcrumb || []).join(" ").toLowerCase();
+        var score = 0;
+        if (words.every(function (w) { return title.indexOf(w) >= 0; })) score = title.indexOf(words[0]) === 0 ? 4 : 3;
+        else if (words.every(function (w) { return all.indexOf(w) >= 0; })) score = 1.5;
+        return { p: p, score: score ? score - (kindPenalty[p.kind] || 0) : 0 };
+      })
+      .filter(function (x) { return x.score > 0; })
+      .sort(function (a, b) { return b.score - a.score || a.p.title.length - b.p.title.length; })
+      .slice(0, 5)
+      .map(function (x) { return x.p; });
+  }
+
+  function localPagePath(path) {
+    return demoHost && pathPrefix ? pathPrefix + (path === "/" ? "" : path) : path;
+  }
+
+  function buildOptions() {
+    var q = search.input ? search.input.value.trim() : "";
+    var opts = [];
+    if (!q) {
+      var chips = (state.page && state.page.chips) || (state.config && state.config.defaultChips) || [];
+      chips.slice(0, 4).forEach(function (c) { opts.push({ type: "ask", text: c, label: c, chip: true }); });
+    } else {
+      opts.push({ type: "ask", text: q, label: "Ask MCCS: ‘" + q + "’" });
+      pageMatches(q).forEach(function (p) {
+        opts.push({ type: "page", href: localPagePath(p.path), title: p.title, crumb: (p.breadcrumb || []).join(" › "), kind: p.kind });
+      });
+    }
+    search.options = opts;
+    search.active = q ? 0 : -1; // with text, Enter asks by default
+    renderListbox();
+  }
+
+  function renderListbox() {
+    var lb = search.listbox;
+    lb.innerHTML = "";
+    if (!search.options.length) return closeListbox();
+    if (search.options[0].chip) {
+      var heading = document.createElement("div");
+      heading.className = "mccs-ask-heading";
+      heading.setAttribute("role", "presentation");
+      heading.textContent = "Suggested for this page";
+      lb.appendChild(heading);
+    }
+    search.options.forEach(function (o, i) {
+      var el = document.createElement("div");
+      el.id = "mccs-ask-opt-" + i;
+      el.setAttribute("role", "option");
+      el.setAttribute("aria-selected", String(i === search.active));
+      el.className = "mccs-ask-option mccs-ask-" + o.type;
+      if (o.type === "ask") {
+        el.innerHTML = lightSparkle("mccs-ask-sparkle", "#9e1b32", 16);
+        var t = document.createElement("span");
+        t.textContent = o.label;
+        el.appendChild(t);
+      } else {
+        var body = document.createElement("span");
+        body.className = "mccs-ask-page";
+        var title = document.createElement("span");
+        title.className = "mccs-ask-title";
+        title.textContent = o.title;
+        body.appendChild(title);
+        if (o.crumb || o.kind !== "page") {
+          var crumb = document.createElement("span");
+          crumb.className = "mccs-ask-crumb";
+          crumb.textContent = [o.crumb, o.kind === "story" ? "Story" : o.kind === "event" ? "Event" : ""].filter(Boolean).join(" · ");
+          body.appendChild(crumb);
+        }
+        el.appendChild(body);
+      }
+      el.addEventListener("mousedown", function (e) { e.preventDefault(); });
+      el.addEventListener("click", function () { choose(o); });
+      lb.appendChild(el);
+    });
+    lb.hidden = false;
+    search.input.setAttribute("aria-expanded", "true");
+    if (search.active >= 0) search.input.setAttribute("aria-activedescendant", "mccs-ask-opt-" + search.active);
+    else search.input.removeAttribute("aria-activedescendant");
+    positionListbox();
+  }
+
+  function positionListbox() {
+    if (!search.input || search.listbox.hidden) return;
+    var r = search.input.getBoundingClientRect();
+    var width = Math.min(Math.max(r.width, 360), window.innerWidth - 16);
+    var left = Math.min(Math.max(8, r.left), window.innerWidth - width - 8);
+    search.listbox.style.top = r.bottom + 6 + "px";
+    search.listbox.style.left = left + "px";
+    search.listbox.style.width = width + "px";
+  }
+
+  function closeListbox() {
+    search.listbox.hidden = true;
+    search.active = -1;
+    if (search.input) {
+      search.input.setAttribute("aria-expanded", "false");
+      search.input.removeAttribute("aria-activedescendant");
+    }
+  }
+
+  function choose(o) {
+    closeListbox();
+    if (o.type === "page") {
+      location.href = o.href;
+      return;
+    }
+    // Same panel and conversation as the floating button, with the question already sent.
+    var input = search.input;
+    if (input) {
+      input.value = "";
+      input.blur();
+    }
+    closeSheet();
+    setOpen(true);
+    send(o.text);
+  }
+
+  // Phones (and narrow screens): the header's search icon opens a search sheet at the top.
+  function createSheet() {
+    var sheet = document.createElement("div");
+    sheet.id = "mccs-ask-sheet";
+    sheet.setAttribute("role", "dialog");
+    sheet.setAttribute("aria-label", "Ask MCCS");
+    sheet.hidden = true;
+    sheet.innerHTML =
+      '<div class="mccs-ask-sheet-bar">' +
+        lightSparkle("mccs-ask-sheet-sparkle", "#ffc72c", 20) +
+        '<input id="mccs-ask-sheet-input" type="search" enterkeyhint="search">' +
+        '<button type="button" class="mccs-ask-sheet-close" aria-label="Close">' + icon("close") + "</button>" +
+      "</div>";
+    document.body.appendChild(sheet);
+    var input = sheet.querySelector("input");
+    setupCombobox(input);
+    rotatePlaceholder(input);
+    sheet.querySelector(".mccs-ask-sheet-close").addEventListener("click", closeSheet);
+    return sheet;
+  }
+
+  function openSheet() {
+    if (!search.sheet) return;
+    search.sheet.hidden = false;
+    var input = search.sheet.querySelector("input");
+    if (!input.value) input.placeholder = "Ask MCCS, like ‘" + EXAMPLES[0] + "’";
+    input.focus();
+  }
+
+  function closeSheet() {
+    if (search.sheet && !search.sheet.hidden) {
+      search.sheet.hidden = true;
+      closeListbox();
+    }
+  }
+
+  function injectSearchStyles() {
+    if (document.getElementById("mccs-ask-style")) return;
+    var st = document.createElement("style");
+    st.id = "mccs-ask-style";
+    st.textContent = [
+      "#main-search-input[role=combobox] { cursor: text; padding-right: 2.6rem; text-overflow: ellipsis; }",
+      "#mccs-ask-listbox { position: fixed; z-index: 2147482990; box-sizing: border-box; max-height: min(70vh, 460px); overflow-y: auto; padding: 6px;",
+      "  background: #fff; color: #212529; border: 1px solid #dee2e6; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.2);",
+      "  font: 15px/1.35 'Noto Sans', system-ui, -apple-system, sans-serif; text-align: left; }",
+      "#mccs-ask-listbox[hidden], #mccs-ask-sheet[hidden] { display: none !important; }",
+      "#mccs-ask-listbox .mccs-ask-heading { padding: 6px 10px 4px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6c757d; }",
+      "#mccs-ask-listbox .mccs-ask-option { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; cursor: pointer; }",
+      "#mccs-ask-listbox .mccs-ask-option:hover, #mccs-ask-listbox .mccs-ask-option[aria-selected=true] { background: #f1f3f5; }",
+      "#mccs-ask-listbox .mccs-ask-ask { color: #9e1b32; font-weight: 600; }",
+      "#mccs-ask-listbox .mccs-ask-sparkle { flex: none; }",
+      "#mccs-ask-listbox .mccs-ask-page { display: flex; flex-direction: column; min-width: 0; padding-left: 26px; }",
+      "#mccs-ask-listbox .mccs-ask-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }",
+      "#mccs-ask-listbox .mccs-ask-crumb { font-size: 12px; color: #6c757d; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }",
+      "#mccs-ask-sheet { position: fixed; z-index: 2147482995; top: 0; left: 0; right: 0; padding: 10px 12px; padding-top: max(10px, env(safe-area-inset-top));",
+      "  background: #0C2340; box-shadow: 0 6px 20px rgba(0,0,0,.3); }",
+      "#mccs-ask-sheet .mccs-ask-sheet-bar { display: flex; align-items: center; gap: 10px; }",
+      "#mccs-ask-sheet input { flex: 1; min-width: 0; height: 44px; padding: 0 14px; border: 1px solid rgba(255,255,255,.35); border-radius: 8px;",
+      "  background: rgba(255,255,255,.12); color: #fff; font: 16px 'Noto Sans', system-ui, sans-serif; outline: none; }",
+      "#mccs-ask-sheet input::placeholder { color: rgba(255,255,255,.75); }",
+      "#mccs-ask-sheet input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }",
+      "#mccs-ask-sheet input:focus { border-color: #ffc72c; }",
+      "#mccs-ask-sheet .mccs-ask-sheet-close { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: none; color: #fff; cursor: pointer; }",
+    ].join("\n");
+    document.head.appendChild(st);
   }
 
   // ---------- page trail (last 5 pages this session; sent with each question, never shown) ----------

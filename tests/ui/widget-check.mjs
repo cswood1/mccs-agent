@@ -167,6 +167,89 @@ check("Deep Pendleton paths show coming soon too", deepComing.ok() && /coming so
 await p4.goto(base + "/albany", { waitUntil: "networkidle" });
 check("Installations without a config: coming soon, no widget", /Albany is coming soon/.test((await p4.locator("main").textContent()) ?? "") && (await p4.locator("#mccs-assistant").count()) === 0);
 
+// 9. Header search bar becomes Ask MCCS (docs/PRODUCT.md §13).
+const sCtx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+await sCtx.addCookies(await ctx.cookies());
+await sCtx.route(/usmc-mccs\.org/, (r) => r.abort());
+await sCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+const searchBodies = [];
+await sCtx.route("**/api/chat", async (r) => {
+  searchBodies.push(r.request().postDataJSON());
+  await r.fulfill({ status: 200, contentType: "text/plain", body: "Stub answer." });
+});
+const sp = await sCtx.newPage();
+sp.on("pageerror", (e) => errors.push(e.message));
+await sp.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
+await sp.waitForFunction(() => document.querySelector("#mccs-assistant")?.shadowRoot?.querySelector(".context-line")?.textContent?.startsWith("Viewing"));
+const sInput = sp.locator("#main-search-input");
+const attrs = await sInput.evaluate((el) => ({
+  readonly: el.hasAttribute("readonly"), role: el.getAttribute("role"), controls: el.getAttribute("aria-controls"),
+  expanded: el.getAttribute("aria-expanded"), placeholder: el.getAttribute("placeholder"),
+}));
+check("Search box is an editable combobox", !attrs.readonly && attrs.role === "combobox" && attrs.controls === "mccs-ask-listbox" && attrs.expanded === "false", JSON.stringify(attrs));
+check("Sparkle replaces the magnifier", (await sp.locator("#desktop-search-container svg.mccs-ask-icon").count()) === 1 && (await sp.locator("#desktop-search-container svg.bi-search").count()) === 0);
+check("Rotating example placeholder", /^Ask MCCS( anything)?, like ‘.+’$/.test(attrs.placeholder ?? ""), attrs.placeholder);
+await sInput.focus();
+const lb = sp.locator("#mccs-ask-listbox");
+await lb.waitFor({ state: "visible" });
+const focusOpts = await lb.locator("[role=option]").allTextContents();
+const bowlingChips = (await (await sp.request.get(base + "/api/installations/quantico/page?path=/recreation-fitness/recreation/indoor-recreation/bowling")).json()).chips;
+check("On focus: this page's chips", JSON.stringify(focusOpts) === JSON.stringify(bowlingChips), JSON.stringify(focusOpts));
+check("Combobox expanded on focus", (await sInput.getAttribute("aria-expanded")) === "true");
+await sInput.fill("bowling");
+await sp.waitForTimeout(200);
+const typed = await lb.locator("[role=option]").allTextContents();
+check("Typing: first row is the Ask row", typed[0] === "Ask MCCS: ‘bowling’", typed[0]);
+check("Typing: up to 5 page matches after it", typed.length >= 2 && typed.length <= 6 && /^Bowling/.test(typed[1] ?? ""), JSON.stringify(typed));
+check("Ask row selected by default", (await sInput.getAttribute("aria-activedescendant")) === "mccs-ask-opt-0");
+await sInput.press("ArrowDown");
+check("Arrow keys move the selection", (await sInput.getAttribute("aria-activedescendant")) === "mccs-ask-opt-1" && (await lb.locator("#mccs-ask-opt-1").getAttribute("aria-selected")) === "true");
+await sInput.press("Escape");
+check("Escape closes the dropdown", !(await lb.isVisible()) && (await sInput.getAttribute("aria-expanded")) === "false");
+// Page row navigates in the same tab.
+await sp.goto(base + "/quantico", { waitUntil: "networkidle" });
+await sp.locator("#main-search-input").fill("bowling");
+await sp.locator("#mccs-ask-listbox [role=option]", { hasText: /^Bowling/ }).first().click();
+await sp.waitForURL(/\/quantico\/recreation-fitness\/recreation\/indoor-recreation\/bowling$/);
+check("Page row navigates in the same tab", true);
+// Enter asks: same panel and conversation, question already sent.
+await sp.locator("#main-search-input").fill("Is the lane open late on Friday?");
+await sp.locator("#main-search-input").press("Enter");
+await sp.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
+check("Enter opens the panel with the question sent", (await sp.locator("#mccs-assistant .panel").isVisible()) && (await sp.locator("#mccs-assistant .msg.user").last().textContent()) === "Is the lane open late on Friday?");
+check("Asked with this page as context", searchBodies.at(-1)?.page?.path === "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", JSON.stringify(searchBodies.at(-1)?.page));
+check("Search box cleared after asking", (await sp.locator("#main-search-input").inputValue()) === "");
+check("Old search modal never opens", (await sp.locator("#searchModal.show").count()) === 0);
+await sp.locator("#mccs-assistant .close").click();
+await sp.keyboard.press(process.platform === "darwin" ? "Meta+k" : "Control+k");
+check("Cmd/Ctrl+K focuses the search box", await sp.locator("#main-search-input").evaluate((el) => document.activeElement === el));
+// The floating button shows the same conversation.
+await sp.locator("#mccs-assistant button.launcher").click();
+check("Floating button opens the same conversation", (await sp.locator("#mccs-assistant .msg.user").count()) >= 1);
+
+// Phones: the header search icon becomes the sparkle and opens the same experience.
+const phCtx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+await phCtx.addCookies(await ctx.cookies());
+await phCtx.route(/usmc-mccs\.org/, (r) => r.abort());
+await phCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+await phCtx.route("**/api/chat", (r) => r.fulfill({ status: 200, contentType: "text/plain", body: "Stub answer." }));
+const ph = await phCtx.newPage();
+ph.on("pageerror", (e) => errors.push(e.message));
+await ph.goto(base + "/quantico", { waitUntil: "networkidle" });
+const trigger = ph.locator("button.mobile-search-trigger");
+check("Phone: search icon is the sparkle", (await trigger.locator("svg.mccs-ask-icon").count()) === 1 && (await trigger.getAttribute("aria-label")) === "Ask MCCS");
+await trigger.click();
+const sheetInput = ph.locator("#mccs-ask-sheet-input");
+check("Phone: opens the Ask MCCS search", (await ph.locator("#mccs-ask-sheet").isVisible()) && (await sheetInput.evaluate((el) => document.activeElement === el)));
+await sheetInput.fill("bowling");
+await ph.waitForTimeout(200);
+const phoneOpts = await ph.locator("#mccs-ask-listbox [role=option]").allTextContents();
+check("Phone: Ask row and page matches", phoneOpts[0] === "Ask MCCS: ‘bowling’" && phoneOpts.length >= 2, JSON.stringify(phoneOpts));
+await sheetInput.press("Enter");
+await ph.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
+check("Phone: Enter asks in the panel", (await ph.locator("#mccs-assistant .panel").isVisible()) && !(await ph.locator("#mccs-ask-sheet").isVisible()));
+check("Phone: old search modal never opens", (await ph.locator("#searchModal.show").count()) === 0);
+
 // Reduced motion: no shimmer.
 const rmCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
 await rmCtx.addCookies(await ctx.cookies());

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- plain links, like the real site */
 import type { Metadata } from "next";
 import { allPagePaths, hasSiteContent, installationHref, loadPage, siteOrigin } from "@/lib/site/data";
 import {

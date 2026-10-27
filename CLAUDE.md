@@ -125,6 +125,16 @@ disagrees with it, ask before changing either.
 - **Tests:** `npm run test:ui` runs 22 browser checks against stubbed APIs (no Claude calls).
   The eval has 33 questions; 8 are page-dependent (`page`, optional `trail`) and scored "context".
 
+## Header search: Ask MCCS (docs/PRODUCT.md §13, 2026-10-27)
+- The widget enhances the site's own search box (`#main-search-input`, same CMS theme on every MCCS
+  site; opt out with `data-header-search="0"`): sparkle instead of the magnifier, rotating example
+  placeholder, combobox dropdown in the page's own DOM (`#mccs-ask-listbox`) so ARIA references work.
+- Focus: the page's chips. Typing: "✦ Ask MCCS: '<query>'" first, then up to 5 instant page matches
+  from `GET /api/installations/:id/pages` (titles and breadcrumbs, cached in sessionStorage; no AI
+  calls). Enter / the Ask row opens the same panel and conversation with the question sent; page rows
+  navigate in the same tab. Cmd/Ctrl+K focuses it. Phones: the header search icon becomes the sparkle
+  and opens a search sheet (`#mccs-ask-sheet`) with the same behavior.
+
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
   differs from older versions — see `AGENTS.md` and `node_modules/next/dist/docs/`. Middleware is

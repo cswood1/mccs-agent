@@ -7,8 +7,8 @@ const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAA
 
 /**
  * Small behaviors the real site gets from its own scripts (which we don't copy):
- * photo fallback, the Important Links scroll arrows, side-nav expanders, and the search box (which opens
- * the assistant, since we have no search index).
+ * photo fallback, the Important Links scroll arrows, and side-nav expanders. (The header search box
+ * is enhanced by the widget.)
  */
 export default function SiteEnhancements() {
   useEffect(() => {
@@ -62,11 +62,7 @@ export default function SiteEnhancements() {
           toggle.setAttribute("aria-expanded", String(open));
         }
       }
-      if (t.closest("#main-search-input, .mobile-search-trigger")) {
-        e.preventDefault();
-        e.stopPropagation();
-        (window as unknown as { mccsAssistant?: { open: () => void } }).mccsAssistant?.open();
-      }
+      // The header search box is handled by the widget (Ask MCCS search, docs/PRODUCT.md §13).
     };
     document.addEventListener("click", onClick, true);
 

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-html-link-for-pages -- plain links give full page loads, like the real site */
 import { installationHref, localHref, pagesUnder, siteInstallation, siteOrigin, type SitePage } from "@/lib/site/data";
 import { renderMarkdown, renderInline } from "@/lib/site/markdown";
 import { isWithin, sectionFor, type NavItem } from "@/lib/site/nav";
