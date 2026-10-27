@@ -479,5 +479,58 @@
    "since you('re| are) on"
   ],
   "maxWords": 120
+ },
+ {
+  "id": "xbase-pcs-pendleton",
+  "topic": "Cross-installation",
+  "persona": "PCSing Marine",
+  "installation": "quantico",
+  "page": "/",
+  "question": "I'm PCSing to Pendleton next month, what should I set up?",
+  "mustInclude": [
+   "Pendleton"
+  ],
+  "mustNotInclude": [
+   "quantico\\.usmc-mccs\\.org"
+  ],
+  "linkTo": [
+   "pendleton.usmc-mccs.org"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "xbase-pendleton-lejeune-childcare",
+  "topic": "Cross-installation",
+  "persona": "Spouse / parent",
+  "installation": "pendleton",
+  "page": "/",
+  "question": "We're moving to Camp Lejeune this summer. How do we get child care there?",
+  "mustInclude": [
+   "MilitaryChildCare|Child Development"
+  ],
+  "mustNotInclude": [
+   "pendleton\\.usmc-mccs\\.org"
+  ],
+  "linkTo": [
+   "lejeunenewriver.usmc-mccs.org"
+  ],
+  "maxWords": 120
+ },
+ {
+  "id": "xbase-lejeune-quantico-lodging",
+  "topic": "Cross-installation",
+  "persona": "TAD Marine",
+  "installation": "lejeune",
+  "page": "/",
+  "question": "I have TAD orders to Quantico next week. Where can I stay on base there?",
+  "mustInclude": [
+   "Inns of the Corps|Liversedge|C Suites"
+  ],
+  "mustNotInclude": [
+   "lejeunenewriver\\.usmc-mccs\\.org"
+  ],
+  "linkTo": [
+   "quantico.usmc-mccs.org/lodging"
+  ]
  }
 ]

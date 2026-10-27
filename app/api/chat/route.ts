@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { corsHeaders, preflight } from "@/lib/cors";
 import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
+import { CROSS_BASE_TOOL, runCrossBaseTool } from "@/lib/crossbase";
 import { rateLimit } from "@/lib/ratelimit";
 import { buildContentBlock } from "@/lib/prompt";
 import { cleanClientText, pageInfo } from "@/lib/site/context";
@@ -14,7 +15,8 @@ const REPLY_REMINDER =
 const FRAME = "\u001e";
 
 const MAX_MESSAGES = 30;
-const MAX_CONTINUATIONS = 2;
+// Extra model calls per answer: server-tool pauses, plus our own tool (other installations' pages).
+const MAX_CONTINUATIONS = 4;
 const MAX_MESSAGE_CHARS = 4000;
 
 type PageRef = { url?: string; path?: string; title?: string; breadcrumb?: string[] };
@@ -88,7 +90,8 @@ export async function POST(request: Request) {
       const send = (text: string) => answer.push(text);
       let sentText = false;
       try {
-        // Server tools run in a server-side loop that can pause; resume a couple of times.
+        // Server tools run in a server-side loop that can pause; our cross-base tool runs here.
+        // Either way, continue with the result a few times at most.
         for (let attempt = 0; attempt < MAX_CONTINUATIONS + 1; attempt++) {
           const stream = client.beta.messages.stream(
             {
@@ -123,6 +126,20 @@ export async function POST(request: Request) {
           logTurn(installation.id, final);
           if (final.stop_reason === "pause_turn") {
             messages = [...messages, { role: "assistant", content: final.content }];
+            continue;
+          }
+          if (final.stop_reason === "tool_use") {
+            const results: Anthropic.Beta.BetaToolResultBlockParam[] = [];
+            for (const block of final.content) {
+              if (block.type !== "tool_use") continue;
+              const out =
+                block.name === CROSS_BASE_TOOL
+                  ? await runCrossBaseTool(installation.id, block.input)
+                  : { text: `Unknown tool ${block.name}.`, isError: true };
+              console.log(`[chat]   ${block.name} ${JSON.stringify(block.input)} -> ${out.isError ? "error" : `${out.text.length} chars`}`);
+              results.push({ type: "tool_result", tool_use_id: block.id, content: out.text, is_error: out.isError });
+            }
+            messages = [...messages, { role: "assistant", content: final.content }, { role: "user", content: results }];
             continue;
           }
           if (final.stop_reason === "refusal") {

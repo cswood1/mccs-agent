@@ -17,7 +17,7 @@ const check = (name, ok, detail = "") => results.push({ name, ok: !!ok, detail }
 
 const ANSWER =
   "Leatherneck Lanes opens at **1:00 pm** on Saturday. Call 703-784-2210, or stop by 2034 Barnett Ave, Quantico, VA 22134. " +
-  "For a place to stay, see [Lodging](https://quantico.usmc-mccs.org/lodging), or compare [Pendleton lodging](https://pendleton.usmc-mccs.org/lodging).";
+  "For a place to stay, see [Lodging](https://quantico.usmc-mccs.org/lodging), or compare [Pendleton lodging](https://pendleton.usmc-mccs.org/lodging) and [Lejeune lodging](https://lejeunenewriver.usmc-mccs.org/lodging).";
 const FOLLOWUPS = ["Lane prices?", "Party packages?"];
 
 const browser = await chromium.launch({ executablePath: CHROME });
@@ -82,6 +82,7 @@ check("Tap-to-call link", links.some((l) => l.href === "tel:7037842210"), JSON.s
 check("Map link for address", links.some((l) => /google\.com\/maps\/search/.test(l.href) && /2034%20Barnett/.test(l.href)), JSON.stringify(links.map((l) => l.href)));
 check("Site link stays in tab, under /quantico", links.some((l) => l.href === "/quantico/lodging" && !l.target), JSON.stringify(links));
 check("Other installation's link goes to its local path", links.some((l) => l.href === "/pendleton/lodging" && !l.target), JSON.stringify(links));
+check("Lejeune site links go to /lejeune (not the subdomain slug)", links.some((l) => l.href === "/lejeune/lodging" && !l.target), JSON.stringify(links));
 
 // 3. Follow the answer's site link: same tab, chat stays open with history, chips update to the new page.
 await w.locator(".msg.assistant a", { hasText: /^Lodging$/ }).click();

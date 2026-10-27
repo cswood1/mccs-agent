@@ -38,6 +38,8 @@
   // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
   // already signals Ask MCCS, so the questions stand on their own.
   // Header search placeholder: "Ask MCCS" stays, the rest of each suggestion types out.
+  // Demo app slugs that differ from the real subdomain (same map as scripts/extract-theme.mjs).
+  var SLUG_FOR_SUBDOMAIN = { lejeunenewriver: "lejeune" };
   var PLACEHOLDER_PREFIX = "Ask MCCS";
   var PLACEHOLDER_SUFFIXES = [
     " anything…",
@@ -964,7 +966,7 @@
     if (host === location.hostname.replace(/^www\./, "")) return path;
     // Demo app: <slug>.usmc-mccs.org/<path> -> /<slug>/<path>. (usmc-mccs.org itself is Corps-wide.)
     var m = /^([a-z0-9]+)\.usmc-mccs\.org$/.exec(host);
-    if (demoHost && m) return "/" + m[1] + (path === "/" ? "" : path);
+    if (demoHost && m) return "/" + (SLUG_FOR_SUBDOMAIN[m[1]] || m[1]) + (path === "/" ? "" : path);
     return null;
   }
 

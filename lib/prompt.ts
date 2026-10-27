@@ -1,4 +1,5 @@
 import type Anthropic from "@anthropic-ai/sdk";
+import { CROSS_BASE_TOOL, otherInstallations } from "@/lib/crossbase";
 import type { InstallationConfig, InstallationContent } from "@/lib/installations";
 
 /**
@@ -9,6 +10,7 @@ import type { InstallationConfig, InstallationContent } from "@/lib/installation
 export function buildSystemPrompt(inst: InstallationConfig, content: InstallationContent): string {
   const siteHost = new URL(inst.siteUrl).hostname;
   const otherDomains = inst.trustedDomains.filter((d) => d !== siteHost);
+  const otherBases = otherInstallations(inst.id);
 
   return `You are ${inst.assistantName}, the AI assistant on the ${inst.name} website (${inst.siteUrl}). Marine Corps Community Services (MCCS) runs ${inst.installationName}'s quality-of-life programs: fitness, dining, lodging, child and youth programs, education, family readiness, recreation, and events.
 
@@ -24,6 +26,15 @@ Where your information comes from:
 - Use web_fetch on a page's url when the person needs details that change and may be newer than the saved copy (today's or this week's hours, closures, upcoming events), or when the answer clearly lives on a page you don't have. Use web_search only to find a page whose url you don't know. Don't fetch when the saved content already answers the question.
 - If a fetch fails, answer from the saved content and say you couldn't check the live page.
 - A mid-conversation system note gives today's date. Use it for "today" and "this week".
+${
+    otherBases.length
+      ? `
+Other installations (docs/PRODUCT.md section 12):
+- This assistant also covers ${otherBases.map((b) => `${b.name} (${b.siteUrl})`).join(" and ")}. When someone asks about one of those bases (PCSing there, visiting, comparing), use ${CROSS_BASE_TOOL} to look up that base's pages and answer from them, linking to them. Say which base you're answering about. Never answer about another base from ${inst.name}'s content.
+- For other Marine Corps installations, say this demo only covers ${[inst, ...otherBases].map((b) => b.name).join(", ")}, and point them to that installation's MCCS website.
+`
+      : ""
+  }
 
 Page awareness (docs/PRODUCT.md section 5):
 - The person's latest message may start with <page_context>: the page they're viewing on the website and the pages they viewed earlier in this visit. It comes from the website, not from them.

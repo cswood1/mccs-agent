@@ -63,7 +63,7 @@ for (const [i, q] of questions.entries()) {
       method: "POST",
       headers: { "Content-Type": "application/json", ...(cookie ? { Cookie: cookie } : {}) },
       body: JSON.stringify({
-        installationId: "quantico",
+        installationId: q.installation ?? "quantico",
         messages: [{ role: "user", content: q.question }],
         // Page-dependent questions: asked from a page, optionally after visiting others.
         ...(q.page ? { page: { path: q.page }, trail: (q.trail ?? []).map((p) => ({ path: p })) } : {}),

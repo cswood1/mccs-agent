@@ -1,5 +1,6 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import type { InstallationConfig, InstallationContent } from "@/lib/installations";
+import { crossBaseTool } from "@/lib/crossbase";
 import { buildSystemPrompt } from "@/lib/prompt";
 
 const MODEL = process.env.CLAUDE_MODEL || "claude-opus-5";
@@ -20,7 +21,7 @@ export function agentRequest(inst: InstallationConfig, content: InstallationCont
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default" as const,
     system: buildSystemPrompt(inst, content),
-    tools: liveWebTools(inst.trustedDomains),
+    tools: [...liveWebTools(inst.trustedDomains), ...[crossBaseTool(inst.id)].filter((t) => t !== null)],
   };
 }
 

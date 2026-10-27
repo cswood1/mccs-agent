@@ -133,6 +133,16 @@ disagrees with it, ask before changing either.
 - **Tests:** `npm run test:ui` runs 22 browser checks against stubbed APIs (no Claude calls).
   The eval has 33 questions; 8 are page-dependent (`page`, optional `trail`) and scored "context".
 
+## Cross-installation questions (docs/PRODUCT.md §12, 2026-10-27)
+- Each conversation still caches only its own base's content. For another covered base
+  (`COVERED_INSTALLATIONS` in `lib/crossbase.ts`), the agent calls the `other_installation_pages` tool
+  (`installation`, `query`); the chat route runs it locally (keyword search over that base's
+  `data/content/<id>.json`, news excluded) and returns the top 4 pages, each capped at 3,500 chars.
+  The system prompt names the other covered bases. Answers cite the other base's real-site URLs; the
+  widget maps any `<sub>.usmc-mccs.org` link to `/<slug>/...` (with `lejeunenewriver` → `lejeune`).
+- Eval questions can set `installation` (default quantico); the three `xbase-*` questions cover
+  Quantico→Pendleton PCS, Pendleton→Lejeune child care, and Lejeune→Quantico lodging.
+
 ## Header search: Ask MCCS (docs/PRODUCT.md §13, 2026-10-27)
 - The widget enhances the site's own search box (`#main-search-input`, same CMS theme on every MCCS
   site; opt out with `data-header-search="0"`): sparkle instead of the magnifier, rotating example
