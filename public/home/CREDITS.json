@@ -1,0 +1,94 @@
+{
+  "note": "Photos from Wikimedia Commons, all U.S. government works in the public domain (PD-USGov templates). Resized to 1600px wide WebP.",
+  "photos": [
+    {
+      "file": "/home/hero-pendleton.webp",
+      "alt": "Snow-capped mountains above green hills at Marine Corps Base Camp Pendleton",
+      "title": "Camp Pendleton Snow 141231-M-DY697-115.jpg",
+      "author": "Sgt. Melissa Marnell",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military-Marines",
+      "date": "31 December 2014",
+      "source": "https://commons.wikimedia.org/wiki/File:Camp_Pendleton_Snow_141231-M-DY697-115.jpg",
+      "original": "https://www.dvidshub.net/image/1712528",
+      "credit": "Photo: Sgt. Melissa Marnell, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/base-pendleton.webp",
+      "alt": "Parents watching children surf at Del Mar Beach on Camp Pendleton",
+      "title": "Pros teach at Del Mar beach 130602-M-DB645-158.jpg",
+      "author": "Lance Cpl. Orrin Farmer",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military-Marines",
+      "date": "2013-06-02",
+      "source": "https://commons.wikimedia.org/wiki/File:Pros_teach_at_Del_Mar_beach_130602-M-DB645-158.jpg",
+      "original": "https://www.dvidshub.net/image/945851",
+      "credit": "Photo: Lance Cpl. Orrin Farmer, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/hero-quantico.webp",
+      "alt": "Runners on a wooded hillside trail during the Run Amuck race at Marine Corps Base Quantico",
+      "title": "USMC-100814-M-2156H-058.jpg",
+      "author": "Lance Cpl. Benjamin Harris",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military",
+      "date": "14 August 2010",
+      "source": "https://commons.wikimedia.org/wiki/File:USMC-100814-M-2156H-058.jpg",
+      "credit": "Photo: Lance Cpl. Benjamin Harris, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/base-quantico.webp",
+      "alt": "Swimmers starting a triathlon in the outdoor 50-meter pool at Quantico",
+      "title": "Inaugural Quantico Triathlon 130818-M-TI407-536.jpg",
+      "author": "Cpl. Sonia Rodriguez",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military-Marines",
+      "date": "18 August 2013",
+      "source": "https://commons.wikimedia.org/wiki/File:Inaugural_Quantico_Triathlon_130818-M-TI407-536.jpg",
+      "original": "https://www.dvidshub.net/image/999265",
+      "credit": "Photo: Cpl. Sonia Rodriguez, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/hero-lejeune.webp",
+      "alt": "Families running together in a community fun run in Tarawa Terrace at Camp Lejeune",
+      "title": "Families defy skies, lace up for Funny Sunny Hat Run 130817-M-IY869-096.jpg",
+      "author": "Lance Cpl. Jackeline Perez Rivera",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military-Marines",
+      "date": "17 August 2013",
+      "source": "https://commons.wikimedia.org/wiki/File:Families_defy_skies,_lace_up_for_Funny_Sunny_Hat_Run_130817-M-IY869-096.jpg",
+      "original": "https://www.dvidshub.net/image/1000194/families-defy-skies-lace-up-funny-sunny-hat-run",
+      "credit": "Photo: Lance Cpl. Jackeline Perez Rivera, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/base-lejeune.webp",
+      "alt": "Parents and toddlers waving colorful scarves in a music class at Camp Lejeune",
+      "title": "USMC-101028-M-2360J-030.jpg",
+      "author": "Cpl. Jo Jones",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military",
+      "date": "28 October 2010",
+      "source": "https://commons.wikimedia.org/wiki/File:USMC-101028-M-2360J-030.jpg",
+      "credit": "Photo: Cpl. Jo Jones, U.S. Marine Corps (public domain)"
+    },
+    {
+      "file": "/home/moments.webp",
+      "alt": "Children dancing on a beach stage at a family beach party at Camp Pendleton",
+      "title": "1st Intel Bn. beats summer heat on beach 120816-M-PF875-006.jpg",
+      "author": "Cpl. Joshua Young",
+      "organization": "U.S. Marine Corps",
+      "license": "Public domain",
+      "licenseTemplate": "PD-USGov-Military-Marines",
+      "date": "16 August 2012",
+      "source": "https://commons.wikimedia.org/wiki/File:1st_Intel_Bn._beats_summer_heat_on_beach_120816-M-PF875-006.jpg",
+      "original": "https://www.dvidshub.net/image/647058",
+      "credit": "Photo: Cpl. Joshua Young, U.S. Marine Corps (public domain)"
+    }
+  ]
+}

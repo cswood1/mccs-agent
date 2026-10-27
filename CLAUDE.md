@@ -174,8 +174,17 @@ disagrees with it, ask before changing either.
     unsupported), shows a live caption, auto-sends and reads the answer aloud.
   - **Conversation:** kept in sessionStorage per tab; switching installation or "New conversation"
     clears it.
-- No design PNGs were in the repo when it was built; the look follows the written brief. Placeholder
-  art is in `public/home/`. `/home/*` is an app path in `proxy.ts` (still behind the access gate).
+- Style follows `design/reference/home/style-hero.png` and `style-sections.png`:
+  - Fraunces 800 headline, Plus Jakarta Sans body, white pill controls (Display is icon-only on phones).
+  - Full-height hero photo with a rounded inner corner, swapping with the selected installation.
+  - Small uppercase section labels and numbered "moment" cards.
+- Photos (`public/home/*.webp`, 1600px wide, under 200KB) are Wikimedia Commons U.S. Marine Corps
+  photos under PD-USGov templates: community scenes, facilities and landscapes. Excluded: named
+  officials, close-up portraits, weapons and combat.
+  - Credits are in `public/home/CREDITS.json`, shown on each image and listed on `/credits`.
+  - `/home/*` and `/credits` are app paths in `proxy.ts`, still behind the access gate.
+- Warm-up: `/api/warm` for the selected base on load and on selector change. It uses the widget's
+  localStorage throttle key (`mccs-assistant:<id>:warmed`, 50 min), so the two share it.
 - Tests: `tests/ui/front-door-check.mjs` (stubbed chat stream and speech APIs); `npm run test:ui` runs
   both suites.
 

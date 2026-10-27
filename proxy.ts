@@ -16,8 +16,8 @@ export async function proxy(request: NextRequest) {
 
 const INSTALLATION_SLUGS = new Set(registry.map((i) => i.slug));
 // First path segments that belong to the app itself, not to an installation's pages.
-// ("home" holds the front door's images.)
-const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html", "home"]);
+// ("home" holds the front door's images; "credits" is its photo credits page.)
+const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html", "home", "credits"]);
 // Slugs that changed (the app uses a shorter name than the site's subdomain).
 const RENAMED: Record<string, string> = { lejeunenewriver: "lejeune" };
 

@@ -29,6 +29,12 @@ async function open(opts = {}) {
   const c = await browser.newContext({ viewport: opts.viewport ?? { width: 1280, height: 900 }, isMobile: !!opts.mobile, hasTouch: !!opts.mobile, reducedMotion: opts.reducedMotion });
   if (cookie.length) await c.addCookies(cookie);
   await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  // Warm-up is stubbed too (never a real prompt-cache write from tests).
+  c.warms = [];
+  await c.route("**/api/warm", (r) => {
+    c.warms.push(r.request().postDataJSON()?.installationId);
+    return r.fulfill({ status: 200, contentType: "application/json", body: '{"warmed":true}' });
+  });
   await c.addInitScript(
     ({ answer, followups, recognition }) => {
       // Chat: a stream that can hold a tool status until the test releases it.
@@ -115,13 +121,27 @@ const ask = async (p, q) => {
   check("Headline: “Ask MCCS anything.” with Ask MCCS in red", (await p.locator("h1").textContent()) === "Ask MCCS anything." && (await p.locator("h1 .fd-red").textContent()) === "Ask MCCS");
   const red = await p.locator("h1 .fd-red").evaluate((el) => getComputedStyle(el).color);
   check("Headline red is the MCCS red", red === "rgb(158, 27, 50)", red);
-  check("Serif headline, sans body", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && /Inter/.test(await p.locator(".fd").evaluate((el) => getComputedStyle(el).fontFamily)));
+  check("Serif headline, sans body", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && /Plus Jakarta Sans/.test(await p.locator(".fd").evaluate((el) => getComputedStyle(el).fontFamily)));
+  check("Heavy headline weight", Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700);
+  check("Pill-shaped top controls", (await p.locator(".fd-top .fd-pill").count()) >= 2 && (await p.locator(".fd-display-btn").evaluate((el) => parseFloat(getComputedStyle(el).borderRadius))) > 100);
   const options = await p.locator("#fd-inst-select option").allTextContents();
-  check("Installation selector lists the three bases", JSON.stringify(options) === JSON.stringify(["MCCS Quantico", "MCCS Camp Pendleton", "MCCS Lejeune-New River"]), JSON.stringify(options));
+  check("Installation selector lists the three bases", JSON.stringify(options) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]), JSON.stringify(options));
+  // Photos: a hero per installation (swaps with the selector), one per card, one for the moments.
+  const heroSrc = await p.locator(".fd-hero-photo img").getAttribute("src");
+  check("Hero photo for the selected installation", heroSrc === "/home/hero-quantico.webp", heroSrc);
+  const imgs = await p.locator(".fd img").evaluateAll((els) => els.map((e) => ({ src: e.getAttribute("src"), alt: e.alt, ok: e.complete && e.naturalWidth > 0 })));
+  check("All photos are WebP with descriptive alt text", imgs.length === 5 && imgs.every((i) => /\.webp$/.test(i.src) && i.alt.length > 20), JSON.stringify(imgs));
+  await p.waitForFunction(() => [...document.querySelectorAll(".fd img")].every((i) => i.complete), null, { timeout: 5000 }).catch(() => {});
+  check("Photos load", (await p.locator(".fd img").evaluateAll((els) => els.every((e) => e.naturalWidth > 0))));
+  const credits = await p.locator(".fd-credit").allTextContents();
+  check("A credit on each photo", credits.length === 5 && credits.every((t) => /^Photo: .+, USMC$/.test(t)), JSON.stringify(credits));
+  check("Credits link to their sources", (await p.locator(".fd-credit").evaluateAll((as) => as.every((a) => a.href.startsWith("https://commons.wikimedia.org/wiki/File:") && a.target === "_blank"))));
+  check("Photo credits footer link", (await p.locator(".fd-footer a", { hasText: "Photo credits" }).getAttribute("href")) === "/credits");
+  check("Warm-up on load for the selected base", JSON.stringify(c.warms) === JSON.stringify(["quantico"]), JSON.stringify(c.warms));
   const qCfg = await (await p.request.get(base + "/api/installations/quantico")).json();
   check("Starter chips from Quantico's defaultChips", JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(qCfg.defaultChips.slice(0, 4)));
   check("Five moment cards", (await p.locator(".fd-moments .fd-card").count()) === 5);
-  const baseLinks = await p.locator(".fd-bases a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+  const baseLinks = await p.locator(".fd-bases .fd-bcard").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
   check("Installation cards link to /quantico, /pendleton, /lejeune", JSON.stringify(baseLinks) === JSON.stringify(["/quantico", "/pendleton", "/lejeune"]), JSON.stringify(baseLinks));
   check("Trust strip", /^Answers come from official MCCS pages · captured Oct 26 · links to every source\.$/.test(((await p.locator(".fd-trust-strip").textContent()) ?? "").trim()));
   check("Ask box is labeled; mic and send have names", (await p.locator("label[for=fd-ask-input]").textContent()) === "Ask MCCS" && (await p.locator(".fd-mic").getAttribute("aria-label")) === "Ask by voice" && (await p.locator(".fd-send").getAttribute("aria-label")) === "Send");
@@ -129,13 +149,17 @@ const ask = async (p, q) => {
   // Installation choice is remembered.
   await p.locator("#fd-inst-select").selectOption("pendleton");
   check("Selected installation saved", (await p.evaluate(() => localStorage.getItem("mccs-front:installation"))) === "pendleton");
+  check("Hero photo swaps with the selector", (await p.locator(".fd-hero-photo img").getAttribute("src")) === "/home/hero-pendleton.webp");
+  await p.waitForTimeout(200);
+  check("Warm-up when the selector changes", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   await p.reload({ waitUntil: "networkidle" });
+  check("Warm-up throttled per base (like the widget)", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   const pCfg = await (await p.request.get(base + "/api/installations/pendleton")).json();
   check("Selected installation restored after reload", (await p.locator("#fd-inst-select").inputValue()) === "pendleton" && JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(pCfg.defaultChips.slice(0, 4)));
   check("Trust strip uses the base's capture date", /captured Oct 27/.test((await p.locator(".fd-trust-strip").textContent()) ?? ""));
 
   // Display menu.
-  const displayBtn = p.locator(".fd-display > .fd-btn");
+  const displayBtn = p.locator(".fd-display-btn");
   await displayBtn.click();
   check("Display menu opens", (await displayBtn.getAttribute("aria-expanded")) === "true" && (await p.locator("#fd-display-panel").isVisible()));
   const heroSize = await p.locator("h1").evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
@@ -282,13 +306,16 @@ const ask = async (p, q) => {
 {
   const { c, p } = await open({ viewport: { width: 375, height: 812 }, mobile: true });
   check("375px hero: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
+  const tops = await p.locator(".fd-top > .fd-pill, .fd-top > .fd-display").evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().top)));
+  check("375px: top pills fit on one row", tops.length === 2 && Math.abs(tops[0] - tops[1]) <= 4, JSON.stringify(tops));
+  check("375px: Display pill keeps its accessible name", (await p.getByRole("button", { name: "Display" }).count()) === 1);
   const fits = await p.locator("#fd-ask-input").evaluate((el) => el.scrollHeight <= el.clientHeight + 1);
   check("375px: ask box shows its whole placeholder", fits);
   await ask(p, "How do I get child care?");
   check("375px chat: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
   check("375px chat: installation selector stays usable", (await p.locator("#fd-inst-select").evaluate((el) => el.getBoundingClientRect().width)) >= 150);
   const before = await p.locator(".fd-a").first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
-  await p.locator(".fd-display > .fd-btn").click();
+  await p.locator(".fd-display-btn").click();
   await p.getByLabel("Large text").check();
   const after = await p.locator(".fd-a").first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
   check("Large text applies to the conversation", after > before * 1.15, `${before} -> ${after}`);
@@ -307,6 +334,16 @@ const ask = async (p, q) => {
   await p.keyboard.press("Enter");
   await p.locator(".fd-followups").waitFor();
   check("Keyboard: Enter on a chip asks it", (await p.locator(".fd-q").count()) === 1);
+  await c.close();
+}
+
+// 7. Photo credits page.
+{
+  const { c, p } = await open();
+  await p.goto(base + "/credits", { waitUntil: "networkidle" });
+  const items = await p.locator(".fd-credit-list li").count();
+  const text = (await p.locator(".fd-credit-list").textContent()) ?? "";
+  check("Credits page lists every photo with author and license", items === 7 && (text.match(/Public domain \(PD-USGov/g) || []).length === 7 && (text.match(/U\.S\. Marine Corps/g) || []).length === 7, `${items} items`);
   await c.close();
 }
 

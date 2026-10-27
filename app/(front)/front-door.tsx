@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { firstMccsLink, markdown, parseStream, shortDate, speechText } from "@/lib/chat-client";
+import type { Photo } from "./photos";
 
 export type FrontInstallation = {
   id: string;
@@ -11,6 +13,9 @@ export type FrontInstallation = {
   defaultChips: string[];
   /** Capture date of the base's pages (ISO), for the trust strip. */
   capturedOn: string;
+  /** Hero photo (swaps with the selector) and installation card photo. */
+  hero: Photo | null;
+  card: Photo | null;
 };
 
 type Msg = {
@@ -32,22 +37,19 @@ const CONVO_KEY = "mccs-front:conversation";
 const EXAMPLES = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
 const PLACEHOLDER_MS = 3000;
 
-/** "Start with a moment": each card opens the conversation with a set question. */
-const MOMENTS: { id: string; title: string; blurb: string; icon: keyof typeof ICONS; question: (base: string) => string }[] = [
-  { id: "arrived", title: "I just arrived", blurb: "A First 7 Days plan", icon: "pin", question: (b) => `I just arrived at ${b}. Can you give me a First 7 Days plan?` },
-  { id: "pcs-out", title: "I’m PCSing out", blurb: "What to wrap up before you go", icon: "box", question: (b) => `I'm PCSing out of ${b} soon. What should I take care of before I leave?` },
-  { id: "talk", title: "I need someone to talk to", blurb: "Confidential support, right now", icon: "talk", question: () => "I need someone to talk to." },
-  { id: "kids", title: "Childcare and youth", blurb: "Care, camps and school help", icon: "kid", question: () => "What child care and youth programs are there for my kids?" },
-  { id: "active", title: "Getting active", blurb: "Gyms, classes and sports", icon: "run", question: () => "I want to get active. What gyms, classes and sports are there?" },
+/** "Start with a moment": each numbered card opens the conversation with a set question. */
+const MOMENTS: { id: string; title: string; blurb: string; question: (base: string) => string }[] = [
+  { id: "arrived", title: "I just arrived", blurb: "Get a First 7 Days plan for your new installation.", question: (b) => `I just arrived at ${b}. Can you give me a First 7 Days plan?` },
+  { id: "pcs-out", title: "I’m PCSing out", blurb: "What to wrap up on base before you go.", question: (b) => `I'm PCSing out of ${b} soon. What should I take care of before I leave?` },
+  { id: "talk", title: "I need someone to talk to", blurb: "Confidential support, right now.", question: () => "I need someone to talk to." },
+  { id: "kids", title: "Childcare and youth", blurb: "Child care, camps, school help and youth programs.", question: () => "What child care and youth programs are there for my kids?" },
+  { id: "active", title: "Getting active", blurb: "Gyms, classes, pools and sports.", question: () => "I want to get active. What gyms, classes and sports are there?" },
 ];
+const WARM_MS = 50 * 60 * 1000; // the prompt cache lasts an hour
 
-const ICONS = {
-  pin: "M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z",
-  box: "M3 7l9-4 9 4v10l-9 4-9-4V7zm0 0l9 4 9-4M12 11v10",
-  talk: "M4 5h16v11H9l-5 4V5zm4 5h8M8 13h5",
-  kid: "M12 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-6 4h12M12 12v5m0 0l-3 4m3-4l3 4",
-  run: "M14 4a2 2 0 1 0 0-4M9 21l3-6 3 2v4M6 12l3-3 4 1 3 3 3-1",
-};
+const PIN = "M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z";
+const SUN = "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4";
+const MOON = "M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z";
 
 // Web Speech API: not in every browser, and prefixed in Chrome/Safari.
 type Recognition = {
@@ -83,7 +85,7 @@ const write = (key: string, value: string) => {
   }
 };
 
-export default function FrontDoor({ installations }: { installations: FrontInstallation[] }) {
+export default function FrontDoor({ installations, momentsPhoto }: { installations: FrontInstallation[]; momentsPhoto: Photo | null }) {
   const [instId, setInstId] = useState(installations[0]?.id ?? "quantico");
   const inst = installations.find((i) => i.id === instId) ?? installations[0];
   const [display, setDisplay] = useState<Display>({ theme: "light", large: false, contrast: false });
@@ -109,6 +111,7 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
   const displayBtnRef = useRef<HTMLButtonElement | null>(null);
   const displayPanelRef = useRef<HTMLDivElement | null>(null);
   const restored = useRef(false);
+  const [ready, setReady] = useState(false); // browser-only state (saved installation etc.) loaded
 
   // ---------- browser-only setup (after hydration) ----------
   useEffect(() => {
@@ -136,8 +139,26 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
     setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     setMicSupported(!!recognitionCtor());
     setSpeechSupported("speechSynthesis" in window && typeof window.SpeechSynthesisUtterance === "function");
+    setReady(true);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [installations]);
+
+  // Pre-load the selected base's knowledge into the prompt cache while the person reads or types,
+  // like the widget: at most once per browser per base per 50 minutes (same localStorage key, so the
+  // widget and the front door share it). The server also rate-limits warm-ups.
+  useEffect(() => {
+    if (!ready || !instId) return;
+    const key = `mccs-assistant:${instId}:warmed`;
+    try {
+      if (Date.now() - Number(localStorage.getItem(key) || 0) < WARM_MS) return;
+      localStorage.setItem(key, String(Date.now()));
+    } catch {
+      /* storage unavailable: warm anyway */
+    }
+    fetch("/api/warm", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ installationId: instId }) }).catch(() => {
+      /* best effort */
+    });
+  }, [instId, ready]);
 
   // Rotating example questions in the ask box (still with reduced motion, paused while in use).
   useEffect(() => {
@@ -429,6 +450,13 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
     </div>
   );
 
+  const credit = (ph: Photo | null) =>
+    ph ? (
+      <a className="fd-credit" href={ph.source} target="_blank" rel="noopener noreferrer">
+        {ph.credit}
+      </a>
+    ) : null;
+
   return (
     <div
       className={`fd fd--${mode}`}
@@ -437,18 +465,23 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
       data-contrast={display.contrast ? "high" : "normal"}
     >
       <header className="fd-top">
-        <div className="fd-inst">
-          <label htmlFor="fd-inst-select">Installation</label>
+        <div className="fd-pill fd-inst">
+          <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-icon">
+            <path d={PIN} />
+          </svg>
+          <label htmlFor="fd-inst-select" className="fd-sr">
+            Installation
+          </label>
           <select id="fd-inst-select" value={instId} onChange={(e) => switchInstallation(e.target.value)}>
             {installations.map((i) => (
               <option key={i.id} value={i.id}>
-                {i.name}
+                {i.shortName}
               </option>
             ))}
           </select>
         </div>
         {mode === "chat" && (
-          <button type="button" className="fd-btn fd-new" onClick={newConversation}>
+          <button type="button" className="fd-pill fd-new" onClick={newConversation}>
             New conversation
           </button>
         )}
@@ -456,12 +489,18 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
           <button
             type="button"
             ref={displayBtnRef}
-            className="fd-btn"
+            className="fd-pill fd-display-btn"
             aria-expanded={displayOpen}
             aria-controls="fd-display-panel"
             onClick={() => setDisplayOpen((o) => !o)}
           >
-            Display
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-icon">
+              <path d={display.theme === "dark" ? MOON : SUN} />
+            </svg>
+            <span className="fd-pill-label">Display</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-caret">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </button>
           {displayOpen && (
             <div id="fd-display-panel" className="fd-display-panel" ref={displayPanelRef} role="group" aria-label="Display settings">
@@ -490,12 +529,20 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
       {mode === "hero" ? (
         <main className="fd-main">
           <section className="fd-hero" aria-labelledby="fd-title">
+            {inst?.hero && (
+              <figure className="fd-hero-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP */}
+                <img src={inst.hero.src} alt={inst.hero.alt} style={{ objectPosition: inst.hero.focus }} fetchPriority="high" />
+                {credit(inst.hero)}
+              </figure>
+            )}
             <div className="fd-hero-text">
               <h1 id="fd-title">
                 <span className="fd-red">Ask MCCS</span> anything.
               </h1>
               <p className="fd-lead">Hours, programs, child care, fitness and more at {inst?.name}, answered from official MCCS pages.</p>
               {askForm}
+              <p className="fd-hint">Ask in your own words. Please don’t include personal or sensitive information.</p>
               {voiceStatus}
               {chips.length > 0 && (
                 <div className="fd-chips" role="group" aria-label="Suggested questions">
@@ -507,46 +554,68 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
                 </div>
               )}
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element -- static placeholder art */}
-            <img className="fd-hero-img" src="/home/hero.svg" alt="" />
           </section>
 
-          <section className="fd-section" aria-labelledby="fd-moments">
-            <h2 id="fd-moments">Start with a moment</h2>
-            <ul className="fd-cards fd-moments">
-              {MOMENTS.map((m) => (
-                <li key={m.id}>
-                  <button type="button" className="fd-card" data-moment={m.id} onClick={() => send(m.question(inst?.shortName ?? ""))}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-card-icon">
-                      <path d={ICONS[m.icon]} />
-                    </svg>
-                    <span className="fd-card-title">{m.title}</span>
-                    <span className="fd-card-blurb">{m.blurb}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <section className="fd-chapter" aria-label="Get started">
+            {momentsPhoto && (
+              <figure className="fd-chapter-photo">
+                {/* eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP */}
+                <img src={momentsPhoto.src} alt={momentsPhoto.alt} loading="lazy" />
+                {credit(momentsPhoto)}
+              </figure>
+            )}
+            <div className="fd-chapter-body">
+              <h2 className="fd-label" id="fd-moments">
+                Start with a moment
+              </h2>
+              <ol className="fd-moments" aria-labelledby="fd-moments">
+                {MOMENTS.map((m, n) => (
+                  <li key={m.id}>
+                    <button type="button" className="fd-card fd-ncard" data-moment={m.id} onClick={() => send(m.question(inst?.shortName ?? ""))}>
+                      <span className="fd-num" aria-hidden="true">
+                        {String(n + 1).padStart(2, "0")}
+                      </span>
+                      <span className="fd-ncard-body">
+                        <span className="fd-card-title">{m.title}</span>
+                        <span className="fd-card-blurb">{m.blurb}</span>
+                        <span className="fd-cta" aria-hidden="true">
+                          Ask MCCS <span className="fd-arrow">→</span>
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ol>
 
-          <section className="fd-section" aria-labelledby="fd-bases">
-            <h2 id="fd-bases">Your installation</h2>
-            <ul className="fd-cards fd-bases">
-              {installations.map((i) => (
-                <li key={i.id}>
-                  <a className="fd-card fd-base" href={`/${i.id}`}>
-                    {/* eslint-disable-next-line @next/next/no-img-element -- static placeholder art */}
-                    <img src={`/home/base-${i.id}.svg`} alt="" />
-                    <span className="fd-card-title">{i.name}</span>
-                    <span className="fd-card-blurb">{i.location}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
+              <h2 className="fd-label" id="fd-bases">
+                Your installation
+              </h2>
+              <ul className="fd-bases" aria-labelledby="fd-bases">
+                {installations.map((i) => (
+                  <li key={i.id}>
+                    <a className="fd-card fd-bcard" href={`/${i.id}`}>
+                      {i.card && (
+                        <span className="fd-bcard-photo">
+                          {/* eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP */}
+                          <img src={i.card.src} alt={i.card.alt} loading="lazy" />
+                        </span>
+                      )}
+                      <span className="fd-card-title">{i.name}</span>
+                      <span className="fd-card-blurb">{i.location}</span>
+                      <span className="fd-cta" aria-hidden="true">
+                        Visit the site <span className="fd-arrow">→</span>
+                      </span>
+                    </a>
+                    {credit(i.card)}
+                  </li>
+                ))}
+              </ul>
 
-          <p className="fd-trust-strip">
-            Answers come from official MCCS pages · captured {inst?.capturedOn ? shortDate(inst.capturedOn) : "recently"} · links to every source.
-          </p>
+              <p className="fd-trust-strip">
+                Answers come from official MCCS pages · captured {inst?.capturedOn ? shortDate(inst.capturedOn) : "recently"} · links to every source.
+              </p>
+            </div>
+          </section>
         </main>
       ) : (
         <main className="fd-main fd-chat-main">
@@ -584,17 +653,17 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
                   {m.content && !m.error && speechSupported && !(busy && i === messages.length - 1) && (
                     <div className="fd-listen" role="group" aria-label="Read aloud">
                       {speaking === i ? (
-                        <button type="button" className="fd-btn fd-small" onClick={stopSpeaking}>
+                        <button type="button" className="fd-pill fd-small" onClick={stopSpeaking}>
                           Stop
                         </button>
                       ) : (
-                        <button type="button" className="fd-btn fd-small" onClick={() => speak(i, m.content)}>
+                        <button type="button" className="fd-pill fd-small" onClick={() => speak(i, m.content)}>
                           Listen
                         </button>
                       )}
                       <button
                         type="button"
-                        className="fd-btn fd-small"
+                        className="fd-pill fd-small"
                         aria-pressed={slow}
                         onClick={() => {
                           const next = !slow;
@@ -622,7 +691,10 @@ export default function FrontDoor({ installations }: { installations: FrontInsta
         </main>
       )}
 
-      <footer className="fd-footer">Prototype demo — not the official MCCS site.</footer>
+      <footer className="fd-footer">
+        Prototype demo — not the official MCCS site. · <Link href="/credits">Photo credits</Link>
+      </footer>
     </div>
   );
+
 }
