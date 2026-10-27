@@ -69,19 +69,26 @@ deployed on Vercel for demos. Three bases have full content: Quantico (`/quantic
   installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
 - **No embeddings / vector search / RAG.** The whole content file goes in the (cached) prompt.
 
-## API budget rules (follow these; added 2026-10-26)
-Every Claude API call here reads a ~250K-token prompt, so calls add up fast.
-- **Never run the full eval without asking first.** While iterating, use 3–5 questions relevant to the
-  change (`npm run eval -- <label> --only id1,id2,...`). Run the full set once, at the end of a round,
-  after asking.
-- **Before any step with more than ~10 API calls,** say the estimated number of calls and rough cost,
-  and wait for an OK.
+## API budget rules (follow these; tightened 2026-10-27, frugal mode)
+Every chat call reads a ~200K-token cached prompt per base, so calls add up fast.
+- **No live Claude API calls without the user's OK.** That covers chat or eval runs, warm-ups against a
+  local server with a real key, and chips batches. The free token-counting endpoint is fine.
+  Before asking, give the number of calls and an estimated cost.
+- **One cache rewrite per base per release.** The cached prefix is the tools, the system prompt and
+  each base's content block, so any change to them rewrites every affected base's cache (~200K
+  tokens at the 1-hour cache-write price). Batch all prompt, tool and content changes into a single
+  release (one push) instead of shipping them one at a time.
+- **While iterating, test at most 3–5 questions on one base** (`npm run eval -- <label> --only id1,id2`).
+- **Full eval only at milestones, and only when the user asks.**
+- **After any paid run, report actual usage and approximate cost**, using the dev-server `[chat]`
+  log lines or the batch result. Assume Sonnet 5.5 pricing: ~$2/M input, $4/M 1-hour cache write,
+  $0.10/M cache read, $10/M output.
 - **Test UI behavior with stubbed responses** (Playwright route mocks for `/api/chat`, `/api/warm`),
   not live calls. Headless tests must also block every request to *.usmc-mccs.org.
 - **One-time batch jobs** (e.g. generating chips) use Claude Haiku 4.5 through the Message Batches API,
   with results cached on disk so re-runs only process what changed.
-- **Prompt edits invalidate the shared cache** (one ~250K-token write, ~2× input price with the 1-hour
-  TTL). Batch prompt changes together instead of making them one at a time.
+- **Content changes are checked offline:** `node scripts/check-content-facts.mjs <before> <after>`
+  must report no missing phone numbers, time ranges or dollar amounts.
 - **Production is rate limited per visitor** (`lib/ratelimit.ts`): 20 chat messages and 6 warm-ups per
   hour. Run evals against the local dev server, not production.
 
@@ -95,10 +102,19 @@ disagrees with it, ask before changing either.
   length rule much better when it's restated right before it answers, so the per-turn system note in
   `app/api/chat/route.ts` (`REPLY_REMINDER`, after the cached prefix) repeats it with today's date.
   The prompt's style example uses placeholders — the template is shared by every installation.
-- **Content size** (`scripts/build-content.mjs`): news stories are title + one-line summary (the agent
-  fetches full stories live), pages over 40K chars (the Marine for Life Cycle checklists) are cut to each
-  section's opening, paragraphs repeated across pages are kept once, `/privacy` is skipped.
-  ~247K prompt tokens (was ~318K).
+- **Content size** (`scripts/build-content.mjs`): pages over 40K chars (the Marine for Life Cycle
+  checklists) are cut to each section's opening, paragraphs repeated across pages are kept once,
+  `/privacy` is skipped. Content diet (2026-10-27):
+  - Descriptive lines keep their first sentence plus every sentence with a number, price, contact,
+    link, eligibility or how-to wording.
+  - Hours rows with the same time are merged across days, and repeated contact blocks become pointers.
+  - Links to pages already in the content lose their url; navigation-only "Related pages", images
+    and capture notes are dropped.
+  - News is title only, plus the summary when it has a number.
+  - `scripts/check-content-facts.mjs` confirmed every phone number, time range and dollar amount kept.
+  - Prefix tokens (free count endpoint): Quantico 253K → 208K, Pendleton 278K → 222K,
+    Lejeune 256K → 205K. Going further means dropping descriptions or whole page bodies; the user chose
+    to stop here.
 - **Caching:** the prefix (tools, system prompt, content block) has no per-user data, so every
   visitor's conversation shares one cache entry (verified: different questions read the same ~252K
   cached tokens). The content breakpoint uses the 1-hour TTL; the conversation tail uses the default
@@ -221,7 +237,7 @@ disagrees with it, ask before changing either.
   57 older MCCS-wide news stories linked only from other stories (stopped after wave 3), the body
   composition PDF, and one story whose fetch returned only boilerplate. Pages that redirect off the
   site (careers, post offices, voting assistance, local area info) are mirrored as redirects.
-- **Agent:** prompt tokens per base: Quantico ~250K, Pendleton ~278K, Lejeune ~255K. Each base has its
+- **Agent:** prompt tokens per base: Quantico ~208K, Pendleton ~222K, Lejeune ~205K. Each base has its
   own cache entry (1-hour TTL), shared by all of that base's visitors and warmed when the chat opens.
   Pendleton and Lejeune were checked with 3 questions each (gyms, child care, lodging), all correct
   and sourced; no full eval set for them yet. Round 3 full eval (33 questions, `tests/eval/results/round3.json`): correct 29/29, sourced
