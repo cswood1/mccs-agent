@@ -67,5 +67,6 @@ function withVisitorId(request: NextRequest, response: NextResponse): NextRespon
 export const config = {
   // Everything except framework assets and the theme's static files (CSS, fonts, logo).
   // widget.js is static code with no data; the bookmarklet loads it cross-site, where the cookie is not sent.
-  matcher: ["/((?!_next/static|_next/image|theme/|favicon.ico|robots.txt|widget.js).*)"],
+  // The tab and home-screen icons load without the code, so they show on the access page too.
+  matcher: ["/((?!_next/static|_next/image|theme/|icon.svg|apple-icon.png|robots.txt|widget.js).*)"],
 };
