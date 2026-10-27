@@ -1,0 +1,59 @@
+{
+  "title": "Beach Cottages",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Beach Cottages",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Del Mar Beach & Marina](https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina)\n- [San Onofre Beach](https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Del Mar Beach & Marina",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina",
+      "text": "Spacious beachfront and marina view cottages located on the pristine Pacific Coast. Limited pet-f...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/8cbd335f61c14e3a8e6f76e9dccd8ce6.jpg?m=638881939515800000"
+    },
+    {
+      "title": "San Onofre Beach",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach",
+      "text": "Spacious beachfront and marina view cottages located on the pristine Pacific Coast. Each cottage...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/034b8e2c728d423ba31223105eb41fe0.jpg?m=638881941481300000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Del Mar Beach & Marina",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina"
+    },
+    {
+      "text": "San Onofre Beach",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/8cbd335f61c14e3a8e6f76e9dccd8ce6.jpg?m=638881939515800000",
+      "alt": "Del Mar Beach & Marina"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/034b8e2c728d423ba31223105eb41fe0.jpg?m=638881941481300000",
+      "alt": "San Onofre Beach"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages",
+  "fetchedAt": "2026-10-27"
+}

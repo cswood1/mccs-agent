@@ -1,0 +1,247 @@
+{
+  "title": "Active Duty Recreation Centers",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    },
+    {
+      "label": "Active Duty Recreation Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Currently, there are no scheduled activities planned for the near future. See all [upcoming events](https://pendleton.usmc-mccs.org/calendar-of-events)."
+    },
+    {
+      "heading": "Amenities",
+      "level": 3,
+      "markdown": "- Multiple computer internet cafes (18-28 computers)\n- Mini-movie theaters\n- Pool and foosball tables\n- Table tennis\n- Xbox One, PlayStation 4\n- Big screen TVs\n- Large Patio areas with outdoor TVs, pool tables, and gas grills."
+    },
+    {
+      "heading": "Resource Downloads",
+      "level": 5,
+      "markdown": "- [Newsletter](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=47cc9026-68ad-4467-9f47-7fef8815fec0&v=43)\n- [Facility Usage Request](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=74ba8f6e-a3ae-45b2-875b-8af04170f92e&v=2)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Active Duty Recreation Center – 21 Area",
+      "address": "BLDG 21704\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-2019"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8am - 8pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "10am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 22 Area",
+      "address": "BLDG 22174\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-3215"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 24 Area",
+      "address": "BLDG 24065\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-0026"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 33 Area",
+      "address": "BLDG 3348\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-4988"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8am - 8pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "10am - 10pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 41 Area",
+      "address": "BLDG 4159\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-7124"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8am - 8pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "10am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 43 Area",
+      "address": "BLDG 430314\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-5205"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 53 Area",
+      "address": "BLDG 53341\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-7857"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Active Duty Recreation Center – 62 Area",
+      "address": "BLDG 62527\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-4353"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "10am - 2pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [],
+  "images": [],
+  "notCaptured": "Newsletter and facility usage request PDFs not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers",
+  "fetchedAt": "2026-10-27"
+}

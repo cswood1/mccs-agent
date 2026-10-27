@@ -1,0 +1,45 @@
+{
+  "title": "Restaurants",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Iron Mike's",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/iron-mikes",
+      "text": "Available for private parties and special events; all inquiries are welcomed.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/cf2a5d220fa04ef29735f5f0c5ed731b.jpg?m=639080703839030000"
+    },
+    {
+      "title": "Pub 1795",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/pub-1795",
+      "text": "Available for private and special events, parties and unit functions, all inquiries welcome.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5cb20963104349d3a551fcd8a6e7e24b.jpg?m=639080703839030000"
+    },
+    {
+      "title": "Windmill Canyon",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/windmill-canyon",
+      "text": "Available for private and special events, parties and unit functions, all inquiries welcome.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/7cfe2f1d504a48b09a7e6ab2c5a2f9db.jpg?m=639080710153500000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,147 @@
+{
+  "title": "Outdoor Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Outdoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Campgrounds & RV](https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs)\n- [Marine Memorial Golf Course](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marine-memorial-golf-course)\n- [Lake O'Neill](https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill)\n- [Marina](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina)\n- [Outdoor Adventures](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures)\n- [Recreation Checkout](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreation-checkout)\n- [Recreational Shooting](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting)\n- [Stepp Stables](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Campgrounds & RV",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs",
+      "text": "Choose from scenic coastal and inland sites with convenient amenities.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/24f17e9d11b24a338b59bf79cd6bc239_v2.jpg?m=638881929493570000"
+    },
+    {
+      "title": "Marine Memorial Golf Course",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marine-memorial-golf-course",
+      "text": "Enjoy the Marine Corps heritage of this course and play for the history and tradition.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/baee8e63824042859be68887ced2c97d.jpg?m=639081750830130000"
+    },
+    {
+      "title": "Lake O'Neill",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill",
+      "text": "Fish, hike, row a boat, enjoy a round of miniature golf, camp, picnic at the peninsula, and more ...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/323404bd38124c2ca5498b901013e407.jpg?m=638881936417830000"
+    },
+    {
+      "title": "Marina",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina",
+      "text": "Rent a boat, kayak, store a watercraft, or learn how to sail.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/3e7c7423310e473a8f44fb37724f57e7_v2.jpg?m=638882089803100000"
+    },
+    {
+      "title": "Outdoor Adventures",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures",
+      "text": "Outdoor Adventures is a program that exposes active duty service members to outdoor recreational ...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d24784be32f24059bd6dbbc231c40dcf.jpg?m=639081758206430000"
+    },
+    {
+      "title": "Recreation Checkout",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreation-checkout",
+      "text": "Visit Recreation Checkout for party/camping gear rentals, RV/deployment storage, and more!",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4d94f3ce2dfd44c789a15d6546c7ce2b_v2.jpg?m=638899192105970000"
+    },
+    {
+      "title": "Recreational Shooting",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting",
+      "text": "A safe, controlled environment for authorized patrons to practice marksmanship and improve skills.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/6a74bcdb31f74ff69f93eee829681d18.jpg?m=639081760287970000"
+    },
+    {
+      "title": "Stepp Stables",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables",
+      "text": "Enjoy some of the best full-care boarding in San Diego!",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/bd883dbbc95d40298df809d3e933372e.jpg?m=639059259463330000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Campgrounds & RV",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs"
+    },
+    {
+      "text": "Marine Memorial Golf Course",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marine-memorial-golf-course"
+    },
+    {
+      "text": "Lake O'Neill",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill"
+    },
+    {
+      "text": "Marina",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina"
+    },
+    {
+      "text": "Outdoor Adventures",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures"
+    },
+    {
+      "text": "Recreation Checkout",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreation-checkout"
+    },
+    {
+      "text": "Recreational Shooting",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting"
+    },
+    {
+      "text": "Stepp Stables",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/24f17e9d11b24a338b59bf79cd6bc239_v2.jpg?m=638881929493570000",
+      "alt": "Campgrounds & RV"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/baee8e63824042859be68887ced2c97d.jpg?m=639081750830130000",
+      "alt": "Marine Memorial Golf Course"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/323404bd38124c2ca5498b901013e407.jpg?m=638881936417830000",
+      "alt": "Lake O'Neill"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/3e7c7423310e473a8f44fb37724f57e7_v2.jpg?m=638882089803100000",
+      "alt": "Marina"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d24784be32f24059bd6dbbc231c40dcf.jpg?m=639081758206430000",
+      "alt": "Outdoor Adventures"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/4d94f3ce2dfd44c789a15d6546c7ce2b_v2.jpg?m=638899192105970000",
+      "alt": "Recreation Checkout"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/6a74bcdb31f74ff69f93eee829681d18.jpg?m=639081760287970000",
+      "alt": "Recreational Shooting"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/bd883dbbc95d40298df809d3e933372e.jpg?m=639059259463330000",
+      "alt": "Stepp Stables"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
+  "fetchedAt": "2026-10-27"
+}

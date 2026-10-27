@@ -1,0 +1,47 @@
+{
+  "title": "Dining",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Fast Food",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/fast-food",
+      "text": "Fast food spots and restaurants conveniently scattered across the base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/ee3262cf3c244d1282a7f26fe8af3e9c.jpg?m=639078227740900000"
+    },
+    {
+      "title": "Food Trucks",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/food-trucks",
+      "text": "Weekly schedules for food trucks on base!",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/ae3b096cd23a46269127cf282e784f3f.jpg?m=639078230264570000"
+    },
+    {
+      "title": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants",
+      "text": "Experience camaraderie at military clubs on base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/cf2a5d220fa04ef29735f5f0c5ed731b.jpg?m=639080703839030000"
+    },
+    {
+      "title": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions",
+      "text": "Let us host your special event! Whether it's a birthday party, office function, or any other special occasion.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/aa9865256c8848129dbc57e13d56e452_v2.jpg?m=639093592398870000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Event Planning",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Event Planning & Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia"
+    },
+    {
+      "label": "Event Planning",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Birthday Parties/Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/birthday-parties-unit-functions",
+      "text": "Celebrate birthdays with us! There are several venues throughout the base available to host famil...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/6a860282b75440798da5fdd403b38756.jpg?m=639080782168500000"
+    },
+    {
+      "title": "Weddings",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/weddings",
+      "text": "Celebrate memorable moments with gorgeous views and competitive event packages which set the perf...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c597bacf5f20459495788685c82e9083.jpg?m=639093629780400000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning",
+  "fetchedAt": "2026-10-27"
+}

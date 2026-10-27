@@ -1,0 +1,73 @@
+{
+  "title": "Pacific Views Event Center",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions"
+    },
+    {
+      "label": "Pacific Views Event Center",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "MCCS offers the perfect venue options for hosting your event."
+    },
+    {
+      "heading": "Upcoming Events",
+      "level": 3,
+      "markdown": "• Oct 27: Neighborhood Eats, 06:00am - 08:00pm\n• Nov 6: Facility Closure: Pacific Views Event Center\n• Nov 6: First Friday at Pub 1795, 03:00pm - 09:00pm\n• Nov 30: Facility Closure: Pacific Views Event Center\n• Dec 2: Facility Closure: Pacific Views Event Center\n• Dec 4: Facility Closure: Pacific Views Event Center\n• Dec 4: First Friday at Pub 1795, 03:00pm - 09:00pm\n• Dec 10: Facility Closure: Pacific Views Event Center\n• Dec 16: Facility Closure: Pacific Views Event Center"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Iron Mike's",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/iron-mikes",
+      "text": "We offer family dining, lunch buffets, a night out with friends, meals for pickup, or a quick bite.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/cf2a5d220fa04ef29735f5f0c5ed731b.jpg?m=639080703839030000"
+    },
+    {
+      "title": "Seaview Room",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center/seaview-room",
+      "text": "MCCS offers the perfect venue options for hosting your event. Select from stunning ocean views.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a0351bb0e43a4d55b0b0ffc2f899c894_v2.jpg?m=639093581805530000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Pacific Views Event Center",
+      "address": "202850 San Jacinto Road, Camp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-2231"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Pacific Views Event Center Planner's Guide",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=858036da-ab7c-4e78-bfa0-fed373d66616&v=3"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Planner's Guide (PDF).",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center",
+  "fetchedAt": "2026-10-27"
+}

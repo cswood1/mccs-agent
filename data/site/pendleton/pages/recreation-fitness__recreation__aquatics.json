@@ -1,0 +1,103 @@
+{
+  "title": "Aquatics",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Aquatics",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [13 Area Pool](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/13-area-pool)\n- [21 Area Pool](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/21-area-pool)\n- [Beach Safety](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/beach-safety)\n- [Ocean Lifeguards](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/ocean-lifeguards)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "13 Area Pool",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/13-area-pool",
+      "text": "Offering swim lessons, lap swim, S3T, swim clubs, and special swim events.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4b208e1f38784ffc9229c21c4328bddc_v3.jpg?m=638863142307770000"
+    },
+    {
+      "title": "21 Area Pool",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/21-area-pool",
+      "text": "Available offerings include lap swim, unit training, and S3T (Swim Survival Skills Training).",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/0c889cc84f474135be5d1ec4f761715b.jpg?m=638943451012900000"
+    },
+    {
+      "title": "Beach Safety",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/beach-safety",
+      "text": "Stay safe at the beach.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/93558a19c72e4e92a57e61c830ab74c0.jpg?m=639082591775730000"
+    },
+    {
+      "title": "Ocean Lifeguards",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/ocean-lifeguards",
+      "text": "Del Mar Beach and San Onofre Beach lifeguards routinely patrol the area year-round.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/de34adeed2e14058a240e17439358c08.jpg?m=639082591776430000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Staying Safe on the Water",
+      "url": "https://pendleton.usmc-mccs.org/news/staying-safe-on-the-water"
+    },
+    {
+      "text": "Buddy Up! Aquatics Workouts Boost Motivation and Camaraderie",
+      "url": "https://pendleton.usmc-mccs.org/news/buddy-up-aquatics-workouts-boost-motivation-and-camaraderie"
+    },
+    {
+      "text": "Why Water Survival Training is Mission Critical for Marines",
+      "url": "https://pendleton.usmc-mccs.org/news/why-water-survival-training-is-mission-critical-for-marines"
+    },
+    {
+      "text": "13 Area Pool",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/13-area-pool"
+    },
+    {
+      "text": "21 Area Pool",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/21-area-pool"
+    },
+    {
+      "text": "Beach Safety",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/beach-safety"
+    },
+    {
+      "text": "Ocean Lifeguards",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics/ocean-lifeguards"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/4b208e1f38784ffc9229c21c4328bddc_v3.jpg?m=638863142307770000",
+      "alt": "13 Area Pool"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/0c889cc84f474135be5d1ec4f761715b.jpg?m=638943451012900000",
+      "alt": "21 Area Pool"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/93558a19c72e4e92a57e61c830ab74c0.jpg?m=639082591775730000",
+      "alt": "Beach Safety"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/de34adeed2e14058a240e17439358c08.jpg?m=639082591776430000",
+      "alt": "Ocean Lifeguards"
+    }
+  ],
+  "notCaptured": "Related stories cards captured as links only",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics",
+  "fetchedAt": "2026-10-27"
+}

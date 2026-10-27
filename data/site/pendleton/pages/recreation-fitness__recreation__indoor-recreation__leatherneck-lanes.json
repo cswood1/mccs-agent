@@ -1,0 +1,127 @@
+{
+  "title": "Leatherneck Lanes",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    },
+    {
+      "label": "Leatherneck Lanes",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes"
+    }
+  ],
+  "intro": "If you love to bowl, Leatherneck Lanes located on Camp Pendleton is right up your alley offering open, league, and glow-in-the-dark bowling.",
+  "sections": [
+    {
+      "heading": "Upcoming Events",
+      "level": 3,
+      "markdown": "- **Oct 29** - His & Hers League Night, 6:00pm - 9:00pm\n- **Nov 3** - Turkey Bowl\n- **Nov 5, 12, 19, 26** - His & Hers League Night, 6:00pm - 9:00pm\n- **Dec 3, 10, 17, 24, 31** - His & Hers League Night, 6:00pm - 9:00pm\n- **Jan 7, 14, 21** - His & Hers League Night, 6:00pm - 9:00pm"
+    },
+    {
+      "heading": "Amenities",
+      "level": 3,
+      "markdown": "- Party, Special Events, Meeting Rooms\n- Free Wi-Fi\n- Bowling Leagues\n- Pool Tables\n- Exciting New Scoring System\n- Open to the Public (must have base access or sponsorship)"
+    },
+    {
+      "heading": "Pricing",
+      "level": 3,
+      "markdown": "**Individual Pricing (per game, per bowler)**\n\n| | Tuesday-Thursday | Friday-Saturday |\n|---|---|---|\n| Adult | $5 / $5.75 | $5.50 / $6.50 |\n| Youth | $4 / $5.25 | $4 / $5.25 |\n\n**Per Lane, Per Hour**\n- Tuesday-Thursday: $25/hour\n- Friday-Saturday: $30/hour\n\n**Other**\n- Shoe Rental: $4\n- Socks: $2\n\n**Private Party Package**\n- Adult – $7 per person, includes 2 hours of bowling and shoes\n- 12 and Under – $5 per person, includes 2 hours of bowling and shoes\n- No room or decorations included.\n\n**Unit Function**\n- $5.50 per person, includes 2 hours of bowling and shoes\n- Requires one form of payment by credit card or PO/IBT.\n\n**Room Rental**\n- Strike Room – $50 per hour, minimum 2 hours (accommodates 50 guests)\n- Spare Room – $40 per hour, minimum 2 hours (accommodates 40 guests)"
+    },
+    {
+      "heading": "Birthday Party Packages",
+      "level": 3,
+      "markdown": "**Spare Room Party Package – $99**\n- 1-hour Spare Room rental with party decor: balloons, plates, napkins, cups, and table covers\n- 1 hour of bowling (shoe rental included)\n- Up to 10 children\n- Birthday child is free\n\n**Strike Room Party Package – $127**\n- 1-hour Strike Room rental with party decor: balloons, plates, napkins, cups, and table covers\n- 1 hour of bowling (shoe rental included)\n- Up to 15 children\n- Birthday child is free\n\n**Additional Guests:**\n- 12 and Under: $5 per person\n- Adult: $7 per person\n\n**CATERER**\nPorters 52\n(858) 844-5274"
+    },
+    {
+      "heading": "Adult Party Packages",
+      "level": 3,
+      "markdown": "**Room Rental**\n- Strike Room - $60 per hour\n- Spare Room - $50 per hour\n\n**Party Package**\n\nSpare Room - $155\n- 2-hour room rental\n- 1-hour bowling\n- Shoe rental for up to 10 children (birthday child is free)\n- Child: $7.75\n- Adult: $9\n\nStrike Room - $190\n- 2-hour room rental\n- 1-hour bowling\n- Shoe rental for up to 15 children (birthday child is free)\n- Child: $7.75\n- Adult: $9\n\n**Unit Function**\n- $9 per person\n- includes shoe rental and one game of bowling\n\n**Leagues**\n- $3.50 per person per game\n\n**Employee Incentive**\n- $9.75 per person\n- includes shoe rental and one game of bowling"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Leatherneck Lanes",
+      "address": "BLDG 1339\nCamp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-6109"
+        },
+        {
+          "label": "Events and Room Rentals",
+          "number": "760-725-5945"
+        },
+        {
+          "label": "Events and Room Rentals",
+          "number": "760-267-5613"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "11am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.30522502793712,-117.31305407755075"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/93ec3680d3f946ddb15e6cbb8d20ed99.jpg?m=639082018444130000",
+      "alt": "Leatherneck Lanes"
+    }
+  ],
+  "notCaptured": "Upcoming events list is dynamic",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes",
+  "fetchedAt": "2026-10-27"
+}

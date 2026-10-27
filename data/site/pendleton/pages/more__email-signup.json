@@ -1,0 +1,33 @@
+{
+  "title": "Email Signup",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "Email Signup",
+      "url": "https://pendleton.usmc-mccs.org/more/email-signup"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "New to Camp Pendleton?",
+      "level": 3,
+      "markdown": "Stay up to date on weekly MCCS news, events, classes, special offers, and much more! Our emails are the best way to learn what's happening on and around Camp Pendleton for both active duty members and their families. Get all the information you need directly in your inbox."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=b69c4273-a40d-4285-a8ec-cc1f89f3ff3f&v=2",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "The email signup form is an embedded widget and was not captured",
+  "url": "https://pendleton.usmc-mccs.org/more/email-signup",
+  "fetchedAt": "2026-10-27"
+}

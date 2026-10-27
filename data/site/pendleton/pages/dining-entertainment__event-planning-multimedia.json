@@ -1,0 +1,52 @@
+{
+  "title": "Event Planning & Multimedia",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Event Planning & Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Event Planning",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning",
+      "text": "Let us host your special event! Whether it's a birthday party, office function, or any other spec...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c597bacf5f20459495788685c82e9083.jpg?m=639093629780400000"
+    },
+    {
+      "title": "Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia",
+      "text": "Multimedia, gaming, and connectivity options on base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a460160ec2ab4fb2a004eac37efa7126.jpg?m=639070360405370000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Birthday Parties/Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/birthday-parties-unit-functions"
+    },
+    {
+      "text": "Weddings",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/weddings"
+    },
+    {
+      "text": "Movies",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater"
+    },
+    {
+      "text": "TV, Gaming, & Wireless Internet",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia/tv-gaming-wireless-internet"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia",
+  "fetchedAt": "2026-10-27"
+}

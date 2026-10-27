@@ -1,0 +1,77 @@
+{
+  "title": "Indoor Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Indoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Active Duty Recreation Centers](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers)\n- [Auto Skills](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills)\n- [Leatherneck Lanes](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Active Duty Recreation Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers",
+      "text": "Active Duty Recreation Centers are a unique place for active-duty personnel only to relax and enjoy.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/97c1b6a91fb14c61831dd0534f8e9df4.jpg?m=639082018443170000"
+    },
+    {
+      "title": "Auto Skills",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills",
+      "text": "The Auto Skills Center offers an extensive collection of tools, advanced machinery, battery charg...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4dcc2c3b479843378ca72c65c9badde4.jpg?m=639082018443530000"
+    },
+    {
+      "title": "Leatherneck Lanes",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes",
+      "text": "Leatherneck Lanes offers state of the art bowling with interactive scoreboards featuring Facebook...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/93ec3680d3f946ddb15e6cbb8d20ed99.jpg?m=639082018444130000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Active Duty Recreation Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers"
+    },
+    {
+      "text": "Auto Skills",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills"
+    },
+    {
+      "text": "Leatherneck Lanes",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/97c1b6a91fb14c61831dd0534f8e9df4.jpg?m=639082018443170000",
+      "alt": "Active Duty Recreation Centers"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/4dcc2c3b479843378ca72c65c9badde4.jpg?m=639082018443530000",
+      "alt": "Auto Skills"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/93ec3680d3f946ddb15e6cbb8d20ed99.jpg?m=639082018444130000",
+      "alt": "Leatherneck Lanes"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Spend your Holidays with MCCS Programs and Activities!",
+  "breadcrumb": [
+    {
+      "label": "Holidays",
+      "url": "https://pendleton.usmc-mccs.org/holidays"
+    }
+  ],
+  "intro": "Find holiday activities, information, fall and winter races, and upcoming events below.",
+  "sections": [
+    {
+      "heading": "Tips for a safe and happy Holidays:",
+      "level": 2,
+      "markdown": "- Use proper lighting when outside at night\n- Dress appropriately for your event\n\nTell us how we're doing so we can improve!\n[**Take the survey about your experience at our facilities**](https://ice.disa.mil/)."
+    },
+    {
+      "heading": "Calendar of Events",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Take the survey about your experience at our facilities",
+      "url": "https://ice.disa.mil/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Embedded calendar of events is dynamic and showed no entries; no breadcrumb on the real page",
+  "url": "https://pendleton.usmc-mccs.org/holidays",
+  "fetchedAt": "2026-10-27"
+}

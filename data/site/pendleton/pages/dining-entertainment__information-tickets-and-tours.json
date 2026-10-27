@@ -1,0 +1,112 @@
+{
+  "title": "Information, Tickets, & Tours",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Information, Tickets, and Tours",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours"
+    }
+  ],
+  "intro": "ITT provides discount tickets to tourist attractions and special events. Purchase tickets to local and national attractions including theme parks, dinner shows, harbor cruises, one-day island tours, skiing, whale-watching, sporting events, and so much more!",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**ITT & Latitudes Travel**\n\nITT provides discount tickets to tourist attractions and special events. Purchase tickets to local and national attractions including theme parks, dinner shows, harbor cruises, one-day island tours, skiing, whale-watching, sporting events, and so much more! To view current prices, just click the ITT price list button.\n\nLatitudes Travel is a full-service agency dedicated to ensuring every trip is a memorable one. Advisors are committed to providing the best service and value for all your travel needs. Enjoy the finest in vacation packages, cruises, and other travel-related services such as excursions, airfare, car rental, and hotel reservations.\n\nLet Latitudes Travel take the stress out of planning your next vacation!\n\n**MCRD San Diego Recruit Travel for Family and Friends**\n\nCongratulations on your family member joining the United States Marine Corps!\n\nLatitudes Travel at Camp Pendleton is the travel agency providing airline, car, and hotel reservations for Marine Recruit Families attending MCRD San Diego graduation. With one call you can arrange and consolidate all your travel with Latitudes Travel while receiving great service at a great value!\n\nOnce you are ready to make your reservations contact our team at 3184 for assistance. We are dedicated to finding the best quality and value while arranging your travel to San Diego. Our office is open and available to take your call Mon-Fri: 8:30 am - 5 pm.\n\n**American Forces Travel**\n\nAn MWR joint service initiative has resulted in the first official DoD online vacation travel site, American Forces Travel℠, with Priceline Partner Network® as the service provider. The site offers travel deals and benefits exclusively for military members and authorized patrons! American Forces Travel℠ provides access to a wide selection of discounted rates on hotels, airfare, rental cars, vacation packages, cruises, and much more! Log onto www.americanforcestravel.com and plan your dream vacation!"
+    }
+  ],
+  "cards": [
+    {
+      "title": "American Forces Travel: Fall Starts with Adventure",
+      "url": "https://pendleton.usmc-mccs.org/activity/b9c5cc65-84d9-455a-b110-cc307943b458",
+      "text": "Specializing in individual and group travel and offering military rates and exclusive pricing and benefits, including unique and authentic experiences, as well as upgrades, savings, credits, complimentary meals, and special privileges.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a0bc01dc939c490083ad600179ebec51_v8.png?m=639264701165770000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "ITT & Latitudes Travel",
+      "address": "Pacific Plaza, BLDG 20846; Mainside, BLDG 15102",
+      "phones": [
+        {
+          "label": "ITT – Pacific Plaza",
+          "number": "760-725-5805"
+        },
+        {
+          "label": "ITT – Pacific Plaza",
+          "number": "760-725-5863"
+        },
+        {
+          "label": "ITT – Mainside",
+          "number": "760-725-2218"
+        },
+        {
+          "label": "Latitudes Travel",
+          "number": "760-763-3183"
+        },
+        {
+          "label": "Latitudes Travel",
+          "number": "760-763-3184"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Pacific Plaza",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "8:30am - 5:30pm"
+            },
+            {
+              "days": "Saturday-Sunday",
+              "time": "Closed"
+            }
+          ]
+        },
+        {
+          "label": "Mainside",
+          "rows": [
+            {
+              "days": "Monday-Friday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Saturday-Sunday",
+              "time": "Closed"
+            },
+            {
+              "days": "Daily",
+              "time": "Closed for lunch 1:30pm-2:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Latitudes Travel is closed to the public on Thursdays for Recruit Ticketing."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "ITT Price List",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=b04613c3-d8cc-4666-981f-8c1e4323e86e&v=14"
+    },
+    {
+      "text": "www.americanforcestravel.com",
+      "url": "https://www.americanforcestravel.com"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/a0bc01dc939c490083ad600179ebec51_v8.png?m=639264701165770000",
+      "alt": "American Forces Travel: Fall Starts with Adventure"
+    }
+  ],
+  "notCaptured": "ITT price list (PDF)",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+  "fetchedAt": "2026-10-27"
+}

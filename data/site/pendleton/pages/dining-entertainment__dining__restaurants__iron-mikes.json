@@ -1,0 +1,65 @@
+{
+  "title": "Iron Mike's",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants"
+    },
+    {
+      "label": "Iron Mike's",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/iron-mikes"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Situated within the Pacific Views Event Center (PVEC), the venue boasts breathtaking vistas of the Pacific Ocean, complete with expansive patios and a picturesque pavilion. Iron Mike's provides a welcoming lounge where you can unwind and connect with fellow service members and guests. Experience a vibrant atmosphere where friendship flourishes and family memories are made, all within our esteemed military community.\n\nAvailable for private and special events, parties, and unit functions; all inquiries are welcome.\n\nWe're excited to share an important update that enhances how we serve you and elevates your overall event experience at PVEC.\n\nAs part of our commitment to greater flexibility, convenience, and customer-focused service, we are introducing a new business model that expands both our venue and catering offerings. This new approach allows us to better meet a wide range of event styles, preferences, and budgets.\n\nPVEC has begun implementing a new catering initiative in partnership with MCCS-authorized caterers. Through this model, we will offer both venue space and indirect catering services, giving you access to a selection of trusted vendors. These approved caterers can support everything from casual gatherings to formal events, including a variety of menu options and bar services.\n\nOne of the most exciting aspects of this change is the flexibility it provides. Clients will now be able to:\n\n• Customize catering options directly with approved vendors\n• Enjoy greater control over their event budget\n• Rent venue space by the hour, tailored to their specific needs\n\nAdditionally, we are removing the food and beverage minimum requirement, making it easier to plan events that align with your vision without unnecessary constraints.\n\nAt this time, we are able to assist with reserving your event date, time, and venue space. Once the catering contracts are fully finalized, food and bar services will be coordinated directly with our MCCS-approved vendors, ensuring a streamlined and personalized planning process.\n\nWe look forward to bringing you this enhanced level of service and are confident it will provide a more dynamic and enjoyable event planning experience.\n\nWe will follow up with you as soon as all options are fully available.\n\nThank you for your continued support!"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Iron Mike's",
+      "address": "BLDG 202850, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-2231"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "",
+              "time": "Call for Reservations"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.2254882,-117.3889353"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/iron-mikes",
+  "fetchedAt": "2026-10-27"
+}

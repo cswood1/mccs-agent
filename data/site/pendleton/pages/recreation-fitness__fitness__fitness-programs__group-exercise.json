@@ -1,0 +1,100 @@
+{
+  "title": "Group Exercise",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Fitness Programs",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs"
+    },
+    {
+      "label": "Group Exercise",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/group-exercise"
+    }
+  ],
+  "intro": "Group X classes enhance the overall physical fitness and wellness of our patrons.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Currently, there are no scheduled activities planned for the near future. See all [upcoming events](https://pendleton.usmc-mccs.org/calendar-of-events).\n\nA variety of classes are offered at several fitness center locations to active duty, family members, retirees, DoD employees, and their guests."
+    },
+    {
+      "heading": "Classes Free to Authorized Patrons!",
+      "level": 3,
+      "markdown": "**Paige Field House**\n\n| Time | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |\n|---|---|---|---|---|---|---|---|\n| 6:00 AM | | Cycle | | Cycle | | | |\n| 8:45 AM | | | Youth Dance* | | | | |\n| 8:30 AM | | | | | Youth Dance* | | |\n| 10:00 AM | | | | Family Fitness | | | Family Fitness |\n| 11:30 AM | | Cycle | Yoga | Cycle | STRONG Nation | | |\n| 4:00 PM | | Youth Dance* | Youth Dance* | Youth Dance* | Youth Dance* | Youth Dance* | |\n| 5:30 PM | | Zumba* | | Zumba* | | | |\n\n**14 Area Fitness Center**\n\n| Time | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |\n|---|---|---|---|---|---|---|---|\n| 5:30 PM | | Zumba* | | Zumba* | | | |\n\n**21 Area Fitness Center**\n\n| Time | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |\n|---|---|---|---|---|---|---|---|\n| 11:30 AM | | RPM Cycle (LES MILLS Virtual) | Body Balance (LES MILLS Virtual) | RPM Cycle (LES MILLS Virtual) | Body Balance (LES MILLS Virtual) | | |\n\n*Fees apply."
+    },
+    {
+      "heading": "Group - X Class Descriptions",
+      "level": 3,
+      "markdown": "**CYCLE**\n60-minute indoor cycle class simulating outdoor riding with sprinting, intervals, and hill work. Bring water and a towel.\n\n**FAMILY FITNESS**\nThis is a mommy-and-me fitness class, all ages and strollers are welcome. Parental supervision required.\n\n**LATIN DANCE**\nLearn different styles of Latin Dance like Bachata, Salsa, Cumbia, and Merengue.\n\n**LESMILLS VIRTUAL CLASS: RPM CYCLE**\nAn easy, fun, and intense indoor cycle workout with great music pumping and the group spinning as one on a journey of hill climbs, sprints, and flat riding.\n\n**LESMILLS VIRTUAL CLASS: BODY BALANCE**\nThis is a perfect mix of yoga, tai chi, and pilates created to build functional strength and improve flexibility. Participants strengthen the entire body and leave feeling calm and centered.\n\n**POWER YOGA**\nA vigorous, fitness-based approach to vinyasa-style yoga. Teachers have flexibility to teach poses in any order, emphasizing strength and flexibility.\n\n**STRONG**\nCombines high-intensity interval training with the science of Synced Music Motivation for an intense, full-body workout.\n\n**STRONG YOGA**\nImprove balance, flexibility, mobility, and core strength while learning mental relaxation and stress relief."
+    },
+    {
+      "heading": "Specialty Class Descriptions",
+      "level": 3,
+      "markdown": "**ZUMBA**\nThis cardio-Latin fusion class features aerobic interval training to maximize fat burning and total body toning, all to incredible music with moves that are easy to learn! For more info call: (760) 763-0657"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Paige Field House",
+      "address": "BLDG 1110 13th Street\nCamp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-6394"
+        },
+        {
+          "label": "Zumba info",
+          "number": "(760) 763-0657"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Saturday - Sunday",
+              "time": "6am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.30470641816376,-117.31089252090894"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/b117571476ea4d8d9f83070329f8f804.jpg?m=639096390440300000",
+      "alt": "Group Exercise"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs/group-exercise",
+  "fetchedAt": "2026-10-27"
+}

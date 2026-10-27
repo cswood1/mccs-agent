@@ -1,0 +1,139 @@
+{
+  "title": "More",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Advertising/Sponsorship](https://pendleton.usmc-mccs.org/more/advertising-sponsorship)\n- [Chesty Deals](https://pendleton.usmc-mccs.org/more/chesty-deals)\n- [Customer Feedback (ICE)](https://ice.disa.mil/)\n- [Email Signup](https://pendleton.usmc-mccs.org/more/email-signup)\n- [MCCS Employee Training](https://pendleton.usmc-mccs.org/more/mccs-employee-training)\n- [Recycle](https://pendleton.usmc-mccs.org/more/recycle)\n- [Veterans Access](https://pendleton.usmc-mccs.org/more/veterans-access)\n- [Welcome to Camp Pendleton](https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Advertising/Sponsorship",
+      "url": "https://pendleton.usmc-mccs.org/more/advertising-sponsorship",
+      "text": "Both digital and print options are available to help meet your business needs.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/0444f5eac7a144d3ba7ccbf5ff3776e3.jpg?m=639077416532830000"
+    },
+    {
+      "title": "Chesty Deals",
+      "url": "https://pendleton.usmc-mccs.org/more/chesty-deals",
+      "text": "Look for Chesty Deals at participating MCCS Facilities and discover savings that deliver value.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/67bbd3414a6b431992f8e8b4d1c5cc81_v2.jpg?m=639077444481300000"
+    },
+    {
+      "title": "Customer Feedback (ICE)",
+      "url": "https://ice.disa.mil/",
+      "text": "We want to hear from you! Submit feedback about your MCCS experience.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a5324ad9926942128c5981799a450855_v2.jpg?m=639077304143000000"
+    },
+    {
+      "title": "Email Signup",
+      "url": "https://pendleton.usmc-mccs.org/more/email-signup",
+      "text": "Stay up to date on weekly MCCS news, events, classes, special offers, and much more!",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/7eeeadc4a34a4ff285c16fd85d7397e9_v2.jpg?m=639077305354100000"
+    },
+    {
+      "title": "MCCS Employee Training",
+      "url": "https://pendleton.usmc-mccs.org/more/mccs-employee-training",
+      "text": "MCCS training and online learning opportunities for both personal and professional growth.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/7cfe65bfdb8d4bbd9c66e8725c310af3_v2.jpg?m=639077371950430000"
+    },
+    {
+      "title": "Recycle",
+      "url": "https://pendleton.usmc-mccs.org/more/recycle",
+      "text": "Promoting environmental stewardship to meet federal and state waste diversion mandates.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a202eea2c7444ece962ddb30660401ee_v2.jpg?m=639077327265530000"
+    },
+    {
+      "title": "Veterans Access",
+      "url": "https://pendleton.usmc-mccs.org/more/veterans-access",
+      "text": "See what exciting benefits are available now for qualified Veterans.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d8c9c95cda00458caf8281c6df1c3d57_v2.jpg?m=639077401465730000"
+    },
+    {
+      "title": "Welcome to Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton",
+      "text": "Get information and resources about Marine Corps Community Services at MCB Camp Pendleton.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5ea5999f8de2443e8874a5253034d98e.jpg?m=639144567915330000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Advertising/Sponsorship",
+      "url": "https://pendleton.usmc-mccs.org/more/advertising-sponsorship"
+    },
+    {
+      "text": "Chesty Deals",
+      "url": "https://pendleton.usmc-mccs.org/more/chesty-deals"
+    },
+    {
+      "text": "Customer Feedback (ICE)",
+      "url": "https://ice.disa.mil/"
+    },
+    {
+      "text": "Email Signup",
+      "url": "https://pendleton.usmc-mccs.org/more/email-signup"
+    },
+    {
+      "text": "MCCS Employee Training",
+      "url": "https://pendleton.usmc-mccs.org/more/mccs-employee-training"
+    },
+    {
+      "text": "Recycle",
+      "url": "https://pendleton.usmc-mccs.org/more/recycle"
+    },
+    {
+      "text": "Veterans Access",
+      "url": "https://pendleton.usmc-mccs.org/more/veterans-access"
+    },
+    {
+      "text": "Welcome to Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/0444f5eac7a144d3ba7ccbf5ff3776e3.jpg?m=639077416532830000",
+      "alt": "Advertising/Sponsorship"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/67bbd3414a6b431992f8e8b4d1c5cc81_v2.jpg?m=639077444481300000",
+      "alt": "Chesty Deals"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/a5324ad9926942128c5981799a450855_v2.jpg?m=639077304143000000",
+      "alt": "Customer Feedback (ICE)"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/7eeeadc4a34a4ff285c16fd85d7397e9_v2.jpg?m=639077305354100000",
+      "alt": "Email Signup"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/7cfe65bfdb8d4bbd9c66e8725c310af3_v2.jpg?m=639077371950430000",
+      "alt": "MCCS Employee Training"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/a202eea2c7444ece962ddb30660401ee_v2.jpg?m=639077327265530000",
+      "alt": "Recycle"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d8c9c95cda00458caf8281c6df1c3d57_v2.jpg?m=639077401465730000",
+      "alt": "Veterans Access"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/5ea5999f8de2443e8874a5253034d98e.jpg?m=639144567915330000",
+      "alt": "Welcome to Camp Pendleton"
+    }
+  ],
+  "notCaptured": "No page H1 or breadcrumb on the real page (H1 is the generic 'Hello.' banner); title set to More",
+  "url": "https://pendleton.usmc-mccs.org/more",
+  "fetchedAt": "2026-10-27"
+}

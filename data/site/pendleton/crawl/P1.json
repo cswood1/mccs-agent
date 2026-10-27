@@ -1,0 +1,94 @@
+{
+  "agent": "P1",
+  "captured": [
+    "/",
+    "/calendar-of-events",
+    "/stories",
+    "/about/marine-for-life-cycle",
+    "/about/explore",
+    "/more/welcome-to-camp-pendleton",
+    "/recreation-fitness",
+    "/recreation-fitness/recreation",
+    "/recreation-fitness/recreation/indoor-recreation",
+    "/recreation-fitness/recreation/outdoor-recreation",
+    "/recreation-fitness/recreation/aquatics",
+    "/recreation-fitness/recreation/sports",
+    "/recreation-fitness/fitness",
+    "/recreation-fitness/fitness/fitness-centers",
+    "/recreation-fitness/fitness/fitness-programs",
+    "/recreation-fitness/fitness/races-family-fitness-events",
+    "/recreation-fitness/fitness/24-7-access",
+    "/recreation-fitness/other-recreation-options",
+    "/recreation-fitness/recreation/indoor-recreation/auto-skills",
+    "/lodging",
+    "/lodging/inns-of-the-corps",
+    "/lodging/inns-of-the-corps/pacific-views",
+    "/lodging/inns-of-the-corps/ward-lodge",
+    "/lodging/beach-cottages",
+    "/lodging/beach-cottages/del-mar-beach-marina",
+    "/lodging/beach-cottages/san-onofre-beach",
+    "/lodging/campgrounds-rvs",
+    "/lodging/campgrounds-rvs/lake-oneill",
+    "/more",
+    "/more/advertising-sponsorship",
+    "/more/chesty-deals",
+    "/more/email-signup",
+    "/more/mccs-employee-training",
+    "/more/recycle",
+    "/more/veterans-access",
+    "/tree-lighting",
+    "/holidays",
+    "/activity/e4f2a78d-a754-43a3-a902-195667b060d1",
+    "/connected",
+    "/about/business-partners",
+    "/more/payments",
+    "/more/event-facility-fundraising-forms"
+  ],
+  "extras": [
+    "/recreation-fitness/recreation/aquatics/13-area-pool",
+    "/recreation-fitness/recreation/aquatics/21-area-pool",
+    "/recreation-fitness/recreation/indoor-recreation/active-duty-recreation-centers",
+    "/recreation-fitness/recreation/indoor-recreation/leatherneck-lanes",
+    "/recreation-fitness/recreation/outdoor-recreation/marine-memorial-golf-course",
+    "/recreation-fitness/recreation/outdoor-recreation/marina",
+    "/recreation-fitness/recreation/outdoor-recreation/recreation-checkout",
+    "/recreation-fitness/recreation/outdoor-recreation/recreational-shooting",
+    "/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures",
+    "/recreation-fitness/recreation/outdoor-recreation/stepp-stables",
+    "/recreation-fitness/fitness/fitness-programs/group-exercise",
+    "/recreation-fitness/recreation/sports/youth-sports",
+    "/recreation-fitness/recreation/sports/athletic-fields",
+    "/about"
+  ],
+  "redirects": [
+    {
+      "from": "/careers",
+      "to": "https://careers.usmc-mccs.org/"
+    },
+    {
+      "from": "/about/local-area-information",
+      "to": "https://pendleton.usmc-mccs.org/about",
+      "note": "same host; WebFetch reported no redirect but the URL renders the About landing page (H1 About, breadcrumb About)"
+    },
+    {
+      "from": "/about/contact-us",
+      "to": "https://pendleton.usmc-mccs.org/about",
+      "note": "same host; WebFetch reported no redirect but the URL renders the About landing page (H1 About, breadcrumb About)"
+    }
+  ],
+  "failures": [],
+  "thinPages": [
+    "/calendar-of-events",
+    "/stories",
+    "/about/explore",
+    "/holidays",
+    "/more/email-signup",
+    "/about"
+  ],
+  "notes": [
+    "/lodging renders the Inns of the Corps listing (H1 Inns of the Corps), so lodging.json and lodging__inns-of-the-corps.json have the same cards",
+    "WebFetch condenses long passages (it enforces a quote-length limit); a few long lists/FAQs (recycle) may be lightly condensed - flagged in each page notCaptured",
+    "Marine Memorial Golf Course green-fee tables: 18-hole rates came back lower than 9-hole rates; labels may be swapped - flagged in notCaptured",
+    "Recreational Shooting (Range 216) permanently closes after Oct 30, 2026; Stepp Stables phasing out, operating through Feb 28, 2027"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Single Marine Program",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Single Marine Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/single-marine-program"
+    }
+  ],
+  "intro": "The Single Marine Program (SMP) enhances the quality of life for single, active duty personnel by providing positive and rewarding outlets through recreation and community involvement.",
+  "sections": [
+    {
+      "heading": "Quality of Life Advocacy",
+      "level": 3,
+      "markdown": "Base-wide meetings are held on the first Thursday of each month at 9am at various facilities across the installation. MCAS Camp Pendleton meetings are held on the first Wednesday of each month at noon aboard the air station. Please contact (760) 725-6288 for locations."
+    },
+    {
+      "heading": "Community Involvement",
+      "level": 3,
+      "markdown": "Volunteer opportunities include:\n\n* camp cleanups\n* Stepp Stables\n* beach cleanups\n* elementary school P.E. fitness challenges\n* and veterans and retirement home visits"
+    },
+    {
+      "heading": "Recreation Trips and Events",
+      "level": 3,
+      "markdown": "One-day and weekend trips offered include:\n\n* amusement parks\n* beach days\n* museums\n* hiking\n* skiing\n* white water rafting\n* camping at the Grand Canyon and Zion National Park\n\nTrips depart on Friday mornings and return on Sunday evenings. Price is based on trip costs and includes transportation and lodging. Please call (760) 725-6288 or email pensmp@usmc-mccs.org for more information or to sign up.\n\n[Newsletter Signup](https://mccscp.us2.list-manage.com/subscribe?u=a5187750b86993a94ec406261&id=a82164af07)"
+    },
+    {
+      "heading": "SMP Council",
+      "level": 2,
+      "markdown": "**SMP Council MCAS Camp Pendleton and MAG-39**\n\n- President: RP2 Natalie Aller\n- Vice President: Cpl Lazarus Vigil\n- Scribe: N/A\n\n**SMP Council (second council)**\n\n- President: Cpl Jourdan Fenwick\n- Vice President: Sgt Alexas Spears\n- Scribe: LCpl Jake Speyrer"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Your Next Adventure Starts with SMP",
+      "url": "https://pendleton.usmc-mccs.org/news/your-next-adventure-starts-with-smp",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/6a3492c828394b69b3f5c31290fa8a7b.jpg?m=639160977203000000"
+    },
+    {
+      "title": "The Marine Path of Growth, Leadership, and Lifelong Purpose",
+      "url": "https://pendleton.usmc-mccs.org/news/the-marine-path-of-growth-leadership-and-lifelong-purpose",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/e8bd6a6ef0a449c2b6819df94389eb0a.jpg?m=639002061713470000"
+    },
+    {
+      "title": "Connect with Others to Build Mental Toughness",
+      "url": "https://pendleton.usmc-mccs.org/news/connect-with-others-to-build-mental-toughness",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d7b6fd77574a4ffa858a8d9d55935096.jpg?m=638869715832170000"
+    },
+    {
+      "title": "Lead and Serve with the Single Marine Program",
+      "url": "https://pendleton.usmc-mccs.org/news/lead-and-serve-with-the-single-marine-program",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/2e5ec09fa30c4f068f6cd242df0c5255.png?m=638823152900330000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Single Marine Program",
+      "address": "BLDG 1253, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 576-1905"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 725-6288"
+        }
+      ],
+      "emails": [
+        "pensmp@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Newsletter Signup",
+      "url": "https://mccscp.us2.list-manage.com/subscribe?u=a5187750b86993a94ec406261&id=a82164af07"
+    }
+  ],
+  "images": [],
+  "notCaptured": "The second SMP Council's heading (likely the base-wide council) was not returned by the fetch tool. No hours listed on the page.",
+  "url": "https://pendleton.usmc-mccs.org/marine-family-support/single-marine-program",
+  "fetchedAt": "2026-10-27"
+}

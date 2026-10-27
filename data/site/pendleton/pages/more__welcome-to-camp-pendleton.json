@@ -1,0 +1,455 @@
+{
+  "title": "Welcome to Camp Pendleton",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "Welcome to Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton"
+    }
+  ],
+  "intro": "Whether you are arriving on your first assignment, transitioning with your family, or joining our community as a civilian employee, we are committed to helping make your move as smooth and successful as possible.",
+  "sections": [
+    {
+      "heading": "Check Into Command",
+      "level": 2,
+      "markdown": "All Marines checking into the following are to report to the Installation Personnel Administration Center (IPAC) Inbound Center, BLDG 13107 (directly across from the 13 Area Mess Hall):\n\n- 1st Marine Division\n- 1st Marine Logistics Group\n- I Marine Expeditionary Force\n- Marine Aircraft Group 39\n- Marine Corps Air Station\n- Marine Corps Base\n- Weapons and Field Training Battalion\n\n**After-Hours Check-In Information**\nA duty officer is available 24-hours a day to assist Marines reporting to Marine Corps Base Camp Pendleton outside of normal working hours and to endorse required check-in documentation.\n\nFor additional information, please contact the Installation Personnel Administration Center (IPAC) Inbound Center."
+    },
+    {
+      "heading": "Housing Office",
+      "level": 2,
+      "markdown": "The Family Housing Office provides assistance whether you decide to live on or off base. If you desire to live aboard the base, you are encouraged to submit an advance application to the Family Housing Office once you receive your web orders.\n\nWith your CAC card and NMCI account you can digitally sign the Housing Application Forms located on [Camp Pendleton Family Housing](https://www.pendleton.marines.mil/Staff/Principal-Staff/G-F-Facilities/#Tab/family-housing).\n\nPlease limit the size of emails to 8MB per email. If you do not have CAC access you can download and send as an e-mail attachment or fax the application. You can also drop-off your application at the Joint Housing Office, 98 San Jacinto Road (near the main gate located off of Interstate 5).\n\nFamily Housing at MCB Camp Pendleton has been \"privatized.\" Public-Private Venture (PPV) partners, [Lincoln Military Housing](https://livelmh.com/installations/camp-pendleton-mcb/) and [Hunt Military Communities](http://www.deluzfamilyhousing.com/) are responsible for the day-to-day management and maintenance of 7,795 homes aboard the base.\n\nIf you decide to live off base, our Housing Referral Section can assist you in relocating to a local Southern California community. Referral Section services include home purchase information, finance and refinance referrals, conventional, Cal-Vet and other loan information, and landlord/tenant mediation services."
+    },
+    {
+      "heading": "Installation Personnel Administration Center (IPAC)",
+      "level": 2,
+      "markdown": "Hours of operation for Installation Personnel Administration Center (IPAC), unless directed otherwise, are as follows:\n\n**Inbound Branch, BLDG 13107**\nMonday - Friday: 7:30am - 4:30pm\n\n**Outbound Branch, BLDG 22162**\nMonday - Friday: 7:30am - 4:30pm\n\n**Personnel Support Branch, BLDG 1441**\nMonday - Friday: 7:30am - 4:30pm\n\n**Command Support Branch, BLDG 1441**\nMonday - Friday: 7:30am - 4:30pm"
+    },
+    {
+      "heading": "Base Access",
+      "level": 2,
+      "markdown": "[Base Access](https://www.pendleton.marines.mil/Staff/Principal-Staff/Security-and-Emergency-Services/Base-Access/)"
+    },
+    {
+      "heading": "Medical & Dental Enrollment",
+      "level": 2,
+      "markdown": "- Make sure your information is correct in DEERS (ID Card Office).\n- Log in to [milConnect](https://milconnect.dmdc.osd.mil).\n- [Dental](https://secure.addp-ucci.com/home)\n- (844) 653-4061"
+    },
+    {
+      "heading": "TRICARE Enrollment",
+      "level": 2,
+      "markdown": "[TRICARE](https://tricare.mil/west/) Call (800) 538-9552."
+    },
+    {
+      "heading": "School Liaison Contact",
+      "level": 2,
+      "markdown": "We support military families by prioritizing the educational needs of their children, providing resources, and ensuring smooth transitions between schools."
+    },
+    {
+      "heading": "Childcare Registration",
+      "level": 2,
+      "markdown": "[MilitaryChildCare.com](https://public.militarychildcare.csd.disa.mil/mcc-central/mcchome)"
+    },
+    {
+      "heading": "DEERS Updates",
+      "level": 2,
+      "markdown": "[RAPIDS ID Card Office Online](https://idco.dmdc.osd.mil/idco)"
+    },
+    {
+      "heading": "Sponsorship Information",
+      "level": 2,
+      "markdown": "Please email mccspendleton.resourcereferral@usmc-mccs.org if you need sponsorship assistance."
+    },
+    {
+      "heading": "Lending Locker",
+      "level": 2,
+      "markdown": "**Lending Locker Camp Pendleton**\nBLDG 13150\nC Street, Camp Pendleton\n\nMonday - Friday: 8am - 3pm\n\nAppointment is not required."
+    },
+    {
+      "heading": "DMO/Household Goods",
+      "level": 2,
+      "markdown": "The Distribution Management Office (DMO) is your primary resource for transportation and personal property support during a Permanent Change of Station (PCS) move. DMO provides guidance and assistance with household goods shipments, storage, vehicle transportation, inbound and outbound moves, and other transportation-related services for military members, civilian employees, and their families.\n\nOur goal is to provide timely, professional, and customer-focused support to help make your transition to, from, or within Camp Pendleton as smooth as possible. Because transportation entitlements and policies may change, we encourage you to contact our office directly if you have questions regarding your specific situation.\n\n[Distribution Management Office](https://www.pendleton.marines.mil/Staff/Principal-Staff/G-4-Logistics/Distribution-Management-Office/)"
+    },
+    {
+      "heading": "Temporary Lodging",
+      "level": 2,
+      "markdown": "**Pacific Views Lodge**\n- Overlooking the ocean and next to the South Mesa Club near the main gate.\n- All rooms have ocean views and flat screen TVs.\n- 48 deluxe rooms, 21 suites\n\n**Ward Lodge**\n- Near Mainside Center & 13 Area Pool.\n- Make reservations as early as 6 months in advance."
+    },
+    {
+      "heading": "Local Area Guide",
+      "level": 2,
+      "markdown": "[Local Area Information](https://pendleton.usmc-mccs.org/about/local-area-information)"
+    },
+    {
+      "heading": "Pet Resources",
+      "level": 2,
+      "markdown": "**Camp Pendleton Veterinary Treatment Facility**\nBLDG 106090, 4th Street\n(760) 725-3439"
+    },
+    {
+      "heading": "Financial Readiness for PCS Moves",
+      "level": 2,
+      "markdown": "A Permanent Change of Station (PCS) can bring unexpected expenses and financial challenges. Personal Financial Management (PFM) specialists are available to help service members and families develop a personalized PCS budget, plan for moving-related expenses, manage travel and temporary lodging costs, and prepare for changes in housing and cost of living.\n\n[Personal Financial Management Program](https://pendleton.usmc-mccs.org/marine-family-support/personal-financial-management)"
+    },
+    {
+      "heading": "Naval Hospital",
+      "level": 2,
+      "markdown": "200 Mercy Circle\nCamp Pendleton, CA 92055\n\n[Naval Hospital Camp Pendleton](https://camp-pendleton.tricare.mil/)"
+    },
+    {
+      "heading": "Resources",
+      "level": 2,
+      "markdown": "- [Prevention and Counseling](https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling)\n- [Exceptional Family Member Program](https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program)\n- [Family Child Care](https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care)\n- [Family Readiness](https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/family-readiness-program)\n- [L.I.N.K.S. Program](https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/l-i-n-k-s)\n- [Marine Corps Family Team Building](https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building)\n- [New Parent Support](https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support)\n- [Volunteer Opportunities](https://pendleton.usmc-mccs.org/marine-family-support/volunteer-opportunities)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Welcome Aboard Brief",
+      "url": "https://pendleton.usmc-mccs.org/activity/9620f154-7b5e-45fc-879a-2986be1c6b79",
+      "text": "Nov 4, 08:00am - 10:30am, Unit Event Center",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/e86b59372001441a9ca5e350d704aaa5_w394_h173.jpg"
+    },
+    {
+      "title": "Welcome Aboard Brief",
+      "url": "https://pendleton.usmc-mccs.org/activity/a801e3d9-43ba-4f8c-b4d5-425d902bb6d8",
+      "text": "Nov 18, 05:00pm - 06:30pm, Online",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/e0241b04fdd640e5a17bf887bc9afdc9_v3.png"
+    },
+    {
+      "title": "Plan My Move Brief",
+      "url": "https://pendleton.usmc-mccs.org/activity/fc20a198-c432-4b6c-9693-31adb7f6aac4",
+      "text": "Nov 20, 08:00am - 11:00am, L.I.N.K.S.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d777afedc8c04590b5f20e61a5b5407d_w394_h173.png"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Installation Personnel Administration Center (IPAC) Inbound Center",
+      "address": "BLDG 13107, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 763-5203"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 763-6992"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 725-3730"
+        },
+        {
+          "label": "After-Hours",
+          "number": "(760) 725-6271"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "7:30am - 4:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A duty officer is available 24-hours a day to assist Marines reporting outside of normal working hours."
+      ]
+    },
+    {
+      "name": "Family Housing Office",
+      "address": "Joint Housing Office, 98 San Jacinto Road, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-5995"
+        },
+        {
+          "label": "Toll Free",
+          "number": "(800) 843-2182"
+        },
+        {
+          "label": "Fax",
+          "number": "(760) 725-5559"
+        },
+        {
+          "label": "Fax (DSN)",
+          "number": "365-5559"
+        }
+      ],
+      "emails": [
+        "pndlfamilyhousing@usmc.mil"
+      ],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "School Liaison",
+      "address": "BLDG 1160, RM# 281, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 763-7385"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 763-7386"
+        }
+      ],
+      "emails": [
+        "PendletonAreaSchoolLiaisonProgram@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 4:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 4:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 4:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 4:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 4:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Lending Locker Camp Pendleton",
+      "address": "BLDG 13150, C Street, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-9052"
+        }
+      ],
+      "emails": [
+        "mccspendleton.resourcereferral@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Appointment is not required."
+      ]
+    },
+    {
+      "name": "Pacific Views Lodge",
+      "address": "BLDG 202870, Camp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 763-7805"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 763-7807"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 763-7806"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 763-7809"
+        }
+      ],
+      "emails": [
+        "lodgingreservations.pacificviews@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Ward Lodge",
+      "address": "BLDG 1310, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-5304"
+        }
+      ],
+      "emails": [
+        "lodgingreservations.wardlodge@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Camp Pendleton Veterinary Treatment Facility",
+      "address": "BLDG 106090, 4th Street, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-3439"
+        }
+      ],
+      "emails": [
+        "camppendletonvet@gmail.com"
+      ],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 12pm, 1pm - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 12pm, 1pm - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 12pm, 1pm - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 12pm, 1pm - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Naval Hospital Camp Pendleton",
+      "address": "200 Mercy Circle, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-1288"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Information, Referral, & Relocation",
+      "address": "Unit Event Center, West Barnett Circle, BLDG 1795, Camp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-6090"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 277-4643"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 725-5704"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Camp Pendleton Family Housing",
+      "url": "https://www.pendleton.marines.mil/Staff/Principal-Staff/G-F-Facilities/#Tab/family-housing"
+    },
+    {
+      "text": "Lincoln Military Housing",
+      "url": "https://livelmh.com/installations/camp-pendleton-mcb/"
+    },
+    {
+      "text": "Hunt Military Communities",
+      "url": "http://www.deluzfamilyhousing.com/"
+    },
+    {
+      "text": "Base Access",
+      "url": "https://www.pendleton.marines.mil/Staff/Principal-Staff/Security-and-Emergency-Services/Base-Access/"
+    },
+    {
+      "text": "milConnect",
+      "url": "https://milconnect.dmdc.osd.mil"
+    },
+    {
+      "text": "Dental",
+      "url": "https://secure.addp-ucci.com/home"
+    },
+    {
+      "text": "TRICARE",
+      "url": "https://tricare.mil/west/"
+    },
+    {
+      "text": "MilitaryChildCare.com",
+      "url": "https://public.militarychildcare.csd.disa.mil/mcc-central/mcchome"
+    },
+    {
+      "text": "RAPIDS ID Card Office Online",
+      "url": "https://idco.dmdc.osd.mil/idco"
+    },
+    {
+      "text": "Distribution Management Office",
+      "url": "https://www.pendleton.marines.mil/Staff/Principal-Staff/G-4-Logistics/Distribution-Management-Office/"
+    },
+    {
+      "text": "Local Area Information",
+      "url": "https://pendleton.usmc-mccs.org/about/local-area-information"
+    },
+    {
+      "text": "Personal Financial Management Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/personal-financial-management"
+    },
+    {
+      "text": "Naval Hospital Camp Pendleton",
+      "url": "https://camp-pendleton.tricare.mil/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Embedded videos (Welcome to Camp Pendleton, Our Mission, MCB Camp Pendleton Local Hazards Brief, Semper Fit) not captured; upcoming events list is dynamic (3 shown as cards)",
+  "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton",
+  "fetchedAt": "2026-10-27"
+}

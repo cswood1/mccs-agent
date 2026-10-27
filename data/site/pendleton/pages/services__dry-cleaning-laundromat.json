@@ -1,0 +1,430 @@
+{
+  "title": "Dry Cleaning/Laundromat",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    },
+    {
+      "label": "Dry Cleaning/Laundromat",
+      "url": "https://pendleton.usmc-mccs.org/services/dry-cleaning-laundromat"
+    }
+  ],
+  "intro": "Camp Pendleton Dry Cleaning locations across the base offer tailoring, alterations, and an extensive list of dry cleaning services.",
+  "sections": [
+    {
+      "heading": "Tailoring and Alterations Locations",
+      "level": 2,
+      "markdown": "The following locations offer tailoring and alterations:\n\n• Mainside Dry Cleaners\n• School of Infantry Tailor Shop\n• Pacific Views MCX Tailor Shop"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Dry Cleaning – Chappo 22 Area",
+      "address": "BLDG 22196, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4593"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – Horno 53 Area",
+      "address": "BLDG 53319, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-763-3293"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – Las Pulgas 43 Area",
+      "address": "BLDG 43508, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-763-3293"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – San Mateo 62 Area",
+      "address": "BLDG 62407, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-7383"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – Mainside 15 Area",
+      "address": "BLDG 15100, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-636-3743"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – Pacific Views MCX 20 Area",
+      "address": "BLDG 2010, Camp Pendleton, CA 92005",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4392"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaning – School of Infantry 52 Area",
+      "address": "BLDG 520409, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-822-2137"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:30am - 5:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:30am - 5:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:30am - 5:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:30am - 5:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9:30am - 5:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Laundromat – San Onofre (Lower)",
+      "address": "BLDG 510814, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Daily",
+              "time": "Open 24 hours"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Laundromat – San Onofre (Upper)",
+      "address": "BLDG 510818, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Daily",
+              "time": "Open 24 hours"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Laundromat – Del Mar Beach 21 Area",
+      "address": "BLDG 210592, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Daily",
+              "time": "Open 24 hours"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Laundromat – Del Mar 21 Area",
+      "address": "BLDG 210601, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Daily",
+              "time": "Open 24 hours"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services/dry-cleaning-laundromat",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Food Trucks",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Food Trucks",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/food-trucks"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "The page shows only the heading; no food truck schedules or listings appear in the page text (likely an image or dynamic content).",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/food-trucks",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,1993 @@
+{
+  "title": "MCCS Fast Food - Pendleton",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Fast Food",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/fast-food"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Locations by area:\n\n• Mainside\n• Near Mainside\n• Golf Course\n• Main Gate\n• Del Mar\n• San Onofre\n• School of Infantry\n• Chappo/MCAS\n• Las Pulgas\n• Las Flores\n• Horno\n• San Mateo"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Domino's Pizza – Mainside",
+      "address": "BLDG 13030, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-575-9850"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 2am"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 2am"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 12am"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Classic and specialty pizzas, wings, and sides—perfect for quick carryout or convenient delivery anytime."
+      ]
+    },
+    {
+      "name": "Moe's Southwest Grill",
+      "address": "BLDG 15102, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-0030"
+        }
+      ],
+      "emails": [
+        "moes.811@jbscpllc.com"
+      ],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "11am - 7pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "11am - 7pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Flavorful burritos, tacos, bowls, and more."
+      ]
+    },
+    {
+      "name": "Panda Express – Mainside",
+      "address": "BLDG 15102, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-512-6000"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Pick up quick, flavorful, and freshly made American-Chinese favorites like Orange Chicken and Beijing Beef."
+      ]
+    },
+    {
+      "name": "Raising Cane's Chicken Fingers",
+      "address": "BLDG 15103, Camp Pendleton, CA 92058",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 11pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 11pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 11pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 11pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 11pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 10pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 10pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "American fast-food chain specializing in chicken fingers."
+      ]
+    },
+    {
+      "name": "Starbucks – Mainside",
+      "address": "BLDG 15103, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Specialty coffee drinks, teas, and pastries."
+      ]
+    },
+    {
+      "name": "Subway – Mainside",
+      "address": "BLDG 15102, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-0069"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Customizable submarine sandwiches, wraps, and salads."
+      ]
+    },
+    {
+      "name": "Pub 1795",
+      "address": "1795 West Barnett Circle, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5331"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "4pm - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Available for private and special events, parties, and unit functions; all inquiries are welcome."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – Mainside",
+      "address": "BLDG 1482, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Shake Smart",
+      "address": "Kiosk at Paige Field House, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "858-461-8313"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Healthy protein shakes, smoothies, and nutritious snacks."
+      ]
+    },
+    {
+      "name": "Eagle's Landing",
+      "address": "Marine Memorial Golf Course, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "Available by reservation.",
+        "A relaxed bar and banquet space offering scenic views, casual drinks, and catering options—perfect for social gatherings, special events, or unwinding after a round of golf."
+      ]
+    },
+    {
+      "name": "The Tern",
+      "address": "Marine Memorial Golf Course, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5331"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "Closed"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A quick dining option near the 10th tee."
+      ]
+    },
+    {
+      "name": "Windmill Canyon",
+      "address": "18415 Golf Course Road, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5331"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Kitchen closes an hour before closing.",
+        "Available for private and special events, parties and unit functions, all inquiries welcome."
+      ]
+    },
+    {
+      "name": "Domino's Pizza – Main Gate",
+      "address": "BLDG 20845, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7180"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 12am"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 2am"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 2am"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Classic and specialty pizzas, wings, and sides—perfect for quick carryout or convenient delivery anytime."
+      ]
+    },
+    {
+      "name": "Dunkin' – Main Gate",
+      "address": "BLDG 2010, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7646"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "5am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "5am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fuel your day with fresh coffee, delicious donuts, and quick breakfast favorites at Dunkin'."
+      ]
+    },
+    {
+      "name": "Hibachi-San",
+      "address": "BLDG 20846, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-0308"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual Japanese fast‑food spot serving flavorful bowls, hibachi‑style grilled fare, sushi, and poke with fresh ingredients."
+      ]
+    },
+    {
+      "name": "Iron Mike's",
+      "address": "BLDG 202850, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-2231"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "Call for Reservations",
+        "Situated within the Pacific Views Event Center (PVEC), the venue boasts breathtaking vistas of the Pacific Ocean, complete with expansive patios and a picturesque pavilion. Iron Mike's provides a welcoming lounge where you can unwind and connect with fellow service members and guests. Experience a vibrant atmosphere where friendship flourishes and family memories are made, all within our esteemed military community.",
+        "Available for private and special events, parties, and unit functions; all inquiries are welcome."
+      ]
+    },
+    {
+      "name": "Jersey Mike's – Main Gate",
+      "address": "BLDG 2010, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-4143"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fresh‑made subs, quality meats, and friendly service, where handcrafted sandwiches are sliced to order and served with bold flavor."
+      ]
+    },
+    {
+      "name": "McDonald's – Main Gate",
+      "address": "BLDG 20844, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-4630"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6am - 11pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Quick and convenient classic burgers, fries, breakfast favorites, and beverages."
+      ]
+    },
+    {
+      "name": "Panda Express – Main Gate",
+      "address": "BLDG 20845, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7981"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Pick up quick, flavorful, and freshly made American-Chinese favorites like Orange Chicken and Beijing Beef."
+      ]
+    },
+    {
+      "name": "Panera Bread",
+      "address": "BLDG 20845, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-2510"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Freshly baked breads, wholesome sandwiches, soups, and salads."
+      ]
+    },
+    {
+      "name": "Qdoba",
+      "address": "BLDG 20845, #110, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-232-8364"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fast casual restaurant serving Mexican-style cuisine."
+      ]
+    },
+    {
+      "name": "Starbucks – Main Gate",
+      "address": "BLDG 202850 (at Pacific Views Event Center), Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-2231"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Specialty coffee drinks, teas, and pastries."
+      ]
+    },
+    {
+      "name": "Yogurtland",
+      "address": "BLDG 2010, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7785"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "11am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "11am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Alohana Acai Bowls",
+      "address": "BLDG 210602, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-653-6682"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "We have you covered with fresh, quick‑service açai bowls, smoothies, and pressed juices."
+      ]
+    },
+    {
+      "name": "Dunkin' – Del Mar",
+      "address": "BLDG 210605, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7646"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 1pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 1pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 1pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 1pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 1pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fuel your day with fresh coffee, delicious donuts, and quick breakfast favorites at Dunkin'."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – Del Mar",
+      "address": "BLDG 2100, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-689-5204"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 5:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 5:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 5:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 5:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 5:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Subway – Del Mar",
+      "address": "BLDG 210605, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-7164"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Customizable submarine sandwiches, wraps, and salads."
+      ]
+    },
+    {
+      "name": "Domino's Pizza – School of Infantry",
+      "address": "BLDG 520407, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-575-9880"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9:30am - 12am"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:30am - 12am"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:30am - 12am"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:30am - 12am"
+            },
+            {
+              "days": "Friday",
+              "time": "9:30am - 12am"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 1am"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 12am"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Delivery available for San Onofre Beach. Carry-out service ends at 12pm.",
+        "Classic and specialty pizzas, wings, and sides—perfect for quick carryout or convenient delivery anytime."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – School of Infantry",
+      "address": "BLDG 520409, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Dang Brother Camp Pendleton – Chappo",
+      "address": "22 Area, Camp Pendleton, California",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-529-4499"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Serving authentic wood-fired pizzas straight from a converted fire truck, this Camp Pendleton favorite delivers bold flavor, fresh ingredients, and quick, satisfying bites."
+      ]
+    },
+    {
+      "name": "Dunkin' – Chappo",
+      "address": "BLDG 22125, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "619-996-4176"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 3pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 3pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 3pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 3pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 1pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 1pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fuel your day with fresh coffee, delicious donuts, and quick breakfast favorites at Dunkin'."
+      ]
+    },
+    {
+      "name": "McDonald's – Chappo",
+      "address": "BLDG 2227, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-0235"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6am - 11pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6am - 11pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Quick and convenient classic burgers, fries, breakfast favorites, and beverages."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – Chappo",
+      "address": "22 Area, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-689-5204"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – MCAS",
+      "address": "BLDG 23122, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Subway – Chappo",
+      "address": "22 Area, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "714-709-4274"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Customizable submarine sandwiches, wraps, and salads."
+      ]
+    },
+    {
+      "name": "McDonald's – Las Pulgas",
+      "address": "BLDG 430314, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-237-3723"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Quick and convenient classic burgers, fries, breakfast favorites, and beverages."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – Las Pulgas",
+      "address": "43 Area, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-689-5204"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Jersey Mike's – Las Flores",
+      "address": "BLDG 4154, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-512-1230"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Fresh‑made subs, quality meats, and friendly service, where handcrafted sandwiches are sliced to order and served with bold flavor."
+      ]
+    },
+    {
+      "name": "Black Coffee Shot Box – Horno",
+      "address": "BLDG 530320, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 1:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 1:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 1:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 1:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 1:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Kickstart your day with bold coffee, quick breakfast bites, and fast, no-fuss service."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – Horno",
+      "address": "53 Area, Camp Pendleton, CA",
+      "phones": [],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    },
+    {
+      "name": "Dang Brother Camp Pendleton – San Mateo",
+      "address": "62 Area, Camp Pendleton, California",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-529-4499"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Serving authentic wood-fired pizzas straight from a converted fire truck, this Camp Pendleton favorite delivers bold flavor, fresh ingredients, and quick, satisfying bites."
+      ]
+    },
+    {
+      "name": "Ramones Mexican BBQ – San Mateo",
+      "address": "BLDG 62407, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-689-5204"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "A casual dining spot that blends traditional Mexican flavors with barbecue-style cooking."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "View Menu",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=94c77bfd-0260-40df-8d0d-fea812f1f83f&v=3"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Menu (PDF). Area grouping of locations is shown via the area list; each contact name carries its area.",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/fast-food",
+  "fetchedAt": "2026-10-27"
+}

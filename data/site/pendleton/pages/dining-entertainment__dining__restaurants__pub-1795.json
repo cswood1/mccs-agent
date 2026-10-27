@@ -1,0 +1,108 @@
+{
+  "title": "Pub 1795",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants"
+    },
+    {
+      "label": "Pub 1795",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/pub-1795"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Available for private and special events, parties, and unit functions; all inquiries are welcome."
+    },
+    {
+      "heading": "Alerts",
+      "level": 3,
+      "markdown": "**CLOSURE:** October 30: Pub 1795 will be closed for the day."
+    },
+    {
+      "heading": "Upcoming Events",
+      "level": 3,
+      "markdown": "• Nov 6: First Friday at Pub 1795, 03:00pm - 09:00pm\n• Dec 4: First Friday at Pub 1795, 03:00pm - 09:00pm"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Pub 1795",
+      "address": "1795 West Barnett Circle, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5331"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Thursday",
+              "time": "Closed"
+            },
+            {
+              "days": "Friday",
+              "time": "4pm - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Menu",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=9c812ea8-51f4-4371-a9e0-3d7f9d1f8342&v=1"
+    },
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.2863596,-117.3026602"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/4e76d832d06d4cf69c84b78f9129a625.png?m=639245047256430000",
+      "alt": "First Friday at Pub 1795"
+    }
+  ],
+  "notCaptured": "Menu (PDF).",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/pub-1795",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Inns of the Corps",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Inns of the Corps",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Pacific Views](https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views)\n- [Ward Lodge](https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/ward-lodge)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Pacific Views",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views",
+      "text": "Pacific Views offers the comfort you and your family are looking for at a very competitive price....",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d537c27ff8254156a43898df6bd4b798_v3.jpg?m=639078156572100000"
+    },
+    {
+      "title": "Ward Lodge",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/ward-lodge",
+      "text": "Located in the heart of Camp Pendleton, Ward Lodge can offer the comfort you and your family are...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/1bb597b2336b4e089f50de6c6e97e8d0.png?m=639077351363270000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Pacific Views",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views"
+    },
+    {
+      "text": "Ward Lodge",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/ward-lodge"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d537c27ff8254156a43898df6bd4b798_v3.jpg?m=639078156572100000",
+      "alt": "Pacific Views"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/1bb597b2336b4e089f50de6c6e97e8d0.png?m=639077351363270000",
+      "alt": "Ward Lodge"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps",
+  "fetchedAt": "2026-10-27"
+}

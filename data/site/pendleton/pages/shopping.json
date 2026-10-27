@@ -1,0 +1,56 @@
+{
+  "title": "Shopping",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://pendleton.usmc-mccs.org/shopping"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Marine Corps Exchange",
+      "url": "https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange",
+      "text": "The ONLY store specifically for Marines and their families. Price matching, catalogs, and our 10+...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/8143ddbc8cb940a6bc9d8715aedf6c93_v2.jpg?m=639092831910300000"
+    },
+    {
+      "title": "Uniform & Clothing Services",
+      "url": "https://pendleton.usmc-mccs.org/shopping/uniform-clothing-services",
+      "text": "There are three locations to serve you. Each carries various selections. Pacific Views MCX offers...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a15b5246491743c0975b81ac45db0125_v2.jpg?m=639092826901030000"
+    },
+    {
+      "title": "Marine Marts, MCX24, & Fuel Stations",
+      "url": "https://pendleton.usmc-mccs.org/shopping/marine-marts-package-wine-stores",
+      "text": "Marine Corps MCX Marine Marts offer a variety of essentials: grab-and-go food, prepared hot food...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/eaa445a46e724c3a8a8bd6afd57cb59f_v2.jpg?m=639092818076130000"
+    },
+    {
+      "title": "MCX24 Micro Marts",
+      "url": "https://pendleton.usmc-mccs.org/shopping/micro-marts",
+      "text": "MCX 24-hour access, you can shop anytime, day or night.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/1361a7591c8945c887bd25ac7d7c9cb3_v3.jpg?m=639089462926200000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Subscribe to MCX Offers Now",
+      "url": "https://www.mymcx.com/"
+    },
+    {
+      "text": "eGIFT Cards",
+      "url": "https://mcxstore.wgiftcard.com/responsive/personalize_responsive/chooseDesign/mcx_resp/1"
+    },
+    {
+      "text": "Uniforms",
+      "url": "https://www.mymcx.com/uniforms"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/shopping",
+  "fetchedAt": "2026-10-27"
+}

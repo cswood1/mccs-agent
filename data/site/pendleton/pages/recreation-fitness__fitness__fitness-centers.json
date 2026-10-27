@@ -1,0 +1,640 @@
+{
+  "title": "Fitness Centers",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Fitness Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Alerts",
+      "level": 0,
+      "markdown": "**CLOSURE** - October 27: 33 Area Fitness Center will be closed from 3pm - 7:30pm to support the 33 Area Trunk-or-Treat event.\n\n**PHONE OUTAGE** - The 21 Area Fitness Center phone line is currently down. For assistance, call Semper Fit Headquarters at (760) 725-6288. Please leave a message and we will return your call as soon as possible.\n\n**UNMANNED CAC ACCESS** - November 7: Due to a scheduled power outage, unmanned CAC access (24/7 access) at 62 Area Fitness Center will be limited."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 5,
+      "markdown": ""
+    },
+    {
+      "heading": "Resource Downloads",
+      "level": 5,
+      "markdown": "- [Fitness Center Facility Usage Request](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=956acbc8-1f5a-41bf-ab27-e5babf67c583&v=1)\n- [Unstaffed and Hybrid Fitness Centers Policy](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=095ba8c8-8339-4f5c-9a7b-be74acb254d7&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Fitness Center – 21 Area",
+      "address": "BLDG 210750\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-2951"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 10pm, 11am - 1pm Active Duty Only"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 10pm, 11am - 1pm Active Duty Only"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 10pm, 11am - 1pm Active Duty Only"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 10pm, 11am - 1pm Active Duty Only"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 10pm, 11am - 1pm Active Duty Only"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 31 Area",
+      "address": "BLDG 31A30\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-2678"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5:30am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5:30am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5:30am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5:30am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5:30am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 2pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 2pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 33 Area",
+      "address": "BLDG 330362\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-8737"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 41 Area",
+      "address": "BLDG 4159\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-2033"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 43 Area",
+      "address": "BLDG 430320\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-3468"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 52 Area",
+      "address": "BLDG 520415\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-7262"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6am - 1pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6am - 1pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 53 Area",
+      "address": "BLDG 530301\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-7404"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – MCAS",
+      "address": "BLDG 2369\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-1353"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 14 Area",
+      "address": "BLDG 14013\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-5941"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 22 Area",
+      "address": "BLDG 22160\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-3163"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Fitness Center – 62 Area",
+      "address": "BLDG 620411\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-7421"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    },
+    {
+      "name": "Paige Field House",
+      "address": "13th Street\nCamp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-6394"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "5am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "6am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "24/7 access available. All authorized patrons. Registration required."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Fitness Center Facility Usage Request",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=956acbc8-1f5a-41bf-ab27-e5babf67c583&v=1"
+    },
+    {
+      "text": "Unstaffed and Hybrid Fitness Centers Policy",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=095ba8c8-8339-4f5c-9a7b-be74acb254d7&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Alerts are the site alert banner as of fetch; PDFs (usage request, policy) not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers",
+  "fetchedAt": "2026-10-27"
+}

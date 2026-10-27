@@ -1,0 +1,149 @@
+{
+  "title": "La Casa Del Mar",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions"
+    },
+    {
+      "label": "La Casa Del Mar",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/la-casa-del-mar"
+    }
+  ],
+  "intro": "Experience exciting indoor event spaces, patios, and outdoor stage. Enjoy extraordinary hospitality and catering services against a picturesque ocean backdrop at one of Southern California's most exclusive beaches!",
+  "sections": [
+    {
+      "heading": "Amenities & Details",
+      "level": 2,
+      "markdown": "• wireless internet\n• outdoor ceremony space\n• oceanview pavilion\n• reception room"
+    },
+    {
+      "heading": "Settings",
+      "level": 2,
+      "markdown": "• beachfront reception room"
+    },
+    {
+      "heading": "Venue Service Offerings",
+      "level": 2,
+      "markdown": "• bar, drinks\n• cakes, desserts\n• food, catering\n• planning\n• service staff"
+    },
+    {
+      "heading": "Pacifico Room",
+      "level": 3,
+      "markdown": "• accommodates up to 100 guests"
+    },
+    {
+      "heading": "La Marina Room",
+      "level": 3,
+      "markdown": "• accommodates up to 50 guests"
+    },
+    {
+      "heading": "Beach Stage",
+      "level": 3,
+      "markdown": "• available for official military trainings, ceremonies, and MCCS special events\n• 800 square feet"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "La Casa Del Mar",
+      "address": "BLDG 2100, 12th Street, Camp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-575-9700"
+        }
+      ],
+      "emails": [
+        "lacasadelmar@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Booking & Inquiry",
+          "rows": [
+            {
+              "days": "Monday–Friday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Saturday–Sunday",
+              "time": "Closed"
+            }
+          ]
+        },
+        {
+          "label": "Event Availability",
+          "rows": [
+            {
+              "days": "Monday–Sunday",
+              "time": "7:30am - 12am"
+            }
+          ]
+        },
+        {
+          "label": "Del Mar Beach Unit Areas",
+          "rows": [
+            {
+              "days": "Monday–Sunday",
+              "time": "6am - 10pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Available for private and special events, parties, and unit functions; all inquiries are welcome."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.21936527726636,-117.40558882598967"
+    },
+    {
+      "text": "La Casa Del Mar Pricing Guide",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=4435eb76-678a-4dba-a590-7560b757503f&v=1"
+    },
+    {
+      "text": "La Casa Del Mar FAQs",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=991e5e5c-a39f-4fc3-a0af-e9d4a95448c1&v=1"
+    },
+    {
+      "text": "MCCS Approved Catering Vendors",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=200cfac4-9b8f-4b45-b17e-81fc1da88bfe&v=1"
+    },
+    {
+      "text": "Del Mar Beach & Marina Map",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=029007aa-4d5c-4358-a61b-94f966888b6d&v=3"
+    },
+    {
+      "text": "Group/Special Use Area Reservation Request",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=74041153-fb90-4f76-b484-f3ed719a3307&v=2"
+    },
+    {
+      "text": "Military Group Recreational Request",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=cec8bc86-e72f-4b7f-a1e6-83a515b1314b&v=2"
+    },
+    {
+      "text": "Mission and Socialization Support Request Form",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=1b99caee-8c9e-40ec-8964-8f735526aea3&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=506f659a-edcb-4cc4-925f-4b686c97be7d&v=1",
+      "alt": "La Casa Del Mar venue"
+    }
+  ],
+  "notCaptured": "Pricing guide, FAQs, catering vendor list, map and request forms (PDF downloads).",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/la-casa-del-mar",
+  "fetchedAt": "2026-10-27"
+}

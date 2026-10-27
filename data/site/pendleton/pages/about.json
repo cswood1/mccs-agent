@@ -1,0 +1,83 @@
+{
+  "title": "About",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://pendleton.usmc-mccs.org/about"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Base Map](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=a10f0ab3-239d-41c4-9f18-d19adb55dd69&v=2)\n- [Marine For Life Cycle](https://pendleton.usmc-mccs.org/about/marine-for-life-cycle)\n- [Explore](https://pendleton.usmc-mccs.org/about/explore)\n- [Welcome to Camp Pendleton](https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Base Map",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=a10f0ab3-239d-41c4-9f18-d19adb55dd69&v=2",
+      "text": "Map of MCB Camp Pendleton.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/3d8e0a27818b47278c6b5be35f01c617.jpg?m=639144559707000000"
+    },
+    {
+      "title": "Marine For Life Cycle",
+      "url": "https://pendleton.usmc-mccs.org/about/marine-for-life-cycle",
+      "text": "The Marine For Life Cycle (M4LC) supports your continuum of learning and experience-based opportu...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/0af362cdef964f93a5049d16dc2a92c3.jpg?m=639144578619230000"
+    },
+    {
+      "title": "Explore",
+      "url": "https://pendleton.usmc-mccs.org/about/explore",
+      "text": "Find on-base services, programs, facilities, and contact information.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/02df31ff044f416386fece4c31320039.jpg?m=639144563307330000"
+    },
+    {
+      "title": "Welcome to Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton",
+      "text": "Get information and resources about Marine Corps Community Services at MCB Camp Pendleton.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5ea5999f8de2443e8874a5253034d98e.jpg?m=639144567915330000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Base Map",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=a10f0ab3-239d-41c4-9f18-d19adb55dd69&v=2"
+    },
+    {
+      "text": "Marine For Life Cycle",
+      "url": "https://pendleton.usmc-mccs.org/about/marine-for-life-cycle"
+    },
+    {
+      "text": "Explore",
+      "url": "https://pendleton.usmc-mccs.org/about/explore"
+    },
+    {
+      "text": "Welcome to Camp Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/more/welcome-to-camp-pendleton"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/3d8e0a27818b47278c6b5be35f01c617.jpg?m=639144559707000000",
+      "alt": "Base Map"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/0af362cdef964f93a5049d16dc2a92c3.jpg?m=639144578619230000",
+      "alt": "Marine For Life Cycle"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/02df31ff044f416386fece4c31320039.jpg?m=639144563307330000",
+      "alt": "Explore"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/5ea5999f8de2443e8874a5253034d98e.jpg?m=639144567915330000",
+      "alt": "Welcome to Camp Pendleton"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/about",
+  "fetchedAt": "2026-10-27"
+}

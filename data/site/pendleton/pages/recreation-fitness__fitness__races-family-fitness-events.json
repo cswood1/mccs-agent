@@ -1,0 +1,49 @@
+{
+  "title": "Races & Family Fitness Events",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Races & Family Fitness Events",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Hard Corps Race Series](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events/hard-corps-race-series)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Hard Corps Race Series",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events/hard-corps-race-series",
+      "text": "Events include a dog walk, trail runs, holiday-themed walks/runs, obstacle runs, and a trail run",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/9f77f837940242dd8322134f46a92e8f_v3.jpg?m=639050553090130000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Hard Corps Race Series",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events/hard-corps-race-series"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/9f77f837940242dd8322134f46a92e8f_v3.jpg?m=639050553090130000",
+      "alt": "Hard Corps Race Series"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events",
+  "fetchedAt": "2026-10-27"
+}

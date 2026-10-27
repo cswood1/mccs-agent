@@ -1,0 +1,109 @@
+{
+  "title": "The Vineyard",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions"
+    },
+    {
+      "label": "The Vineyard",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/the-vineyard"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Host your next gathering with us and enjoy a private setting with 70-inch TVs complete with numerous sports packages, including Direct TV. NFL package pay-per-view corporate rates apply."
+    },
+    {
+      "heading": "Amenities & Details",
+      "level": 2,
+      "markdown": "• Reception room"
+    },
+    {
+      "heading": "Settings",
+      "level": 2,
+      "markdown": "• Reception room"
+    },
+    {
+      "heading": "Venue Service Offerings",
+      "level": 2,
+      "markdown": "• Bar, drinks\n• Cakes, desserts\n• Food, catering\n• Planning\n• Service staff"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Vineyard",
+      "address": "BLDG 15101, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(760) 763-7751"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "BLDG 15101 (map)",
+      "url": "https://goo.gl/maps/6EuynTMKLvJ1ViH98"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=8cb8213a-5a69-474a-9b0d-d361f0293b6e&v=1",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/the-vineyard",
+  "fetchedAt": "2026-10-27"
+}

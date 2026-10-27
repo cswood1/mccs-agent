@@ -1,0 +1,99 @@
+{
+  "title": "Windmill Canyon",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants"
+    },
+    {
+      "label": "Windmill Canyon",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/windmill-canyon"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Alerts",
+      "level": 3,
+      "markdown": "**CLOSURE** Windmill Canyon is closed for maintenance. We regret any inconvenience this may cause and appreciate your understanding."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Windmill Canyon",
+      "address": "18415 Golf Course Road, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5331"
+        },
+        {
+          "label": "Reservations",
+          "number": "442-232-9285"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "7am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "7am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Kitchen closes an hour before closing."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Windmill Canyon Menu – Breakfast",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=28c3a07e-81e9-4e12-8da5-6a28e4b01387&v=2"
+    },
+    {
+      "text": "Windmill Canyon Menu",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=download&id=94c77bfd-0260-40df-8d0d-fea812f1f83f&v=3"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Menus (PDF).",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants/windmill-canyon",
+  "fetchedAt": "2026-10-27"
+}

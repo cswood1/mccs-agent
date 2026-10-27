@@ -1,0 +1,131 @@
+{
+  "title": "Substance Assessment & Counseling Center",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Prevention and Counseling",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling"
+    },
+    {
+      "label": "Substance Assessment and Counseling Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-assessment-and-counseling-program"
+    }
+  ],
+  "intro": "Substance Assessment and Counseling Program (SACP) provides a variety of evidence-based and individualized services, including education, care coordination, group therapy, and individual and family support.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Effective counseling addresses the whole person and includes cognitive behavioral therapies, family support and coordination of care with medical personnel.\n\nYou and your counselor will address a wide variety of topics: relationships, stress management, emotional regulation, thinking patterns, as well as issues directly related to substance use.\n\nWe offer non-medical, group and individual counseling services and workshops to address mild patterns of alcohol and drug misuse.\n\nUpon completion of our services, enrollment in our individualized aftercare program will be made available for you to participate in."
+    },
+    {
+      "heading": "Getting Started",
+      "level": 3,
+      "markdown": "We welcome walk-ins, self-referrals, command referrals, medical referrals, and behavioral health referrals.\n\nTo schedule an initial appointment, please call (760) 725-5538 or (760) 725-5539.\n\nAll services begin with a meeting between you and one of our expert counselors. During this initial meeting, you and your counselor will discuss your unique history, strengths, needs, and challenges. From there, you and your counselor will agree to a plan that addresses your specific needs."
+    },
+    {
+      "heading": "Prevention & Education",
+      "level": 2,
+      "markdown": "- Comprehensive assessment\n- Medical consultation\n- Referral and coordination with other behavioral health programs"
+    },
+    {
+      "heading": "Higher Levels of Care",
+      "level": 2,
+      "markdown": "If you have developed severe substance misuse or have co-occurring mental health needs, SACC can facilitate placement in a more intensive outpatient or residential program. Your counselor will work with you and your command to coordinate an individualized transition plan."
+    },
+    {
+      "heading": "Prevention Services",
+      "level": 2,
+      "markdown": "The Substance Assessment and Counseling Program uses evidence-based prevention strategies. Our prevention program focuses on preventing the onset and development of more significant substance-related problems."
+    },
+    {
+      "heading": "Prime for Life",
+      "level": 2,
+      "markdown": "**Prime for Life (PFL) 4.5**\n\nPFL 4.5 is a half day, early intervention course offered by a certified prevention specialist. PFL 4.5 is a valuable tool for commanders to use with their units when there is concern about higher-risk substance misuse behaviors.\n\nIf you are concerned about your unit due to an increase in substance misuse behaviors and trends, then please contact us to schedule a class. We will come to you!"
+    },
+    {
+      "heading": "Prime for Life (PFL) 16 Hour",
+      "level": 2,
+      "markdown": "PFL 16.0 is a two-day, 16-hour training course offered by our Alcohol & Substance Misuse Prevention Specialist. If you have been involved in a DUI/DWI, an alcohol-related incident, or have a more significant concern about substance use, PFL will assist you in learning about the dangers and risks involved with alcohol misuse. PFL will also provide you with increased awareness and new skills for making lower-risk decisions.\n\n**Downloads**\n\n* [AA Meetings – Pendleton](https://pendleton.usmc-mccs.org/modules/media/?do=download&id=ca55e083-f208-4492-bb8e-5d94b284e196&v=2)\n* [AA Meetings – Oceanside](https://pendleton.usmc-mccs.org/modules/media/?do=download&id=b6349414-1c25-4be6-afaa-c6300bf07070&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Substance Assessment and Counseling Center",
+      "address": "BLDG 16105, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(760) 725-5538"
+        },
+        {
+          "label": "Phone",
+          "number": "(760) 725-5539"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.2998056,-117.3148056"
+    },
+    {
+      "text": "AA Meetings – Pendleton",
+      "url": "https://pendleton.usmc-mccs.org/modules/media?do=download&id=ca55e083-f208-4492-bb8e-5d94b284e196&v=2"
+    },
+    {
+      "text": "AA Meetings – Oceanside",
+      "url": "https://pendleton.usmc-mccs.org/modules/media?do=download&id=b6349414-1c25-4be6-afaa-c6300bf07070&v=1"
+    },
+    {
+      "text": "Military/Veterans Crisis Line - DIAL 988",
+      "url": "https://www.veteranscrisisline.net/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/substance-assessment-and-counseling-program",
+  "fetchedAt": "2026-10-27"
+}

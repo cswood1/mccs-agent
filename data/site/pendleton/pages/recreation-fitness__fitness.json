@@ -1,0 +1,87 @@
+{
+  "title": "Fitness",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Fitness Centers](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers)\n- [Fitness Programs](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs)\n- [Races & Family Fitness Events](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events)\n- [24/7 Access](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Fitness Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers",
+      "text": "Choose from 12 fitness facilities for training modalities, HITT areas, and certified staff.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c4ea921c264040fca28c402c80eeded5_v3.jpg?m=638881058265270000"
+    },
+    {
+      "title": "Fitness Programs",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs",
+      "text": "Fitness programs provide services to improve readiness for active duty and maintain healthy lifestyles.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c6773a0800a34f8fa7f2524f58be41fd_v2.jpg?m=638881076738670000"
+    },
+    {
+      "title": "Races & Family Fitness Events",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events",
+      "text": "All races and events focus on promoting a healthy lifestyle and participation in sporting activities.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/9f77f837940242dd8322134f46a92e8f_v3.jpg?m=639050553090130000"
+    },
+    {
+      "title": "24/7 Access",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access",
+      "text": "This facility is unstaffed and unmonitored. By entering, you assume all personal responsibility.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5ef6ed8b4a2647f7b804635ab2c53473_v3.jpg?m=638881271085800000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Fitness Centers",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers"
+    },
+    {
+      "text": "Fitness Programs",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs"
+    },
+    {
+      "text": "Races & Family Fitness Events",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events"
+    },
+    {
+      "text": "24/7 Access",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/c4ea921c264040fca28c402c80eeded5_v3.jpg?m=638881058265270000",
+      "alt": "Fitness Centers"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/c6773a0800a34f8fa7f2524f58be41fd_v2.jpg?m=638881076738670000",
+      "alt": "Fitness Programs"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/9f77f837940242dd8322134f46a92e8f_v3.jpg?m=639050553090130000",
+      "alt": "Races & Family Fitness Events"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/5ef6ed8b4a2647f7b804635ab2c53473_v3.jpg?m=638881271085800000",
+      "alt": "24/7 Access"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness",
+  "fetchedAt": "2026-10-27"
+}

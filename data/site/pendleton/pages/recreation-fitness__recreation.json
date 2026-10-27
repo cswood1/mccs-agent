@@ -1,0 +1,70 @@
+{
+  "title": "Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    }
+  ],
+  "intro": "Recreation offerings at Camp Pendleton provide diverse climate-controlled and outdoor activities for Marines and families.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Indoor Recreation](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation)\n- [Outdoor Recreation](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation)\n- [Aquatics](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics)\n- [Sports](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Indoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation",
+      "text": "Enjoy climate-controlled activities at recreation centers or a bowling alley.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/97c1b6a91fb14c61831dd0534f8e9df4.jpg?m=639082018443170000"
+    },
+    {
+      "title": "Outdoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation",
+      "text": "Find your ideal outdoor activity whether it be hiking, camping, sailing, shooting, or golfing.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/1bc8455f6bb542468d930d19b6c96479.jpg?m=639081769350130000"
+    },
+    {
+      "title": "Aquatics",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics",
+      "text": "A full spectrum of recreational and instructional activities in a safe, healthy, fun environment.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4b208e1f38784ffc9229c21c4328bddc_v3.jpg?m=638863142307770000"
+    },
+    {
+      "title": "Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports",
+      "text": "The Athletics Department consist of the Commanding General's Cup Tournament, adult leagues, All Marine Sports and youth programs.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/thumb?id=381e8d34-c0df-43f1-bdaf-f9e3afced446"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/97c1b6a91fb14c61831dd0534f8e9df4.jpg?m=639082018443170000",
+      "alt": "Indoor Recreation"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/1bc8455f6bb542468d930d19b6c96479.jpg?m=639081769350130000",
+      "alt": "Outdoor Recreation"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/4b208e1f38784ffc9229c21c4328bddc_v3.jpg?m=638863142307770000",
+      "alt": "Aquatics"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/thumb?id=381e8d34-c0df-43f1-bdaf-f9e3afced446",
+      "alt": "Sports"
+    }
+  ],
+  "notCaptured": "Related stories cards not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation",
+  "fetchedAt": "2026-10-27"
+}

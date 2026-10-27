@@ -1,0 +1,62 @@
+{
+  "title": "Weddings",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Event Planning & Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia"
+    },
+    {
+      "label": "Event Planning",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning"
+    },
+    {
+      "label": "Weddings",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/weddings"
+    }
+  ],
+  "intro": "Celebrate memorable moments with gorgeous views and competitive event packages which set the perfect stage to host a dream wedding. Choose from one of Camp Pendleton's numerous venues:",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "• Pacific Views Event Center (PVEC): Large scale or small and intimate, PVEC is the ultimate event site with an expansive ocean view.\n• La Casa at Del Mar Beach: Located right on the beach, La Casa offers water-front views for beach weddings that will exceed your expectations.\n• The Historic Beach Club at San Onofre Beach: Host a luxurious wedding or celebrate any special occasion at this beautiful location.\n• The Vineyard\n• Eagle's Landing at Marine Memorial Golf Course"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Pacific Views Event Center",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center"
+    },
+    {
+      "text": "La Casa Del Mar",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/la-casa-del-mar"
+    },
+    {
+      "text": "San Onofre Beach Club",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/san-onofre-beach-club"
+    },
+    {
+      "text": "The Vineyard",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/the-vineyard"
+    },
+    {
+      "text": "Eagle's Landing",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/eagles-landing"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/319179c8cbcc4796afa9850c842bfc9a_v1.jpg?m=638298266544500000",
+      "alt": "wedding_ceremony.jpg"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning/weddings",
+  "fetchedAt": "2026-10-27"
+}

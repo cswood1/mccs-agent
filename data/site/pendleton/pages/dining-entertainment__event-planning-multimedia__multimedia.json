@@ -1,0 +1,39 @@
+{
+  "title": "Multimedia",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Event Planning & Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia"
+    },
+    {
+      "label": "Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Movies",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater",
+      "text": "Multifunction movie theater and training facility. Catch the latest box-offices movies at a low price.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/04237c1cb5134605b2541e716c702c54.jpg?m=639092954571900000"
+    },
+    {
+      "title": "TV, Gaming, & Wireless Internet",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia/tv-gaming-wireless-internet",
+      "text": "Multimedia, gaming, and connectivity options on base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a460160ec2ab4fb2a004eac37efa7126.jpg?m=639070360405370000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/multimedia",
+  "fetchedAt": "2026-10-27"
+}

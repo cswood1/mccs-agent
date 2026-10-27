@@ -1,0 +1,94 @@
+{
+  "title": "MCCS Employee Training",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "MCCS Employee Training",
+      "url": "https://pendleton.usmc-mccs.org/more/mccs-employee-training"
+    }
+  ],
+  "intro": "MCCS training and online learning opportunities for both personal and professional growth.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "MCCS has a Learning Management System (LMS) called Ethos. Ethos links through PeopleSoft and will allow you an easier way of tracking your training."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "**Resource Links**\n- [Ethos](https://usmc-mccs.csodfed.com)\n- [MCCS Job Listings](http://usmc-mccs.org/careers)\n\n**Resource Downloads**\n- [Ethos Job Aid – LDP](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=47eba111-9505-48c2-bc3f-59536a77e360&v=1)\n- [EEO Flier](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=065553d1-0aa2-42ed-b4ad-2f314e7ee4f2&v=2)\n- [Base EEO Statement](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=4ad3c39c-30be-471a-8ae3-bf0f48fb0f9a&v=4)\n- [Employee Handbook](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=d45dccee-c6a2-437f-8dbd-53cf71545142&v=2)\n- [Tuition Assistance Application](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=dc9dfaae-0b3f-4d87-aab4-9e7b7e058a32&v=2)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "MCCS Employee Training",
+      "address": "BLDG 15100\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-5892"
+        },
+        {
+          "label": "Phone",
+          "number": "760-725-5873"
+        },
+        {
+          "label": "Phone",
+          "number": "760-725-5451"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Ethos",
+      "url": "https://usmc-mccs.csodfed.com"
+    },
+    {
+      "text": "MCCS Job Listings",
+      "url": "http://usmc-mccs.org/careers"
+    },
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.3013904,-117.3111109"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Resource PDFs not captured",
+  "url": "https://pendleton.usmc-mccs.org/more/mccs-employee-training",
+  "fetchedAt": "2026-10-27"
+}

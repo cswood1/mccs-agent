@@ -1,0 +1,98 @@
+{
+  "title": "Chesty Deals",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "Chesty Deals",
+      "url": "https://pendleton.usmc-mccs.org/more/chesty-deals"
+    }
+  ],
+  "intro": "Look for Chesty Deals at participating MCCS Facilities and discover savings that deliver value.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Tell us how we're doing so we can improve!\n[Take the survey about your experience at our facilities.](https://ice.disa.mil/)"
+    },
+    {
+      "heading": "VETERANS DAY SPECIALS",
+      "level": 2,
+      "markdown": "- **NOV 6-7** [MCX](https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange): Free coffee all day any cup, any size, any Marine Mart or MCX location that has a coffee bar\n- **NOV 11** [Alohana Acai](https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants): $2 off 24 oz. bowl or smoothie _all Camp Pendleton locations*_\n- **NOV 11** [Dunkin](https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants): Free donut for veterans and active duty all Camp Pendleton locations*\n- **NOV 11** [Jersey Mike's](https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants): Buy any regular sub and drink, get another regular sub of equal or lesser value free all Camp Pendleton locations*\n- **NOV 11** [Moe's Southwest Grill](https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants): Free side of chips and queso*\n- **NOV 11** [Qdoba](https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants): Free side of chips and queso*\n\n_* All offers are available while supplies last. Restrictions, terms, and details may vary by vendor. Please refer to each vendor's specific offer information for full details._"
+    },
+    {
+      "heading": "FREE",
+      "level": 2,
+      "markdown": "- **FREE** [Lifeskills Classes](https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/lifeskills)\n- **FREE** [Lake O'Neill:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lake-oneill) Miniature golf on your birthday week\n- **FREE** [Lake O'Neill:](https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill) 2-hour ball or equipment rental with the rental of a cabana\n- **FREE** [Auto Skills:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills) One hour of lift time with the purchase of oil and oil filter at our retail store"
+    },
+    {
+      "heading": "$1-$6",
+      "level": 2,
+      "markdown": "- **$1** [Pendleton Theater:](https://pendleton.usmc-mccs.org/dining-entertainment/theater) Movie Special the last Saturday of the month\n- **$1** [Leatherneck Lanes:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling) Day Bowling Wed from 11am-3pm\n- **$5** [Lake O'Neill:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lake-oneill) Fishing Pole Rental (per hour)\n- **$5** [Leatherneck Lanes:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling) Tuesdays includes 2 games and a free pair of shoes\n- **$5** [Stepp Stables:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables) Feed Our Herd – Treat Bags! Wed-Sun 9am-4pm\n- **$6** [Lake O'Neill:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/lake-oneill) Miniature Golf 18 holes; 1-3 years FREE (per person)"
+    },
+    {
+      "heading": "$10-$20+",
+      "level": 2,
+      "markdown": "- **$10** [Stepp Stables:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables) Teeny Tot Lesson 15min (Active Duty Military children ages 3-4)\n- **$10** [Recreational Shooting:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting) Hand Gun Rental Active Duty/Dependents\n- **$15-$20** [Del Mar Marina:](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina) Harbor Toy Hourly Rentals choose from: SUP, single or double kayak, and pedal boat"
+    },
+    {
+      "heading": "Other Deals",
+      "level": 2,
+      "markdown": "- [Lake O'Neill:](https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill) $15 off a night camping on your birthday week\n- [MCX Current Sales:](https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange) Always tax free!"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Take the survey about your experience at our facilities.",
+      "url": "https://ice.disa.mil/"
+    },
+    {
+      "text": "MCX",
+      "url": "https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange"
+    },
+    {
+      "text": "Restaurants",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/restaurants"
+    },
+    {
+      "text": "Lifeskills Classes",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/lifeskills"
+    },
+    {
+      "text": "Lake O'Neill",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill"
+    },
+    {
+      "text": "Auto Skills",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills"
+    },
+    {
+      "text": "Pendleton Theater",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater"
+    },
+    {
+      "text": "Leatherneck Lanes",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/bowling"
+    },
+    {
+      "text": "Stepp Stables",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/stepp-stables"
+    },
+    {
+      "text": "Recreational Shooting",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreational-shooting"
+    },
+    {
+      "text": "Del Mar Marina",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/marina"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/more/chesty-deals",
+  "fetchedAt": "2026-10-27"
+}

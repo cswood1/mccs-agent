@@ -1,0 +1,73 @@
+{
+  "title": "Campgrounds & RVs",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Campgrounds & RVs",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Del Mar Beach & Marina](https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina)\n- [Lake O'Neill](https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill)\n- [San Onofre Beach](https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Del Mar Beach & Marina",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina",
+      "text": "Choose from 116 full hook-up campsites, and enjoy a fun, clean, and secure environment all the wh...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d6f9cfa473cd48cfbc926a70a11e145d.png?m=639077351439130000"
+    },
+    {
+      "title": "Lake O'Neill",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill",
+      "text": "Fish, hike, row a boat, enjoy a round of miniature golf, camp, picnic at the peninsula, and more...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/323404bd38124c2ca5498b901013e407.jpg?m=638881936417830000"
+    },
+    {
+      "title": "San Onofre Beach",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach",
+      "text": "Located at the north end of Camp Pendleton, the San Onofre Beach campgrounds are one of three are...",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/24f17e9d11b24a338b59bf79cd6bc239_v2.jpg?m=638881929493570000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Del Mar Beach & Marina",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/del-mar-beach-marina"
+    },
+    {
+      "text": "Lake O'Neill",
+      "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs/lake-oneill"
+    },
+    {
+      "text": "San Onofre Beach",
+      "url": "https://pendleton.usmc-mccs.org/lodging/beach-cottages/san-onofre-beach"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d6f9cfa473cd48cfbc926a70a11e145d.png?m=639077351439130000",
+      "alt": "Del Mar Beach & Marina"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/323404bd38124c2ca5498b901013e407.jpg?m=638881936417830000",
+      "alt": "Lake O'Neill"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/24f17e9d11b24a338b59bf79cd6bc239_v2.jpg?m=638881929493570000",
+      "alt": "San Onofre Beach"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/lodging/campgrounds-rvs",
+  "fetchedAt": "2026-10-27"
+}

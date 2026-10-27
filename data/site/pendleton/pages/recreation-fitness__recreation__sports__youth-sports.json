@@ -1,0 +1,115 @@
+{
+  "title": "Youth Sports",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports"
+    },
+    {
+      "label": "Youth Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Currently, there are no scheduled activities planned for the near future. See all [upcoming events](https://pendleton.usmc-mccs.org/calendar-of-events).\n\nRegistration is handled online during the registration periods. View the season schedules for registration periods. Youth Sports has limited spots available, so all registrations will be taken on a first-come first-served basis. After the registration period has ended or a division becomes full, the Youth Sports Program will start a waiting list. It is not guaranteed that individuals on the waiting list will be assigned to a team, but will be placed if and when a spot becomes available. For more information, please call 760-725-4188."
+    },
+    {
+      "heading": "Eligibility",
+      "level": 3,
+      "markdown": "Must be a dependent of Active Duty, Retirees, Camp Pendleton MCCS (NAF) employees or honorably discharged veterans with 100% service-connected disability to be an authorized patron in accordance with Base Order 1700.17E."
+    },
+    {
+      "heading": "Registration Fees",
+      "level": 3,
+      "markdown": "$90 per child for all sports. Fee includes a few uniform essentials.\n\n$5 discount available for each additional child registered; first child must pay full registration fee."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "**Resource Links**\n- [Camp Pendleton Youth Sports](https://cpyouthsports.leagueapps.com/)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Youth Sports",
+      "address": "276022 Lakeside Drive\nCamp Pendleton, California",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-4188"
+        },
+        {
+          "label": "Phone",
+          "number": "760-725-1790"
+        }
+      ],
+      "emails": [
+        "cpenyouthsports@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30am - 3pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Camp Pendleton Youth Sports",
+      "url": "https://cpyouthsports.leagueapps.com/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/55f76d1a461b41a8bf96a67080544e68.jpg?m=639082593784270000",
+      "alt": "Youth Sports"
+    }
+  ],
+  "notCaptured": "Season schedules are on the external LeagueApps site",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Halloween Bash",
+  "breadcrumb": [
+    {
+      "label": "Events",
+      "url": "https://pendleton.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "label": "Halloween Bash",
+      "url": "https://pendleton.usmc-mccs.org/activity/e4f2a78d-a754-43a3-a902-195667b060d1"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Date:** Tuesday, October 27, 2026\n\n**Time:** 4:30 PM - 11:59 PM\n\n**Location:** Patrick J. Carney Library, 14th Street, BLDG 1146, Camp Pendleton, CA 92055\n\nA party is brewing at the Camp Pendleton Libraries! Come celebrate Halloween with some spooktacular activities, games, crafts, and more! Costumes are welcome!\n\nFor more information, please call (760) 725-5104."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Patrick J. Carney Library",
+      "address": "14th Street\nBLDG 1146\nCamp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-5104"
+        }
+      ],
+      "emails": [
+        "mccspendletonlibrary@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "View on Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.30524599417608,-117.30601958173106"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/f62940c142bf4ae9a79f3eaa08753dfd_v4.png?m=639232726559800000",
+      "alt": "Halloween Bash"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/activity/e4f2a78d-a754-43a3-a902-195667b060d1",
+  "fetchedAt": "2026-10-27"
+}

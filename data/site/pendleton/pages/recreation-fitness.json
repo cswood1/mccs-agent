@@ -1,0 +1,75 @@
+{
+  "title": "Recreation & Fitness",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Recreation",
+      "level": 2,
+      "markdown": "Indoor/Outdoor recreation options for Marines and their families.\n\n- [Indoor Recreation](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation)\n- [Outdoor Recreation](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation)\n- [Aquatics](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/aquatics)\n- [Sports](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports)"
+    },
+    {
+      "heading": "Fitness",
+      "level": 2,
+      "markdown": "Fitness centers, training, and other programs.\n\n- [Fitness Centers](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-centers)\n- [Fitness Programs](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/fitness-programs)\n- [Races & Family Fitness Events](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/races-family-fitness-events)\n- [24/7 Access](https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access)"
+    },
+    {
+      "heading": "Other Recreation Options",
+      "level": 2,
+      "markdown": "Detailed information on the Auto Skills Center or travel-related tickets and tours.\n\n- [Information, Tickets & Tours](https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours)\n- [Auto Skills](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation",
+      "text": "Indoor/Outdoor recreation options for Marines and their families.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/73583266a85d4ebbae87ee8cf07d70e8_v2.jpg?m=639082514791400000"
+    },
+    {
+      "title": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness",
+      "text": "Fitness centers, training, and other programs.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c6773a0800a34f8fa7f2524f58be41fd_v2.jpg?m=638881076738670000"
+    },
+    {
+      "title": "Other Recreation Options",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/other-recreation-options",
+      "text": "Detailed information on the Auto Skills Center or travel-related tickets and tours.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/0d272acfe8694ff2be88768ecb1e361e.jpg?m=639080779713770000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Information, Tickets & Tours",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours"
+    },
+    {
+      "text": "Auto Skills",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/indoor-recreation/auto-skills"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/73583266a85d4ebbae87ee8cf07d70e8_v2.jpg?m=639082514791400000",
+      "alt": "Recreation"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/c6773a0800a34f8fa7f2524f58be41fd_v2.jpg?m=638881076738670000",
+      "alt": "Fitness"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/0d272acfe8694ff2be88768ecb1e361e.jpg?m=639080779713770000",
+      "alt": "Other Recreation Options"
+    }
+  ],
+  "notCaptured": "Related stories cards not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness",
+  "fetchedAt": "2026-10-27"
+}

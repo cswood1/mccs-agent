@@ -1,0 +1,75 @@
+{
+  "title": "GameStop",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    },
+    {
+      "label": "GameStop",
+      "url": "https://pendleton.usmc-mccs.org/services/gamestop"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "GameStop",
+      "address": "BLDG 20845, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-472-3522"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 7pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Website",
+      "url": "https://www.gamestop.com/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services/gamestop",
+  "fetchedAt": "2026-10-27"
+}

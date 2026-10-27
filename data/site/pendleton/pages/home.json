@@ -1,0 +1,204 @@
+{
+  "title": "MCCS Pendleton - Marine Corps Community Services",
+  "breadcrumb": [],
+  "intro": "Welcome to Marine Corps Community Services. We are excited you are here and encourage you to browse freely through our many programs and services.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "![](https://pendleton.usmc-mccs.org/modules/media/t/758f358db31b482e817d566a490556a1.jpg?m=639280215070530000)\n\n![](https://pendleton.usmc-mccs.org/modules/media/t/90815a66c6d14300bbf42fe279495881_v3.png?m=639250921234330000)\n\n![](https://pendleton.usmc-mccs.org/modules/media/t/e45c62c43c0141679619d565353bb841_v5.png?m=639232726730870000)\n\n![](https://pendleton.usmc-mccs.org/modules/media/t/406121e9473042a0a80afbf853eca62b_v3.jpg?m=639283866824500000)"
+    },
+    {
+      "heading": "Stay Informed",
+      "level": 3,
+      "markdown": "View local events, stories, updates, and more."
+    },
+    {
+      "heading": "Important Links",
+      "level": 3,
+      "markdown": "Connect with someone now.\n\n- SAPR\n- Military One Source\n- Veteran Crisis Line\n- Domestic Abuse\n- Semper Connected\n- 988\n- DoD Safe Helpline\n- Semper Support"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Preparing for Deployment",
+      "url": "https://pendleton.usmc-mccs.org/news/preparing-for-deployment",
+      "text": "Infographic",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/91ff4b1e756048e8988ffedaed31d925_v1_w500_h300.jpg?m=639283104037770000"
+    },
+    {
+      "title": "ABCs of Baby Sleep",
+      "url": "https://pendleton.usmc-mccs.org/news/abcs-of-baby-sleep",
+      "text": "Video",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/544c086a5c9348c4aeee123794b148c9_v1_w500_h300.jpg?m=639281376114870000"
+    },
+    {
+      "title": "Safe Sleep for Babies",
+      "url": "https://pendleton.usmc-mccs.org/news/safe-sleep-for-babies",
+      "text": "Infographic",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/de9d4bc5aa6541a8b093564705ba2f6f_v1_w500_h300.jpg?m=639281376112830000"
+    },
+    {
+      "title": "Goal Setting for Growth",
+      "url": "https://pendleton.usmc-mccs.org/news/goal-setting-for-growth",
+      "text": "News",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d044d1be7c4748bb8de84a3453d6deee_v1_w500_h300.png?m=639279648109670000"
+    },
+    {
+      "title": "Build Your Family's Readiness and Resilience Through Routines",
+      "url": "https://pendleton.usmc-mccs.org/news/build-your-family-s-readiness-and-resilience-through-routines",
+      "text": "News",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/3864ed57839d412cb402cc9de6be7290_v1_w500_h300.png?m=639273600290400000"
+    },
+    {
+      "title": "Tactical Pause Strengthens Readiness",
+      "url": "https://pendleton.usmc-mccs.org/news/tactical-pause-strengthens-readiness",
+      "text": "News",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/528ca9ed2b50444190ad23b87ae7c572_v1_w500_h300.jpg?m=639271872181730000"
+    },
+    {
+      "title": "Helping Children Move from Chaos to Calm",
+      "url": "https://pendleton.usmc-mccs.org/news/helping-children-move-from-chaos-to-calm",
+      "text": "News",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/db4c4f67a859468b870db0ea67b0eaa2_v1_w500_h300.jpg?m=639263232025470000"
+    },
+    {
+      "title": "Your PCS Pet Checklist",
+      "url": "https://pendleton.usmc-mccs.org/news/your-pcs-pet-checklist",
+      "text": "Infographic",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/de1fbb99aa664fa888092da1213f8fc0_v1_w500_h300.jpg?m=639261504112830000"
+    },
+    {
+      "title": "Movies",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/movies",
+      "text": "Theater & Showtime Information",
+      "image": ""
+    },
+    {
+      "title": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging",
+      "text": "Hotels, Temporary Lodging, & Other Places to Stay",
+      "image": ""
+    },
+    {
+      "title": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation",
+      "text": "Indoor & Outdoor Opportunities, Sports, & Swimming",
+      "image": ""
+    },
+    {
+      "title": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness",
+      "text": "Fitness Centers & Programs, Competitions, & Health Education",
+      "image": ""
+    },
+    {
+      "title": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining",
+      "text": "Restaurants, Club Information, Catering, & More",
+      "image": ""
+    },
+    {
+      "title": "Prevention & Counseling",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling",
+      "text": "SAPR, Counseling, New Parent Support, & Other Support Programs",
+      "image": ""
+    },
+    {
+      "title": "Military Family Life",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life",
+      "text": "DEERS, Deployment Support, Marines Corps Family Team Building, & Other Family Programs",
+      "image": ""
+    },
+    {
+      "title": "Single Marine Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/single-marine-program",
+      "text": "SMP Program & Facility Information",
+      "image": ""
+    },
+    {
+      "title": "Education",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/education",
+      "text": "School Liaison, Transition Readiness, Volunteer Opportunities, & More",
+      "image": ""
+    },
+    {
+      "title": "Exchange",
+      "url": "https://pendleton.usmc-mccs.org/shopping/marine-corps-exchange",
+      "text": "MCX Locations & Promotions",
+      "image": ""
+    },
+    {
+      "title": "Information, Tickets & Tours",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+      "text": "Parks, Tourism, & Other Leisure Activities",
+      "image": ""
+    },
+    {
+      "title": "Local Area Information",
+      "url": "https://pendleton.usmc-mccs.org/about/local-area-information",
+      "text": "Installation & Community Information",
+      "image": ""
+    },
+    {
+      "title": "San Diego Honda Dealers",
+      "url": "https://bit.ly/4cSGj7N",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c7ea6622287a40f5bb1b146b75dc23e2.jpg?m=639159245379300000"
+    },
+    {
+      "title": "Pechanga",
+      "url": "https://www.pechanga.com/weddings?utm_source=mccs&utm_medium=web&utm_campaign=mccs_2025",
+      "text": "",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/9db82393dcf243cf8b4a225b9b2b73df.jpg?m=639038539320200000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "View More Events",
+      "url": "https://pendleton.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "News & Updates",
+      "url": "https://pendleton.usmc-mccs.org/stories"
+    },
+    {
+      "text": "Military One Source",
+      "url": "https://www.militaryonesource.mil/"
+    },
+    {
+      "text": "Veteran Crisis Line",
+      "url": "https://militarycrisisline.net/"
+    },
+    {
+      "text": "988",
+      "url": "https://988lifeline.org/"
+    },
+    {
+      "text": "DoD Safe Helpline",
+      "url": "https://www.safehelpline.org/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/758f358db31b482e817d566a490556a1.jpg?m=639280215070530000",
+      "alt": ""
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/90815a66c6d14300bbf42fe279495881_v3.png?m=639250921234330000",
+      "alt": ""
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/e45c62c43c0141679619d565353bb841_v5.png?m=639232726730870000",
+      "alt": ""
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/406121e9473042a0a80afbf853eca62b_v3.jpg?m=639283866824500000",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "Home page carousel slides are images only; event list area showed no upcoming events; location picker modal omitted (theme)",
+  "url": "https://pendleton.usmc-mccs.org",
+  "fetchedAt": "2026-10-27"
+}

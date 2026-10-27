@@ -1,0 +1,61 @@
+{
+  "agent": "P3",
+  "captured": [
+    "/dining-entertainment/information-tickets-and-tours",
+    "/dining-entertainment",
+    "/dining-entertainment/theater",
+    "/dining-entertainment/dining",
+    "/dining-entertainment/dining/fast-food",
+    "/dining-entertainment/dining/food-trucks",
+    "/dining-entertainment/dining/restaurants",
+    "/dining-entertainment/dining/special-events-parties-unit-functions",
+    "/dining-entertainment/event-planning-multimedia",
+    "/dining-entertainment/event-planning-multimedia/event-planning",
+    "/dining-entertainment/event-planning-multimedia/multimedia",
+    "/shopping",
+    "/shopping/marine-corps-exchange",
+    "/shopping/uniform-clothing-services",
+    "/shopping/marine-marts-package-wine-stores",
+    "/shopping/micro-marts",
+    "/services",
+    "/services/automotive-services",
+    "/services/barbershops-hair-salon",
+    "/services/dry-cleaning-laundromat",
+    "/services/gamestop",
+    "/services/idevice",
+    "/services/mbling",
+    "/services/postal-shipping",
+    "/services/rv-storage",
+    "/services/tax-services",
+    "/services/rotating-vendor"
+  ],
+  "extras": [
+    "/dining-entertainment/dining/restaurants/iron-mikes",
+    "/dining-entertainment/dining/restaurants/pub-1795",
+    "/dining-entertainment/dining/restaurants/windmill-canyon",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/catering",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/eagles-landing",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/la-casa-del-mar",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/pacific-views-event-center",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/san-onofre-beach-club",
+    "/dining-entertainment/dining/special-events-parties-unit-functions/the-vineyard",
+    "/dining-entertainment/event-planning-multimedia/event-planning/birthday-parties-unit-functions",
+    "/dining-entertainment/event-planning-multimedia/event-planning/weddings",
+    "/dining-entertainment/event-planning-multimedia/multimedia/tv-gaming-wireless-internet"
+  ],
+  "redirects": [
+    {
+      "from": "/dining-entertainment/movies",
+      "to": "https://pendleton.usmc-mccs.org/dining-entertainment/theater"
+    }
+  ],
+  "failures": [],
+  "thinPages": [
+    "/dining-entertainment/dining/food-trucks",
+    "/services/gamestop",
+    "/services/idevice",
+    "/services/mbling",
+    "/services/tax-services",
+    "/dining-entertainment/event-planning-multimedia/multimedia/tv-gaming-wireless-internet"
+  ]
+}

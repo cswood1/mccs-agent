@@ -1,0 +1,100 @@
+{
+  "title": "Outdoor Adventures",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Outdoor Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation"
+    },
+    {
+      "label": "Outdoor Adventures",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures"
+    }
+  ],
+  "intro": "Outdoor Adventures is a program that exposes active duty service members to outdoor recreational activities.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "*Active duty only.*\n\nAll events are one-day activities located on the base or within 120 miles of the surrounding base areas. Equipment is provided during events and scheduled activities. Equipment is not available for individual rental or checkout."
+    },
+    {
+      "heading": "Unit Recreation",
+      "level": 3,
+      "markdown": "Outdoor Adventures unit-based recreation is a free program for all active duty units aboard Camp Pendleton. Units must request an event at least two weeks in advance, and no more than four months in advance of the desired date. Activities offered vary based on weather, event location, and unit size.\n\nPossible activities include surfing, stand-up paddle boarding, snorkeling, archery, mountain biking, and hiking. Units may select other activities but would be responsible for associated fees."
+    },
+    {
+      "heading": "Active Duty Recreation",
+      "level": 3,
+      "markdown": "Outdoor Adventures offers active duty service members aboard Camp Pendleton recreational opportunities that are fee-based. Activities are advertised and booked first-come first-serve basis, geared towards smaller groups.\n\nActivities may include ski and snowboard trips, beach days with surfing, stand-up paddle boarding and snorkeling, deep sea fishing, archery, mountain biking, and hiking."
+    },
+    {
+      "heading": "Alternative Workouts",
+      "level": 3,
+      "markdown": "Free unit events featuring:\n\n- Surf lessons\n- Stand-up Paddle Boarding\n- Hiking\n- Mountain Biking\n- Archery\n\n[Schedule a free alternative PT activity](mailto:pen.oa@usmc-mccs.org) for your unit.\n\n*Active duty only.*"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "**Resource Downloads**\n- [Unit Request Form](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=e5c8082d-0b5c-46b0-87a5-453cee6da71b&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Outdoor Adventures",
+      "address": "BLDG 1253\nCamp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-421-4938"
+        }
+      ],
+      "emails": [
+        "pen.oa@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "7:30am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.31777478164219,-117.31429231768107"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d24784be32f24059bd6dbbc231c40dcf.jpg?m=639081758206430000",
+      "alt": "Outdoor Adventures"
+    }
+  ],
+  "notCaptured": "Unit request form not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/outdoor-adventures",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,75 @@
+{
+  "title": "Tax Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    },
+    {
+      "label": "Tax Services",
+      "url": "https://pendleton.usmc-mccs.org/services/tax-services"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "H&R Block",
+      "address": "BLDG 15101, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-847-9001"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Website",
+      "url": "https://www.hrblock.com/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services/tax-services",
+  "fetchedAt": "2026-10-27"
+}

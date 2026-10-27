@@ -1,0 +1,123 @@
+{
+  "title": "Ward Lodge",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Inns of the Corps",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps"
+    },
+    {
+      "label": "Ward Lodge",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/ward-lodge"
+    }
+  ],
+  "intro": "Located in the heart of Camp Pendleton, Ward Lodge can offer the comfort you and your family are looking for at a very competitive price. We can accommodate the whole family, including pets!",
+  "sections": [
+    {
+      "heading": "Information",
+      "level": 3,
+      "markdown": "**Pricing**\n\nPlease visit [Inns of the Corps](https://lodgingreservations.usmc-mccs.org/Search/Index/13517/90/) or contact property for pricing and availability.\n\n*Leisure can only book 30 days in advance and for a max of 7 days.*\n\n**Room Amenities**\n\n- High-Speed Internet Access\n- Refrigerator\n- Microwave\n- Flat Screen TV/Cable\n- Kitchenettes Include Cooking/Dining Utensils\n- Coffee Maker w/ Free Coffee\n\n**Lodge Amenities**\n\n- Laundry Facility\n- Playground\n- Dog Run\n- Picnic Area w/ BBQ Grills\n- [Nearby Shopping and Dining](https://www.mccscp.com/shopping-services-food)\n\nADA-compliant rooms are available."
+    },
+    {
+      "heading": "Pets",
+      "level": 3,
+      "markdown": "We have 16 pet-friendly rooms available:\n\n- Standard rooms with one queen bed (2)\n- Standard rooms with two queen beds (5)\n- Kitchenette rooms with one queen bed (2)\n- Kitchenette rooms with two queen beds (7)\n\n**Pet Fees**\n\nPlease visit [Inns of the Corps](https://lodgingreservations.usmc-mccs.org/Search/Index/13517/90/) or contact property for pricing and availability.\n\n*Orders must be verified at the time of check-in to receive rate.*\n\n**Pet Policy**\n\nDogs weighing 50 pounds or less are welcome. Dogs over 50 pounds may be permitted but require prior approval. Pet owners must sign a liability waiver at check-in and supply shot records. Dogs left unattended in rooms must be placed in an acceptable kennel for the safety of other guests. Cleaning fees may apply. Per **base policy**, Pit Bulls, Staffordshire Terriers, Wolf Hybrid, and Rottweilers are not permitted."
+    },
+    {
+      "heading": "Gallery",
+      "level": 3,
+      "markdown": "**Standard**\n\n![ward-lodge_standard_beds.jpg](https://pendleton.usmc-mccs.org/modules/media/t/deaf6e9bba3b479dad8e87c0d7afd055_v1.jpg?m=638298215482870000)\n\n**Deluxe**\n\n![ward-lodge_deluxe_bed.jpg](https://pendleton.usmc-mccs.org/modules/media/t/982b7d96c57945dbb83440df1fbc52cc_v1.jpg?m=638298215485230000)\n\n**Kitchenette**\n\n![ward-lodge_kitchenette_beds.jpg](https://pendleton.usmc-mccs.org/modules/media/t/2a3e06ab3b534fa8a3d711eced4d8f79_v1.jpg?m=638298215486400000)\n\n**Lodge**\n\n![ward-lodge_inn_exterior.jpg](https://pendleton.usmc-mccs.org/modules/media/t/c7c3d0334db34f15bb6f4aada5dc0cbb_v1.jpg?m=638298215485130000)"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Ward Lodge",
+      "address": "BLDG 1310\nCamp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-5304"
+        }
+      ],
+      "emails": [
+        "lodgingreservations.wardlodge@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Booking",
+      "url": "https://lodgingreservations.usmc-mccs.org/Search/Index/13517/90/"
+    },
+    {
+      "text": "Nearby Shopping and Dining",
+      "url": "https://www.mccscp.com/shopping-services-food"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/deaf6e9bba3b479dad8e87c0d7afd055_v1.jpg?m=638298215482870000",
+      "alt": "ward-lodge_standard_beds.jpg"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/982b7d96c57945dbb83440df1fbc52cc_v1.jpg?m=638298215485230000",
+      "alt": "ward-lodge_deluxe_bed.jpg"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/2a3e06ab3b534fa8a3d711eced4d8f79_v1.jpg?m=638298215486400000",
+      "alt": "ward-lodge_kitchenette_beds.jpg"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/c7c3d0334db34f15bb6f4aada5dc0cbb_v1.jpg?m=638298215485130000",
+      "alt": "ward-lodge_inn_exterior.jpg"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/ward-lodge",
+  "fetchedAt": "2026-10-27"
+}

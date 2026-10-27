@@ -1,0 +1,134 @@
+{
+  "title": "Retired Affairs",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Retired Affairs",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/retired-affairs"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Support Services provided to assist Military Retirees with:\n\n* Referrals to Transition & Employment Services\n* ID Cards, Pay Information or Service Records\n* Federal and State Benefits\n* VA Disability Compensation\n* Space available Travel Information\n* Legal Advice\n* Advice on Death Benefits\n* Will Preparation and Estate Planning\n* Financial Planning\n* Tax Preparation\n* TRICARE\n* Survivor Benefit Plans\n* Opportunities\n* Awards Assistance\n* Casualty Assistance\n* Information and Referral\n* Survivor Benefit Information\n* Entitlements\n* Privileges\n* Changes to Allotments\n* Military Installations\n* Consumer Protection\n* Incapacitated Dependent/Adult Child\n* Emergency Preparedness\n* Volunteering"
+    },
+    {
+      "heading": "Resources",
+      "level": 3,
+      "markdown": "- [Base Access](https://www.pendleton.marines.mil/Base-Access)\n- [Cal Vets Programs](https://www.calvet.ca.gov/calvet-programs/veteran-homes)\n- [Commissary](https://commissaries.com/shopping/store-locations/camp-pendleton-mcb)\n- [Consumer Issues](https://www.usa.gov/consumer)\n- [DFAS Retiree Forms](https://www.dfas.mil/retiredmilitary/forms)\n- [DoD Forms](https://www.esd.whs.mil/directives/forms)\n- [Funeral Honors for USMC](https://www.hqmc.marines.mil/Agencies/Casualty-MFPC/Funeral-Honors)\n- [Funeral Services](https://www.va.gov/burials-memorials)\n- [ID Card Office Online Appointments](https://idco.dmdc.osd.mil/idco/#)\n- Manage your VA benefits at: [EBenefits](http://www.ebenefits.va.gov/)\n- [Marine for Life](https://usmc-mccs.org/services/career/marine-for-life-network)\n- [Military Funeral Honors](https://www.cem.va.gov/military_funeral_honors.asp)\n- [Military Retired Pay](https://www.dfas.mil/retiredmilitary/manage/mypay)\n- [National Resource Directory](https://nrd.gov/)\n- [Product Recalls](https://www.cpsc.gov/Recalls)\n- [Repatriation](https://www.state.gov/the-repatriation-of-us-citizens)\n- [VA Extended Care](https://www.va.gov/GERIATRICS/index.asp)\n- [Vet Centers](https://www.vetcenter.va.gov/): Locate the nearest Vet Center to you.\n- [Veterans Access](https://www.pendleton.marines.mil/Base-Access/Select-Veterans-Access)\n- [Wounded Warrior](https://www.woundedwarriorproject.org/)\n\nAccess VA services for homeless and at-risk veterans: 877-424-3838"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Retired Affairs",
+      "address": "BLDG 13150, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-725-6090"
+        },
+        {
+          "label": "Phone",
+          "number": "760-725-5704"
+        },
+        {
+          "label": "Phone",
+          "number": "760-277-4643"
+        },
+        {
+          "label": "VA services for homeless and at-risk veterans",
+          "number": "877-424-3838"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 4:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 4:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 4:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 4:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 4:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Base Access",
+      "url": "https://www.pendleton.marines.mil/Base-Access"
+    },
+    {
+      "text": "Cal Vets Programs",
+      "url": "https://www.calvet.ca.gov/calvet-programs/veteran-homes"
+    },
+    {
+      "text": "Commissary",
+      "url": "https://commissaries.com/shopping/store-locations/camp-pendleton-mcb"
+    },
+    {
+      "text": "DFAS Retiree Forms",
+      "url": "https://www.dfas.mil/retiredmilitary/forms"
+    },
+    {
+      "text": "ID Card Office Online Appointments",
+      "url": "https://idco.dmdc.osd.mil/idco/#"
+    },
+    {
+      "text": "EBenefits",
+      "url": "http://www.ebenefits.va.gov/"
+    },
+    {
+      "text": "Military Retired Pay",
+      "url": "https://www.dfas.mil/retiredmilitary/manage/mypay"
+    },
+    {
+      "text": "National Resource Directory",
+      "url": "https://nrd.gov/"
+    },
+    {
+      "text": "Vet Centers",
+      "url": "https://www.vetcenter.va.gov/"
+    },
+    {
+      "text": "Veterans Access",
+      "url": "https://www.pendleton.marines.mil/Base-Access/Select-Veterans-Access"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/marine-family-support/retired-affairs",
+  "fetchedAt": "2026-10-27"
+}

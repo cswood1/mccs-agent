@@ -1,0 +1,75 @@
+{
+  "title": "San Onofre Beach Club",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions"
+    },
+    {
+      "label": "San Onofre Beach Club",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/san-onofre-beach-club"
+    }
+  ],
+  "intro": "From intimate weddings, meaningful anniversaries, to special celebrations, come together in this effortlessly elegant coastal setting. With beautiful ocean views and three unique spaces to choose from, enjoy a serene place for an unforgettable day.",
+  "sections": [
+    {
+      "heading": "Amenities & Details",
+      "level": 2,
+      "markdown": "• Oceanview patio\n• Outdoor ceremony space\n• Reception room"
+    },
+    {
+      "heading": "Settings",
+      "level": 2,
+      "markdown": "• Beach patio ceremony\n• Reception room"
+    },
+    {
+      "heading": "Trestles",
+      "level": 3,
+      "markdown": "Combining breathtaking views of the Pacific, along with magnificent architecture, Trestles is the ideal location for birthday balls, wedding receptions, corporate events, retirement parties, or unit functions. Located inside the Beach Club, the Trestles Room accommodates diverse arrangements to fit your needs.\n\n**Square Footage:** 3150 square feet\n**Occupancy:** 184 guests"
+    },
+    {
+      "heading": "Laguna Cliff",
+      "level": 3,
+      "markdown": "Just outside of the Beach Club, the Trestles patio is a scenic patio that offers guests a 360-degree view of the natural surroundings. Perfect for holiday parties, luncheons, meetings, or other special events, Trestles patio offers panoramas of the historic Beach Club and the Pacific Ocean.\n\n**Square Footage:** 2100 square feet\n**Occupancy:** 150 guests"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "San Onofre Beach Club",
+      "address": "BLDG 51918, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(760) 725-7313"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "BLDG 51918 (map)",
+      "url": "https://goo.gl/maps/xNUqi4rEMSQ9dcjKA"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=c1f55ab4-2670-464c-a2f0-cd30e690205b&v=1",
+      "alt": "San Onofre Beach Club"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/san-onofre-beach-club",
+  "fetchedAt": "2026-10-27"
+}

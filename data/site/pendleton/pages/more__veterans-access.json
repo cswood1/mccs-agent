@@ -1,0 +1,110 @@
+{
+  "title": "Veterans Access",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "Veterans Access",
+      "url": "https://pendleton.usmc-mccs.org/more/veterans-access"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Welcome to Camp Pendleton, Veterans!",
+      "level": 2,
+      "markdown": "Effective Jan 1, 2020, all service-connected disabled veterans, Medal of Honor & Purple Heart recipients, former prisoners of war, VA benefits eligible veterans & primary veteran caregivers will be eligible to shop at the commissary, MCCS retail stores & participate in select MCCS recreational activities.\n\n[Do I Qualify?](https://www.pendleton.marines.mil/Staff/Principal-Staff/Security-and-Emergency-Services/Base-Access/#frequently-asked-questions)"
+    },
+    {
+      "heading": "What is available to qualifying Veterans?",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "Recreation",
+      "level": 3,
+      "markdown": "Recreation is critical to overall physical and mental health and participating in these activities helps manage stress, create a sense of balance and increase productivity and quality of life. Even after serving on active duty, mental and physical wellness is vital to success. Here are some of MCCS Indoor and Outdoor offerings to include golf, beaches, campgrounds, bowling and auto skills to explore.\n\n[Recreation Info](https://pendleton.usmc-mccs.org/recreation-fitness/recreation)"
+    },
+    {
+      "heading": "Shopping",
+      "level": 3,
+      "markdown": "Camp Pendleton is home to the largest Marine Corps Exchange (MCX), conveniently located near the Main Gate across the street from Pacific Plaza and the Commissary. Enjoy a wide variety of items in over a 147,000 sq ft shopping area. The MCX offers tax-free shopping, price matching, and specials. In addition to the large MCX, Camp Pendleton also offers the Mainside Marine Mart, San Onofre MCX, and over ten fuel stations located throughout the base. All MCX offerings including fuel are tax-free!\n\n[Shopping Info](https://pendleton.usmc-mccs.org/shopping)"
+    },
+    {
+      "heading": "Lodging",
+      "level": 3,
+      "markdown": "Come stay with us! We're home to the Pacific Views Lodge and Ward Lodge, both offering comfort for you and your family. If the outdoors is more your style, MCCS offers a variety of Camping options along with coastal lodging in our ocean front Beach Cottages.\n\n[Lodging Info](https://pendleton.usmc-mccs.org/lodging)"
+    },
+    {
+      "heading": "Dining",
+      "level": 3,
+      "markdown": "MCCS is always working to diversify our on base eatery options offering only the best for our military community, from coffee and sandwiches to a meal on the golf course. MCCS has you covered.\n\n[Dining Info](https://pendleton.usmc-mccs.org/dining-entertainment/dining)"
+    },
+    {
+      "heading": "Volunteer Programs",
+      "level": 3,
+      "markdown": "Still want to participate in military activities and support the active duty, then become a volunteer by visiting our Volunteer Program! We would love to have you at our events!\n\n[Volunteer Info](https://pendleton.usmc-mccs.org/marine-family-support/volunteer-opportunities)"
+    },
+    {
+      "heading": "Theater",
+      "level": 3,
+      "markdown": "Our recently renovated MCCS Theater features current movies for the whole family to enjoy, with affordable tickets and fresh popcorn. The theater is a great date night or weekend oasis to escape the summer heat!\n\n[Theater Info](https://pendleton.usmc-mccs.org/dining-entertainment/theater)"
+    },
+    {
+      "heading": "Retiree Services",
+      "level": 3,
+      "markdown": "Any questions on retiree services can be answered at our Retired Activities Offices. Questions on military retired pay, VA care, referrals, and transitional employment, federal and state benefits, legal advice, consumer protection, changes to allotments, and more, our team is here to help.\n\n[Retiree Info](https://pendleton.usmc-mccs.org/marine-family-support/retired-affairs)"
+    },
+    {
+      "heading": "Catering & Events",
+      "level": 3,
+      "markdown": "Planning your next big event? MCCS has facilities to make the perfect venue for you and your family! Weddings, retirement parties, birthdays and more our catering and events team is ready to help.\n\n[Catering & Events Info](https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning)"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Do I Qualify?",
+      "url": "https://www.pendleton.marines.mil/Staff/Principal-Staff/Security-and-Emergency-Services/Base-Access/#frequently-asked-questions"
+    },
+    {
+      "text": "Recreation Info",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "text": "Shopping Info",
+      "url": "https://pendleton.usmc-mccs.org/shopping"
+    },
+    {
+      "text": "Lodging Info",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "text": "Dining Info",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "text": "Volunteer Info",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/volunteer-opportunities"
+    },
+    {
+      "text": "Theater Info",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater"
+    },
+    {
+      "text": "Retiree Info",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/retired-affairs"
+    },
+    {
+      "text": "Catering & Events Info",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia/event-planning"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/more/veterans-access",
+  "fetchedAt": "2026-10-27"
+}

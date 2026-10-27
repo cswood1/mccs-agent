@@ -1,0 +1,91 @@
+{
+  "title": "RV Storage",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    },
+    {
+      "label": "RV Storage",
+      "url": "https://pendleton.usmc-mccs.org/services/rv-storage"
+    }
+  ],
+  "intro": "Whether you are a service member preparing to deploy, a recreational vehicle owner, or need to store a privately owned vehicle, there are several entities across Camp Pendleton that offer vehicle storage services. Please review the information to select the best service fit for your needs.",
+  "sections": [
+    {
+      "heading": "Pricing",
+      "level": 2,
+      "markdown": "• 20': $75/month\n• 30': $98/month\n• 40': $130/month\n• 50': $140/month\n• Deployed Storage: $31/month"
+    },
+    {
+      "heading": "Four things you need to provide",
+      "level": 2,
+      "markdown": "• Your military ID\n• RV, boat, or trailer registration with your name as the owner\n• Credit Card to put on file; auto-debit billing is a requirement for storage\n• The RV, boat, trailer, etc. that you are storing; the equipment has to be measured to ensure it is being placed in the appropriate size space"
+    },
+    {
+      "heading": "What you need to know",
+      "level": 2,
+      "markdown": "• Storage of joint ownership property is prohibited unless all joint owners are authorized patrons.\n• Your vehicle can only be stored or removed by you or someone that is your Power of Attorney.\n• Vehicle registration and insurance must remain active. The vehicle must remain legally operational within the state of California while in storage. The vehicle cannot be registered as non-operational.\n• We do not store unregistered or registered \"project type\" RVs, buses, racing, off-road; only cars, trucks, or motorcycles.\n• The vehicle must be maintained while in storage. Windows cannot be broken, tires cannot be flat, body-panels and engine hoods cannot be missing.\n• All vehicles are to be stored sitting on their tires – You are not allowed to put your vehicle on blocks.\n• Open cargo trailers cannot be stored with anything on top of them.\n• Nothing can be stored on top or on the outside of enclosed cargo trailers, RVs, or boats. Nothing can be left on the ground within the space. Items left on the ground will be picked up and treated as lost & found. If unclaimed, they will be discarded after 14 days.\n• We do not take responsibility for contacting patrons regarding lost & found items.\n• Only one item allowed per space.\n• We do not store semi-truck trailers.\n• Storage agreement paperwork will be initiated/completed only when the vehicle is stored. Due to peak storage times allow 30 mins. to store your vehicle.\n• If the vehicle is going to be covered, extra tie downs are necessary to make sure it stays on. We do not take responsibility for car covers.\n• Vehicle maintenance is not allowed in the storage lots."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "RV/Vehicle Storage",
+      "address": "BLDG 17013, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5296"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 4pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.281909339383915,-117.2989975736231"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services/rv-storage",
+  "fetchedAt": "2026-10-27"
+}

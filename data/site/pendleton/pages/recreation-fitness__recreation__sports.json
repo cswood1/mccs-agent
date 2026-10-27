@@ -1,0 +1,91 @@
+{
+  "title": "Sports",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Adult Sports](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/adult-sports)\n- [All-Marine Sports](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/all-marine-sports)\n- [Youth Sports](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports)\n- [Athletic Fields](https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Adult Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/adult-sports",
+      "text": "We offer tournaments, intramural, and recreational leagues.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/522d45c460d14fef8cfc838e338e302b.jpg?m=639082593784230000"
+    },
+    {
+      "title": "All-Marine Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/all-marine-sports",
+      "text": "Providing elite Marine athletes the opportunity to compete in higher-level competitions.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/8c9edb09669848d595269784154a76af.jpg?m=639093716922370000"
+    },
+    {
+      "title": "Youth Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports",
+      "text": "A positive sports experience for youth within the Camp Pendleton community.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/55f76d1a461b41a8bf96a67080544e68.jpg?m=639082593784270000"
+    },
+    {
+      "title": "Athletic Fields",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields",
+      "text": "Select from a variety of athletic fields to reserve.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/73583266a85d4ebbae87ee8cf07d70e8_v2.jpg?m=639082514791400000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Adult Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/adult-sports"
+    },
+    {
+      "text": "All-Marine Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/all-marine-sports"
+    },
+    {
+      "text": "Youth Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/youth-sports"
+    },
+    {
+      "text": "Athletic Fields",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/522d45c460d14fef8cfc838e338e302b.jpg?m=639082593784230000",
+      "alt": "Adult Sports"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/8c9edb09669848d595269784154a76af.jpg?m=639093716922370000",
+      "alt": "All-Marine Sports"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/55f76d1a461b41a8bf96a67080544e68.jpg?m=639082593784270000",
+      "alt": "Youth Sports"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/73583266a85d4ebbae87ee8cf07d70e8_v2.jpg?m=639082514791400000",
+      "alt": "Athletic Fields"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports",
+  "fetchedAt": "2026-10-27"
+}

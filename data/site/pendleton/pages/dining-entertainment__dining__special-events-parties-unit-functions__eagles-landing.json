@@ -1,0 +1,84 @@
+{
+  "title": "Eagle's Landing",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Special Events / Parties / Unit Functions",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions"
+    },
+    {
+      "label": "Eagle's Landing",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/eagles-landing"
+    }
+  ],
+  "intro": "Host your next business and/or leisure event at the beautiful Eagle's Landing. This indoor venue also offers a large patio overlooking the historic Marine Memorial Golf Course.",
+  "sections": [
+    {
+      "heading": "Amenities & Details",
+      "level": 2,
+      "markdown": "• Reception room"
+    },
+    {
+      "heading": "Settings",
+      "level": 2,
+      "markdown": "• Reception room"
+    },
+    {
+      "heading": "Venue Service Offerings",
+      "level": 2,
+      "markdown": "• Bar, drinks\n• Cakes, desserts\n• Food, catering\n• Planning\n• Service staff"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Eagle's Landing",
+      "address": "BLDG 18415\nMarine Memorial Golf Course, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Event & Catering Coordinator",
+          "number": "760-725-4390"
+        },
+        {
+          "label": "Alternative",
+          "number": "442-232-9285"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "",
+              "time": "Available by reservation"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.2676313606684,-117.3292680749067"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=5d7379b5-7c30-428b-b017-59ef2caca6fb&v=1",
+      "alt": "Eagle's Landing venue"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining/special-events-parties-unit-functions/eagles-landing",
+  "fetchedAt": "2026-10-27"
+}

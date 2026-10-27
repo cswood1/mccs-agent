@@ -1,0 +1,33 @@
+{
+  "title": "MCX24 Micro Marts",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://pendleton.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "MCX24 Micro Marts",
+      "url": "https://pendleton.usmc-mccs.org/shopping/micro-marts"
+    }
+  ],
+  "intro": "Marines, are you looking for convenience? MCX 24-hour access, you can shop anytime, day or night. Whether you're looking for snacks, drinks, or hot prepared food items, you'll find it here.",
+  "sections": [
+    {
+      "heading": "Micro Mart Locations",
+      "level": 2,
+      "markdown": "• Micro Mart – ACU5 - BLDG 31903, Camp Pendleton, CA\n• Micro Mart – Air Wing - BLDG 23166, Camp Pendleton, CA\n• Micro Mart – ASP - BLDG 43950, Camp Pendleton, CA\n• Micro Mart – BLDG 140091 - BLDG 140091, Camp Pendleton, CA\n• Micro Mart – BLDG 140114 - BDLG 140114, Camp Pendleton, CA\n• Micro Mart – CLR-17 - BLDG 140210, Camp Pendleton, CA\n• Micro Mart – Edson Range - BLDG 31604, Camp Pendleton, CA\n• Micro Mart – G-6 - BLDG 1270, Camp Pendleton, CA\n• Micro Mart – Horno - BLDG 530320, Camp Pendleton, CA\n• Micro Mart – Las Flores - BLDG 4100377, Camp Pendleton, CA\n• Micro Mart – Las Pulgas - BLDG 43301, Camp Pendleton, CA\n• Micro Mart – Margarita - BLDG 3382, Camp Pendleton, CA\n• Micro Mart – MCI West - BLDG 1160, Camp Pendleton, CA\n• Micro Mart – MCTSSA - BLDG 31357, Camp Pendleton, CA\n• Micro Mart – MWS-372 - BLDG 25264, Camp Pendleton, CA\n• Micro Mart – Naval Hospital - H-20, Camp Pendleton, CA\n• Micro Mart – Talega - BLDG 61331, Camp Pendleton, CA\n• Micro Mart – Wounded Warrior - BLDG 27850, Camp Pendleton, CA\n• Micro Mart – Hilltop - BLDG 32877, Camp Pendleton, CA\n• Micro Mart – MCAS - BLDG 2398, Camp Pendleton, CA\n• Micro Mart – Pico - BLDG 24026, Camp Pendleton, CA"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Authorized Patrons",
+      "url": "https://www.mymcx.com/support/authorized-patrons/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/shopping/micro-marts",
+  "fetchedAt": "2026-10-27"
+}

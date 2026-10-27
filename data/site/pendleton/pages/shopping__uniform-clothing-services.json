@@ -1,0 +1,284 @@
+{
+  "title": "Uniform & Clothing Services",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://pendleton.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Uniform & Clothing Services",
+      "url": "https://pendleton.usmc-mccs.org/shopping/uniform-clothing-services"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "MARINE",
+      "level": 3,
+      "markdown": "• Evening Dress: Officers and SNCO\n• Dress Blues: Officers, Enlisted Alpha Officers, and Enlisted\n• Cammies (male and female)\n• PT Gear (green & grey)\n• Tanker Jackets\n• Wooly Pully\n• Maternity Uniforms\n• Marine Corps Running Suit\n• All Weather Coat\n• 782 Gear\n• Tactical Gear\n• Boots\n• Corframes\n• Troop Towels\n• Swords\n• Accessories"
+    },
+    {
+      "heading": "NAVY",
+      "level": 3,
+      "markdown": "• Dress Blues Uniforms\n• Dress Whites Uniforms\n• Service Khaki Uniforms\n• Turtleneck, Mock\n• Cammies\n• Caps, Dixie\n• Cap, Garrison\n• Boots: Reg. Steel Toe & Blue Suede\n• Tanker Jackets\n• PT Gear\n• 782 Gear\n• Limited Tactical\n• Accessories"
+    },
+    {
+      "heading": "Additional Info",
+      "level": 2,
+      "markdown": "Selection varies at each location.\n\n**SOI:**\n• ALPHAs (enlisted males)\n• Cammies\n• PT Gear (green & grey)\n• Tanker Jackets\n• Wooly Pully\n• Marine Corps Running Suit\n• 782 Gear\n• Limited Tactical Gear\n• Boots\n• Corframes (male only)\n• Troop Towels\n• Swords\n• Accessories\n\n**Mainside:**\n• Cammies (male and female)\n• PT Gear (green & grey)\n• Tanker Jackets\n• Wooly Pully\n• Maternity Uniforms\n• Marine Corps Running Suit\n• 782 Gear\n• Tactical Gear\n• Boots\n• Troop Towels\n• For Sailors\n• Caps, Dixie\n• Cap, Garrison\n• PT Gear"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Tailor – Pacific Views MCX",
+      "address": "BLDG 2010, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-763-6979"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 7pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Tailor – School of Infantry",
+      "address": "BLDG 520409, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4392"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "11am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Uniform & Clothing Services – Pacific Views MCX",
+      "address": "BLDG 2010, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-763-6979"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 9pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 9pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Uniform & Clothing Services – School of Infantry Marine Mart",
+      "address": "BLDG 520409, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4392"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9:30am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9:30am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9:30am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Uniform & Clothing Services – Mainside Marine Mart",
+      "address": "BLDG 15100, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-3585"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:30am - 10pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:30am - 10pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:30am - 10pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:30am - 10pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6:30am - 10pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 8pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Authorized Patrons",
+      "url": "https://www.mymcx.com/support/authorized-patrons/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/?do=thumb&id=9b707abd-3b42-4b75-b1fa-300819863e76&v=1",
+      "alt": ""
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/shopping/uniform-clothing-services",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,82 @@
+{
+  "title": "Athletic Fields",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Sports",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports"
+    },
+    {
+      "label": "Athletic Fields",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "For reservations, please have the following Point of Contact (PoC) information available.\n\n- Name/Rank/Unit\n- Cell Phone Number\n- Work Phone Number\n- Email\n- Number of people attending your event\n- Special accommodations: (i.e. restrooms, sound system or field prep)\n\n**_Please adhere to the posted rules signage on the fields and remember no CFT's on the above athletic fields._**"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Athletics Department",
+      "address": "",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-1636"
+        },
+        {
+          "label": "11 Area Football Field",
+          "number": "760-725-6806"
+        },
+        {
+          "label": "11 Area Soccer Deck",
+          "number": "760-725-6195"
+        },
+        {
+          "label": "14 Area Softball Fields",
+          "number": "760-763-0453"
+        },
+        {
+          "label": "27 Area Softball/Football Fields",
+          "number": "760-763-0453"
+        }
+      ],
+      "emails": [
+        "cpenathletics@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Semper Fit CP (Facebook)",
+      "url": "https://www.facebook.com/SemperFitCP"
+    },
+    {
+      "text": "Semper Fit CP (Instagram)",
+      "url": "https://www.instagram.com/SemperFitCP"
+    }
+  ],
+  "images": [],
+  "notCaptured": "The list of fields appears only as contact phone lines on the real page",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/sports/athletic-fields",
+  "fetchedAt": "2026-10-27"
+}

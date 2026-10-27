@@ -1,0 +1,43 @@
+{
+  "title": "Dining & Entertainment",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Theater",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/theater",
+      "text": "Multifunction Movie theater and training facility. Catch the latest box-office movies at a low price.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/04237c1cb5134605b2541e716c702c54.jpg"
+    },
+    {
+      "title": "Dining",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/dining",
+      "text": "Different dining options: full-service restaurants, coffee, fast food, drive-thru, and favorite national brands.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/fde0b999877946e6815a7e5877f1ab8c.jpg"
+    },
+    {
+      "title": "Information, Tickets, and Tours",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+      "text": "Specializing in individual and group travel and offering military rates and exclusive pricing.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/0d272acfe8694ff2be88768ecb1e361e.jpg"
+    },
+    {
+      "title": "Event Planning & Multimedia",
+      "url": "https://pendleton.usmc-mccs.org/dining-entertainment/event-planning-multimedia",
+      "text": "Find the perfect venue for your party, special occasion, or event – host outdoors or indoors.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/c597bacf5f20459495788685c82e9083.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/dining-entertainment",
+  "fetchedAt": "2026-10-27"
+}

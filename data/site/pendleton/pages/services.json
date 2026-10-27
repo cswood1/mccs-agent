@@ -1,0 +1,91 @@
+{
+  "title": "Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Automotive Services",
+      "url": "https://pendleton.usmc-mccs.org/services/automotive-services",
+      "text": "Your automotive needs to keep your vehicle running smoothly.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4099feb556dd4b2aa6dd9025679c6450.jpg"
+    },
+    {
+      "title": "Barbershops & Hair Salon",
+      "url": "https://pendleton.usmc-mccs.org/services/barbershops-hair-salon",
+      "text": "Find a barber shop or hair salon near you and book your appointment online.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/34ada0ba48c647b19cfea3121065c664_v2.jpg"
+    },
+    {
+      "title": "Dry Cleaning/Laundromat",
+      "url": "https://pendleton.usmc-mccs.org/services/dry-cleaning-laundromat",
+      "text": "Camp Pendleton Dry Cleaning locations across the base offer tailoring, alterations and an extensive range of services.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/4f0cf3df7514475cb317cd61f96ee8fa_v2.jpg"
+    },
+    {
+      "title": "GameStop",
+      "url": "https://pendleton.usmc-mccs.org/services/gamestop",
+      "text": "Find new and pre-owned video games, consoles, accessories, collectibles, and more.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/a460160ec2ab4fb2a004eac37efa7126.jpg"
+    },
+    {
+      "title": "iDevicePROS",
+      "url": "https://pendleton.usmc-mccs.org/services/idevice",
+      "text": "Repair services for mobile devices.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/7f089c4a58334fe397fd6435217b3261.jpg"
+    },
+    {
+      "title": "M'Bling Jewelry & Watch Repair",
+      "url": "https://pendleton.usmc-mccs.org/services/mbling",
+      "text": "Repair and restore fine jewelry and watches.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/d6d0927047944f3bb3cf348de0a91951.jpg"
+    },
+    {
+      "title": "Optometry",
+      "url": "https://www.marineeyecare.com",
+      "text": "Provide comprehensive eye exams, fitting of contact lenses, and the option to order glasses or contacts.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/f24f2b648b47403b8d1015a29ddefb15_v2.jpg"
+    },
+    {
+      "title": "Postal & Shipping",
+      "url": "https://pendleton.usmc-mccs.org/services/postal-shipping",
+      "text": "Purchase shipping supplies, send mail and packages, or pick up Amazon packages at USPS or Amazon locations.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/b77acaf76620438d8093c83db6982086_v2.jpg"
+    },
+    {
+      "title": "Self Storage",
+      "url": "https://www.pendletonstorage.com/",
+      "text": "Safe and secure storage options on base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/02cdcb880f064fe29630bbbe05fc7303_v3.jpg"
+    },
+    {
+      "title": "RV Storage",
+      "url": "https://pendleton.usmc-mccs.org/services/rv-storage",
+      "text": "Store your privately owned vehicle or recreational vehicle in spaces 20' to over 49' and over.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/e61f5b83a2cd47369f5529110c506862_v2.jpg"
+    },
+    {
+      "title": "Tax Services",
+      "url": "https://pendleton.usmc-mccs.org/services/tax-services",
+      "text": "Receive assistance with your taxes on base.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5b84207b58b94f788db5aefa3040dc28_v2.jpg"
+    },
+    {
+      "title": "Rotating Vendors",
+      "url": "https://pendleton.usmc-mccs.org/services/rotating-vendor",
+      "text": "Explore our rotating vendors and discover the unique products they bring.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/8df47a2b83da4b91b5c7f2dfbe639edc.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services",
+  "fetchedAt": "2026-10-27"
+}

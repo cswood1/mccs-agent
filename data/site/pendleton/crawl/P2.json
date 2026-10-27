@@ -1,0 +1,71 @@
+{
+  "agent": "P2",
+  "captured": [
+    "/marine-family-support",
+    "/marine-family-support/child-and-youth",
+    "/marine-family-support/child-and-youth/child-development-centers",
+    "/marine-family-support/child-and-youth/family-child-care",
+    "/marine-family-support/child-and-youth/new-parent-support",
+    "/marine-family-support/child-and-youth/school-age-care",
+    "/marine-family-support/child-and-youth/school-liaison",
+    "/marine-family-support/child-and-youth/youth-teen-program",
+    "/marine-family-support/education/career-services",
+    "/marine-family-support/information-referral-and-relocation",
+    "/marine-family-support/libraries",
+    "/marine-family-support/military-family-life",
+    "/marine-family-support/military-family-life/chaplains-religious-enrichment-development-operation",
+    "/marine-family-support/military-family-life/exceptional-family-member-program",
+    "/marine-family-support/military-family-life/family-advocacy-program",
+    "/marine-family-support/military-family-life/family-member-employment-assistance-program",
+    "/marine-family-support/military-family-life/family-readiness-program",
+    "/marine-family-support/military-family-life/l-i-n-k-s",
+    "/marine-family-support/military-family-life/life-skills",
+    "/marine-family-support/military-family-life/marine-corps-family-team-building",
+    "/marine-family-support/military-family-life/readiness-and-deployment-support",
+    "/marine-family-support/personal-financial-management",
+    "/marine-family-support/prevention-and-counseling",
+    "/marine-family-support/prevention-and-counseling/community-counseling",
+    "/marine-family-support/prevention-and-counseling/domestic-abuse",
+    "/marine-family-support/prevention-and-counseling/military-onesource",
+    "/marine-family-support/prevention-and-counseling/semper-support",
+    "/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response",
+    "/marine-family-support/prevention-and-counseling/substance-assessment-and-counseling-program",
+    "/marine-family-support/prevention-and-counseling/substance-misuse",
+    "/marine-family-support/prevention-and-counseling/suicide-prevention",
+    "/marine-family-support/retired-affairs",
+    "/marine-family-support/single-marine-program",
+    "/marine-family-support/transition-readiness-program",
+    "/marine-family-support/transition-readiness-program/marine-for-life-network",
+    "/marine-family-support/transition-readiness-program/skillbridge",
+    "/marine-family-support/voluntary-education",
+    "/marine-family-support/volunteer-opportunities"
+  ],
+  "extras": [],
+  "redirects": [
+    {
+      "from": "/marine-family-support/education",
+      "to": "https://pendleton.usmc-mccs.org/marine-family-support/voluntary-education",
+      "note": "same-host alias: serves the Voluntary Education page (breadcrumb points there); no separate file written"
+    },
+    {
+      "from": "/marine-family-support/prevention-and-counseling/prevention-assistance/sexual-assault-prevention-and-response",
+      "to": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-and-response",
+      "note": "same-host alias: serves the canonical SAPR page; no separate file written"
+    },
+    {
+      "from": "/marine-family-support/prevention-and-counseling/prevention-assistance/domestic-abuse",
+      "to": "https://pendleton.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse",
+      "note": "same-host alias: serves the canonical Domestic Abuse page; no separate file written"
+    },
+    {
+      "from": "/marine-family-support/child-and-youth/k-12-school-liaison-program",
+      "to": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth",
+      "note": "stale link from the IR&R page; serves the Child and Youth landing page; no file written"
+    }
+  ],
+  "failures": [],
+  "thinPages": [
+    "/marine-family-support/military-family-life",
+    "/marine-family-support/prevention-and-counseling"
+  ]
+}

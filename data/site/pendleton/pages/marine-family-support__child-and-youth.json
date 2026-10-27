@@ -1,0 +1,163 @@
+{
+  "title": "Child and Youth",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Child and Youth",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth"
+    }
+  ],
+  "intro": "Programs and services for military families and their children.",
+  "sections": [
+    {
+      "heading": "Child Development Centers",
+      "level": 2,
+      "markdown": "We foster physical, cognitive, social, and emotional development in a safe and nurturing environment."
+    },
+    {
+      "heading": "Exceptional Family Member Program",
+      "level": 2,
+      "markdown": "Support for military families with special medical and/or educational needs."
+    },
+    {
+      "heading": "Family Child Care",
+      "level": 2,
+      "markdown": "We provide your child, aged 6 weeks to 12 years, with a nurturing environment, that supports their development."
+    },
+    {
+      "heading": "New Parent Support",
+      "level": 2,
+      "markdown": "The New Parent Support Program (NPSP) is a professional team of social workers, counselors, and resource specialists."
+    },
+    {
+      "heading": "School Liaison",
+      "level": 2,
+      "markdown": "To promote awareness of the unique educational needs of military-connected children and facilitate support."
+    },
+    {
+      "heading": "School Age Care",
+      "level": 2,
+      "markdown": "We offer a safe, engaging environment for children ages 5-12, providing homework assistance, recreational activities."
+    },
+    {
+      "heading": "Youth & Teen Program",
+      "level": 2,
+      "markdown": "Youth & Teen Centers provide a variety of recreational activities for teens ages 13-18yrs enrolled in the program."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Child Development Centers",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers",
+      "text": "We foster physical, cognitive, social, and emotional development in a safe and nurturing environment.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/b073a53b619a4c7daf5033f04854edfb.jpg"
+    },
+    {
+      "title": "Exceptional Family Member Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
+      "text": "Support for military families with special medical and/or educational needs.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/2b4d75314a0544b482de5644aecc637d.jpg"
+    },
+    {
+      "title": "Family Child Care",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care",
+      "text": "We provide your child, aged 6 weeks to 12 years, with a nurturing environment, that supports their development.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/e70e89ff9ad34ef59371bc8ac09f7233.jpg"
+    },
+    {
+      "title": "New Parent Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support",
+      "text": "The New Parent Support Program (NPSP) is a professional team of social workers, counselors, and resource specialists.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/5ecef7b5e58c48c4bf6873f6d260d245.jpg"
+    },
+    {
+      "title": "School Liaison",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/school-liaison",
+      "text": "To promote awareness of the unique educational needs of military-connected children and facilitate support.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/99f553917bf943deae7f170bc5f5d0eb.jpg"
+    },
+    {
+      "title": "School Age Care",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care",
+      "text": "We offer a safe, engaging environment for children ages 5-12, providing homework assistance, recreational activities.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/9e72e09306084ffe97ea3f72f31bb813.jpg"
+    },
+    {
+      "title": "Youth & Teen Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/youth-teen-program",
+      "text": "Youth & Teen Centers provide a variety of recreational activities for teens ages 13-18yrs enrolled in the program.",
+      "image": "https://pendleton.usmc-mccs.org/modules/media/t/f3a85f8dad0b412aab7de26564a2cabe.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Child Development Centers",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers"
+    },
+    {
+      "text": "Exceptional Family Member Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program"
+    },
+    {
+      "text": "Family Child Care",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care"
+    },
+    {
+      "text": "New Parent Support",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support"
+    },
+    {
+      "text": "School Liaison",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/school-liaison"
+    },
+    {
+      "text": "School Age Care",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care"
+    },
+    {
+      "text": "Youth & Teen Program",
+      "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/youth-teen-program"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://pendleton.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/b073a53b619a4c7daf5033f04854edfb.jpg",
+      "alt": "Child Development Centers"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/2b4d75314a0544b482de5644aecc637d.jpg",
+      "alt": "Exceptional Family Member Program"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/e70e89ff9ad34ef59371bc8ac09f7233.jpg",
+      "alt": "Family Child Care"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/5ecef7b5e58c48c4bf6873f6d260d245.jpg",
+      "alt": "New Parent Support"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/99f553917bf943deae7f170bc5f5d0eb.jpg",
+      "alt": "School Liaison"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/9e72e09306084ffe97ea3f72f31bb813.jpg",
+      "alt": "School Age Care"
+    },
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/f3a85f8dad0b412aab7de26564a2cabe.jpg",
+      "alt": "Youth & Teen Program"
+    }
+  ],
+  "notCaptured": "Story cards (Read More Stories) not listed.",
+  "url": "https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth",
+  "fetchedAt": "2026-10-27"
+}

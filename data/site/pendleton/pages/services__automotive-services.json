@@ -1,0 +1,862 @@
+{
+  "title": "Automotive Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://pendleton.usmc-mccs.org/services"
+    },
+    {
+      "label": "Automotive Services",
+      "url": "https://pendleton.usmc-mccs.org/services/automotive-services"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Automotive Services",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "Fuel Stations",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "Car Wash/Rentals",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "Auto/RV Storage",
+      "level": 2,
+      "markdown": "**RV Storage** - Deploying service members, RV owners, or privately owned vehicles. Various space sizes are available.\n\n**Auto Storage** - Recreation Checkout offers vehicle storage for deployed units."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Auto Skills Center & Retail Store",
+      "address": "BLDG 13191, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5963"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Closed"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Closed"
+            },
+            {
+              "days": "Wednesday",
+              "time": "12pm - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "12pm - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "12pm - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Cal Auto Registration",
+      "address": "BLDG 15102, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-512-3222"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 2pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Firestone Complete Auto Care – Mainside",
+      "address": "BLDG 13026, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-9834"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Firestone Complete Auto Care – San Onofre",
+      "address": "BLDG 51091, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "949-492-1143"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Oil Exchange Quick Lube – Mainside",
+      "address": "BLDG 13031, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5525"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Oil Exchange Quick Lube – Pacific Plaza",
+      "address": "BLDG 20840, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-430-1837"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – Chappo",
+      "address": "BLDG 22124, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4593"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 6pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 6pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – Del Mar",
+      "address": "BLDG 210606, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-2391"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 8pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 8pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "9am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Diesel available."
+      ]
+    },
+    {
+      "name": "Fuel Station – Las Pulgas",
+      "address": "BLDG 43286, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-1789"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – Mainside",
+      "address": "BLDG 1327, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-6387"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Diesel available."
+      ]
+    },
+    {
+      "name": "Fuel Station – Margarita",
+      "address": "BLDG 330360, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-4684"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "7am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "10am - 5pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "10am - 5pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – Pacific Plaza",
+      "address": "BLDG 20842, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-763-3840"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "9am - 4pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – San Mateo",
+      "address": "BLDG 62507, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-7321"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Fuel Station – San Onofre",
+      "address": "BLDG 51091, Camp Pendleton, CA",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-7792"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Friday",
+              "time": "6am - 6pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Diesel available."
+      ]
+    },
+    {
+      "name": "Car Wash – Mainside",
+      "address": "BLDG 13079, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5428"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Open 24 hours"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Thursday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Friday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Saturday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Sunday",
+              "time": "Open 24 Hours"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Cleaning products available for purchase."
+      ]
+    },
+    {
+      "name": "Car Wash – Pacific Plaza",
+      "address": "BLDG 13079, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-725-5428"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "Open 24 hours"
+            },
+            {
+              "days": "Tuesday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Wednesday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Thursday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Friday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Saturday",
+              "time": "Open 24 Hours"
+            },
+            {
+              "days": "Sunday",
+              "time": "Open 24 Hours"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Cleaning products available for purchase."
+      ]
+    },
+    {
+      "name": "Enterprise Rent-a-Car",
+      "address": "BLDG 13032, Camp Pendleton, CA 92055",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "760-385-5149"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 5pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "Closed"
+            },
+            {
+              "days": "Sunday",
+              "time": "Closed"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "RV Storage",
+      "url": "https://pendleton.usmc-mccs.org/services/rv-storage"
+    },
+    {
+      "text": "Auto Storage",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/recreation/outdoor-recreation/recreation-checkout"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/services/automotive-services",
+  "fetchedAt": "2026-10-27"
+}

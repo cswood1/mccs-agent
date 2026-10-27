@@ -1,0 +1,34 @@
+{
+  "title": "MCCS Explore - Pendleton",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://pendleton.usmc-mccs.org/about/explore"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Choose Your Location",
+      "level": 1,
+      "markdown": "Welcome to Marine Corps Community Services (MCCS). Select your location to access services and resources tailored to your installation or recruiting region."
+    },
+    {
+      "heading": "Installations",
+      "level": 2,
+      "markdown": "- 8th & I (Washington, D.C.)\n- Albany (Georgia)\n- Barstow (California)\n- Bridgeport (Bridgeport, California)\n- Camp Fuji (Japan)\n- Camp Lejeune (North Carolina)\n- Camp Pendleton (California)\n- Cherry Point (North Carolina)\n- Hampton Roads (Virginia)\n- Hawaii (Kaneohe Bay, Hawaii)\n- Henderson Hall (Arlington, Virginia)\n- Iwakuni (Japan)\n- Miramar (California)\n- Mujuk (South Korea)\n- New River (North Carolina)\n- Okinawa (Japan)\n- Quantico (Virginia)\n- San Diego (California)\n- South Carolina (Beaufort, South Carolina)\n- 29 Palms (California)\n- Yuma (Arizona)"
+    },
+    {
+      "heading": "Recruiting",
+      "level": 2,
+      "markdown": "- Eastern Recruiting Region (Parris Island)\n- Western Recruiting Region (San Diego)"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "Page body is only the installation location picker",
+  "url": "https://pendleton.usmc-mccs.org/about/explore",
+  "fetchedAt": "2026-10-27"
+}

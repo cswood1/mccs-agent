@@ -1,0 +1,132 @@
+{
+  "title": "Pacific Views",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://pendleton.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Inns of the Corps",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps"
+    },
+    {
+      "label": "Pacific Views",
+      "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views"
+    }
+  ],
+  "intro": "Pacific Views offers the comfort you and your family are looking for at a very competitive price. Every room features an ocean view among many amenities to make your stay as comfortable as possible. We can accommodate the whole family, including pets!",
+  "sections": [
+    {
+      "heading": "Information",
+      "level": 3,
+      "markdown": "**Pricing**\n\nPlease visit [Inns of the Corps](https://lodgingreservations.usmc-mccs.org/Search/Index/13525/90/) or contact property for pricing and availability.\n\n*Leisure can only book 30 days in advance and for a max of 7 days.*\n\n**Room Amenities**\n\n- High-Speed Internet Access\n- In-Room Safe\n- Health & Beauty Aids\n- Coffee Maker w/ Free Coffee\n- Refrigerator\n- Microwave\n- 47\" HDTV\n- Premium Cable\n- Queen or King Size Beds\n\n**Lodge Amenities**\n\n- Business Center w/ Computer/Printer/Scanner\n- Laundry Facility\n- Fitness Center\n- Picnic Area w/ BBQ Grills\n- Food & Sundries Available 24/7\n- [Pacific Views MCX Shopping](https://www.mccscp.com/mcx)\n- [Pacific Views Event Center and Dining](https://www.mccscp.com/eventcenters)\n- Pacific Plaza Shopping and Dining\n\n**Suites**\n\nInclude a kitchenette w/ cooking & dining utensils.\n\nADA-compliant rooms available.\n\nEvery room has an ocean view!"
+    },
+    {
+      "heading": "Pets",
+      "level": 3,
+      "markdown": "Four pet-friendly rooms available:\n\n- 2 Deluxe rooms with 2 queen beds\n- 2 Deluxe rooms with 1 king bed\n\n**Pet Fees**\n\nPlease visit [Inns of the Corps](https://lodgingreservations.usmc-mccs.org/Search/Index/13525/90/) or contact property for pricing and availability.\n\n*Orders must be verified at the time of check-in to receive rate.*\n\n**Pet Policy**\n\nDogs weighing 50 pounds or less are welcome. Dogs over 50 pounds may be permitted but require prior approval. Pet owners must sign a liability waiver at check-in and supply shot records. Dogs left unattended in rooms must be placed in an acceptable kennel for the safety of other guests. Cleaning fees may apply. Pit Bull, Staffordshire Terriers, Wolf Hybrid and Rottweilers are not permitted per base policy."
+    },
+    {
+      "heading": "Gallery",
+      "level": 3,
+      "markdown": "Deluxe (7 photos), Suite (5 photos), Lodge (13 photos)."
+    },
+    {
+      "heading": "On-Base Activities",
+      "level": 3,
+      "markdown": "**Fast Food Options**\n\n- Dunkin Donuts\n- Starbucks\n- Jersey Mikes\n- McDonalds\n- Panera\n- Panda Express\n- Hibachi-San\n\n**Base Information**\n\n- 21 Area Fitness Center\n- Leatherneck Lanes\n- ITT Ticket Office\n- Pacific Views MCX\n\n[Base Map](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=a10f0ab3-239d-41c4-9f18-d19adb55dd69&v=2)"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Pacific Views Lodge",
+      "address": "BLDG 202870\nCamp Pendleton, CA 92058",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "760-763-7805"
+        },
+        {
+          "label": "Phone",
+          "number": "760-763-7807"
+        },
+        {
+          "label": "Phone",
+          "number": "760-763-7806"
+        },
+        {
+          "label": "Phone",
+          "number": "760-763-7809"
+        }
+      ],
+      "emails": [
+        "lodgingreservations.pacificviews@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Thursday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Friday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Saturday",
+              "time": "8am - 3:30pm"
+            },
+            {
+              "days": "Sunday",
+              "time": "8am - 3:30pm"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Booking",
+      "url": "https://lodgingreservations.usmc-mccs.org/Search/Index/13525/90/"
+    },
+    {
+      "text": "Pacific Views Lodge Welcome",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=1b102bf9-76c8-43bb-b223-634d9b573e3d&v=2"
+    },
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.2266488,-117.3907008"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://pendleton.usmc-mccs.org/modules/media/t/d537c27ff8254156a43898df6bd4b798_v3.jpg?m=639078156572100000",
+      "alt": "Pacific Views"
+    }
+  ],
+  "notCaptured": "Photo gallery images (25) not captured individually; Welcome PDF not captured",
+  "url": "https://pendleton.usmc-mccs.org/lodging/inns-of-the-corps/pacific-views",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Payments",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://pendleton.usmc-mccs.org/more"
+    },
+    {
+      "label": "Payments",
+      "url": "https://pendleton.usmc-mccs.org/more/payments"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Welcome to MCCS Camp Pendleton!**\nThis site is your portal for making payments to MCCS quickly and securely."
+    },
+    {
+      "heading": "Payment Options",
+      "level": 2,
+      "markdown": "- [Arrive Alive Payments • Unit Payments • Unit Deposits](https://www.mccscontractedpayments.com/wuf/?action=doUnitPayment)\n- [Children/Youth Programs • Employee Payments • Event Center Payments • Facility Usage Rental • Late Payments • Restitution • Xinfo Returned Payments • Varsity and Other sports • Other One-Time Payments](https://www.mccscontractedpayments.com/wuf/?action=doPayment)\n- [Sponsorship/Advertising](https://www.mccscontractedpayments.com/)\n- [Contracted Concessionaire Payments](https://www.mccscontractedpayments.com/)"
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 2,
+      "markdown": "**Resource Links**\n- [UFRF Balance Sheet](https://www.mccscontractedpayments.com/)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Financial Management Division",
+      "address": "Camp Pendleton, CA",
+      "phones": [],
+      "emails": [
+        "pen.finance@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Unit Payments",
+      "url": "https://www.mccscontractedpayments.com/wuf/?action=doUnitPayment"
+    },
+    {
+      "text": "One-Time Payments",
+      "url": "https://www.mccscontractedpayments.com/wuf/?action=doPayment"
+    },
+    {
+      "text": "MCCS Contracted Payments",
+      "url": "https://www.mccscontractedpayments.com/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://pendleton.usmc-mccs.org/more/payments",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,61 @@
+{
+  "title": "24/7 Access",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "24/7 Access",
+      "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "ACCESS & ENTRY",
+      "level": 2,
+      "markdown": "- **Your CAC is Your Key**\nAccess is for authorized patrons, 18 years and older, with a registered Common Access Card (CAC).\n- **One Swipe, One Entry**\nYou must swipe your own CAC every single time you enter.\n- **Going Solo**\nGuests, contractors, and anyone without a registered CAC are strictly prohibited during unstaffed hours.\n- **Never Prop the Door**\nPropping or holding the door open is strictly forbidden and will result in the loss of your access privileges. Ensure the door closes fully behind you.\n- **Resetting for Unstaffed Hours**\nIf you are in the gym when it closes and staff leaves, you must exit the building and re-enter by swiping your CAC to ensure you are accounted for."
+    },
+    {
+      "heading": "RULES OF ENGAGEMENT",
+      "level": 2,
+      "markdown": "- **You're in Charge**\nYou are now your own safety officer. Train smart, do not exercise beyond your limits, and avoid horseplay.\n- **Stay in Your Lane**\nDo not enter restricted areas like the HITT Center, saunas, front desk, or offices, even if they appear unsecured. Tampering with locks or chains is prohibited.\n- **Behave Accordingly**\nYou are expected to conduct yourself in accordance with military rules and standards."
+    },
+    {
+      "heading": "EMERGENCIES & REPORTING",
+      "level": 2,
+      "markdown": "- **For Emergencies**\nIn case of an emergency, use the emergency information located near the phone at the front desk to report the issue.\n- **For Facility Issues**\nReport any non-emergency problems (e.g., broken equipment, burned-out lights) in the logbook at the front desk."
+    },
+    {
+      "heading": "VIOLATIONS & CONSEQUENCES",
+      "level": 2,
+      "markdown": "- **Know the Stakes**\nAny violation of these rules may result in the immediate revocation of your 24/7 access privileges.\n- **Report to Command**\nViolations by active-duty personnel will be reported to their command for potential disciplinary action under the UCMJ. Civilian violations will be reported to the Provost Marshal's Office (PMO).\n- **Stay Current**\nYou must sign a Statement of Understanding (SOU) for each facility you wish to use and renew it annually to maintain access."
+    },
+    {
+      "heading": "Resource Downloads",
+      "level": 5,
+      "markdown": "- [Fitness Center Facility Usage Request](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=956acbc8-1f5a-41bf-ab27-e5babf67c583&v=1)\n- [Unstaffed and Hybrid Fitness Centers Policy](https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=095ba8c8-8339-4f5c-9a7b-be74acb254d7&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Fitness Center Facility Usage Request",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=956acbc8-1f5a-41bf-ab27-e5babf67c583&v=1"
+    },
+    {
+      "text": "Unstaffed and Hybrid Fitness Centers Policy",
+      "url": "https://pendleton.usmc-mccs.org/modules/media/?do=inline&id=095ba8c8-8339-4f5c-9a7b-be74acb254d7&v=1"
+    }
+  ],
+  "images": [],
+  "notCaptured": "PDFs not captured",
+  "url": "https://pendleton.usmc-mccs.org/recreation-fitness/fitness/24-7-access",
+  "fetchedAt": "2026-10-27"
+}
