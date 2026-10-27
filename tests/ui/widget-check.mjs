@@ -208,7 +208,8 @@ const bowlingChips = (await (await sp.request.get(base + "/api/installations/qua
 check("On focus: this page's chips", JSON.stringify(focusOpts) === JSON.stringify(bowlingChips), JSON.stringify(focusOpts));
 check("Combobox expanded on focus", (await sInput.getAttribute("aria-expanded")) === "true");
 await sInput.fill("bowling");
-await sp.waitForTimeout(200);
+// Page matches appear once the page index has loaded (slow right after a dev-server restart).
+await lb.locator("[role=option]").nth(1).waitFor({ timeout: 10000 }).catch(() => {});
 const typed = await lb.locator("[role=option]").allTextContents();
 check("Typing: first row is the Ask row", typed[0] === "Ask MCCS: ‘bowling’", typed[0]);
 check("Typing: up to 5 page matches after it", typed.length >= 2 && typed.length <= 6 && /^Bowling/.test(typed[1] ?? ""), JSON.stringify(typed));
