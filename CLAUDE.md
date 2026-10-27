@@ -27,20 +27,26 @@ needs, some things common across all installations, some unique to one base and 
 - Mobile-friendly; most users will be on phones.
 
 ## Demo host site (decided 2026-10-26)
-The app is now a high-fidelity recreation of quantico.usmc-mccs.org with the assistant on every page,
-deployed on Vercel for demos.
+The app is a high-fidelity recreation of MCCS installation sites with the assistant on every page,
+deployed on Vercel for demos. Three bases have full content: Quantico (`/quantico`), Camp Pendleton
+(`/pendleton`) and Camp Lejeune–New River (`/lejeune`, site lejeunenewriver.usmc-mccs.org).
 
-- **Theme from a browser capture.** `design/reference/` holds the real rendered HTML of four page
-  templates plus the site's own CSS and logo, captured once from a normal browser.
-  `node scripts/extract-theme.mjs` turns it into `site/fragments/quantico/*.html` (header, MENU drawer,
-  search modal, footer, home carousel/tiles/important links) and `public/theme/` (site CSS, Bootstrap
-  5.3.2 + Bootstrap Icons 1.7.2 from npm, logo). The MCCS CMS theme is shared by every installation.
-- **Content from WebFetch only.** `data/site/quantico/pages/*.json` holds one structured file per page
+- **Theme from a browser capture.** `design/reference/` holds the real rendered HTML of four Quantico
+  page templates plus the site's own CSS and logo, and the home page of Pendleton and Lejeune
+  (`design/reference/<base>/page-home.json`, with `urls-to-fetch.json`, their crawl list; see
+  `MULTIBASE-README.md`), captured once from a normal browser. `node scripts/extract-theme.mjs` turns
+  them into `site/fragments/<slug>/*.html` per base (header with its own MENU drawer, search modal,
+  footer, `home-top` = everything above "Stay Informed" since each base arranges carousels/hero/tiles/ads
+  differently, `home-important-links`) and `public/theme/` (site CSS, Bootstrap 5.3.2 + Bootstrap Icons
+  1.7.2 from npm, logo). The MCCS CMS theme is shared by every installation; bases without a capture
+  fall back to Quantico's fragments. `SLUG_FOR_HOST` in that script maps hostnames to app slugs
+  (lejeunenewriver → `lejeune`; old `/lejeunenewriver/...` URLs 308 to `/lejeune/...` in `proxy.ts`).
+- **Content from WebFetch only.** `data/site/<base>/pages/*.json` holds one structured file per page
   (title, breadcrumb, sections, cards, contacts with hours/phones/emails, links, images), captured with
   Claude Code's WebFetch tool. Never use curl, custom headers, headless browsers, or anything else that
   tries to get around the site's Akamai bot protection. Headless screenshot tests must block every
   request to *.usmc-mccs.org.
-- **One source for site and agent.** `npm run build:content` generates `data/content/quantico.json`
+- **One source for site and agent.** `npm run build:content -- <base>` generates `data/content/<base>.json`
   (the agent's knowledge) from the same page files: program/facility/section/event pages in full, news
   stories as title + link + excerpt (the agent can web_fetch the full story).
 - **Templates** (`app/(site)/templates.tsx`): section landing, program/facility detail (side nav, header
@@ -118,7 +124,8 @@ disagrees with it, ask before changing either.
   them as chips until the visitor navigates.
 - **Chips:** `scripts/chips/generate.mjs` (Haiku 4.5 + Message Batches; `--dry-run` / `--submit` /
   `--collect`) writes 3–4 chips into each page file, keyed by a hash of the page text, and keeps raw
-  model output in `data/site/quantico/chips-raw.json`. 404 of 439 pages have chips; the rest fall back
+  model output in `data/site/<base>/chips-raw.json` (`--installation <base>`, default quantico). Quantico:
+  404 of 439 pages have chips; Pendleton 131/133; Lejeune 118/119. The rest fall back
   to the nearest section page, then the installation's `defaultChips`.
   `GET /api/installations/:id/page?path=` returns title, breadcrumb, chips and the welcome line.
 - **Widget:** "Viewing: <page>" line, page-specific welcome, chips bar, nudge bubble after 20 s on
@@ -152,12 +159,13 @@ disagrees with it, ask before changing either.
   `/` goes to `/quantico`; old un-prefixed Quantico URLs 308-redirect to `/quantico/...` (`proxy.ts`).
   Installations with captured content (`data/site/<slug>/pages/home.json`) get the full site; others get
   a themed "coming soon" page. The assistant widget appears where `installations/<slug>.json` exists
-  (Quantico, Pendleton); chat and warm-up return a friendly "not loaded yet" for installations without
+  (Quantico, Pendleton, Lejeune); chat and warm-up return a friendly "not loaded yet" for installations without
   content, before any Claude call.
 - `app/(site)/[installation]/` — the recreated sites: `layout.tsx` (banner, captured header/footer
   rendered for the installation, Bootstrap JS, widget), `page.tsx` (home or coming soon),
   `[...slug]/page.tsx` (every other page). Shared pieces in `app/(site)/`: `templates.tsx` (incl.
-  `ComingSoon`), `photo.tsx`, `raw.tsx`, `site-enhancements.tsx`.
+  `ComingSoon`), `photo.tsx`, `raw.tsx`, `site-enhancements.tsx`. Redirects the real sites send
+  (careers, alias pages) are mirrored per base in `next.config.ts`.
 - `lib/site/data.ts` — per-installation page data, `installationHref`, `localHref` (any
   `<slug>.usmc-mccs.org` link → `/<slug>/...`), and `fragment(inst, name)`, which prefixes internal
   links, points the location picker at `/<slug>`, and labels the picker button. Paths inside page data
@@ -168,34 +176,45 @@ disagrees with it, ask before changing either.
 - `app/api/installations/[id]/route.ts` (config) and `.../page/route.ts` (title, chips, welcome).
 - `app/bookmarklet.html/route.ts` + `site/bookmarklet.html` — bookmarklet for the live Quantico site.
 - `lib/prompt.ts` — the shared agent template (system prompt + cached content block).
-- `installations/<id>.json` — per-installation assistant config (Quantico; Pendleton has the basics).
+- `installations/<id>.json` — per-installation assistant config (Quantico, Pendleton, Lejeune; register
+  new ones in `lib/installations.ts`).
 - `scripts/extract-theme.mjs`, `scripts/build-content.mjs`, `scripts/chips/generate.mjs`.
 - `public/embed-test.html` — plain-HTML embed check.
 
 ## Commands
 - `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; set `DEMO_ACCESS_CODE` to test the gate)
-- `npm run build:content` — regenerate the agent's content file from `data/site/quantico/pages`
+- `npm run build:content -- <base>` — regenerate a base's content file from `data/site/<base>/pages`
+  (default quantico)
 - `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
 - `npm run eval -- <label> [--only id1,id2]` / `npm run eval:compare -- before after` — run and compare
   the test set (ask before running all of it; see API budget rules)
 - `npm run test:ui` — stubbed browser checks of the widget
-- `node --env-file=.env.local scripts/chips/generate.mjs --dry-run` — chip generation estimate
+- `node --env-file=.env.local scripts/chips/generate.mjs --dry-run [--installation <base>]` — chip
+  generation estimate (`--submit`, `--collect` after an OK)
 - `npm run build`, `npm run lint`
 - Deploys: pushing to `main` auto-deploys to production (Vercel GitHub integration, connected
   2026-10-26); `vercel deploy --prod` also works
 
-## Status (2026-10-26)
+## Status (2026-10-27)
 - **Live demo:** https://mccs-agent.vercel.app (Vercel team `nps-hackathon-mccs-agent`, project
   `mccs-agent`). Access code is in Vercel's `DEMO_ACCESS_CODE` env var and the local `.env.local`.
 - **Crawl:** 439 pages captured with WebFetch in three waves from the home page, menus, and every
   internal link found (85 program/section/facility/info pages, 53 events, 301 news stories). 39 pages
   have little or no body text on the real site itself (image-only stories, dynamic lists).
-- **Not captured:** the event calendar and story lists (JavaScript; rebuilt from captured pages),
+- **Pendleton and Lejeune crawl (2026-10-27):** one pass over each `urls-to-fetch.json` (news skipped)
+  by six section-split WebFetch agents, plus facility/program sub-pages one level deeper (capped ~40 per
+  base). Pendleton: 133 pages (26 extras, 8 redirects). Lejeune: 119 pages (1 extra, 5 redirects).
+  Per-agent reports in `data/site/<base>/crawl/`. Known gaps: Lejeune's Marine for Life Cycle has 5 of
+  9 checklist tabs (WebFetch length limit); a few long Pendleton FAQ/list sections may be condensed
+  (noted in each page's `notCaptured`); event calendars, PDFs and embedded forms aren't captured.
+- **Not captured (Quantico):** the event calendar and story lists (JavaScript; rebuilt from captured pages),
   57 older MCCS-wide news stories linked only from other stories (stopped after wave 3), the body
   composition PDF, and one story whose fetch returned only boilerplate. Pages that redirect off the
   site (careers, post offices, voting assistance, local area info) are mirrored as redirects.
-- **Agent:** ~250K prompt tokens, cached for an hour and shared by all visitors; warmed when the chat
-  opens. Round 3 full eval (33 questions, `tests/eval/results/round3.json`): correct 29/29, sourced
+- **Agent:** prompt tokens per base: Quantico ~250K, Pendleton ~278K, Lejeune ~255K. Each base has its
+  own cache entry (1-hour TTL), shared by all of that base's visitors and warmed when the chat opens.
+  Pendleton and Lejeune were checked with 3 questions each (gyms, child care, lodging), all correct
+  and sourced; no full eval set for them yet. Round 3 full eval (33 questions, `tests/eval/results/round3.json`): correct 29/29, sourced
   33/33, safe 33/33, context 8/8, concise 27/33; median 67 words, 1.9 s to first text, 3.8 s total.
   After that run the per-turn reminder was tightened ("name the top two"); the 6 long answers re-checked
   4/6 within length (`r3-concise.json`), not yet confirmed with a full run.
