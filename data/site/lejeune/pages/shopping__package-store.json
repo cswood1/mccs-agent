@@ -1,0 +1,103 @@
+{
+  "title": "Tun Alley - Wine, Spirits, & More",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Package Store: Tun Alley - Wine, Spirits, & More",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping/package-store"
+    }
+  ],
+  "intro": "At Tun Alley Wine, Spirits & More, we pride ourselves on serving the diverse needs of our military community with convenience, quality, and care.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "This one-stop shop opens weekdays at 8AM, offering everything from your morning coffee and fresh grab-and-go breakfast to an extensive selection of wines, spirits, craft beers, and liquors. We understand the unique demands of military life, providing the essential convenience items you'd expect from a Marine Mart, ensuring you can find what you need.\n\nStart your day with our freshly prepared breakfast options, stop by for a quick and satisfying lunch, or pick up that special bottle for your evening plans – all in one convenient location. Our early morning hours and comprehensive selection make us the perfect destination, no matter your schedule or needs."
+    },
+    {
+      "heading": "Special Orders",
+      "level": 2,
+      "markdown": "Need something special for an event, party, or the holidays? We can help!\n\nFrom bubbly wine to ice-cold beer, we've got your favorites covered—because every event deserves the perfect pour!\n\n• Wines may be ordered by the bottle.\n• Beer must be ordered by the case."
+    },
+    {
+      "heading": "Wine Discounts",
+      "level": 2,
+      "markdown": "10% off when you purchase any 6 bottles of wine. Mix & match 750 ml or 1.5 L."
+    },
+    {
+      "heading": "Keg Club",
+      "level": 2,
+      "markdown": "For a $60 membership fee, you may have two kegs out at once and you can keep them for up to six months. If you have to relocate or decide to get out of the Keg Club, your $60 membership fee will be returned. Just return the keg(s) that you have rented for a full refund.\n\n_Advance notice is required._"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Tun Alley - Wine, Spirits, & More",
+      "address": "Hadnot Point Plaza, Bldg. 84, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1430"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10:30AM - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:30AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Hadnot Point Plaza, Bldg. 84, Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.670026,-77.342068"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=05c0376d-0f32-4975-971b-977b23e27eb4&v=1",
+      "alt": "Tun Alley - Wine, Spirits, & More"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/shopping/package-store",
+  "fetchedAt": "2026-10-27"
+}

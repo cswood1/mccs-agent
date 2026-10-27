@@ -1,0 +1,96 @@
+{
+  "title": "Sandbar Grill",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Sandbar Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/sandbar-grill"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "[Menu](/modules/media/?do=inline&id=6bfd3f2e-216f-4eaf-9657-38df04353d27&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Sandbar Grill",
+      "address": "Bldg. BB27 Horn Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-7024"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6:30AM - 1PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:30AM - 1PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:30AM - 1PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:30AM - 1PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6:30AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=6bfd3f2e-216f-4eaf-9657-38df04353d27&v=1"
+    },
+    {
+      "text": "Bldg. BB27 Horn Rd., Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.5838197640477,-77.3619656276937"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=eb90a7a8-1f95-4a25-bfd9-3a79abb2ca01&v=1",
+      "alt": "Sandbar Grill"
+    }
+  ],
+  "notCaptured": "Menu is a linked file (not captured); page has little body text beyond the contact box",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/sandbar-grill",
+  "fetchedAt": "2026-10-27"
+}

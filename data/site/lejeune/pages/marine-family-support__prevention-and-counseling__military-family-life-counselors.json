@@ -1,0 +1,106 @@
+{
+  "title": "Military & Family Life Counselors",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Prevention and Counseling",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling"
+    },
+    {
+      "label": "Military & Family Life Counselors",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-family-life-counselors"
+    }
+  ],
+  "intro": "Military & Family Life Counselors (MFLCs) are experienced behavioral health professionals assigned to installations, embedded in units, schools, and Child Development and Youth Centers, MFLCs augment and work in collaboration with other Marine Corps Behavioral Health programs. MFLCs act as touchpoints for Marines and families who may need assistance.",
+  "sections": [
+    {
+      "heading": "Need to Talk?",
+      "level": 2,
+      "markdown": "Military & Family Life Counselors are here to listen, and are available to help service members, spouses, family members, children and staff address:\n\n• Deployment/Reintegration Issues\n• Stress\n• Marriage and Relationship Issues\n• Decision-making\n• Parenting/Sibling & Family Issues\n• Grief and Loss\n• Communication Challenges\n• Daily Life Issues\n• Transition Issues\n• Emotional Well-being\n• Improve Coping and Resilience\n\nCounseling, consultation and training is **free** and **confidential**. **No records are kept.**"
+    },
+    {
+      "heading": "Helping You Is Our Priority",
+      "level": 2,
+      "markdown": "After-hours and weekend appointments are available. Group or off-site meetings can be arranged."
+    },
+    {
+      "heading": "7 Things To Know About MFLC",
+      "level": 2,
+      "markdown": "1. All MFLCs are licensed professional mental health counselors (LCSW, LPC, LMFT, etc.) who provide non-medical solution-focused \"counseling\" (no longer called \"consultation\") to military personnel and their families. MFLCs assist people to explore alternate solutions to current daily life stressors.\n2. MFLCs are considered an augmentation, not a replacement, for existing family support services.\n3. MFLCs do not keep records. Anything shared with an MFLC is confidential unless it is a Duty to Warn situation, as the MFLC is a mandated reporter and not a restricted reporter. Duty to Warn is when someone tells an MFLC they want to cause harm to self or others include suicidal thought or intent, a desire to harm oneself, domestic violence, child abuse or neglect, violence against any person, and any present or future illegal activity.\n4. MFLCs maintain contact with Marines/Sailors (and their families) through their confidential cell phones and face-to-face communications.\n5. The MFLCs' work day is flexible; however, it is a 40 hour work week. This provides the MFLCs the opportunity to meet with people prior to work, after work, and to support those who work a shift schedule. Additionally, it enables the MFLCs to provide support at base or command events and to facilitate workshops or other groups.\n6. MFLCs are embedded in units and also have the flexibility to meet at various locations on or off site, never in a person's home or vehicle.\n7. People can meet with the MFLC for up to 12 sessions."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Military OneSource Confidential Help",
+      "url": "https://www.militaryonesource.mil/confidential-help/",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=8dc8d247-40d4-4b33-af6a-09913d24574e&w=750&h=450&v=1"
+    },
+    {
+      "title": "988 Helpline",
+      "url": "https://988lifeline.org/",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=4e0cc9b6-e606-4659-bd5f-6da1097a2fc9&v=1"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Military & Family Life Counselors",
+      "address": "",
+      "phones": [
+        {
+          "label": "MCB Camp Lejeune",
+          "number": "910-260-7736"
+        },
+        {
+          "label": "MCB Camp Lejeune",
+          "number": "910-260-7576"
+        },
+        {
+          "label": "MCAS New River",
+          "number": "910-915-3888"
+        },
+        {
+          "label": "Camp Geiger",
+          "number": "843-799-8970"
+        },
+        {
+          "label": "Camp Johnson",
+          "number": "910-338-8030"
+        },
+        {
+          "label": "Camp Johnson",
+          "number": "910-444-9167"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Military OneSource",
+      "url": "https://www.militaryonesource.mil/confidential-help/"
+    },
+    {
+      "text": "988 Helpline",
+      "url": "https://988lifeline.org/"
+    },
+    {
+      "text": "Child Development Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers"
+    },
+    {
+      "text": "Prevention & Education",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/prevention-education"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/military-family-life-counselors",
+  "fetchedAt": "2026-10-27"
+}

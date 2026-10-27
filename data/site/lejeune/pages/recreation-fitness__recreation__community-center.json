@@ -1,0 +1,136 @@
+{
+  "title": "Community Center",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Community Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/community-center"
+    }
+  ],
+  "intro": "The Community Center is a recreation and event service designed for individuals and families of all ages. We help build community connection by offering fun runs, facility rentals, and year‑round events.",
+  "sections": [
+    {
+      "heading": "Amenities",
+      "level": 2,
+      "markdown": "- Computer Center\n- Free WiFi\n- Fax\n- Chairs\n- Scanner\n- Projector and Screen\n- Small Meeting Room\n- Playground\n- Event Room with Stage\n- 6' & 8' Rectangular Tables\n- 6' Round Tables\n- Podium\n- Full Kitchen\n- Ice Machine\n- Community Garden\n- Covered Pavilion with picnic tables, lights, outlets"
+    },
+    {
+      "heading": "Reserve the Community Center",
+      "level": 3,
+      "markdown": "Birthdays • Wedding Reception • Conferences • Reunions • Unit Functions • Dances • Engagement Party\n\n- Event Room - 201 maximum occupancy\n- Classroom - 15 maximum occupancy\n- To secure rental a 50% deposit is required\n- Cost is $45 per hour (minimum of two hours)\n- Rental time must include setup and cleanup\n- Must book 2 weeks in advance\n- There will be a $65 charge per hour, or any part of an hour, that goes over the scheduled time\n- Facility usage agreement form must be submitted to secure rental\n- Balance must be paid in full 10 business days prior to the event\n- Any changes made must be made at least 3 days prior to event\n\n*Staff does not help setup, decorate, cleanup for events.*"
+    },
+    {
+      "heading": "Dance Program",
+      "level": 3,
+      "markdown": "Classes available for ages 18 months and up."
+    },
+    {
+      "heading": "Karate Classes",
+      "level": 3,
+      "markdown": "Self-defense for ages 7 and up. Classes held on Tuesdays & Thursdays.\n\n**Class Times**\n- Beginner: 6 - 6:45PM\n- Intermediate & Advanced: 7 - 8:30PM\n\n**Pricing**\n- Beginner (Level 1): $40 (1 session/week), $50 (2 sessions/week)\n- Intermediate/Advanced (Level 2): $50 (1 session/week), $60 (2 sessions/week)\n\nReceive a $10 discount for each additional family member!"
+    },
+    {
+      "heading": "Piano Lessons",
+      "level": 3,
+      "markdown": "Ever wanted to learn to play piano? Lessons available for ages 3 and up.\n\n**Pricing**\n- (4) 30 minute lessons: $90\n- (4) 45 minute lessons: $132.50\n- (4) 60 minute lessons: $175\n\n*Additional fees required for music books and materials.*"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Community Center",
+      "address": "TT-44 Tarawa Blvd., Tarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-450-1687"
+        },
+        {
+          "label": "Fax",
+          "number": "910-450-1686"
+        }
+      ],
+      "emails": [
+        "MCCSLejeune-NewRiverCommunityCtr@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "By Reservation Only"
+            },
+            {
+              "days": "Monday",
+              "time": "10AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "10AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "10AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "By Reservation Only"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Lejeune Dance Company",
+      "address": "",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-450-1687"
+        }
+      ],
+      "emails": [
+        "lejeunedancecompany@gmail.com"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=7e98b109-2253-41fc-919b-65509683647f",
+      "alt": "Lejeune Dance Company"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=f8b815a4-ad94-482a-860a-bde134cfc303",
+      "alt": "Self Defense Classes for Ages 5 and up"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=d94667e5-36e9-4c21-9dc4-de401c9a387a",
+      "alt": "Piano Classes"
+    }
+  ],
+  "notCaptured": "Upcoming Events list (dynamic) and sponsor banners not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/community-center",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Tax Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Tax Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/tax-services"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "MCB Camp Lejeune Tax Center",
+      "url": "https://www.mcieast.marines.mil/Staff-Offices/Regional-Legal-Services-East/Legal-Services-Support-Team-Camp-Lejeune/Tax-Center/",
+      "text": "Open year round for anyone requiring tax assistance.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/678234c06dc74e3b83fead177be9d380_v1.jpg?m=638298277864130000"
+    },
+    {
+      "title": "MCAS New River Tax Center",
+      "url": "http://www.newriver.marines.mil/Staff-Judge-Advocate/Tax-Center/",
+      "text": "Serving you during tax season.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e38b266dafef45f49fe89027c2995b53_v1.jpg?m=638298277862770000"
+    },
+    {
+      "title": "H&R Block",
+      "url": "https://www.hrblock.com/tax-office-near-me/north-carolina/camp-lejeune/33052/",
+      "text": "Online and in person, help is here.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/65f48f721c3e4b97882a2d3ff34bc735_v1.jpg?m=638298277862430000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/tax-services",
+  "fetchedAt": "2026-10-27"
+}

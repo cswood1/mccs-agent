@@ -1,0 +1,132 @@
+{
+  "title": "Swim Lessons",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Swimming",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools"
+    },
+    {
+      "label": "Swim Lessons",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools/swim-lessons"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Swim Lessons are open to all authorized patrons with base access."
+    },
+    {
+      "heading": "Swim Lesson Registration Schedule",
+      "level": 2,
+      "markdown": "Swim Lesson registration is done online. The ability to register will be available at the dates/times listed.\n\n- **Lessons in Jan.:** Registration Starts Dec. 16, 8:30AM\n- **Lessons in Feb.:** Registration Starts Jan. 15, 8:30AM\n- **Lessons in Mar.:** Registration Starts Feb. 18, 8:30AM\n- **Lessons in Apr.:** Registration Starts Mar. 17, 8:30AM"
+    },
+    {
+      "heading": "Cancellation Policy",
+      "level": 2,
+      "markdown": "Refunds are authorized when:\n\n- Refund requests are received at least **72 hours** prior to the start of the scheduled class.\n- Documented PCS moves and medical reasons.\n- Unusual situations on a case-by-case basis. Such cases do not include fear of dislike or lack of interest of the student, or scheduling conflicts that arise inside 48 hours prior to the start of class.\n\nRefunds are not authorized for circumstances related to weather or pool operations. In such cases, we will do our best to reschedule class time, or reassign the student to another class session.\n\nClasses cancelled due to weather or pool operations will be offered a make-up day to be determined at a later date. A safety lesson may also be used in replacement of a swim lesson if weather does not permit students to enter the water.\n\nClasses may also be cancelled at any moment by aquatics management if classes do not have enough participants registered.\n\nRequests for refunds are to be submitted in writing and given to Aquatics Management, including class receipt, and any additional supporting documentation such as copies of PCS orders or a doctor's statement. Refunds will be made within one week of the completion of the class."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Aquatics",
+      "address": "Bldg. AS-4400 Douglass Rd., New River, NC 58540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-4307"
+        }
+      ],
+      "emails": [
+        "mccslejeuneaquatics@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Area 2 Indoor Pool",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-2024"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "New River Indoor Pool",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-4307"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Paradise Point Outdoor Pool",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-1316"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Tarawa Terrace Outdoor Pool",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-450-1610"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Wallace Creek Indoor Pool",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-450-7659"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Group Swim Levels & Descriptions",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools/group-swim-levels-descriptions"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Online registration widget / class schedule not captured; Group Swim Levels & Descriptions page not fetched (two levels deep).",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools/swim-lessons",
+  "fetchedAt": "2026-10-27"
+}

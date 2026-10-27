@@ -1,0 +1,136 @@
+{
+  "title": "AMP-IT",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "AMP-IT",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/amp-it"
+    }
+  ],
+  "intro": "Aquatics Maximum Power Intense Training (AMP-IT) is an in-water physical training program that consists of a variety of scientifically-proven, high-intensity exercises provided in an aquatic workout suitable for rehabilitating and reconditioning injured military personnel.",
+  "sections": [
+    {
+      "heading": "AMP-IT Unit PT",
+      "level": 2,
+      "markdown": "Units may request an instructor to lead an AMP-IT Unit PT session at either the MCB Camp Lejeune Area 2 Pool or the MCAS New River Indoor Pool. Call for availability."
+    },
+    {
+      "heading": "AMP-IT Group Exercise",
+      "level": 2,
+      "markdown": "Classes are offered at the Area 2 Indoor Pool.\n\n*Group Exercise fees apply.*"
+    },
+    {
+      "heading": "AMP-IT Instructor's Course",
+      "level": 2,
+      "markdown": "Become an instructor and conduct AMP-IT sessions for your unit. Open to NCOs and above with command authorization. This course falls in line with MCO 6100.13 and will facilitate training for the Unit CCI. Contact our staff to nominate yourself or your Marines."
+    },
+    {
+      "heading": "AMP-IT Instructor's 2-Day Course",
+      "level": 3,
+      "markdown": "**Instructor Course Sessions:**\n\n- Jan. 14: 8AM - 5PM & Jan. 15: 11AM - 3PM\n- May 17: 8AM - 5PM & May 18: 11AM - 3PM\n\nThis is our instructor's course to teach Aquatics Maximum Power Intense Training (AMP-IT). To attend the two-day training you must be a NCO or above and get clearance through your command. Successful graduates will leave certified to conduct AMP-IT sessions for their unit. This course aligns with MCO 6100.13 and facilitates training for the Unit CCI. Seats should be offered to Marines who conduct Unit PT sessions.\n\n**Subject matter covered:**\n\n- Strength training using drag equipment\n- Passive and assistive stretching\n- Deep water interval cadence training\n- Balance and core activities\n- Safety skills with working with injuries\n- General benefits to water workouts"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Area 2 Indoor Pool",
+      "address": "Bldg. 236 C St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-2024"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "New River Indoor Pool",
+      "address": "Bldg. AS-4400 Douglass Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-4307"
+        }
+      ],
+      "emails": [
+        "mccslejeuneaquatics@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": [
+        "The New River Indoor Pool is closed for maintenance until further notice"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Group Exercise Schedule",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/group-exercise"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4a782f2a8f0c41b9ab3c9fc3f81ce34e_v1.jpg?m=638298293028900000",
+      "alt": "AMP-IT Unit PT"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/bf835ae2cbf44e999a3b6117bbb6a338_v1.jpg?m=638298293028770000",
+      "alt": "AMP-IT Group Exercise"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1e7cbb931e844c459f5af425318a0943_v1.jpg?m=638298293028530000",
+      "alt": "AMP-IT Instructor's Course"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=0067c538-cd6f-42d2-afb3-30c63fcec4b2&v=1",
+      "alt": "AMP-IT Instructor's Class"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/amp-it",
+  "fetchedAt": "2026-10-27"
+}

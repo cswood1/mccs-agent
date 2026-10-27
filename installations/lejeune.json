@@ -1,0 +1,33 @@
+{
+  "id": "lejeune",
+  "name": "MCCS Lejeune-New River",
+  "shortName": "MCB Camp Lejeune",
+  "installationName": "Marine Corps Base Camp Lejeune and Marine Corps Air Station New River",
+  "assistantName": "Ask MCCS",
+  "siteUrl": "https://lejeunenewriver.usmc-mccs.org",
+  "location": "Jacksonville, North Carolina",
+  "localContext": "Marine Corps Base Camp Lejeune and Marine Corps Air Station New River are in Onslow County on the coast of North Carolina, next to the city of Jacksonville. MCCS Lejeune-New River serves both installations. Camp Lejeune is home to II Marine Expeditionary Force, the 2nd Marine Division and the 2nd Marine Logistics Group, and includes Onslow Beach; MCAS New River, across the New River in Jacksonville, hosts 2nd Marine Aircraft Wing squadrons. Facilities are spread across Mainside, Camp Johnson, Courthouse Bay, Camp Geiger, Stone Bay and New River, so locations matter. Visitors include active-duty Marines and Sailors, their families, retirees, DoD civilians, and guests.",
+  "welcomeMessage": "Hi! I can help you find facilities, hours, programs, and events at MCCS Lejeune-New River. What are you looking for?",
+  "defaultChips": [
+    "Just PCS’d here, where do I start?",
+    "Which gyms are open today?",
+    "What’s happening this weekend?",
+    "Child care options on base",
+    "Help me use Tuition Assistance",
+    "Where can I eat on base?"
+  ],
+  "nudge": true,
+  "trustedDomains": [
+    "lejeunenewriver.usmc-mccs.org",
+    "jst.doded.mil",
+    "dantes.mil",
+    "militaryonesource.mil",
+    "militarychildcare.com",
+    "va.gov",
+    "marines.mil"
+  ],
+  "theme": {
+    "primary": "#9e1b32",
+    "accent": "#ffc72c"
+  }
+}

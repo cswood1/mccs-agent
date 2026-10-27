@@ -1,0 +1,169 @@
+{
+  "title": "Auto Skills Development Center",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Automotive Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services"
+    },
+    {
+      "label": "Auto Skills Development Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/auto-skills-development-center"
+    }
+  ],
+  "intro": "Fully equipped DIY auto care shop with 6 hydraulic lifts, 2 motorcycle lifts, 10 floor bays, parts washer, and press area. AC service, tire and TPMS services, and vehicle computer diagnostics available.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**We sell tires from many major brands!** Most of our tires are available next business day. We can also replace and reprogram tire sensors.\n\nCall or visit for pricing and availability.\n\n_No one under the age of 13 is allowed on the shop floor._"
+    },
+    {
+      "heading": "Oil Change",
+      "level": 3,
+      "markdown": "Available by appointment only. Includes tire rotation, top off washer fluid and courtesy vehicle inspection.\n\n• Basic Conventional: $50 up to 5 qts.\n• Synthetic Blend: $60 up to 5 qts.\n• Full Synthetic: $80 up to 5 qts.\n• Diesel Conventional: $115 up to 13 qts.\n• Diesel Full Synthetic: $175 up to 13 qts.\n\n**Bring your own oil and filter**\n• Tire rotation, top off washer fluid, and courtesy vehicle inspection: $30 | Diesels - $50\n\n**_Vehicles must have dip sticks. No luxury vehicles, lowered vehicles, or high-lifted trucks allowed. Additional exclusions may apply. Call for more details._**"
+    },
+    {
+      "heading": "Additional Services",
+      "level": 3,
+      "markdown": "• Basic Diagnostic: $26 (w/data sheets)\n• Advanced Diagnostic: $40 (w/data sheets)\n• Jet Wash: $35\n• Parts Cleaner Rental: $5\n• Drain Plug Removal: $10/ea\n• Lock Lug Nut Removal: $5/ea\n• Lug Nut Studs: $5/ea\n• Press Work: $15/ea\n• Press Work Bearings/Springs: $10/ea\n• Radiator Flush (plus fluid): $80 (pending staff inspection)\n• Rotor Turn (no drums): $15/ea\n• A/C Service RG 134: $75 plus $2.00/oz of freon. ¹\n• Brake Service: $135.00 per axle ²\n• Alignment - Basic Front Wheel: $90.00 ³\n• Alignment - Advanced 4 Wheel: $125.00 ³\n\n¹ Includes discharge, vacuum test, recharge, and leak test.\n² Includes labor, pads, hardware and 2 rotors turned if within spec. If rotors are unable to be turned rotors will be replaced for additional price.\n³ Some models require sensor recalibration with diagnostic computer."
+    },
+    {
+      "heading": "NC State Inspections",
+      "level": 3,
+      "markdown": "• Safety: $13.60\n• Tint: $10"
+    },
+    {
+      "heading": "Tires",
+      "level": 3,
+      "markdown": "| | 30\" and < | 31 - 33\" | Specialty |\n|---|---|---|---|\n| Mount | $10/ea | $15 | $25 |\n| Balance | $10/ea | $15/ea | $25/ea |\n| Repair/Patch | $30/ea | $40/ea | N/A |"
+    },
+    {
+      "heading": "Usage Fees",
+      "level": 3,
+      "markdown": "• Bay: $8/hr\n• Lift: $10/hr\n• Motorcycle Lift: $8/hr"
+    },
+    {
+      "heading": "Storage Fees",
+      "level": 3,
+      "markdown": "• Inside: $10/day\n• Outside: $10/day\n• Engine Storage: $1/day\n\n⁵ No long term storage. Storage is available only for the duration of working on vehicle. Patron will be charged hourly rate for inside storage during normal operating hours whether patron is present or not."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Golf Is a Hole-In-One for Total Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/golf-is-a-hole-in-one-for-total-fitness",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c194dcfb2848455888e16764a166d47e.png?m=638591299834700000"
+    },
+    {
+      "title": "Are You Ready to Conquer the CFT?",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/are-you-ready-to-conquer-the-cft",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/25686a8454d14bc68e586e936966e15b.png?m=638512645731430000"
+    },
+    {
+      "title": "Stay Safe on Your Next Outdoor Adventure",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/stay-safe-on-your-next-outdoor-adventure",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0938bc4a4e834bbcabece00cf9c3110b_w500_h300.png?m=638465604600770000"
+    },
+    {
+      "title": "Summer Hydration Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/summer-hydration-fitness",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c8436d549d314dbbb7c17ef791afc24f.jpg?m=639100542980370000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Auto Skills Development Center",
+      "address": "Bldg. 1250 Birch St. Extension, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1550"
+        },
+        {
+          "label": "Oil Change Appointments",
+          "number": "910-451-9306"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "12 - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "1 - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "1 - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Cleanup begins 45 minutes before shop closes.",
+        "Oil Changes available by appointment only. (910) 451-9306.",
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Enterprise Car Rental",
+      "url": "https://www.enterprise.com/en/car-rental-locations/us/nc/camp-lejeune-military-access-only-5366.html"
+    },
+    {
+      "text": "Firestone Complete Auto Care",
+      "url": "https://local.firestonecompleteautocare.com/north-carolina/"
+    },
+    {
+      "text": "NAPA Auto Parts",
+      "url": "https://www.napaonline.com/napa/en/nc/camp_lejeune/store/39845"
+    },
+    {
+      "text": "Universal Technical Institute",
+      "url": "https://www.uti.edu"
+    },
+    {
+      "text": "Bldg. 1250 Birch St. Extension, Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.674912523359524,-77.34895100427654"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7264a576eb7c451999e08f9f20986f8f.jpg?m=638602978888630000",
+      "alt": "About Page Image"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/auto-skills-development-center",
+  "fetchedAt": "2026-10-27"
+}

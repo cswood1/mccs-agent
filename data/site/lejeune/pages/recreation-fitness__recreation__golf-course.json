@@ -1,0 +1,190 @@
+{
+  "title": "Paradise Point Golf Course",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Golf Course",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/golf-course"
+    }
+  ],
+  "intro": "Paradise Point Golf Course was designed by George Cobb, a world renowned golf architect and former Marine.",
+  "sections": [
+    {
+      "heading": "Paradise Point Golf Course Hours Nov. 2, 2026 – Feb. 28th, 2027",
+      "level": 0,
+      "markdown": "**Paradise Point Golf Course Hours Nov. 2, 2026 – Feb. 28th, 2027**\n\nPro Shop: Daily: 7:45AM-5PM (Holiday hours may vary.) First tee time at 8AM (weather permitting) Driving Range opens at 7:45AM Equipment due in at 5PM\n\nDuffers Retreat: Mon.-Sun. 7:30AM-2PM (Holiday hours may vary.) CLOSED Monday's Nov. 30th, 2026 – Mar. 1, 2027"
+    },
+    {
+      "heading": "Course Information",
+      "level": 2,
+      "markdown": "Paradise Point Golf Course has two golf courses, the Scarlet and the Gold. The Scarlet is an 18 hole course with par of 70. The Gold is an 18 hole course with par of 72. Also available are two driving ranges, one green grass and the other covered with 20 bays. There are three putting greens and a practice field on the premises."
+    },
+    {
+      "heading": "Requirements & Policies",
+      "level": 2,
+      "markdown": "- All players must show proof of a golf handicap 24 or less (except during winter hours, when this is waived) to have golf privileges on the Gold Course\n- Children 5 years old and younger are not permitted on the courses or golf carts\n- Glass bottles are prohibited on the Gold and Scarlet Courses\n- Tee times may be made manually (over the telephone or in person) 7 days in advance\n- Paradise Point Golf Course is open to the general public. All visitors without installation access must be sponsored by an Active Duty/Retired Military or Civilian DoD ID Cardholder\n- Purchases in the Pro Shop for \"convenience merchandise incidental to daily participation\" is permitted"
+    },
+    {
+      "heading": "Golf Lessons with our PGA Instructor",
+      "level": 2,
+      "markdown": "Private lessons are available for all skill levels, from the beginner who wants to learn the basics of golf to the good player who wants to hone his or her skills. Lessons are given by a PGA Professional.\n\n| Package | Details | Price |\n|---|---|---|\n| Individual Package | One 30 Minute Individual Lesson | $45 |\n| Snead Package | Two 1 hour lessons | $150 |\n| Nicklaus Package | A series of five 30 minute lessons (Includes four 30 minute lessons & one 45 minute on course lesson) | $200 |\n| Watson Package | A series of four 45 minute lessons (Includes a course management lesson) | $240 |\n| Jones Package | One 30 minute weekly lesson for 10 weeks (Includes seven 30 minute lessons & three 45 minute on course lessons) | $420 |"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Duffers' Retreat",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/duffers-retreat",
+      "text": "On-site restaurant located inside the Clubhouse",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=1984ea71-0842-4954-a95b-b920e9780359&v=1"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Paradise Point Golf Course",
+      "address": "2015 Brewster Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-5445"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Pro Shop",
+          "rows": [
+            {
+              "days": "Monday",
+              "time": "6:45AM - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:45AM - 7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:45AM - 7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:45AM - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6:45AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "6:30AM - 7PM"
+            },
+            {
+              "days": "Sunday",
+              "time": "6:30AM - 7PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "First tee time at 7AM (weather permitting)",
+        "Driving Range opens at 6:45AM",
+        "Equipment due in before Pro Shop Closes",
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Duffers' Retreat",
+      "address": "2015 Brewster Blvd. (Inside the Clubhouse), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-0148"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6:30AM - 2PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "6:30AM - 2PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Book A Tee Time",
+      "url": "https://www.chronogolf.com/club/paradise-point-golf-club"
+    },
+    {
+      "text": "Join Waitlist",
+      "url": "https://paradisepointgolfcourse.noteefy.app/"
+    },
+    {
+      "text": "52nd ICG Tournament Application",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=download&id=98db2a9b-be2a-4e62-a7ae-48bdc4af54aa&v=1"
+    },
+    {
+      "text": "Gold Scorecard",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=download&id=80790b26-14b1-4e40-aab6-9b068849a0e4&v=2"
+    },
+    {
+      "text": "Scarlet Scorecard",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=download&id=8002a26d-890f-4338-9365-53bcbb566d6e&v=3"
+    },
+    {
+      "text": "Golf Prices",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=download&id=5c3f9b2f-35e6-479c-97db-0b28f59c4e6c&v=5"
+    },
+    {
+      "text": "Duffers' Retreat Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=e60cc4ed-5bd0-4274-9a83-711d53060024&v=8"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=d84f2396-0d4c-46dc-9caa-ec0e01db7ee9&v=1",
+      "alt": "2026 Hospitality Award"
+    }
+  ],
+  "notCaptured": "Green fees are in the linked Golf Prices PDF (not captured).",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/golf-course",
+  "fetchedAt": "2026-10-27"
+}

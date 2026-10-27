@@ -1,0 +1,125 @@
+{
+  "title": "Dry Cleaner",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Dry Cleaner",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/dry-cleaner"
+    }
+  ],
+  "intro": "We offer multiple locations to help with your laundering, dry cleaning and alterations.",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Dry Cleaner - Camp Geiger",
+      "address": "Bldg. G830 Camp Geiger, MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-284-2955"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "As Needed",
+              "time": "Call to schedule an appointment for pick-up."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "Dry Cleaner - Camp Lejeune",
+      "address": "Bldg. 84 Holcomb Blvd., Hadnot Point Plaza, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-5686"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 5:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Dry Cleaner - New River",
+      "address": "Bldg. AS-4044 Curtis Rd., MCX Complex, MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-7322"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "10AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to Dry Cleaner - Camp Geiger",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.73139811389847,-77.45579056438416"
+    },
+    {
+      "text": "Directions to Dry Cleaner - Camp Lejeune",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.669507547696064,-77.34267150659115"
+    },
+    {
+      "text": "Directions to Dry Cleaner - New River",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.722984304588614,-77.45792514205125"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/dry-cleaner",
+  "fetchedAt": "2026-10-27"
+}

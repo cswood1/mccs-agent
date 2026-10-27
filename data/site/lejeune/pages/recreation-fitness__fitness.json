@@ -1,0 +1,80 @@
+{
+  "title": "Fitness",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    }
+  ],
+  "intro": "Multiple fitness options and wellness programs available to strengthen resilience and well-being.",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Fitness Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/fitness-centers",
+      "text": "Multiple locations offering strength and cardio equipment, turf zones, and more!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b114e1ef1d3a4c00a23fcce3a38dc620_v1.jpg"
+    },
+    {
+      "title": "Warrior Athlete Readiness & Resilience",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/warrior-athlete-readiness-resilience",
+      "text": "Marine Corps Total Fitness (MCTF) delivers Warrior Readiness and Resilience through an integrated approach.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/669a6a9f65dc43f2a66570d3ae04adb0_v1.jpg"
+    },
+    {
+      "title": "AMP-IT",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/amp-it",
+      "text": "This physical training program consists of a variety of high-intensity exercises provided in an accelerated format.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/fce5a697a6af4a02835f488c9409acdc_v1.jpg"
+    },
+    {
+      "title": "Group Exercise",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/group-exercise",
+      "text": "Classes offer expert guidance, accountability, social support, and fun!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c817f2f91b3a48118daf1f2b0a31d1b8_v1.jpg"
+    },
+    {
+      "title": "Health & Wellness Education",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/health-wellness-education",
+      "text": "We provide awareness and education to members of the military community, encouraging you to improve overall fitness and wellness.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1c4ea52dd42c450190d6332fb3d92e11_v1.jpg"
+    },
+    {
+      "title": "Personal Training",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/personal-training",
+      "text": "Get a customized workout plan tailored to your goals.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/cff164d94a4048b681db320b4f093ca2_v1.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Strategies to Improve Sleep",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/strategies-to-improve-sleep"
+    },
+    {
+      "text": "Dangers of Limited Sleep",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/dangers-of-limited-sleep"
+    },
+    {
+      "text": "Health, Wellness, and Performance",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/health-wellness-and-performance"
+    },
+    {
+      "text": "Athletic Competition: Feeding the Competitive Spirit",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/athletic-competition-feeding-the-competitive-spirit"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://lejeunenewriver.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness",
+  "fetchedAt": "2026-10-27"
+}

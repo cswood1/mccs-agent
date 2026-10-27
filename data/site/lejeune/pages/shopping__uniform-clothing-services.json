@@ -1,0 +1,317 @@
+{
+  "title": "Uniform & Clothing Services",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Uniform & Clothing Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping/uniform-clothing-services"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": "MCX Military Clothing Sales is a uniform support service designed for service members. We help you maintain professional appearance and readiness by providing regulation‑approved uniform items, accessories, and essential services. Patrons can stay sharp, confident, and fully equipped for duty, inspections, and formal military events.\n\n(This description is shown for each of the five locations: Camp Geiger, Camp Johnson, Camp Lejeune, Courthouse Bay, and New River.)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Camp Geiger Military Clothing Sales",
+      "address": "Bldg. G830 C St., Camp Geiger, MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0459"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Camp Johnson Military Clothing Sales",
+      "address": "Bldg. M-19 Montford Landing Rd., Camp Johnson, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-0046"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 7PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 8PM"
+            }
+          ]
+        },
+        {
+          "label": "Alterations",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 4:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Camp Lejeune Military Clothing Sales",
+      "address": "Bldg. 1231 Birch St., Camp Lejeune, NC 28457",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-5030"
+        },
+        {
+          "label": "Fax",
+          "number": "910-451-2907"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 8PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Courthouse Bay Military Clothing Sales",
+      "address": "Bldg. 245 Clinton St., Courthouse Bay, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-7334"
+        },
+        {
+          "label": "Fax",
+          "number": "910-440-7357"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6:30AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:30AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:30AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:30AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6:30AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 4PM"
+            }
+          ]
+        },
+        {
+          "label": "Alterations",
+          "rows": [
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 4:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "New River Military Clothing Sales",
+      "address": "Bldg. AS-4040 Curtis Rd., New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0539"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of Operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions to Camp Geiger Military Clothing Sales",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.7311950549953,-77.45577966670619"
+    },
+    {
+      "text": "Directions to Camp Johnson Military Clothing Sales",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.73230306803384,-77.408618071932"
+    },
+    {
+      "text": "Directions to Camp Lejeune Military Clothing Sales",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.674501798818305,-77.34040416191336"
+    },
+    {
+      "text": "Directions to Courthouse Bay Military Clothing Sales",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.5801578774288,-77.36318775649991"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/shopping/uniform-clothing-services",
+  "fetchedAt": "2026-10-27"
+}

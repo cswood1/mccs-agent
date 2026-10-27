@@ -1,0 +1,401 @@
+{
+  "title": "MCCS Barber",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Barber",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/barber"
+    }
+  ],
+  "intro": "Enjoy great savings! We offer competitive pricing and high-quality haircuts you can count on.",
+  "sections": [
+    {
+      "heading": "Pricing",
+      "level": 2,
+      "markdown": "• Regulation Haircuts: $15.00\n• Military Flat Top: $17.00"
+    },
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": ""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Camp Johnson Barber Shop",
+      "address": "19 Montford Landing Rd., Camp Johnson, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-0753"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 5:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 5:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 5:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 5:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 5:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Corner Barber Shop",
+      "address": "Bldg. AS-257 Davis St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-6055"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 3PM"
+            },
+            {
+              "days": "Tuesday - Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Courthouse Bay Barber Shop",
+      "address": "Bldg. BB245 Clinton St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-7193"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "French Creek Barber Shop",
+      "address": "Bldg. FC425 Gonzalez Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-5237"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Hadnot Point Barber Shop",
+      "address": "Bldg. 84 Holcomb Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-2395"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 5PM"
+            },
+            {
+              "days": "Tuesday - Friday",
+              "time": "8AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "IIMEF Barber Shop",
+      "address": "Bldg. H4 Julian C. Smith St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-8181"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday - Wednesday",
+              "time": "7:30AM - 3PM"
+            },
+            {
+              "days": "Thursday - Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "MAG 29 Barber Shop",
+      "address": "Bldg. AS-4127 White St., MCAS New River, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-6538"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6:30AM - 5PM"
+            },
+            {
+              "days": "Tuesday - Thursday",
+              "time": "7AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Main Exchange Barber Shop",
+      "address": "Bldg. 1231 Holcomb Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-2400"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9:30AM - 7PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Tuesday - Friday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "New River Barber Shop",
+      "address": "Bldg. AS-.4040 Curtis Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0593"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 4PM"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Stone Bay Barber Shop",
+      "address": "Bldg. RR-154, Stone Bay, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-1148"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday - Wednesday",
+              "time": "6:30AM - 2:30PM"
+            },
+            {
+              "days": "Thursday - Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=76e98b42-b286-4cc7-a58b-d2937124cf43&w=500&h=167&v=1",
+      "alt": "American Clipper Barber Shops"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/barber",
+  "fetchedAt": "2026-10-27"
+}

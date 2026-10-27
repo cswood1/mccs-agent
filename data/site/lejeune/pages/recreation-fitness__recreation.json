@@ -1,0 +1,101 @@
+{
+  "title": "Recreation",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Auto Skills Development Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/auto-skills-development-center",
+      "text": "Your state inspection headquarters and complete car care facility.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9f482dc8b41d46d8aed21e3ef59a1851_v1.jpg?m=638298215973570000"
+    },
+    {
+      "title": "Bowling",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling",
+      "text": "If you love to bowl, MCCS has a bowling program right up your alley.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/70c622f9cac04ed68e6bbf2f2ed28a34_v1.jpg?m=638298215977530000"
+    },
+    {
+      "title": "Community Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/community-center",
+      "text": "Join us for dance class, arts and crafts, or gardening.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b378dba9475b49b7a4cb5daf46dbbba6_v1.jpg?m=638298215976630000"
+    },
+    {
+      "title": "Golf Course",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/golf-course",
+      "text": "Two 18-hole courses, tournaments, lessons, special events, and snack bar.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/2a77190ab8434729945e48210b17d858_v1.jpg?m=638298215978970000"
+    },
+    {
+      "title": "Inline Hockey",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/inline-hockey",
+      "text": "Join a pick-up game on our regulation size inline hockey rink measuring 75 ft. wide.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9303bbb80bb34aa2ac53455e0d75980e_v1.jpg?m=638298215976970000"
+    },
+    {
+      "title": "Marinas",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/marinas",
+      "text": "Watercraft rentals, boat slips, storage, and more.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0cfb6b93527b400bad0deff5f218d487_v1.jpg?m=638298215977630000"
+    },
+    {
+      "title": "Movies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies",
+      "text": "See the newest movies right outside your front door. Comfortable seating, state of the art screen.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0851eb3b34f241709625c2192228b65f_v1.jpg?m=638298215978400000"
+    },
+    {
+      "title": "Onslow Beach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach",
+      "text": "Play on pristine sandy beaches caressed by clear seas.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1ef7e20443824da2b1fa65c5a37113c8_v1.jpg?m=638298215414030000"
+    },
+    {
+      "title": "Outdoor Adventures",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures",
+      "text": "Get outside and explore!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7b548f4139774718b84b90a4dffd120e_v2.jpg?m=638313313259570000"
+    },
+    {
+      "title": "Swimming",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools",
+      "text": "Serving you with multiple indoor and outdoor pools.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d94e2be978e249ffb34200722521e9d0_v1.jpg?m=638298215978700000"
+    },
+    {
+      "title": "Recreational Equipment Checkout & Rentals",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-equipment-checkout-rentals",
+      "text": "Your one-stop rental shop for entertainment, party supplies, camping gear and more.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e0677a978f1b4f94b772af5a4a90eda6_v1.jpg?m=638298215978430000"
+    },
+    {
+      "title": "Recreational Shooting",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-shooting",
+      "text": "Offering archery, skeet, and a pistol range.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9b58f89133ef43c8aad71fea0db93c00_v2.jpg?m=638742994498330000"
+    },
+    {
+      "title": "Skate Park",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/skate-park",
+      "text": "Highlights in the park are intermediate jumps, grinding rails, and the regions only super bowl pl.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c084d8089ac548d58d19bf922bbd0e81_v1.jpg?m=638298215975170000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation",
+  "fetchedAt": "2026-10-27"
+}

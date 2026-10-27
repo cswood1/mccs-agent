@@ -1,0 +1,125 @@
+{
+  "title": "La Casita Loca",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "La Casita Loca",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/la-casita-loca"
+    }
+  ],
+  "intro": "A fiesta for your mouth. Home of our famous burritos – over 100,000 sold! Enjoy burritos, nachos, quesadillas and more!",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "La Casita Loca - Camp Lejeune",
+      "address": "Bldg. HP89 Holcomb Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-9606"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "MCB Camp Lejeune",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "La Casita Loca - New River",
+      "address": "Bldg. AS-257 Davis St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-7669"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "MCAS New River",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 1PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7AM - 1PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7AM - 1PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7AM - 1PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/la-casita-loca",
+  "fetchedAt": "2026-10-27"
+}

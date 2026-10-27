@@ -1,0 +1,55 @@
+{
+  "title": "Recreation & Fitness",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness",
+      "text": "We offer a variety of fitness facilities, services, and programs available service members and th...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c44a6a3e652146308788e277db1ed9bf_v1.jpg?m=638298236950770000"
+    },
+    {
+      "title": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation",
+      "text": "Indoor/Outdoor recreation options for Marines and their families.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/6e0ac633da6a4fb3a96702e4cb782913_v1.jpg?m=638298236948300000"
+    },
+    {
+      "title": "Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports",
+      "text": "Sports Programs are designed to enhance the fitness and resilience of Marines and their families.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ff2aca11d0d74b7da99c64cb952dd65f_v1.jpg?m=638298236949330000"
+    },
+    {
+      "title": "MCCS Car & Bike Show + Block Party",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/mccs-car-bike-show-block-party",
+      "text": "Two beloved events, one epic celebration!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/thumb?id=1df99f4a-0895-45c8-afef-c79c50bb4d83"
+    },
+    {
+      "title": "Marine Corps Half Marathon",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/marine-corps-half-marathon",
+      "text": "The Marine Corps Half Marathon is steeped in history and tradition.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1fc7db1a16e14492acee642cabe08fc9.jpg?m=638507710276670000"
+    },
+    {
+      "title": "USAA St. Paddy's Engineer 5 Mile Challenge",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/st-paddys-engineer-5-mile-challenge",
+      "text": "Test your limits in this untimed, yet demanding course designed by US Marine Corps engineers.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/926a2e701955409d81a4ed49f7e2e76f.jpg?m=638689340820870000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,87 @@
+{
+  "title": "Baba's Mediterranean Grill",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Baba's Mediterranean Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/babas-mediterranean-grill"
+    }
+  ],
+  "intro": "Baba's Mediterranean Grill is a standout fast food destination for lovers of authentic Mediterranean flavors. This spot brings bold, fresh tastes to a quick-service format, making it ideal for busy patrons seeking wholesome, vibrant meals without sacrificing quality.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The heart of Baba's lies in its well-executed main dishes. The falafel arrives crisp and flavorful, a perfect choice for vegans and vegetarians. Meanwhile, the chicken kebab offers tender, savory grilled meat that satisfies with every bite. For those seeking a balanced meal, the Greek salad delivers freshness and lightness, complementing the richer kebabs and wraps."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Baba's Mediterranean Grill",
+      "address": "Bldg. 1231 Holcomb Blvd. (MCX Food Court), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-750-0045"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "10AM - 6:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10AM - 6:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10AM - 6:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "10AM - 6:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "10AM - 6:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 6:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. 1231 Holcomb Blvd. (MCX Food Court), Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67488701779237,-77.34041726347715"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/babas-mediterranean-grill",
+  "fetchedAt": "2026-10-27"
+}

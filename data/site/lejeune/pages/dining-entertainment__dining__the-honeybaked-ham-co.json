@@ -1,0 +1,65 @@
+{
+  "title": "The Honeybaked Ham Co.",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "The Honeybaked Ham Co.",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/the-honeybaked-ham-co"
+    }
+  ],
+  "intro": "Our Honeybaked® stores feature a great selection of premium sandwiches, salads, soups, and so much more. Hurry in and treat yourself!",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Honeybaked Ham Co.",
+      "address": "1231 Birch St. (MCX Food Court), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-8571"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM - 2PM"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 3PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 2PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "1231 Birch St. (MCX Food Court) Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67489121139817,-77.34037901513766"
+    }
+  ],
+  "images": [],
+  "notCaptured": "The real page's hours table lists only Sunday, Monday and Saturday (no Tuesday-Friday rows).",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/the-honeybaked-ham-co",
+  "fetchedAt": "2026-10-27"
+}

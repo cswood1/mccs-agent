@@ -1,0 +1,69 @@
+{
+  "title": "Local Area Information",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about"
+    },
+    {
+      "label": "Local Area Information",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/local-area-information"
+    }
+  ],
+  "intro": "Find helpful local area information, including recreation, services, and other community resources.",
+  "sections": [
+    {
+      "heading": "Local Resources",
+      "level": 2,
+      "markdown": "**Counties:**\n- [Carteret County](https://www.carteretcountync.gov/)\n- [Craven County](https://www.cravencountync.gov/)\n- [Duplin County](https://www.duplinnc.gov/)\n- [Jones County](https://jonescountync.gov/)\n- [Lenoir County](https://lenoircountync.gov/)\n- [New Hanover County](https://www.nhcgov.com/)\n- [Onslow County](https://www.onslowcountync.gov/)\n- [Pender County](https://www.pendercountync.gov/)\n\n**Towns & Cities:**\n- [Atlantic Beach](https://atlanticbeach-nc.com/)\n- [Beaufort](https://www.beaufortnc.org/)\n- [Cedar Point](https://cedarpointnc.gov/)\n- [Cape Carteret](https://www.townofcapecarteret.org/)\n- [Emerald Isle](https://www.emeraldisle-nc.org/)\n- [Havelock](https://www.havelocknc.us/)\n- [Holly Ridge](https://hollyridgenc.org/)\n- [Jacksonville](https://jacksonvillenc.gov/)\n- [Morehead City](https://www.moreheadcitync.gov/)\n- [New Bern](https://www.newbernnc.gov/)\n- [Newport](https://www.newportnc.gov/)\n- [Pine Knoll Shores](https://www.townofpks.com/)\n- [Richlands](https://www.richlandsnc.gov/)\n- [Surf City](https://www.surfcitync.gov/)\n- [Swansboro](https://www.visitswansboro.org/)\n- [Topsail Beach](https://topsailbeachnc.gov/)\n- [Wilmington](https://www.wilmingtonnc.gov/Home)"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Carteret County",
+      "url": "https://www.carteretcountync.gov/"
+    },
+    {
+      "text": "Craven County",
+      "url": "https://www.cravencountync.gov/"
+    },
+    {
+      "text": "Duplin County",
+      "url": "https://www.duplinnc.gov/"
+    },
+    {
+      "text": "Jones County",
+      "url": "https://jonescountync.gov/"
+    },
+    {
+      "text": "Lenoir County",
+      "url": "https://lenoircountync.gov/"
+    },
+    {
+      "text": "New Hanover County",
+      "url": "https://www.nhcgov.com/"
+    },
+    {
+      "text": "Onslow County",
+      "url": "https://www.onslowcountync.gov/"
+    },
+    {
+      "text": "Pender County",
+      "url": "https://www.pendercountync.gov/"
+    },
+    {
+      "text": "Jacksonville",
+      "url": "https://jacksonvillenc.gov/"
+    },
+    {
+      "text": "Wilmington",
+      "url": "https://www.wilmingtonnc.gov/Home"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/about/local-area-information",
+  "fetchedAt": "2026-10-27"
+}

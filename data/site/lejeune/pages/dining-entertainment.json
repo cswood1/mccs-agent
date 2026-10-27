@@ -1,0 +1,67 @@
+{
+  "title": "Dining & Entertainment",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "On this page:\n\n- [Camp Lejeune 4th of July Celebration](/camp-lejeune-4th-of-july)\n- [Clubs](/dining-entertainment/clubs)\n- [Dining](/dining-entertainment/dining)\n- [Movies](/dining-entertainment/movies)\n- [Information, Tickets, and Tours](/dining-entertainment/information-tickets-and-tours)\n- [Marston Pavilion](/dining-entertainment/marston-pavilion)\n- [Tun Alley Event Center](/dining-entertainment/tun-alley-event-center)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Camp Lejeune 4th of July Celebration",
+      "url": "https://lejeunenewriver.usmc-mccs.org/camp-lejeune-4th-of-july",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4bbc0796bff74bc4b4aad84ac894f3c8.jpg?m=638550289254830000"
+    },
+    {
+      "title": "Clubs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs",
+      "text": "Lunch service, catering, and venues perfect for unit PMEs, promotions, mess nights, retirements, and more.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/aa0f7679011a4216a3253e4e2bea7bb5_v1.jpg?m=638298217240630000"
+    },
+    {
+      "title": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining",
+      "text": "We have a variety of dining options available aboard our installations; full service restaurants, clubs, catering, and more.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9fe92573deb1479db36a4b68d282262c_v1.jpg?m=638298217240600000"
+    },
+    {
+      "title": "Movies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies",
+      "text": "See the newest movies right outside your front door. Comfortable seating, state of the art screen and sound.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0851eb3b34f241709625c2192228b65f_v1.jpg?m=638298215978400000"
+    },
+    {
+      "title": "Information, Tickets, and Tours",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+      "text": "We can help with all your travel needs! We have discount tickets to many tourist attractions and special events.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/fe4385182f3942d7a5d7f7221bf0483b_v1.jpg?m=638298217243700000"
+    },
+    {
+      "title": "Marston Pavilion",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/marston-pavilion",
+      "text": "Marston Pavilion is a distinguished and versatile event venue, offering a spacious and adaptable space.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0e44d33f7d894dd2a09a4e928bc26a1c.jpg?m=638866465808200000"
+    },
+    {
+      "title": "Tun Alley Event Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/tun-alley-event-center",
+      "text": "Tun Alley Event Center is a premier venue that seamlessly blends tradition with modern elegance.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e58a5e2315904f67af28b9a75a4f11ed.jpg?m=638579446801770000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment",
+  "fetchedAt": "2026-10-27"
+}

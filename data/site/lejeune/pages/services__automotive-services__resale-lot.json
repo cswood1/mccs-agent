@@ -1,0 +1,57 @@
+{
+  "title": "Resale Lot",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Automotive Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services"
+    },
+    {
+      "label": "Resale Lot",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/resale-lot"
+    }
+  ],
+  "intro": "Looking to sell a vehicle? Be sure to check out the Vehicle Resale Lot, located in the Main MCX Complex Parking Lot (next to Dunkin' Donuts)!",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "To better serve you with evening and weekend hours, Vehicle Resale Lot registrations are now being accepted at the MCCS Auto Skills Development Center, Bldg 1250, Birch St. Extension.\n\nSigns are posted in each of the four medians adjacent to the resale lot notifying customers that a Resale Lot Authorization Form is required. Any vehicles parked without a Resale Lot Authorization Form will be towed and stored at owner's expense.\n\nIn order to place your vehicle on the Resale Lot, the Authorization Form (available at the Auto Skills Development Center) must be completed to be assigned a numbered parking space on the lot.\n\n**FEE:** $30 charge, payable in advance, for each 30-day rental period.\n\nIn addition, the following items must be brought:\n\n• Valid ID\n• Proof of ownership of the vehicle (registration)\n• Current insurance coverage card\n• Power of attorney (if the present owner is not available)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Resale Lot",
+      "address": "Birch St. (next to Dunkin' Donuts), Main MCX Complex Parking Lot, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1550"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "Vehicle Resale Lot registrations accepted at the MCCS Auto Skills Center during normal business hours"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Birch St. (next to Dunkin' Donuts) Main MCX Complex Parking Lot Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67414326490977,-77.33792263487909"
+    },
+    {
+      "text": "Auto Skills Development Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/auto-skills-development-center"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/resale-lot",
+  "fetchedAt": "2026-10-27"
+}

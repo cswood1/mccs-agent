@@ -1,0 +1,92 @@
+{
+  "title": "Raider Grill",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Raider Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/raider-grill"
+    }
+  ],
+  "intro": "Fuel your day at Raider Grill with hot breakfast favorites like egg platters, sandwiches, and breakfast burritos, then come back for fresh wraps, juicy burgers, and satisfying sandwiches at lunch.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "[Menu](/modules/media/?do=inline&id=d9a59d13-f8a8-4d4a-85d6-2498726a1dde&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Raider Grill",
+      "address": "Bldg. RR400, Stone Bay, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-2145"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 2PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=d9a59d13-f8a8-4d4a-85d6-2498726a1dde&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=d84f2396-0d4c-46dc-9caa-ec0e01db7ee9&v=1",
+      "alt": "2026 Hospitality Award"
+    }
+  ],
+  "notCaptured": "Menu is a linked file (not captured)",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/raider-grill",
+  "fetchedAt": "2026-10-27"
+}

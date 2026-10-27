@@ -1,0 +1,57 @@
+{
+ "agent": "L3",
+ "captured": [
+  "/services/automotive-services/auto-skills-development-center",
+  "/dining-entertainment/movies",
+  "/shopping",
+  "/shopping/marine-corps-exchange",
+  "/shopping/marine-marts",
+  "/services/automotive-services",
+  "/shopping/package-store",
+  "/shopping/uniform-clothing-services",
+  "/dining-entertainment",
+  "/dining-entertainment/clubs",
+  "/dining-entertainment/clubs/the-club-at-paradise-point",
+  "/dining-entertainment/clubs/the-landing",
+  "/dining-entertainment/dining",
+  "/dining-entertainment/dining/babas-mediterranean-grill",
+  "/dining-entertainment/dining/french-creek-snack-bar",
+  "/dining-entertainment/dining/hibachi-san",
+  "/dining-entertainment/dining/the-honeybaked-ham-co",
+  "/dining-entertainment/dining/impulse-smoothies",
+  "/dining-entertainment/dining/la-casita-loca",
+  "/dining-entertainment/dining/raider-grill",
+  "/dining-entertainment/dining/sandbar-grill",
+  "/dining-entertainment/dining/warriors-command-post",
+  "/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel",
+  "/dining-entertainment/information-tickets-and-tours",
+  "/dining-entertainment/marston-pavilion",
+  "/dining-entertainment/tun-alley-event-center",
+  "/services",
+  "/services/automotive-services/resale-lot",
+  "/services/barber",
+  "/services/designinc-custom-shop",
+  "/services/dry-cleaner",
+  "/services/optometry",
+  "/services/tax-services"
+ ],
+ "extras": [],
+ "redirects": [],
+ "failures": [
+  {
+   "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/lunch-menu",
+   "reason": "Extra candidate; WebFetch returned the parent Club at Paradise Point page content (no distinct page). No file written."
+  }
+ ],
+ "thinPages": [
+  "/services",
+  "/services/automotive-services",
+  "/services/tax-services",
+  "/dining-entertainment/clubs",
+  "/dining-entertainment/dining",
+  "/dining-entertainment/dining/hibachi-san",
+  "/dining-entertainment/dining/the-honeybaked-ham-co",
+  "/dining-entertainment/dining/sandbar-grill",
+  "/services/optometry"
+ ]
+}

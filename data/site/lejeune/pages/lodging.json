@@ -1,0 +1,102 @@
+{
+  "title": "Lodging",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Inns of the Corps",
+      "level": 2,
+      "markdown": "Your home away from home."
+    },
+    {
+      "heading": "Marine Lodge",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "Onslow Beach",
+      "level": 2,
+      "markdown": "Play on pristine sandy beaches caressed by clear seas."
+    },
+    {
+      "heading": "Campgrounds and RVs",
+      "level": 2,
+      "markdown": "Bring a tent or your RV and stay overnight or even longer.\n\n• [Onslow Beach](https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach)\n• [Outdoor Adventures](https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Inns of the Corps",
+      "url": "https://www.innsofthecorps.com/",
+      "text": "Your home away from home.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0655e191645b4fbeb2ec320acdbde410_v1.jpg?m=638298215414170000"
+    },
+    {
+      "title": "Marine Lodge",
+      "url": "https://www.marinelodge.com/",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/37763bef717e47f4bf99807ba81f0c6a_v1.jpg?m=638298215414400000"
+    },
+    {
+      "title": "Onslow Beach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach",
+      "text": "Play on pristine sandy beaches caressed by clear seas.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1ef7e20443824da2b1fa65c5a37113c8_v1.jpg?m=638298215414030000"
+    },
+    {
+      "title": "Campgrounds and RVs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging/campgrounds-and-rvs",
+      "text": "Bring a tent or your RV and stay overnight or even longer.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3f68bcb3cb244368bbb07ff2d4f568ee_v1.jpg?m=638298215413970000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Inns of the Corps",
+      "url": "https://www.innsofthecorps.com/"
+    },
+    {
+      "text": "Marine Lodge",
+      "url": "https://www.marinelodge.com/"
+    },
+    {
+      "text": "Onslow Beach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach"
+    },
+    {
+      "text": "Campgrounds and RVs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging/campgrounds-and-rvs"
+    },
+    {
+      "text": "Outdoor Adventures",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0655e191645b4fbeb2ec320acdbde410_v1.jpg?m=638298215414170000",
+      "alt": "Inns of the Corps"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/37763bef717e47f4bf99807ba81f0c6a_v1.jpg?m=638298215414400000",
+      "alt": "Marine Lodge"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1ef7e20443824da2b1fa65c5a37113c8_v1.jpg?m=638298215414030000",
+      "alt": "Onslow Beach"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3f68bcb3cb244368bbb07ff2d4f568ee_v1.jpg?m=638298215413970000",
+      "alt": "Campgrounds and RVs"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/lodging",
+  "fetchedAt": "2026-10-27"
+}

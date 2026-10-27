@@ -1,0 +1,81 @@
+{
+  "title": "Impulse Smoothies",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Impulse Smoothies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/impulse-smoothies"
+    }
+  ],
+  "intro": "Impulse Smoothies is located inside Wallace Creek Fitness Center and offers a variety of pre and post-workout smoothies as well as energy boosts and other healthy options.",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Impulse Smoothies",
+      "address": "Bldg. WC1 Birch St.\nInside Wallace Creek Fitness Center\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-2831"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. WC1 Birch St. Inside Wallace Creek Fitness Center Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.677789228863695,-77.34506085103074"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/impulse-smoothies",
+  "fetchedAt": "2026-10-27"
+}

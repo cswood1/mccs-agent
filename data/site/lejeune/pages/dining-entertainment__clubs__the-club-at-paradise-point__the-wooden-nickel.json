@@ -1,0 +1,106 @@
+{
+  "title": "The Wooden Nickel",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Clubs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs"
+    },
+    {
+      "label": "The Club at Paradise Point",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point"
+    },
+    {
+      "label": "The Wooden Nickel",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Located in The Club at Paradise Point, An All-Hands Venue, The Wooden Nickel features a wide range of cuisines and drinks. We offer everything from classic burgers to the Nickel Special to exclusive Chef's Creation entrées. Everything is scratch-made using only the freshest and finest ingredients. **With a menu that changes every week, you will get the chance to sample a variety of offerings.**\n\nDining out isn't just about eating good food – it's also about having a great experience! You'll enjoy both at The Wooden Nickel! Whether you're enjoying a meal with your family or having a drink after work, you'll find the environment both comfortable and welcoming.\n\nAll hands welcome! We look forward to seeing you soon!\n\nCall us today for take-out 910-451-4882."
+    },
+    {
+      "heading": "Stay up-to-date with our menu by joining our Facebook group",
+      "level": 3,
+      "markdown": "[Facebook group](https://www.facebook.com/groups/theclubatparadisepoint/)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Wooden Nickel",
+      "address": "Bldg. 2615 Seth Williams Blvd. (Inside the Club at Paradise Point) Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-4882"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "4:30 - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "4:30 - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "4:30 - 9PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary.",
+        "*The Wooden Nickel will be open from 5-9PM on Saturdays when there is a DJ/Karaoke Party scheduled."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Facebook group",
+      "url": "https://www.facebook.com/groups/theclubatparadisepoint/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e89e6ff2fd79491bba8a31034f3b8ece.jpg?m=638567340866030000",
+      "alt": "clubs-woodennickelgeneric-mobile.jpg"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/8f065ba24bad4eeaaa32dffb0c998c62.jpg?m=638567340865570000",
+      "alt": "clubs-woodennickelgeneric-rotator.jpg"
+    }
+  ],
+  "notCaptured": "Weekly menu event listings (dynamic)",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel",
+  "fetchedAt": "2026-10-27"
+}

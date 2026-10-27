@@ -13,7 +13,8 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ installation: string }> }): Promise<Metadata> {
   const site = siteInstallation((await params).installation);
-  return { title: { default: `MCCS ${site?.name ?? ""} (prototype demo)`, template: `MCCS %s (prototype demo)` } };
+  // The root layout's template wraps the default: "MCCS <name> (prototype demo)".
+  return { title: { default: site?.name ?? "", template: `MCCS %s (prototype demo)` } };
 }
 
 // Chrome shared by every page of the recreated sites: demo banner, the captured header and

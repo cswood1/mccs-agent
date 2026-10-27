@@ -1,0 +1,389 @@
+{
+  "title": "Recreation Centers",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Single Marine Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program"
+    },
+    {
+      "label": "Recreation Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/recreation-centers"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Locations",
+      "level": 2,
+      "markdown": "Free recreation spaces exclusively for active-duty service members to relax and socialize. Enjoy movie theaters, music rooms, pool tables, gaming consoles, computer labs, lounge seating, sports-style TVs, and scheduled events."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Single Marine Program Administrative Office",
+      "address": "Bldg. 564, M Street\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-4642"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program Camp Geiger Recreation Center (Rally Point)",
+      "address": "Bldg. G560\nCamp Geiger, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-2207"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM-3PM"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM-8PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program Camp Johnson Recreation Center (4 Corners)",
+      "address": "M-424 Harlem St.\nCamp Johnson, NC 28544",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-1058"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "Noon - 8PM"
+            },
+            {
+              "days": "Monday",
+              "time": "11AM - 8:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11AM - 8:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 8:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 8:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 9PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "Noon - 10PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program Central Area Recreation Center",
+      "address": "Bldg. 62 Lucy Brewer Rd.\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1942"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "1PM - 6:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "1PM - 6:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program Courthouse Bay Recreation Center (The Sandbar)",
+      "address": "Bldg. BB-27 Horn Rd.\nCourthouse Bay, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-7462"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "1PM - 6:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "2PM - 7:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program French Creek Recreation Center",
+      "address": "Bldg. FC 330 Gonzalez Blvd.\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1446"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "Noon - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 8PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Single Marine Program New River Recreation Center",
+      "address": "Bldg. AS-4038 Schmidt St.\nMCAS New River, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-5145"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "1PM - 6:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "10:30AM - 7:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:30AM - 7:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10:30AM - 7:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:30AM - 7:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "10:30AM - 7:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "1PM - 6:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "SMP Calendar",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-calendar"
+    },
+    {
+      "text": "SMP Volunteer Opportunities",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-volunteer-opportunities"
+    },
+    {
+      "text": "MCCS Free Barracks Wi-Fi",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/barracks-wi-fi"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/recreation-centers",
+  "fetchedAt": "2026-10-27"
+}

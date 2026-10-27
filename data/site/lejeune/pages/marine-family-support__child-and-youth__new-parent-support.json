@@ -1,0 +1,158 @@
+{
+  "title": "New Parent Support",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Child and Youth",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth"
+    },
+    {
+      "label": "New Parent Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support"
+    }
+  ],
+  "intro": "New Parent Support Program is a family-focused service designed for active-duty personnel and their families who are expecting a child or have children age five and under. It promotes healthy development and confident parenting by offering home visits, education, and ongoing support.",
+  "sections": [
+    {
+      "heading": "Home Visits",
+      "level": 4,
+      "markdown": "Home visits can take place in the home, the New Parent Support office or any other convenient and comfortable location within a 50 mile radius. The evidence based Parents as Teachers curriculum is utilized during home visits for military families who are expecting or who have children ages five and under.\n\n[I'm Interested](https://eventactions.com/eareg.aspx?ea=Rsvp&invite=0pe9z1vkp0cth133tc4frt3hcvxh629kb1ejtbtmrwb24hhj845x)"
+    },
+    {
+      "heading": "Infant Massage",
+      "level": 4,
+      "markdown": "Infant massage is a wonderful opportunity to spend quality, focused time with your infant. It is a great way for fathers to get involved and best of all, it's FUN & FREE! This class is designed for babies (6 weeks to 6 months) and up to 2 caregivers. See schedule below for our 5-week training. Requests for 1:1 training may be made through Home Visits."
+    },
+    {
+      "heading": "Baby Boot Camp",
+      "level": 4,
+      "markdown": "This is a fun and interactive class for expectant parents or those who have children up to 3 months of age. Baby Boot Camp participants will gain knowledge that will help them feel more confident in caring for their new baby. Helpful local family resources are also discussed."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "• [Babies on the Homefront](https://babiesonthehomefront.org/)\n• [Budget for Baby®](https://www.nmcrs.org/pages/budgeting-for-a-baby)\n• [How to Create a Safe Sleeping Environment for Infants](https://www.militaryonesource.mil/parenting/new-parents/military-parents-safe-sleeping-for-infants/)\n• [Infant CPR and First Aid](https://www.redcross.org/)\n• [Marine Corps Parenthood & Pregnancy Policy](https://www.marines.mil/News/Messages/Messages-Display/Article/2157825/publication-of-marine-corps-order-500012f-marine-corps-policy-concerning-parent/)\n• [Naval Medical Center Camp Lejeune](https://camp-lejeune.tricare.mil/Health-Services/Womens-Health-Pregnancy)\n• [Safe Infant Sleep MilLife Guide](https://www.militaryonesource.mil/resources/millife-guides/safe-sleep-for-infants/)\n• [Safe Infant Sleep Podcast Episode](https://www.militaryonesource.mil/resources/podcasts/military-onesource/safe-infant-sleep/)\n• [Women, Infant, & Children (WIC)](http://www.onslowcountync.gov/216/WIC)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Militarychildcare.com",
+      "url": "https://www.militarychildcare.com/",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7c4b2a03a3514ffe85890442deadc58d_v1.jpg"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "New Parent Support Program",
+      "address": "Bldg. LCH 4007 (Corner of Butler Dr. S and 4th St.)\nMidway Park, NC 28544",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-9501"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "I'm Interested",
+      "url": "https://eventactions.com/eareg.aspx?ea=Rsvp&invite=0pe9z1vkp0cth133tc4frt3hcvxh629kb1ejtbtmrwb24hhj845x"
+    },
+    {
+      "text": "Babies on the Homefront",
+      "url": "https://babiesonthehomefront.org/"
+    },
+    {
+      "text": "Budget for Baby®",
+      "url": "https://www.nmcrs.org/pages/budgeting-for-a-baby"
+    },
+    {
+      "text": "How to Create a Safe Sleeping Environment for Infants",
+      "url": "https://www.militaryonesource.mil/parenting/new-parents/military-parents-safe-sleeping-for-infants/"
+    },
+    {
+      "text": "Infant CPR and First Aid",
+      "url": "https://www.redcross.org/"
+    },
+    {
+      "text": "Marine Corps Parenthood & Pregnancy Policy",
+      "url": "https://www.marines.mil/News/Messages/Messages-Display/Article/2157825/publication-of-marine-corps-order-500012f-marine-corps-policy-concerning-parent/"
+    },
+    {
+      "text": "Naval Medical Center Camp Lejeune",
+      "url": "https://camp-lejeune.tricare.mil/Health-Services/Womens-Health-Pregnancy"
+    },
+    {
+      "text": "Safe Infant Sleep MilLife Guide",
+      "url": "https://www.militaryonesource.mil/resources/millife-guides/safe-sleep-for-infants/"
+    },
+    {
+      "text": "Safe Infant Sleep Podcast Episode",
+      "url": "https://www.militaryonesource.mil/resources/podcasts/military-onesource/safe-infant-sleep/"
+    },
+    {
+      "text": "Women, Infant, & Children (WIC)",
+      "url": "http://www.onslowcountync.gov/216/WIC"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/81c9563a31004ca3bcb4cd45b415773d_v1.jpg",
+      "alt": "Home Visits"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/357f4d6e22a14f91a5a7331a16c48b5a_v1.jpg",
+      "alt": "Infant Massage"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f390ab1f82b94af7b1a479a92d3b8d10_v1.jpg",
+      "alt": "Baby Boot Camp"
+    }
+  ],
+  "notCaptured": "Class schedule referenced (\"See schedule below\") is an events list (dynamic) and was not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/new-parent-support",
+  "fetchedAt": "2026-10-27"
+}

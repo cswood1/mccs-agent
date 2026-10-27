@@ -1,0 +1,22 @@
+{
+  "title": "Interactive Map",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about"
+    },
+    {
+      "label": "Interactive Map",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/explore"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "The interactive map is rendered dynamically and was not visible to the fetch; the page has no other body text.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/about/explore",
+  "fetchedAt": "2026-10-27"
+}

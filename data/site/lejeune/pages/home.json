@@ -1,0 +1,272 @@
+{
+  "title": "MCCS Lejeune-New River",
+  "breadcrumb": [],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "[![MCCS Free Wifi](https://lejeunenewriver.usmc-mccs.org/modules/media/t/43f8cd56c14f45ecac2c941d12336b63.jpg?m=639281909892270000)](https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/barracks-wi-fi)\n\n[![Holiday Fest Car Giveaway](https://lejeunenewriver.usmc-mccs.org/modules/media/thumb?id=ee653eef-9a95-4b86-b58d-9dd2b37d1f7e)](https://lejeunenewriver.usmc-mccs.org/car-giveaway)\n\n[![103026-sf-thr-eerie-encounters-rotator.jpg](https://lejeunenewriver.usmc-mccs.org/modules/media/t/b967548bc7e4453c9ba73c34aa04a67b.jpg?m=639286168242030000)](https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies)\n\n[![Movie Night](https://lejeunenewriver.usmc-mccs.org/modules/media/t/9c81064df5cc4e24b9ed9d064ffc9b94.jpg?m=639283769544530000)](https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building)"
+    },
+    {
+      "heading": "Stay Informed",
+      "level": 2,
+      "markdown": "View local events, stories, updates, and more."
+    },
+    {
+      "heading": "Important Links",
+      "level": 2,
+      "markdown": "Connect with someone now.\n\n- [Military OneSource Confidential Help](https://www.militaryonesource.mil/confidential-help/)\n- [Veterans Crisis Line](https://militarycrisisline.net/)\n- [Sexual Assault Prevention and Response](https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/sexual-assault-prevention-response)\n- [988 Lifeline](https://988lifeline.org/)\n- [FAP 24/7 Line](https://lejeunenewriver.usmc-mccs.org/fap)\n- [Semper Connected](https://lejeunenewriver.usmc-mccs.org/connected)\n- [DoD Safe Helpline](https://www.safehelpline.org/)\n- [NCIS](https://www.ncis.navy.mil/)\n- [Domestic](https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling/domestic-abuse)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Movies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies",
+      "text": "Theater & Showtime Information",
+      "image": ""
+    },
+    {
+      "title": "Lodging",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging",
+      "text": "Hotels, Temporary Lodging, & Other Places to Stay",
+      "image": ""
+    },
+    {
+      "title": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation",
+      "text": "Indoor & Outdoor Opportunities, Sports, & Swimming",
+      "image": ""
+    },
+    {
+      "title": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness",
+      "text": "Fitness Centers & Programs, Competitions, & Health Education",
+      "image": ""
+    },
+    {
+      "title": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining",
+      "text": "Restaurants, Club Information, Catering, & More",
+      "image": ""
+    },
+    {
+      "title": "Prevention & Counseling",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/prevention-and-counseling",
+      "text": "SAPR, Counseling, New Parent Support, & Other Support Programs",
+      "image": ""
+    },
+    {
+      "title": "Military Family Life",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life",
+      "text": "DEERS, Deployment Support, Marines Corps Family Team Building",
+      "image": ""
+    },
+    {
+      "title": "Single Marine Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program",
+      "text": "SMP Program & Facility Information",
+      "image": ""
+    },
+    {
+      "title": "Education",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/education",
+      "text": "School Liaison, Transition Readiness, Volunteer Opportunities",
+      "image": ""
+    },
+    {
+      "title": "Exchange",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-corps-exchange",
+      "text": "MCX Locations & Promotions",
+      "image": ""
+    },
+    {
+      "title": "Information, Tickets & Tours",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+      "text": "Parks, Tourism, & Other Leisure Activities",
+      "image": ""
+    },
+    {
+      "title": "Local Area Information",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/local-area-information",
+      "text": "Installation & Community Information",
+      "image": ""
+    },
+    {
+      "title": "Preparing for Deployment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/preparing-for-deployment",
+      "text": "Infographic",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/91ff4b1e756048e8988ffedaed31d925_v1_w500_h300.jpg"
+    },
+    {
+      "title": "ABCs of Baby Sleep",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/abcs-of-baby-sleep",
+      "text": "Video",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/544c086a5c9348c4aeee123794b148c9_v1_w500_h300.jpg"
+    },
+    {
+      "title": "Safe Sleep for Babies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/safe-sleep-for-babies",
+      "text": "Infographic",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/de9d4bc5aa6541a8b093564705ba2f6f_v1_w500_h300.jpg"
+    },
+    {
+      "title": "Goal Setting for Growth",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/goal-setting-for-growth",
+      "text": "News",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d044d1be7c4748bb8de84a3453d6deee_v1_w500_h300.png"
+    },
+    {
+      "title": "Build Your Family's Readiness and Resilience Through Routines",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/build-your-family-s-readiness-and-resilience-through-routines",
+      "text": "News",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3864ed57839d412cb402cc9de6be7290_v1_w500_h300.png"
+    },
+    {
+      "title": "Tactical Pause Strengthens Readiness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/tactical-pause-strengthens-readiness",
+      "text": "News",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/528ca9ed2b50444190ad23b87ae7c572_v1_w500_h300.jpg"
+    },
+    {
+      "title": "Helping Children Move from Chaos to Calm",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/helping-children-move-from-chaos-to-calm",
+      "text": "News",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/db4c4f67a859468b870db0ea67b0eaa2_v1_w500_h300.jpg"
+    },
+    {
+      "title": "Your PCS Pet Checklist",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/your-pcs-pet-checklist",
+      "text": "Infographic",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/de1fbb99aa664fa888092da1213f8fc0_v1_w500_h300.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "View More Events",
+      "url": "https://lejeunenewriver.usmc-mccs.org/calendar-of-events"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://lejeunenewriver.usmc-mccs.org/stories"
+    },
+    {
+      "text": "Newsletter",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/newsletter-sign-up"
+    },
+    {
+      "text": "Facebook",
+      "url": "https://www.facebook.com/mccslejeunenewriver"
+    },
+    {
+      "text": "MCB Camp Lejeune",
+      "url": "https://www.lejeune.marines.mil/"
+    },
+    {
+      "text": "MCAS New River",
+      "url": "https://www.newriver.marines.mil/"
+    },
+    {
+      "text": "Military OneSource",
+      "url": "https://www.militaryonesource.mil"
+    },
+    {
+      "text": "US Marine Corps",
+      "url": "https://www.marines.mil"
+    },
+    {
+      "text": "Marine Corps Recruiting",
+      "url": "https://www.marines.com"
+    },
+    {
+      "text": "Customer Feedback (ICE)",
+      "url": "https://ice.disa.mil/index.cfm"
+    },
+    {
+      "text": "Sponsorship & Advertising",
+      "url": "https://lejeunenewriver.usmc-mccs.org/more/sponsorship-advertising"
+    },
+    {
+      "text": "Privacy Policy and Security Notice",
+      "url": "https://lejeunenewriver.usmc-mccs.org/privacy"
+    },
+    {
+      "text": "Freedom of Information Act (FOIA)",
+      "url": "https://www.foia.gov"
+    },
+    {
+      "text": "No FEAR Act",
+      "url": "http://www.eeoc.gov/eeoc/statistics/nofear/qanda.cfm"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/43f8cd56c14f45ecac2c941d12336b63.jpg?m=639281909892270000",
+      "alt": "MCCS Free Wifi"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/thumb?id=ee653eef-9a95-4b86-b58d-9dd2b37d1f7e",
+      "alt": "Holiday Fest Car Giveaway"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b967548bc7e4453c9ba73c34aa04a67b.jpg?m=639286168242030000",
+      "alt": "103026-sf-thr-eerie-encounters-rotator.jpg"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9c81064df5cc4e24b9ed9d064ffc9b94.jpg?m=639283769544530000",
+      "alt": "Movie Night"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/247a6a16369340ee871f66813f5ed34b.jpg",
+      "alt": "MCCS - Keep What Works"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0a5ba7cad7ee4e5c837b2f2a570e51fb.png",
+      "alt": "Newsletter"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/052eee060d5f4ab4b330038185451372.png",
+      "alt": "Facebook"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/10137f49f34f416c953dc4dfc6e0f234_v2.png",
+      "alt": "Military OneSource Confidential Help"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/dd4234c53513408381da826f12b5bb1a_v4.png",
+      "alt": "Veterans Crisis Line"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0108709eafbb451aa1a488c429284d1c_v2.png",
+      "alt": "Sexual Assault Prevention and Response"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b2e449906576466e9e6e4459475baee7_v1.jpg",
+      "alt": "988 Lifeline"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4c0b66922b2648e9b258732e2288802e_v1.jpg",
+      "alt": "FAP 24/7 Line"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/45451baca9f040b98465243e29bb6883_v1.png",
+      "alt": "Semper Connected"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f6481e3bbb174c08b1fa7e9f0e78f2bf_v2.jpg",
+      "alt": "DoD Safe Helpline"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ec2b0fe0f5324664ae9c691cf791eaac_v1.jpg",
+      "alt": "NCIS"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/59f43afb97404e508c2410deee99da60_v1.png",
+      "alt": "Domestic"
+    }
+  ],
+  "notCaptured": "Upcoming events list is dynamic.",
+  "url": "https://lejeunenewriver.usmc-mccs.org",
+  "fetchedAt": "2026-10-27"
+}

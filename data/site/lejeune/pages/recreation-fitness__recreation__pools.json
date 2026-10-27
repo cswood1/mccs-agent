@@ -1,0 +1,304 @@
+{
+  "title": "Swimming",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Swimming",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Age Requirements",
+      "level": 2,
+      "markdown": "Children under 10 are welcome at all pools (except Wallace Creek Fitness Center) accompanied by an adult; Children between the ages of 10 and 15 who demonstrate the ability to pass the swim test do not require direct supervision. The swim test consists of swimming 25 yards followed by a one minute tread or float."
+    },
+    {
+      "heading": "Free Swim Lessons for Active Duty",
+      "level": 2,
+      "markdown": "Any Active Duty military personnel may request a 30-min free swim lesson at any pool where there is a Water Safety Instructor on deck. Personnel may call ahead to see if someone will be there on the day they wish to learn."
+    },
+    {
+      "heading": "Outdoor Pool Pricing",
+      "level": 2,
+      "markdown": "Pools passes are available for purchase at all outdoor pools.\n\n| Category | Price |\n|---|---|\n| Child (2 & under) | FREE |\n| Child (3-12) | $4 |\n| Adult (13+) | $5 |\n| Guests | $8 |\n| Active Duty | $3 |\n| Family pass | $10 |\n\n**10-visit punch card:**\n- Child Individual (3-12): $30\n- Adult Individual (13+): $37\n- Family Card: $75\n\n**20-visit punch card:**\n- Child Individual (3-12): $56\n- Adult Individual (13+): $70\n- Family Card: $140\n\n**Season Pass:**\n- Active Duty: $84"
+    },
+    {
+      "heading": "Pool Parties",
+      "level": 2,
+      "markdown": "Host a Pool Party! Pool parties don't have to be for just summer events. Just because temperatures are dropping, doesn't mean you can't enjoy a swim - just stay indoors. We can help!\n\nWe schedule parties when our facilities are not open to patrons, giving you a private pool party setting. We provide a fun, safe, and clean atmosphere and you bring the rest! Feel free to bring food and refreshments as well.\n\n**All parties must be scheduled and fully paid for a minimum of 1 week prior to day of the party.**\n\n| Location | 1-50 guests | 51-100 guests |\n|---|---|---|\n| New River Outdoor Pool | $95/hr | $180/hr |\n| New River Indoor Pool, Paradise Point Outdoor Pool, Area 2 Indoor Pool | $125/hr | $175/hr |\n| Tarawa Terrace Pool* | $155/hr | $205/hr |\n\n*For more than 100 guests, please call for more information.\n\nTo make reservations, please contact the pool you would like to reserve directly."
+    },
+    {
+      "heading": "Swim Tests",
+      "level": 2,
+      "markdown": "Red Cross standardized safety water competency sequence.\n\nSwim tests may be administered to assess group members' swimming abilities. In order to be eligible to participate in certain activities or swim in certain areas, group members must demonstrate the minimal level of swimming ability required. For example, to be eligible to swim in deep water, group members should have at least a minimum level of water competency. A swim test based on the Red Cross water competency sequence would require group members to perform the following five critical water safety skills in sequence:\n\n1. Step or jump into water over your head.\n2. Return to the surface and float or tread water for 1 minute.\n3. Turn around in a full circle and find an exit.\n4. Swim 25 yards to the exit.\n5. Exit from the water without using the stairs or a ladder."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Swim Lessons",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools/swim-lessons",
+      "text": "Swim Lessons are open to all authorized patrons with base access.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=bd9188bb-d103-40e7-a47e-76b855bd98c1&w=400&h=240&v=1"
+    },
+    {
+      "title": "AMP-IT",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/amp-it",
+      "text": "Aquatics Maximum Power Intense Training (AMP-IT)",
+      "image": ""
+    },
+    {
+      "title": "Why Water Survival Training is Mission Critical for Marines",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/why-water-survival-training-is-mission-critical-for-marines",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a3f617abfdde44b2ba4974b7072a91de.jpg?m=638906659092670000"
+    },
+    {
+      "title": "Staying Safe on the Water",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/staying-safe-on-the-water",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4161e97782a64ba286e3b0365f99f2b2.jpg?m=638312676039630000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Area 2 Indoor Pool",
+      "address": "Bldg. 236 C St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-2024"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5 - 7AM, 4 - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River Indoor Pool",
+      "address": "Bldg. AS-4400 Douglass Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-4307"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "The New River Indoor Pool is closed for maintenance until further notice."
+      ]
+    },
+    {
+      "name": "Paradise Point Outdoor Pool",
+      "address": "2615 Seth Williams Blvd., Paradise Point Officers' Club, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-1316"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "Noon-7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "Noon-7PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Pool will be open Labor Day, Mon., Sept. 7, and will close for the season on Tues., Sept. 8",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Tarawa Terrace Outdoor Pool",
+      "address": "Bldg. TT-22 Iwo Jima Blvd., Corner of TT and Iwo Jima Blvd., Tarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-450-1610"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "Noon-7PM"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "Noon-7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "Noon-7PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Pool will be open Labor Day, Mon., Sept. 7, and will close for the season on Tues., Sept. 8.",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Wallace Creek Indoor Pool",
+      "address": "Bldg. WC1 Birch St., Wallace Creek Fitness Center, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-450-7659"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM-5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM-7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM-7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM-7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM-7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM-7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM-5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Facebook Aquatics Group",
+      "url": "https://www.facebook.com/groups/1810802965761723"
+    },
+    {
+      "text": "Area 2 Indoor Pool Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67059714381489,-77.35249837598813"
+    },
+    {
+      "text": "Wallace Creek Indoor Pool Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67804875491155,-77.34486777530098"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/pools",
+  "fetchedAt": "2026-10-27"
+}

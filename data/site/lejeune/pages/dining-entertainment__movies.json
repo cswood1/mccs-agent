@@ -1,0 +1,110 @@
+{
+  "title": "MCCS Movies",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Movies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies"
+    }
+  ],
+  "intro": "Select a theater to view current showtimes and enjoy movies at Camp Lejeune, MCAS New River, or Midway Park theaters.",
+  "sections": [
+    {
+      "heading": "Private Theater Rentals",
+      "level": 2,
+      "markdown": "Reserve one of our theaters for your next private or group event. Perfect for:\n\n• Birthday parties\n• Private Showings\n• Award Ceremonies\n• Dance Recitals\n• Graduations\n• Musicals\n• Concerts\n\n**Reservation costs vary and are determined by group size and event. Deposits are required within two weeks of booking event. Refundable if canceled 72 hours prior to event.**"
+    },
+    {
+      "heading": "Select your Package",
+      "level": 2,
+      "markdown": "**Package 1 ($5.50)**\n• Small popcorn\n• Small fountain drink\n\n**Package 2 ($7)**\n• Small popcorn\n• Small fountain drink\n• Small candy\n\n*Add hotdog for $2 each."
+    },
+    {
+      "heading": "Select a movie",
+      "level": 2,
+      "markdown": "We provide a monthly updated list of all NDVDs on file. Digital movies may be selected upon request if event is within authorized playdates of movie.\n\n[Browse Movies](https://www.navymwr.org/programs/motion-pictures/ndvd-nssm-program)"
+    },
+    {
+      "heading": "Ticket Prices",
+      "level": 2,
+      "markdown": "• 5 and Under: Free\n• Ages 6 - 11: $5\n• Ages 12 and Up: $6\n\n**3D admission is an additional $1 to include the 3D glasses.**"
+    },
+    {
+      "heading": "Upcoming Events",
+      "level": 2,
+      "markdown": "Select a theater to view its current showtimes."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Movie Theater - Camp Lejeune",
+      "address": "Bldg. 19 McHugh Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-2785"
+        },
+        {
+          "label": "Movie Line",
+          "number": "910-449-9344"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Movie Theater - New River",
+      "address": "Bldg. AS-240, Curtis Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-6528"
+        },
+        {
+          "label": "Movie Line",
+          "number": "910-449-9344"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    },
+    {
+      "name": "Movie Theater - Midway Park",
+      "address": "Bldg. 4014A Butler Dr., Midway Park, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-2785"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Browse Movies",
+      "url": "https://www.navymwr.org/programs/motion-pictures/ndvd-nssm-program"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d90c3c2da65048c6857585b323578c31.jpg?m=639270594372330000",
+      "alt": "103026-sf-thr-eerie-encounters-mobile.jpg"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/db17a2c62d5f401e9753f3403e4035d2.jpg?m=639270591292470000",
+      "alt": "103026-sf-thr-eerie-encounters-rotator.jpg"
+    }
+  ],
+  "notCaptured": "Dynamic movie showtimes calendar/listings (embedded event calendar), movie rotator carousel",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/movies",
+  "fetchedAt": "2026-10-27"
+}

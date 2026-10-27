@@ -1,0 +1,53 @@
+{
+  "title": "Automotive Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Automotive Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Auto Skills Development Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/auto-skills-development-center",
+      "text": "Your state inspection headquarters and complete car care facility.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9f482dc8b41d46d8aed21e3ef59a1851_v1.jpg?m=638298215973570000"
+    },
+    {
+      "title": "Enterprise Car Rental",
+      "url": "https://www.enterprise.com/en/car-rental-locations/us/nc/camp-lejeune-military-access-only-5366.html",
+      "text": "We go the extra mile to provide the exceptional customer service you deserve.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/8aa6106c119e47de98aada1553877be3_v1.jpg?m=638298220669530000"
+    },
+    {
+      "title": "Resale Lot",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services/resale-lot",
+      "text": "Looking to sell a vehicle? Be sure to check out the Vehicle Resale Lot.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/8209364a910c40168e7aaeee584e1c2c_v1.jpg?m=638298220669070000"
+    },
+    {
+      "title": "Firestone Complete Auto Care",
+      "url": "https://local.firestonecompleteautocare.com/north-carolina/",
+      "text": "We're your all-in-one tire store, car care center, and automotive shop.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/21fb061ea74b45a29303cbb46671e077_v1.jpg?m=638298220669770000"
+    },
+    {
+      "title": "NAPA Auto Parts",
+      "url": "https://www.napaonline.com/napa/en/nc/camp_lejeune/store/39845",
+      "text": "Your local NAPA stocks auto parts, tools and equipment and many other items.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/dbd5becfd7ee415e9d91b75a73a057c9_v1.jpg?m=638298220669300000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services",
+  "fetchedAt": "2026-10-27"
+}

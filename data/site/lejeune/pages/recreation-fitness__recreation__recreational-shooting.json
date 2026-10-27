@@ -1,0 +1,149 @@
+{
+  "title": "Recreational Shooting",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Recreational Shooting",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-shooting"
+    }
+  ],
+  "intro": "FREE basic shotgun safety and archery instruction by Certified Range Safety Officers. Learn how to hold, load, and shoot a shotgun, in addition to the rules of the sport. We can also teach you to hold and shoot a bow. Training bows are available.",
+  "sections": [
+    {
+      "heading": "Alerts",
+      "level": 0,
+      "markdown": "- **The Recreational Shooting Complex is open!** The Old Sawmill Rd. entrance from Holcomb Blvd. is closed. Please use the Piney Green Rd. entrance to Old Sawmill Rd. The road is closed to through traffic, but open for skeet and archery range traffic.\n- **Pistol Range Closure Notice** The Pistol Range is currently closed due to mechanical issues and will remain closed until further notice. Updates will be provided as more information becomes available."
+    },
+    {
+      "heading": "Two Separate Shooting Venues",
+      "level": 2,
+      "markdown": "An eight-lane practice course with stationary targets set at known distances of 10 to 60 yards"
+    },
+    {
+      "heading": "Archery",
+      "level": 3,
+      "markdown": "**Pricing**\n- Archery: $10/day\n- 10 Visit Pass Cards - Ages 16 and older $80\n- 10 Visit Pass Cards - Ages 10-15 $70\n- 10 Visit Pass Cards - Ages 9 and younger $50\n- Rental Bow: $12/day\n\nOn-site retail store available to purchase ammo, hearing and eye protection, and targets.\n\n*Authorized MCCS patrons ages 13 and over; ages 13-17 must be under the direct supervision of parent/guardian. No one under the age of 13 is permitted at the facility. Customers must comply with all base regulations on firearms.*"
+    },
+    {
+      "heading": "Pistol Range",
+      "level": 3,
+      "markdown": "**Pricing**\n- Per Day: $15/person (Discounted cards available - 10 visit pass $120)\n- Pistol Rental: $12\n\n[BASE REGULATIONS FOR TRANSPORTING A PRIVATELY OWNED FIREARM](https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=c6cb0aee-24cc-46f8-b9e1-0af5201bd1ad&v=1)\n\n[PISTOL RANGE SOP](https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=ef8407c6-c00f-4a7e-9cd1-2ae7c4b70872&v=1)"
+    },
+    {
+      "heading": "Skeet",
+      "level": 3,
+      "markdown": "8 skeet fields with 2 trap overlays and a 5 stand overlay\n\nAuthorized ammunition - Only #7½, #8, or #9 lead shot authorized (only MCCS-purchased ammo is authorized in rental weapons)\n\n**Pricing**\n- Round of Skeet or Trap: $9 (discount cards available - 10 rounds for $75)\n- 5 Stand: $10/round\n- Shotgun Rental: $12/day"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "McIntyre-Parks Recreational Shooting Complex",
+      "address": "R-100 Range Complex, Old Sawmill Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-3889"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Archery & Skeet",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8:30AM - 3:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "8:30AM - 2:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:30AM - 3:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Pistol Range",
+      "address": "F11A, Piney Green Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-3889"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Pistol Range Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8:30AM - 1:30PM"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Saturday",
+              "time": "8:30AM - 1:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "BASE REGULATIONS FOR TRANSPORTING A PRIVATELY OWNED FIREARM",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=c6cb0aee-24cc-46f8-b9e1-0af5201bd1ad&v=1"
+    },
+    {
+      "text": "PISTOL RANGE SOP",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=ef8407c6-c00f-4a7e-9cd1-2ae7c4b70872&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/361a818ca0424283a51700a6496b36d4.png?m=639027017633270000",
+      "alt": "123126-srv-resh-bullseyefridays-rotator.png"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-shooting",
+  "fetchedAt": "2026-10-27"
+}

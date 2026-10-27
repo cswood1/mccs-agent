@@ -1,0 +1,171 @@
+{
+  "title": "Marinas",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Marinas",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/marinas"
+    }
+  ],
+  "intro": "Gottschalk Marina is a recreational marina designed for authorized patrons seeking outdoor experiences on the water. It helps you enjoy leisure time by offering watercraft rentals, boat slips, and access to scenic waterways, as well as special events throughout the year.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "You can enjoy fishing, cruising, or spending quality time outdoors with family and friends.\n\nGottschalk Marina is a certified NC Clean Marina, meeting the standards of the NC Clean Marina Program."
+    },
+    {
+      "heading": "Safety Conditions",
+      "level": 2,
+      "markdown": "For the safety of our patrons, all motorized and non-motorized watercraft cannot be issued under the following conditions:\n\n- The marina is under Thunderstorm Condition 1, lightning, or high wind advisory.\n- Water is deemed too rough to safely launch or handle watercraft."
+    },
+    {
+      "heading": "Rental Requirements",
+      "level": 2,
+      "markdown": "- All patrons must have a valid DoD ID card.\n- Non-Motorized Watercrafts 16 years of age or older\n- Motorized Watercraft - 18 years or older with completion of a boating safety course*\n- Sunfish and American 14.6 Sailboat - 16 years or older with sailing certificate\n- Minimum rental fee for watercraft is two hours, unless noted."
+    },
+    {
+      "heading": "Boat Slips & Dry Storage Fees",
+      "level": 2,
+      "markdown": "| Type | Fee |\n|---|---|\n| Non-Live Aboard Boat Slip | $6/ft. ($100 minimum) |\n| Live Aboard Boat Slip (Gottschalk Marina only) | $6/ft. ($100 minimum plus $150 utility fee) |\n| Transient Boat Slips | $1.50/ft. per day |\n| Boat, Trailer & RV Dry Storage | $35/month |\n| Daily Slip Rentals*/Overnight Accommodations | One day $20; Two days $35; Each additional day $15 |\n\n*Available space permitting; first come, first served.\n\nPlease note frequent users of daily slip rentals may be asked to provide insurance policy coverage for salvage costs as well as environmental risks, to include pollution remediation, and name Headquarters Marine Corps HQMC CMC/MR and MCCS Lejeune-New River as additional insureds. Insurance rates are as follows: 16-27 ft $100,000; 28-40 ft $300,000; 41-50 ft $500,000; >50 and live aboard $1,000,000."
+    },
+    {
+      "heading": "Non-Motorized Watercraft",
+      "level": 2,
+      "markdown": "| Watercraft | 2 Hours | Half Day | Daily | 3 Days |\n|---|---|---|---|---|\n| Single Kayak** | $12 | $22 | $40 | $105 |\n| Double Kayak** | $15 | $28 | $52 | $115 |\n| Pedal/Fishing Kayak | N/A | $28 | $52 | $115 |\n| Canoe** | $15 | $28 | $52 | $115 |\n| SUP Board | $14 | $25 | $40 | $105 |\n| Fishing SUP Board | $14 | $25 | $40 | $105 |\n\n**Unit PT rates available. Call for more information."
+    },
+    {
+      "heading": "Motorized Watercraft",
+      "level": 2,
+      "markdown": "Available only at MCAS New River Marina only.\n\n| Watercraft | 2 Hours | Half Day | Daily | 3 Days |\n|---|---|---|---|---|\n| Jon Boat | N/A | $45 | $80 | $204 |\n| 14' Skiff | N/A | $45 | $80 | $175 |\n| 16' Fishing Skiff | N/A | $85 | $150 | $360 |\n| Pontoon Boat (16', 18', or 20') | N/A | $180 | $250 | N/A |\n\nFuel charge will be assessed, in addition to rental fee. Fuel charge varies based on usage and market price.\n\n¹ Patrons must be 16 years or older and have a sailing certificate.\n² Patrons must be 18 years or older, have completed a boating safety course, and have a sailing certificate specific to type of sailboat rental.\n³ Patrons must be 18 years or older and have completed a boating safety course."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Gottschalk Marina",
+      "address": "Bldg. 198 Julian C. Smith Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-8307"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Gottschalk Marina",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "name": "New River Marina",
+      "address": "2800 Perimeter Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-6578"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "New River Marina",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Base Fishing Permits",
+      "url": "https://lejeune.recaccess.com/"
+    },
+    {
+      "text": "FREE Boating Course",
+      "url": "https://www.boatus.org/"
+    },
+    {
+      "text": "NC Boating Laws",
+      "url": "https://www.ncwildlife.org/Boating/Laws-Safety"
+    },
+    {
+      "text": "Float Plan",
+      "url": "https://www.ncwildlife.org/Portals/0/Boating/documents/floatplan.pdf"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Sailboat rental table (referenced by footnotes) may not have been fully captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/marinas",
+  "fetchedAt": "2026-10-27"
+}

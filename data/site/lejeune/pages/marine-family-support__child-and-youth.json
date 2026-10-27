@@ -1,0 +1,140 @@
+{
+  "title": "Child and Youth",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Child and Youth",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth"
+    }
+  ],
+  "intro": "Child and Youth Programs (CYP) provide high quality child care programs and services that support eligible families. The program operates under the auspices of the Family Care Branch. Certified by the DoD and accredited by the National Association for the Education of Young Children and the National Afterschool Association, CYP offers nurturing, developmentally appropriate care for children from 6 weeks to 12 years.",
+  "sections": [
+    {
+      "heading": "Programs",
+      "level": 2,
+      "markdown": "#### Full Time Care\n\nAvailable from 6:15AM - 5:30PM Monday - Friday for ages 6 weeks through 5 years. The Department of Defense partially subsidizes some of the cost of care, and family fees are based on total household income for full-time childcare.\n\n#### Family Child Care\n\nOn-base family child care. Child care available 24 hours a day; 7 days a week.\n\n#### School Age Care\n\nAges kindergarten through 12 years. Spring, summer and winter camps available. Closed during holidays.\n\n#### Emergency Care\n\nContact your Deployment Readiness Coordinator for assistance with emergency childcare. Emergency care is provided for military families in crisis at no cost to the family. Criteria for eligibility varies to include medical emergencies and incapacitation of a family member."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": ""
+    }
+  ],
+  "cards": [
+    {
+      "title": "Full Time Care",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers",
+      "text": "Available from 6:15AM - 5:30PM Monday - Friday for ages 6 weeks through 5 years",
+      "image": ""
+    },
+    {
+      "title": "Family Child Care",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care",
+      "text": "On-base family child care. Child care available 24 hours a day; 7 days a week",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=cee491c6-db1f-4921-9eb1-ac07cb67bd24&v=1"
+    },
+    {
+      "title": "School Age Care",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care",
+      "text": "Ages kindergarten through 12 years. Spring, summer and winter camps available",
+      "image": ""
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Resource & Referral",
+      "address": "Bldg. TT 2455H Iwo Jima Blvd.\nTarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-0553"
+        },
+        {
+          "label": "Phone",
+          "number": "910-450-0554"
+        },
+        {
+          "label": "Phone",
+          "number": "910-450-0555"
+        },
+        {
+          "label": "Fax",
+          "number": "910-450-0556"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "MilitaryChildCare.com",
+      "url": "https://www.militarychildcare.com/"
+    },
+    {
+      "text": "Child Development Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers"
+    },
+    {
+      "text": "Family Child Care",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/family-child-care"
+    },
+    {
+      "text": "School Age Care",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth/school-age-care"
+    },
+    {
+      "text": "Google Maps",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.73244929031601,-77.37375886851909"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/585f46540fb8460a812ccdb3a08264a7.jpg?m=638943213750330000",
+      "alt": "123125-mfp-cyp-clubfriday-rotator.jpg"
+    }
+  ],
+  "notCaptured": "Upcoming Events list (dynamic) and related news cards; PDF downloads (CDC/SAC/Infant menus, menu substitutions, food analysis, USDA forms, CYP Handbook, authorization forms) not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/child-and-youth",
+  "fetchedAt": "2026-10-27"
+}

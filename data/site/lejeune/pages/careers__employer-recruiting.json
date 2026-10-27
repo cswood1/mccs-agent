@@ -1,0 +1,73 @@
+{
+  "title": "Employer Recruiting",
+  "breadcrumb": [
+    {
+      "label": "Careers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/careers"
+    },
+    {
+      "label": "Employer Recruiting",
+      "url": "https://lejeunenewriver.usmc-mccs.org/careers/employer-recruiting"
+    }
+  ],
+  "intro": "Career Connections is an MCCS employer recruiting opportunity during Transition Readiness Seminar weeks at Camp Lejeune Education Center and New River AS-901.",
+  "sections": [
+    {
+      "heading": "Career Connections Pricing",
+      "level": 2,
+      "markdown": "- 5 Weeks - $500\n- 10 Weeks - $950\n- 20 Weeks - $1,800\n- 30 Weeks - $2,250\n\n*1 Week includes display space at MCAS New River on Monday and MCB Camp Lejeune on Wednesday.*\n\nYour investment supports MCCS quality of life programs and services for Marines, Sailors, and families.\n\n- [Register Here](https://www.wrike.com/form/eyJhY2NvdW50SWQiOjI0MDk0MTUsInRhc2tGb3JtSWQiOjc0NTMxNn0JNDgyNDEyMTkxODQ1NgllMzczZGU5N2EyZTQxOWFkOTZmMTcwYTIzOWM4OGUwYTZkNmRjNmI3ZGE3ZWU1ZmI2NmQ0MWY3MmE1MGVlODQ4)\n- [Transition Readiness Seminar Schedule](https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=7316cadf-b4b0-4b9a-bd1b-d990222d5762&v=2)"
+    },
+    {
+      "heading": "Criteria for Non-Federal Entity (NFE) Participation",
+      "level": 2,
+      "markdown": "1. NFE is not on excluded parties or DoD commercial solicitation debar/suspended lists.\n2. NFE does not conduct practices conflicting with DoD/Marine Corps policies.\n3. NFE presence not in conflict with existing policies (e.g., inappropriate marketing content, discrimination).\n4. NFE presence would not discredit Marine Corps; if authorized base access, complies with MCO P1700.27b, paragraph 9608.\n5. NFE will not charge recruitment costs to Service Members employed from contact during hiring event.\n6. NFEs' positions must be hourly, salary, or salary plus commission. No straight commission-based NFEs.\n7. NFEs will have bona-fide jobs available, with no contingencies.\n8. NFE must have minimum of five positions available for recruitment.\n9. SkillBridge providers must have current DoD Memorandum of Understanding (MOU) and provide agreement upon registration; CSA required with appropriate fees.\n10. Educational institutions with current DoD MOU seeking to recruit students may register as space allows; CSA required."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Marine Corps Community Services Human Resources",
+      "address": "",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-JOBS (910-451-5627)"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Register Here",
+      "url": "https://www.wrike.com/form/eyJhY2NvdW50SWQiOjI0MDk0MTUsInRhc2tGb3JtSWQiOjc0NTMxNn0JNDgyNDEyMTkxODQ1NgllMzczZGU5N2EyZTQxOWFkOTZmMTcwYTIzOWM4OGUwYTZkNmRjNmI3ZGE3ZWU1ZmI2NmQ0MWY3MmE1MGVlODQ4"
+    },
+    {
+      "text": "Transition Readiness Seminar Schedule",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=7316cadf-b4b0-4b9a-bd1b-d990222d5762&v=2"
+    },
+    {
+      "text": "MCO P1700.27b",
+      "url": "https://www.marines.mil/portals/1/MCO%20P1700.27B%20W%20CH%201.pdf"
+    },
+    {
+      "text": "How to Apply with MCCS",
+      "url": "https://vimeo.com/596581886/7239bcca6e"
+    },
+    {
+      "text": "Career Opportunities",
+      "url": "https://careers.usmc-mccs.org/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=fa01093d-c1e8-4e6f-acbf-7306b8950dc1&v=3",
+      "alt": "Employer Recruiting Opportunities"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/careers/employer-recruiting",
+  "fetchedAt": "2026-10-27"
+}

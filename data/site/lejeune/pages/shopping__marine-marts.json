@@ -1,0 +1,781 @@
+{
+  "title": "Marine Marts",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Marine Marts",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-marts"
+    }
+  ],
+  "intro": "Marine Marts are retail stores designed for Marines and their families on base, providing everyday essentials and quick-access conveniences to support busy, on-the-go lifestyles.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "**Alert:** Starting Oct. 25 Hwy 172 Marine Mart will operate under the following hours of operation: Daily: 9AM-5PM"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Berkeley Manor Mini Mart",
+      "address": "Bldg. 820 Stone St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-5491"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Your quick‑stop spot for everyday essentials and the favorites you count on.",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Camp Geiger Marine Mart",
+      "address": "Bldg. TC-827, Camp Geiger, Camp Lejeune, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0691"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 3PM"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Camp Johnson Marine Mart",
+      "address": "Bldg. M-19 Montford Landing Rd., Camp Johnson, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-0046"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 7PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 8PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Central Area Marine Mart",
+      "address": "Bldg. 1613 Holcomb Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-0854"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Inside",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 3PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        },
+        {
+          "label": "Drive-Thru",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 5:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 5:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Courthouse Bay Marine Mart",
+      "address": "Bldg. 246 Clinton St., Courthouse Bay, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-7357"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 8PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "French Creek Marine Mart",
+      "address": "Bldg. FC-425, Gonzalez Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-2382"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 7PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 9PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 9PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 9PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 9PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 9PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 7PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Gonzalez Marine Mart",
+      "address": "Bldg. FC-298 Gonzalez Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-8996"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM - 3PM"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Hwy. 172 Marine Mart",
+      "address": "Bldg. BB-219, Courthouse Bay, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-6168"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "MAG 29 Marine Mart",
+      "address": "Bldg. AS-4127 White St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-6033"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Onslow Beach Marine Mart",
+      "address": "Bldg. BA-276 West Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-6216"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM-6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "10AM-6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "10AM-6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM-6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Delivers quality products and services that fit your fast‑paced lifestyle, from beach-day essentials to everyday convenience.",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Stone Bay Marine Mart",
+      "address": "Bldg. RR-154, Stone Bay, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-440-1385"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Tarawa Terrace Marine Mart",
+      "address": "Bldg. TT-2478, Tarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-1614"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 8PM"
+            },
+            {
+              "days": "Monday",
+              "time": "7AM - 9PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7AM - 9PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7AM - 9PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7AM - 9PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7AM - 9PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 9PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Tun Alley - Wine, Spirits, & More",
+      "address": "Hadnot Point Plaza, Bldg. 84, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-1430"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10:30AM - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10:30AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "One-stop shop opening weekdays at 8AM, offering coffee, fresh grab-and-go breakfast, wines, spirits, craft beers, and liquors.",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Verona Loop Marine Mart",
+      "address": "Verona Loop, Racetrack Range Rd., Camp Devil Dog, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0388"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "7:30AM - 4PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "7:30AM - 4PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "7:30AM - 4PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "7:30AM - 4PM"
+            },
+            {
+              "days": "Friday",
+              "time": "7:30AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Wallace Creek Marine Mart",
+      "address": "Bldg. HP-99 Birch St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-8273"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Daily",
+              "time": "OPEN 24/7"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Tun Alley Offers New Shopping Experience",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/tun-alley-offers-new-shopping-experience"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-marts",
+  "fetchedAt": "2026-10-27"
+}

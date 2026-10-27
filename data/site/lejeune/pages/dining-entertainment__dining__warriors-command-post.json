@@ -1,0 +1,86 @@
+{
+  "title": "Warriors Command Post",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Warriors Command Post",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/warriors-command-post"
+    }
+  ],
+  "intro": "Located in Building 1 Hospital Point, the Warriors Command Post serves breakfast and lunch from the grill Monday through Friday. Choose from brisket, chicken, pulled pork and so much more.",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Warriors Command Post",
+      "address": "Bldg. 1 Hospital Point, Julian C Smith St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-8822"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6:30AM - 1:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6:30AM - 1:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6:30AM - 1:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6:30AM - 1:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6:30AM - 1:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. 1 Hospital Point, Julian C Smith St., Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.675738180987985,-77.37178934657851"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=d84f2396-0d4c-46dc-9caa-ec0e01db7ee9&v=1",
+      "alt": "2026 Hospitality Award"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/warriors-command-post",
+  "fetchedAt": "2026-10-27"
+}

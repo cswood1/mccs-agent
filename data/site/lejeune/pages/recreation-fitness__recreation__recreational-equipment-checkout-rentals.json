@@ -1,0 +1,161 @@
+{
+  "title": "Recreational Equipment Checkout & Rentals",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Recreational Equipment Checkout & Rentals",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-equipment-checkout-rentals"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Recreational Equipment Checkout & Rentals Catalogs",
+      "level": 2,
+      "markdown": "- MCB Camp Lejeune\n- MCAS New River"
+    },
+    {
+      "heading": "Reservations",
+      "level": 2,
+      "markdown": "Reservations can be made up to one (1) year in advance for any item. Items can be reserved for any length of time.\n\nAuthorized patrons for REIS are Active Duty, reservists on Active Duty, and their dependents, and DoD authorized personnel. Military/DoD ID cards must be presented at time of reservation and/or at time of reservation pickup.\n\nAll reservations for equipment require a 50% deposit of the entire rental amount at the time of reservation to hold the item for date(s) requested. Reservations of equipment for items less than $15 must be paid in full at the time of reservation. Reservations will not be confirmed without payment. Reservations taken over the phone may be paid by credit card.\n\nRemaining balances on reserved items must be paid in full at the time of, or prior to, item pick-up. Persons with unpaid balances will not be permitted to take reserved item."
+    },
+    {
+      "heading": "Cancellation Policy",
+      "level": 2,
+      "markdown": "Cancellations/Changes will be accepted for full refunds up to 48 hours prior to reservation pick-up. Cancellations and/or Changes within 48 hours (two days) of reservation will result in forfeiture of the deposit. Customers who originally paid in cash may receive a cash refund if the total amount is less than $100. Please see Outdoor Recreation staff for further clarification of refunds."
+    },
+    {
+      "heading": "Return Policy",
+      "level": 2,
+      "markdown": "All items must be returned on the due date indicated by the assigned return time. Normal rental length is one (1) day from time of pick up. If the expected return time occurs when the facility is closed for the day, the adjusted return time will be by no later than two (2) hours from the time the facility opens on the next business day. Failure to return on time will result in items being assessed a late fee."
+    },
+    {
+      "heading": "Checkout Procedures",
+      "level": 2,
+      "markdown": "**Distance Policy**\n\nMCCS REIS will allow patrons to take towable items a maximum of 50 miles. Patrons wishing to take items farther than 50 miles will be required to sign a waiver acknowledging the patron will assume all expenses incurred to return the item should the item have malfunctions. MCCS REIS will not reimburse patrons who have items outside the 50-mile limit for towing, repairs, or other costs associated with damages that are not the direct responsibility of REIS.\n\n**Equipment Check-Out Times**\n\n- **Checkout Hours:** Equipment checkouts are available **only during normal posted business hours**.\n- **Checkout Time:** Customers must allow **at least 30 minutes** for all equipment checkouts, including trailer inspections and hook-ups.\n- **Rental Period:** Standard rental lengths are **24 hours** from the time of pick-up."
+    },
+    {
+      "heading": "Minimum Towing Requirement",
+      "level": 2,
+      "markdown": "These are general specifications, for more detailed specifications on individual items, please see the REIS office for additional documents. Customers should be sure to note any/all damages to trailer at time of check-out to avoid fees upon return. Towing combination between MCCS trailers and individual vehicles will be evaluated at time of reservation to ensure safe combination.\n\nAll trailer rentals are required to have a vehicle inspection conducted by REIS at the REIS facility before any reservations are finalized, regardless of prior rental history, to ensure vehicle is adequate and able to pull the trailer. Listed below are the minimum requirements of the vehicle. Other aspects of the vehicle, such as tire pressure and wear, turn signals and lights, and wiring harness, will be inspected before the trailer is released.\n\n**VEHICLE HAULERS**\n\n| Trailer | Height of Ball | Size of Ball | Electrical Requirement | Engine Size | Max Load Weight | Trailer Weight |\n|---|---|---|---|---|---|---|\n| 16 FT | 20\"-23\" | 2 5/16\" | 7-Round | 6 CYL | 5500 LBS | 2140 |\n| 18FT | 20\"-23\" | 2 5/16\" | 7-Round | 6 CYL | 4850 LBS | 2000 |\n| 20FT | 20\"-23\" | 2 5/16\" | 7-Round | 6 CYL | 5400 LBS | 2300 or 2600 |\n| Car Kaddy | 18\"-20\" | 2\" | 4-Prong | 6 CYL | 2900 LBS | 600 |\n| Single/Triple Motorcycle Trailer | 18\"-20\" | 2\" | 4-Prong | 6 CYL | 1660 LBS | 540 or 700 / 700 |\n\n**UTILITY TRAILERS**\n\n| Trailer | Height of Ball | Size of Ball | Electrical Requirement | Engine Size | Max Load Weight | Trailer Weight |\n|---|---|---|---|---|---|---|\n| 5 x 8 Single Axle Open | 17\"-20\" | 2\" | 4-Prong | 4 CYL | 2000 LBS | 748 |\n| 6 x 10 Single Axle Open | 17\"-22\" | 2\" | 4-Prong | 6 CYL | 2100 LBS | 880 |\n| 6 x 12 Single Axle Open | 17\"-22\" | 2\" | 4-Prong | 6 CYL | 2400 LBS | 1000 |\n| 6 x 16 Double Axle Open | 17\"-22\" | 2 5/16\" | 7-Round | 6 CYL | 4000 LBS | 2200 |\n\n**ENCLOSED TRAILERS**\n\n| Trailer | Height of Ball | Size of Ball | Electrical Requirement | Engine Size | Max Load Weight | Trailer Weight |\n|---|---|---|---|---|---|---|\n| 6 x 12 Single Axle | 16\"-21\" | 2\" | 4-Prong | 6 CYL | 1500 LBS | 1580 |\n| 7 x 14 Double Axle | 16\"-21\" | 2 5/16\" | 7-Round | 6 CYL | 4000 LBS | 2220 |\n\n**DUMP TRAILERS**\n\n| Trailer | Height of Ball | Size of Ball | Electrical Requirement | Engine Size | Max Load Weight | Trailer Weight |\n|---|---|---|---|---|---|---|\n| 5 x 8 Single Axle | 7\"-22\" | 2\" | 7-Round | 6 CYL | 2000 LBS | 1460 |\n| 6 x 10 Double Axle | 20\"-23\" | 2 5/16\" | 7-Round | 1/2 Ton | 5500 LBS | 2560 |\n| 7 x 12 Double Axle | 22\"-25\" | 2 5/16\" | 7-Round | 3/4 Ton | 8400 LBS | 3680 |\n\n**TOWABLES**\n\n| Trailer | Height of Ball | Size of Ball | Electrical Requirement | Engine Size |\n|---|---|---|---|---|\n| Grills | 15\"-25\" | 1 7/8\" or 2\" | None | - |\n| Dunk Tank | 15\"-25\" | 2\" | None | - |"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Recreation Equipment Issue - Camp Lejeune",
+      "address": "Bldg. 1100 West Rd.\n(Between Ash and Birch St.)\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-1368"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 3PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 12PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 12PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 3PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 3PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Recreation Equipment Issue - New River",
+      "address": "2800 Perimeter Rd.\nNew River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-6578"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/6dd57b91dd214864859df83c9546177a.jpg?m=638622779224600000",
+      "alt": "reis-gellballbattle-rotator.jpg"
+    }
+  ],
+  "notCaptured": "Equipment catalogs (external Canva links) not captured; a West Road closure alert banner was present but its text was not returned (see Outdoor Adventures page for the same notice).",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/recreational-equipment-checkout-rentals",
+  "fetchedAt": "2026-10-27"
+}

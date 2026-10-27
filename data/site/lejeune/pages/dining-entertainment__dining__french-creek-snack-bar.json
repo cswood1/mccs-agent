@@ -1,0 +1,96 @@
+{
+  "title": "French Creek Snack Bar",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "French Creek Snack Bar",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/french-creek-snack-bar"
+    }
+  ],
+  "intro": "Stop by the French Creek Marine Mart for a made-to-order meal! Enjoy a variety of fresh options including subs, pizza, burritos, lasagna, breakfast platters, and sandwiches.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "[French Creek Snack Bar Menu](/modules/media/?do=inline&id=47474d5e-8bc8-4afe-bc25-c916c1bc54a7&v=2)\n\nHome to the 2026 Hospitality Manager of the Year"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "French Creek Snack Bar",
+      "address": "Bldg. FC425 Gonzalez Blvd. (Inside French Creek Marine Mart) Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-6788"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Friday",
+              "time": "6AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "French Creek Snack Bar Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=47474d5e-8bc8-4afe-bc25-c916c1bc54a7&v=2"
+    },
+    {
+      "text": "Bldg. FC425 Gonzalez Blvd. (Inside French Creek Marine Mart) Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.647499719322916,-77.33532770778932"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=d84f2396-0d4c-46dc-9caa-ec0e01db7ee9&v=1",
+      "alt": "2026 Hospitality Award"
+    }
+  ],
+  "notCaptured": "Menu is a linked file (not captured)",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/french-creek-snack-bar",
+  "fetchedAt": "2026-10-27"
+}

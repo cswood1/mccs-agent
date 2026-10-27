@@ -1,0 +1,49 @@
+{
+  "title": "More",
+  "breadcrumb": [
+    {
+      "label": "More",
+      "url": "https://lejeunenewriver.usmc-mccs.org/more"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Calendar of Events",
+      "url": "https://lejeunenewriver.usmc-mccs.org/calendar-of-events",
+      "text": "We have something for everyone. Look for your next event!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/aaf584cc3c4040a188c806d47e41fa55_v1.jpg?m=638298487058930000"
+    },
+    {
+      "title": "Construction Update",
+      "url": "https://www.lejeune.marines.mil/news/construction-updates/",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Customer Feedback (ICE)",
+      "url": "https://ice.disa.mil/index.cfm",
+      "text": "Let us know about your last visit. Your opinion counts!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/19aecfa8f8d14323bdd31bfdeeae61cb_v1.jpg?m=638298219651030000"
+    },
+    {
+      "title": "Extended Veteran's Access",
+      "url": "https://lejeunenewriver.usmc-mccs.org/more/extended-veterans-access",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Sponsorship & Advertising",
+      "url": "https://lejeunenewriver.usmc-mccs.org/more/sponsorship-advertising",
+      "text": "Showcase your brand's commitment by partnering with Marine Corps Community Services.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/508f68dc63b34ad0970094636dc8d6a8_v1.jpg?m=638298219651170000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/more",
+  "fetchedAt": "2026-10-27"
+}

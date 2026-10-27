@@ -1,0 +1,140 @@
+{
+  "title": "Military Family Life",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Military Family Life",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Chaplains Religious Enrichment Development Operation",
+      "level": 2,
+      "markdown": "Our goal is to help enrich and strengthen people's lives. Join the many who have reaped significant benefits from attending a CREDO retreat."
+    },
+    {
+      "heading": "Exceptional Family Member Program",
+      "level": 2,
+      "markdown": "EFMP helps active duty service members with managing the special needs of a family member."
+    },
+    {
+      "heading": "Family Advocacy Program",
+      "level": 2,
+      "markdown": "The Family Advocacy Program (FAP) is committed to fostering strong and meaningful relationships."
+    },
+    {
+      "heading": "Family Member Employment Assistance Program",
+      "level": 2,
+      "markdown": "FMEAP provides employment related referral services, career and skill assessments, career coaching, job search guidance, portable career opportunities, and education center referrals/guidance."
+    },
+    {
+      "heading": "Marine Corps Family Team Building",
+      "level": 2,
+      "markdown": "The Family Readiness Program provides Marines, Sailors, and their families with valuable resources and problem-solving skills to navigate military life. Problem-solving skills are an essential aspect of workshops led by Marine Corps Family Team Building (MCFTB)."
+    },
+    {
+      "heading": "Navy Marine Corps Relief Society",
+      "level": 2,
+      "markdown": "MISSION: Build financial stability and well-being for Sailors, Marines and their families. VISION: To be the most trusted resource to meet the emerging needs of our global community of Sailors and Marines."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Chaplains Religious Enrichment Development Operation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/chaplains-religious-enrichment-development-operation",
+      "text": "Our goal is to help enrich and strengthen people's lives. Join the many who have reaped significant benefits from attending a CREDO retreat.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d72a79866d7c48b09264006225b28de3_v1.jpg"
+    },
+    {
+      "title": "Exceptional Family Member Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program",
+      "text": "EFMP helps active duty service members with managing the special needs of a family member.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/451acb00ded649ddb04a291ced23ba33_v1.jpg"
+    },
+    {
+      "title": "Family Advocacy Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program",
+      "text": "The Family Advocacy Program (FAP) is committed to fostering strong and meaningful relationships.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/cc11477bffb0403ab2e570f81a46dabd_v1.jpg"
+    },
+    {
+      "title": "Family Member Employment Assistance Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
+      "text": "FMEAP provides employment related referral services, career and skill assessments, career coaching, job search guidance, portable career opportunities, and education center referrals/guidance.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a9884a029a16428f861cfe07afaf4522_v1.jpg"
+    },
+    {
+      "title": "Marine Corps Family Team Building",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building",
+      "text": "The Family Readiness Program provides Marines, Sailors, and their families with valuable resources and problem-solving skills to navigate military life.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f1341611514443b9a88b8c4bd0a6accb_v1.jpg"
+    },
+    {
+      "title": "Navy Marine Corps Relief Society",
+      "url": "https://www.nmcrs.org/",
+      "text": "Build financial stability and well-being for Sailors, Marines and their families.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e039d757b6ac404d943e4b812896c190_v1.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Chaplains Religious Enrichment Development Operation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/chaplains-religious-enrichment-development-operation"
+    },
+    {
+      "text": "Exceptional Family Member Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/exceptional-family-member-program"
+    },
+    {
+      "text": "Family Advocacy Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-advocacy-program"
+    },
+    {
+      "text": "Family Member Employment Assistance Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program"
+    },
+    {
+      "text": "Marine Corps Family Team Building",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/marine-corps-family-team-building"
+    },
+    {
+      "text": "Navy Marine Corps Relief Society",
+      "url": "https://www.nmcrs.org/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d72a79866d7c48b09264006225b28de3_v1.jpg",
+      "alt": "Chaplains Religious Enrichment Development Operation"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/451acb00ded649ddb04a291ced23ba33_v1.jpg",
+      "alt": "Exceptional Family Member Program"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/cc11477bffb0403ab2e570f81a46dabd_v1.jpg",
+      "alt": "Family Advocacy Program"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a9884a029a16428f861cfe07afaf4522_v1.jpg",
+      "alt": "Family Member Employment Assistance Program"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f1341611514443b9a88b8c4bd0a6accb_v1.jpg",
+      "alt": "Marine Corps Family Team Building"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e039d757b6ac404d943e4b812896c190_v1.jpg",
+      "alt": "Navy Marine Corps Relief Society"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life",
+  "fetchedAt": "2026-10-27"
+}

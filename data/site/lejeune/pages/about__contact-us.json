@@ -1,0 +1,77 @@
+{
+  "title": "About",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about"
+    },
+    {
+      "label": "Contact Us",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/contact-us"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Who We Are",
+      "level": 2,
+      "markdown": "Marine Corps Community Services (MCCS) is a comprehensive set of programs that support and enhance the operational readiness, war fighting capabilities, and life quality of Marines, their families, retirees and civilians. Our programming includes employment, personal financial management, education and transition assistance; fitness and recreation, deployment support and family team building, child care and youth activities, prevention, counseling and victim support; golf courses; dining and entertainment; and shopping. MCCS is valued by leadership as being a user-friendly and a responsive single portal that provides constant and unwavering support to Marines and their families throughout their entire service or affiliation with the United States Marine Corps. MCCS delivers goods and services at over 2,250 facilities with a staff of more than 12,000 employees worldwide."
+    },
+    {
+      "heading": "Our Mission",
+      "level": 2,
+      "markdown": "To take care of Marines and their families by providing quality of life programs, products, and services in support of the Marine Corps objectives."
+    },
+    {
+      "heading": "Our Vision",
+      "level": 2,
+      "markdown": "MCCS will be the first choice of products, services, and programs by exceeding our customers' expectations and building lifelong customers. To do this as an organization we must be:\n\n- Employer of Choice to individuals who are dedicated to supporting our War Heroes and their families.\n- Steward for promoting effective policy and business practices intended to support and complement our mission.\n- Cross-functional and continually seeking synergy across all processes.\n- Provider of premier facilities that promote personal and family readiness.\n- Deliver quality programs and services to meet current and future needs.\n- Responsive to customer behaviors and generate goodwill."
+    },
+    {
+      "heading": "Our Values",
+      "level": 2,
+      "markdown": "The Marine Corps holds true to the core values of honor, courage, and commitment. These core values serve as fundamental touchpoints for moral character, professional behavior and conduct of the Marine Corps. Every Marine Corps Community Services team member is additionally guided by similar customer service values including courtesy, responsibility, and loyalty."
+    },
+    {
+      "heading": "Contact Us",
+      "level": 2,
+      "markdown": "- [Send us an Email](mailto:mccslejeune-newrivernews@usmc-mccs.org): mccslejeune-newrivernews@usmc-mccs.org\n- [Newsletter Sign-Up](https://lejeunenewriver.usmc-mccs.org/about/newsletter-sign-up)\n- Human Resources: 910-451-JOBS"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Marine Corps Community Services Lejeune-New River",
+      "address": "",
+      "phones": [
+        {
+          "label": "Human Resources",
+          "number": "910-451-JOBS"
+        }
+      ],
+      "emails": [
+        "mccslejeune-newrivernews@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Newsletter Sign-Up",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/newsletter-sign-up"
+    },
+    {
+      "text": "Customer Feedback (ICE)",
+      "url": "https://ice.disa.mil/index.cfm"
+    },
+    {
+      "text": "Human Resources",
+      "url": "https://careers.usmc-mccs.org/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "The Contact Us page shows the general About MCCS text (H1 \"About\") with an email link; there is no contact directory on the page.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/about/contact-us",
+  "fetchedAt": "2026-10-27"
+}

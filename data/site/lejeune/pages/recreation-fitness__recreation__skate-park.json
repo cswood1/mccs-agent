@@ -1,0 +1,65 @@
+{
+  "title": "Skate Park",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Skate Park",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/skate-park"
+    }
+  ],
+  "intro": "The 8500 sq. ft. Skate Park is located next to the Inline Hockey Rink on Agan St. The park is open to all authorized patrons 10 years and up and will be used for both recreational skate and competitions.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Highlights in the park are intermediate jumps, grinding rails, and two long runs starting and ending with either quarter pipe or half pipe platforms, culminating in the regions only super bowl platform.\n\n_Open to authorized patrons 10 years and up. Patrons who fail to wear all required protective equipment or otherwise fail to comply with **ASO 1710.40**, posted rules, or the direction of PMO/MCCS Staff may be subject to citation, administrative and/or punitive action or both._\n\nAll skate park activity involves inherent risk. By entering this park, all users/observers knowingly and voluntarily assume the known and unknown risks associated with skate park activities. Users have a duty to read and understand all applicable rules and regulations prior to entering the park and to obey all written/oral directions provided during park use."
+    },
+    {
+      "heading": "User Responsibilities",
+      "level": 3,
+      "markdown": "Users have a duty to exercise good judgment and act in a responsible manner while using the skate park. Users duties include, but are not limited to:\n\n- Act within the limits of one's ability.\n- Use equipment for its designed purpose only.\n- Maintain control of one's person and equipment.\n- Refrain from actions that may cause or contribute to death or injury to oneself or other persons or property."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Skate Park",
+      "address": "AS-615 Agan St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-5844"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Skate Park Rules",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=86890eca-f232-4170-a627-328a2c7fd207&v=1"
+    },
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.72612182496969,-77.43917701364775"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=ea305fe1-8262-4c17-bea9-4a1c7a3facc5&v=1",
+      "alt": "Skate Park"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/skate-park",
+  "fetchedAt": "2026-10-27"
+}

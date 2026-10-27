@@ -1,0 +1,151 @@
+{
+  "title": "DESIGNinc Custom Solutions",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "DESIGNinc Custom Solutions",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/designinc-custom-shop"
+    }
+  ],
+  "intro": "Let us create a custom solution for your next event. From screen printing and unit shirts to trophies, plaques, engraving, framing, shadow boxes, coins, and promotional items, DESIGNinc brings your vision to life with high-quality craftsmanship and creative design solutions tailored to your needs.",
+  "sections": [
+    {
+      "heading": "Apparel",
+      "level": 2,
+      "markdown": "Whether you were struck with brilliance for a creative design or not quite sure what you're looking for, our Graphic Artists will create the concept you desire in order to have it printed expertly on the apparel of your choice. We have a wide selection of clothing and accessories to suit an array of styles."
+    },
+    {
+      "heading": "Engraving",
+      "level": 2,
+      "markdown": "Our Engraving Specialists can achieve that polished and clean engraving design that you need. From name plates for your desk to an award or plaque for an important person, the possibilities are endless. Get started today on finding the perfect meaningful gift!"
+    },
+    {
+      "heading": "Framing",
+      "level": 2,
+      "markdown": "Nothing complements special mementos and keepsakes better than custom built frames and shadow boxes. From uniforms, medals, and military ephemera to family portraits, personal artwork, or other unique items, our Framing Specialist can craft a frame or box to meet your needs. With a wide array of frame, matte, and mounting options to match your aesthetic, decorate your space with flawless frames built to last from DESIGNinc!"
+    },
+    {
+      "heading": "Promotional Items",
+      "level": 2,
+      "markdown": "Effective promotional items like mugs, pens, coins, hats, glasses, and more. Your logo or design printed on great products.\n\n[DESIGNinc Product Catalog](/modules/media/?do=inline&id=478f86d2-caa6-4f7a-88cd-6ce235a9ff2e&v=1)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "DESIGNinc Custom Solutions",
+      "address": "Bldg. 84, Hadnot Point Plaza, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-3209"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "DESIGNinc Product Catalog",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=478f86d2-caa6-4f7a-88cd-6ce235a9ff2e&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=113c909b-5dba-4060-afdc-db2ba7ce9d58&v=1",
+      "alt": "Course Shirts"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=cedc4f4d-891a-4553-ae08-4b8075923ebb&v=1",
+      "alt": "Unit Shirts"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=a84c6531-47ff-470c-a616-0e624497cd23&v=1",
+      "alt": "Custom Graphics"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=2eef1152-5b3e-4157-a903-a415dafc57ce&w=250&h=250&v=1",
+      "alt": "Paddles"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=a9edc590-5efb-4cf5-b1f1-3ee32cfc2897&w=250&h=250&v=1",
+      "alt": "Plaques"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=395b0c25-2802-42b2-85db-4deddd36c361&w=250&h=250&v=1",
+      "alt": "Giftware"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=1108163d-6600-4376-8927-7a9c1dbe9236&w=250&h=250&v=1",
+      "alt": "Dogtags"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=e50edea9-3800-404c-83f3-73e432efc03e&v=1",
+      "alt": "Shadow Boxes"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=1f0e4e76-bfab-4ad3-adfd-d0b603e248fc&v=1",
+      "alt": "Prints"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=5c2ef6e2-3e52-4c1a-9d93-0d7a7583f21b&w=300&h=302&v=1",
+      "alt": "Custom Framing"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=54ba26cb-fe88-414a-9aac-5e5d439296cc&w=250&h=250&v=4",
+      "alt": "Koozies"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=de4e3bff-10d4-4af6-9deb-eb91724f2ad9&w=250&h=252&v=2",
+      "alt": "Coins"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=thumb&id=6620c40f-ce0f-447a-b1e8-c28d613d2187&w=250&h=252&v=2",
+      "alt": "Mugs"
+    }
+  ],
+  "notCaptured": "Product catalog is a linked PDF (not captured)",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/designinc-custom-shop",
+  "fetchedAt": "2026-10-27"
+}

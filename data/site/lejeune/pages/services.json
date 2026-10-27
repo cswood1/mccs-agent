@@ -1,0 +1,85 @@
+{
+  "title": "Services",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Automotive Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/automotive-services",
+      "text": "Marine Corps Automotive Services offers a variety of tools and equipment for do-it-yourself servi...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/10c20797c6354dfa9f550fbb585c8380_v1.jpg"
+    },
+    {
+      "title": "Barber",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/barber",
+      "text": "Enjoy great savings at American Clippers! We offer competitive pricing and high-quality haircuts...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/8bae64132f3846bcb9f0ad37d62dace4_v1.jpg"
+    },
+    {
+      "title": "Communication Services",
+      "url": "https://www.boingo.com/for-military/",
+      "text": "Our wireless solutions power essential operational needs on base and keep service members connect...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3fcae7cf7b9349b79fe87d26c491ff8c_v1.jpg"
+    },
+    {
+      "title": "DESIGNinc Custom Solutions",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/designinc-custom-shop",
+      "text": "Let us create a custom solution for your next event.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/65cc66d6214b4a40ae01c37475bf1b69_v1.jpg"
+    },
+    {
+      "title": "Dry Cleaner",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/dry-cleaner",
+      "text": "We offer multiple locations to help with your laundering, dry cleaning and alterations.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/66049a6a5eef4148970780395b354659_v1.jpg"
+    },
+    {
+      "title": "iFix NC",
+      "url": "https://www.ifixnc.com",
+      "text": "We're here to help the average consumer run, maintain, and repair everyday devices.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9c10babbc8a24e7f97ff63c934e993e1.jpg"
+    },
+    {
+      "title": "Mobile Storage",
+      "url": "https://www.pods.com/partners/militaryexchange",
+      "text": "Whether you need an on-site unit in your driveway or want to keep your belongings in a secure fac...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/dac15ba990c74cbda41b699f6fbb903d_v1.jpg"
+    },
+    {
+      "title": "Optometry",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/optometry",
+      "text": "Call to book your next appointment.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1bf0b59cf748433abc7f0cce1b7d6412_v1.jpg"
+    },
+    {
+      "title": "Packing & Shipping",
+      "url": "https://www.goinpostal.com/locations/locator_store.php?storeID=GP475",
+      "text": "Goin' Postal is a chain of retail shipping & receiving stores with locations spanning the nation...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/13e56bf72b4d444bb085b134f31df2f1_v1.jpg"
+    },
+    {
+      "title": "Pharmacy",
+      "url": "https://camp-lejeune.tricare.mil/Health-Services/Pharmacy",
+      "text": "For your convenience, Naval Medical Center Camp Lejeune Pharmacy has a convenient location inside...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/007766f75b62412191ffffe37070025a_v1.jpg"
+    },
+    {
+      "title": "Tax Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/tax-services",
+      "text": "Don't wait until the last minute. Talk to a professional now.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/5c6b619c1a8246e6a9d18d48388b4750_v1.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services",
+  "fetchedAt": "2026-10-27"
+}

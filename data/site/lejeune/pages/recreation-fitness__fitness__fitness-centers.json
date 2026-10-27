@@ -1,0 +1,661 @@
+{
+  "title": "Fitness Centers",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Fitness Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/fitness-centers"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Camp Geiger Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, racquetball, basketball, and sauna. (24/7 access for Active-Duty personnel)"
+    },
+    {
+      "heading": "Camp Johnson Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, outdoor functional training area, and infrared sauna. (24/7 access for Active-Duty personnel)"
+    },
+    {
+      "heading": "Courthouse Bay Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, functional training room, outdoor HITT locker, racquetball, basketball, sauna, and BIA machine. (24/7 access for Active-Duty personnel)"
+    },
+    {
+      "heading": "French Creek Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, functional training room, Group Exercise classes, basketball, sauna, sleep pod, and BIA machine. (24/7 access for Active-Duty personnel)"
+    },
+    {
+      "heading": "Morgan Bay Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training and cardio. (24/7 access for Active-Duty personnel)"
+    },
+    {
+      "heading": "New River Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, functional training room, indoor pool, Group Exercise classes, basketball, sauna, sleep pod, BIA machine, and a self-checkout micro-mart."
+    },
+    {
+      "heading": "New River HITT Center",
+      "level": 3,
+      "markdown": "Features functional training facility, cardio, instructor-led unit training sessions and open HITT sessions for Active-Duty personnel, nutrition classes, and sleep classes."
+    },
+    {
+      "heading": "Stone Bay Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, functional training area, indoor turf, outdoor turf, racquetball, sauna, BIA machine, and a self-checkout micro-mart. (24/7 access for Active-Duty personnel)."
+    },
+    {
+      "heading": "Tarawa Terrace Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, Group Exercise classes, and sauna."
+    },
+    {
+      "heading": "Wallace Creek Fitness Center",
+      "level": 3,
+      "markdown": "Features strength training, cardio, functional training area, indoor pool, indoor climbing wall, Group Exercise classes, outdoor turf, racquetball, basketball, sauna, smoothie bar, sleep pod, BIA machine, Navy SMART Clinic, and Parent-View Fitness Zone."
+    },
+    {
+      "heading": "PARENT-VIEW FITNESS ZONE",
+      "level": 2,
+      "markdown": "**Guidelines**\n\nThis space is designed to support parents who want to work out while keeping their children safely within sight.\n\nThere is a maximum capacity of 5 children in the children's area.\n\n1. Children must remain under the direct supervision of their parent or legal guardian at all times.\n2. For safety, children must stay within the designated enclosed area. Children are not permitted to be in the workout area or on fitness equipment.\n3. Parents/Legal Guardians are responsible for their child's safety and behavior while using this area.\n4. This space is not a childcare service.\n5. This room is reserved only for parents with children.\n\nTo help keep the area clean and safe, food is not permitted. Water is welcome."
+    },
+    {
+      "heading": "Warrior Athlete Readiness & Resilience Center (WARR Center)",
+      "level": 3,
+      "markdown": "The Warrior Athlete Readiness and Resilience (WARR) Program supports Marine Corps Total Fitness (MCTF) by leveraging and integrating capabilities across the Social, Spiritual, Mental, and Physical domains of fitness to meet Marines and Families where they work, train, live, and play.\n\n**Services Include**\n\n- Multi-week MCTF Unit Training Program\n- Physical Fitness and Education on Total Fitness daily for 1 hr.\n- Commands may contact Director of Strength and Conditioning to schedule\n- Daily Open HITT Sessions (FCFS) and Unit sessions (by appointment)\n- Unit briefs on Program Design, Nutrition, Injury Prevention, Lifting Techniques (by appointment)\n- Warfighter Resiliency Training (by appointment)\n- Monthly Nutrition Brief (open to all patrons, no reservation needed)\n  - WARR Center – 2nd Wednesday of the month 9:30-11AM\n  - New River HITT Center – 2nd Thursday of the month 9:30-11AM\n- Monthly Sleep Brief (open to all patrons, no reservation needed)\n  - WARR Center Classroom – 4th Wednesday of the month 10-11 AM"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Camp Geiger Fitness Center",
+      "address": "Bldg. G930 C St., Camp Geiger, NC 28540",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-0609"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "11AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Camp Johnson Fitness Center",
+      "address": "Bldg. M-168 Main Service Rd., Camp Johnson, NC 28543",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-450-1250"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Courthouse Bay Fitness Center",
+      "address": "Bldg. BB2 (off Horn Rd.), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-440-7447"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "French Creek Fitness Center",
+      "address": "Bldg. FC332 (off McHugh Blvd. & Gonzalez), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-5430"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 4PM"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 4PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Morgan Bay Fitness Center",
+      "address": "Bldg. H-1, Hospital Point, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-1676"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5:30AM - 2:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5:30AM - 2:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5:30AM - 2:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5:30AM - 2:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5:30AM - 2:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River Fitness Center",
+      "address": "Bldg. AS-4400 Douglass Rd., MCAS New River, NC 58540",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-4961"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 5:30PM"
+            },
+            {
+              "days": "Monday",
+              "time": "4AM - 10PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "4AM - 10PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "4AM - 10PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "4AM - 10PM"
+            },
+            {
+              "days": "Friday",
+              "time": "4AM - 10PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 5:30PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River HITT Center",
+      "address": "Bldg. AS-4024 Schmidt St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-7698"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Stone Bay Fitness Center",
+      "address": "Bldg. RR-136, Stone Bay, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-440-2055"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Tarawa Terrace Fitness Center",
+      "address": "Bldg. TT-2455C, Tarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-450-1681"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 3PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Wallace Creek Fitness Center",
+      "address": "Bldg. WC1 Birch St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-450-7649"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8AM - 11PM"
+            },
+            {
+              "days": "Monday",
+              "time": "4AM - 11PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "4AM - 11PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "4AM - 11PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "4AM - 11PM"
+            },
+            {
+              "days": "Friday",
+              "time": "4AM - 11PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 11PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Warrior Athlete Readiness & Resilience Center (WARR Center)",
+      "address": "Bldg. HP-202 McHugh Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-0122"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Sleep Pod Locations",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=1078685e-5b55-47ab-bb48-560c0e6ba10b&v=1"
+    },
+    {
+      "text": "Fitness Center Rules",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=f9145edd-049a-4d83-9a68-0c4a04959a86&v=2"
+    },
+    {
+      "text": "Guest Policy in Fitness Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=a705c2d5-7b64-4b32-8ffe-e2addf2f4b0f&v=1"
+    },
+    {
+      "text": "Waiver From Policy For Fitness Center Age Limitations",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=f120f23e-724f-49b8-bb89-b7e3aa2c529a&v=1"
+    },
+    {
+      "text": "MCO 1700.29 Section 9 Patron Eligibility in Fitness Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=280c83a3-5205-47dd-b28a-63674d2718a6&v=1"
+    },
+    {
+      "text": "Next Gen USID Card Poster",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=d874f78b-1b0b-4064-a8d2-fdfde4a8d3f6&v=1"
+    },
+    {
+      "text": "Legacy USID poster",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=50781551-985c-4d25-ad7a-381b329e060b&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7264a576eb7c451999e08f9f20986f8f.jpg?m=638602978888630000",
+      "alt": "About Page Image"
+    }
+  ],
+  "notCaptured": "Linked PDF documents (rules, guest policy, sleep pod locations) not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/fitness-centers",
+  "fetchedAt": "2026-10-27"
+}

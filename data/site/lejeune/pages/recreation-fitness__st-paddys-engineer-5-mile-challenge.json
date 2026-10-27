@@ -1,0 +1,79 @@
+{
+  "title": "USAA St. Paddy's Engineer 5 Mile Challenge",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "USAA St. Paddy's Engineer 5 Mile Challenge",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/st-paddys-engineer-5-mile-challenge"
+    }
+  ],
+  "intro": "This course was designed by US Marine Corps Engineers! As its name implies, it is a race that will test your endurance and determination!",
+  "sections": [
+    {
+      "heading": "Event Details",
+      "level": 2,
+      "markdown": "Date: March 14, 2026\n\nLocation: Ellis Field, Courthouse Bay"
+    },
+    {
+      "heading": "Course Description",
+      "level": 2,
+      "markdown": "As you traverse the various terrains, you will encounter sandy tank trails, wooded trails, creeks, a sandbag carry, and a few obstacles thrown in just for fun!"
+    },
+    {
+      "heading": "Important Information",
+      "level": 2,
+      "markdown": "- THIS IS AN UNTIMED EVENT\n- Must be 10 years old or older to register\n- No pets allowed"
+    },
+    {
+      "heading": "Installation Access",
+      "level": 2,
+      "markdown": "**ALL RUNNERS AND ALL PASSENGERS (18YRS AND OVER) NEEDING A BASE PASS must complete the instructions below AFTER race registration has been completed.**\n\nDue to the race being held aboard an active Marine Corps installation, all runners and spectators without a valid DoD ID with credentialed base access must obtain an Event Base Access Pass.\n\n**Steps to Register:**\n\n1. Register for a base pass at https://www1.mcieast.usmc.mil/IARA/\n2. Locate the event and select \"Request Sponsor\"\n3. Agree to the Privacy Act Statement\n4. Select the Visitor Type dropdown and choose either driver or passenger\n5. Complete the registration with required information:\n   - **Drivers**: Social Security number, DOB, email, phone number, driver's license, auto insurance policy, and auto information\n   - **Passengers**: Social Security number, DOB, government ID, email, and phone number\n\n**Deadline**: 30 days prior to the event date. No additional passes issued after this date. Once approved, passes will be available for pickup at the Visitor's Gate the morning of the race.\n\n**REAL ID Notice**\n\nEffective immediately, all visitors with non-REAL ID driver's license and State issued identification cards requesting access to MCIEAST-MCB Camp Lejeune or MCAS New River must provide an approved identity source document or combination thereof.\n\nAccepted identity documentation includes: U.S. passport, or the combination of an original or certified true copy of a birth certificate bearing a raised seal, social security card, and non-REAL ID compliant driver's license or State issued identification card (all three documents must bear the same name).\n\nFor questions on the REAL ID, contact Base Security at 910-450-0282."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Race Staff",
+      "address": "",
+      "phones": [],
+      "emails": [
+        "mccslejeunesemperfitraces@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "2026 Race Photos",
+      "url": "https://www.flickr.com/photos/mccslejnr/albums/72177720332604888/with/55154087431"
+    },
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/34.586273,+-77.360474"
+    },
+    {
+      "text": "Course Map",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=2a294e0a-06ab-4c17-93e2-528d58f7389f"
+    },
+    {
+      "text": "Runners Info Sheet",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=6a6c2f68-6d48-4d89-b786-d15bcf1fb41d"
+    },
+    {
+      "text": "Runner Survey",
+      "url": "https://usnavy.gov1.qualtrics.com/jfe/form/SV_6nusdRNR3zyKCyO"
+    },
+    {
+      "text": "Base Pass Registration",
+      "url": "https://www1.mcieast.usmc.mil/IARA/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/st-paddys-engineer-5-mile-challenge",
+  "fetchedAt": "2026-10-27"
+}

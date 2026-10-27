@@ -1,0 +1,70 @@
+{
+  "title": "Follow Us",
+  "breadcrumb": [
+    {
+      "label": "About",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about"
+    },
+    {
+      "label": "Follow Us",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/follow-us"
+    }
+  ],
+  "intro": "Stay Connected with MCCS! There’s always something happening at MCCS—and the best way to stay in the loop is by connecting with us on Facebook, Instagram, and X, or by subscribing to our eNewsletter.",
+  "sections": [
+    {
+      "heading": "Don’t miss out—follow us and stay in the know!",
+      "level": 2,
+      "markdown": "Connect with Marine Corps Community Services across multiple platforms to receive exciting events, program updates, helpful resources, and community highlights.\n\n- [Facebook](https://www.facebook.com/mccslejeunenewriver)\n- [Instagram](https://www.instagram.com/mccslejnr/)\n- [X](https://x.com/mccsclnr)\n- [eNewsletter](https://lejeunenewriver.usmc-mccs.org/about/newsletter-sign-up)\n- [MCCS Connect](https://www.usmc-mccs.org/mccsconnect)"
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Facebook",
+      "url": "https://www.facebook.com/mccslejeunenewriver"
+    },
+    {
+      "text": "Instagram",
+      "url": "https://www.instagram.com/mccslejnr/"
+    },
+    {
+      "text": "X",
+      "url": "https://x.com/mccsclnr"
+    },
+    {
+      "text": "eNewsletter",
+      "url": "https://lejeunenewriver.usmc-mccs.org/about/newsletter-sign-up"
+    },
+    {
+      "text": "MCCS Connect",
+      "url": "https://www.usmc-mccs.org/mccsconnect"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=c5a54ce9-4e5c-4031-9a78-c7699ba43ad5",
+      "alt": "Facebook"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=0313fc90-27c0-4518-92e4-4629bf78daf8",
+      "alt": "Instagram"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=9fe71dcf-af05-4d33-813b-e31d8da477ec",
+      "alt": "X"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=bad482d1-e586-4864-9d82-d6a1f5b597ea",
+      "alt": "eNewsletter"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=4c26e371-196f-4347-818e-30a187de008c",
+      "alt": "MCCS Connect"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/about/follow-us",
+  "fetchedAt": "2026-10-27"
+}

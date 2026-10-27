@@ -1,0 +1,54 @@
+{
+  "title": "Sports",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "All-Marine Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/all-marine-sports",
+      "text": "All-Marine Sports enable exceptional Marine athletes to compete at higher level competitions.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9ba5b3eeb52d4d8c8b4dee5d9989cbcc_v1.jpg?m=638298281851230000"
+    },
+    {
+      "title": "Adult Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/adult-sports",
+      "text": "We offer tournaments, intramural and recreational leagues.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/0141b8ed19b843b0b6450f8ae0a81a32_v2.jpg?m=638298281852430000"
+    },
+    {
+      "title": "Youth Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/youth-sports",
+      "text": "Youth Sports provides the opportunity to learn the fundamentals of a sport, in addition to good sportsmanship.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/cca158c88888477098aaf13f8b101ba6_v1.jpg?m=638298281851800000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Athletic Competition: Feeding the Competitive Spirit",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/athletic-competition-feeding-the-competitive-spirit"
+    },
+    {
+      "text": "Game On: How Sports Shape Military Leaders",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/game-on-how-sports-shape-military-leaders"
+    },
+    {
+      "text": "Read More Stories",
+      "url": "https://lejeunenewriver.usmc-mccs.org/stories"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,169 @@
+{
+  "title": "The Club at Paradise Point",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Clubs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs"
+    },
+    {
+      "label": "The Club at Paradise Point",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "The Club at Paradise Point - An All Hands Venue",
+      "level": 2,
+      "markdown": "Set on the beautiful New River shoreline, The Club at Paradise Point offers an all-ranks venue suitable for all kinds of ceremonies, parties, or celebrations. The Club features the Follow Me Bar, The Wooden Nickel, and our famous all-hands lunch buffet. And don't forget to get your fresh-baked bread weekly!"
+    },
+    {
+      "heading": "Buy Fresh Bread at The Club weekly!",
+      "level": 3,
+      "markdown": "Order by 4PM Wed., pickup from Noon-9PM Friday.\n\n$3.50 per loaf\n\nCall to order: (910) 450-7981"
+    },
+    {
+      "heading": "All Hands Lunch Buffet",
+      "level": 3,
+      "markdown": "**Monday | 11AM - 1PM**\n\nEvery Monday Lunch Buffet is a slimmer version of our traditional buffet at a slimmer price. Includes one each of protein, starch, vegetable, soup, salad, roll, dessert & soda / tea / coffee.\n\n$10.95 per person\n\n**Tuesday- Friday | 11AM - 1PM**\n\nDine in: $12.95 per person, all you can eat.\n\nTakeout: $9.50 for the first pound, 60¢ each additional ounce."
+    },
+    {
+      "heading": "The Wooden Nickel",
+      "level": 3,
+      "markdown": "Located in The Club at Paradise Point, The Wooden Nickel features a wide range of cuisines and drinks. Whether you're enjoying a meal with your family or having a drink after work.\n\nThe Wooden Nickel will be open from 5-9PM on Saturdays when there is a DJ/Karaoke Party scheduled.\n\nTake-out available.\n\n[Learn More about The Wooden Nickel](/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Club at Paradise Point",
+      "address": "Bldg. 2615 Seth Williams Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(910) 450-7981"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "Follow Me Bar",
+      "address": "Bldg. 2615 Seth Williams Blvd. (Inside The Club at Paradise Point), Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "(910) 450-7981"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "4:30PM - Until"
+            },
+            {
+              "days": "Thursday",
+              "time": "4:30PM - Until"
+            },
+            {
+              "days": "Friday",
+              "time": "2PM - Until"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "All patrons entering the Follow Me Bar must be 18 years or older",
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Learn More about The Wooden Nickel",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel"
+    },
+    {
+      "text": "Bldg. 2615 Seth Williams Blvd. Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.70628352775785,-77.37878523391339"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d05dcfa89bca4538aa282ac3726beea5.jpg",
+      "alt": "Fresh bread for sale"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/04b37c621b744065b0eacc025c1df194_v2.jpg",
+      "alt": "All Hands Lunch Buffet"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ff7886aff1b94642b8a1ee614d8c88c5_v4.jpg",
+      "alt": "The Wooden Nickel"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point",
+  "fetchedAt": "2026-10-27"
+}

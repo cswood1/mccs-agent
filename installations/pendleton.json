@@ -6,7 +6,7 @@
   "assistantName": "Ask MCCS",
   "siteUrl": "https://pendleton.usmc-mccs.org",
   "location": "Camp Pendleton, California",
-  "localContext": "Marine Corps Base Camp Pendleton is on the Southern California coast in northern San Diego County, between Oceanside and San Clemente. Visitors include active-duty Marines and Sailors, their families, retirees, DoD civilians, and guests.",
+  "localContext": "Marine Corps Base Camp Pendleton is on the Southern California coast in northern San Diego County, between Oceanside and San Clemente along I-5. It is home to I Marine Expeditionary Force, the 1st Marine Division and the 1st Marine Logistics Group, with Marine Corps Air Station Camp Pendleton and Naval Hospital Camp Pendleton on base. The base is large and spread out across many camps and areas, so facility locations matter. Visitors include active-duty Marines and Sailors, their families, retirees, DoD civilians, and guests.",
   "welcomeMessage": "Hi! I can help you find facilities, hours, programs, and events at MCCS Camp Pendleton. What are you looking for?",
   "defaultChips": [
     "Just PCS’d here, where do I start?",

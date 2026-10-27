@@ -18,11 +18,18 @@ const INSTALLATION_SLUGS = new Set(registry.map((i) => i.slug));
 const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html"]);
 
 /** "/" -> "/quantico"; "/lodging/c-suites" -> "/quantico/lodging/c-suites" (308). */
+// Slugs that changed (the app uses a shorter name than the site's subdomain).
+const RENAMED: Record<string, string> = { lejeunenewriver: "lejeune" };
+
 function legacyRedirect(request: NextRequest): NextResponse | null {
   const { pathname } = request.nextUrl;
   const first = pathname.split("/")[1] ?? "";
   if (INSTALLATION_SLUGS.has(first) || APP_PATHS.has(first)) return null;
   const url = request.nextUrl.clone();
+  if (RENAMED[first]) {
+    url.pathname = `/${RENAMED[first]}${pathname.slice(first.length + 1)}`;
+    return NextResponse.redirect(url, 308);
+  }
   url.pathname = pathname === "/" ? "/quantico" : `/quantico${pathname}`;
   return NextResponse.redirect(url, pathname === "/" ? 307 : 308);
 }

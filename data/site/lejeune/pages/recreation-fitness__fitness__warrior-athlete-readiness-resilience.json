@@ -1,0 +1,181 @@
+{
+  "title": "Warrior Athlete Readiness & Resilience",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Warrior Athlete Readiness & Resilience",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/warrior-athlete-readiness-resilience"
+    }
+  ],
+  "intro": "The WARR Program supports Marine Corps Total Fitness by integrating Social, Spiritual, Mental, and Physical domains of fitness to meet Marines and Families where they work, train, live, and play.",
+  "sections": [
+    {
+      "heading": "Services Include",
+      "level": 2,
+      "markdown": "- Multi-week MCTF Unit Training Program\n- Physical Fitness and Education on Total Fitness daily for 1 hr.\n- Commands may contact Director of Strength and Conditioning to schedule\n- Daily Open HITT Sessions (FCFS) and Unit sessions (by appointment)\n- Unit briefs on Program Design, Nutrition, Injury Prevention, Lifting Techniques (by appointment)\n- Warfighter Resiliency Training (by appointment)\n- Monthly Nutrition Brief (open to all patrons, no reservation needed)\n  - WARR Center – 2nd Wednesday of the month 9:30-11AM\n  - New River HITT Center – 2nd Thursday of the month 9:30-11AM\n- Monthly Sleep Brief (open to all patrons, no reservation needed)\n  - WARR Center Classroom – 4th Wednesday of the month 10-11 AM"
+    },
+    {
+      "heading": "Open Training Sessions",
+      "level": 2,
+      "markdown": "Open Training Sessions based on the Marine Corps HITT Program methodology are held Monday through Friday at the WARR Center, as well as New River HITT Center. Monday, Wednesday, and Friday sessions offer a different focus in the Speed and Agility portion of the workout, each followed by Strength and Conditioning components tailored to the Tactical Athlete. Monday's Warrior Session focuses on Agility training; Wednesday's Athlete Session focuses on Acceleration; and Friday's Combat session focuses on Maximum Speed. Tuesday and Thursday Reload sessions are offered to work on endurance, as well as resilience and recovery. Sessions are Open to Active Duty Military Personnel only. Maximum of 50 students per session. First come; first served."
+    },
+    {
+      "heading": "WARR Center and New River HITT Center Weekly Training Schedule",
+      "level": 3,
+      "markdown": "| Time | Monday | Tuesday | Wednesday | Thursday | Friday |\n|---|---|---|---|---|---|\n| 6AM | Warrior Session | Reload Session | Athlete Session | Reload Session | Combat Session |\n| 11:30AM | Warrior Session | Reload Session | Athlete Session | Reload Session | Combat Session |"
+    },
+    {
+      "heading": "HITT Center Weekly Training Schedule",
+      "level": 3,
+      "markdown": "| Time | Monday | Tuesday | Wednesday | Thursday | Friday |\n|---|---|---|---|---|---|\n| 6AM | Warrior Session | Reload Session | Athlete Session | Reload Session | Combat Session |\n| 11AM | Warrior Session | Reload Session | Athlete Session | Reload Session | Combat Session |"
+    },
+    {
+      "heading": "HITT Train the Trainer",
+      "level": 2,
+      "markdown": "Unit PT Reps will learn about HITT methodology, the Physical domain of fitness. Modules include basic exercise physiology, nutrition, programing, injury prevention, functional fitness/combat conditioning, and warfighter resiliency. Successful graduates of the course will leave certified to conduct HITT (combat conditioning) sessions for their unit. To attend the five-day Level I training, you must be an NCO or above, have 1st class CFT/PFT, and get clearance through your command. This course falls in line with MCO 6100.13 and will facilitate training for the Unit CCI. Seats should be offered to Marines who conduct Unit PT sessions. If you would like to nominate yourself or your Marines, contact your HITT Program Coordinator at 910-451-0122."
+    }
+  ],
+  "cards": [
+    {
+      "title": "Are You Ready to Conquer the CFT?",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/are-you-ready-to-conquer-the-cft",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/25686a8454d14bc68e586e936966e15b.png?m=638512645731430000"
+    },
+    {
+      "title": "What is injury prevention",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/what-is-injury-prevention",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/15724a77b7014b908404ead27be05449.jpg?m=638312712273630000"
+    },
+    {
+      "title": "Health, Wellness, and Performance",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/health-wellness-and-performance",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/2aeba4f0cc56471e8643deae1ae43dc2.jpg?m=638312688066900000"
+    },
+    {
+      "title": "Physical Education at Home",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/physical-education-at-home",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4a21308a5fa94d5c91f8bb6c93a6c02f.jpg?m=638312899868230000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "New River HITT Center",
+      "address": "Bldg. AS-4024 Schmidt St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-449-7698"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Warrior Athlete Readiness & Resilience Center (WARR Center)",
+      "address": "Bldg. HP-202 McHugh Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "",
+          "number": "910-451-0122"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "5AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Read More Stories",
+      "url": "https://lejeunenewriver.usmc-mccs.org/stories?tag=f630d0f7-287a-4404-aade-797647d8db63,d4e2195e-ea8b-4940-9010-371cb2538b5c"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/warrior-athlete-readiness-resilience",
+  "fetchedAt": "2026-10-27"
+}

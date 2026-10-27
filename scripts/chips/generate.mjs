@@ -5,6 +5,7 @@
  *   node --env-file=.env.local scripts/chips/generate.mjs --dry-run   # estimate only, no API calls
  *   node --env-file=.env.local scripts/chips/generate.mjs --submit    # create the batch
  *   node --env-file=.env.local scripts/chips/generate.mjs --collect   # wait for it, write chips
+ *   ... --installation pendleton                                      # another base (default quantico)
  *
  * Chips are written into each page file (data/site/<id>/pages/*.json) as `chips`, with a hash
  * of the text they were generated from (`chipsSourceHash`). Pages whose text hasn't changed
@@ -20,7 +21,9 @@ const MAX_PAGE_CHARS = 6000;
 // Haiku 4.5 list price per million tokens; the Batches API is half of this.
 const PRICE = { input: 1.0, output: 5.0, batchDiscount: 0.5 };
 
-const id = "quantico";
+// Installation: --installation <id> (default quantico).
+const instArg = process.argv.indexOf("--installation");
+const id = instArg > 0 ? process.argv[instArg + 1] : "quantico";
 const root = process.cwd();
 const pagesDir = path.join(root, "data", "site", id, "pages");
 const pendingFile = path.join(root, "data", "site", id, "chips-batch.json");

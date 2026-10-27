@@ -1,0 +1,74 @@
+{
+  "agent": "L1",
+  "captured": [
+    "/",
+    "/calendar-of-events",
+    "/stories",
+    "/about/explore",
+    "/about/holiday-hours",
+    "/about/local-area-information",
+    "/about/marine-for-life-cycle",
+    "/about/newsletter-sign-up",
+    "/more/sponsorship-advertising",
+    "/about/follow-us",
+    "/recreation-fitness",
+    "/recreation-fitness/fitness",
+    "/recreation-fitness/fitness/fitness-centers",
+    "/recreation-fitness/fitness/warrior-athlete-readiness-resilience",
+    "/recreation-fitness/fitness/amp-it",
+    "/recreation-fitness/fitness/group-exercise",
+    "/recreation-fitness/fitness/health-wellness-education",
+    "/recreation-fitness/fitness/personal-training",
+    "/recreation-fitness/recreation",
+    "/recreation-fitness/recreation/bowling",
+    "/recreation-fitness/recreation/community-center",
+    "/recreation-fitness/recreation/golf-course",
+    "/recreation-fitness/recreation/inline-hockey",
+    "/recreation-fitness/recreation/marinas",
+    "/recreation-fitness/recreation/onslow-beach",
+    "/recreation-fitness/recreation/outdoor-adventures",
+    "/recreation-fitness/recreation/pools",
+    "/recreation-fitness/recreation/recreational-equipment-checkout-rentals",
+    "/recreation-fitness/recreation/recreational-shooting",
+    "/recreation-fitness/recreation/skate-park",
+    "/recreation-fitness/sports",
+    "/recreation-fitness/sports/all-marine-sports",
+    "/recreation-fitness/sports/adult-sports",
+    "/recreation-fitness/sports/youth-sports",
+    "/recreation-fitness/mccs-car-bike-show-block-party",
+    "/recreation-fitness/marine-corps-half-marathon",
+    "/recreation-fitness/st-paddys-engineer-5-mile-challenge",
+    "/camp-lejeune-4th-of-july",
+    "/more",
+    "/more/extended-veterans-access",
+    "/careers/employer-recruiting",
+    "/car-giveaway",
+    "/fap",
+    "/connected",
+    "/about/business-partners",
+    "/about/contact-us"
+  ],
+  "extras": [
+    "/recreation-fitness/recreation/pools/swim-lessons"
+  ],
+  "redirects": [
+    {
+      "from": "/careers",
+      "to": "https://careers.usmc-mccs.org/"
+    }
+  ],
+  "failures": [],
+  "thinPages": [
+    "/calendar-of-events",
+    "/about/explore",
+    "/about/newsletter-sign-up",
+    "/recreation-fitness/fitness/personal-training"
+  ],
+  "notes": [
+    "/about/marine-for-life-cycle: only the first 5 of 9 checklist tabs fit in a WebFetch response (Mobilization/Demobilization, A Major Life Event, Transition, Veteran missing).",
+    "/about/contact-us renders the generic About MCCS text (H1 About) plus an email link; no contact directory.",
+    "home.json body cross-checked against design/reference/lejeune/page-home.json because WebFetch invented section headings on the home page; carousel image srcs taken from that capture.",
+    "Landing pages (recreation-fitness, fitness, recreation, sports, more) are card-only; card text is truncated on the real site.",
+    "Some long pages repeat identical blocks per tab (Onslow Beach lodging tabs, All-Marine Sports FAQs, 4th of July heat notice); identical repeats were kept once and noted in notCaptured."
+  ]
+}

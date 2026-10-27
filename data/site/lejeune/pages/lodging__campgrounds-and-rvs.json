@@ -1,0 +1,44 @@
+{
+  "title": "Campgrounds and RVs",
+  "breadcrumb": [
+    {
+      "label": "Lodging",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging"
+    },
+    {
+      "label": "Campgrounds and RVs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/lodging/campgrounds-and-rvs"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Onslow Beach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach",
+      "text": "Play on pristine sandy beaches caressed by clear seas.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/1ef7e20443824da2b1fa65c5a37113c8_v1.jpg?m=638298215414030000"
+    },
+    {
+      "title": "Outdoor Adventures",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures",
+      "text": "Get outside and explore!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7b548f4139774718b84b90a4dffd120e_v2.jpg?m=638313313259570000"
+    }
+  ],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Onslow Beach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/onslow-beach"
+    },
+    {
+      "text": "Outdoor Adventures",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/outdoor-adventures"
+    }
+  ],
+  "images": [],
+  "notCaptured": "Thin landing page on the real site: no body text, only two cards linking to Onslow Beach and Outdoor Adventures (campground details live on those pages).",
+  "url": "https://lejeunenewriver.usmc-mccs.org/lodging/campgrounds-and-rvs",
+  "fetchedAt": "2026-10-27"
+}

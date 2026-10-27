@@ -1,0 +1,280 @@
+{
+  "title": "Bowling",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Bowling",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling"
+    }
+  ],
+  "intro": "Do you and your family enjoy open bowling, bowling leagues, tournaments, instructional programs, glow-in-the-dark bowling, exhibitions, youth activities or camps? If you love to bowl, MCCS has a bowling program right up your alley.",
+  "sections": [
+    {
+      "heading": "Age Requirements",
+      "level": 2,
+      "markdown": "Children under 10 are welcome, accompanied by an adult; Children aged 10 and older, with a valid ID card, are allowed without an adult."
+    },
+    {
+      "heading": "Pricing",
+      "level": 2,
+      "markdown": "**Open Bowling**\n- $4.50/game\n\n**Shoe Rental**\n- Adults - $4\n- Kids - $2\n\n**Weekday Special**\n- 11AM - 4PM\n- $3.50/game (shoe rental excluded; holidays excluded)\n\n**Special**\n- Sat. at Bonnyman 1 - 4PM\n- Wed. at MCAS New River 11AM - 8PM\n- $10/person for 2 games (shoe rental included; holidays excluded)\n\n**Glow Bowling at Bonnyman Bowling Center**\n- Fri. & Sat. | 9PM - Midnight\n- $5.50/game (shoe rental excluded; holidays excluded)\n\n**Xtreme Bowling at MCAS New River**\n- Fri. & Sat. | 7 - 10PM\n- $5.50/game (shoe rental excluded) OR $25/evening (shoe rental included)\n\nAll prices are per person. Holiday hours/pricing may vary."
+    },
+    {
+      "heading": "Bonnyman Bowling Center Parties",
+      "level": 2,
+      "markdown": "We have bowling for all ages and occasions! From recreational bowling, parties, and unit PT to leagues and tournaments, our staff can help you plan any type of bowling function.\n\n**Adult Parties** – Any type or reason you desire – let us assist you in planning your bowling function.\n\n**Unit Parties/Functions** – Hails and farewells, promotions, deployments, PMEs, physical training or just to get away and socialize with your fellow Marines, Sailors or families/friends. We can cater to any of your bowling or food needs.\n\nPlease call (910) 451-5121 for Bonnyman prices."
+    },
+    {
+      "heading": "Bonnyman Youth Party Packages",
+      "level": 3,
+      "markdown": "**Youth Birthday Parties** – You decide what you want - bumpers, number of games, table decorations, food, beverage, Birthday Bowling Pin, or add any other idea that we will be able to assist you with.\n\nBirthday Themed Bowling Pin Available for Purchase: $15.00\n\n**Premium Party Package**\n- $14.00 per Child (10 Children Minimum Required)\n- 1 1/2 Hour Unlimited Bowling\n- Shoe Rentals Included\n- 2 Pizza (Choice of Cheese or Pepperoni)\n- Drinks with Refills\n\n**Spare Party Package**\n- $9.00 per Child (10 Children Minimum Required)\n- 2 Games of Bowling\n- Shoe Rentals Included\n\n**Strike Party Package**\n- $12.00 per Child (10 Children Minimum Required)\n- 2 Games of Bowling\n- Shoe Rentals Included\n- Hot Dog, French Fries, and Drink"
+    },
+    {
+      "heading": "MCAS New River Party Packages",
+      "level": 3,
+      "markdown": "**Xtreme Saturdays**\n\nTime Slots available: 12:30PM, 1PM, or 1:30PM\n\n- $14 per person (10 person minimum)\n- 2 games of bowling and shoe rentals\n- Hot dog or grilled cheese with fries and a fountain drink\n- Child's name on Birthday Bowling Pin\n- Child's name on monitor\n\n**Spare Sunday Package**\n\nTime Slots available: Noon, 12:30PM or 1PM\n\n- $9 per person\n- 2 games of bowling and shoe rentals\n- Child's name on Birthday Bowling Pin\n- Child's name on monitor\n\n**Unit Party Package**\n\n- $500 flat rate for entire Bowling Center rental (price does not include snack bar)\n- 2 hour time blocks\n- Minimum of 60 people\n- Shoe rentals included in price\n\nParties must be booked 30 days in advance. $50 deposit must be paid within 5 days of booking a party for Saturday parties; no deposit required for Sunday parties.\n\nAll parties must be cancelled 48 hours prior to event in order to receive a refund on the deposit.\n\nWith the exception of cake and ice cream, outside food may not be brought in."
+    },
+    {
+      "heading": "Bonnyman Jr. Citation",
+      "level": 3,
+      "markdown": "Recipient of the Medal of Honor posthumously for service set forth in the following citation: \"For conspicuous gallantry and intrepidity at the risk of his life above and beyond the call of duty as Executive Officer of the Second Battalion Shore Party, Eighth Marines, Second Marine Division, during the assault against enemy Japanese-held Tarawa in the Gilbert Islands, 20-22 November 1943.\""
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Bonnyman Bowling Center",
+      "address": "Bldg. 89 Molly Pitcher Rd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(910) 451-5121"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "1 - 6PM"
+            },
+            {
+              "days": "Monday",
+              "time": "11AM - 9PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 9PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 9PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 12AM"
+            },
+            {
+              "days": "Saturday",
+              "time": "1PM - 12AM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River Bowling Center",
+      "address": "Bldg. AS-205 Curtis Road, New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(910) 449-4921"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 10PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "Noon - 10PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River Bowling Center Snack Bar",
+      "address": "Bldg. AS-205 Curtis Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(910) 449-4918"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 10PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "11AM - 10PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Spare Time Sports Grill",
+      "address": "Bldg. 89 Molly Pitcher Dr., Inside Bonnyman Bowling Center, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "(910) 451-5731"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "1 - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 8PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 11PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "1 - 11PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bonnyman Jr. Citation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=download&id=39875a07-53b9-4127-80c5-d5e4dc76760c&v=1"
+    },
+    {
+      "text": "Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=15e0dcd4-1208-4498-ab78-257166bb858d"
+    },
+    {
+      "text": "Menu",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=8876de05-50dc-4fd9-9c88-371bfae3b095"
+    },
+    {
+      "text": "Directions (Bonnyman Bowling Center)",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67059142265193,-77.34379127116426"
+    },
+    {
+      "text": "Directions (New River Bowling Center)",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.72334021818214,-77.44663191475874"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9fc56edcd05d4ac5bb454500140f8402.jpg?m=639280090897470000",
+      "alt": "103126-srv-bwl-costume-bowl-rotator.jpg"
+    }
+  ],
+  "notCaptured": "Snack bar / grill menus (PDF) not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling",
+  "fetchedAt": "2026-10-27"
+}

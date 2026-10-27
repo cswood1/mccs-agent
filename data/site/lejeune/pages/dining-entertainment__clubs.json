@@ -1,0 +1,35 @@
+{
+  "title": "Clubs",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Clubs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "The Club at Paradise Point",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point",
+      "text": "An all hands venue serving a Monday-Friday lunch buffet.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/448f88094d8741fda9ec1121792ed4e6_v1.jpg?m=638298220573770000"
+    },
+    {
+      "title": "The Landing",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-landing",
+      "text": "All ranks club with a beautiful water view! Perfect for events. Lunch served weekdays.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/485fdc431ed24d59896934660cbe343c.jpg?m=639165262068870000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs",
+  "fetchedAt": "2026-10-27"
+}

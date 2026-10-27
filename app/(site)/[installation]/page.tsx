@@ -20,9 +20,8 @@ export default async function Home({ params }: { params: Promise<{ installation:
             <a id="main-content" tabIndex={-1} />
             <div id="block-mccs-content" className="block block-system block-system-main-block">
               <div className="content">
-                <Raw html={fragment(inst, "home-carousel-desktop")} />
-                <Raw html={fragment(inst, "home-carousel-mobile")} />
-                <Raw html={fragment(inst, "home-tiles")} />
+                {/* Carousels or hero banner, tiles and ad row: each site arranges these differently. */}
+                <Raw html={fragment(inst, "home-top")} />
 
                 <div className="pb-2 pt-2 m-0" style={{ backgroundColor: "#0C2340" }}>
                   <div>

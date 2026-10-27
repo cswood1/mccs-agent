@@ -1,0 +1,139 @@
+{
+  "title": "Information, Tickets, and Tours",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Information, Tickets, and Tours",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/information-tickets-and-tours"
+    }
+  ],
+  "intro": "All Points Travel can help with all your travel needs! We have discount tickets to many tourist attractions, special events, dinner shows, theme parks, and much more! Plus we have great deals on vacation packages, hotels, cruises, and more! Stop by for personal service to make the most of your leisure time!",
+  "sections": [
+    {
+      "heading": "Disney World",
+      "level": 2,
+      "markdown": "**2025 Prices** (ages 3 & up, valid Feb. 28 – Dec. 19, 2025)\n\n• 4 Day Disney Hopper: $395\n• 4 Day Disney Hopper Plus: $425\n• 5 Day Disney Hopper: $415\n• 5 Day Disney Hopper Plus: $445\n• 6 Day Disney Hopper: $429.75\n• 6 Day Disney Hopper Plus: $465\n\n**Blackout Dates:** Apr. 13-26, Nov. 23-29, and Dec. 20-31, 2025\n\n**2026 Prices** (ages 3 & up, valid Jan. 1 – Dec. 19, 2026)\n\n• 4 Day Disney Hopper: $409\n• 4 Day Disney Hopper Plus: $439\n• 5 Day Disney Hopper: $429\n• 5 Day Disney Hopper Plus: $459\n• 6 Day Disney Hopper: $449\n• 6 Day Disney Hopper Plus: $479\n\n**Promotion valid:** Jan. 1 – March 28, 2026 / April 12 – Nov. 21, 2026 / Nov. 29 – Dec. 18, 2026\n\n**Blackout Dates:** March 29 – April 11, 2026 / Nov. 22 – Nov. 28, 2026 / Dec. 19 – Dec. 31, 2026\n\nReservations for park visits must be made prior to visiting. Save up to 40% at Disney Resorts when available.\n\n**Eligible patrons:** Active Duty, Retired Service Members, National Guard, Reservists, Coast Guard, 100% Disabled Veterans, PHS, NOAA, U.S. Military Cadets, and Foreign Ally with U.S. CAC (spouses of Foreign Ally with U.S. CAC not eligible). Maximum 6 promotional tickets per eligible service member or spouse; one ticket must be used by eligible member or spouse. Tickets are NON-REFUNDABLE/NON-TRANSFERABLE."
+    },
+    {
+      "heading": "Universal Studios",
+      "level": 2,
+      "markdown": "**Promotional Ticket Valid:** Nov. 18, 2025 – Dec. 18, 2026\n\n**Universal Studios / Islands of Adventure**\n\n2 Park, Park to Park Freedom Pass (Unlimited access):\n• Adult (Ages 10+): $220\n• Child (Ages 3-9): $215\n\n3 Park, Park to Park (Includes Volcano Bay) Freedom Pass (Unlimited access):\n• Adult (Ages 10+): $255\n• Child (Ages 3-9): $250\n\n**Blackout Dates:** Mar. 30 - Apr. 6, 2026 / Dec. 19 - Dec. 31, 2026 / Oct. 26 - Dec. 18, 2026 (Volcano Bay only)\n\n**Eligible:** Active Duty, Retired, DOD, National Guard, Reservists, U.S. Coast Guard, 100% Disabled Veteran and Spouses of Eligible Service Members"
+    },
+    {
+      "heading": "Disneyland",
+      "level": 2,
+      "markdown": "**2025 Prices** (ages 3 & up)\n\n• 3 Day Disneyland Hopper: $295\n• 3 Day Disneyland Hopper w/Genie+: $391\n• 4 Day Disneyland Hopper: $349\n• 4 Day Disneyland Hopper w/Genie+: $477\n\nReservations for park visits must be made prior to visiting. Maximum 6 tickets per military member. Valid for admission to Disneyland and Disney's California Adventure Park. Same day visits to both parks count as one day's use. Save up to 40% at Disney Resorts when available. Resorts within walking distance of all parks. Early and late park admission privileges for resort guests.\n\n**Eligible patrons:** Active Duty, Retired Service Members, National Guard, Reservists, Coast Guard, 100% Disabled Veterans, PHS, NOAA, U.S. Military Cadets, and Foreign Ally w/ U.S. CAC (spouses of foreign military not eligible)\n\n**Promotion valid:** Jan. 1 – Dec. 27, 2025\n\n**Blackout dates:** Dec. 28 – Dec. 31, 2025"
+    },
+    {
+      "heading": "Disney Celebrates America",
+      "level": 2,
+      "markdown": "**2026 Disney Celebrates America Military Salute Ticket**\n\n• Hopper Ticket: $499\n• Hopper Plus Ticket: $529\n\n**Promotion valid:** Jan. 1 – March 28, 2026 / April 12 – Nov. 21, 2026 / Nov. 29 – Dec. 18, 2026\n\n**Blackout Dates:** March 29 – April 11, 2026 / Nov. 22 – Nov. 28, 2026 / Dec. 19 – Dec. 31, 2026\n\n**Eligible patrons:** Active Duty, Retired Service Members, National Guard, Reservists, Coast Guard, 100% Disabled Veterans, PHS, NOAA, U.S. Military Cadets, and Foreign Ally w/ U.S. CAC (spouses of foreign military not eligible)"
+    },
+    {
+      "heading": "Resources",
+      "level": 3,
+      "markdown": "• [Waves of Honor](https://unitedparks.com/programs/waves-of-honor/?tab=active-duty)\n• [Blue Star Museums](https://bluestarfam.org/)\n• [Real ID Advisory](/modules/media/?do=inline&id=c7d6f98d-8986-4242-9594-58d186763402&v=1)\n• [Price List](/modules/media/?do=inline&id=6970f9b9-d6c8-4a3a-bfb5-bc5e2a844e82&v=37)"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "All Points Travel - Camp Lejeune",
+      "address": "Bldg. 84, Holcomb Blvd., Hadnot Pt. Plaza, Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-3535"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    },
+    {
+      "name": "All Points Travel - New River",
+      "address": "Bldg. 4044, Curtis Road, MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-6530"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": [
+        "New River All Points Travel office is closed until further notice"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Real ID Advisory",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=c7d6f98d-8986-4242-9594-58d186763402&v=1"
+    },
+    {
+      "text": "Price List",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=6970f9b9-d6c8-4a3a-bfb5-bc5e2a844e82&v=37"
+    },
+    {
+      "text": "Waves of Honor",
+      "url": "https://unitedparks.com/programs/waves-of-honor/?tab=active-duty"
+    },
+    {
+      "text": "Blue Star Museums",
+      "url": "https://bluestarfam.org/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c5fd520e704148558a2b5092dc346937.jpg?m=639259449326400000",
+      "alt": "103126-srv-aft-mobile"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a897bde2b8544999acac6f98f48e4330.jpg?m=639259449514900000",
+      "alt": "103126-srv-aft-rotator"
+    }
+  ],
+  "notCaptured": "Full price list is a linked PDF (not captured)",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/information-tickets-and-tours",
+  "fetchedAt": "2026-10-27"
+}

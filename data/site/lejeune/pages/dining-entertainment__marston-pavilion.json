@@ -1,0 +1,89 @@
+{
+  "title": "Marston Pavilion",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Marston Pavilion",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/marston-pavilion"
+    }
+  ],
+  "intro": "Marston Pavilion is a distinguished and versatile event venue, offering a spacious and adaptable setting for a wide range of occasions.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "• Retirement Ceremonies/Receptions\n• Weddings\n• Business Meetings\n• Networking Events & PMEs\n• Family Events\n• Unit Functions"
+    },
+    {
+      "heading": "DETAILS",
+      "level": 2,
+      "markdown": ""
+    },
+    {
+      "heading": "TINIAN ROOM",
+      "level": 3,
+      "markdown": "Max Capacity: Seating for 350, Social 382\n\nHours: Appointment only\n\nAmenities: Audio Visual Equipment\n\nRestrictions: No outside food, beverages, and outside alcohol allowed."
+    },
+    {
+      "heading": "BETIO ROOM",
+      "level": 3,
+      "markdown": "Max Capacity: Seating for 350, Social 382\n\nHours: Appointment only\n\nAmenities: Audio Visual Equipment\n\nRestrictions: No outside food, beverages, and outside alcohol allowed."
+    },
+    {
+      "heading": "LOBBY",
+      "level": 3,
+      "markdown": "Max Capacity: Seating for 200\n\nHours: Appointment only\n\nRestrictions: No outside food, beverages, and outside alcohol allowed."
+    },
+    {
+      "heading": "RATES",
+      "level": 3,
+      "markdown": "Please call for rates and availability."
+    },
+    {
+      "heading": "OTHER INFOMATION",
+      "level": 3,
+      "markdown": "Catering Available. Please call 910-450-7983 or email mccslejeunecatering@usmc-mccs.org for more details."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Marston Pavilion",
+      "address": "Bldg. 730 Seth Williams Blvd., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-7983"
+        }
+      ],
+      "emails": [
+        "mccslejeunecatering@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Tinian & Betio Rooms; Lobby",
+              "time": "Appointment only"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. 730 Seth Williams Blvd., Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.68265352073101,-77.36196106221767"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/marston-pavilion",
+  "fetchedAt": "2026-10-27"
+}

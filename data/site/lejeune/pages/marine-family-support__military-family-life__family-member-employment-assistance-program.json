@@ -1,0 +1,144 @@
+{
+  "title": "Family Member Employment Assistance Program",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Military Family Life",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life"
+    },
+    {
+      "label": "Family Member Employment Assistance Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program"
+    }
+  ],
+  "intro": "The Family Member Employment Assistance Program (FMEAP) supports military spouses and dependent family members with career readiness tools, resources, and services.",
+  "sections": [
+    {
+      "heading": "Not sure where to begin? Start here.",
+      "level": 2,
+      "markdown": "The Family Member Employment Assistance Program (FMEAP) is designed to provide support and resources to family members, including spouses, of military service members to help them pursue and sustain meaningful employment despite the challenges of the military lifestyle."
+    },
+    {
+      "heading": "Eligibility, Services, and Support",
+      "level": 2,
+      "markdown": "#### Eligibility\n\nThe primary beneficiaries of the Family Member Assistance Program (FMEAP):\n\n• Military spouses of active-duty service members.\n• Dependent family member of active-duty service members.\n\n#### Getting Started\n\nConnect with your local installation's FMEAP office. This will allow you to schedule an introductory meeting and learn more about the program.\n\nAttend FMEAP workshops. Many installations offer workshops or seminars on topics like resume building, interview techniques, and job search strategies.\n\nRegister for the Military Spouse Employment Partnership. If you're interested in portable career opportunities, this program is essential. Registration can provide you with access to a network of employer partners.\n\nExplore MyCAA. If you're eligible and interested in pursuing further education, start the application process for the MyCAA scholarship.\n\nStay engaged. Join the FMEAP mailing list or social media groups to stay updated on upcoming events, job fairs, and other opportunities.\n\n#### Available Services\n\n• Career Advising & Coaching\n• Education, Entrepreneurial & Training Resources\n• Individual Career Assessment & Planning\n• Interviewing Skills\n• Job Search Strategies\n• Resume Assistance\n• Salary Negotiations\n• Volunteer & Skills Development\n• Career Workshops"
+    },
+    {
+      "heading": "Resources, Programs & Information",
+      "level": 2,
+      "markdown": "#### SpouseWorks\n\nDiscover a trusted career and education support in one place.\n\n**Welcome, military spouses!**\n\nThe Office of Spouse Employment introduces **SpouseWorks** (formerly SECO). While the name has changed, our commitment to helping you build a meaningful career remains exactly the same.\n\nSpouseWorks brings all your trusted career and education support into one easy-to-navigate platform. Now you can easily access:\n\n• **Career Coaching & Advice:** Navigate every stage of your career journey.\n• **Job Opportunities:** Find employers looking to hire military spouses.\n• **Education & Funding:** Discover scholarships, fellowships, and training.\n\nConnect to these valuable resources at [SpouseWorks](https://spouseworks.militaryonesource.mil/portal/).\n\n[Learn more about SpouseWorks](https://spouseworks.militaryonesource.mil/portal/article/welcome-to-spouseworks) through FAQs and related articles.\n\n#### [SpouseWorks Scholarship](https://mycaa.militaryonesource.mil/mycaa/)\n\nExplore a workforce development program that provides up to $4,000 in financial assistance.\n\n#### [Military Spouse Employer Partnership (MSEP)](https://msepjobs.militaryonesource.mil/msep/)\n\nThe Military Spouse Employer Partnership connects military spouses with hundreds of partner employers who have committed to recruit, hire, promote and retain military spouses.\n\n#### [Military Spouse Licensure Reimbursement (MSLR)](https://myseco.militaryonesource.mil/portal/article/licensure-reimbursement-pcs-moves)\n\nIf your career requires a professional license or certification, you may be eligible for up to $1,000 in reimbursement for licensure and certification costs resulting from relocations within the United States or from OCONUS to stateside.\n\n#### [Transferring Your Professional License](https://www.militaryonesource.mil/education-employment/seco/transferring-your-professional-license-what-s-involved)\n\nMoving across the country – or around the world – can be a great adventure. Here's some help for making sure your licenses and certifications travel with you during your next move.\n\n#### Spouse's Transition and Readiness Seminar (S.T.A.R.S)\n\nThis workshop is designed to provide support and resources for military spouses as they navigate various aspects of transition, particularly during periods of relocation or when their service member is transitioning out of the military. Contact the FMEAP office for workshop availability in your area."
+    },
+    {
+      "heading": "Contact Information and Resources",
+      "level": 3,
+      "markdown": "• [USAJOBS](https://www.usajobs.gov/)\n• [SpouseWorks Scholarship](https://mycaa.militaryonesource.mil/mycaa)\n• [NC Works](http://www.ncworks.gov/)\n• [SpouseWorks](https://myseco.militaryonesource.mil/portal/)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Career Connections",
+      "url": "https://lejeunenewriver.usmc-mccs.org/trs?utm_source=fmeap&utm_medium=rotator_desktop&utm_campaign=careerconnections",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/91fd74129f1247199132ebfb91c4eb35_v1.jpg?m=638298274219470000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Family Member Employment Assistance Program (FMEAP)",
+      "address": "Bldg. 2455K Iwo Jima Blvd.\nTarawa Terrace, NC 28543",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-1676"
+        }
+      ],
+      "emails": [
+        "mccslejeunefmeap@usmc.mil"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holidays may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "SpouseWorks",
+      "url": "https://spouseworks.militaryonesource.mil/portal/"
+    },
+    {
+      "text": "Learn more about SpouseWorks",
+      "url": "https://spouseworks.militaryonesource.mil/portal/article/welcome-to-spouseworks"
+    },
+    {
+      "text": "SpouseWorks Scholarship",
+      "url": "https://mycaa.militaryonesource.mil/mycaa/"
+    },
+    {
+      "text": "Military Spouse Employer Partnership (MSEP)",
+      "url": "https://msepjobs.militaryonesource.mil/msep/"
+    },
+    {
+      "text": "Military Spouse Licensure Reimbursement (MSLR)",
+      "url": "https://myseco.militaryonesource.mil/portal/article/licensure-reimbursement-pcs-moves"
+    },
+    {
+      "text": "Transferring Your Professional License",
+      "url": "https://www.militaryonesource.mil/education-employment/seco/transferring-your-professional-license-what-s-involved"
+    },
+    {
+      "text": "USAJOBS",
+      "url": "https://www.usajobs.gov/"
+    },
+    {
+      "text": "NC Works",
+      "url": "http://www.ncworks.gov/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/91fd74129f1247199132ebfb91c4eb35_v1.jpg?m=638298274219470000",
+      "alt": "Career Connections"
+    }
+  ],
+  "notCaptured": "Related stories and events lists (dynamic) not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/military-family-life/family-member-employment-assistance-program",
+  "fetchedAt": "2026-10-27"
+}

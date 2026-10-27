@@ -1,0 +1,45 @@
+{
+  "title": "MCCS SMP Calendar",
+  "breadcrumb": [
+    {
+      "label": "Marine & Family Support",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support"
+    },
+    {
+      "label": "Single Marine Program",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program"
+    },
+    {
+      "label": "SMP Calendar",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-calendar"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "MCCS SMP Calendar - Lejeune-New River",
+      "level": 2,
+      "markdown": "Empowering Marines and their families through comprehensive programs that strengthen their resilience and overall well-being, ensuring they thrive both on and off the field.\n\n*Denotes events/tournaments where prizes will be awarded."
+    }
+  ],
+  "cards": [],
+  "contacts": [],
+  "links": [
+    {
+      "text": "Recreation Centers",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/recreation-centers"
+    },
+    {
+      "text": "SMP Volunteer Opportunities",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-volunteer-opportunities"
+    },
+    {
+      "text": "MCCS Free Barracks Wi-Fi",
+      "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/barracks-wi-fi"
+    }
+  ],
+  "images": [],
+  "notCaptured": "The SMP event calendar is a dynamic widget and was not captured.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/marine-family-support/single-marine-program/smp-calendar",
+  "fetchedAt": "2026-10-27"
+}

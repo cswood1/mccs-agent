@@ -1,0 +1,61 @@
+{
+  "title": "Group Exercise",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Group Exercise",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/group-exercise"
+    }
+  ],
+  "intro": "Group Exercise Classes are open to all Active Duty, retired, DoD reservists on Active Duty, dependents, MCCS employees, and Department of Defense employees.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "Proper identification required. Guests are permitted if accompanied by an authorized patron.\n\nWith the exception of Zumba and Kettlebells, children 12-15 years old can participate in classes as long as they are accompanied by an adult.\n\nPlease call for Group Exercise Unit PT requests.\n\n**Group Exercise Coordinator: (910) 451-0824**"
+    },
+    {
+      "heading": "Difficulty participating in a class? Let us accommodate you!",
+      "level": 3,
+      "markdown": "Semper Fit wishes to make Group Exercise classes accessible to people of all abilities who wish to participate. If we can provide reasonable accommodation to enable you to fully participate in any of our classes, please contact the Group Exercise Coordinator."
+    },
+    {
+      "heading": "Pricing",
+      "level": 3,
+      "markdown": "- **Monthly Pass** - Unlimited Group X classes for one low fee. $40*\n- **Punch Card** - Good for 10 Group X classes ($5 savings). $30*\n- **Active Duty** - (Valid Military ID must be presented to instructor before class, otherwise a Guest Daily Drop-in fee will be charged.) FREE\n- **Daily Drop-in (with DoD ID)** - $5 per class\n- **Guest Daily Drop-in (without DoD ID)** - $7 per class\n\n_Group Ex Monthly Passes/Punch Cards may be purchased at the following fitness centers: Wallace Creek, New River, and Tarawa Terrace._\n\n*Valid DoD ID must be presented both at time of purchase and to the instructor before entry into every class. A state-issued driver's license or identification card will not be accepted for these purchases. The $5 Guest Daily Drop-in rate will be charged for authorized guests. Guests who do not present a valid DoD ID at time of purchase or class entry, will be charged $7 per class."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Group Exercise Coordinator",
+      "address": "",
+      "phones": [
+        {
+          "label": "",
+          "number": "(910) 451-0824"
+        }
+      ],
+      "emails": [],
+      "hours": [],
+      "notes": []
+    }
+  ],
+  "links": [],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/2090c1d265f2466a8ff79fb0c2b3186d.jpg?m=638995939494170000",
+      "alt": "123125-sf-gx-mobileunit-rotator 3.jpg"
+    }
+  ],
+  "notCaptured": "Group exercise class schedule (if embedded as an image/PDF or dynamic widget) was not returned by the fetch.",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/group-exercise",
+  "fetchedAt": "2026-10-27"
+}

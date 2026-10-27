@@ -1,0 +1,81 @@
+{
+  "title": "Hibachi-San",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    },
+    {
+      "label": "Hibachi-San",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/hibachi-san"
+    }
+  ],
+  "intro": "Hibachi-San delivers an authentic Japanese teppanyaki grill experience.",
+  "sections": [],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Hibachi-San",
+      "address": "Bldg. 1231 Birch St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-750-3060"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "10AM - 5PM"
+            },
+            {
+              "days": "Monday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Friday",
+              "time": "10AM - 6PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "10AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. 1231 Birch St., Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.67488366867274,-77.34046007453894"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/hibachi-san",
+  "fetchedAt": "2026-10-27"
+}

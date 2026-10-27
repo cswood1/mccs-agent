@@ -1,0 +1,179 @@
+{
+  "title": "Dining",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Dining",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "Baba's Mediterranean Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/babas-mediterranean-grill",
+      "text": "We refuse to compromise on quality. Our fresh ingredients are from local farmers' markets.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/280dd6f0d1ef4638871862c59f498afc.jpg"
+    },
+    {
+      "title": "Domino's",
+      "url": "https://www.dominos.com/en/",
+      "text": "Order pizza, pasta, sandwiches & more online for carryout or delivery from Domino's.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9bbf0b07665841a6838ad1a1074553ed_v1.jpg"
+    },
+    {
+      "title": "Duffers' Retreat",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/golf-course",
+      "text": "Stop in for breakfast or lunch.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/2d6952fe2bab427289ddb2f1ef895ec0_v1.jpg"
+    },
+    {
+      "title": "Dunkin'",
+      "url": "https://locations.dunkindonuts.com/en/nc/camp-lejeune/1238-birch-st/344367",
+      "text": "Our menu is full of great-tasting items that will get you going and keep you running throughout y...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/2e2d891277324b1ebfafd2d87890a21e_v1.jpg"
+    },
+    {
+      "title": "French Creek Snack Bar",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/french-creek-snack-bar",
+      "text": "Stop by the French Creek Marine Mart for a made to order meal.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/da954a2b437d4244862643b26377f822.jpg"
+    },
+    {
+      "title": "Heavenly Brew",
+      "url": "https://heavenlybrewcafe.com/",
+      "text": "Our establishment has been serving the military community for more than 8 years and continues to ...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b26bb15f2fff4731b79ed6c55061846a_v1.jpg"
+    },
+    {
+      "title": "Hibachi-San",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/hibachi-san",
+      "text": "Hibachi-San delivers an authentic Japanese teppanyaki grill experience.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/884b9551411340a690dc431cf5b6ef91_v1.jpg"
+    },
+    {
+      "title": "The Honeybaked Ham Co.",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/the-honeybaked-ham-co",
+      "text": "Our Honeybaked® stores feature a great selection of premium sandwiches, salads, soups, and so muc...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b3e4395d96b04bc49768882cdfd31398_v1.jpg"
+    },
+    {
+      "title": "Impulse Smoothies",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/impulse-smoothies",
+      "text": "Located inside Wallace Creek Fitness Center.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/225a29485bca4949b05862340bf9a5fb_v1.jpg"
+    },
+    {
+      "title": "La Casita Loca",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/la-casita-loca",
+      "text": "Join us for breakfast or dinner all day.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/77c6c0442c084550a9849ab673329045_v1.jpg"
+    },
+    {
+      "title": "The Landing",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-landing",
+      "text": "All ranks club with a beautiful water view! Perfect for events. Lunch served weekdays.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/485fdc431ed24d59896934660cbe343c.jpg"
+    },
+    {
+      "title": "New River Bowling Center Snack Bar",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling",
+      "text": "Enjoy a burger and onion rings while you bowl a few games.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f06b868976aa4cabae806304571831a4_v1.jpg"
+    },
+    {
+      "title": "Panda Express",
+      "url": "https://www.pandaexpress.com/location",
+      "text": "Chinese Inspired American Made. We masterfully combine the tastiest from both worlds to give a de...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/abe6ba20cdbc4053bc9d837d7421565f_v1.jpg"
+    },
+    {
+      "title": "The Club at Paradise Point",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point",
+      "text": "An all hands venue serving a Monday- Friday lunch buffet.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/448f88094d8741fda9ec1121792ed4e6_v1.jpg"
+    },
+    {
+      "title": "Pizza Hut",
+      "url": "https://locations.pizzahut.com/nc/camp-lejeune/1235-birch-st",
+      "text": "Order from our menu of pizzas, wings, desserts, sides and more!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/53e32138bd4a4649acb3c4a6495cbd32_v1.jpg"
+    },
+    {
+      "title": "Raider Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/raider-grill",
+      "text": "Stop in and enjoy a quick bite.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/9a98debb72c44763bc41b8a63f5d0146_v1.jpg"
+    },
+    {
+      "title": "Raising Cane's",
+      "url": "https://www.raisingcanes.com/location/elpx5",
+      "text": "Our concept is simple and unique… we only have ONE LOVE – quality chicken finger meals! At Raisin...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ead5218fe4b24e9ba74bc37a22bc0f7f_v1.jpg"
+    },
+    {
+      "title": "Sandbar Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/sandbar-grill",
+      "text": "Located inside the Courthouse Bay Recreation Center.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a7ae349c0db84eeba7269504026f72fd_v1.jpg"
+    },
+    {
+      "title": "Sbarro",
+      "url": "https://sbarro.com/locations/nc/camp-lejeune/camp-lejeune/",
+      "text": "There's only one way to eat an authentic New York style pie. And this is it.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3beb47e285984d50a6ae90b433694152.jpg"
+    },
+    {
+      "title": "Spare Time Sports Grill",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/bowling",
+      "text": "Our menu won't disappoint! We have something for everyone.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/02570d0dca0b487ea11308373a422d2d_v1.jpg"
+    },
+    {
+      "title": "Starbucks",
+      "url": "https://www.starbucks.com/store-locator/store/1009144/camp-lejeune-main-exchange-complex-1231-birch-st-camp-lejeune-nc-28547-us",
+      "text": "Whether you're searching for something new to warm your mug, seeking the best brew method for you...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/5d4185e4ef4a4d23b790a29385b79703_v1.jpg"
+    },
+    {
+      "title": "Subway",
+      "url": "https://order.subway.com/en-US/locator",
+      "text": "Get your favorite subs, drinks, chips and cookies in one place!",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4778132b22dc403d9bc9380a7d3e880e_v1.jpg"
+    },
+    {
+      "title": "Taco Bell",
+      "url": "https://www.tacobell.com/locations",
+      "text": "The Taco Bell menu has all of your favorite Mexican inspired foods. From classic tacos to burrito...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4794b201d54e4988ade13ed5038f5887_v1.jpg"
+    },
+    {
+      "title": "Warriors Command Post",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining/warriors-command-post",
+      "text": "Choose from brisket, chicken, pulled pork and so much more.",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4f277e035304498caa7e602cf690e15b_v1.jpg"
+    },
+    {
+      "title": "Wendy's",
+      "url": "https://order.wendys.com/location",
+      "text": "At Wendy's, we're all about serving up fresh food, even if it means going the extra mile. When yo...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3c26e7fb33cc45d49e52c49e733c6209_v1.jpg"
+    },
+    {
+      "title": "The Wooden Nickel",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-club-at-paradise-point/the-wooden-nickel",
+      "text": "Located in The Club at Paradise Point, The Wooden Nickel features a wide range of cuisines and dr...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ff7886aff1b94642b8a1ee614d8c88c5_v4.jpg"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/dining",
+  "fetchedAt": "2026-10-27"
+}

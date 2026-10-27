@@ -1,0 +1,39 @@
+{
+  "title": "Personal Training",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness"
+    },
+    {
+      "label": "Personal Training",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/personal-training"
+    }
+  ],
+  "intro": "",
+  "sections": [],
+  "cards": [
+    {
+      "title": "GatGirl Fitness",
+      "url": "http://www.gatgirlfitness.com/",
+      "text": "Sharing my heart and passion for living a healthy lifestyle in each of o...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/60acb558162040958fb200a37606fcff_v1.jpg?m=638298403944470000"
+    },
+    {
+      "title": "Cheryl's Power Fitness",
+      "url": "https://www.facebook.com/cherylspowerfitness",
+      "text": "With over 20 years of experience in the fitness industry and train peop...",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/17347739e23f4cc9b34c1c94b6a56d37_v1.jpg?m=638298403944470000"
+    }
+  ],
+  "contacts": [],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/fitness/personal-training",
+  "fetchedAt": "2026-10-27"
+}

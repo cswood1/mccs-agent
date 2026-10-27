@@ -1,0 +1,238 @@
+{
+  "title": "Adult Sports",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports"
+    },
+    {
+      "label": "Adult Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/adult-sports"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Program Categories",
+      "level": 2,
+      "markdown": "- **Intramural** - Open to all Active Duty military; teams must register as a designated Unit Team.\n- **Leagues** - Open to all Active Duty Military, spouses and family members; Authorized DoD civilians, and retirees; must be at least 18 years of age and out of high school.\n- **Tournaments** - The Tournament Series is intended to provide additional competitive opportunities, at reasonable cost, for those who desire extra competition outside of the Intramural Sports Program. Tournament format, eligibility, locations, and cost will vary.\n\nPlease refer to the Intramural Handbook pages 4-6 for full details on regulations and requirements of registering teams. All teams must meet the published guidelines for each respective sport to register for leagues or tournaments."
+    },
+    {
+      "heading": "7v7 Soccer Tournament",
+      "level": 3,
+      "markdown": "Tournament: June 22–26. Registration: May 11–June 8. Cost: $200 per team (payment due at registration). Location: TBD. Open to authorized personnel ages 18+ and out of high school. 3-game minimum guaranteed. Each registered team receives t-shirts for up to 10 players. For more information, contact: (910) 451-2061 or (910) 451-3762"
+    },
+    {
+      "heading": "Intramural Soccer League",
+      "level": 3,
+      "markdown": "Season: Begins in June. Registration: May 4 - June 5. Cost: FREE. Open to all Active Duty military. Teams must register as designated unit team. Space is limited. Games played at Goettge Memorial Sports Complex and MCAS New River AS-4000 Fields. 1st Place Award - Team Trophy and T-Shirts. 2nd Place Award - Team Trophy. Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "5v5 Indoor Soccer Tournament",
+      "level": 3,
+      "markdown": "Tournament: Mar. 28. Registration: Feb. 17-Mar. 16. Cost: $200 per team. Payment due at registration. Open to authorized personnel 18+ and out of high school. 3 game minimum. Each registered team gets a t-shirt for their players (10 players per team). Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "Intramural Basketball",
+      "level": 3,
+      "markdown": "Season: Begins Feb. 2026. Games: Played at French Creek Fitness Center and MCAS New River Fitness Centers (AS-4400). Registration: Dec. 16, 2025 – Jan. 23, 2026. Cost: Free. Open to all Active Duty personnel. Teams must register as a designated unit team. Space is limited. Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "3-Point Shootout",
+      "level": 3,
+      "markdown": "Event Date: Jan 26-29, 2026. Registration: Dec. 15, 2025 - Jan. 16, 2026. Cost: Free. Location: Tournament held at French Creek Fitness Center and MCAS New River Sports Center (AS-4000). Open to all Active-Duty personnel. Teams must register as a designated unit team. Space is limited. Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "Intramural Softball",
+      "level": 3,
+      "markdown": "Season: Begins in April. Registration: Feb. 18 – Mar. 27, 2026. Cost: Free. Games: Played at the Harry Agganis Field and MCAS New River Softball Fields (behind the Bowling Center). Open to all Active-Duty military. Teams must register with appropriate installations. 1st Place Award - Team Trophy & T-shirts. 2nd Place Award - Team Trophy. Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "Intramural Flag Football",
+      "level": 3,
+      "markdown": "Season: Begins in September. Registration: July 13 - August 21. Cost: Free. Games: Played at Goettge Memorial Sports Complex and MCAS New River Football Field (AS-4000). Open to all active-duty personnel. Teams must register as a designated unit team. Space is limited. 1st Place Award - Team Trophy & T-shirts. 2nd Place Award - Team Trophy. Sponsored by Marine Chevrolet."
+    },
+    {
+      "heading": "Indoor 2v2 Pickleball Tournament",
+      "level": 3,
+      "markdown": "Tournament Date: Dec. 7-10. Registration: Oct. 19-Nov. 18. Cost: Free. Games played at Camp Lejeune and MCAS New River. Open to all active-duty personnel. Teams must register as a designated unit team. Space is limited. 1st Place Award - Team Trophy & T-shirts. 2nd Place Award - Team Trophy. Sponsored by Marine Chevrolet."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Camp Lejeune Sports Branch",
+      "address": "Bldg. 751 McHugh Blvd. Temporarily Located in the Trailer Next to Goettge Memorial Field House Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-3762"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM - 4PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Goettge Memorial Field House is closed for renovations and unable to take reservations for the facility at this time. The MCCS Sports Office is temporarily located in the trailer next to the Field House.",
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River Semper Fit Sports Center",
+      "address": "AS-4000 Schmidt St. MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0294"
+        },
+        {
+          "label": "Phone",
+          "number": "910-449-0306"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "8AM-5:45PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "8AM-5:45PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8AM-5:45PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "8AM-5:45PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8AM-5:45PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Letter of Release",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=2f25b7d3-bc0b-431a-bb92-65002eb6e611&v=1"
+    },
+    {
+      "text": "Registration Packet (Fillable)",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=212b71cf-f4fc-4087-96a1-331bbb40cf3e&v=1"
+    },
+    {
+      "text": "Registration Packet (Printable)",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=f031b70a-f0c9-408a-9ce5-d24c55d3e43a&v=1"
+    },
+    {
+      "text": "Sports Handbook",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=e49a0603-c768-4613-9282-2aaceac88157&v=1"
+    },
+    {
+      "text": "Armed Forces Sports Calendar",
+      "url": "https://armedforcessports.defense.gov/Events-Calendar"
+    },
+    {
+      "text": "For applications or additional information on All-Marine Sports, click here to get started.",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/all-marine-sports"
+    },
+    {
+      "text": "Semper Fit Seeks Applications for All-Marine Sports Athletes, Coaches & Elite Marine Athletes",
+      "url": "https://www.marines.mil/News/Messages/Messages-Display/Article/4621073/manpower-and-reserve-affairs-marine-and-family-programs-division-semper-fit-bra/"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/6d81febaec6c49c18723109c231b4d1c.jpg?m=639135846314570000",
+      "alt": "7v7 Soccer Tournament"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/ef7a60e5bc7f4ea391e77886539f7568.jpg?m=639128949662300000",
+      "alt": "Intramural Soccer League"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3c563c2cce2740b4b60281c417a1d486.jpg?m=639069380809330000",
+      "alt": "5v5 Indoor Soccer Tournament"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/b5bdd4c35bfd4d5da0c10a49e3c194f4.jpg?m=639035828182000000",
+      "alt": "Intramural Basketball"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a5b818fa49214ec189471cbe0f3482a2.jpg?m=639114466632130000",
+      "alt": "3-Point Shootout"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/485be1e393304e8aab9a0c2974779a1c.jpg?m=638587230954400000",
+      "alt": "Intramural Softball"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4d3b62a537714ce09a73ef17e119972b.jpg?m=639035829190100000",
+      "alt": "Intramural Flag Football"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/d4abb6dc1f2e434f858a8959dab9c9f2.jpg?m=639264816225900000",
+      "alt": "Indoor 2v2 Pickleball Tournament"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/adult-sports",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,231 @@
+{
+  "title": "Youth Sports",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports"
+    },
+    {
+      "label": "Youth Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/youth-sports"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "MCCS Youth Basketball Registration",
+      "level": 2,
+      "markdown": "Sept. 8 - Oct. 2\n\nSeason runs November-March. Space is limited.\n\nAges 6-12 years*\n\n**Cost:** $40 for the first child; $35 for each additional child in the same family. **Space is limited.**\n\n($45 after Oct. 2, space permitting)\n\n*Depending upon final registration numbers, practices and games may be held aboard Camp Lejeune and MCAS New River.\n\n**Important Registration & Program Information:**\n\n- Birth certificate required for first time applicants. Minimum and Maximum age requirements are based on child's age as of Jan. 1, 2027.\n- Valid ID required.\n- A $15 service fee will be charged for all refunds (per child) after the registration period. No refunds after the first game."
+    },
+    {
+      "heading": "Coaches Needed",
+      "level": 2,
+      "markdown": "Helping to build young athletes is about so much more than sports. As a leader and role model, you have an opportunity to impact young lives as they improve their skills both on and off the court or field. If you're looking to make a difference, contact our Youth Sports office for more information."
+    },
+    {
+      "heading": "Basketball",
+      "level": 3,
+      "markdown": "**Winter Season**\n\n**Divisions:**\n- Ages 6-7\n- Ages 8-9\n- Ages 10-12"
+    },
+    {
+      "heading": "Baseball & Tee-Ball",
+      "level": 3,
+      "markdown": "**Spring Season (Mar. - Jun.)**\n\n**Divisions:**\n- Tee-Ball: Ages 5-6\n- Coach Pitch: Ages 7-9\n- Baseball: Ages 10-12"
+    },
+    {
+      "heading": "Running",
+      "level": 3,
+      "markdown": "**Spring Season (Mar. - Jun.)**\n\n- Juniors: Ages 6-9\n- Seniors: Ages 10-13"
+    },
+    {
+      "heading": "Soccer",
+      "level": 3,
+      "markdown": "**Fall Season (Aug - Oct)**\n\n**Divisions:**\n- Age 5 (5v5)\n- Ages 6 -7 (7v7)\n- Ages 8 -9 (7v7)\n- Ages 10-12 (7v7)"
+    },
+    {
+      "heading": "Flag Football",
+      "level": 3,
+      "markdown": "**Fall Season (Aug - Oct)**\n\n**Divisions:**\n- Ages 6-9 (7v7)\n- Ages 10-12 (7v7)"
+    },
+    {
+      "heading": "Cheerleading",
+      "level": 3,
+      "markdown": "**Fall Season (Aug - Oct)**\n\n**Divisions:**\n- Ages 6-9\n- Ages 10-12"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Post-PCS: Helping Military Children Thrive",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/post-pcs-helping-military-children-thrive",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/93060dd1f1d6485e91a7f2a1b3883368_v2.jpg?m=639166287968870000"
+    },
+    {
+      "title": "Volunteer With Youth Sports",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/volunteer-with-youth-sports",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/70a5dc5a8c55424f822657682f846af8.jpg?m=639090076792130000"
+    },
+    {
+      "title": "Youth Sports Builds Confidence and Connection",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/youth-sports-builds-confidence-and-connection",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/a2ce817c1a5f461fb38e5f81ff74729e.jpg?m=639071896890470000"
+    },
+    {
+      "title": "Shape the Next Generation as a Youth Sports Coach",
+      "url": "https://lejeunenewriver.usmc-mccs.org/news/shape-the-next-generation-as-a-youth-sports-coach",
+      "text": "",
+      "image": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/e4dc02854bf24de498ce4a04695b41aa.jpg?m=639046420764330000"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Youth Sports",
+      "address": "1985 Stone St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-451-2177"
+        },
+        {
+          "label": "Main",
+          "number": "910-451-2159"
+        }
+      ],
+      "emails": [
+        "MCCSLejeuneYouthSports@usmc-mccs.org"
+      ],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday",
+              "time": "10:30AM-4:30PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "8:30AM-4:30PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "10:30AM-4:30PM"
+            },
+            {
+              "days": "Friday",
+              "time": "8:30AM-4:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "Youth Sports Registration at New River Semper Fit Sports Center",
+      "address": "AS-4000 Schmidt St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-0294"
+        },
+        {
+          "label": "Main",
+          "number": "910-449-0306"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM-3PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM-3PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM-3PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM-3PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM-3PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Youth Sports Registration",
+      "url": "https://lejeunenewriver.usmc-mccs.org/modules/media/?do=inline&id=8605e098-1f7c-4190-bdac-e89167e937ad&v=1"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/4ad5b7e844a04abf8f6f55b260eebf3f_v1.jpg?m=638298327832600000",
+      "alt": "Basketball"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/3016c73853c74d2e8879746bf8710c9d_v1.jpg?m=638298327834830000",
+      "alt": "Baseball & Tee-Ball"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/f471c855584a4af2a464db0c25e47c1d_v1.jpg?m=638298327836270000",
+      "alt": "Running"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7c59beece1d5418bb65541ac6c3d5366_v1.jpg?m=638298327835800000",
+      "alt": "Soccer"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/c8d438289dc34c98996b79db9538c937_v1.jpg?m=638298327837030000",
+      "alt": "Flag Football"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/7c2864a5a68c49cba8326b25a83cda15_v1.jpg?m=638298327837470000",
+      "alt": "Cheerleading"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/sports/youth-sports",
+  "fetchedAt": "2026-10-27"
+}

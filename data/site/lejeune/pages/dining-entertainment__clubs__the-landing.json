@@ -1,0 +1,144 @@
+{
+  "title": "The Landing",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Clubs",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs"
+    },
+    {
+      "label": "The Landing",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-landing"
+    }
+  ],
+  "intro": "Enjoy a relaxed dining experience at The Landing, an all ranks club offering a beautiful waterfront view—perfect for both casual lunches and memorable events.",
+  "sections": [
+    {
+      "heading": "About The Landing",
+      "level": 2,
+      "markdown": "Join us for weekday lunch service, featuring an à la carte menu with fresh, satisfying options for every taste. Whether you're planning a special occasion or just grabbing a midday bite, The Landing is your go-to spot for great food and great views."
+    },
+    {
+      "heading": "The Landing Lunch Menu",
+      "level": 2,
+      "markdown": "Choose from a variety of freshly prepared dishes, each priced individually so you can mix and match to your taste. From hearty mains to lighter sides, and fresh salads, our à la carte menu offers flexibility and flavor in every bite.\n\nAny burger or sandwich can also be made into a wrap.\n\nAdd Guacamole to any entrée: $1\n\n**Landing Burger** - $13\n6oz. steak burger served with beer cheese, green leaf lettuce, tomato, red onion, and pickle on a brioche bun\n\n**Rueben Sandwich** - $12\nA warm corned beef and Swiss sandwich with sauerkraut and thousand island dressing on marble rye\n\n**Chicken Bacon Ranch Sandwich** - $13\n6oz. chicken breast served with green leaf lettuce, tomato, red onion, and pickle on a brioche bun\n\n**Philly Cheesesteak** - $12\nThinly sliced sirloin with peppers and sliced red onion topped with cheese sauce on a hoagie roll\n\n**Chicken Philly** - $12\nThinly sliced chicken breast with peppers and red onion topped with cheese sauce on a hoagie roll\n\n**Protein Bowl** - $13\nRice, black beans, corn, cheese, lettuce, sour cream, fire roasted salsa and your choice of protein:\n• Chicken\n• Steak\n• Pork\n• Battered Shrimp\n\n**Carnitas Tacos** - $13\nCarnitas style pork tacos served on corn tortillas with slaw, pickled red onion, and chipotle adobo aioli\n\n**Chicken Wings** - $13\nFried chicken wings served with your choice of sauce – buffalo, honey butter garlic sauce, BBQ sauce, Thai sweet chili, or Nashville hot\n\n**Spicy Shrimp Po 'boy** - $13\nBattered shrimp served with green leaf lettuce, tomato, onion, and remoulade on a hoagie roll\n\n**Quesadilla** - $12\nFlour tortilla stuffed with cheese your choice of protein mixed with bell peppers and onions with a side of sour cream/fire roasted salsa:\n• Chicken\n• Steak\n• Pork\n• Shrimp\n\n**Entree Salad** - $12\nA large salad topped with carrots, cucumber, tomato, cheese, pickled onions, and croutons served with choice of protein and dressing:\n• Chicken and bacon\n• Steak\n• Pork\n• Battered Shrimp\n\n**Nashville Hot Chicken Sandwich** - $12\nGrilled or fried chicken tossed in Nashville hot sauce with pickles\n\n**Sides:** onion rings, sweet potato fries (salt or cinnamon sugar), natural cut fries, or side salad\n\n**Side Salad** - $6\nGreen leaf lettuce, tomato, red onion, shredded carrot, and crouton\n\n**Salad Dressing:** Ranch, Italian, Blue Cheese, Balsamic Vinaigrette, Caesar, Awesome Sauce\n\n**Beverages** - $2.50\nFree refills. Choice of Coke, Coke Zero, Mr. Pibb, Sprite, Pink Lemonade, Powerade, Sweet or Unsweet Tea"
+    },
+    {
+      "heading": "First Friday – presented by First Command",
+      "level": 2,
+      "markdown": "Enjoy live entertainment, complimentary food and drinks (while supplies last), and great camaraderie!\n\n• 1st Friday of the Month (Excludes July, Nov., and Dec.)\n• 3:30 - 5:30PM\n• The Landing\n\nOpen to all authorized patrons.\n\nMCCS Sponsor. No federal or DoD endorsement implied."
+    },
+    {
+      "heading": "Bingo Blast",
+      "level": 2,
+      "markdown": "• Various Saturdays (Dates in Event Calendar)\n• 11:15 - 4:30PM\n• Marston Pavilion\n\nGuaranteed $15,500 payout! $55 minimum buy-in. Open to patrons ages 18+ who have base access. Doors open at 8:30AM."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "The Landing",
+      "address": "710 Flounder Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-4494"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Lunch",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "11AM - 1PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "11AM - 1PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "11AM - 1PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "11AM - 1PM"
+            },
+            {
+              "days": "Friday",
+              "time": "11AM - 1PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        },
+        {
+          "label": "Bar",
+          "rows": [
+            {
+              "days": "Sunday - Tuesday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Wednesday",
+              "time": "2:30PM - until"
+            },
+            {
+              "days": "Thursday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Friday",
+              "time": "2:30PM - until"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        },
+        {
+          "label": "Office",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "8AM - 3:30PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "CLOSED"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "New River Officers' Spouses' Club",
+      "url": "https://www.newriverosc.org/"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/clubs/the-landing",
+  "fetchedAt": "2026-10-27"
+}

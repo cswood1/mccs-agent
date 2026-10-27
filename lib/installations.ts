@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import lejeune from "@/installations/lejeune.json";
 import pendleton from "@/installations/pendleton.json";
 import quantico from "@/installations/quantico.json";
 
@@ -51,6 +52,7 @@ export type InstallationContent = {
 const installations: Record<string, InstallationConfig> = {
   [quantico.id]: quantico,
   [pendleton.id]: pendleton,
+  [lejeune.id]: lejeune,
 };
 
 export function getInstallation(id: string): InstallationConfig | undefined {

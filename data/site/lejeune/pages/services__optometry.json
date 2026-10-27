@@ -1,0 +1,82 @@
+{
+  "title": "MCCS Optometry",
+  "breadcrumb": [
+    {
+      "label": "Services",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services"
+    },
+    {
+      "label": "Optometry",
+      "url": "https://lejeunenewriver.usmc-mccs.org/services/optometry"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "Lane Optometry PLLC",
+      "level": 2,
+      "markdown": "Call to book your next appointment."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Lane Optometry PLLC",
+      "address": "1231 Birch St.\nCamp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-3937"
+        },
+        {
+          "label": "Appointments",
+          "number": "910-451-5249"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours of operation",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Tuesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Wednesday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Thursday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Friday",
+              "time": "9AM - 5PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "9AM - 5PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/services/optometry",
+  "fetchedAt": "2026-10-27"
+}

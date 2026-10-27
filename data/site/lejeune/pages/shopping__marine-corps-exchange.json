@@ -1,0 +1,155 @@
+{
+  "title": "Marine Corps Exchange - Camp Lejeune & New River",
+  "breadcrumb": [
+    {
+      "label": "Shopping",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping"
+    },
+    {
+      "label": "Marine Corps Exchange",
+      "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-corps-exchange"
+    }
+  ],
+  "intro": "",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Camp Lejeune MCX is a retail service designed for Marines and their families on base. We help support everyday living by providing quality goods, trusted brands, and essential products at discounted prices. Customers will enjoy convenient, reliable access to value‑driven shopping that enhances comfort, readiness, and quality of life.\n\nThe New River MCX is a retail service designed for Marines and their families on base. We help support everyday living by providing quality goods, trusted brands, and essential products at discounted prices. Customers will enjoy convenient, reliable access to value‑driven shopping that enhances comfort, readiness, and quality of life."
+    },
+    {
+      "heading": "Shop MCX + NEX",
+      "level": 3,
+      "markdown": "Tax Free & Delivered to your door\n\n[SIGN UP TO SAVE!](https://www.mymcx.com/sign-up-for-mcx-circular)"
+    }
+  ],
+  "cards": [
+    {
+      "title": "Subscribe to MCX Offers Now",
+      "url": "https://www.mymcx.com/",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "eGift Cards",
+      "url": "https://mcxstore.wgiftcard.com/responsive/personalize_responsive/chooseDesign/mcx_resp/1",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Uniforms",
+      "url": "https://www.mymcx.com/uniforms",
+      "text": "",
+      "image": ""
+    },
+    {
+      "title": "Shop MCX + NEX",
+      "url": "https://www.mynavyexchange.com/",
+      "text": "Tax Free & Delivered to your door",
+      "image": "https://www.mymcx.com/cms_themes/mcx/images/hand-graving-smartphone.svg"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Camp Lejeune MCX",
+      "address": "Bldg. 1231 Birch St., Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-451-5030"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "9AM - 6PM"
+            },
+            {
+              "days": "Monday - Saturday",
+              "time": "8AM - 8PM"
+            }
+          ]
+        },
+        {
+          "label": "Firearms Counter",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Monday",
+              "time": "CLOSED"
+            },
+            {
+              "days": "Tuesday - Saturday",
+              "time": "10AM - 6PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    },
+    {
+      "name": "New River MCX",
+      "address": "Bldg. AS-4040 Curtis Rd., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-449-0539"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "Sunday",
+              "time": "8AM - 7PM"
+            },
+            {
+              "days": "Monday - Friday",
+              "time": "7AM - 7PM"
+            },
+            {
+              "days": "Saturday",
+              "time": "8AM - 7PM"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Holiday hours may vary."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "SIGN UP TO SAVE!",
+      "url": "https://www.mymcx.com/sign-up-for-mcx-circular"
+    },
+    {
+      "text": "Shop MCX + NEX",
+      "url": "https://www.mynavyexchange.com/"
+    },
+    {
+      "text": "Directions to Camp Lejeune MCX",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.674519332498434,-77.3408075244211"
+    },
+    {
+      "text": "Directions to New River MCX",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.723046726758334,-77.45750434515138"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/shopping/marine-corps-exchange",
+  "fetchedAt": "2026-10-27"
+}

@@ -1,0 +1,81 @@
+{
+  "title": "Inline Hockey",
+  "breadcrumb": [
+    {
+      "label": "Recreation & Fitness",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness"
+    },
+    {
+      "label": "Recreation",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation"
+    },
+    {
+      "label": "Inline Hockey",
+      "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/inline-hockey"
+    }
+  ],
+  "intro": "Built in 2001, the Inline Hockey Rink is equipped with boards and glass around the perimeter, player benches, penalty boxes, score box, and lights. This is a regulation size hockey rink measuring 75 feet wide and 165 feet long, covered with a sports tile engineered for perfect puck glide and grip for inline skates.",
+  "sections": [
+    {
+      "heading": "",
+      "level": 0,
+      "markdown": "The Inline Hockey Rink is open to all authorized DoD cardholders, family members, and their guests."
+    },
+    {
+      "heading": "Required Gear",
+      "level": 2,
+      "markdown": "All protective equipment is required at all times, while using the rink.\n\n- Adult Helmet – Minimum half shield required\n- Elbow Pads\n- Youth Helmet – Full shield or cage required\n- Hockey Gloves\n- Knee/Shin Guards\n- Mouth Piece\n- Sticks & Skates"
+    },
+    {
+      "heading": "Adult Pick-up Games",
+      "level": 2,
+      "markdown": "- Available year-round\n- Must wear required gear to attend pickup games\n- Times subject to change due to weather and league tournaments"
+    },
+    {
+      "heading": "Youth Pick-Up Games",
+      "level": 2,
+      "markdown": "- Available year-round\n- Sundays at 3PM\n- Times subject to change due to weather and league tournaments"
+    },
+    {
+      "heading": "Leagues",
+      "level": 2,
+      "markdown": "MCCS Sports hosts a spring and fall league with an average of 6-8 teams per league.\n\nLeagues are open to authorized patrons 18 years of age or older, and out of high school."
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Inline Hockey Rink",
+      "address": "AS-615 Agan St., MCAS New River, NC 28540",
+      "phones": [
+        {
+          "label": "Main",
+          "number": "910-449-5844"
+        }
+      ],
+      "emails": [],
+      "hours": [
+        {
+          "label": "Hours",
+          "rows": [
+            {
+              "days": "",
+              "time": "Open 24 hours"
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "links": [
+    {
+      "text": "Directions",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.72579849441148,-77.43889601486414"
+    }
+  ],
+  "images": [],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/recreation-fitness/recreation/inline-hockey",
+  "fetchedAt": "2026-10-27"
+}

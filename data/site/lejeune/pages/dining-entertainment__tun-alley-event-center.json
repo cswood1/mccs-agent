@@ -1,0 +1,65 @@
+{
+  "title": "Tun Alley Event Center",
+  "breadcrumb": [
+    {
+      "label": "Dining & Entertainment",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment"
+    },
+    {
+      "label": "Tun Alley Event Center",
+      "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/tun-alley-event-center"
+    }
+  ],
+  "intro": "Tun Alley Event Center is a premier venue that seamlessly blends tradition with modern elegance. The center boasts a spacious banquet room, a stylish bar with an inviting lounge, and a fully equipped conference room, making it the perfect setting for a variety of events.",
+  "sections": [
+    {
+      "heading": "Event Types",
+      "level": 2,
+      "markdown": "• Retirement Parties\n• Birthday Parties\n• Bridal & Baby Showers\n• Family Events\n• Business Meetings\n• Networking Events & PMEs"
+    },
+    {
+      "heading": "Details",
+      "level": 2,
+      "markdown": "**Capacity:** 200 in the Banquet Room\n\n**Hours:** Reservations required\n\n**Restrictions:** No outside food or beverages allowed\n\n**Amenities:** Audio/Video\n\n**Other Information:** Catering Available. Please call 910-450-7983 or email mccslejeunecatering@usmc-mccs.org for more details\n\n**Rates:** Please call for rates and availability"
+    }
+  ],
+  "cards": [],
+  "contacts": [
+    {
+      "name": "Tun Alley Event Center",
+      "address": "Bldg. 84 Holcomb Blvd. Inside Hadnot Point Plaza Camp Lejeune, NC 28547",
+      "phones": [
+        {
+          "label": "Phone",
+          "number": "910-450-7983"
+        }
+      ],
+      "emails": [
+        "mccslejeunecatering@usmc-mccs.org"
+      ],
+      "hours": [],
+      "notes": [
+        "Reservations required"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "text": "Bldg. 84 Holcomb Blvd. Inside Hadnot Point Plaza Camp Lejeune, NC 28547",
+      "url": "https://www.google.com/maps/search/?api=1&query=34.670100158086846,-77.34207902816318"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/65f6add1b1be429da54ddb954bf6458d.jpg?m=638579428888070000",
+      "alt": "fb-tunalley-eventcenter-rotator.jpg"
+    },
+    {
+      "src": "https://lejeunenewriver.usmc-mccs.org/modules/media/t/497684d4a80e431aad0145fa55a2e3e3.jpg?m=638579429380270000",
+      "alt": "fb-tunalley-eventcenter-mobile.jpg"
+    }
+  ],
+  "notCaptured": "",
+  "url": "https://lejeunenewriver.usmc-mccs.org/dining-entertainment/tun-alley-event-center",
+  "fetchedAt": "2026-10-27"
+}
