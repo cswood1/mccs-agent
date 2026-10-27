@@ -35,7 +35,17 @@
   var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
 
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
-  var EXAMPLES = ["Gym open now?", "Child care options?", "This weekend?", "Lunch on base?", "Book lodging?"];
+  // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
+  // already signals Ask MCCS, so the questions stand on their own.
+  var PLACEHOLDERS = [
+    "Ask MCCS anything…",
+    "Is the gym open now?",
+    "What’s on this weekend?",
+    "Where can I eat lunch?",
+    "Find child care on base",
+    "Book a room for my PCS",
+    "Am I eligible for TA?",
+  ];
   var searchIndex = null;
   var search = { input: null, listbox: null, sheet: null, options: [], active: -1 };
 
@@ -246,11 +256,7 @@
 
   function rotatePlaceholder(input) {
     var i = 0;
-    // Short enough to fit the box; boxes under 440px (the header bar, phones) drop "anything".
-    var set = function () {
-      var lead = input.clientWidth && input.clientWidth < 440 ? "Ask MCCS, like ‘" : "Ask MCCS anything, like ‘";
-      input.placeholder = lead + EXAMPLES[i % EXAMPLES.length] + "’";
-    };
+    var set = function () { input.placeholder = PLACEHOLDERS[i % PLACEHOLDERS.length]; };
     set();
     // Rotating text is motion too: keep it still for people who ask for reduced motion.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -471,9 +477,7 @@
   function openSheet() {
     if (!search.sheet) return;
     search.sheet.hidden = false;
-    var input = search.sheet.querySelector("input");
-    if (!input.value) input.placeholder = "Ask MCCS, like ‘" + EXAMPLES[0] + "’";
-    input.focus();
+    search.sheet.querySelector("input").focus();
   }
 
   function closeSheet() {

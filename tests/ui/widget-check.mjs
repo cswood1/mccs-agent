@@ -188,7 +188,7 @@ const attrs = await sInput.evaluate((el) => ({
 }));
 check("Search box is an editable combobox", !attrs.readonly && attrs.role === "combobox" && attrs.controls === "mccs-ask-listbox" && attrs.expanded === "false", JSON.stringify(attrs));
 check("Sparkle replaces the magnifier", (await sp.locator("#desktop-search-container svg.mccs-ask-icon").count()) === 1 && (await sp.locator("#desktop-search-container svg.bi-search").count()) === 0);
-check("Rotating example placeholder", /^Ask MCCS( anything)?, like ‘.+’$/.test(attrs.placeholder ?? ""), attrs.placeholder);
+check("Placeholder starts with the invitation", attrs.placeholder === "Ask MCCS anything…", attrs.placeholder);
 await sInput.focus();
 const lb = sp.locator("#mccs-ask-listbox");
 await lb.waitFor({ state: "visible" });
@@ -249,6 +249,37 @@ await sheetInput.press("Enter");
 await ph.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
 check("Phone: Enter asks in the panel", (await ph.locator("#mccs-assistant .panel").isVisible()) && !(await ph.locator("#mccs-ask-sheet").isVisible()));
 check("Phone: old search modal never opens", (await ph.locator("#searchModal.show").count()) === 0);
+
+// Placeholder rotation: invitation first, then the example questions every 4 s, paused on focus.
+const PLACEHOLDERS = ["Ask MCCS anything…", "Is the gym open now?", "What’s on this weekend?", "Where can I eat lunch?", "Find child care on base", "Book a room for my PCS", "Am I eligible for TA?"];
+const rotCtx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+await rotCtx.addCookies(await ctx.cookies());
+await rotCtx.route(/usmc-mccs\.org/, (r) => r.abort());
+await rotCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+const rp = await rotCtx.newPage();
+await rp.clock.install();
+await rp.goto(base + "/quantico", { waitUntil: "networkidle" });
+const seen = [await rp.locator("#main-search-input").getAttribute("placeholder")];
+for (let i = 1; i < PLACEHOLDERS.length + 1; i++) {
+  await rp.clock.runFor(4000);
+  seen.push(await rp.locator("#main-search-input").getAttribute("placeholder"));
+}
+check("Rotates through the questions in order, then repeats", JSON.stringify(seen) === JSON.stringify([...PLACEHOLDERS, PLACEHOLDERS[0]]), JSON.stringify(seen));
+await rp.locator("#main-search-input").focus();
+const before = await rp.locator("#main-search-input").getAttribute("placeholder");
+await rp.clock.runFor(12000);
+check("Rotation pauses while focused", (await rp.locator("#main-search-input").getAttribute("placeholder")) === before);
+const rmp = await (await (async () => {
+  const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
+  await c.addCookies(await ctx.cookies());
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  return c;
+})()).newPage();
+await rmp.clock.install();
+await rmp.goto(base + "/quantico", { waitUntil: "networkidle" });
+await rmp.clock.runFor(12000);
+check("Reduced motion: placeholder stays on the invitation", (await rmp.locator("#main-search-input").getAttribute("placeholder")) === "Ask MCCS anything…");
 
 // Reduced motion: no shimmer.
 const rmCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
