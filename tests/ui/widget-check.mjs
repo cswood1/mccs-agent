@@ -133,7 +133,7 @@ check("Nudge only once per session", !(await w2.locator(".nudge").isVisible()));
 
 // 6. Home page: default chips, no nudge.
 const p3 = await ctx2.newPage();
-await p3.goto(base + "/", { waitUntil: "networkidle" });
+await p3.goto(base + "/quantico", { waitUntil: "networkidle" });
 await p3.locator("#mccs-assistant button.launcher").click().catch(() => {});
 const homeChips = await p3.locator("#mccs-assistant .chips .chip").allTextContents();
 check("Home shows the default chips", homeChips[0] === "Just PCS’d here, where do I start?" && homeChips.length === 4, JSON.stringify(homeChips));
@@ -144,7 +144,8 @@ p4.on("pageerror", (e) => errors.push(e.message));
 const res = await p4.goto(base + "/recreation-fitness/fitness", { waitUntil: "networkidle" });
 check("Old path redirects to /quantico/...", p4.url().endsWith("/quantico/recreation-fitness/fitness") && res.ok(), p4.url());
 await p4.goto(base + "/", { waitUntil: "networkidle" });
-check("Root goes to the Quantico home", p4.url().endsWith("/quantico"), p4.url());
+check("Root is the front door (tests/ui/front-door-check.mjs)", new URL(p4.url()).pathname === "/" && (await p4.locator(".fd h1").count()) === 1, p4.url());
+await p4.goto(base + "/quantico", { waitUntil: "networkidle" });
 const pickerHref = await p4.locator("#modal-block-views-block-change-location-change-location a", { hasText: "Camp Pendleton" }).first().getAttribute("href");
 check("Location picker links to /pendleton", pickerHref === "/pendleton", pickerHref);
 const menuHref = await p4.locator("#offcanvasSidebar a", { hasText: "Recreation & Fitness" }).first().getAttribute("href");

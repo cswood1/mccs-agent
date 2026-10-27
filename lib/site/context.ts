@@ -9,6 +9,7 @@ export type PageInfo = {
   url: string;
   known: boolean;
   title: string;
+  fetchedAt: string;
   breadcrumb: string[];
   chips: string[];
   chipsFrom: "page" | "section" | "home";
@@ -66,6 +67,8 @@ export function pageInfo(inst: string, rawPath: string, defaultChips: string[]):
     url: siteOrigin(inst) + (path === "/" ? "/" : path),
     known: !!page,
     title: page?.title || "",
+    /** When the page was captured (ISO date), for "checked <date>" notes. */
+    fetchedAt: page?.fetchedAt || "",
     breadcrumb,
     chips: chips.slice(0, 4),
     chipsFrom,
