@@ -241,6 +241,7 @@ check("Phone: search icon is the sparkle", (await trigger.locator("svg.mccs-ask-
 await trigger.click();
 const sheetInput = ph.locator("#mccs-ask-sheet-input");
 check("Phone: opens the Ask MCCS search", (await ph.locator("#mccs-ask-sheet").isVisible()) && (await sheetInput.evaluate((el) => document.activeElement === el)));
+check("Phone: sheet input has the fixed accessible name", (await sheetInput.getAttribute("aria-label")) === "Ask MCCS" && (await sheetInput.getAttribute("placeholder"))?.startsWith("Ask MCCS"));
 await sheetInput.fill("bowling");
 await ph.waitForTimeout(200);
 const phoneOpts = await ph.locator("#mccs-ask-listbox [role=option]").allTextContents();
@@ -250,7 +251,8 @@ await ph.locator("#mccs-assistant .msg.assistant").filter({ hasText: "Stub answe
 check("Phone: Enter asks in the panel", (await ph.locator("#mccs-assistant .panel").isVisible()) && !(await ph.locator("#mccs-ask-sheet").isVisible()));
 check("Phone: old search modal never opens", (await ph.locator("#searchModal.show").count()) === 0);
 
-// Placeholder rotation: invitation first, then the examples every 2.5 s with a quick fade, paused on focus.
+// Placeholder: "Ask MCCS" stays; the rest of each suggestion types out (~35 ms/char), holds ~2 s,
+// erases in ~0.3 s, then the next types. Paused while focused.
 const PLACEHOLDERS = ["Ask MCCS anything…", "Ask MCCS… Gym hours today", "Ask MCCS… Events this weekend", "Ask MCCS… Child care on base", "Ask MCCS… Where to eat lunch", "Ask MCCS… Things to do on base", "Ask MCCS… Lodging on base"];
 const rotCtx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
 await rotCtx.addCookies(await ctx.cookies());
@@ -259,23 +261,38 @@ await rotCtx.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "
 const rp = await rotCtx.newPage();
 await rp.clock.install();
 await rp.goto(base + "/quantico", { waitUntil: "networkidle" });
-// Record the fade class going on and off around each switch.
+check("Search box has a fixed accessible name", (await rp.locator("#main-search-input").getAttribute("aria-label")) === "Ask MCCS");
+// Record every placeholder value with its (fake-clock) time.
 await rp.locator("#main-search-input").evaluate((el) => {
-  window.__fades = [];
-  new MutationObserver(() => window.__fades.push(el.classList.contains("mccs-ph-fade"))).observe(el, { attributes: true, attributeFilter: ["class"] });
+  window.__ph = [{ t: Date.now(), v: el.placeholder }];
+  new MutationObserver(() => window.__ph.push({ t: Date.now(), v: el.placeholder })).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
 });
-const seen = [await rp.locator("#main-search-input").getAttribute("placeholder")];
-for (let i = 1; i < PLACEHOLDERS.length + 1; i++) {
-  await rp.clock.runFor(2500);
-  seen.push(await rp.locator("#main-search-input").getAttribute("placeholder"));
-}
-const fades = await rp.evaluate(() => window.__fades);
-check("Quick fade between placeholders", fades.length >= 2 * (PLACEHOLDERS.length - 1) && fades[0] === true && fades.includes(false), JSON.stringify(fades.slice(0, 6)));
-check("Rotates through the questions in order, then repeats", JSON.stringify(seen) === JSON.stringify([...PLACEHOLDERS, PLACEHOLDERS[0]]), JSON.stringify(seen));
+await rp.clock.runFor(PLACEHOLDERS.length * 3400);
+const frames = await rp.evaluate(() => window.__ph);
+const vals = frames.map((p) => p.v);
+check("Placeholder starts on the invitation", vals[0] === "Ask MCCS anything…", vals[0]);
+check("“Ask MCCS” never disappears", vals.every((v) => v.startsWith("Ask MCCS")), vals.find((v) => !v.startsWith("Ask MCCS")));
+// Full suggestions in the order they were completed.
+const completed = vals.filter((v, k) => PLACEHOLDERS.includes(v) && vals[k + 1] !== undefined && vals[k + 1].length < v.length);
+check("Types the suggestions in order, then repeats", JSON.stringify(completed.slice(0, PLACEHOLDERS.length + 1)) === JSON.stringify([...PLACEHOLDERS, PLACEHOLDERS[0]]), JSON.stringify(completed));
+const gymFrames = vals.slice(vals.indexOf("Ask MCCS") + 1, vals.indexOf("Ask MCCS… Gym hours today") + 1);
+check("Types letter by letter", gymFrames.length === "… Gym hours today".length && gymFrames.every((v, k) => v === "Ask MCCS… Gym hours today".slice(0, "Ask MCCS".length + k + 1)), JSON.stringify(gymFrames.slice(0, 4)));
+// Timing for one suggestion: type, hold, erase.
+const at = (v, from = 0) => frames.findIndex((p, k) => k >= from && p.v === v);
+const gStart = at("Ask MCCS…", 1), gFull = at("Ask MCCS… Gym hours today"), gNext = gFull + 1, gEmpty = at("Ask MCCS", gFull);
+const typePerChar = (frames[gFull].t - frames[gStart].t) / ("… Gym hours today".length - 1);
+const hold = frames[gNext].t - frames[gFull].t;
+const erase = frames[gEmpty].t - frames[gFull].t - hold;
+check("~35 ms per character typed", typePerChar >= 30 && typePerChar <= 45, typePerChar.toFixed(1));
+check("Holds ~2 s", hold >= 1950 && hold <= 2100, String(hold));
+check("Erases in ~0.3 s", erase >= 200 && erase <= 380, String(erase));
+const cycle = frames[at("Ask MCCS… E", gFull)].t - frames[gStart].t;
+check("Full cycle about 3 s", cycle >= 2500 && cycle <= 3400, String(cycle));
 await rp.locator("#main-search-input").focus();
+await rp.clock.runFor(300);
 const before = await rp.locator("#main-search-input").getAttribute("placeholder");
 await rp.clock.runFor(8000);
-check("Rotation pauses while focused", (await rp.locator("#main-search-input").getAttribute("placeholder")) === before);
+check("Typing pauses while focused, on a full suggestion", (await rp.locator("#main-search-input").getAttribute("placeholder")) === before && PLACEHOLDERS.includes(before), before);
 const rmp = await (await (async () => {
   const c = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: "reduce" });
   await c.addCookies(await ctx.cookies());
@@ -287,6 +304,12 @@ await rmp.clock.install();
 await rmp.goto(base + "/quantico", { waitUntil: "networkidle" });
 await rmp.clock.runFor(12000);
 check("Reduced motion: placeholder stays on the invitation", (await rmp.locator("#main-search-input").getAttribute("placeholder")) === "Ask MCCS anything…");
+await rmp.locator("#main-search-input").evaluate((el) => {
+  window.__rmph = 0;
+  new MutationObserver(() => window.__rmph++).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
+});
+await rmp.clock.runFor(6000);
+check("Reduced motion: no typing animation", (await rmp.evaluate(() => window.__rmph)) === 0);
 
 // Floating button and panel: full button → minimize → edge tab → reopen → navigation keeps the tab → reload shows the full button.
 async function edgeFlow(label, viewport, mobile) {

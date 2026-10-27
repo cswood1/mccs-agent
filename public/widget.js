@@ -37,17 +37,21 @@
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
   // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
   // already signals Ask MCCS, so the questions stand on their own.
-  var PLACEHOLDERS = [
-    "Ask MCCS anything…",
-    "Ask MCCS… Gym hours today",
-    "Ask MCCS… Events this weekend",
-    "Ask MCCS… Child care on base",
-    "Ask MCCS… Where to eat lunch",
-    "Ask MCCS… Things to do on base",
-    "Ask MCCS… Lodging on base",
+  // Header search placeholder: "Ask MCCS" stays, the rest of each suggestion types out.
+  var PLACEHOLDER_PREFIX = "Ask MCCS";
+  var PLACEHOLDER_SUFFIXES = [
+    " anything…",
+    "… Gym hours today",
+    "… Events this weekend",
+    "… Child care on base",
+    "… Where to eat lunch",
+    "… Things to do on base",
+    "… Lodging on base",
   ];
-  var PLACEHOLDER_MS = 2500; // time each one shows
-  var PLACEHOLDER_FADE_MS = 160; // quick fade between them
+  var TYPE_MS = 35; // per character typed
+  var HOLD_MS = 2000; // full suggestion shown
+  var ERASE_MS = 300; // whole suggestion erased
+  var PAUSE_POLL_MS = 250; // while focused or typed in
   var searchIndex = null;
   var search = { input: null, listbox: null, sheet: null, options: [], active: -1 };
 
@@ -267,22 +271,45 @@
       '<path d="M12 2.5c.7 5.2 4.3 8.8 9.5 9.5-5.2.7-8.8 4.3-9.5 9.5-.7-5.2-4.3-8.8-9.5-9.5 5.2-.7 8.8-4.3 9.5-9.5z"/></svg>';
   }
 
+  // Types each suggestion after "Ask MCCS", holds it, erases it quickly, then types the next.
+  // While the box is focused or has text, the current suggestion is shown in full and waits.
   function rotatePlaceholder(input) {
     var i = 0;
-    var set = function () { input.placeholder = PLACEHOLDERS[i % PLACEHOLDERS.length]; };
-    set();
-    // Rotating text is motion too: keep it still for people who ask for reduced motion.
+    var shown = PLACEHOLDER_SUFFIXES[0].length;
+    var show = function () { input.placeholder = PLACEHOLDER_PREFIX + PLACEHOLDER_SUFFIXES[i].slice(0, shown); };
+    show();
+    // Typing text is motion too: keep it still for people who ask for reduced motion.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    setInterval(function () {
-      if (document.activeElement === input || input.value) return;
-      // Quick fade out, swap the text, fade back in.
-      input.classList.add("mccs-ph-fade");
+    var paused = function () { return document.activeElement === input || !!input.value; };
+
+    function wait() {
+      shown = PLACEHOLDER_SUFFIXES[i].length;
+      show();
       setTimeout(function () {
-        i++;
-        set();
-        input.classList.remove("mccs-ph-fade");
-      }, PLACEHOLDER_FADE_MS);
-    }, PLACEHOLDER_MS);
+        if (paused()) wait();
+        else setTimeout(erase, HOLD_MS);
+      }, PAUSE_POLL_MS);
+    }
+    function erase() {
+      if (paused()) return wait();
+      if (shown > 0) {
+        shown--;
+        show();
+        return setTimeout(erase, ERASE_MS / PLACEHOLDER_SUFFIXES[i].length);
+      }
+      i = (i + 1) % PLACEHOLDER_SUFFIXES.length;
+      type();
+    }
+    function type() {
+      if (paused()) return wait();
+      if (shown < PLACEHOLDER_SUFFIXES[i].length) {
+        shown++;
+        show();
+        return setTimeout(type, TYPE_MS);
+      }
+      setTimeout(erase, HOLD_MS);
+    }
+    setTimeout(erase, HOLD_MS);
   }
 
   function setupCombobox(input) {
@@ -291,7 +318,8 @@
     input.setAttribute("aria-haspopup", "listbox");
     input.setAttribute("aria-expanded", "false");
     input.setAttribute("aria-controls", search.listbox.id);
-    input.setAttribute("aria-label", "Ask MCCS or find a page");
+    // A fixed name, so screen readers don't announce the typing placeholder.
+    input.setAttribute("aria-label", "Ask MCCS");
     input.setAttribute("autocomplete", "off");
     input.addEventListener("focus", function () {
       search.input = input;
@@ -511,8 +539,7 @@
     st.id = "mccs-ask-style";
     st.textContent = [
       "#main-search-input[role=combobox] { cursor: text; padding-right: 2.6rem; text-overflow: ellipsis; }",
-      "#main-search-input[role=combobox]::placeholder, #mccs-ask-sheet input::placeholder { opacity: 1; transition: opacity .16s ease; }",
-      "#main-search-input.mccs-ph-fade::placeholder, #mccs-ask-sheet input.mccs-ph-fade::placeholder { opacity: 0; }",
+      "#main-search-input[role=combobox]::placeholder, #mccs-ask-sheet input::placeholder { opacity: 1; }",
       "#mccs-ask-listbox { position: fixed; z-index: 2147482990; box-sizing: border-box; max-height: min(70vh, 460px); overflow-y: auto; padding: 6px;",
       "  background: #fff; color: #212529; border: 1px solid #dee2e6; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,.2);",
       "  font: 15px/1.35 'Noto Sans', system-ui, -apple-system, sans-serif; text-align: left; }",
