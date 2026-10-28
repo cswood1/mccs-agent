@@ -285,8 +285,8 @@ const ask = async (p, q) => {
   await c.close();
 }
 
-// 3b. Thinking phrases in place of typing dots: one per message, never the same twice in a row.
-const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…", "Hooking and jabbing, be right back…"];
+// 3b. Thinking phrase in place of typing dots: the same one on every message.
+const THINKING = ["Hooking and jabbing, be right back…"];
 {
   const { c, p } = await open();
   await p.evaluate(() => { window.__hold = true; });
@@ -303,8 +303,7 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
     if (k === 0) check("Front door: thinking phrase clears when the answer starts", (await last.locator(".fd-thinking").count()) === 0);
     await p.locator(".fd-followups").waitFor();
   }
-  check("Front door: a thinking phrase from the list, announced once (role=status)", seen.every((x) => THINKING.includes(x.text) && x.role === "status"), JSON.stringify(seen));
-  check("Front door: never the same phrase on consecutive messages", seen.every((x, k) => k === 0 || x.text !== seen[k - 1].text), seen.map((x) => x.text).join(" | "));
+  check("Front door: “Hooking and jabbing, be right back…” on every message, announced once (role=status)", seen.length === 4 && seen.every((x) => x.text === THINKING[0] && x.role === "status"), JSON.stringify(seen));
   check("Front door: thinking phrase shimmers", seen.every((x) => x.anim === "fd-thinking"));
   const saved = await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation:quantico") ?? "");
   check("Front door: thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));

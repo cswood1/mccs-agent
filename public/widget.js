@@ -34,15 +34,12 @@
   var currentPath = (location.pathname.replace(/\/+$/, "") || "/");
   var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
   var STATUS = "\u001d"; // wraps a status line ("Checking the latest MCCS info…") sent while a tool runs
-  // Shown in place of typing dots until the answer starts: one per message, never the same twice in a
-  // row; the last one is rarer (about 1 in 6). Same list as THINKING in lib/chat-client.ts.
-  var THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…"];
-  var THINKING_RARE = "Hooking and jabbing, be right back…";
+  // Shown in place of typing dots until the answer starts. Same list as THINKING in lib/chat-client.ts.
+  var THINKING = ["Hooking and jabbing, be right back…"];
   // Composer placeholder before the first message and after it.
   var PLACEHOLDER_FIRST = "Ask MCCS anything…";
   var PLACEHOLDER_FOLLOWUP = "Ask a follow-up…";
   var INPUT_MAX = 108; // about 4 lines, then the field scrolls
-  var lastThinking = "";
 
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
   // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
@@ -181,8 +178,6 @@
   window.mccsAssistant = {
     open: function () { setOpen(true); },
     ask: function (q) { setOpen(true); send(q); },
-    // For checks: the thinking-phrase picker.
-    _pickThinking: pickThinking,
   };
 
   // ---------- behavior ----------
@@ -707,7 +702,7 @@
     autosize();
 
     state.messages.push({ role: "user", content: text });
-    var reply = { role: "assistant", content: "", thinking: pickThinking() }; // thinking: display only
+    var reply = { role: "assistant", content: "", thinking: THINKING[0] }; // thinking: display only
     var raw = "";
     state.messages.push(reply);
     state.busy = true;
@@ -870,18 +865,6 @@
     }
     if (m.status) el.querySelector(".status").textContent = m.status;
     return el;
-  }
-
-  /** A thinking phrase for a new message: never the last one again; the rare one about 1 in 6. */
-  function pickThinking() {
-    var pick;
-    if (lastThinking !== THINKING_RARE && Math.random() < 1 / 6) pick = THINKING_RARE;
-    else {
-      var options = THINKING.filter(function (t) { return t !== lastThinking; });
-      pick = options[Math.floor(Math.random() * options.length)];
-    }
-    lastThinking = pick;
-    return pick;
   }
 
   function scrollToEnd() {

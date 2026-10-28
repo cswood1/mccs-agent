@@ -654,8 +654,8 @@ async function animationOf(loc) {
   return "";
 }
 
-// Thinking phrases in place of typing dots: one per message, never the same twice in a row.
-const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…", "Hooking and jabbing, be right back…"];
+// Thinking phrase in place of typing dots: the same one on every message.
+const THINKING = ["Hooking and jabbing, be right back…"];
 {
   const { c, p } = await statusPage();
   await p.evaluate(() => { window.__noStatus = true; });
@@ -671,8 +671,8 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
     await last.filter({ hasText: "relocation office" }).waitFor();
     if (k === 0) check("Thinking phrase clears when the answer starts", (await last.locator(".thinking").count()) === 0);
   }
-  check("A thinking phrase from the list while waiting, announced once (role=status), no dots", seen.every((x) => THINKING.includes(x.text) && x.role === "status" && x.dots === 0), JSON.stringify(seen));
-  check("Never the same phrase on consecutive messages", seen.every((x, k) => k === 0 || x.text !== seen[k - 1].text), seen.map((x) => x.text).join(" | "));
+  check("“Hooking and jabbing, be right back…” on every message, announced once (role=status), no dots", seen.length === 4 && seen.every((x) => x.text === THINKING[0] && x.role === "status" && x.dots === 0), JSON.stringify(seen));
+  check("No random picker left", await p.evaluate(() => !("_pickThinking" in window.mccsAssistant)));
   const scroll = await p.locator("#mccs-assistant .panel").evaluate((panel) => {
     const log = panel.querySelector(".log");
     return { overflows: log.scrollHeight > log.clientHeight, overflowY: getComputedStyle(log).overflowY, panelHeight: panel.getBoundingClientRect().height, atEnd: log.scrollHeight - log.scrollTop - log.clientHeight < 2 };
@@ -681,19 +681,6 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
   check("Thinking phrase shimmers", seen.every((x) => x.anim === "thinking-shimmer"), JSON.stringify(seen.map((x) => x.anim)));
   const saved = await p.evaluate(() => sessionStorage.getItem("mccs-assistant:quantico") ?? "");
   check("Thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));
-  const dist = await p.evaluate((list) => {
-    const pick = window.mccsAssistant._pickThinking;
-    let prev = "", repeats = 0, rare = 0, unknown = 0;
-    for (let i = 0; i < 6000; i++) {
-      const t = pick();
-      if (t === prev) repeats++;
-      if (t === list[3]) rare++;
-      if (!list.includes(t)) unknown++;
-      prev = t;
-    }
-    return { repeats, rareShare: rare / 6000, unknown };
-  }, THINKING);
-  check("Picker: no repeats; “Hooking and jabbing” about 1 in 6", dist.repeats === 0 && dist.unknown === 0 && dist.rareShare > 0.12 && dist.rareShare < 0.21, JSON.stringify(dist));
   await c.close();
 }
 {

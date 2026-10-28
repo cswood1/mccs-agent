@@ -9,19 +9,8 @@ export const FRAME = "\u001e";
 /** Wraps a status line ("Checking the live MCCS page…") sent while a tool runs. */
 export const STATUS = "\u001d";
 
-/**
- * Shown in place of typing dots until the answer starts: one per message, never the same twice in a
- * row; the last one is rarer (about 1 in 6). Same list as THINKING in public/widget.js.
- */
-export const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…"];
-export const THINKING_RARE = "Hooking and jabbing, be right back…";
-
-/** A thinking phrase for a new message, given the previous one. */
-export function pickThinking(previous: string, random: () => number = Math.random): string {
-  if (previous !== THINKING_RARE && random() < 1 / 6) return THINKING_RARE;
-  const options = THINKING.filter((t) => t !== previous);
-  return options[Math.floor(random() * options.length)];
-}
+/** Shown in place of typing dots until the answer starts. Same list as THINKING in public/widget.js. */
+export const THINKING = ["Hooking and jabbing, be right back…"];
 
 /** Demo app slugs that differ from the real subdomain (same map as scripts/extract-theme.mjs). */
 const SLUG_FOR_SUBDOMAIN: Record<string, string> = { lejeunenewriver: "lejeune" };

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { firstMccsLink, markdown, parseStream, pickThinking, shortDate, speechText } from "@/lib/chat-client";
+import { firstMccsLink, markdown, parseStream, shortDate, THINKING, speechText } from "@/lib/chat-client";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
 import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, warm, write } from "./shared";
@@ -108,7 +108,6 @@ export default function FrontDoor({
   const recRef = useRef<Recognition | null>(null);
   const askRef = useRef<HTMLTextAreaElement | null>(null);
   const restored = useRef(false);
-  const lastThinking = useRef("");
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [ready, setReady] = useState(false); // browser-only state loaded
 
@@ -331,8 +330,7 @@ export default function FrontDoor({
       while (history.length > 29) history.shift();
       while (history.length && history[0].role !== "user") history.shift();
       const replyIndex = messages.length + 1;
-      const thinking = pickThinking(lastThinking.current);
-      lastThinking.current = thinking;
+      const thinking = THINKING[0];
       setMessages((ms) => [...ms, { role: "user", content: q }, { role: "assistant", content: "", thinking }]);
       setBusy(true);
       const abort = new AbortController();
