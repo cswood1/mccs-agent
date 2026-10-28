@@ -35,12 +35,13 @@ const DISPLAY_KEY = "mccs-front:display";
 const CONVO_KEY = "mccs-front:conversation";
 // Short enough to fit the ask box on a 375px phone.
 const EXAMPLES = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
-// Typing placeholder: same timing as the widget's header search (public/widget.js), about 3 s per
-// example: 35 ms a letter, a 2 s hold, then a 0.3 s erase.
-const TYPE_MS = 35;
-const HOLD_MS = 2000;
+// Typing placeholder: the widget header search's effect (public/widget.js), at a calmer pace for the
+// front door: about 4.5 s per example. 50 ms a letter (~1 s for the ~19-letter examples), a 3.25 s
+// hold, then a 0.3 s erase.
+const TYPE_MS = 50;
+const HOLD_MS = 3250;
 const ERASE_MS = 300;
-const SLIDE_MS = 5000; // hero photo carousel
+const SLIDE_MS = 6500; // hero photo carousel
 
 /** "Start with a moment": each numbered card opens the conversation with a set question. */
 const MOMENTS: { id: string; title: string; blurb: string; question: (base: string) => string }[] = [
@@ -206,7 +207,7 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
   const askPlaceholder =
     mode === "chat" ? "Ask a follow-up…" : reducedMotion ? EXAMPLES[0] : askFocused || question ? "" : typed;
 
-  // Hero photo carousel: all installations' photos, whichever is selected; 5 s each, crossfading.
+  // Hero photo carousel: all installations' photos, whichever is selected; 6.5 s each, crossfading.
   // Paused while the tab is hidden, on hover, on keyboard focus in the photo, or by the button.
   const slides = installations.filter((i) => i.hero).map((i) => ({ id: i.id, photo: i.hero as Photo }));
   const [slide, setSlide] = useState(0);

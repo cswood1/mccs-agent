@@ -298,13 +298,13 @@ const ask = async (p, q) => {
   check("Carousel: all three hero photos preloaded", (await p.locator(".fd-hero-photo img").evaluateAll((els) => els.length === 3 && els.every((e) => e.complete && e.naturalWidth > 0))));
   check("Carousel: soft 0.8s crossfade", /opacity 0\.8s/.test(await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transition)));
   const s0 = await state();
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   const s1 = await state();
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   const s2 = await state();
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   const s3 = await state();
-  check("Carousel: every 5 s through Quantico, Pendleton, Lejeune", [s0.id, s1.id, s2.id, s3.id].join() === "quantico,pendleton,lejeune,quantico", [s0.id, s1.id, s2.id, s3.id].join());
+  check("Carousel: every 6.5 s through Quantico, Pendleton, Lejeune", [s0.id, s1.id, s2.id, s3.id].join() === "quantico,pendleton,lejeune,quantico", [s0.id, s1.id, s2.id, s3.id].join());
   check("Carousel: alt text follows the photo shown", s1.alt === "Snow-capped mountains above green hills at Marine Corps Base Camp Pendleton" && s2.alt !== s1.alt && (await p.locator(".fd-hero-photo img[aria-hidden=true]").count()) === 2, JSON.stringify(s1));
   check("Carousel: credit follows the photo shown", s1.credit === "Photo: Sgt. Melissa Marnell, USMC" && s2.credit !== s1.credit && s0.credit === s3.credit, `${s0.credit} | ${s1.credit} | ${s2.credit}`);
 
@@ -321,21 +321,21 @@ const ask = async (p, q) => {
   check("Carousel: paused by the button", (await active()) === "quantico");
   await toggle.click();
   await p.mouse.move(5, 400);
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   check("Carousel: Play resumes", (await active()) === "pendleton", await active());
 
   await p.locator(".fd-hero-photo").hover();
   await p.clock.runFor(12000);
   check("Carousel: paused while hovered", (await active()) === "pendleton");
   await p.mouse.move(5, 400);
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   check("Carousel: resumes when the pointer leaves", (await active()) === "lejeune", await active());
 
   await p.locator(".fd-hero-photo .fd-credit").focus();
   await p.clock.runFor(12000);
   check("Carousel: paused while keyboard focus is on the photo", (await active()) === "lejeune");
   await p.locator("#fd-inst-select").focus();
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   check("Carousel: resumes when focus leaves", (await active()) === "quantico", await active());
 
   const setHidden = (hidden) =>
@@ -347,7 +347,7 @@ const ask = async (p, q) => {
   await p.clock.runFor(12000);
   check("Carousel: paused while the tab is hidden", (await active()) === "quantico");
   await setHidden(false);
-  await p.clock.runFor(5000);
+  await p.clock.runFor(6500);
   check("Carousel: resumes when the tab is visible", (await active()) === "pendleton", await active());
   await c.close();
 }
@@ -363,7 +363,7 @@ const ask = async (p, q) => {
   await c.close();
 }
 
-// 6. Typing placeholder (the widget's timing), and reduced motion.
+// 6. Typing placeholder (the widget's effect, calmer timing), and reduced motion.
 {
   const { c, p } = await open({ clock: true });
   const box = p.locator("#fd-ask-input");
@@ -373,7 +373,7 @@ const ask = async (p, q) => {
     window.__ph = [{ t: Date.now(), v: el.placeholder }];
     new MutationObserver(() => window.__ph.push({ t: Date.now(), v: el.placeholder })).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
   });
-  await p.clock.runFor(9000);
+  await p.clock.runFor(12000);
   const frames = await p.evaluate(() => window.__ph);
   const vals = frames.map((f) => f.v);
   const second = "Child care waitlist";
@@ -384,11 +384,11 @@ const ask = async (p, q) => {
   const perChar = (frames[at(second)].t - frames[at("C", emptyAt)].t) / (second.length - 1);
   const hold = frames[at(second) + 1].t - frames[at(second)].t;
   const erase = frames[at("", at(second))].t - frames[at(second)].t - hold;
-  check("Typing: ~35 ms a letter", perChar >= 30 && perChar <= 45, perChar.toFixed(1));
-  check("Typing: holds ~2 s", hold >= 1950 && hold <= 2100, String(hold));
+  check("Typing: ~50 ms a letter", perChar >= 45 && perChar <= 60, perChar.toFixed(1));
+  check("Typing: holds ~3.25 s", hold >= 3200 && hold <= 3350, String(hold));
   check("Typing: erases in ~0.3 s", erase >= 200 && erase <= 380, String(erase));
   const cycle = frames[at("W", at(second))].t - frames[at("C", emptyAt)].t;
-  check("Typing: about 3 s per example", cycle >= 2400 && cycle <= 3300, String(cycle));
+  check("Typing: about 4.5 s per example", cycle >= 4200 && cycle <= 4800, String(cycle));
 
   await box.focus();
   check("Typing: cleared while the box is focused", (await box.getAttribute("placeholder")) === "");
