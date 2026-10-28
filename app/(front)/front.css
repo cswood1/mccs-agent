@@ -198,10 +198,14 @@
   height: 1em;
   opacity: 0.7;
 }
+/* Installation pill: a link back to the globe page. */
 .fd-inst {
-  padding-right: 0.4em;
-  cursor: auto;
   max-width: calc(100% - 9em);
+  text-decoration: none;
+}
+.fd-inst span {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .fd-inst select {
   appearance: none;
@@ -218,12 +222,6 @@
   color: var(--fd-ink);
   text-overflow: ellipsis;
   cursor: pointer;
-}
-/* Installation pill: the ring for keyboard focus only (data-input is the last input type; see
-   front-door.tsx), since a clicked <select> also matches :focus-visible. */
-.fd:not([data-input="pointer"]) .fd-inst:has(select:focus-visible) {
-  border-color: var(--fd-focus);
-  box-shadow: var(--fd-ring), var(--fd-pill-shadow);
 }
 .fd[data-theme="dark"] .fd-inst select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bcd' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
@@ -743,6 +741,235 @@
   font-size: 0.9em;
 }
 
+/* Installation cards: ask another base, or visit the full recreated site. */
+.fd-bcard {
+  cursor: auto;
+}
+.fd-bcard-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1em;
+  margin-top: 0.45em;
+  padding: 0 0.6em;
+}
+.fd-bcard .fd-bcard-links .fd-cta {
+  margin-top: 0;
+  padding: 0;
+}
+.fd-cta-link {
+  text-decoration: none;
+}
+.fd-cta-link:hover {
+  text-decoration: underline;
+}
+.fd-cta-link:hover .fd-arrow {
+  transform: translateX(3px);
+}
+.fd-here {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fd-muted);
+}
+
+/* ---------- Explore your MCCS (/): headline, list and globe ---------- */
+.fd--explore .fd-top {
+  justify-content: flex-end;
+}
+.fd-explore {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.fd-explore-text {
+  padding: 0.5em var(--fd-pad) 1em;
+}
+.fd-explore h1 {
+  font-family: var(--fd-serif);
+  font-weight: 800;
+  font-variation-settings: "opsz" 144;
+  font-size: 3.1em;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.35em;
+}
+.fd-explore-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6em;
+  max-width: 30em;
+}
+.fd-explore-btn {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1em;
+  padding: 0.8em 2.6em 0.8em 1.1em;
+  background: var(--fd-surface);
+}
+.fd-explore-btn .fd-arrow {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--fd-navy);
+  font-weight: 700;
+}
+.fd-explore-btn:hover .fd-arrow {
+  transform: translateX(3px);
+}
+.fd-explore-btn.is-last {
+  border-color: var(--fd-red);
+}
+.fd-last {
+  margin-top: 0.3em;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fd-red);
+}
+.fd-globe-wrap {
+  position: relative;
+  min-height: min(100vw, 26rem);
+}
+.fd-globe {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.fd-globe canvas {
+  outline: none;
+}
+.fd-globe-note {
+  margin: 1em var(--fd-pad);
+  color: var(--fd-muted);
+}
+@media (min-width: 60em) {
+  .fd-explore {
+    flex-direction: row;
+    align-items: stretch;
+    min-height: calc(100vh - 8rem);
+  }
+  .fd-explore-text {
+    flex: 0 0 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 0 4em clamp(2rem, 7vw, 8rem);
+  }
+  .fd-explore h1 {
+    font-size: clamp(3.6em, 5.4vw, 6em);
+  }
+  .fd-globe-wrap {
+    flex: 1;
+    min-height: 34rem;
+  }
+}
+
+/* Globe markers: a pulsing MCCS-red point with a label; labels point away from each other. */
+.fd-marker {
+  position: relative;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: opacity 0.2s ease;
+}
+.fd-marker-dot {
+  position: absolute;
+  left: -0.45rem;
+  top: -0.45rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--fd-red);
+  box-shadow: 0 0 0 2px var(--fd-surface);
+}
+.fd-marker-dot::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--fd-red);
+  animation: fd-marker-pulse 2s ease-out infinite;
+}
+.fd-marker-label {
+  position: absolute;
+  top: -1rem;
+  left: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--fd-line);
+  border-radius: 999px;
+  background: var(--fd-surface);
+  color: var(--fd-ink);
+  box-shadow: var(--fd-pill-shadow);
+  font: 600 0.85rem/1.2 var(--fd-sans);
+  white-space: nowrap;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.fd-marker--right-up .fd-marker-label {
+  top: -2.6rem;
+}
+.fd-marker--right-down .fd-marker-label {
+  top: 0.55rem;
+}
+.fd-marker--left .fd-marker-label {
+  left: auto;
+  right: 0.9rem;
+}
+.fd-marker:hover .fd-marker-label,
+.fd-marker.is-last .fd-marker-label {
+  border-color: var(--fd-red);
+}
+.fd-marker:hover .fd-marker-label {
+  background: var(--fd-red);
+  color: var(--fd-red-ink);
+}
+.fd-marker:hover .fd-marker-dot {
+  transform: scale(1.3);
+}
+/* Phones: Camp Pendleton's label sits below its dot and the others point right, in smaller type,
+   so all three fit on a 375px screen without overlapping. */
+@media (max-width: 30em) {
+  .fd-marker-label {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.55rem;
+    left: 0.7rem;
+  }
+  .fd-marker--left .fd-marker-label {
+    left: 0;
+    right: auto;
+    top: 0.75rem;
+    translate: -50% 0;
+  }
+}
+@keyframes fd-marker-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* Smooth crossfade between the globe page and a front door (cross-document view transitions). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
+
 /* ---------- conversation ---------- */
 .fd-chat-main {
   max-width: 48em;
@@ -948,6 +1175,9 @@
   .fd-arrow,
   .fd-hero-photo img {
     transition: none;
+  }
+  .fd-marker-dot::after {
+    animation: none;
   }
   .fd-card:hover .fd-arrow {
     transform: none;

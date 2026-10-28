@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { firstMccsLink, markdown, parseStream, shortDate, speechText } from "@/lib/chat-client";
+import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
+import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, warm, write } from "./shared";
 
 export type FrontInstallation = {
   id: string;
@@ -27,11 +29,8 @@ type Msg = {
   error?: boolean;
 };
 
-type Display = { theme: "light" | "dark"; large: boolean; contrast: boolean };
-
-const INST_KEY = "mccs-front:installation";
-const DISPLAY_KEY = "mccs-front:display";
-const CONVO_KEY = "mccs-front:conversation";
+// Conversation per base, for this tab: switching base starts fresh; coming back restores it.
+const convoKey = (id: string) => `mccs-front:conversation:${id}`;
 // Short enough to fit the ask box on a 375px phone.
 const EXAMPLES = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
 // Typing placeholder: the widget header search's effect (public/widget.js), at a calmer pace for the
@@ -50,11 +49,6 @@ const MOMENTS: { id: string; title: string; blurb: string; question: (base: stri
   { id: "kids", title: "Childcare and youth", blurb: "Child care, camps, school help and youth programs.", question: () => "What child care and youth programs are there for my kids?" },
   { id: "active", title: "Getting active", blurb: "Gyms, classes, pools and sports.", question: () => "I want to get active. What gyms, classes and sports are there?" },
 ];
-const WARM_MS = 50 * 60 * 1000; // the prompt cache lasts an hour
-
-const PIN = "M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z";
-const SUN = "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4";
-const MOON = "M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z";
 
 // Web Speech API: not in every browser, and prefixed in Chrome/Safari.
 type Recognition = {
@@ -75,35 +69,22 @@ const recognitionCtor = (): RecognitionCtor | null => {
   return w.SpeechRecognition || w.webkitSpeechRecognition || null;
 };
 
-const read = (key: string) => {
-  try {
-    return localStorage.getItem(key);
-  } catch {
-    return null;
-  }
-};
-const write = (key: string, value: string) => {
-  try {
-    localStorage.setItem(key, value);
-  } catch {
-    /* storage unavailable: the choice just isn't remembered */
-  }
-};
-
 export default function FrontDoor({
+  installationId,
   installations,
   momentsPhoto,
   carousel,
 }: {
+  /** The base this front door is for (/ask/<base>). */
+  installationId: string;
   installations: FrontInstallation[];
   momentsPhoto: Photo | null;
   /** Hero carousel photos, in order (photos.ts CAROUSEL). */
   carousel: Photo[];
 }) {
-  const [instId, setInstId] = useState(installations[0]?.id ?? "quantico");
+  const instId = installationId;
   const inst = installations.find((i) => i.id === instId) ?? installations[0];
-  const [display, setDisplay] = useState<Display>({ theme: "light", large: false, contrast: false });
-  const [displayOpen, setDisplayOpen] = useState(false);
+  const { display, update: updateDisplay, attrs: displayAttrs } = useDisplay();
   const [messages, setMessages] = useState<Msg[]>([]);
   const [mode, setMode] = useState<"hero" | "chat">("hero");
   const [busy, setBusy] = useState(false);
@@ -124,30 +105,31 @@ export default function FrontDoor({
   const abortRef = useRef<AbortController | null>(null);
   const recRef = useRef<Recognition | null>(null);
   const askRef = useRef<HTMLTextAreaElement | null>(null);
-  const displayBtnRef = useRef<HTMLButtonElement | null>(null);
-  const displayPanelRef = useRef<HTMLDivElement | null>(null);
   const restored = useRef(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const [ready, setReady] = useState(false); // browser-only state (saved installation etc.) loaded
+  const [ready, setReady] = useState(false); // browser-only state loaded
 
   // ---------- browser-only setup (after hydration) ----------
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- reading browser-only state once after hydration */
-    const saved = read(INST_KEY);
-    const startInst = saved && installations.some((i) => i.id === saved) ? saved : installations[0]?.id;
-    if (startInst) setInstId(startInst);
+    write(LAST_KEY, instId); // last visited base, marked on the globe page
+    // Restore this base's conversation (after following an answer's link, or coming back to this base).
+    let restoredChat = false;
     try {
-      const d = JSON.parse(read(DISPLAY_KEY) || "null");
-      if (d && (d.theme === "light" || d.theme === "dark")) setDisplay({ theme: d.theme, large: !!d.large, contrast: !!d.contrast });
-    } catch {
-      /* ignore a bad saved value */
-    }
-    // Restore the conversation after following an answer's link and coming back.
-    try {
-      const c = JSON.parse(sessionStorage.getItem(CONVO_KEY) || "null");
-      if (c && c.inst === startInst && Array.isArray(c.messages) && c.messages.length) {
+      const c = JSON.parse(sessionStorage.getItem(convoKey(instId)) || "null");
+      if (c && Array.isArray(c.messages) && c.messages.length) {
         setMessages(c.messages);
         setMode("chat");
+        restoredChat = true;
+      }
+    } catch {
+      /* ignore */
+    }
+    // Arriving from the globe: focus lands on the ask box.
+    try {
+      if (sessionStorage.getItem(ARRIVED_KEY) === instId) {
+        sessionStorage.removeItem(ARRIVED_KEY);
+        if (!restoredChat) setTimeout(() => askRef.current?.focus({ preventScroll: true }), 0);
       }
     } catch {
       /* ignore */
@@ -158,23 +140,11 @@ export default function FrontDoor({
     setSpeechSupported("speechSynthesis" in window && typeof window.SpeechSynthesisUtterance === "function");
     setReady(true);
     /* eslint-enable react-hooks/set-state-in-effect */
-  }, [installations]);
+  }, [instId]);
 
-  // Pre-load the selected base's knowledge into the prompt cache while the person reads or types,
-  // like the widget: at most once per browser per base per 50 minutes (same localStorage key, so the
-  // widget and the front door share it). The server also rate-limits warm-ups.
+  // Pre-load this base's knowledge into the prompt cache while the person reads or types.
   useEffect(() => {
-    if (!ready || !instId) return;
-    const key = `mccs-assistant:${instId}:warmed`;
-    try {
-      if (Date.now() - Number(localStorage.getItem(key) || 0) < WARM_MS) return;
-      localStorage.setItem(key, String(Date.now()));
-    } catch {
-      /* storage unavailable: warm anyway */
-    }
-    fetch("/api/warm", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ installationId: instId }) }).catch(() => {
-      /* best effort */
-    });
+    if (ready) warm(instId);
   }, [instId, ready]);
 
   // Typing placeholder: each example types out, holds, erases, then the next types. Stopped (and the
@@ -223,8 +193,8 @@ export default function FrontDoor({
   // The shown photo only changes to one that has loaded, so there's never a blank frame.
   const slides = carousel;
   const heroIndex = useCallback((id: string) => Math.max(0, slides.findIndex((p) => p.name === `hero-${id}`)), [slides]);
-  const [slide, setSlide] = useState(0); // the photo we want to show
-  const [visible, setVisible] = useState(0); // the photo on screen: the wanted one, once loaded
+  const [slide, setSlide] = useState(() => heroIndex(installationId)); // the photo we want to show
+  const [visible, setVisible] = useState(() => heroIndex(installationId)); // on screen: the wanted one, once loaded
   const [loaded, setLoaded] = useState<Record<string, boolean>>({});
   const [background, setBackground] = useState(false); // request the other photos
   const loadedRef = useRef<Record<string, boolean>>({});
@@ -246,11 +216,6 @@ export default function FrontDoor({
       return () => window.removeEventListener("load", go);
     }
   }, []);
-  useEffect(() => {
-    // Start on the selected installation's hero once the saved choice is known.
-    if (ready) setSlide(heroIndex(instId)); // eslint-disable-line react-hooks/set-state-in-effect
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- only when ready flips
-  }, [ready]);
   useEffect(() => {
     const onVisibility = () => setTabHidden(document.hidden);
     document.addEventListener("visibilitychange", onVisibility);
@@ -290,56 +255,15 @@ export default function FrontDoor({
   useEffect(() => {
     if (!restored.current) return;
     try {
-      if (messages.length) sessionStorage.setItem(CONVO_KEY, JSON.stringify({ inst: instId, messages: messages.map(({ status, ...m }) => (void status, m)) }));
-      else sessionStorage.removeItem(CONVO_KEY);
+      if (messages.length) sessionStorage.setItem(convoKey(instId), JSON.stringify({ messages: messages.map(({ status, ...m }) => (void status, m)) }));
+      else sessionStorage.removeItem(convoKey(instId));
     } catch {
       /* ignore */
     }
   }, [messages, instId]);
 
   // Last input type, for focus rings that should show for keyboard focus only (front.css).
-  useEffect(() => {
-    const set = (type: "keyboard" | "pointer") => () => {
-      if (rootRef.current) rootRef.current.dataset.input = type;
-    };
-    const onKey = set("keyboard");
-    const onPointer = set("pointer");
-    document.addEventListener("keydown", onKey, true);
-    document.addEventListener("pointerdown", onPointer, true);
-    return () => {
-      document.removeEventListener("keydown", onKey, true);
-      document.removeEventListener("pointerdown", onPointer, true);
-    };
-  }, []);
-
-  // Display menu: close on Escape or a click outside.
-  useEffect(() => {
-    if (!displayOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setDisplayOpen(false);
-        displayBtnRef.current?.focus();
-      }
-    };
-    const onClick = (e: MouseEvent) => {
-      const t = e.target as Node;
-      if (!displayPanelRef.current?.contains(t) && !displayBtnRef.current?.contains(t)) setDisplayOpen(false);
-    };
-    document.addEventListener("keydown", onKey);
-    document.addEventListener("mousedown", onClick);
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.removeEventListener("mousedown", onClick);
-    };
-  }, [displayOpen]);
-
-  const updateDisplay = (next: Partial<Display>) => {
-    setDisplay((d) => {
-      const merged = { ...d, ...next };
-      write(DISPLAY_KEY, JSON.stringify(merged));
-      return merged;
-    });
-  };
+  useInputType(rootRef);
 
   // ---------- reading aloud ----------
   const stopSpeaking = useCallback(() => {
@@ -462,15 +386,6 @@ export default function FrontDoor({
     setTimeout(() => askRef.current?.focus(), 0);
   };
 
-  const switchInstallation = (id: string) => {
-    if (id === instId) return;
-    write(INST_KEY, id);
-    setInstId(id);
-    // A different base is a different conversation.
-    resetConversation();
-    setMode("hero");
-  };
-
   // ---------- voice input ----------
   const toggleMic = () => {
     const Ctor = recognitionCtor();
@@ -587,70 +502,23 @@ export default function FrontDoor({
     <div
       ref={rootRef}
       className={`fd fd--${mode}`}
-      data-theme={display.theme}
-      data-text={display.large ? "large" : "normal"}
-      data-contrast={display.contrast ? "high" : "normal"}
+      {...displayAttrs}
     >
       <header className="fd-top">
-        <div className="fd-pill fd-inst">
+        {/* Back to the globe (a full navigation, so supporting browsers crossfade: see front.css). */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- cross-document view transition */}
+        <a className="fd-pill fd-inst" href="/" aria-label={`${inst?.shortName}: choose another installation`}>
           <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-icon">
-            <path d={PIN} />
+            <path d={GLOBE_ICON} />
           </svg>
-          <label htmlFor="fd-inst-select" className="fd-sr">
-            Installation
-          </label>
-          <select id="fd-inst-select" value={instId} onChange={(e) => switchInstallation(e.target.value)}>
-            {installations.map((i) => (
-              <option key={i.id} value={i.id}>
-                {i.shortName}
-              </option>
-            ))}
-          </select>
-        </div>
+          <span>{inst?.shortName}</span>
+        </a>
         {mode === "chat" && (
           <button type="button" className="fd-pill fd-new" onClick={newConversation}>
             New conversation
           </button>
         )}
-        <div className="fd-display">
-          <button
-            type="button"
-            ref={displayBtnRef}
-            className="fd-pill fd-display-btn"
-            aria-expanded={displayOpen}
-            aria-controls="fd-display-panel"
-            onClick={() => setDisplayOpen((o) => !o)}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-icon">
-              <path d={display.theme === "dark" ? MOON : SUN} />
-            </svg>
-            <span className="fd-pill-label">Display</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="fd-pill-caret">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
-          {displayOpen && (
-            <div id="fd-display-panel" className="fd-display-panel" ref={displayPanelRef} role="group" aria-label="Display settings">
-              <fieldset>
-                <legend>Theme</legend>
-                {(["light", "dark"] as const).map((t) => (
-                  <label key={t}>
-                    <input type="radio" name="fd-theme" checked={display.theme === t} onChange={() => updateDisplay({ theme: t })} />
-                    {t === "light" ? "Light" : "Dark"}
-                  </label>
-                ))}
-              </fieldset>
-              <label>
-                <input type="checkbox" checked={display.large} onChange={(e) => updateDisplay({ large: e.target.checked })} />
-                Large text
-              </label>
-              <label>
-                <input type="checkbox" checked={display.contrast} onChange={(e) => updateDisplay({ contrast: e.target.checked })} />
-                High contrast
-              </label>
-            </div>
-          )}
-        </div>
+        <DisplayMenu display={display} update={updateDisplay} />
       </header>
 
       {mode === "hero" ? (
@@ -764,7 +632,7 @@ export default function FrontDoor({
               <ul className="fd-bases" aria-labelledby="fd-bases">
                 {installations.map((i) => (
                   <li key={i.id}>
-                    <a className="fd-card fd-bcard" href={`/${i.id}`}>
+                    <div className="fd-card fd-bcard" data-installation={i.id}>
                       {i.card && (
                         <span className="fd-bcard-photo">
                           {/* eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP */}
@@ -773,10 +641,20 @@ export default function FrontDoor({
                       )}
                       <span className="fd-card-title">{i.name}</span>
                       <span className="fd-card-blurb">{i.location}</span>
-                      <span className="fd-cta" aria-hidden="true">
-                        Visit the site <span className="fd-arrow">→</span>
+                      <span className="fd-bcard-links">
+                        {i.id === instId ? (
+                          <span className="fd-here">You’re here</span>
+                        ) : (
+                          // A full navigation (cross-document view transition), like the pill.
+                          <a className="fd-cta fd-cta-link" href={`/ask/${i.id}`}>
+                            Ask MCCS <span className="fd-arrow">→</span>
+                          </a>
+                        )}
+                        <a className="fd-cta fd-cta-link" href={`/${i.id}`}>
+                          Visit the site <span className="fd-arrow">→</span>
+                        </a>
                       </span>
-                    </a>
+                    </div>
                     {credit(i.card)}
                   </li>
                 ))}

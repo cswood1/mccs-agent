@@ -144,7 +144,7 @@ p4.on("pageerror", (e) => errors.push(e.message));
 const res = await p4.goto(base + "/recreation-fitness/fitness", { waitUntil: "networkidle" });
 check("Old path redirects to /quantico/...", p4.url().endsWith("/quantico/recreation-fitness/fitness") && res.ok(), p4.url());
 await p4.goto(base + "/", { waitUntil: "networkidle" });
-check("Root is the front door (tests/ui/front-door-check.mjs)", new URL(p4.url()).pathname === "/" && (await p4.locator(".fd h1").count()) === 1, p4.url());
+check("Root is Explore your MCCS (tests/ui/front-door-check.mjs)", new URL(p4.url()).pathname === "/" && (await p4.locator(".fd h1").textContent()) === "Explore your MCCS.", p4.url());
 await p4.goto(base + "/quantico", { waitUntil: "networkidle" });
 const pickerHref = await p4.locator("#modal-block-views-block-change-location-change-location a", { hasText: "Camp Pendleton" }).first().getAttribute("href");
 check("Location picker links to /pendleton", pickerHref === "/pendleton", pickerHref);

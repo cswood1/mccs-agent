@@ -110,7 +110,7 @@ async function open(opts = {}) {
   p.on("pageerror", (e) => errors.push(e.message));
   if (opts.clock) await p.clock.install();
   // A held image keeps the network busy, so wait for the load event instead of network idle.
-  await p.goto(base + "/", { waitUntil: opts.hold ? "load" : "networkidle" });
+  await p.goto(base + (opts.path ?? "/ask/quantico"), { waitUntil: opts.hold ? "load" : "networkidle" });
   return { c, p };
 }
 
@@ -121,27 +121,29 @@ const ask = async (p, q) => {
   await p.locator(".fd-followups").waitFor();
 };
 
-// 0. Access gate still guards the front door.
+// 0. Access gate still guards the globe page and the front doors.
 {
   const c = await browser.newContext();
   const p = await c.newPage();
-  await p.goto(base + "/");
-  check("Access gate: / without the code goes to /access", !code || /\/access/.test(p.url()), p.url());
+  for (const path of ["/", "/ask/quantico"]) {
+    await p.goto(base + path);
+    check(`Access gate: ${path} without the code goes to /access`, !code || /\/access/.test(p.url()), p.url());
+  }
   await c.close();
 }
 
-// 1. Hero: headline, installation selector, chips, moments, installation cards, trust strip.
+// 1. Front door (/ask/quantico): headline, installation pill, chips, moments, cards, trust strip.
 {
   const { c, p } = await open();
-  check("/ is the front door (no redirect)", new URL(p.url()).pathname === "/", p.url());
+  check("/ask/quantico is Quantico's front door", new URL(p.url()).pathname === "/ask/quantico", p.url());
   check("Headline: “Ask MCCS anything.” with Ask MCCS in red", (await p.locator("h1").textContent()) === "Ask MCCS anything." && (await p.locator("h1 .fd-red").textContent()) === "Ask MCCS");
   const red = await p.locator("h1 .fd-red").evaluate((el) => getComputedStyle(el).color);
   check("Headline red is the MCCS red", red === "rgb(158, 27, 50)", red);
   check("Serif headline, sans body", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && /Plus Jakarta Sans/.test(await p.locator(".fd").evaluate((el) => getComputedStyle(el).fontFamily)));
   check("Heavy headline weight", Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700);
   check("Pill-shaped top controls", (await p.locator(".fd-top .fd-pill").count()) >= 2 && (await p.locator(".fd-display-btn").evaluate((el) => parseFloat(getComputedStyle(el).borderRadius))) > 100);
-  const options = await p.locator("#fd-inst-select option").allTextContents();
-  check("Installation selector lists the three bases", JSON.stringify(options) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]), JSON.stringify(options));
+  const pill = p.locator(".fd-top .fd-inst");
+  check("Installation pill: globe icon and the base's short name, linking back to /", (await pill.textContent())?.trim() === "MCB Quantico" && (await pill.getAttribute("href")) === "/" && (await pill.locator("svg").count()) === 1 && (await p.locator("#fd-inst-select").count()) === 0);
   // Photos: the hero carousel (all three installations), one per card, one for the moments.
   const heroSrc = await p.locator(".fd-hero-photo img.is-active").getAttribute("src");
   check("Hero starts on the selected installation's photo", heroSrc === "/home/hero-quantico.webp", heroSrc);
@@ -158,20 +160,21 @@ const ask = async (p, q) => {
   const qCfg = await (await p.request.get(base + "/api/installations/quantico")).json();
   check("Starter chips from Quantico's defaultChips", JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(qCfg.defaultChips.slice(0, 4)));
   check("Five moment cards", (await p.locator(".fd-moments .fd-card").count()) === 5);
-  const baseLinks = await p.locator(".fd-bases .fd-bcard").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
-  check("Installation cards link to /quantico, /pendleton, /lejeune", JSON.stringify(baseLinks) === JSON.stringify(["/quantico", "/pendleton", "/lejeune"]), JSON.stringify(baseLinks));
+  const cardLinks = await p.locator(".fd-bases .fd-bcard").evaluateAll((cards) => cards.map((c) => [...c.querySelectorAll("a")].map((a) => a.getAttribute("href"))));
+  check("Installation cards: other bases' front doors, plus every full site", JSON.stringify(cardLinks) === JSON.stringify([["/quantico"], ["/ask/pendleton", "/pendleton"], ["/ask/lejeune", "/lejeune"]]), JSON.stringify(cardLinks));
+  check("This base's card says you're here", (await p.locator(".fd-bcard[data-installation=quantico] .fd-here").textContent()) === "You’re here");
   check("Trust strip", /^Answers come from official MCCS pages · captured Oct 26 · links to every source\.$/.test(((await p.locator(".fd-trust-strip").textContent()) ?? "").trim()));
   check("Ask box is labeled; mic and send have names", (await p.locator("label[for=fd-ask-input]").textContent()) === "Ask MCCS" && (await p.locator(".fd-mic").getAttribute("aria-label")) === "Ask by voice" && (await p.locator(".fd-send").getAttribute("aria-label")) === "Send");
 
-  // Installation choice is remembered.
-  await p.locator("#fd-inst-select").selectOption("pendleton");
-  check("Selected installation saved", (await p.evaluate(() => localStorage.getItem("mccs-front:installation"))) === "pendleton");
-  await p.waitForTimeout(200);
-  check("Warm-up when the selector changes", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
+  check("This base saved as last visited", (await p.evaluate(() => localStorage.getItem("mccs-front:installation"))) === "quantico");
+
+  // The URL decides the base; a refresh stays on it.
+  await p.goto(base + "/ask/pendleton", { waitUntil: "networkidle" });
   await p.reload({ waitUntil: "networkidle" });
-  check("Warm-up throttled per base (like the widget)", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   const pCfg = await (await p.request.get(base + "/api/installations/pendleton")).json();
-  check("Selected installation restored after reload", (await p.locator("#fd-inst-select").inputValue()) === "pendleton" && JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(pCfg.defaultChips.slice(0, 4)));
+  check("Refresh stays on the base in the URL", new URL(p.url()).pathname === "/ask/pendleton" && (await pill.textContent())?.trim() === "MCB Camp Pendleton" && JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(pCfg.defaultChips.slice(0, 4)));
+  check("Pendleton's hero photo first", (await p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo")) === "hero-pendleton");
+  check("Warm-up per base, throttled (like the widget)", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   check("Trust strip uses the base's capture date", /captured Oct 27/.test((await p.locator(".fd-trust-strip").textContent()) ?? ""));
 
   // Display menu.
@@ -195,8 +198,7 @@ const ask = async (p, q) => {
 
 // 2. Asking: hero docks, the answer streams in a reading column, links, trust line, follow-ups.
 {
-  const { c, p } = await open();
-  await p.locator("#fd-inst-select").selectOption("pendleton");
+  const { c, p } = await open({ path: "/ask/pendleton" });
   await ask(p, "How do I get child care?");
   check("Hero becomes the compact top bar", (await p.locator(".fd.fd--chat").count()) === 1 && (await p.locator(".fd-dock #fd-ask-input").isVisible()) && (await p.locator(".fd-hero").count()) === 0);
   const body = (await p.evaluate(() => window.__chatBodies))[0] ?? {};
@@ -238,13 +240,16 @@ const ask = async (p, q) => {
   await p.waitForFunction(() => document.activeElement?.id === "fd-ask-input", null, { timeout: 2000 }).catch(() => {});
   check("New conversation returns to the full hero", (await p.locator(".fd.fd--hero").count()) === 1 && (await p.locator("h1").textContent()) === "Ask MCCS anything." && (await p.locator("#fd-ask-input").evaluate((el) => document.activeElement === el)));
 
-  // Switching installation mid-conversation starts fresh.
+  // Switching base (another front door) starts fresh; coming back to a base keeps its conversation.
   await ask(p, "Where can I stay?");
-  await p.locator("#fd-inst-select").selectOption("lejeune");
-  check("Switching installation starts a fresh conversation", (await p.locator(".fd.fd--hero").count()) === 1 && (await p.locator(".fd-q").count()) === 0);
+  await p.goto(base + "/ask/lejeune", { waitUntil: "networkidle" });
+  check("Switching base starts a fresh conversation", (await p.locator(".fd.fd--hero").count()) === 1 && (await p.locator(".fd-q").count()) === 0);
   await ask(p, "Where can I stay?");
   const b4 = (await p.evaluate(() => window.__chatBodies)).at(-1);
   check("…asking the new base with no old turns", b4.installationId === "lejeune" && b4.messages.length === 1, JSON.stringify(b4).slice(0, 120));
+  await p.goto(base + "/ask/pendleton", { waitUntil: "networkidle" });
+  check("Coming back to a base in the same tab keeps its conversation", (await p.locator(".fd.fd--chat").count()) === 1 && JSON.stringify(await p.locator(".fd-q").allTextContents()) === JSON.stringify(["Where can I stay?"]));
+  await p.goto(base + "/ask/lejeune", { waitUntil: "networkidle" });
 
   // Moment card.
   await p.getByRole("button", { name: "New conversation" }).click();
@@ -271,7 +276,7 @@ const ask = async (p, q) => {
   await p.locator(".fd-a .fd-md").waitFor();
   check("Status gone when the answer arrives", (await p.locator(".fd-status").count()) === 0);
   await p.locator(".fd-followups").waitFor();
-  check("Status never saved", !(await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation") ?? "")).includes("Checking"));
+  check("Status never saved", !(await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation:quantico") ?? "")).includes("Checking"));
   await c.close();
 }
 
@@ -303,7 +308,7 @@ const ask = async (p, q) => {
 {
   // First view: only the first hero is in the page; the rest come after the load event.
   const first = await open();
-  const html = await (await first.p.request.get(base + "/")).text();
+  const html = await (await first.p.request.get(base + "/ask/quantico")).text();
   await first.c.close();
   check("Carousel: only the first hero photo is in the initial HTML", (html.match(/data-photo="/g) || []).length === 1 && /data-photo="hero-quantico"/.test(html), String((html.match(/data-photo="/g) || []).length));
 }
@@ -339,9 +344,6 @@ const ask = async (p, q) => {
   check("Carousel: alt text, credit and focus point follow every photo (from CREDITS.json)", wrong.length === 0 && (await p.locator(".fd-hero-photo img[aria-hidden=true]").count()) === 6, JSON.stringify(wrong));
   check("Carousel: every photo has a focus point", CREDITS.every((c) => /^\d+% \d+%$/.test(c.focus ?? "")));
 
-  await p.locator("#fd-inst-select").selectOption("lejeune");
-  check("Carousel: the selector doesn't change the hero photo", (await active()) === "hero-quantico" && /Lejeune/.test((await p.locator(".fd-lead").textContent()) ?? ""));
-
   const toggle = p.locator(".fd-slide-toggle");
   check("Carousel: pause button", (await toggle.getAttribute("aria-label")) === "Pause photo slideshow");
   check("Carousel: pause icon is visible (white on dark)", (await toggle.evaluate((el) => getComputedStyle(el).color)) === "rgb(255, 255, 255)");
@@ -365,7 +367,7 @@ const ask = async (p, q) => {
   await p.locator(".fd-hero-photo .fd-credit").focus();
   await p.clock.runFor(15000);
   check("Carousel: paused while keyboard focus is on the photo", (await active()) === "hero-lejeune");
-  await p.locator("#fd-inst-select").focus();
+  await p.locator(".fd-top .fd-inst").focus();
   await p.clock.runFor(6500);
   check("Carousel: resumes when focus leaves", (await active()) === "base-quantico", await active());
 
@@ -398,15 +400,11 @@ const ask = async (p, q) => {
   await c.close();
 }
 {
-  const { c, p } = await open({ clock: true, reducedMotion: "reduce" });
+  const { c, p } = await open({ clock: true, reducedMotion: "reduce", path: "/ask/pendleton" });
   const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo");
   await p.clock.runFor(20000);
-  check("Reduced motion: no rotation, no pause button", (await active()) === "hero-quantico" && (await p.locator(".fd-slide-toggle").count()) === 0);
-  await p.locator("#fd-inst-select").selectOption("pendleton");
-  await p.waitForFunction(() => document.querySelector(".fd-hero-photo img.is-active")?.dataset.photo === "hero-pendleton", null, { timeout: 5000 }).catch(() => {});
-  check("Reduced motion: shows the selected installation's hero photo", (await active()) === "hero-pendleton" && (await p.locator(".fd-hero-photo .fd-credit").textContent()) === "Photo: Sgt. Melissa Marnell, USMC");
+  check("Reduced motion: no rotation, no pause button, the base's own hero photo", (await active()) === "hero-pendleton" && (await p.locator(".fd-slide-toggle").count()) === 0 && (await p.locator(".fd-hero-photo .fd-credit").textContent()) === "Photo: Sgt. Melissa Marnell, USMC");
   check("Reduced motion: no crossfade", (await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transitionDuration)) === "0s");
-  await p.locator("#fd-inst-select").selectOption("quantico");
   await c.close();
 }
 
@@ -442,11 +440,11 @@ const ask = async (p, q) => {
   await p.clock.runFor(4000);
   check("Typing: stays stopped while focused", (await box.getAttribute("placeholder")) === "");
   await box.fill("pool");
-  await p.locator("#fd-inst-select").focus();
+  await p.locator(".fd-top .fd-inst").focus();
   await p.clock.runFor(4000);
   check("Typing: stays stopped while the box has text", (await box.getAttribute("placeholder")) === "");
   await box.fill(""); // fill() focuses the box, so move focus away again
-  await p.locator("#fd-inst-select").focus();
+  await p.locator(".fd-top .fd-inst").focus();
   await p.clock.runFor(1500);
   const resumed = (await box.getAttribute("placeholder")) ?? "";
   check("Typing: resumes on blur when empty", resumed.length > 0 && EXAMPLES_FD.some((e) => e.startsWith(resumed)), resumed);
@@ -485,7 +483,7 @@ const ask = async (p, q) => {
   check("375px: ask box shows its whole placeholder", fits);
   await ask(p, "How do I get child care?");
   check("375px chat: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
-  check("375px chat: installation selector stays usable", (await p.locator("#fd-inst-select").evaluate((el) => el.getBoundingClientRect().width)) >= 150);
+  check("375px chat: installation pill stays readable", (await p.locator(".fd-top .fd-inst").evaluate((el) => el.getBoundingClientRect().width)) >= 150);
   const before = await p.locator(".fd-a").first().evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
   await p.locator(".fd-display-btn").click();
   await p.getByLabel("Large text").check();
@@ -527,7 +525,6 @@ const ask = async (p, q) => {
       const cs = getComputedStyle(el);
       return { outline: cs.outlineStyle, ow: cs.outlineWidth, oc: cs.outlineColor, shadow: cs.boxShadow, radius: cs.borderTopLeftRadius, border: cs.borderTopColor };
     });
-  const pillBase = await st(".fd-inst");
   const askBase = await st(".fd-ask");
 
   // Mouse click in the ask box: no inner outline; the box glows, following its radius.
@@ -537,25 +534,14 @@ const ask = async (p, q) => {
   check("Ask box click: no outline or shadow on the textarea", ta.outline === "none" && ta.shadow === "none", JSON.stringify(ta));
   check("Ask box click: the box shows its ring, with its own radius", ask.shadow !== askBase.shadow && /0px 0px 0px 4px/.test(ask.shadow) && ask.radius === askBase.radius && parseFloat(ask.radius) > 0, JSON.stringify(ask));
 
-  // Mouse click on the installation select: no inner outline, and no ring (keyboard only).
-  await p.locator("#fd-inst-select").click();
-  await p.keyboard.press("Escape").catch(() => {});
-  await p.locator("#fd-inst-select").evaluate((el) => el.blur());
-  await p.mouse.click(600, 820);
-  await p.locator("#fd-inst-select").click();
-  const selClick = await st("#fd-inst-select");
-  check("Selector click: no outline on the inner select", selClick.outline === "none" && selClick.shadow === "none", JSON.stringify(selClick));
-  check("Selector click: no ring on the pill", (await st(".fd-inst")).shadow === pillBase.shadow);
-  await p.mouse.click(600, 820); // closes the list, blurs the select
-
-  // Keyboard: Tab from the top lands on the select; the pill gets the ring.
+  // Keyboard: Tab from the top lands on the installation pill (a link back to the globe page): one
+  // outline on the pill itself, following its round shape.
   await p.locator(".demo-banner").click(); // start sequential focus at the top of the page
   await p.keyboard.press("Tab");
-  check("Keyboard: Tab reaches the installation selector first", await p.locator("#fd-inst-select").evaluate((el) => document.activeElement === el));
-  const selKey = await st("#fd-inst-select");
+  check("Keyboard: Tab reaches the installation pill first", await p.locator(".fd-top .fd-inst").evaluate((el) => document.activeElement === el));
   const pillKey = await st(".fd-inst");
-  check("Keyboard: no outline on the inner select", selKey.outline === "none" && selKey.shadow === "none", JSON.stringify(selKey));
-  check("Keyboard: the pill shows the ring, following its radius", pillKey.shadow !== pillBase.shadow && /0px 0px 0px 4px/.test(pillKey.shadow) && pillKey.radius === pillBase.radius && parseFloat(pillKey.radius) > 100, JSON.stringify(pillKey));
+  const pillInner = await p.locator(".fd-top .fd-inst").evaluate((el) => [...el.querySelectorAll("*")].some((d) => getComputedStyle(d).outlineStyle !== "none"));
+  check("Keyboard: the pill shows one ring, following its radius", pillKey.outline === "solid" && pillKey.ow === "3px" && parseFloat(pillKey.radius) > 100 && !pillInner, JSON.stringify(pillKey));
 
   // Tab through the rest of the hero: each stop has exactly one ring, on the control itself.
   const stops = [];
@@ -588,10 +574,10 @@ const ask = async (p, q) => {
 
   // Cards: numbered moment cards and installation cards.
   await p.keyboard.press("Shift"); // keyboard modality for programmatic focus
-  for (const sel of [".fd-card[data-moment=arrived]", ".fd-bases .fd-bcard"]) {
+  for (const sel of [".fd-card[data-moment=arrived]", ".fd-bases .fd-cta-link"]) {
     await p.locator(sel).first().focus();
     const s = await st(sel);
-    check(`Keyboard: ${sel} ring follows its radius`, s.outline === "solid" && s.ow === "3px" && parseFloat(s.radius) > 10, JSON.stringify(s));
+    check(`Keyboard: ${sel} has its focus ring`, s.outline === "solid" && s.ow === "3px" && (sel.includes("cta") || parseFloat(s.radius) > 10), JSON.stringify(s));
   }
 
   // Visible in dark and high contrast.
@@ -607,8 +593,10 @@ const ask = async (p, q) => {
     const pill = await st(".fd-inst");
     await p.keyboard.press("Tab"); // Display pill
     const btn = await st(".fd-display-btn");
+    await p.locator("#fd-ask-input").click();
+    const askRing = await st(".fd-ask");
     const bg = await p.locator(".fd").evaluate((el) => getComputedStyle(el).backgroundColor);
-    check(`Rings visible in ${label}`, ring.test(pill.shadow) && btn.outline === "solid" && btn.oc !== bg && pill.border !== bg, JSON.stringify({ pill: pill.shadow, btn: btn.oc, bg }));
+    check(`Rings visible in ${label}`, ring.test(askRing.shadow) && pill.outline === "solid" && pill.oc !== bg && btn.outline === "solid" && btn.oc !== bg, JSON.stringify({ ask: askRing.shadow, pill: pill.oc, btn: btn.oc, bg }));
   }
   await p.evaluate(() => localStorage.removeItem("mccs-front:display"));
   await c.close();
@@ -657,6 +645,150 @@ for (const [label, display, viewport] of [
   check(`Sections (${label}): cards stand out from the band`, r.cardStep > 1.08 || hc, JSON.stringify({ card: r.card, lower: r.lowerBg, step: r.cardStep }));
   check(`Sections (${label}): all lower-section text meets WCAG AA`, r.worst.r >= 4.5, JSON.stringify(r.worst));
   if (hc) check(`Sections (${label}): solid divider at the boundary`, r.divider === "solid 2px", r.divider);
+  await c.close();
+}
+
+// 11. Explore your MCCS (/): the globe page.
+const HOME_POV = { lat: 37, lng: -96 };
+const nearHome = (pov) => Math.abs(pov.lat - HOME_POV.lat) < 1 && Math.abs(pov.lng - HOME_POV.lng) < 4; // phones center a little east
+const labelsFit = (p) =>
+  p.evaluate(() => {
+    const rects = [...document.querySelectorAll(".fd-marker")]
+      .filter((m) => m.style.opacity !== "0")
+      .map((m) => m.querySelector(".fd-marker-label").getBoundingClientRect());
+    const overlap = rects.some((a, i) => rects.some((b, j) => j > i && a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom));
+    const inside = rects.every((r) => r.left >= 0 && r.right <= document.documentElement.clientWidth);
+    return { n: rects.length, overlap, inside, minHeight: Math.min(...rects.map((r) => r.height)) };
+  });
+{
+  const { c, p } = await open({ path: "/" });
+  check("/ is Explore your MCCS", new URL(p.url()).pathname === "/" && (await p.locator("h1").textContent()) === "Explore your MCCS." && (await p.locator("h1 .fd-red").textContent()) === "Explore");
+  check("Explore headline in the front-door style", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700 && (await p.locator("h1 .fd-red").evaluate((el) => getComputedStyle(el).color)) === "rgb(158, 27, 50)");
+  check("Explore: the line under the headline", (await p.locator(".fd-explore .fd-lead").textContent()) === "Choose your installation to get answers from its official MCCS pages.");
+  check("Explore: Display menu, no installation pill", (await p.locator(".fd-display-btn").count()) === 1 && (await p.locator(".fd-inst").count()) === 0);
+  check("Explore: “or choose:” with the three bases as buttons", (await p.locator(".fd-label", { hasText: "or choose:" }).count()) === 1 && JSON.stringify(await p.locator(".fd-explore-btn .fd-card-title").allTextContents()) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]));
+  await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
+  check("Globe drawn (WebGL)", (await p.locator(".fd-globe canvas").count()) >= 1);
+  check("Globe canvas is labeled", /Interactive globe/.test((await p.locator(".fd-globe canvas").first().getAttribute("aria-label")) ?? "") && (await p.locator(".fd-globe canvas").first().getAttribute("role")) === "img");
+  check("Land data bundled locally (no outside fetches)", await p.evaluate(() => { const land = performance.getEntriesByType("resource").filter((r) => /geojson|topojson|world/i.test(r.name)); return land.length > 0 && land.every((r) => new URL(r.name).host === location.host) && performance.getEntriesByType("resource").every((r) => new URL(r.name).host === location.host || /fonts\.(googleapis|gstatic)\.com|usmc-mccs\.org/.test(r.name)); }));
+  check("Three markers with MCCS-red points and shortName labels", JSON.stringify(await p.locator(".fd-marker .fd-marker-label").allTextContents()) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]) && (await p.locator(".fd-marker-dot").first().evaluate((el) => getComputedStyle(el).backgroundColor)) === "rgb(158, 27, 50)");
+  check("Markers pulse", (await p.locator(".fd-marker-dot").first().evaluate((el) => getComputedStyle(el, "::after").animationName)) === "fd-marker-pulse");
+  await p.waitForTimeout(4500); // idle spin, then settle on the US
+  check("Globe settles facing the continental US", nearHome(await p.evaluate(() => window.__mccsGlobe.pov())), JSON.stringify(await p.evaluate(() => window.__mccsGlobe.pov())));
+  const fit = await labelsFit(p);
+  check("1280px: labels don't overlap and stay on screen", fit.n === 3 && !fit.overlap && fit.inside, JSON.stringify(fit));
+  const marker = p.locator(".fd-marker[data-installation=pendleton]");
+  const before = await marker.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).backgroundColor);
+  await marker.locator(".fd-marker-label").hover();
+  check("Hover highlights the marker and its label", (await marker.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).backgroundColor)) !== before);
+  check("Globe follows the theme (light)", (await p.evaluate(() => window.__mccsGlobe.colors())).globe === "#e7ecf2");
+  await p.locator(".fd-display-btn").click();
+  await p.getByLabel("Dark").check();
+  check("Globe follows the theme (dark)", (await p.evaluate(() => window.__mccsGlobe.colors())).globe === "#101a27");
+  await p.getByLabel("High contrast").check();
+  check("Globe follows the theme (dark high contrast)", JSON.stringify(await p.evaluate(() => window.__mccsGlobe.colors())) === JSON.stringify({ globe: "#000000", land: "#ffffff", glow: "#ffffff" }));
+  await p.evaluate(() => localStorage.removeItem("mccs-front:display"));
+
+  // Pick on the globe (a real marker click): fly in, warm, remember, then the front door.
+  c.warms.length = 0;
+  await p.mouse.move(5, 5);
+  await p.reload({ waitUntil: "networkidle" });
+  await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
+  await p.waitForTimeout(4500);
+  const t0 = Date.now();
+  await p.locator(".fd-marker[data-installation=pendleton] .fd-marker-label").click();
+  await p.waitForTimeout(150);
+  check("Warm-up fires as soon as a base is picked", JSON.stringify(c.warms) === JSON.stringify(["pendleton"]), JSON.stringify(c.warms));
+  await p.waitForURL(/\/ask\/pendleton$/, { timeout: 5000 });
+  const took = Date.now() - t0;
+  check("Marker click flies in (~1 s), then opens /ask/pendleton", took >= 900 && took < 3500, String(took));
+  await p.waitForFunction(() => document.activeElement?.id === "fd-ask-input", null, { timeout: 3000 }).catch(() => {});
+  check("Arriving from the globe: focus is on the ask box", await p.locator("#fd-ask-input").evaluate((el) => document.activeElement === el));
+  check("Picked base saved as last visited", (await p.evaluate(() => localStorage.getItem("mccs-front:installation"))) === "pendleton");
+
+  // The pill goes back to the globe, which marks and focuses the last visited base.
+  await p.locator(".fd-top .fd-inst").click();
+  await p.waitForURL((u) => new URL(u).pathname === "/");
+  await p.waitForLoadState("networkidle");
+  const last = p.locator(".fd-explore-btn.is-last");
+  check("Pill returns to /; last visited marked", (await last.getAttribute("data-installation")) === "pendleton" && (await last.locator(".fd-last").textContent()) === "Last visited");
+  check("Last visited gets focus first", await last.evaluate((el) => document.activeElement === el));
+  await p.waitForFunction(() => document.querySelector(".fd-marker.is-last")?.dataset.installation === "pendleton", null, { timeout: 20000 }).catch(() => {});
+  check("Last visited marker highlighted on the globe", (await p.locator(".fd-marker.is-last").getAttribute("data-installation")) === "pendleton");
+
+  // Keyboard fallback: the list.
+  await p.locator(".fd-explore-btn[data-installation=lejeune]").focus();
+  await p.keyboard.press("Enter");
+  await p.waitForURL(/\/ask\/lejeune$/, { timeout: 5000 });
+  check("List button (keyboard) opens /ask/lejeune", new URL(p.url()).pathname === "/ask/lejeune");
+
+  // Test hook for marker selection.
+  await p.goto(base + "/", { waitUntil: "networkidle" });
+  await p.waitForFunction(() => window.__mccsGlobe?.ready, null, { timeout: 20000 }).catch(() => {});
+  await p.evaluate(() => window.__mccsGlobe.select("quantico"));
+  await p.waitForURL(/\/ask\/quantico$/, { timeout: 5000 });
+  check("Marker selection hook opens /ask/quantico", new URL(p.url()).pathname === "/ask/quantico");
+
+  // Unknown base: back to the globe page.
+  await p.goto(base + "/ask/nowhere", { waitUntil: "networkidle" });
+  check("Unknown base redirects to /", new URL(p.url()).pathname === "/", p.url());
+  await c.close();
+}
+{
+  // Reduced motion: no idle spin, selection navigates at once; dragging still works.
+  const { c, p } = await open({ path: "/", reducedMotion: "reduce" });
+  await p.waitForFunction(() => window.__mccsGlobe?.ready, null, { timeout: 20000 }).catch(() => {});
+  check("Reduced motion: no idle spin, facing the US from the start", nearHome(await p.evaluate(() => window.__mccsGlobe.pov())));
+  check("Reduced motion: markers don't pulse", (await p.locator(".fd-marker-dot").first().evaluate((el) => getComputedStyle(el, "::after").animationName)) === "none");
+  const box = await p.locator(".fd-globe canvas").first().boundingBox();
+  await p.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await p.mouse.down();
+  await p.mouse.move(box.x + box.width / 2 + 160, box.y + box.height / 2, { steps: 8 });
+  await p.mouse.up();
+  await p.waitForTimeout(600);
+  check("Reduced motion: dragging still rotates the globe", !nearHome(await p.evaluate(() => window.__mccsGlobe.pov())));
+  const t0 = Date.now();
+  await p.locator(".fd-explore-btn[data-installation=quantico]").click();
+  await p.waitForURL(/\/ask\/quantico$/, { timeout: 5000 });
+  check("Reduced motion: selection navigates at once", Date.now() - t0 < 800, String(Date.now() - t0));
+  await c.close();
+}
+{
+  // No WebGL: the list is the way in, with a short note.
+  const c = await browser.newContext({ viewport: { width: 1280, height: 860 } });
+  if (cookie.length) await c.addCookies(cookie);
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  await c.addInitScript(() => {
+    const real = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (type, ...rest) {
+      return /webgl/.test(type) ? null : real.call(this, type, ...rest);
+    };
+  });
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  await p.goto(base + "/", { waitUntil: "networkidle" });
+  check("No WebGL: no globe, a note, and the list works", (await p.locator(".fd-globe canvas").count()) === 0 && /isn’t available/.test((await p.locator(".fd-globe-note").textContent()) ?? "") && (await p.locator(".fd-explore-btn").count()) === 3);
+  await p.locator(".fd-explore-btn[data-installation=lejeune]").click();
+  await p.waitForURL(/\/ask\/lejeune$/, { timeout: 5000 });
+  check("No WebGL: choosing still opens the front door", new URL(p.url()).pathname === "/ask/lejeune");
+  await c.close();
+}
+{
+  // Phones (375px).
+  const { c, p } = await open({ path: "/", viewport: { width: 375, height: 812 }, mobile: true });
+  check("375px: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
+  const lastBtn = await p.locator(".fd-explore-btn").last().boundingBox();
+  check("375px: the “or choose” buttons are visible without scrolling", lastBtn.y + lastBtn.height <= 812, JSON.stringify(lastBtn));
+  await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
+  await p.waitForTimeout(4500);
+  const g = await p.locator(".fd-globe canvas").first().boundingBox();
+  check("375px: the globe fits the screen", g && g.width <= 375 && g.height <= 812, JSON.stringify(g));
+  check("375px: vertical drags scroll the page", (await p.locator(".fd-globe canvas").first().evaluate((el) => getComputedStyle(el).touchAction)) === "pan-y");
+  await p.locator(".fd-globe").scrollIntoViewIfNeeded();
+  await p.waitForTimeout(300);
+  const fit = await labelsFit(p);
+  check("375px: labels don't overlap, stay on screen, and are easy to tap", fit.n === 3 && !fit.overlap && fit.inside && fit.minHeight >= 28, JSON.stringify(fit));
   await c.close();
 }
 

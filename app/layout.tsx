@@ -38,6 +38,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {stylesheets.map((href) => (
           <link key={href} rel="stylesheet" href={href} />
         ))}
+        {/* Cross-document view transitions (the globe page and front doors, front.css): if the browser
+            gives one up (e.g. a slow first load), the page still navigates; don't surface that as an
+            uncaught error. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '["pageswap","pagereveal"].forEach(function(t){addEventListener(t,function(e){var v=e.viewTransition;if(v)[v.ready,v.finished,v.updateCallbackDone].forEach(function(p){p&&p.catch(function(){})})})})',
+          }}
+        />
       </head>
       <body className="layout-no-sidebars path-frontpage">{children}</body>
     </html>

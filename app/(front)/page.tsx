@@ -1,43 +1,23 @@
 import type { Metadata } from "next";
-import { COVERED_INSTALLATIONS } from "@/lib/crossbase";
-import { getInstallation } from "@/lib/installations";
-import { loadPage } from "@/lib/site/data";
-import FrontDoor, { type FrontInstallation } from "./front-door";
-import { CAROUSEL, photo, type Photo } from "./photos";
+import { frontInstallations, GLOBE_PLACES } from "./data";
+import Explore from "./explore";
 import "./front.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "Ask MCCS (prototype demo)" },
-  description: "Prototype demo: ask MCCS anything about Quantico, Camp Pendleton or Camp Lejeune–New River. Not the official site.",
+  title: { absolute: "Explore your MCCS (prototype demo)" },
+  description: "Prototype demo: choose your installation on the globe and ask MCCS anything. Not the official site.",
 };
 
-// The MCCS front door: one place to ask about any installation we cover (docs/PRODUCT.md §12).
-// Installation details come from installations/*.json; the capture date from each home page;
-// photos and their credits from public/home/CREDITS.json.
+// Explore your MCCS: a globe to choose an installation, which opens its front door (/ask/<base>).
 export default function Home() {
-  const installations: FrontInstallation[] = COVERED_INSTALLATIONS.map((id) => getInstallation(id))
-    .filter((i) => !!i)
-    .map((i) => ({
-      id: i.id,
-      name: i.name,
-      shortName: i.shortName,
-      location: i.location,
-      defaultChips: i.defaultChips,
-      capturedOn: loadPage(i.id, "/")?.fetchedAt ?? "",
-      card: photo(`base-${i.id}`),
-    }));
-
+  const bases = frontInstallations().map((i) => ({ id: i.id, name: i.name, shortName: i.shortName, location: i.location, ...GLOBE_PLACES[i.id] }));
   return (
     <>
       <div className="demo-banner" role="note">
         <span className="demo-banner-full">NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo</span>
         <span className="demo-banner-short">NPS SI Hackathon · Team 2 · Prototype Demo</span>
       </div>
-      <FrontDoor
-        installations={installations}
-        momentsPhoto={photo("moments")}
-        carousel={CAROUSEL.map(photo).filter((p): p is Photo => !!p)}
-      />
+      <Explore bases={bases} />
     </>
   );
 }

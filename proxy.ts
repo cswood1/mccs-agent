@@ -5,7 +5,7 @@ import { VISITOR_COOKIE } from "@/lib/visitor";
 import registry from "@/site/installations.json";
 
 // 1. Sends pre-multi-installation URLs (/lodging, /recreation-fitness/...) to /quantico/...
-//    ("/" itself is the front door, app/(front)/page.tsx).
+//    ("/" itself is the globe page, app/(front)/page.tsx; front doors are /ask/<base>).
 // 2. Gives every browser an anonymous visitor id (a random cookie) for per-visitor rate limits.
 // 3. Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
 export async function proxy(request: NextRequest) {
@@ -16,15 +16,26 @@ export async function proxy(request: NextRequest) {
 
 const INSTALLATION_SLUGS = new Set(registry.map((i) => i.slug));
 // First path segments that belong to the app itself, not to an installation's pages.
-// ("home" holds the front door's images; "credits" is its photo credits page.)
-const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html", "home", "credits"]);
+// ("ask" is each base's front door; "home" and "globe" hold its images and land data; "credits" is
+// its photo credits page.)
+const APP_PATHS = new Set(["api", "access", "bookmarklet.html", "embed-test.html", "home", "credits", "ask", "globe"]);
 // Slugs that changed (the app uses a shorter name than the site's subdomain).
 const RENAMED: Record<string, string> = { lejeunenewriver: "lejeune" };
 
 /** "/lodging/c-suites" -> "/quantico/lodging/c-suites" (308); "/lejeunenewriver/x" -> "/lejeune/x". */
+// Bases with a front door (/ask/<base>); same list as COVERED_INSTALLATIONS in lib/crossbase.ts.
+const FRONT_DOORS = new Set(["quantico", "pendleton", "lejeune"]);
+
 function legacyRedirect(request: NextRequest): NextResponse | null {
   const { pathname } = request.nextUrl;
   if (pathname === "/") return null;
+  // An unknown base's front door goes to the globe page.
+  const ask = /^\/ask(?:\/([^/]*))?\/?$/.exec(pathname);
+  if (ask && !FRONT_DOORS.has(ask[1] ?? "")) {
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return NextResponse.redirect(url, 307);
+  }
   const first = pathname.split("/")[1] ?? "";
   if (INSTALLATION_SLUGS.has(first) || APP_PATHS.has(first)) return null;
   const url = request.nextUrl.clone();
