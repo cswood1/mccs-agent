@@ -18,7 +18,6 @@ const access = await import("../../lib/access.ts");
 const { POST: postAccess } = await import("../../app/api/access/route.ts");
 
 let visitor = 0;
-const request = (cookie = "") => new Request("https://demo.test/api/chat", { method: "POST", headers: { cookie: `mccs_visitor=visitor-${++visitor}-abcdef; ${cookie}` } });
 // Several requests from one visitor: returns how many got through before a 429, and the 429.
 async function burst(route, cookie, n) {
   const id = ++visitor;

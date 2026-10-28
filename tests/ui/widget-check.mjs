@@ -367,6 +367,19 @@ async function edgeFlow(label, viewport, mobile) {
   check(`${label}: full button on first visit`, (await full.isVisible()) && !(await tab.isVisible()));
   const fb = await full.boundingBox();
   check(`${label}: full button is a 44px+ tap target and stays in the corner`, fb.height >= 52 && fb.width <= 200 && fb.x + fb.width <= viewport.width && fb.y + fb.height <= viewport.height, JSON.stringify(fb));
+  // At the very end of the page the footer's last line sits above the launcher on phones only.
+  await p.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await p.waitForTimeout(150);
+  const clear = await p.evaluate(() => {
+    const items = [...document.querySelectorAll("footer > .h-100 > :last-child li")].filter((li) => li.getBoundingClientRect().height > 0);
+    const last = Math.max(...items.map((li) => li.getBoundingClientRect().bottom));
+    const bar = document.querySelector("footer > .h-100 > :last-child");
+    return { last, pad: parseFloat(getComputedStyle(bar).paddingBottom) };
+  });
+  const endBox = await full.boundingBox();
+  if (mobile) check(`${label}: end of the page clears the launcher`, clear.last <= endBox.y, JSON.stringify({ footerEnd: clear.last, launcherTop: endBox.y }));
+  else check(`${label}: no extra bottom padding`, clear.pad < 40, JSON.stringify(clear));
+  await p.evaluate(() => window.scrollTo(0, 0));
   const fullBox = await full.boundingBox();
   await full.click();
   const min = wx.locator("button.minimize");
@@ -554,6 +567,17 @@ async function statusPage(extra = {}) {
   await c.close();
 }
 
+// The bubble can be re-rendered between reads, leaving a detached element with no computed
+// style; read the live one again until it has an animation name.
+async function animationOf(loc) {
+  for (let i = 0; i < 20; i++) {
+    const name = await loc.evaluate((el) => (el.isConnected ? getComputedStyle(el).animationName : "")).catch(() => "");
+    if (name) return name;
+    await new Promise((r) => setTimeout(r, 50));
+  }
+  return "";
+}
+
 // Thinking phrases in place of typing dots: one per message, never the same twice in a row.
 const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…", "Hooking and jabbing, be right back…"];
 {
@@ -566,7 +590,7 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
     await p.locator("#mccs-assistant textarea").press("Enter");
     const last = p.locator("#mccs-assistant .msg.assistant").last();
     await last.locator(".thinking").waitFor();
-    seen.push({ text: await last.locator(".thinking").textContent(), role: await last.locator(".thinking").getAttribute("role"), dots: await last.locator(".typing").count(), anim: await last.locator(".thinking").evaluate((el) => getComputedStyle(el).animationName) });
+    seen.push({ text: await last.locator(".thinking").textContent(), role: await last.locator(".thinking").getAttribute("role"), dots: await last.locator(".typing").count(), anim: await animationOf(last.locator(".thinking")) });
     await p.evaluate(() => { window.__release = true; });
     await last.filter({ hasText: "relocation office" }).waitFor();
     if (k === 0) check("Thinking phrase clears when the answer starts", (await last.locator(".thinking").count()) === 0);
@@ -598,7 +622,8 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
   await p.locator("#mccs-assistant textarea").press("Enter");
   const last = p.locator("#mccs-assistant .msg.assistant").last();
   await last.locator(".thinking").waitFor();
-  check("Reduced motion: thinking phrase is static", (await last.locator(".thinking").evaluate((el) => getComputedStyle(el).animationName)) === "none");
+  const still = await animationOf(last.locator(".thinking"));
+  check("Reduced motion: thinking phrase is static", still === "none", still);
   await p.evaluate(() => { window.__release = true; });
   await c.close();
 }

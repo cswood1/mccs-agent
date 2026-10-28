@@ -85,3 +85,10 @@ img.img-placeholder {
 .card-img.photo-placeholder {
   aspect-ratio: 5 / 3;
 }
+/* Phones: room under the footer's last bar so the end of the page clears the Ask MCCS launcher
+   (about 54px tall, 16px from the bottom). Padding inside the bar keeps its background. */
+@media (max-width: 640px) {
+  .has-assistant footer > .h-100 > :last-child {
+    padding-bottom: calc(max(16px, env(safe-area-inset-bottom)) + 66px);
+  }
+}

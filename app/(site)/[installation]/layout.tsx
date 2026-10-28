@@ -32,7 +32,7 @@ export default async function InstallationLayout({ children, params }: LayoutPro
         <span className="demo-banner-full">NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo</span>
         <span className="demo-banner-short">NPS SI Hackathon · Team 2 · Prototype Demo</span>
       </div>
-      <div className="dialog-off-canvas-main-canvas">
+      <div className={`dialog-off-canvas-main-canvas${assistant ? " has-assistant" : ""}`}>
         <div id="page-wrapper">
           <div id="page">
             <Raw html={fragment(installation, "header")} />
