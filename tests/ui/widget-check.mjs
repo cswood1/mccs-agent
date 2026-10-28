@@ -898,6 +898,93 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   await c.close();
 }
 
+// Hover sparkle: the header's open bounce on the launcher, edge tab and header search sparkles.
+// Once per pointer entry or keyboard focus, never stacked; not for touch or reduced motion.
+const sparkAnims = (pg, where) => pg.evaluate((where) => {
+  const r = document.querySelector("#mccs-assistant").shadowRoot;
+  const el = where === "launcher" ? r.querySelector(".launcher .sparkle") : where === "tab" ? r.querySelector(".edge-tab .sparkle")
+    : where === "search" ? document.querySelector("#desktop-search-container .mccs-ask-icon") : document.querySelector(".mobile-search-trigger .mccs-ask-icon");
+  return el.getAnimations().filter((a) => a.playState === "running").map((a) => ({ id: a.id, duration: a.effect.getTiming().duration, start: a.startTime, frames: a.effect.getKeyframes().map((k) => k.transform) }));
+}, where);
+const isHeaderBounce = (list) => list.length === 1 && list[0].id === "spark-open" && list[0].duration === 500 && /scale\(1\.3\)/.test(list[0].frames[1]) && /scale\(0\.95\)/.test(list[0].frames[2]);
+async function hoverChecks(label, pg, where, control) {
+  await pg.mouse.move(2, 400);
+  await wait(600);
+  await control.hover();
+  const first = await sparkAnims(pg, where);
+  check(`Hover sparkle (${label}): hovering plays the header's bounce once`, isHeaderBounce(first), JSON.stringify(first));
+  const bx = await control.boundingBox();
+  for (let i = 0; i < 3; i++) { await pg.mouse.move(2, 400); await pg.mouse.move(bx.x + bx.width - 8, bx.y + bx.height / 2); }
+  const rapid = await sparkAnims(pg, where);
+  check(`Hover sparkle (${label}): rapid in-and-out doesn't restart or stack`, rapid.length === 1 && rapid[0].start === first[0]?.start, JSON.stringify({ first, rapid }));
+  await pg.mouse.move(2, 400);
+  await wait(650);
+  check(`Hover sparkle (${label}): done after about 500ms`, (await sparkAnims(pg, where)).length === 0);
+  await control.hover();
+  const again = await sparkAnims(pg, where);
+  check(`Hover sparkle (${label}): hovering again plays it again`, isHeaderBounce(again) && again[0].start !== first[0]?.start, JSON.stringify(again));
+  await pg.mouse.move(2, 400);
+  await wait(650);
+}
+{
+  const { c, p, wx } = await motionPage({ width: 1280, height: 800 });
+  await wait(2400); // the launcher's load shimmer is CSS; let the page settle
+  await hoverChecks("launcher", p, "launcher", wx.locator("button.launcher"));
+  await p.locator("#main-search-input").evaluate((el) => el.blur());
+  await wx.locator("button.launcher").focus();
+  check("Hover sparkle (launcher): keyboard focus plays it once", isHeaderBounce(await sparkAnims(p, "launcher")));
+  await wait(650);
+  await hoverChecks("header search", p, "search", p.locator("#main-search-input"));
+  await p.locator("#main-search-input").focus();
+  check("Hover sparkle (header search): keyboard focus plays it once", isHeaderBounce(await sparkAnims(p, "search")));
+  await p.keyboard.press("Escape");
+  await p.locator("#main-search-input").evaluate((el) => el.blur());
+  await wait(650);
+  await wx.locator("button.launcher").click();
+  await settle(p);
+  await wx.locator("button.minimize").click();
+  await settle(p);
+  await hoverChecks("edge tab", p, "tab", wx.locator("button.edge-tab"));
+  await wx.locator("button.edge-tab").hover();
+  const during = await sparkAnims(p, "tab");
+  await wait(300);
+  const slid = await wx.locator(".edge-label").evaluate((el) => ({ opacity: getComputedStyle(el).opacity, width: el.getBoundingClientRect().width }));
+  check("Hover sparkle (edge tab): the slide-out still happens alongside", isHeaderBounce(during) && slid.opacity === "1" && slid.width > 40, JSON.stringify({ during, slid }));
+  await p.mouse.move(2, 400);
+  await wait(650);
+  await wx.locator("button.edge-tab").evaluate((el) => el.blur());
+  await wx.locator("button.edge-tab").focus();
+  check("Hover sparkle (edge tab): keyboard focus plays it once", isHeaderBounce(await sparkAnims(p, "tab")));
+  await c.close();
+}
+{
+  // Phone-width layout with a mouse: the header search icon.
+  const { c, p } = await motionPage({ width: 390, height: 844 });
+  await hoverChecks("phone search icon", p, "mobile", p.locator(".mobile-search-trigger"));
+  await c.close();
+}
+{
+  const { c, p, wx } = await motionPage({ width: 390, height: 844 }, true);
+  await p.locator(".mobile-search-trigger").tap();
+  const searchTap = await sparkAnims(p, "mobile");
+  await p.locator("#mccs-ask-sheet").evaluate((el) => el.querySelector("button")?.click());
+  await wx.locator("button.launcher").tap();
+  const launcherTap = await sparkAnims(p, "launcher");
+  check("Touch: a tap opens without the hover sparkle", searchTap.length === 0 && launcherTap.length === 0 && (await wx.locator(".panel").isVisible()), JSON.stringify({ searchTap, launcherTap }));
+  await c.close();
+}
+{
+  const { c, p, wx } = await motionPage({ width: 1280, height: 800 }, false, { reducedMotion: "reduce" });
+  await wx.locator("button.launcher").hover();
+  const l = await sparkAnims(p, "launcher");
+  await p.locator("#main-search-input").hover();
+  const sch = await sparkAnims(p, "search");
+  await wx.locator("button.launcher").focus();
+  const f = await sparkAnims(p, "launcher");
+  check("Reduced motion: no hover or focus sparkle", l.length === 0 && sch.length === 0 && f.length === 0, JSON.stringify({ l, sch, f }));
+  await c.close();
+}
+
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
 

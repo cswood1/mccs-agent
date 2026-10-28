@@ -142,6 +142,8 @@
   root.querySelector(".nudge-close").addEventListener("click", hideNudge);
 
   launcher.addEventListener("click", function () { setOpen(true); });
+  hoverSparkle(launcher, launcher, launcher.querySelector(".sparkle"));
+  hoverSparkle(edgeTab, edgeTab, edgeTab.querySelector(".sparkle"));
   edgeTab.addEventListener("click", function () { setOpen(true); });
   root.querySelector(".minimize").addEventListener("click", function () { setOpen(false); });
   root.querySelector(".reset").addEventListener("click", resetChat);
@@ -254,7 +256,10 @@
       desktopInput.removeAttribute("data-bs-target");
       desktopInput.style.cursor = "";
       var magnifier = desktopInput.parentNode.querySelector("svg.bi-search");
-      if (magnifier) magnifier.outerHTML = lightSparkle("mccs-ask-icon position-absolute top-50 end-0 translate-middle-y me-3", "#ffc72c", 18);
+      // Centered with a margin, not Bootstrap's translate-middle-y: its !important transform would
+      // block the hover bounce.
+      if (magnifier) magnifier.outerHTML = lightSparkle("mccs-ask-icon position-absolute top-50 end-0 me-3", "#ffc72c", 18, "margin-top: -9px;");
+      hoverSparkle(desktopInput.parentNode, desktopInput, desktopInput.parentNode.querySelector(".mccs-ask-icon"));
       setupCombobox(desktopInput);
       rotatePlaceholder(desktopInput);
     }
@@ -265,6 +270,7 @@
       mobileTrigger.setAttribute("aria-label", "Ask MCCS");
       var micon = mobileTrigger.querySelector("svg");
       if (micon) micon.outerHTML = lightSparkle("mccs-ask-icon", "#ffc72c", 24);
+      hoverSparkle(mobileTrigger, mobileTrigger, mobileTrigger.querySelector(".mccs-ask-icon"));
       search.sheet = createSheet();
       mobileTrigger.addEventListener("click", function (e) {
         e.preventDefault();
@@ -285,8 +291,8 @@
     window.addEventListener("scroll", positionListbox, true);
   }
 
-  function lightSparkle(cls, color, size) {
-    return '<svg class="' + cls + '" viewBox="0 0 24 24" width="' + size + '" height="' + size + '" aria-hidden="true" focusable="false" style="pointer-events: none; fill: ' + color + ';">' +
+  function lightSparkle(cls, color, size, style) {
+    return '<svg class="' + cls + '" viewBox="0 0 24 24" width="' + size + '" height="' + size + '" aria-hidden="true" focusable="false" style="pointer-events: none; fill: ' + color + ';' + (style ? " " + style : "") + '">' +
       '<path d="M12 2.5c.7 5.2 4.3 8.8 9.5 9.5-5.2.7-8.8 4.3-9.5 9.5-.7-5.2-4.3-8.8-9.5-9.5 5.2-.7 8.8-4.3 9.5-9.5z"/></svg>';
   }
 
@@ -783,13 +789,39 @@
     ] },
   };
 
+  // The one sparkle animation helper (header, launcher, edge tab, header search). The glint is added
+  // to the sparkle's own filter (the launcher and edge tab have a glow), so every sparkle looks alike.
+  function animateSparkle(el, kind, delay) {
+    if (!el || !el.animate || motionMode() === "reduced") return null;
+    var k = SPARK[kind];
+    var base = getComputedStyle(el).filter;
+    var frames = k.frames.map(function (f) {
+      var out = Object.assign({}, f);
+      if (f.filter) out.filter = f.filter === "none" ? base : base === "none" ? f.filter : base + " " + f.filter;
+      return out;
+    });
+    var a = el.animate(frames, { duration: k.duration, delay: delay || 0, easing: "ease-in-out" });
+    a.id = "spark-" + kind;
+    return a;
+  }
+
   function playSpark(kind, delay) {
     if (sparkAnim) sparkAnim.cancel();
-    sparkAnim = null;
-    if (!headSpark.animate || motionMode() === "reduced") return;
-    var k = SPARK[kind];
-    sparkAnim = headSpark.animate(k.frames, { duration: k.duration, delay: delay || 0, easing: "ease-in-out" });
-    sparkAnim.id = "spark-" + kind;
+    sparkAnim = animateSparkle(headSpark, kind, delay);
+  }
+
+  // The header's open bounce, once each time a mouse or pen enters the control or keyboard focus
+  // arrives; not for touch, and never on top of an animation already playing on that sparkle.
+  var lastPointerDown = 0;
+  document.addEventListener("pointerdown", function () { lastPointerDown = Date.now(); }, true);
+  function hoverSparkle(control, focusTarget, el) {
+    if (!control || !el) return;
+    var play = function () {
+      var busy = el.getAnimations().some(function (a) { return a.playState === "running"; });
+      if (!busy) animateSparkle(el, "open");
+    };
+    control.addEventListener("pointerenter", function (e) { if (e.pointerType !== "touch") play(); });
+    focusTarget.addEventListener("focus", function () { if (Date.now() - lastPointerDown > 300) play(); });
   }
 
   function isWaiting() {

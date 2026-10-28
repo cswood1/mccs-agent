@@ -291,6 +291,9 @@ disagrees with it, ask before changing either.
     (±12° twice, 600ms), then a softer repeat every 1.5 s while waiting. It stops on the first
     answer text, an error, the end of the reply or minimize. Only one animation runs at a time, and
     there are none with reduced motion.
+  - Hover sparkle (`hoverSparkle`, the same `animateSparkle` helper): the header's open bounce on the
+    launcher, edge tab and header search sparkles (desktop box and phone icon). It plays once per
+    mouse or pen entry or keyboard focus, and never stacks. Not for touch or reduced motion.
   - Tests wait with `settle()` in `tests/ui/widget-check.mjs`.
 
 ## Stack
