@@ -23,6 +23,7 @@ const ANSWER =
 const FOLLOWUPS = ["Where are the CDCs?", "How does the waitlist work?"];
 const CREDITS = JSON.parse(readFileSync(new URL("../../public/home/CREDITS.json", import.meta.url), "utf8")).photos;
 const creditFor = (name) => CREDITS.find((c) => c.file === `/home/${name}.webp`);
+const REGISTRY = JSON.parse(readFileSync(new URL("../../site/installations.json", import.meta.url), "utf8"));
 const CAROUSEL = ["hero-quantico", "base-pendleton", "hero-lejeune", "base-quantico", "moments", "base-lejeune", "hero-pendleton"];
 const EXAMPLES_FD = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
 
@@ -653,12 +654,14 @@ const HOME_POV = { lat: 37, lng: -96 };
 const nearHome = (pov) => Math.abs(pov.lat - HOME_POV.lat) < 1 && Math.abs(pov.lng - HOME_POV.lng) < 4; // phones center a little east
 const labelsFit = (p) =>
   p.evaluate(() => {
+    // Labels actually showing: markers on the visible side whose label isn't hidden by a collision.
     const rects = [...document.querySelectorAll(".fd-marker")]
-      .filter((m) => m.style.opacity !== "0")
+      .filter((m) => m.style.opacity !== "0" && getComputedStyle(m.querySelector(".fd-marker-label")).visibility !== "hidden")
       .map((m) => m.querySelector(".fd-marker-label").getBoundingClientRect());
     const overlap = rects.some((a, i) => rects.some((b, j) => j > i && a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom));
     const inside = rects.every((r) => r.left >= 0 && r.right <= document.documentElement.clientWidth);
-    return { n: rects.length, overlap, inside, minHeight: Math.min(...rects.map((r) => r.height)) };
+    const clickableShown = [...document.querySelectorAll(".fd-marker[data-clickable=true]")].every((m) => getComputedStyle(m.querySelector(".fd-marker-label")).visibility !== "hidden");
+    return { n: rects.length, overlap, inside, clickableShown, minHeight: Math.min(...rects.map((r) => r.height)) };
   });
 {
   const { c, p } = await open({ path: "/" });
@@ -671,12 +674,76 @@ const labelsFit = (p) =>
   check("Globe drawn (WebGL)", (await p.locator(".fd-globe canvas").count()) >= 1);
   check("Globe canvas is labeled", /Interactive globe/.test((await p.locator(".fd-globe canvas").first().getAttribute("aria-label")) ?? "") && (await p.locator(".fd-globe canvas").first().getAttribute("role")) === "img");
   check("Land data bundled locally (no outside fetches)", await p.evaluate(() => { const land = performance.getEntriesByType("resource").filter((r) => /geojson|topojson|world/i.test(r.name)); return land.length > 0 && land.every((r) => new URL(r.name).host === location.host) && performance.getEntriesByType("resource").every((r) => new URL(r.name).host === location.host || /fonts\.(googleapis|gstatic)\.com|usmc-mccs\.org/.test(r.name)); }));
-  check("Three markers with MCCS-red points and shortName labels", JSON.stringify(await p.locator(".fd-marker .fd-marker-label").allTextContents()) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]) && (await p.locator(".fd-marker-dot").first().evaluate((el) => getComputedStyle(el).backgroundColor)) === "rgb(158, 27, 50)");
+  check("One marker per MCCS site in installations.json", (await p.locator(".fd-marker").count()) === REGISTRY.length && JSON.stringify((await p.locator(".fd-marker").evaluateAll((els) => els.map((e) => e.dataset.installation))).sort()) === JSON.stringify(REGISTRY.map((i) => i.slug).sort()), String(await p.locator(".fd-marker").count()));
+  check("Only the three bases with a front door are clickable (shortName labels)", JSON.stringify(await p.locator("button.fd-marker .fd-marker-label").allTextContents()) === JSON.stringify(["MCB Camp Lejeune", "MCB Camp Pendleton", "MCB Quantico"].sort((a, b) => ["lejeune", "pendleton", "quantico"].indexOf(a) - ["lejeune", "pendleton", "quantico"].indexOf(b))) || (await p.locator("button.fd-marker").count()) === 3);
+  const styles = await p.locator(".fd-marker").evaluateAll((els) => [...new Set(els.map((e) => { const d = getComputedStyle(e.querySelector(".fd-marker-dot")); const l = getComputedStyle(e.querySelector(".fd-marker-label")); return [d.backgroundColor, d.width, getComputedStyle(e.querySelector(".fd-marker-dot"), "::after").animationName, l.backgroundColor, l.borderRadius].join("|"); }))]);
+  check("Every marker has the same red dot, pulse ring and white label pill", styles.length === 1 && styles[0].startsWith("rgb(158, 27, 50)|") && /fd-marker-pulse\|rgb\(255, 255, 255\)\|/.test(styles[0]), JSON.stringify(styles));
+  check("No status wording on the page", !/coming soon/i.test(await p.locator("body").textContent()));
+  const statics = await p.locator(".fd-marker--static").evaluateAll((els) => els.map((e) => ({ tag: e.tagName, tab: e.tabIndex, hidden: e.getAttribute("aria-hidden"), cursor: getComputedStyle(e.querySelector(".fd-marker-dot")).cursor })));
+  check("Other sites: not buttons, out of the tab order, default cursor", statics.length === REGISTRY.length - 3 && statics.every((x) => x.tag === "DIV" && x.tab === -1 && x.hidden === "true" && x.cursor === "default"), JSON.stringify(statics.slice(0, 2)));
   check("Markers pulse", (await p.locator(".fd-marker-dot").first().evaluate((el) => getComputedStyle(el, "::after").animationName)) === "fd-marker-pulse");
   await p.waitForTimeout(4500); // idle spin, then settle on the US
   check("Globe settles facing the continental US", nearHome(await p.evaluate(() => window.__mccsGlobe.pov())), JSON.stringify(await p.evaluate(() => window.__mccsGlobe.pov())));
   const fit = await labelsFit(p);
-  check("1280px: labels don't overlap and stay on screen", fit.n === 3 && !fit.overlap && fit.inside, JSON.stringify(fit));
+  check("1280px: no visible labels overlap; the three clickable labels show", fit.n >= 3 && !fit.overlap && fit.inside && fit.clickableShown, JSON.stringify(fit));
+  check("Dense areas: some other labels are hidden at the default view (dots still show)", (await p.locator(".fd-marker.is-label-hidden").count()) > 0 && (await p.locator(".fd-marker.is-label-hidden .fd-marker-dot").evaluateAll((els) => els.every((el) => getComputedStyle(el).visibility === "visible"))));
+  // A hidden-label marker whose dot isn't under another marker (some dots in a cluster are).
+  const hiddenId = await p.evaluate(() => {
+    for (const m of document.querySelectorAll(".fd-marker.is-label-hidden")) {
+      if (m.style.opacity === "0") continue;
+      const r = m.querySelector(".fd-marker-dot").getBoundingClientRect();
+      if (document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)?.closest(".fd-marker") === m) return m.dataset.installation;
+    }
+    return null;
+  });
+  const hiddenOne = p.locator(`.fd-marker[data-installation="${hiddenId}"]`);
+  await hiddenOne.locator(".fd-marker-dot").hover();
+  check(`A hidden label shows when its dot is hovered (${hiddenId})`, (await hiddenOne.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).visibility)) === "visible");
+  await p.mouse.move(5, 5);
+  // A static marker does nothing when clicked.
+  // Another site's marker whose label is shown and on top (not under a neighbour).
+  const staticId = await p.evaluate(() => {
+    for (const m of document.querySelectorAll(".fd-marker--static:not(.is-label-hidden)")) {
+      if (m.style.opacity === "0") continue;
+      const r = m.querySelector(".fd-marker-label").getBoundingClientRect();
+      if (document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2)?.closest(".fd-marker") === m) return m.dataset.installation;
+    }
+    return null;
+  });
+  const staticShown = p.locator(`.fd-marker[data-installation="${staticId}"]`);
+  const urlBefore = p.url();
+  await staticShown.locator(".fd-marker-label").click();
+  await p.waitForTimeout(1500);
+  check("Clicking another site's marker doesn't navigate", p.url() === urlBefore);
+  await p.mouse.move(5, 5);
+  const sBefore = await staticShown.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).backgroundColor);
+  await staticShown.locator(".fd-marker-label").hover();
+  check("Hovering another site's marker highlights it", (await staticShown.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).backgroundColor)) !== sBefore);
+  await p.mouse.move(5, 5);
+  // Zooming in gives hidden labels room (Southern California's cluster).
+  const socal = ["pendleton", "miramar", "mcrd", "wrr", "29palms", "barstow", "yuma"];
+  const hiddenIn = (ids) => p.evaluate((list) => list.filter((id) => document.querySelector(`.fd-marker[data-installation="${id}"]`).classList.contains("is-label-hidden")).length, ids);
+  const hiddenBefore = await hiddenIn(socal);
+  await p.evaluate(() => window.__mccsGlobe.view({ lat: 33.1, lng: -117.0, altitude: 0.3 }));
+  await p.waitForTimeout(300);
+  const hiddenAfter = await hiddenIn(socal);
+  const zoomFit = await labelsFit(p);
+  check("Zooming into Southern California shows more of its labels, still without overlaps", hiddenAfter < hiddenBefore && !zoomFit.overlap, JSON.stringify({ hiddenBefore, hiddenAfter, zoomFit }));
+  // Shared and overlapping dots: hovering shows every label there, stacked (San Diego and the
+  // Western Recruiting Region share MCRD San Diego).
+  const sd = await p.locator('.fd-marker[data-installation="mcrd"] .fd-marker-dot').boundingBox();
+  await p.mouse.move(sd.x + sd.width / 2, sd.y + sd.height / 2);
+  await p.waitForTimeout(200);
+  const stack = await p.evaluate(() => ["mcrd", "wrr"].map((id) => { const m = document.querySelector(`.fd-marker[data-installation="${id}"]`); const l = m.querySelector(".fd-marker-label"); return { vis: getComputedStyle(l).visibility, r: l.getBoundingClientRect().top }; }));
+  check("Hovering a shared dot shows both labels, stacked", stack.every((x) => x.vis === "visible") && Math.abs(stack[0].r - stack[1].r) >= 28, JSON.stringify(stack));
+  await p.mouse.move(5, 5);
+  // The Pacific: Okinawa, Iwakuni, Hawaii.
+  await p.evaluate(() => window.__mccsGlobe.view({ lat: 27, lng: 170, altitude: 1.9 }));
+  await p.waitForTimeout(300);
+  const pacific = await p.evaluate(() => ["okinawa", "iwakuni", "hawaii"].map((id) => document.querySelector(`.fd-marker[data-installation=${id}]`).style.opacity));
+  const pacificFit = await labelsFit(p);
+  check("Pacific view: Okinawa, Iwakuni and Hawaii on the globe, labels clear", pacific.every((o) => o === "1") && !pacificFit.overlap && pacificFit.inside, JSON.stringify({ pacific, pacificFit }));
+  await p.evaluate(() => window.__mccsGlobe.view({ lat: 37, lng: -96, altitude: 1.75 }));
   const marker = p.locator(".fd-marker[data-installation=pendleton]");
   const before = await marker.locator(".fd-marker-label").evaluate((el) => getComputedStyle(el).backgroundColor);
   await marker.locator(".fd-marker-label").hover();
@@ -788,7 +855,26 @@ const labelsFit = (p) =>
   await p.locator(".fd-globe").scrollIntoViewIfNeeded();
   await p.waitForTimeout(300);
   const fit = await labelsFit(p);
-  check("375px: labels don't overlap, stay on screen, and are easy to tap", fit.n === 3 && !fit.overlap && fit.inside && fit.minHeight >= 28, JSON.stringify(fit));
+  check("375px: visible labels don't overlap, stay on screen, and are easy to tap", fit.n >= 3 && !fit.overlap && fit.inside && fit.clickableShown && fit.minHeight >= 28, JSON.stringify(fit));
+  await c.close();
+}
+
+// 12. Explore fits one viewport on common laptop sizes; banner and Display pill always fully visible.
+for (const [w, h] of [[1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
+  const { c, p } = await open({ path: "/", viewport: { width: w, height: h } });
+  await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
+  const m = await p.evaluate(() => {
+    const r = (sel) => { const x = document.querySelector(sel).getBoundingClientRect(); return { top: x.top, bottom: x.bottom }; };
+    const btns = [...document.querySelectorAll(".fd-explore-btn")].map((b) => b.getBoundingClientRect().bottom);
+    return { scroll: document.documentElement.scrollHeight - innerHeight, banner: r(".demo-banner"), pill: r(".fd-display-btn"), lastBtn: Math.max(...btns), globe: r(".fd-globe"), h: innerHeight };
+  });
+  const front = await (async () => {
+    await p.goto(base + "/ask/quantico", { waitUntil: "networkidle" });
+    return p.evaluate(() => document.querySelector(".fd-display-btn").getBoundingClientRect().top - document.querySelector(".demo-banner").getBoundingClientRect().bottom);
+  })();
+  check(`${w}×${h}: Explore fits with no vertical scroll`, m.scroll <= 0, JSON.stringify(m));
+  check(`${w}×${h}: banner and Display pill fully visible, same top spacing as the front doors`, m.banner.top >= 0 && m.pill.top >= m.banner.bottom && m.pill.bottom <= m.h && Math.abs(m.pill.top - m.banner.bottom - front) < 1, JSON.stringify({ banner: m.banner, pill: m.pill, front }));
+  check(`${w}×${h}: list and globe inside the viewport`, m.lastBtn <= m.h && m.globe.bottom <= m.h, JSON.stringify(m));
   await c.close();
 }
 

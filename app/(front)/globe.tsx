@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import type { GlobeInstance } from "globe.gl";
 import type { Display } from "./display-menu";
 
-export type GlobeBase = { id: string; shortName: string; lat: number; lng: number; label: "left" | "right-up" | "right-down" };
+/** One marker per MCCS site; only the bases with a front door are clickable. */
+export type GlobeMarker = { id: string; label: string; lat: number; lng: number; dir: "left-down" | "right" | "right-up" | "right-down"; clickable: boolean };
 export type GlobeApi = { flyTo: (id: string) => Promise<void> };
 
 // Facing North America, tilted so the continental US is centered.
@@ -12,7 +13,9 @@ const HOME = { lat: 37, lng: -96, altitude: 1.75 };
 // Phones: a little farther out and a little east, so the East Coast labels fit on a 375px screen.
 const HOME_NARROW = { ...HOME, lng: -93, altitude: 2.15 };
 const START = { lat: 18, lng: -25, altitude: 2.3 }; // over the Atlantic, for the idle spin
-const MIN_ALT = 0.9; // zoom limits: the US stays readable
+// Zoom limits: out to where the US stays readable; in far enough that clustered sites (San Diego,
+// the Carolinas, the DC area) separate and their labels fit.
+const MIN_ALT = 0.3;
 const MAX_ALT = 2.6;
 
 /** Grayscale palette per theme (globe surface, land dots, atmosphere). */
@@ -23,18 +26,22 @@ function palette(d: Display) {
 
 /**
  * The Explore globe (globe.gl, loaded on demand in the browser). Dotted land from a bundled GeoJSON
- * (public/globe/countries.geojson), a soft atmosphere, and one pulsing MCCS-red marker per base with
- * an HTML label. Idle spin, then it settles on the US; drag with inertia; zoom limited.
+ * (public/globe/countries.geojson), a soft atmosphere, and one pulsing MCCS-red marker per MCCS site
+ * with an HTML label. Idle spin, then it settles on the US; drag with inertia; zoom limited.
+ *
+ * Labels never overlap: every frame, labels are placed greedily, the clickable bases first; any other
+ * label that would overlap one already placed is hidden until its dot is hovered or a zoom gives it
+ * room. Dots always show.
  */
 export default function Globe({
-  bases,
+  markers,
   display,
   reducedMotion,
   lastId,
   onSelect,
   apiRef,
 }: {
-  bases: GlobeBase[];
+  markers: GlobeMarker[];
   display: Display;
   reducedMotion: boolean;
   lastId: string | null;
@@ -59,6 +66,7 @@ export default function Globe({
     let disposed = false;
     let settleTimer: ReturnType<typeof setTimeout> | undefined;
     let resize: ResizeObserver | undefined;
+    let frame = 0;
 
     (async () => {
       const [{ default: GlobeGl }, land] = await Promise.all([
@@ -78,11 +86,11 @@ export default function Globe({
         .hexPolygonMargin(0.4)
         .hexPolygonUseDots(true)
         .hexPolygonColor(() => c.land)
-        .htmlElementsData(bases)
+        .htmlElementsData(markers)
         .htmlLat("lat")
         .htmlLng("lng")
         .htmlAltitude(0.012)
-        .htmlElement((d) => marker(d as GlobeBase))
+        .htmlElement((d) => marker(d as GlobeMarker))
         // Markers on the far side of the globe are hidden (and can't be clicked).
         .htmlElementVisibilityModifier((el, visible) => {
           el.style.opacity = visible ? "1" : "0";
@@ -108,7 +116,7 @@ export default function Globe({
       globe.renderer().domElement.style.touchAction = "pan-y";
       const canvas = globe.renderer().domElement;
       canvas.setAttribute("role", "img");
-      canvas.setAttribute("aria-label", `Interactive globe with ${bases.map((b) => b.shortName).join(", ")}. Use the list of installations to choose one.`);
+      canvas.setAttribute("aria-label", `Interactive globe of MCCS installations worldwide, including ${markers.filter((m) => m.clickable).map((m) => m.label).join(", ")}. Use the list of installations to choose one.`);
 
       if (!reducedMotion) {
         // A slow idle spin, then settle facing the US. Any drag ends the intro.
@@ -130,7 +138,7 @@ export default function Globe({
       apiRef.current = {
         flyTo: (id) =>
           new Promise((resolve) => {
-            const b = bases.find((x) => x.id === id);
+            const b = markers.find((x) => x.id === id);
             clearTimeout(settleTimer);
             controls.autoRotate = false;
             if (!b) return resolve();
@@ -138,37 +146,107 @@ export default function Globe({
             setTimeout(resolve, 1000);
           }),
       };
+      // Hovering a spot shows every label whose dot is under the pointer, stacked, so overlapping and
+      // shared dots (Western Recruiting Region is at MCRD San Diego) can still be read.
+      let pointer: { x: number; y: number } | null = null;
+      host.addEventListener("pointermove", (e) => (pointer = { x: e.clientX, y: e.clientY }));
+      host.addEventListener("pointerleave", () => (pointer = null));
+
+      // Label collisions, every frame (positions change as the globe turns and zooms).
+      const placeLabels = () => {
+        const placed: DOMRect[] = [];
+        const els = [...host.querySelectorAll<HTMLElement>(".fd-marker")];
+        // Other sites' labels stay inside the globe area (and on screen) and keep clear of every dot.
+        const hostRect = host.getBoundingClientRect();
+        const bounds = { left: Math.max(hostRect.left, 0), right: Math.min(hostRect.right, document.documentElement.clientWidth), top: hostRect.top, bottom: hostRect.bottom };
+        const dots = els.filter((e) => e.style.opacity !== "0").map((e) => ({ el: e, r: e.querySelector(".fd-marker-dot")!.getBoundingClientRect() }));
+        // Clickable bases first, then the others in a fixed order.
+        els.sort((a, b) => Number(b.dataset.clickable === "true") - Number(a.dataset.clickable === "true"));
+        for (const el of els) {
+          if (el.style.opacity === "0") {
+            el.classList.remove("is-label-hidden", "is-flipped"); // far side of the globe: not shown anyway
+            continue;
+          }
+          const label = el.querySelector<HTMLElement>(".fd-marker-label");
+          if (!label) continue;
+          el.classList.remove("is-label-hidden", "is-flipped");
+          const over = (r: DOMRect, p: DOMRect) => r.left < p.right && p.left < r.right && r.top < p.bottom && p.top < r.bottom;
+          const outside = (r: DOMRect) => r.left < bounds.left || r.right > bounds.right || r.top < bounds.top || r.bottom > bounds.bottom;
+          const hits = (r: DOMRect) => outside(r) || placed.some((p) => over(r, p)) || dots.some((d) => d.el !== el && over(r, d.r));
+          let r = label.getBoundingClientRect();
+          const coversDot = (rr: DOMRect) => dots.some((d) => d.el !== el && over(rr, d.r));
+          if (el.dataset.clickable === "true" && (outside(r) || coversDot(r))) {
+            // A front-door base's label always shows: flip it if that keeps it on screen and clear of
+            // other sites' dots.
+            el.classList.add("is-flipped");
+            const flipped = label.getBoundingClientRect();
+            if (outside(flipped) || coversDot(flipped) || placed.some((p) => over(flipped, p))) el.classList.remove("is-flipped");
+            else r = flipped;
+          }
+          if (el.dataset.clickable !== "true" && hits(r)) {
+            // Try the other side of the dot, then hide the label (the dot stays).
+            el.classList.add("is-flipped");
+            r = label.getBoundingClientRect();
+            if (hits(r)) {
+              el.classList.remove("is-flipped");
+              el.classList.add("is-label-hidden");
+              continue;
+            }
+          }
+          placed.push(r);
+        }
+        // Hover group: all dots under the pointer.
+        const near = pointer
+          ? dots.filter(({ r }) => pointer!.x >= r.left - 4 && pointer!.x <= r.right + 4 && pointer!.y >= r.top - 4 && pointer!.y <= r.bottom + 4).map((d) => d.el)
+          : [];
+        for (const el of els) {
+          const k = near.indexOf(el);
+          el.classList.toggle("is-hover", k >= 0);
+          el.style.setProperty("--fd-stack", String(Math.max(k, 0)));
+        }
+        frame = requestAnimationFrame(placeLabels);
+      };
+      frame = requestAnimationFrame(placeLabels);
       host.dataset.ready = "true";
       // Test hook: the current point of view and colors.
       (window as unknown as { __mccsGlobe?: object }).__mccsGlobe = {
         ...((window as unknown as { __mccsGlobe?: object }).__mccsGlobe ?? {}),
         ready: true,
         pov: () => globe.pointOfView(),
+        view: (pov: { lat: number; lng: number; altitude?: number }) => {
+          clearTimeout(settleTimer);
+          controls.autoRotate = false;
+          globe.pointOfView(pov, 0);
+        },
         colors: () => colorsRef.current,
       };
     })().catch(() => {
       host.dataset.ready = "error";
     });
 
-    function marker(b: GlobeBase) {
-      const el = document.createElement("button");
-      el.type = "button";
-      el.className = `fd-marker fd-marker--${b.label}${b.id === lastRef.current ? " is-last" : ""}`;
-      el.dataset.installation = b.id;
+    function marker(m: GlobeMarker) {
+      // Bases with a front door are buttons; every other site is a plain marker (hover only).
+      const el = document.createElement(m.clickable ? "button" : "div");
+      if (el instanceof HTMLButtonElement) el.type = "button";
+      el.className = `fd-marker fd-marker--${m.dir}${m.clickable ? "" : " fd-marker--static"}${m.id === lastRef.current ? " is-last" : ""}`;
+      el.dataset.installation = m.id;
+      el.dataset.clickable = String(m.clickable);
       // The list next to the globe is the keyboard and screen-reader path; markers are for pointers.
       el.tabIndex = -1;
       el.setAttribute("aria-hidden", "true");
       el.innerHTML = `<span class="fd-marker-dot"></span><span class="fd-marker-label"></span>`;
-      (el.querySelector(".fd-marker-label") as HTMLElement).textContent = b.shortName;
-      el.addEventListener("click", (e) => {
-        e.stopPropagation();
-        onSelectRef.current(b.id);
-      });
+      (el.querySelector(".fd-marker-label") as HTMLElement).textContent = m.label;
+      if (m.clickable)
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          onSelectRef.current(m.id);
+        });
       return el;
     }
 
     return () => {
       disposed = true;
+      cancelAnimationFrame(frame);
       clearTimeout(settleTimer);
       resize?.disconnect();
       apiRef.current = null;

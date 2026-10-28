@@ -169,7 +169,17 @@ disagrees with it, ask before changing either.
     H3 throw.
   - Look and motion: grayscale palette per theme. Idle spin, then it settles on the US; drag with
     inertia, limited zoom, `touch-action: pan-y` on phones.
-  - Markers: MCCS-red with HTML labels; positions are in `data.ts` (`GLOBE_PLACES`).
+  - Markers: one per MCCS site in `site/installations.json` (22), at each main base location
+    (`GLOBE_PLACES` in `data.ts`), all with the same red dot, pulse and label pill.
+    - Only Quantico, Camp Pendleton and Camp Lejeune are clickable buttons. The rest are hover-only,
+      with the default cursor and out of the tab order.
+    - A per-frame pass in `globe.tsx` keeps labels from overlapping: the clickable bases always show,
+      flipping sides to stay on screen and off other dots. Other labels try both sides of their dot,
+      then hide until hovered or zoomed in.
+    - Hovering a spot shows all labels there, stacked. Western Recruiting Region shares MCRD San
+      Diego's spot.
+  - Laptops (≥60em wide): the page fits one viewport under the banner (`body:has(.fd--explore)`), with
+    no page scroll; the headline scales with the viewport height. Phones scroll.
   - Picking: warms the base, saves it as last visited, flies in (~1 s), then a full navigation to
     `/ask/<base>`. A cross-document view transition crossfades where supported; a head script in
     `app/layout.tsx` swallows aborted transitions. With reduced motion it navigates at once.

@@ -849,24 +849,46 @@
   color: var(--fd-muted);
 }
 @media (min-width: 60em) {
+  /* Laptops and up: the page fits one viewport under the banner, with no page scroll, so the banner
+     and the Display pill always stay fully visible. The headline and globe scale to fit; the text
+     column scrolls on its own only if it can't (e.g. Large text on a short screen). */
+  body:has(.fd--explore) {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  body:has(.fd--explore) > .demo-banner {
+    flex: none;
+  }
+  .fd--explore {
+    flex: 1;
+    min-height: 0;
+  }
   .fd-explore {
     flex-direction: row;
     align-items: stretch;
-    min-height: calc(100vh - 8rem);
+    min-height: 0;
   }
   .fd-explore-text {
     flex: 0 0 38%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2em 0 4em clamp(2rem, 7vw, 8rem);
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0.5em 0 1.5em clamp(2rem, 7vw, 8rem);
   }
   .fd-explore h1 {
-    font-size: clamp(3.6em, 5.4vw, 6em);
+    font-size: clamp(2.8em, min(5.4vw, 9vh) * var(--fd-scale), 6em);
   }
   .fd-globe-wrap {
     flex: 1;
-    min-height: 34rem;
+    min-height: 0;
+  }
+  .fd--explore .fd-footer {
+    padding-block: 0.6em;
   }
 }
 
@@ -922,15 +944,51 @@
 .fd-marker--right-down .fd-marker-label {
   top: 0.55rem;
 }
-.fd-marker--left .fd-marker-label {
+.fd-marker--left-down .fd-marker-label {
+  left: auto;
+  right: 0.6rem;
+  top: 0.45rem;
+}
+/* Sites without a front door: hover only, no pointer. A label that would overlap is hidden until
+   its dot is hovered (or a zoom gives it room; see globe.tsx). */
+.fd-marker--static {
+  cursor: default;
+}
+.fd-marker.is-flipped .fd-marker-label {
   left: auto;
   right: 0.9rem;
+  translate: none;
+}
+.fd-marker--left-down.is-flipped .fd-marker-label {
+  left: 0.9rem;
+  right: auto;
+}
+@media (max-width: 30em) {
+  /* Phones: Camp Pendleton's label is centered below its dot; flipped, it sits to the left. */
+  .fd-marker--left-down.is-flipped .fd-marker-label {
+    left: auto;
+    right: 0.6rem;
+    top: 0.45rem;
+    translate: none;
+  }
+}
+.fd-marker.is-label-hidden:not(:hover, .is-hover) .fd-marker-label {
+  visibility: hidden;
+}
+.fd-marker:hover,
+.fd-marker.is-hover {
+  z-index: 5;
+}
+/* Several dots under the pointer: their labels stack. */
+.fd-marker.is-hover .fd-marker-label {
+  margin-top: calc(var(--fd-stack, 0) * 2.3rem);
 }
 .fd-marker:hover .fd-marker-label,
 .fd-marker.is-last .fd-marker-label {
   border-color: var(--fd-red);
 }
-.fd-marker:hover .fd-marker-label {
+.fd-marker:hover .fd-marker-label,
+.fd-marker.is-hover .fd-marker-label {
   background: var(--fd-red);
   color: var(--fd-red-ink);
 }
@@ -945,7 +1003,7 @@
     padding: 0.3rem 0.55rem;
     left: 0.7rem;
   }
-  .fd-marker--left .fd-marker-label {
+  .fd-marker--left-down .fd-marker-label {
     left: 0;
     right: auto;
     top: 0.75rem;

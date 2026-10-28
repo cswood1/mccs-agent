@@ -3,16 +3,16 @@
 import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DisplayMenu, useDisplay } from "./display-menu";
-import type { GlobeApi, GlobeBase } from "./globe";
+import type { GlobeApi, GlobeMarker } from "./globe";
 import { ARRIVED_KEY, hasWebGL, LAST_KEY, read, useInputType, warm, write } from "./shared";
 
 // The globe library is loaded only in the browser, after the page is up.
 const Globe = dynamic(() => import("./globe"), { ssr: false });
 
-type ExploreBase = GlobeBase & { name: string; location: string };
+type ExploreBase = { id: string; name: string; shortName: string; location: string };
 
 /** Explore your MCCS (/): pick a base on the globe, or from the list, to open its front door. */
-export default function Explore({ bases }: { bases: ExploreBase[] }) {
+export default function Explore({ bases, markers }: { bases: ExploreBase[]; markers: GlobeMarker[] }) {
   const { display, update, attrs } = useDisplay();
   const rootRef = useRef<HTMLDivElement | null>(null);
   const apiRef = useRef<GlobeApi | null>(null);
@@ -103,7 +103,7 @@ export default function Explore({ bases }: { bases: ExploreBase[] }) {
           {webgl === false ? (
             <p className="fd-globe-note">The interactive globe isn’t available in this browser. Choose your installation from the list.</p>
           ) : webgl ? (
-            <Globe bases={bases} display={display} reducedMotion={reducedMotion} lastId={lastId} onSelect={select} apiRef={apiRef} />
+            <Globe markers={markers} display={display} reducedMotion={reducedMotion} lastId={lastId} onSelect={select} apiRef={apiRef} />
           ) : null}
         </section>
       </main>
