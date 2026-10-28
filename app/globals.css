@@ -92,3 +92,39 @@ img.img-placeholder {
     padding-bottom: calc(max(16px, env(safe-area-inset-bottom)) + 66px);
   }
 }
+
+/* Recreated sites: the header's location button split in two (lib/site/data.ts splitLocationButton).
+   The wrapper keeps the original button's look; the name (opens the change-location modal) and the
+   globe (links to the Explore page) are plain, so nothing moves. */
+.mccs-loc-name {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+.mccs-loc-globe {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* In the MENU drawer the original button is a flex row (the name's 3px top margin counts there), so
+   both parts are flex there too; in the header it's a block, so they stay inline. */
+.mccs-loc:not(.d-md-block) > .mccs-loc-name {
+  display: flex;
+  align-items: center;
+}
+.mccs-loc:not(.d-md-block) > .mccs-loc-globe {
+  display: flex;
+}
+.mccs-loc-name:focus-visible,
+.mccs-loc-globe:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 3px;
+}

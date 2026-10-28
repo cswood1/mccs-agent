@@ -79,6 +79,16 @@ deployed on Vercel for demos. Three bases have full content: Quantico (`/quantic
 - **Widget on the demo site.** `data-site-host="quantico.usmc-mccs.org"` makes links to the real site in
   answers open the local page in the same tab; chat history and open state persist across navigation
   (sessionStorage). The header search box opens the assistant.
+- **Demo navigation (2026-10-28).**
+  - The header's location selector is split, in the header and the MENU drawer, on every recreated
+    base (`splitLocationButton` in `lib/site/data.ts`; plain inner parts styled in `app/globals.css`).
+    The globe is a link to `/` (title "Explore all installations", name "Explore your Marine
+    Community"), and the name still opens the change-location modal. It's pixel-identical to the capture.
+  - Only that navigation crossfades: the site layout opts in to view transitions, and
+    `site-enhancements.tsx` skips every other one on `pageswap`.
+  - Shift+G goes to `/`, except while typing in a field (including the header search box) or in the
+    Ask MCCS panel.
+  - Demo site only: `public/widget.js` is untouched.
 - **Live lookups.** The chat agent also has `web_fetch_20260318` / `web_search_20260318`, limited to the
   installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
 - **No embeddings / vector search / RAG.** The whole content file goes in the (cached) prompt.

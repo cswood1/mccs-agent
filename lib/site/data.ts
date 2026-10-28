@@ -146,10 +146,37 @@ export function fragment(inst: string, name: string): string {
   });
   const name_ = siteInstallation(inst)?.name ?? inst;
   $(".btn-modal > span.text-uppercase").text(name_);
+  splitLocationButton($);
 
   const html = $.html();
   themed.set(key, html);
   return html;
+}
+
+/**
+ * Splits the header's location button (in the header and in the MENU drawer): the name still opens
+ * the change-location modal, and the globe icon becomes a link to the Explore page (/). The wrapper
+ * keeps the button's classes, so it looks the same; globals.css makes the two parts plain. Demo only:
+ * this is the recreated site's rendering, not the widget.
+ */
+function splitLocationButton($: cheerio.CheerioAPI) {
+  $("button.btn-modal").each((_, el) => {
+    const button = $(el);
+    const globe = button.children("svg.bi-globe-americas");
+    if (!globe.length) return;
+    const wrap = $("<div></div>").attr("class", `${button.attr("class") ?? ""} mccs-loc`);
+    const name = $('<button type="button" class="btn-modal mccs-loc-name"></button>');
+    for (const [attr, value] of Object.entries(el.attribs)) {
+      if (attr.startsWith("data-") || attr.startsWith("aria-")) name.attr(attr, value);
+    }
+    name.append(button.children("span"));
+    const link = $('<a class="mccs-loc-globe" href="/" data-explore-link=""></a>')
+      .attr("title", "Explore all installations")
+      .attr("aria-label", "Explore your Marine Community")
+      .append(globe);
+    wrap.append(name, " ", link);
+    button.replaceWith(wrap);
+  });
 }
 
 // WebFetch output is mostly well-formed, but be forgiving about missing keys.

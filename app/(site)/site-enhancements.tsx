@@ -8,7 +8,8 @@ const BLANK = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAA
 /**
  * Small behaviors the real site gets from its own scripts (which we don't copy):
  * photo fallback, the Important Links scroll arrows, and side-nav expanders. (The header search box
- * is enhanced by the widget.)
+ * is enhanced by the widget.) Plus demo navigation: the Shift+G shortcut to the Explore page, and the
+ * crossfade on the way there.
  */
 export default function SiteEnhancements() {
   useEffect(() => {
@@ -66,10 +67,39 @@ export default function SiteEnhancements() {
     };
     document.addEventListener("click", onClick, true);
 
+    // Only the way to the Explore page (/) crossfades; other navigations stay as on the real site.
+    const onPageSwap = (e: Event) => {
+      const { viewTransition, activation } = e as Event & {
+        viewTransition?: { skipTransition(): void } | null;
+        activation?: { entry?: { url?: string } } | null;
+      };
+      if (!viewTransition) return;
+      const url = activation?.entry?.url;
+      if (!url || new URL(url).pathname !== "/") viewTransition.skipTransition();
+    };
+    window.addEventListener("pageswap", onPageSwap);
+
+    // Demo shortcut: Shift+G goes to the Explore page, except while typing (any field, the header
+    // search box) or anywhere in the Ask MCCS panel.
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "G" || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
+      const path = e.composedPath();
+      const typing = path.some(
+        (n) => n instanceof HTMLElement && (n.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(n.tagName) || n.id === "mccs-assistant"),
+      );
+      if (typing) return;
+      e.preventDefault();
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- a full navigation enables the cross-document view transition
+      window.location.assign("/");
+    };
+    document.addEventListener("keydown", onKey);
+
     return () => {
       window.removeEventListener("load", start);
       document.removeEventListener("error", onError, true);
       document.removeEventListener("click", onClick, true);
+      window.removeEventListener("pageswap", onPageSwap);
+      document.removeEventListener("keydown", onKey);
     };
   }, []);
   return null;

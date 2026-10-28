@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 /**
  * Widget behavior checks with stubbed API responses (no Claude calls).
  *
@@ -987,6 +988,68 @@ async function hoverChecks(label, pg, where, control) {
   const f = await sparkAnims(p, "launcher");
   check("Reduced motion: no hover or focus sparkle", l.length === 0 && sch.length === 0 && f.length === 0, JSON.stringify({ l, sch, f }));
   await c.close();
+}
+
+// Demo navigation: the header's globe links to the Explore page (/); the location name still opens
+// the change-location modal; Shift+G goes to / except while typing or in the Ask MCCS panel.
+{
+  const { c, p } = await motionPage({ width: 1280, height: 800 });
+  const globes = await p.locator("a.mccs-loc-globe").evaluateAll((as) => as.map((a) => ({ href: a.getAttribute("href"), title: a.title, label: a.getAttribute("aria-label"), svg: !!a.querySelector("svg.bi-globe-americas") })));
+  check("Location selector: the globe is a link to / (header and MENU drawer)", globes.length === 2 && globes.every((g) => g.href === "/" && g.svg && g.title === "Explore all installations" && g.label === "Explore your Marine Community"), JSON.stringify(globes));
+  const headerGlobe = p.locator("#block-views-block-change-location-change-location a.mccs-loc-globe");
+  await headerGlobe.hover();
+  check("Location selector: pointer cursor on the globe", (await headerGlobe.evaluate((el) => getComputedStyle(el).cursor)) === "pointer");
+  await p.locator("#block-views-block-change-location-change-location button.mccs-loc-name").click();
+  await p.locator("#modal-block-views-block-change-location-change-location.show").waitFor({ timeout: 3000 }).catch(() => {});
+  check("Location selector: the name still opens the change-location modal", await p.locator("#modal-block-views-block-change-location-change-location.show").isVisible());
+  await p.reload({ waitUntil: "networkidle" });
+  check("Location selector: the crossfade opt-in is on base pages", await p.evaluate(() => [...document.querySelectorAll("style")].some((st) => /@view-transition/.test(st.textContent))));
+  await headerGlobe.click();
+  await p.waitForURL((u) => new URL(u).pathname === "/");
+  check("Location selector: clicking the globe opens Explore in the same tab", (await p.locator(".fd-explore h1").count()) === 1 && c.pages().length === 1, p.url());
+
+  // Shift+G: ignored while typing in a field, the header search box or the Ask MCCS panel.
+  await p.goto(base + "/quantico/lodging", { waitUntil: "networkidle" });
+  await p.locator("#main-search-input").click();
+  await p.keyboard.type("G");
+  await p.keyboard.press("Shift+G");
+  check("Shift+G: ignored in the header search box", new URL(p.url()).pathname === "/quantico/lodging" && /G/.test(await p.locator("#main-search-input").inputValue()), p.url());
+  await p.keyboard.press("Escape");
+  await p.locator("#main-search-input").fill("");
+  await p.locator("#mccs-assistant button.launcher").click();
+  await settle(p);
+  await p.locator("#mccs-assistant textarea").press("Shift+G");
+  check("Shift+G: ignored in the Ask MCCS panel", new URL(p.url()).pathname === "/quantico/lodging" && (await p.locator("#mccs-assistant textarea").inputValue()) === "G", p.url());
+  await p.locator("#mccs-assistant button.minimize").click();
+  await settle(p);
+  await p.evaluate(() => document.activeElement?.blur());
+  await p.keyboard.press("Shift+G");
+  await p.waitForURL((u) => new URL(u).pathname === "/", { timeout: 5000 }).catch(() => {});
+  check("Shift+G: goes to / from a base page", new URL(p.url()).pathname === "/", p.url());
+  await c.close();
+}
+{
+  // Phones: the location selector is in the MENU drawer; same split there. Also a coming-soon base.
+  const { c, p } = await motionPage({ width: 375, height: 812 }, true);
+  await p.goto(base + "/albany", { waitUntil: "networkidle" });
+  await p.locator("[data-bs-target='#offcanvasSidebar']").first().click();
+  await p.locator("#offcanvasSidebar.show").waitFor();
+  const menuGlobe = p.locator("#offcanvasSidebar a.mccs-loc-globe");
+  check("Phone MENU: the globe links to / (coming-soon base too)", (await menuGlobe.getAttribute("href")) === "/" && (await menuGlobe.isVisible()));
+  await p.locator("#offcanvasSidebar button.mccs-loc-name").click();
+  await p.locator("#modal-block-views-block-change-location-change-location.show").waitFor({ timeout: 3000 }).catch(() => {});
+  check("Phone MENU: the name still opens the change-location modal", await p.locator("#modal-block-views-block-change-location-change-location.show").isVisible());
+  await p.goto(base + "/albany", { waitUntil: "networkidle" });
+  await p.locator("[data-bs-target='#offcanvasSidebar']").first().click();
+  await p.locator("#offcanvasSidebar.show").waitFor();
+  await menuGlobe.tap();
+  await p.waitForURL((u) => new URL(u).pathname === "/", { timeout: 5000 }).catch(() => {});
+  check("Phone MENU: tapping the globe opens Explore", new URL(p.url()).pathname === "/", p.url());
+  await c.close();
+}
+{
+  const src = readFileSync(new URL("../../public/widget.js", import.meta.url), "utf8");
+  check("The widget is unchanged: no location-selector or Shift+G code in widget.js", !/mccs-loc|Explore all installations|Explore your Marine Community|Shift\+G/.test(src));
 }
 
 check("No page errors", errors.length === 0, errors.join(" | "));
