@@ -269,12 +269,22 @@ disagrees with it, ask before changing either.
 
 ## Widget window and bottom area (2026-10-28)
 - ≥ 768px: a floating window flush right, 24px below the demo banner (its height is reserved when
-  `.demo-banner` exists) and 24px above the bottom, max 820px tall and centered, left corners rounded
-  18px. Phones: a sheet with rounded top corners and a 10px top gap.
+  `.demo-banner` exists) and 24px above the bottom, max 960px tall and centered, left corners rounded
+  18px. Phones: a sheet with rounded top corners and a 10px top gap. The header is about 72px.
 - Suggested questions (starter chips, then the latest answer's follow-ups) sit in the conversation
   under the latest message with a small "Suggested" label, outside the `.thread` live region.
 - Composer: one field with the send button inside; placeholder "Ask MCCS anything…", then
-  "Ask a follow-up…" (docs/PRODUCT.md §13 still says "Ask me anything…").
+  "Ask a follow-up…" (docs/PRODUCT.md §13).
+- Open/minimize motion (`animateOpen` / `animateClose` in `public/widget.js`, Web Animations):
+  - Open: the window grows out of the control that opened it (transform-origin at its center):
+    scale 0.9 → 1, a fade and a 16px slide, 300ms with a slight-overshoot spring. Then the header,
+    conversation and composer rise 6px, 40ms apart.
+  - Minimize: 200ms back down to 0.9 toward the edge tab. The tab pops in (0.85 → 1) with one
+    sparkle glint; it's shown and focused at once, and invisible until then (`fill: backwards`).
+  - Phones: the sheet slides up and down (280ms). Reduced motion: 150ms opacity fades only.
+  - A click mid-animation starts the next one from the window's current opacity and transform.
+    The final state never depends on an animation finishing.
+  - Tests wait with `settle()` in `tests/ui/widget-check.mjs`.
 
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16

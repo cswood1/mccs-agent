@@ -621,12 +621,18 @@
   }
 
   function setOpen(open, restoring) {
+    var changed = open !== state.open;
+    // The control the window grows out of (or the corner, when opened another way).
+    var opener = !edgeTab.hidden ? edgeTab : !launcher.hidden ? launcher : null;
+    var openerRect = opener && opener.getBoundingClientRect();
     state.open = open;
     saveOpen(open);
-    panel.hidden = !open;
-    if (open) placePanel();
-    // Once the chat has been opened this session, minimizing leaves the compact edge tab.
-    if (open) saveTab(true);
+    if (open) {
+      panel.hidden = false;
+      placePanel();
+      // Once the chat has been opened this session, minimizing leaves the compact edge tab.
+      saveTab(true);
+    }
     showButton();
     // Full-screen on phones: stop the page underneath from scrolling.
     document.documentElement.style.overflow = open && isPhone() ? "hidden" : "";
@@ -635,10 +641,132 @@
       warmCache();
       render();
       scrollToEnd();
+      if (changed && !restoring) animateOpen(openerRect);
       if (!(restoring && isPhone())) input.focus({ preventScroll: true });
     } else {
-      (edgeTab.hidden ? launcher : edgeTab).focus();
+      var button = edgeTab.hidden ? launcher : edgeTab;
+      if (changed) animateClose(button);
+      else panel.hidden = true;
+      button.focus();
     }
+  }
+
+  // ---------- open and minimize motion (Web Animations; the final state never depends on it) ----------
+  // A gentle spring: a very slight overshoot that settles cleanly.
+  var SPRING = "cubic-bezier(.32, 1.24, .52, 1)";
+  var panelAnim = null;
+  var contentAnims = [];
+  var buttonAnims = [];
+
+  function motionMode() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return "reduced";
+    return isPhone() ? "sheet" : "window";
+  }
+
+  // Stops any open/minimize animation in flight and returns where the window was, so the next one
+  // starts from there: a click mid-animation reverses smoothly instead of jumping.
+  function stopPanelMotion() {
+    var live = null;
+    if (panelAnim) {
+      if (panelAnim.playState === "running") {
+        var cs = getComputedStyle(panel);
+        live = { opacity: cs.opacity, transform: cs.transform };
+      }
+      panelAnim.onfinish = null;
+      panelAnim.cancel();
+      panelAnim = null;
+    }
+    contentAnims.forEach(function (a) { a.cancel(); });
+    buttonAnims.forEach(function (a) { a.cancel(); });
+    contentAnims = [];
+    buttonAnims = [];
+    panel.style.pointerEvents = "";
+    return live;
+  }
+
+  // transform-origin at the center of a control, in the window's own (untransformed) coordinates.
+  function originAt(rect) {
+    if (!rect) return "100% 100%";
+    var x = rect.left + rect.width / 2 - panel.offsetLeft;
+    var y = rect.top + rect.height / 2 - panel.offsetTop;
+    return Math.round(x) + "px " + Math.round(y) + "px";
+  }
+
+  function animateOpen(openerRect) {
+    if (!panel.animate) return;
+    var live = stopPanelMotion();
+    var mode = motionMode();
+    if (mode === "reduced") {
+      panelAnim = panel.animate([{ opacity: live ? live.opacity : 0 }, { opacity: 1 }], { duration: 150, easing: "ease-out" });
+    } else if (mode === "sheet") {
+      panelAnim = panel.animate([{ transform: live ? live.transform : "translateY(100%)" }, { transform: "none" }], { duration: 280, easing: SPRING });
+    } else {
+      if (!live) panel.style.transformOrigin = originAt(openerRect);
+      panelAnim = panel.animate(
+        [{ opacity: live ? live.opacity : 0, transform: live ? live.transform : "translateX(16px) scale(.9)" }, { opacity: 1, transform: "none" }],
+        { duration: 300, easing: SPRING }
+      );
+      // The inside follows a beat later: header, then conversation, then composer.
+      if (!live) {
+        [root.querySelector(".head"), log, root.querySelector(".bottom")].forEach(function (el, i) {
+          contentAnims.push(el.animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }],
+            { duration: 240, delay: 90 + i * 40, easing: "cubic-bezier(.2, .7, .3, 1)", fill: "backwards" }));
+        });
+      }
+    }
+    var a = panelAnim;
+    a.onfinish = function () { if (panelAnim === a) panelAnim = null; };
+  }
+
+  function animateClose(button) {
+    if (!panel.animate) { panel.hidden = true; return; }
+    var live = stopPanelMotion() || { opacity: "1", transform: "none" };
+    var mode = motionMode();
+    var duration;
+    panel.style.pointerEvents = "none";
+    if (mode === "reduced") {
+      duration = 150;
+      panelAnim = panel.animate([{ opacity: live.opacity }, { opacity: 0 }], { duration: duration, easing: "ease-in", fill: "forwards" });
+    } else if (mode === "sheet") {
+      duration = 280;
+      panelAnim = panel.animate([{ transform: live.transform, opacity: live.opacity }, { transform: "translateY(100%)", opacity: live.opacity }], { duration: duration, easing: SPRING, fill: "forwards" });
+    } else {
+      duration = 200;
+      if (live.transform === "none") panel.style.transformOrigin = originAt(button.getBoundingClientRect());
+      panelAnim = panel.animate([{ opacity: live.opacity, transform: live.transform }, { opacity: 0, transform: "translateX(8px) scale(.9)" }],
+        { duration: duration, easing: "cubic-bezier(.4, 0, 1, 1)", fill: "forwards" });
+    }
+    var a = panelAnim;
+    a.onfinish = function () {
+      if (panelAnim !== a) return;
+      panelAnim = null;
+      if (!state.open) panel.hidden = true;
+      panel.style.pointerEvents = "";
+      a.cancel();
+    };
+    arrive(button, mode, duration);
+  }
+
+  // The button arrives once the window has gone: a small pop and one sparkle glint (a fade with
+  // reduced motion). It's shown and focused at once; fill: backwards keeps it invisible until then.
+  function arrive(button, mode, delay) {
+    if (mode === "reduced") {
+      buttonAnims.push(button.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, delay: delay, easing: "ease-out", fill: "backwards" }));
+      return;
+    }
+    var origin = button === edgeTab ? "100% 50%" : "50% 50%";
+    buttonAnims.push(button.animate([
+      { opacity: 0, transform: "scale(.85)", transformOrigin: origin },
+      { opacity: 1, transform: "scale(1.04)", transformOrigin: origin, offset: 0.65 },
+      { opacity: 1, transform: "scale(1)", transformOrigin: origin },
+    ], { duration: 260, delay: delay, easing: "ease-out", fill: "backwards" }));
+    var spark = button.querySelector(".sparkle");
+    var glow = getComputedStyle(spark).filter;
+    buttonAnims.push(spark.animate([
+      { filter: glow, transform: "none" },
+      { filter: "drop-shadow(0 0 9px rgba(255,236,160,1)) brightness(1.3)", transform: "scale(1.18) rotate(14deg)", offset: 0.4 },
+      { filter: glow, transform: "none" },
+    ], { duration: 520, delay: delay + 140, easing: "ease-in-out" }));
   }
 
   // The floating window starts below the demo site's banner when there is one (it scrolls with the
@@ -1095,28 +1223,27 @@
       ".edge-tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       // Floating window flush with the right edge: below the demo banner (when there is one), 24px
-      // from the top and bottom, at most 820px tall and centered in that space. Left corners rounded;
+      // from the top and bottom, at most 960px tall and centered in that space. Left corners rounded;
       // the content clips to the shape.
       ".panel { position: fixed; z-index: 2147483001; right: 0; top: calc(var(--top-offset, 0px) + 24px); bottom: 24px; width: 420px; max-width: 100vw;",
-      "  max-height: 820px; margin: auto 0; border-radius: 18px 0 0 18px; overflow: hidden;",
+      "  max-height: 960px; margin: auto 0; border-radius: 18px 0 0 18px; overflow: hidden;",
       // Hairline, a faint warm glow on the page side, and a slightly stronger floating shadow.
       "  display: flex; flex-direction: column; background: var(--bg); border: 1px solid rgba(17,24,39,.12); border-right: 0;",
-      "  box-shadow: -1px 0 10px rgba(255,199,44,.10), -20px 8px 56px -6px rgba(15,23,42,.30), 0 2px 8px rgba(15,23,42,.08); animation: slide .22s ease-out; }",
-      "@keyframes slide { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }",
-      "@keyframes rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }",
-      "@keyframes fade { from { opacity: 0; } to { opacity: 1; } }",
+      "  box-shadow: -1px 0 10px rgba(255,199,44,.10), -20px 8px 56px -6px rgba(15,23,42,.30), 0 2px 8px rgba(15,23,42,.08); }",
+      // Open and minimize motion is in animateOpen / animateClose (Web Animations).
       // Phones: a near-full-screen sheet with rounded top corners and a small gap above it.
       "@media (max-width: 767px) { .panel { top: calc(10px + env(safe-area-inset-top)); bottom: auto; left: 0; width: 100vw; height: calc(100dvh - 10px - env(safe-area-inset-top));",
-      "  max-height: none; margin: 0; border: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -8px 32px rgba(15,23,42,.28); animation-name: rise; }",
-      "  .panel .head { padding-top: 14px; } }",
+      "  max-height: none; margin: 0; border: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -8px 32px rgba(15,23,42,.28); }",
+      "  .panel .head { padding-top: 8px; } }",
 
-      ".head { display: flex; align-items: center; gap: 4px; padding: 14px 10px 14px 18px; padding-top: max(14px, env(safe-area-inset-top));",
+      // Slim header (about 72px): tight padding and line heights; the 44px icon buttons set the floor.
+      ".head { flex: none; display: flex; align-items: center; gap: 4px; min-height: 72px; padding: 8px 8px 8px 18px; padding-top: max(8px, env(safe-area-inset-top));",
       "  background: var(--primary); color: #fff; }",
       ".head-text { flex: 1; min-width: 0; }",
-      "h2 { margin: 0; display: flex; align-items: center; gap: 7px; font-size: 17px; font-weight: 700; }",
+      "h2 { margin: 0; display: flex; align-items: center; gap: 7px; font-size: 17px; font-weight: 700; line-height: 1.2; }",
       "h2 .sparkle { width: 18px; height: 18px; }",
-      ".subtitle { margin: 2px 0 0; font-size: 13px; opacity: .85; }",
-      ".context-line { margin: 1px 0 0; font-size: 12px; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }",
+      ".subtitle { margin: 2px 0 0; font-size: 13px; line-height: 1.3; opacity: .85; }",
+      ".context-line { margin: 0; font-size: 12px; line-height: 1.3; opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }",
       ".icon-btn { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 10px; background: transparent; color: inherit; cursor: pointer; }",
       ".icon-btn:hover { background: rgba(255,255,255,.15); }",
 
@@ -1179,7 +1306,7 @@
       ".send:focus-visible { outline: 2px solid var(--navy); outline-offset: -1px; }",
       ".disclaimer { margin: 0; padding: 6px 4px 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); font-size: 11px; line-height: 1.3; color: var(--muted); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel { animation: fade .15s ease-out; } .typing i, .nudge, .launcher, .edge-tab, .status, .thinking { animation: none; } .thinking { -webkit-text-fill-color: currentColor; background: none; } .edge-label { transition: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .typing i, .nudge, .launcher, .edge-tab, .status, .thinking { animation: none; } .thinking { -webkit-text-fill-color: currentColor; background: none; } .edge-label { transition: none; } }",
     ].join("\n");
   }
 })();

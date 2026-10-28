@@ -214,7 +214,13 @@ The recruiting-region sites are out of scope unless time allows.
 **Name:** the assistant is **"Ask MCCS"** everywhere. Panel title: "Ask MCCS", with the subtitle
 being the installation's short name only (for example "MCB Quantico", "MCB Camp Pendleton"), so "MCCS" isn't
 repeated. The short name is display-only config and is never part of the cached prompt. The floating button label is "Ask MCCS". The
-composer placeholder stays "Ask me anything…". Never "<Installation> Assistant".
+composer placeholder reads "Ask MCCS anything…" before the first message and "Ask a follow-up…"
+after it. Never "<Installation> Assistant".
+
+**While waiting:** until the answer starts, the panel and the front door show "Hooking and jabbing,
+be right back…" (italic, muted, a gentle shimmer; static with reduced motion). A tool status
+("Checking Camp Pendleton…") replaces it while a tool runs; it clears on the first text and is never
+saved.
 
 **AI signal:** an original, simple four-point sparkle icon, in the theme's scarlet and gold. It
 appears on the floating button, in the panel header next to the title, and in the search bar. The

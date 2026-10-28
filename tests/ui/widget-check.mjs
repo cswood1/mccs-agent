@@ -20,6 +20,14 @@ const ANSWER =
   "For a place to stay, see [Lodging](https://quantico.usmc-mccs.org/lodging), or compare [Pendleton lodging](https://pendleton.usmc-mccs.org/lodging) and [Lejeune lodging](https://lejeunenewriver.usmc-mccs.org/lodging).";
 const FOLLOWUPS = ["Lane prices?", "Party packages?"];
 
+// Waits until the widget's open/minimize animations (Web Animations, not the looping CSS ones) end.
+async function settle(pg) {
+  await pg.waitForFunction(() => {
+    const r = document.querySelector("#mccs-assistant")?.shadowRoot;
+    return !r || r.getAnimations().every((a) => a instanceof CSSAnimation || a.playState !== "running");
+  }, null, { timeout: 4000 });
+}
+
 const browser = await chromium.launch({ executablePath: CHROME });
 const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 } });
 if (code) {
@@ -42,6 +50,7 @@ const w = page.locator("#mccs-assistant");
 // 1. Bowling page: context line, page welcome, page chips.
 await page.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
 await w.locator("button.launcher").click();
+await settle(page);
 await page.waitForTimeout(400);
 const viewing = await w.locator(".context-line").textContent();
 check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(viewing), viewing);
@@ -85,7 +94,7 @@ const win = await w.locator(".panel").evaluate((el) => {
     radii: [cs.borderTopLeftRadius, cs.borderBottomLeftRadius, cs.borderTopRightRadius, cs.borderBottomRightRadius], overflow: cs.overflow };
 });
 check("Window: flush with the right edge, current width", Math.abs(win.right - win.vw) < 1 && win.width === 420, JSON.stringify(win));
-check("Window: starts below the demo banner, page visible above and below", win.top >= win.bannerBottom + 20 && win.vh - win.bottom >= 20 && win.height <= 820, JSON.stringify(win));
+check("Window: starts below the demo banner, page visible above and below", win.top >= win.bannerBottom + 20 && win.vh - win.bottom >= 20 && win.height <= 960, JSON.stringify(win));
 check("Window: left corners rounded 18px, right side square, content clipped", JSON.stringify(win.radii) === JSON.stringify(["18px", "18px", "0px", "0px"]) && win.overflow === "hidden", JSON.stringify(win));
 // Starter chips sit in the conversation under the welcome, with the "Suggested" label.
 const starter = await w.locator(".chips").evaluate((el) => {
@@ -331,6 +340,7 @@ check("Asked with this page as context", searchBodies.at(-1)?.page?.path === "/q
 check("Search box cleared after asking", (await sp.locator("#main-search-input").inputValue()) === "");
 check("Old search modal never opens", (await sp.locator("#searchModal.show").count()) === 0);
 await sp.locator("#mccs-assistant .minimize").click();
+await settle(sp);
 await sp.keyboard.press(process.platform === "darwin" ? "Meta+k" : "Control+k");
 check("Cmd/Ctrl+K focuses the search box", await sp.locator("#main-search-input").evaluate((el) => document.activeElement === el));
 // The edge tab shows the same conversation.
@@ -452,6 +462,7 @@ async function edgeFlow(label, viewport, mobile) {
   await p.evaluate(() => window.scrollTo(0, 0));
   const fullBox = await full.boundingBox();
   await full.click();
+  await settle(p);
   await p.waitForTimeout(300);
   const sheet = await wx.locator(".panel").evaluate((el) => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return { x: r.x, top: r.top, width: r.width, bottom: r.bottom, radii: [cs.borderTopLeftRadius, cs.borderTopRightRadius, cs.borderBottomLeftRadius], vh: innerHeight }; });
   if (mobile) check(`${label}: near-full-screen sheet, rounded top corners, small top gap`, sheet.x === 0 && sheet.width === viewport.width && sheet.top >= 6 && sheet.top <= 20 && Math.abs(sheet.bottom - sheet.vh) < 1 && JSON.stringify(sheet.radii) === JSON.stringify(["18px", "18px", "0px"]), JSON.stringify(sheet));
@@ -465,25 +476,31 @@ async function edgeFlow(label, viewport, mobile) {
   await wx.locator("textarea").press("Enter");
   await wx.locator(".msg.assistant").filter({ hasText: "Stub answer." }).waitFor();
   await min.click();
+  await settle(p);
   check(`${label}: minimize hides the panel and shows the edge tab`, !(await wx.locator(".panel").isVisible()) && !(await full.isVisible()) && (await tab.isVisible()));
   check(`${label}: edge tab label and focus`, (await tab.getAttribute("aria-label")) === "Open Ask MCCS" && (await tab.evaluate((el) => el.getRootNode().activeElement === el)));
   const tabBox = await tab.boundingBox();
   check(`${label}: edge tab flush right, at the full button's height`, Math.abs(tabBox.x + tabBox.width - viewport.width) < 1 && Math.abs(tabBox.y + tabBox.height - (fullBox.y + fullBox.height)) <= 4 && tabBox.width >= 44 && tabBox.width <= 50 && tabBox.height >= 54, JSON.stringify({ tabBox, fullBox }));
   check(`${label}: edge tab pulses`, (await tab.evaluate((el) => getComputedStyle(el).animationName)) === "edge-glow");
   await tab.click();
+  await settle(p);
   check(`${label}: edge tab reopens the panel with the chat`, (await wx.locator(".panel").isVisible()) && (await wx.locator(".msg.user").count()) === 1 && !(await tab.isVisible()));
   await wx.locator("textarea").press("Escape");
+  await settle(p);
   check(`${label}: Escape minimizes to the edge tab`, !(await wx.locator(".panel").isVisible()) && (await tab.isVisible()));
   await p.goto(base + "/quantico/lodging", { waitUntil: "networkidle" });
   check(`${label}: navigation keeps the edge tab`, (await tab.isVisible()) && !(await full.isVisible()) && !(await wx.locator(".panel").isVisible()));
   await tab.click();
+  await settle(p);
   await p.waitForTimeout(400);
   check(`${label}: chat history and page awareness after navigation`, (await wx.locator(".msg.user").count()) === 1 && /^Viewing: Lodging/i.test((await wx.locator(".context-line").textContent()) ?? ""));
   await p.reload({ waitUntil: "networkidle" });
   check(`${label}: reload shows the full button, panel closed`, (await full.isVisible()) && !(await tab.isVisible()) && !(await wx.locator(".panel").isVisible()));
   await full.click();
+  await settle(p);
   check(`${label}: chat kept after reload`, (await wx.locator(".msg.user").count()) === 1);
   await min.click();
+  await settle(p);
   check(`${label}: minimizing after reload shows the edge tab again`, await tab.isVisible());
   return c;
 }
@@ -501,7 +518,9 @@ async function tabPage(viewport, mobile, extra = {}) {
   await p.goto(base + "/quantico/lodging", { waitUntil: "networkidle" });
   const wx = p.locator("#mccs-assistant");
   await wx.locator("button.launcher").click();
+  await settle(p);
   await wx.locator("button.minimize").click();
+  await settle(p);
   return { p, wx, tab: wx.locator("button.edge-tab"), label: wx.locator(".edge-label") };
 }
 const tabState = (tab) => tab.evaluate((el) => {
@@ -529,8 +548,10 @@ const tabState = (tab) => tab.evaluate((el) => {
   check("Mouse leave tucks it back", (await tabState(tab)).width <= 50);
   // Keyboard: Escape from the panel puts keyboard focus on the tab, which expands it.
   await tab.click();
+  await settle(p);
   await p.mouse.move(400, 400); // not hovering the tab, so only focus can expand it
   await wx.locator("textarea").press("Escape");
+  await settle(p);
   await p.waitForTimeout(350);
   const focused = await tabState(tab);
   check("Keyboard focus expands the tab", focused.width > 100 && focused.labelOpacity === "1" && (await tab.evaluate((el) => el.matches(":focus-visible"))), JSON.stringify(focused));
@@ -544,6 +565,7 @@ const tabState = (tab) => tab.evaluate((el) => {
   check("Touch: no hover state", await p.evaluate(() => !matchMedia("(hover: hover)").matches));
   const before = await tabState(tab);
   await tab.tap();
+  await settle(p);
   await p.waitForTimeout(300);
   check("Touch: a tap opens the panel directly", before.width <= 50 && (await wx.locator(".panel").isVisible()) && !(await tab.isVisible()), JSON.stringify(before));
   await p.context().close();
@@ -566,9 +588,9 @@ await rm.goto(base + "/quantico", { waitUntil: "networkidle" });
 const rmAnim = await rm.locator("#mccs-assistant button.launcher").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: no shimmer", rmAnim === "none", rmAnim);
 await rm.locator("#mccs-assistant button.launcher").click();
-const rmPanel = await rm.locator("#mccs-assistant .panel").evaluate((el) => getComputedStyle(el).animationName);
-check("Reduced motion: the window fades in (no slide)", rmPanel === "fade", rmPanel);
+await settle(rm);
 await rm.locator("#mccs-assistant button.minimize").click();
+await settle(rm);
 const rmGlow = await rm.locator("#mccs-assistant button.edge-tab").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: edge tab glow is static", rmGlow === "none", rmGlow);
 
@@ -677,7 +699,7 @@ const THINKING = ["Hooking and jabbing, be right back…"];
     const log = panel.querySelector(".log");
     return { overflows: log.scrollHeight > log.clientHeight, overflowY: getComputedStyle(log).overflowY, panelHeight: panel.getBoundingClientRect().height, atEnd: log.scrollHeight - log.scrollTop - log.clientHeight < 2 };
   });
-  check("Window: long conversations scroll inside it, at the same height", scroll.overflows && scroll.overflowY === "auto" && scroll.panelHeight <= 820 && scroll.atEnd, JSON.stringify(scroll));
+  check("Window: long conversations scroll inside it, at the same height", scroll.overflows && scroll.overflowY === "auto" && scroll.panelHeight <= 960 && scroll.atEnd, JSON.stringify(scroll));
   check("Thinking phrase shimmers", seen.every((x) => x.anim === "thinking-shimmer"), JSON.stringify(seen.map((x) => x.anim)));
   const saved = await p.evaluate(() => sessionStorage.getItem("mccs-assistant:quantico") ?? "");
   check("Thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));
@@ -693,6 +715,122 @@ const THINKING = ["Hooking and jabbing, be right back…"];
   const still = await animationOf(last.locator(".thinking"));
   check("Reduced motion: thinking phrase is static", still === "none", still);
   await p.evaluate(() => { window.__release = true; });
+  await c.close();
+}
+
+// Open and minimize motion (Web Animations). The checks read each animation's timing and keyframes
+// as it starts, then the settled state.
+async function motionPage(viewport, mobile = false, extra = {}) {
+  const c = await browser.newContext({ viewport, isMobile: mobile, hasTouch: mobile, ...extra });
+  await c.addCookies(await ctx.cookies());
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  await c.route("**/api/warm", (r) => r.fulfill({ status: 200, contentType: "application/json", body: "{}" }));
+  await c.route("**/api/chat", (r) => r.fulfill({ status: 200, contentType: "text/plain", body: "Stub answer." }));
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  await p.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
+  return { c, p, wx: p.locator("#mccs-assistant") };
+}
+const motion = (pg) => pg.evaluate(() => {
+  const r = document.querySelector("#mccs-assistant").shadowRoot;
+  return r.getAnimations().filter((a) => !(a instanceof CSSAnimation)).map((a) => {
+    const el = a.effect.target;
+    const t = a.effect.getTiming();
+    return { target: typeof el.className === "string" ? el.className : el.className.baseVal, duration: t.duration, delay: t.delay, easing: t.easing,
+      frames: a.effect.getKeyframes().map((k) => ({ transform: k.transform, opacity: k.opacity, filter: k.filter })), origin: el.style.transformOrigin };
+  });
+});
+const widgetState = (pg) => pg.evaluate(() => {
+  const r = document.querySelector("#mccs-assistant").shadowRoot;
+  const panel = r.querySelector(".panel");
+  const cs = getComputedStyle(panel);
+  const tab = r.querySelector(".edge-tab");
+  return { panels: r.querySelectorAll(".panel").length, open: !panel.hidden, opacity: cs.opacity, transform: cs.transform, pointer: cs.pointerEvents,
+    tab: !tab.hidden, tabOpacity: getComputedStyle(tab).opacity, tabTransform: getComputedStyle(tab).transform, launcher: !r.querySelector(".launcher").hidden,
+    focus: r.activeElement ? r.activeElement.id || r.activeElement.className : "", running: r.getAnimations().filter((a) => !(a instanceof CSSAnimation) && a.playState === "running").length };
+});
+const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.replace(".", "\\.")}\\)`).test(f);
+{
+  const { c, p, wx } = await motionPage({ width: 1280, height: 800 });
+  const lb = await wx.locator("button.launcher").boundingBox();
+  await wx.locator("button.launcher").click();
+  const opening = await motion(p);
+  const offs = await wx.locator(".panel").evaluate((el) => ({ left: el.offsetLeft, top: el.offsetTop }));
+  const pa = opening.find((a) => a.target === "panel");
+  const [ox, oy] = (pa?.origin ?? "").split(" ").map(parseFloat);
+  check("Open: the window grows out of the launcher (origin at its center)", Math.abs(ox - (lb.x + lb.width / 2 - offs.left)) <= 2 && Math.abs(oy - (lb.y + lb.height / 2 - offs.top)) <= 2, JSON.stringify({ origin: pa?.origin, lb, offs }));
+  check("Open: scale 0.9 → 1 with a fade and a small slide, 300ms, spring ease", pa && pa.duration === 300 && /cubic-bezier\(0\.32, 1\.24, 0\.52, 1\)/.test(pa.easing) && hasScale(pa.frames[0].transform, ".9") && /translateX\(16px\)/.test(pa.frames[0].transform) && pa.frames[0].opacity === "0" && pa.frames[1].opacity === "1", JSON.stringify(pa));
+  const inner = opening.filter((a) => ["head", "log", "bottom"].includes(a.target));
+  check("Open: header, conversation, composer follow, 40ms apart, rising 6px", JSON.stringify(inner.map((a) => a.target)) === JSON.stringify(["head", "log", "bottom"]) && inner[1].delay - inner[0].delay === 40 && inner[2].delay - inner[1].delay === 40 && inner[0].delay > 0 && inner.every((a) => /translateY\(6px\)/.test(a.frames[0].transform)), JSON.stringify(inner.map((a) => [a.target, a.delay])));
+  await settle(p);
+  let st = await widgetState(p);
+  check("Open: ends fully shown, no transform left, focus in the input", st.open && st.opacity === "1" && st.transform === "none" && st.running === 0 && st.focus === "input" && !st.tab && !st.launcher, JSON.stringify(st));
+  const head = await wx.locator(".head").evaluate((el) => ({ h: el.getBoundingClientRect().height, btns: [...el.querySelectorAll(".icon-btn")].map((b) => b.getBoundingClientRect().height) }));
+  check("Header about 72px, icon buttons still 44px", head.h >= 70 && head.h <= 74 && head.btns.every((h) => h >= 44), JSON.stringify(head));
+  const tb = await wx.locator("button.minimize").boundingBox();
+  await wx.locator("button.minimize").click();
+  const closing = await motion(p);
+  const pc = closing.find((a) => a.target === "panel");
+  const pop = closing.find((a) => a.target === "edge-tab");
+  const glint = closing.find((a) => a.target === "sparkle");
+  check("Minimize: quicker (200ms), scales to 0.9 and fades out", pc && pc.duration === 200 && hasScale(pc.frames.at(-1).transform, ".9") && pc.frames.at(-1).opacity === "0", JSON.stringify(pc));
+  const tabBox = await wx.locator("button.edge-tab").evaluate((el) => { const r = el.getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2 }; });
+  const [cx, cy] = (pc?.origin ?? "").split(" ").map(parseFloat);
+  check("Minimize: toward the edge tab", Math.abs(cx - (tabBox.x - offs.left)) <= 12 && Math.abs(cy - (tabBox.y - offs.top)) <= 12, JSON.stringify({ origin: pc?.origin, tabBox, tb }));
+  check("Minimize: the edge tab pops in after the window (0.85 → 1, slight overshoot) with one glint", pop && pop.delay === 200 && hasScale(pop.frames[0].transform, ".85") && pop.frames.some((f) => /scale\(1\.0\d+\)/.test(f.transform)) && glint && glint.delay > 200 && Number.isFinite(glint.duration), JSON.stringify({ pop, glint }));
+  st = await widgetState(p);
+  check("Minimize: focus moves to the edge tab at once", st.focus === "edge-tab", JSON.stringify(st));
+  await settle(p);
+  st = await widgetState(p);
+  check("Minimize: ends with the window hidden and the edge tab fully shown", !st.open && st.tab && st.tabOpacity === "1" && st.tabTransform === "none" && st.running === 0 && st.focus === "edge-tab", JSON.stringify(st));
+
+  // Rapid toggling (clicks a few frames apart) leaves exactly one correct state.
+  const toggle = (seq) => p.evaluate(async (seq) => {
+    const r = document.querySelector("#mccs-assistant").shadowRoot;
+    for (const sel of seq) {
+      r.querySelector(sel).click();
+      await new Promise((res) => setTimeout(res, 45));
+    }
+  }, seq);
+  await toggle([".edge-tab", ".minimize", ".edge-tab", ".minimize"]);
+  await settle(p);
+  st = await widgetState(p);
+  check("Rapid toggling ending minimized: one window, hidden; edge tab shown and focused", st.panels === 1 && !st.open && st.tab && st.tabOpacity === "1" && st.tabTransform === "none" && st.focus === "edge-tab" && st.pointer === "auto", JSON.stringify(st));
+  await toggle([".edge-tab", ".minimize", ".edge-tab"]);
+  await settle(p);
+  st = await widgetState(p);
+  const box = await wx.locator(".panel").boundingBox();
+  check("Rapid toggling ending open: one window, fully shown, in place, focus in the input", st.panels === 1 && st.open && st.opacity === "1" && st.transform === "none" && st.pointer === "auto" && !st.tab && st.focus === "input" && Math.abs(box.x + box.width - 1280) < 1 && box.y > 40, JSON.stringify({ st, box }));
+  await c.close();
+}
+{
+  const { c, p, wx } = await motionPage({ width: 1280, height: 800 }, false, { reducedMotion: "reduce" });
+  await wx.locator("button.launcher").click();
+  const o = await motion(p);
+  await settle(p);
+  await wx.locator("button.minimize").click();
+  const m = await motion(p);
+  const onlyOpacity = (list) => list.length > 0 && list.every((a) => a.frames.every((f) => f.transform === undefined && f.filter === undefined && f.opacity !== undefined) && a.duration === 150);
+  check("Reduced motion: open and minimize are 150ms fades (opacity only, no stagger or glint)", onlyOpacity(o) && o.length === 1 && onlyOpacity(m) && !m.some((a) => a.target === "sparkle"), JSON.stringify({ o, m }));
+  await settle(p);
+  const st = await widgetState(p);
+  check("Reduced motion: ends minimized, edge tab focused", !st.open && st.tab && st.tabOpacity === "1" && st.focus === "edge-tab", JSON.stringify(st));
+  await c.close();
+}
+{
+  const { c, p, wx } = await motionPage({ width: 390, height: 844 }, true);
+  await wx.locator("button.launcher").click();
+  const o = (await motion(p)).find((a) => a.target === "panel");
+  check("Phone: the sheet slides up (280ms, spring ease)", o && o.duration === 280 && o.frames[0].transform === "translateY(100%)" && /none/.test(o.frames.at(-1).transform) && /cubic-bezier\(0\.32/.test(o.easing), JSON.stringify(o));
+  await settle(p);
+  let st = await widgetState(p);
+  check("Phone: open sheet settles in place", st.open && st.transform === "none" && st.opacity === "1", JSON.stringify(st));
+  await wx.locator("button.minimize").click();
+  const m = (await motion(p)).find((a) => a.target === "panel");
+  check("Phone: minimize slides the sheet down (280ms)", m && m.duration === 280 && m.frames.at(-1).transform === "translateY(100%)", JSON.stringify(m));
+  await settle(p);
+  st = await widgetState(p);
+  check("Phone: ends minimized with the edge tab", !st.open && st.tab && st.focus === "edge-tab", JSON.stringify(st));
   await c.close();
 }
 
