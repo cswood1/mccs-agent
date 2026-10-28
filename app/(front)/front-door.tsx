@@ -579,7 +579,7 @@ export default function FrontDoor({
               <h1 id="fd-title">
                 <span className="fd-red">Ask MCCS</span> anything.
               </h1>
-              <p className="fd-lead">Hours, programs, child care, fitness and more at {inst?.name}, answered from official MCCS pages.</p>
+              <p className="fd-lead">Your guide to everything MCCS offers at {inst?.shortName}, from gym hours to child care.</p>
               {askForm}
               <p className="fd-hint">Ask in your own words. Please don’t include personal or sensitive information.</p>
               {voiceStatus}

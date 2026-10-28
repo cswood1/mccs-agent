@@ -73,7 +73,7 @@ export default function Explore({ bases, markers }: { bases: ExploreBase[]; mark
           <h1 id="fd-explore-title">
             <span className="fd-red">Explore</span> your MCCS.
           </h1>
-          <p className="fd-lead">Choose your installation to get answers from its official MCCS pages.</p>
+          <p className="fd-lead">Marine Corps Community Services, one question away. Choose your installation to get started.</p>
           <h2 className="fd-label" id="fd-choose">
             or choose:
           </h2>

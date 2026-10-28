@@ -144,6 +144,7 @@ const ask = async (p, q) => {
   check("Heavy headline weight", Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700);
   check("Pill-shaped top controls", (await p.locator(".fd-top .fd-pill").count()) >= 2 && (await p.locator(".fd-display-btn").evaluate((el) => parseFloat(getComputedStyle(el).borderRadius))) > 100);
   const pill = p.locator(".fd-top .fd-inst");
+  check("Subtitle names the base by its short name", (await p.locator(".fd-hero .fd-lead").textContent()) === "Your guide to everything MCCS offers at MCB Quantico, from gym hours to child care.");
   check("Installation pill: globe icon and the base's short name, linking back to /", (await pill.textContent())?.trim() === "MCB Quantico" && (await pill.getAttribute("href")) === "/" && (await pill.locator("svg").count()) === 1 && (await p.locator("#fd-inst-select").count()) === 0);
   // Photos: the hero carousel (all three installations), one per card, one for the moments.
   const heroSrc = await p.locator(".fd-hero-photo img.is-active").getAttribute("src");
@@ -174,6 +175,7 @@ const ask = async (p, q) => {
   await p.reload({ waitUntil: "networkidle" });
   const pCfg = await (await p.request.get(base + "/api/installations/pendleton")).json();
   check("Refresh stays on the base in the URL", new URL(p.url()).pathname === "/ask/pendleton" && (await pill.textContent())?.trim() === "MCB Camp Pendleton" && JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(pCfg.defaultChips.slice(0, 4)));
+  check("Pendleton's subtitle matches its pill", (await p.locator(".fd-hero .fd-lead").textContent()) === "Your guide to everything MCCS offers at MCB Camp Pendleton, from gym hours to child care.");
   check("Pendleton's hero photo first", (await p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo")) === "hero-pendleton");
   check("Warm-up per base, throttled (like the widget)", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   check("Trust strip uses the base's capture date", /captured Oct 27/.test((await p.locator(".fd-trust-strip").textContent()) ?? ""));
@@ -667,7 +669,7 @@ const labelsFit = (p) =>
   const { c, p } = await open({ path: "/" });
   check("/ is Explore your MCCS", new URL(p.url()).pathname === "/" && (await p.locator("h1").textContent()) === "Explore your MCCS." && (await p.locator("h1 .fd-red").textContent()) === "Explore");
   check("Explore headline in the front-door style", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700 && (await p.locator("h1 .fd-red").evaluate((el) => getComputedStyle(el).color)) === "rgb(158, 27, 50)");
-  check("Explore: the line under the headline", (await p.locator(".fd-explore .fd-lead").textContent()) === "Choose your installation to get answers from its official MCCS pages.");
+  check("Explore: the line under the headline", (await p.locator(".fd-explore .fd-lead").textContent()) === "Marine Corps Community Services, one question away. Choose your installation to get started.");
   check("Explore: Display menu, no installation pill", (await p.locator(".fd-display-btn").count()) === 1 && (await p.locator(".fd-inst").count()) === 0);
   check("Explore: “or choose:” with the three bases as buttons", (await p.locator(".fd-label", { hasText: "or choose:" }).count()) === 1 && JSON.stringify(await p.locator(".fd-explore-btn .fd-card-title").allTextContents()) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]));
   await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
