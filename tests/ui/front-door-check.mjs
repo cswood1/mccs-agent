@@ -888,6 +888,8 @@ const labelsFit = (p) =>
   check("375px: the “or choose” buttons are visible without scrolling", lastBtn.y + lastBtn.height <= 812, JSON.stringify(lastBtn));
   await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
   await p.waitForTimeout(4500);
+  const head = await p.evaluate(() => { const h1 = document.querySelector(".fd-explore h1"); const r = h1.getBoundingClientRect(); return { top: r.top, right: r.right, wide: h1.scrollWidth > h1.clientWidth, page: document.documentElement.scrollWidth }; });
+  check("375px: headline wraps naturally, nothing clipped or wider than the screen", head.top >= 0 && head.right <= 375 && !head.wide && head.page <= 375, JSON.stringify(head));
   const g = await p.locator(".fd-globe canvas").first().boundingBox();
   check("375px: the globe fits the screen", g && g.width <= 375 && g.height <= 812, JSON.stringify(g));
   check("375px: vertical drags scroll the page", (await p.locator(".fd-globe canvas").first().evaluate((el) => getComputedStyle(el).touchAction)) === "pan-y");
@@ -899,13 +901,17 @@ const labelsFit = (p) =>
 }
 
 // 12. Explore fits one viewport on common laptop sizes; banner and Display pill always fully visible.
-for (const [w, h] of [[1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
+for (const [w, h] of [[1280, 600], [1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
   const { c, p } = await open({ path: "/", viewport: { width: w, height: h } });
   await p.waitForFunction(() => document.querySelector(".fd-globe")?.dataset.ready === "true", null, { timeout: 20000 }).catch(() => {});
   const m = await p.evaluate(() => {
     const r = (sel) => { const x = document.querySelector(sel).getBoundingClientRect(); return { top: x.top, bottom: x.bottom }; };
     const btns = [...document.querySelectorAll(".fd-explore-btn")].map((b) => b.getBoundingClientRect().bottom);
-    return { scroll: document.documentElement.scrollHeight - innerHeight, banner: r(".demo-banner"), pill: r(".fd-display-btn"), lastBtn: Math.max(...btns), globe: r(".fd-globe"), h: innerHeight };
+    const col = document.querySelector(".fd-explore-text");
+    const h1 = document.querySelector(".fd-explore h1");
+    const lineTops = new Set([...h1.querySelectorAll(".fd-line")].flatMap((l) => [...l.getClientRects()].map((x) => Math.round(x.top)))).size;
+    return { scroll: document.documentElement.scrollHeight - innerHeight, banner: r(".demo-banner"), pill: r(".fd-display-btn"), lastBtn: Math.max(...btns), globe: r(".fd-globe"), h: innerHeight,
+      h1Top: h1.getBoundingClientRect().top, col: r(".fd-explore-text"), colScroll: col.scrollHeight - col.clientHeight, h1Lines: lineTops, h1Text: h1.textContent.replace(/\s+/g, " ").trim() };
   });
   const front = await (async () => {
     await p.goto(base + "/ask/quantico", { waitUntil: "networkidle" });
@@ -914,6 +920,8 @@ for (const [w, h] of [[1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
   check(`${w}×${h}: Explore fits with no vertical scroll`, m.scroll <= 0, JSON.stringify(m));
   check(`${w}×${h}: banner and Display pill fully visible, same top spacing as the front doors`, m.banner.top >= 0 && m.pill.top >= m.banner.bottom && m.pill.bottom <= m.h && Math.abs(m.pill.top - m.banner.bottom - front) < 1, JSON.stringify({ banner: m.banner, pill: m.pill, front }));
   check(`${w}×${h}: list and globe inside the viewport`, m.lastBtn <= m.h && m.globe.bottom <= m.h, JSON.stringify(m));
+  check(`${w}×${h}: headline top and last card bottom visible, no inner scroll`, m.h1Top >= 0 && m.h1Top >= m.col.top && m.lastBtn <= m.h && m.lastBtn <= m.col.bottom && m.colScroll <= 0, JSON.stringify({ h1Top: m.h1Top, lastBtn: m.lastBtn, col: m.col, colScroll: m.colScroll }));
+  check(`${w}×${h}: headline on two lines, “Explore your” / “Marine Community.”`, m.h1Lines === 2 && m.h1Text === "Explore your Marine Community.", JSON.stringify({ lines: m.h1Lines, text: m.h1Text }));
   await c.close();
 }
 

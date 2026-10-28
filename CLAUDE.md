@@ -188,7 +188,12 @@ disagrees with it, ask before changing either.
     - Hovering a spot shows all labels there, stacked. Western Recruiting Region shares MCRD San
       Diego's spot.
   - Laptops (≥60em wide): the page fits one viewport under the banner (`body:has(.fd--explore)`), with
-    no page scroll; the headline scales with the viewport height. Phones scroll.
+    no page scroll. The text column is 44% wide, a size container, centered with
+    `justify-content: safe center` (it scrolls from the top rather than clipping if it ever overflows).
+    The headline is two lines, "Explore your" / "Marine Community." (`.fd-line` spans don't wrap on
+    laptops): it scales with the viewport height, capped at 12cqi so the longer phrase fits the column.
+    Windows under 700px tall get tighter spacing. Checked at 1280×600, 1280×720, 1440×900, 1512×982
+    and 1920×1080. Phones scroll, and the headline wraps naturally.
   - Picking: warms the base, saves it as last visited, flies in (~1 s), then a full navigation to
     `/ask/<base>`. A cross-document view transition crossfades where supported; a head script in
     `app/layout.tsx` swallows aborted transitions. With reduced motion it navigates at once.

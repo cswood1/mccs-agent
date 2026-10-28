@@ -70,8 +70,12 @@ export default function Explore({ bases, markers }: { bases: ExploreBase[]; mark
       </header>
       <main className="fd-explore">
         <section className="fd-explore-text" aria-labelledby="fd-explore-title">
+          {/* Two phrases; on laptops each stays on one line, so the headline breaks as two lines. */}
           <h1 id="fd-explore-title">
-            <span className="fd-red">Explore</span> your Marine Community.
+            <span className="fd-line">
+              <span className="fd-red">Explore</span> your
+            </span>{" "}
+            <span className="fd-line">Marine Community.</span>
           </h1>
           <p className="fd-lead">Marine Corps Community Services, one question away. Choose your installation to get started.</p>
           <h2 className="fd-label" id="fd-choose">
