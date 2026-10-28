@@ -168,7 +168,7 @@ disagrees with it, ask before changing either.
 - Eval questions can set `installation` (default quantico); the three `xbase-*` questions cover
   Quantico→Pendleton PCS, Pendleton→Lejeune child care, and Lejeune→Quantico lodging.
 
-## Explore your MCCS (/) and front doors (/ask/<base>) (2026-10-28)
+## Explore your Marine Community (/) and front doors (/ask/<base>) (2026-10-28)
 - **`/` is the globe page** (`app/(front)/page.tsx`, `explore.tsx`, `globe.tsx`).
   - Layout: headline, an "or choose:" list of the three bases (the keyboard, screen-reader, phone and
     no-WebGL path; "Last visited" is marked and focused), and a globe.gl globe, loaded with a dynamic

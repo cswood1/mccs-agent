@@ -6,11 +6,11 @@ import type { GlobeMarker } from "./globe";
 import "./front.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "Explore your MCCS (prototype demo)" },
+  title: { absolute: "Explore your Marine Community (prototype demo)" },
   description: "Prototype demo: choose your installation on the globe and ask MCCS anything. Not the official site.",
 };
 
-// Explore your MCCS: a globe to choose an installation, which opens its front door (/ask/<base>).
+// Explore your Marine Community: a globe to choose an installation, which opens its front door (/ask/<base>).
 export default function Home() {
   // The list: the bases with a front door. The globe: every MCCS site; only those three are clickable.
   const front = frontInstallations();

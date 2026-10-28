@@ -17,7 +17,7 @@ export default function Credits() {
       <div className="fd fd--credits" data-theme="light" data-text="normal" data-contrast="normal">
         <main className="fd-main fd-credits">
           <p>
-            <Link href="/">← Back to Explore your MCCS</Link>
+            <Link href="/">← Back to Explore your Marine Community</Link>
           </p>
           <h1>Photo credits</h1>
           <p className="fd-lead">

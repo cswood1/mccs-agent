@@ -688,7 +688,7 @@ for (const [label, display, viewport] of [
   await c.close();
 }
 
-// 11. Explore your MCCS (/): the globe page.
+// 11. Explore your Marine Community (/): the globe page.
 const HOME_POV = { lat: 37, lng: -96 };
 const nearHome = (pov) => Math.abs(pov.lat - HOME_POV.lat) < 1 && Math.abs(pov.lng - HOME_POV.lng) < 4; // phones center a little east
 const labelsFit = (p) =>
@@ -704,7 +704,7 @@ const labelsFit = (p) =>
   });
 {
   const { c, p } = await open({ path: "/" });
-  check("/ is Explore your MCCS", new URL(p.url()).pathname === "/" && (await p.locator("h1").textContent()) === "Explore your MCCS." && (await p.locator("h1 .fd-red").textContent()) === "Explore");
+  check("/ is Explore your Marine Community", new URL(p.url()).pathname === "/" && (await p.locator("h1").textContent()) === "Explore your Marine Community." && (await p.locator("h1 .fd-red").textContent()) === "Explore");
   check("Explore headline in the front-door style", /Fraunces/.test(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontFamily)) && Number(await p.locator("h1").evaluate((el) => getComputedStyle(el).fontWeight)) >= 700 && (await p.locator("h1 .fd-red").evaluate((el) => getComputedStyle(el).color)) === "rgb(158, 27, 50)");
   check("Explore: the line under the headline", (await p.locator(".fd-explore .fd-lead").textContent()) === "Marine Corps Community Services, one question away. Choose your installation to get started.");
   check("Explore: Display menu, no installation pill", (await p.locator(".fd-display-btn").count()) === 1 && (await p.locator(".fd-inst").count()) === 0);

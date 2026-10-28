@@ -11,7 +11,7 @@ const Globe = dynamic(() => import("./globe"), { ssr: false });
 
 type ExploreBase = { id: string; name: string; shortName: string; location: string };
 
-/** Explore your MCCS (/): pick a base on the globe, or from the list, to open its front door. */
+/** Explore your Marine Community (/): pick a base on the globe, or from the list, to open its front door. */
 export default function Explore({ bases, markers }: { bases: ExploreBase[]; markers: GlobeMarker[] }) {
   const { display, update, attrs } = useDisplay();
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -71,7 +71,7 @@ export default function Explore({ bases, markers }: { bases: ExploreBase[]; mark
       <main className="fd-explore">
         <section className="fd-explore-text" aria-labelledby="fd-explore-title">
           <h1 id="fd-explore-title">
-            <span className="fd-red">Explore</span> your MCCS.
+            <span className="fd-red">Explore</span> your Marine Community.
           </h1>
           <p className="fd-lead">Marine Corps Community Services, one question away. Choose your installation to get started.</p>
           <h2 className="fd-label" id="fd-choose">
