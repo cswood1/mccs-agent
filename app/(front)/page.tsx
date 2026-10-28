@@ -3,7 +3,7 @@ import { COVERED_INSTALLATIONS } from "@/lib/crossbase";
 import { getInstallation } from "@/lib/installations";
 import { loadPage } from "@/lib/site/data";
 import FrontDoor, { type FrontInstallation } from "./front-door";
-import { photo } from "./photos";
+import { CAROUSEL, photo, type Photo } from "./photos";
 import "./front.css";
 
 export const metadata: Metadata = {
@@ -24,7 +24,6 @@ export default function Home() {
       location: i.location,
       defaultChips: i.defaultChips,
       capturedOn: loadPage(i.id, "/")?.fetchedAt ?? "",
-      hero: photo(`hero-${i.id}`),
       card: photo(`base-${i.id}`),
     }));
 
@@ -34,7 +33,11 @@ export default function Home() {
         <span className="demo-banner-full">NPS SI Hackathon - MCCS Agent - Team 2 - Prototype Demo</span>
         <span className="demo-banner-short">NPS SI Hackathon · Team 2 · Prototype Demo</span>
       </div>
-      <FrontDoor installations={installations} momentsPhoto={photo("moments")} />
+      <FrontDoor
+        installations={installations}
+        momentsPhoto={photo("moments")}
+        carousel={CAROUSEL.map(photo).filter((p): p is Photo => !!p)}
+      />
     </>
   );
 }

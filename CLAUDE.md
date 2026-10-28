@@ -183,8 +183,11 @@ disagrees with it, ask before changing either.
   officials, close-up portraits, weapons and combat.
   - Credits are in `public/home/CREDITS.json`, shown on each image and listed on `/credits`.
   - `/home/*` and `/credits` are app paths in `proxy.ts`, still behind the access gate.
-- Hero carousel: all three installation photos, 6.5 s each with a 0.8 s crossfade, whichever base is
-  selected. Alt text and credit follow the shown photo. It pauses on a hidden tab, hover, keyboard
+- Hero carousel: all seven front-door photos in an interleaved order (`CAROUSEL` in
+  `app/(front)/photos.ts`, so neighbours differ in base and scene), 6.5 s each with a 0.8 s crossfade,
+  whichever base is selected. Each photo's crop focus (`focus`, CSS object-position) is in
+  `public/home/CREDITS.json`. Only the first hero is in the HTML; the rest load after the page's load
+  event, and the carousel only advances to a loaded photo. Alt text and credit follow the shown photo. It pauses on a hidden tab, hover, keyboard
   focus in the photo, or the pause/play button. With reduced motion it shows the selected base's
   photo with no rotation.
 - Ask box placeholder: the widget header search's typing effect at a calmer pace (50 ms/letter,

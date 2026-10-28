@@ -7,6 +7,7 @@
  * Uses the locally installed Google Chrome. Every request to *.usmc-mccs.org is blocked.
  */
 import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { chromium } from "playwright-core";
 
 const base = process.argv[2] || "http://localhost:3000";
@@ -20,6 +21,9 @@ const ANSWER =
   "Start with **MilitaryChildCare.com**: create an account and request care. Call Resource & Referral at 760-725-3400, or stop by 2034 Barnett Ave.\n\n" +
   "Details: [Child Development Centers](https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers)";
 const FOLLOWUPS = ["Where are the CDCs?", "How does the waitlist work?"];
+const CREDITS = JSON.parse(readFileSync(new URL("../../public/home/CREDITS.json", import.meta.url), "utf8")).photos;
+const creditFor = (name) => CREDITS.find((c) => c.file === `/home/${name}.webp`);
+const CAROUSEL = ["hero-quantico", "base-pendleton", "hero-lejeune", "base-quantico", "moments", "base-lejeune", "hero-pendleton"];
 const EXAMPLES_FD = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
 
 const browser = await chromium.launch({ executablePath: CHROME });
@@ -30,6 +34,16 @@ async function open(opts = {}) {
   const c = await browser.newContext({ viewport: opts.viewport ?? { width: 1280, height: 900 }, isMobile: !!opts.mobile, hasTouch: !!opts.mobile, reducedMotion: opts.reducedMotion });
   if (cookie.length) await c.addCookies(cookie);
   await c.route(/usmc-mccs\.org/, (r) => r.abort());
+  if (opts.hold) {
+    // Hold one image request until the test releases it (a slow photo).
+    let release;
+    const released = new Promise((r) => (release = r));
+    c.release = release;
+    await c.route(`**${opts.hold}`, async (r) => {
+      await released;
+      await r.continue();
+    });
+  }
   // Warm-up is stubbed too (never a real prompt-cache write from tests).
   c.warms = [];
   await c.route("**/api/warm", (r) => {
@@ -95,7 +109,8 @@ async function open(opts = {}) {
   const p = await c.newPage();
   p.on("pageerror", (e) => errors.push(e.message));
   if (opts.clock) await p.clock.install();
-  await p.goto(base + "/", { waitUntil: "networkidle" });
+  // A held image keeps the network busy, so wait for the load event instead of network idle.
+  await p.goto(base + "/", { waitUntil: opts.hold ? "load" : "networkidle" });
   return { c, p };
 }
 
@@ -132,7 +147,7 @@ const ask = async (p, q) => {
   check("Hero starts on the selected installation's photo", heroSrc === "/home/hero-quantico.webp", heroSrc);
   const imgs = await p.locator(".fd img").evaluateAll((els) => els.map((e) => ({ src: e.getAttribute("src"), alt: e.alt, hidden: e.getAttribute("aria-hidden") === "true" })));
   const described = imgs.filter((i) => !i.hidden);
-  check("All photos are WebP; every visible one has descriptive alt text", imgs.length === 7 && imgs.every((i) => /\.webp$/.test(i.src)) && described.length === 5 && described.every((i) => i.alt.length > 20) && imgs.filter((i) => i.hidden).every((i) => i.alt === ""), JSON.stringify(imgs));
+  check("All photos are WebP; every visible one has descriptive alt text", imgs.length === 11 && imgs.every((i) => /\.webp$/.test(i.src)) && described.length === 5 && described.every((i) => i.alt.length > 20) && imgs.filter((i) => i.hidden).length === 6 && imgs.filter((i) => i.hidden).every((i) => i.alt === ""), JSON.stringify(imgs));
   await p.waitForFunction(() => [...document.querySelectorAll(".fd img")].every((i) => i.complete), null, { timeout: 5000 }).catch(() => {});
   check("Photos load", (await p.locator(".fd img").evaluateAll((els) => els.every((e) => e.naturalWidth > 0))));
   const credits = await p.locator(".fd-credit").allTextContents();
@@ -284,32 +299,48 @@ const ask = async (p, q) => {
   await c.close();
 }
 
-// 5. Hero photo carousel (fake clock).
+// 5. Hero photo carousel (fake clock): all seven photos, interleaved, 6.5 s each.
+{
+  // First view: only the first hero is in the page; the rest come after the load event.
+  const first = await open();
+  const html = await (await first.p.request.get(base + "/")).text();
+  await first.c.close();
+  check("Carousel: only the first hero photo is in the initial HTML", (html.match(/data-photo="/g) || []).length === 1 && /data-photo="hero-quantico"/.test(html), String((html.match(/data-photo="/g) || []).length));
+}
 {
   const { c, p } = await open({ clock: true });
-  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-installation");
-  const state = async () => ({
-    id: await active(),
-    alt: await p.locator(".fd-hero-photo img.is-active").getAttribute("alt"),
-    credit: await p.locator(".fd-hero-photo .fd-credit").textContent(),
-  });
+  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo");
+  const state = async () => {
+    const img = p.locator(".fd-hero-photo img.is-active");
+    return {
+      id: await img.getAttribute("data-photo"),
+      alt: await img.getAttribute("alt"),
+      focus: await img.evaluate((el) => getComputedStyle(el).objectPosition),
+      credit: await p.locator(".fd-hero-photo .fd-credit").textContent(),
+      href: await p.locator(".fd-hero-photo .fd-credit").getAttribute("href"),
+    };
+  };
   await p.mouse.move(5, 400); // away from the photo
-  await p.waitForFunction(() => [...document.querySelectorAll(".fd-hero-photo img")].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 5000 }).catch(() => {});
-  check("Carousel: all three hero photos preloaded", (await p.locator(".fd-hero-photo img").evaluateAll((els) => els.length === 3 && els.every((e) => e.complete && e.naturalWidth > 0))));
+  await p.waitForFunction(() => document.querySelectorAll(".fd-hero-photo img").length === 7 && [...document.querySelectorAll(".fd-hero-photo img")].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 8000 }).catch(() => {});
+  check("Carousel: all seven photos loaded in the background after page load", (await p.locator(".fd-hero-photo img").evaluateAll((els) => els.length === 7 && els.every((e) => e.complete && e.naturalWidth > 0))));
+  check("Carousel: first hero high priority, the rest low", JSON.stringify(await p.locator(".fd-hero-photo img").evaluateAll((els) => els.map((e) => e.getAttribute("fetchpriority")))) === JSON.stringify(["high", "low", "low", "low", "low", "low", "low"]));
   check("Carousel: soft 0.8s crossfade", /opacity 0\.8s/.test(await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transition)));
-  const s0 = await state();
-  await p.clock.runFor(6500);
-  const s1 = await state();
-  await p.clock.runFor(6500);
-  const s2 = await state();
-  await p.clock.runFor(6500);
-  const s3 = await state();
-  check("Carousel: every 6.5 s through Quantico, Pendleton, Lejeune", [s0.id, s1.id, s2.id, s3.id].join() === "quantico,pendleton,lejeune,quantico", [s0.id, s1.id, s2.id, s3.id].join());
-  check("Carousel: alt text follows the photo shown", s1.alt === "Snow-capped mountains above green hills at Marine Corps Base Camp Pendleton" && s2.alt !== s1.alt && (await p.locator(".fd-hero-photo img[aria-hidden=true]").count()) === 2, JSON.stringify(s1));
-  check("Carousel: credit follows the photo shown", s1.credit === "Photo: Sgt. Melissa Marnell, USMC" && s2.credit !== s1.credit && s0.credit === s3.credit, `${s0.credit} | ${s1.credit} | ${s2.credit}`);
+  await p.clock.pauseAt(Date.now() + 200); // from here, time only moves with runFor
+  const seen = [await state()];
+  for (let k = 0; k < 7; k++) {
+    await p.clock.runFor(6500);
+    seen.push(await state());
+  }
+  const ids = seen.map((x) => x.id);
+  check("Carousel: all seven photos, interleaved, every 6.5 s, then repeats", JSON.stringify(ids) === JSON.stringify([...CAROUSEL, CAROUSEL[0]]), ids.join());
+  const baseOf = (id) => (id === "moments" ? "pendleton" : id.split("-")[1]); // the moments photo is at Pendleton
+  check("Carousel: neighbours never share a base", ids.every((id, k) => k === 0 || baseOf(id) !== baseOf(ids[k - 1])), ids.map(baseOf).join());
+  const wrong = seen.filter((x) => { const c = creditFor(x.id); return x.alt !== c.alt || x.credit !== `Photo: ${c.author}, USMC` || x.href !== c.source || x.focus !== c.focus; });
+  check("Carousel: alt text, credit and focus point follow every photo (from CREDITS.json)", wrong.length === 0 && (await p.locator(".fd-hero-photo img[aria-hidden=true]").count()) === 6, JSON.stringify(wrong));
+  check("Carousel: every photo has a focus point", CREDITS.every((c) => /^\d+% \d+%$/.test(c.focus ?? "")));
 
   await p.locator("#fd-inst-select").selectOption("lejeune");
-  check("Carousel: the selector no longer changes the hero photo", (await active()) === "quantico" && /Lejeune/.test((await p.locator(".fd-lead").textContent()) ?? ""));
+  check("Carousel: the selector doesn't change the hero photo", (await active()) === "hero-quantico" && /Lejeune/.test((await p.locator(".fd-lead").textContent()) ?? ""));
 
   const toggle = p.locator(".fd-slide-toggle");
   check("Carousel: pause button", (await toggle.getAttribute("aria-label")) === "Pause photo slideshow");
@@ -317,26 +348,26 @@ const ask = async (p, q) => {
   await toggle.click();
   await p.mouse.move(5, 400);
   check("Carousel: button becomes Play", (await toggle.getAttribute("aria-label")) === "Play photo slideshow");
-  await p.clock.runFor(15000);
-  check("Carousel: paused by the button", (await active()) === "quantico");
+  await p.clock.runFor(20000);
+  check("Carousel: paused by the button", (await active()) === "hero-quantico");
   await toggle.click();
   await p.mouse.move(5, 400);
   await p.clock.runFor(6500);
-  check("Carousel: Play resumes", (await active()) === "pendleton", await active());
+  check("Carousel: Play resumes", (await active()) === "base-pendleton", await active());
 
   await p.locator(".fd-hero-photo").hover();
-  await p.clock.runFor(12000);
-  check("Carousel: paused while hovered", (await active()) === "pendleton");
+  await p.clock.runFor(15000);
+  check("Carousel: paused while hovered", (await active()) === "base-pendleton");
   await p.mouse.move(5, 400);
   await p.clock.runFor(6500);
-  check("Carousel: resumes when the pointer leaves", (await active()) === "lejeune", await active());
+  check("Carousel: resumes when the pointer leaves", (await active()) === "hero-lejeune", await active());
 
   await p.locator(".fd-hero-photo .fd-credit").focus();
-  await p.clock.runFor(12000);
-  check("Carousel: paused while keyboard focus is on the photo", (await active()) === "lejeune");
+  await p.clock.runFor(15000);
+  check("Carousel: paused while keyboard focus is on the photo", (await active()) === "hero-lejeune");
   await p.locator("#fd-inst-select").focus();
   await p.clock.runFor(6500);
-  check("Carousel: resumes when focus leaves", (await active()) === "quantico", await active());
+  check("Carousel: resumes when focus leaves", (await active()) === "base-quantico", await active());
 
   const setHidden = (hidden) =>
     p.evaluate((h) => {
@@ -344,20 +375,36 @@ const ask = async (p, q) => {
       document.dispatchEvent(new Event("visibilitychange"));
     }, hidden);
   await setHidden(true);
-  await p.clock.runFor(12000);
-  check("Carousel: paused while the tab is hidden", (await active()) === "quantico");
+  await p.clock.runFor(15000);
+  check("Carousel: paused while the tab is hidden", (await active()) === "base-quantico");
   await setHidden(false);
   await p.clock.runFor(6500);
-  check("Carousel: resumes when the tab is visible", (await active()) === "pendleton", await active());
+  check("Carousel: resumes when the tab is visible", (await active()) === "moments", await active());
+  await c.close();
+}
+{
+  // Never a blank frame: a photo that hasn't loaded yet is waited for.
+  const { c, p } = await open({ clock: true, hold: "/home/base-pendleton.webp" });
+  await p.mouse.move(5, 400);
+  await p.waitForFunction(() => document.querySelectorAll(".fd-hero-photo img").length === 7, null, { timeout: 8000 }).catch(() => {});
+  await p.clock.pauseAt(Date.now() + 200);
+  await p.clock.runFor(13000);
+  const shownWhileHeld = await p.locator(".fd-hero-photo img.is-active").evaluate((el) => ({ id: el.dataset.photo, ok: el.complete && el.naturalWidth > 0 }));
+  check("Carousel: waits for a photo that hasn't loaded (no blank frame)", shownWhileHeld.id === "hero-quantico" && shownWhileHeld.ok, JSON.stringify(shownWhileHeld));
+  c.release();
+  await p.waitForFunction(() => { const i = document.querySelector('.fd-hero-photo img[data-photo="base-pendleton"]'); return i && i.complete && i.naturalWidth > 0; }, null, { timeout: 8000 }).catch(() => {});
+  await p.clock.runFor(6500);
+  check("…and moves on once it has loaded", (await p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo")) === "base-pendleton");
   await c.close();
 }
 {
   const { c, p } = await open({ clock: true, reducedMotion: "reduce" });
-  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-installation");
-  await p.clock.runFor(15000);
-  check("Reduced motion: no rotation, no pause button", (await active()) === "quantico" && (await p.locator(".fd-slide-toggle").count()) === 0);
+  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-photo");
+  await p.clock.runFor(20000);
+  check("Reduced motion: no rotation, no pause button", (await active()) === "hero-quantico" && (await p.locator(".fd-slide-toggle").count()) === 0);
   await p.locator("#fd-inst-select").selectOption("pendleton");
-  check("Reduced motion: shows the selected installation's photo", (await active()) === "pendleton" && (await p.locator(".fd-hero-photo .fd-credit").textContent()) === "Photo: Sgt. Melissa Marnell, USMC");
+  await p.waitForFunction(() => document.querySelector(".fd-hero-photo img.is-active")?.dataset.photo === "hero-pendleton", null, { timeout: 5000 }).catch(() => {});
+  check("Reduced motion: shows the selected installation's hero photo", (await active()) === "hero-pendleton" && (await p.locator(".fd-hero-photo .fd-credit").textContent()) === "Photo: Sgt. Melissa Marnell, USMC");
   check("Reduced motion: no crossfade", (await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transitionDuration)) === "0s");
   await p.locator("#fd-inst-select").selectOption("quantico");
   await c.close();

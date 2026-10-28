@@ -13,8 +13,7 @@ export type FrontInstallation = {
   defaultChips: string[];
   /** Capture date of the base's pages (ISO), for the trust strip. */
   capturedOn: string;
-  /** Hero photo (swaps with the selector) and installation card photo. */
-  hero: Photo | null;
+  /** Installation card photo. */
   card: Photo | null;
 };
 
@@ -91,7 +90,16 @@ const write = (key: string, value: string) => {
   }
 };
 
-export default function FrontDoor({ installations, momentsPhoto }: { installations: FrontInstallation[]; momentsPhoto: Photo | null }) {
+export default function FrontDoor({
+  installations,
+  momentsPhoto,
+  carousel,
+}: {
+  installations: FrontInstallation[];
+  momentsPhoto: Photo | null;
+  /** Hero carousel photos, in order (photos.ts CAROUSEL). */
+  carousel: Photo[];
+}) {
   const [instId, setInstId] = useState(installations[0]?.id ?? "quantico");
   const inst = installations.find((i) => i.id === instId) ?? installations[0];
   const [display, setDisplay] = useState<Display>({ theme: "light", large: false, contrast: false });
@@ -208,18 +216,39 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
   const askPlaceholder =
     mode === "chat" ? "Ask a follow-up…" : reducedMotion ? EXAMPLES[0] : askFocused || question ? "" : typed;
 
-  // Hero photo carousel: all installations' photos, whichever is selected; 6.5 s each, crossfading.
-  // Paused while the tab is hidden, on hover, on keyboard focus in the photo, or by the button.
-  const slides = installations.filter((i) => i.hero).map((i) => ({ id: i.id, photo: i.hero as Photo }));
-  const [slide, setSlide] = useState(0);
+  // Hero photo carousel: all seven front-door photos in a fixed interleaved order, whichever base is
+  // selected; 6.5 s each, crossfading. Paused while the tab is hidden, on hover, on keyboard focus in
+  // the photo, or by the button. With reduced motion: the selected base's hero, no rotation.
+  // Loading: the first photo is in the page; the rest are requested after the page's load event.
+  // The shown photo only changes to one that has loaded, so there's never a blank frame.
+  const slides = carousel;
+  const heroIndex = useCallback((id: string) => Math.max(0, slides.findIndex((p) => p.name === `hero-${id}`)), [slides]);
+  const [slide, setSlide] = useState(0); // the photo we want to show
+  const [visible, setVisible] = useState(0); // the photo on screen: the wanted one, once loaded
+  const [loaded, setLoaded] = useState<Record<string, boolean>>({});
+  const [background, setBackground] = useState(false); // request the other photos
+  const loadedRef = useRef<Record<string, boolean>>({});
+  const brokenRef = useRef<Record<string, boolean>>({});
   const [userPaused, setUserPaused] = useState(false);
   const [hoverPaused, setHoverPaused] = useState(false);
   const [focusPaused, setFocusPaused] = useState(false);
   const [tabHidden, setTabHidden] = useState(false);
-  const selectedSlide = Math.max(0, slides.findIndex((s) => s.id === instId));
+  const markLoaded = useCallback((name: string) => {
+    if (loadedRef.current[name]) return;
+    loadedRef.current = { ...loadedRef.current, [name]: true };
+    setLoaded(loadedRef.current);
+  }, []);
   useEffect(() => {
-    // Start on the selected installation's photo once the saved choice is known.
-    if (ready) setSlide(Math.max(0, slides.findIndex((s) => s.id === instId))); // eslint-disable-line react-hooks/set-state-in-effect
+    const go = () => setBackground(true);
+    if (document.readyState === "complete") go();
+    else {
+      window.addEventListener("load", go, { once: true });
+      return () => window.removeEventListener("load", go);
+    }
+  }, []);
+  useEffect(() => {
+    // Start on the selected installation's hero once the saved choice is known.
+    if (ready) setSlide(heroIndex(instId)); // eslint-disable-line react-hooks/set-state-in-effect
     // eslint-disable-next-line react-hooks/exhaustive-deps -- only when ready flips
   }, [ready]);
   useEffect(() => {
@@ -228,12 +257,26 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
   const rotating = !reducedMotion && slides.length > 1;
+  const wanted = rotating ? slide : heroIndex(instId);
+  useEffect(() => {
+    if (loaded[slides[wanted]?.name]) setVisible(wanted); // eslint-disable-line react-hooks/set-state-in-effect
+  }, [wanted, loaded, slides]);
   useEffect(() => {
     if (!rotating || mode !== "hero" || userPaused || hoverPaused || focusPaused || tabHidden) return;
-    const t = setInterval(() => setSlide((k) => (k + 1) % slides.length), SLIDE_MS);
+    const t = setInterval(() => {
+      setSlide((k) => {
+        // Next photo in order; wait for it to load (skip one only if it failed to load).
+        for (let step = 1; step < slides.length; step++) {
+          const next = (k + step) % slides.length;
+          if (brokenRef.current[slides[next].name]) continue;
+          return loadedRef.current[slides[next].name] ? next : k;
+        }
+        return k;
+      });
+    }, SLIDE_MS);
     return () => clearInterval(t);
-  }, [rotating, mode, userPaused, hoverPaused, focusPaused, tabHidden, slides.length]);
-  const shown = rotating ? slide : selectedSlide;
+  }, [rotating, mode, userPaused, hoverPaused, focusPaused, tabHidden, slides]);
+  const shown = visible;
 
   // Ask box height follows its text, or its placeholder when empty (which can wrap with large text).
   useLayoutEffect(() => {
@@ -624,21 +667,32 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
                   if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setFocusPaused(false);
                 }}
               >
-                {/* All photos are in the page (so they're loaded before they show); only the visible one is described. */}
-                {slides.map((s, k) => (
-                  // eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP
-                  <img
-                    key={s.id}
-                    className={k === shown ? "is-active" : undefined}
-                    src={s.photo.src}
-                    alt={k === shown ? s.photo.alt : ""}
-                    aria-hidden={k === shown ? undefined : true}
-                    data-installation={s.id}
-                    style={{ objectPosition: s.photo.focus }}
-                    fetchPriority={k === shown ? "high" : "low"}
-                  />
-                ))}
-                {credit(slides[shown]?.photo ?? null)}
+                {/* Stacked photos: the first view's photo, the wanted one, then (after page load) all of
+                    them, preloaded in the background. Only the visible one is described. */}
+                {slides.map((ph, k) =>
+                  k === shown || k === wanted || background || loaded[ph.name] ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP
+                    <img
+                      key={ph.name}
+                      ref={(el) => {
+                        if (el?.complete && el.naturalWidth > 0) markLoaded(ph.name); // loaded before hydration
+                      }}
+                      className={k === shown ? "is-active" : undefined}
+                      src={ph.src}
+                      alt={k === shown ? ph.alt : ""}
+                      aria-hidden={k === shown ? undefined : true}
+                      data-photo={ph.name}
+                      style={{ objectPosition: ph.focus }}
+                      fetchPriority={k === shown ? "high" : "low"}
+                      decoding="async"
+                      onLoad={() => markLoaded(ph.name)}
+                      onError={() => {
+                        brokenRef.current[ph.name] = true;
+                      }}
+                    />
+                  ) : null,
+                )}
+                {credit(slides[shown] ?? null)}
                 {rotating && (
                   <button
                     type="button"

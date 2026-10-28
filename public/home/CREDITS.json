@@ -1,5 +1,5 @@
 {
-  "note": "Photos from Wikimedia Commons, all U.S. government works in the public domain (PD-USGov templates). Resized to 1600px wide WebP.",
+  "note": "Photos from Wikimedia Commons, all U.S. government works in the public domain (PD-USGov templates). Resized to 1600px wide WebP. focus: CSS object-position that keeps the subject in frame when cropped (tall hero panel).",
   "photos": [
     {
       "file": "/home/hero-pendleton.webp",
@@ -12,6 +12,7 @@
       "date": "31 December 2014",
       "source": "https://commons.wikimedia.org/wiki/File:Camp_Pendleton_Snow_141231-M-DY697-115.jpg",
       "original": "https://www.dvidshub.net/image/1712528",
+      "focus": "50% 40%",
       "credit": "Photo: Sgt. Melissa Marnell, U.S. Marine Corps (public domain)"
     },
     {
@@ -25,6 +26,7 @@
       "date": "2013-06-02",
       "source": "https://commons.wikimedia.org/wiki/File:Pros_teach_at_Del_Mar_beach_130602-M-DB645-158.jpg",
       "original": "https://www.dvidshub.net/image/945851",
+      "focus": "50% 50%",
       "credit": "Photo: Lance Cpl. Orrin Farmer, U.S. Marine Corps (public domain)"
     },
     {
@@ -37,6 +39,7 @@
       "licenseTemplate": "PD-USGov-Military",
       "date": "14 August 2010",
       "source": "https://commons.wikimedia.org/wiki/File:USMC-100814-M-2156H-058.jpg",
+      "focus": "50% 50%",
       "credit": "Photo: Lance Cpl. Benjamin Harris, U.S. Marine Corps (public domain)"
     },
     {
@@ -50,6 +53,7 @@
       "date": "18 August 2013",
       "source": "https://commons.wikimedia.org/wiki/File:Inaugural_Quantico_Triathlon_130818-M-TI407-536.jpg",
       "original": "https://www.dvidshub.net/image/999265",
+      "focus": "50% 50%",
       "credit": "Photo: Cpl. Sonia Rodriguez, U.S. Marine Corps (public domain)"
     },
     {
@@ -63,6 +67,7 @@
       "date": "17 August 2013",
       "source": "https://commons.wikimedia.org/wiki/File:Families_defy_skies,_lace_up_for_Funny_Sunny_Hat_Run_130817-M-IY869-096.jpg",
       "original": "https://www.dvidshub.net/image/1000194/families-defy-skies-lace-up-funny-sunny-hat-run",
+      "focus": "68% 50%",
       "credit": "Photo: Lance Cpl. Jackeline Perez Rivera, U.S. Marine Corps (public domain)"
     },
     {
@@ -75,6 +80,7 @@
       "licenseTemplate": "PD-USGov-Military",
       "date": "28 October 2010",
       "source": "https://commons.wikimedia.org/wiki/File:USMC-101028-M-2360J-030.jpg",
+      "focus": "42% 50%",
       "credit": "Photo: Cpl. Jo Jones, U.S. Marine Corps (public domain)"
     },
     {
@@ -88,6 +94,7 @@
       "date": "16 August 2012",
       "source": "https://commons.wikimedia.org/wiki/File:1st_Intel_Bn._beats_summer_heat_on_beach_120816-M-PF875-006.jpg",
       "original": "https://www.dvidshub.net/image/647058",
+      "focus": "40% 50%",
       "credit": "Photo: Cpl. Joshua Young, U.S. Marine Corps (public domain)"
     }
   ]
