@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { firstMccsLink, markdown, parseStream, shortDate, speechText } from "@/lib/chat-client";
+import { firstMccsLink, markdown, parseStream, pickThinking, shortDate, speechText } from "@/lib/chat-client";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
 import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, warm, write } from "./shared";
@@ -24,6 +24,8 @@ type Msg = {
   content: string;
   /** Display only: tool status while waiting, follow-ups, trust line. Never sent back to the API. */
   status?: string;
+  /** Thinking phrase shown until the answer starts. */
+  thinking?: string;
   followups?: string[];
   trust?: string;
   error?: boolean;
@@ -106,6 +108,7 @@ export default function FrontDoor({
   const recRef = useRef<Recognition | null>(null);
   const askRef = useRef<HTMLTextAreaElement | null>(null);
   const restored = useRef(false);
+  const lastThinking = useRef("");
   const rootRef = useRef<HTMLDivElement | null>(null);
   const [ready, setReady] = useState(false); // browser-only state loaded
 
@@ -255,7 +258,7 @@ export default function FrontDoor({
   useEffect(() => {
     if (!restored.current) return;
     try {
-      if (messages.length) sessionStorage.setItem(convoKey(instId), JSON.stringify({ messages: messages.map(({ status, ...m }) => (void status, m)) }));
+      if (messages.length) sessionStorage.setItem(convoKey(instId), JSON.stringify({ messages: messages.map(({ status, thinking, ...m }) => (void status, void thinking, m)) }));
       else sessionStorage.removeItem(convoKey(instId));
     } catch {
       /* ignore */
@@ -328,7 +331,9 @@ export default function FrontDoor({
       while (history.length > 29) history.shift();
       while (history.length && history[0].role !== "user") history.shift();
       const replyIndex = messages.length + 1;
-      setMessages((ms) => [...ms, { role: "user", content: q }, { role: "assistant", content: "" }]);
+      const thinking = pickThinking(lastThinking.current);
+      lastThinking.current = thinking;
+      setMessages((ms) => [...ms, { role: "user", content: q }, { role: "assistant", content: "", thinking }]);
       setBusy(true);
       const abort = new AbortController();
       abortRef.current = abort;
@@ -364,7 +369,7 @@ export default function FrontDoor({
         const final = parseStream(raw, true);
         const content = final.text.trim();
         if (!content) throw new Error("No answer came back.");
-        patch({ content, status: undefined, followups: final.followups });
+        patch({ content, status: undefined, thinking: undefined, followups: final.followups });
         setBusy(false);
         if (opts.spoken) speak(replyIndex, content);
         const trust = await trustLine(content);
@@ -373,7 +378,7 @@ export default function FrontDoor({
         if (abort.signal.aborted) return;
         const msg = err instanceof Error ? err.message : "Couldn't reach Ask MCCS.";
         const partial = parseStream(raw).text.trim();
-        patch({ content: (partial ? partial + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again."), status: undefined, error: true });
+        patch({ content: (partial ? partial + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again."), status: undefined, thinking: undefined, error: true });
         setBusy(false);
       }
     },
@@ -687,10 +692,9 @@ export default function FrontDoor({
                   {m.content ? (
                     <div className="fd-md" dangerouslySetInnerHTML={{ __html: markdown(m.content, inst?.location) }} />
                   ) : m.status ? null : (
-                    <span className="fd-typing" aria-label="Ask MCCS is typing">
-                      <i />
-                      <i />
-                      <i />
+                    // Until the answer starts. role="status": announced once (the shimmer is CSS only).
+                    <span className="fd-thinking" role="status">
+                      {m.thinking}
                     </span>
                   )}
                   {m.status && (

@@ -1,5 +1,6 @@
 // Lets Node load the app's TypeScript modules directly in unit checks: resolves "@/..." imports
-// to the project root (adding .ts when there's no extension). Node strips the types itself.
+// to the project root (adding .ts when there's no extension) and loads JSON imports. Node strips the
+// types itself.
 import { registerHooks } from "node:module";
 import { existsSync } from "node:fs";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -13,5 +14,10 @@ registerHooks({
       return next(pathToFileURL(file).href, context);
     }
     return next(specifier, context);
+  },
+  // The app imports JSON config without import attributes (the bundler allows it); add them here.
+  load(url, context, next) {
+    if (url.endsWith(".json")) return next(url, { ...context, importAttributes: { ...context.importAttributes, type: "json" } });
+    return next(url, context);
   },
 });

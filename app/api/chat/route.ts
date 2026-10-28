@@ -13,12 +13,12 @@ const REPLY_REMINDER =
 
 // Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
 const FRAME = "\u001e";
-// Wraps a status line ("Checking the live MCCS page…") shown while a tool runs (ASCII group
+// Wraps a status line ("Checking the latest MCCS info…") shown while a tool runs (ASCII group
 // separator, before and after). The widget shows it until answer text arrives; it's never saved.
 const STATUS = "\u001d";
 const SERVER_TOOL_STATUS: Record<string, string> = {
-  web_fetch: "Checking the live MCCS page…",
-  web_search: "Searching the live MCCS site…",
+  web_fetch: "Checking the latest MCCS info…",
+  web_search: "Searching for the latest MCCS info…",
 };
 
 const MAX_MESSAGES = 30;

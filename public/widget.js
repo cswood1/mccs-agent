@@ -33,7 +33,12 @@
 
   var currentPath = (location.pathname.replace(/\/+$/, "") || "/");
   var FRAME = "\u001e"; // separates answer text from the follow-up chips frame in /api/chat responses
-  var STATUS = "\u001d"; // wraps a status line ("Checking the live MCCS page…") sent while a tool runs
+  var STATUS = "\u001d"; // wraps a status line ("Checking the latest MCCS info…") sent while a tool runs
+  // Shown in place of typing dots until the answer starts: one per message, never the same twice in a
+  // row; the last one is rarer (about 1 in 6). Same list as THINKING in lib/chat-client.ts.
+  var THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…"];
+  var THINKING_RARE = "Hooking and jabbing, be right back…";
+  var lastThinking = "";
 
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
   // Rotating placeholder: the invitation first, then natural example questions (§13). The sparkle
@@ -162,6 +167,8 @@
   window.mccsAssistant = {
     open: function () { setOpen(true); },
     ask: function (q) { setOpen(true); send(q); },
+    // For checks: the thinking-phrase picker.
+    _pickThinking: pickThinking,
   };
 
   // ---------- behavior ----------
@@ -678,7 +685,7 @@
     autosize();
 
     state.messages.push({ role: "user", content: text });
-    var reply = { role: "assistant", content: "" };
+    var reply = { role: "assistant", content: "", thinking: pickThinking() }; // thinking: display only
     var raw = "";
     state.messages.push(reply);
     state.busy = true;
@@ -736,6 +743,7 @@
       })
       .then(function () {
         delete reply.status; // display only, never saved
+        delete reply.thinking;
         reply.content = reply.content.trim();
         var frame = raw.split(FRAME)[1];
         if (frame) {
@@ -828,15 +836,28 @@
     if (m.role === "user") {
       el.textContent = m.content;
     } else if (!m.content) {
-      el.innerHTML = m.status
-        ? '<span class="status" role="status"></span>'
-        : '<span class="typing" aria-label="Assistant is typing"><i></i><i></i><i></i></span>';
+      // Waiting: the tool status if a tool is running, else the thinking phrase. role="status" is
+      // announced once; the shimmer is CSS only.
+      el.innerHTML = m.status ? '<span class="status" role="status"></span>' : '<span class="thinking" role="status"></span>';
+      if (!m.status) el.querySelector(".thinking").textContent = m.thinking || THINKING[0];
     } else {
       el.innerHTML = markdown(m.content);
       if (m.status) el.insertAdjacentHTML("beforeend", '<p class="status" role="status"></p>');
     }
     if (m.status) el.querySelector(".status").textContent = m.status;
     return el;
+  }
+
+  /** A thinking phrase for a new message: never the last one again; the rare one about 1 in 6. */
+  function pickThinking() {
+    var pick;
+    if (lastThinking !== THINKING_RARE && Math.random() < 1 / 6) pick = THINKING_RARE;
+    else {
+      var options = THINKING.filter(function (t) { return t !== lastThinking; });
+      pick = options[Math.floor(Math.random() * options.length)];
+    }
+    lastThinking = pick;
+    return pick;
   }
 
   function scrollToEnd() {
@@ -1032,32 +1053,34 @@
       ".sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }",
 
       ".launcher { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));",
-      "  display: flex; align-items: center; gap: 8px; padding: 11px 18px 11px 14px; border: 2px solid transparent; border-radius: 999px; cursor: pointer;",
+      "  display: flex; align-items: center; gap: 9px; padding: 13px 21px 13px 16px; border: 2px solid transparent; border-radius: 999px; cursor: pointer;",
       // Soft scarlet-to-gold gradient border (the outer layer shows only through the transparent border).
       "  background: linear-gradient(var(--primary), var(--primary)) padding-box,",
       "    linear-gradient(110deg, var(--primary) 0%, var(--accent) 45%, #fff3c4 50%, var(--accent) 55%, var(--primary) 100%) border-box;",
       "  background-size: 100% 100%, 250% 100%; background-position: 0 0, 100% 0;",
-      "  color: #fff; font: 600 15px/1 inherit; font-family: inherit; box-shadow: 0 6px 20px rgba(0,0,0,.25);",
+      // Solid red with white text; a crisp soft shadow and a 1px light ring separate it from busy pages.
+      "  color: #fff; font-family: inherit; font-size: 17px; font-weight: 700; line-height: 1;",
+      "  box-shadow: 0 0 0 1px rgba(255,255,255,.55), 0 2px 4px rgba(0,0,0,.18), 0 10px 24px rgba(0,0,0,.24);",
       // The border shimmers once on page load.
       "  animation: launcher-shimmer 1.6s ease-in-out .6s 1 both; }",
       "@keyframes launcher-shimmer { from { background-position: 0 0, 100% 0; } to { background-position: 0 0, 0% 0; } }",
       ".launcher:hover { filter: brightness(1.08); }",
       ".sparkle { width: 20px; height: 20px; flex: none; fill: var(--accent); }",
-      ".launcher .sparkle { width: 22px; height: 22px; }",
+      ".launcher .sparkle { width: 25px; height: 25px; filter: drop-shadow(0 0 3px rgba(255,199,44,.45)); }",
       ".launcher:focus-visible, button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       // Compact edge tab: a half-pill flush with the right edge, at the full button's height.
-      // Kept small (40 x 48) so it covers little page content and stays clear of the
+      // Kept small (46 x 56) so it covers little page content and stays clear of the
       // phone's edge swipe-back strip above it. On hover or keyboard focus it slides out to the
       // left to show the label; touch screens have no hover, so a tap just opens the panel.
       ".edge-tab { position: fixed; z-index: 2147483000; right: 0; bottom: max(16px, env(safe-area-inset-bottom));",
-      "  display: flex; align-items: center; height: 48px; padding: 0 calc(9px + env(safe-area-inset-right)) 0 10px;",
-      "  border: 0; border-radius: 24px 0 0 24px; background: var(--primary); color: #fff; font: 600 15px/1 inherit; font-family: inherit; cursor: pointer;",
-      "  box-shadow: -2px 4px 14px rgba(0,0,0,.22); animation: edge-glow 2.4s ease-in-out infinite; }",
-      "@keyframes edge-glow { 0%, 100% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 0 0 rgba(255,199,44,0); }",
-      "  50% { box-shadow: -2px 4px 14px rgba(0,0,0,.22), 0 0 14px 3px rgba(255,199,44,.55); } }",
+      "  display: flex; align-items: center; height: 56px; padding: 0 calc(11px + env(safe-area-inset-right)) 0 12px;",
+      "  border: 0; border-radius: 28px 0 0 28px; background: var(--primary); color: #fff; font-family: inherit; font-size: 16px; font-weight: 700; line-height: 1; cursor: pointer;",
+      "  box-shadow: 0 0 0 1px rgba(255,255,255,.5), -2px 4px 16px rgba(0,0,0,.28); animation: edge-glow 2.4s ease-in-out infinite; }",
+      "@keyframes edge-glow { 0%, 100% { box-shadow: 0 0 0 1px rgba(255,255,255,.5), -2px 4px 16px rgba(0,0,0,.28), 0 0 0 0 rgba(255,199,44,0); }",
+      "  50% { box-shadow: 0 0 0 1px rgba(255,255,255,.5), -2px 4px 16px rgba(0,0,0,.28), 0 0 18px 4px rgba(255,199,44,.6); } }",
       ".edge-tab:hover { filter: brightness(1.08); }",
-      ".edge-tab .sparkle { width: 22px; height: 22px; }",
+      ".edge-tab .sparkle { width: 23px; height: 23px; filter: drop-shadow(0 0 4px rgba(255,199,44,.75)); }",
       ".edge-label { display: block; max-width: 0; margin-left: 0; overflow: hidden; white-space: nowrap; opacity: 0;",
       "  transition: max-width .2s ease-out, margin-left .2s ease-out, opacity .2s ease-out; }",
       "@media (hover: hover) { .edge-tab:hover .edge-label { max-width: 90px; margin-left: 8px; opacity: 1; } }",
@@ -1065,9 +1088,11 @@
       ".edge-tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
       ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
-      "  display: flex; flex-direction: column; background: var(--bg); box-shadow: -8px 0 30px rgba(0,0,0,.18); animation: slide .2s ease-out; }",
+      // Subtle edge: a hairline, a soft wide shadow, and a barely warm glow on the edge facing the page.
+      "  display: flex; flex-direction: column; background: var(--bg); border-left: 1px solid rgba(17,24,39,.12);",
+      "  box-shadow: -1px 0 10px rgba(255,199,44,.10), -18px 0 48px -8px rgba(15,23,42,.22); animation: slide .2s ease-out; }",
       "@keyframes slide { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }",
-      "@media (max-width: 640px) { .panel { width: 100vw; height: 100dvh; bottom: auto; } }",
+      "@media (max-width: 640px) { .panel { width: 100vw; height: 100dvh; bottom: auto; border-left: 0; } }",
 
       ".head { display: flex; align-items: center; gap: 4px; padding: 14px 10px 14px 18px; padding-top: max(14px, env(safe-area-inset-top));",
       "  background: var(--primary); color: #fff; }",
@@ -1108,7 +1133,12 @@
       ".typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite both; }",
       ".typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }",
       "@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }",
-      // Tool status ("Checking Camp Pendleton’s pages…") in place of the typing dots.
+      // Thinking phrase until the answer starts: italic, muted, a gentle shimmer sweep.
+      ".thinking { display: inline-block; padding: 2px 0; font-size: 14px; font-style: italic; color: var(--muted);",
+      "  background: linear-gradient(100deg, var(--muted) 35%, #c3c7ce 50%, var(--muted) 65%) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text;",
+      "  -webkit-text-fill-color: transparent; animation: thinking-shimmer 1.8s linear infinite; }",
+      "@keyframes thinking-shimmer { from { background-position: 100% 0; } to { background-position: 0% 0; } }",
+      // Tool status ("Checking Camp Pendleton…") in place of the thinking phrase.
       ".status { display: block; color: var(--muted); font-size: 14px; font-style: italic; animation: status-pulse 1.6s ease-in-out infinite; }",
       ".msg p.status { margin: 8px 0 0; }",
       "@keyframes status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }",
@@ -1123,7 +1153,7 @@
       ".send:disabled { opacity: .45; cursor: default; }",
       ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 11px; color: var(--muted); background: var(--bg); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab, .status { animation: none; } .edge-label { transition: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab, .status, .thinking { animation: none; } .thinking { -webkit-text-fill-color: currentColor; background: none; } .edge-label { transition: none; } }",
     ].join("\n");
   }
 })();

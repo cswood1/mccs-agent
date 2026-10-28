@@ -257,6 +257,17 @@ disagrees with it, ask before changing either.
   navigate in the same tab. Cmd/Ctrl+K focuses it. Phones: the header search icon becomes the sparkle
   and opens a search sheet (`#mccs-ask-sheet`) with the same behavior.
 
+## Thinking phrases and status wording (2026-10-28)
+- Until the answer starts, the widget and the front door show a thinking phrase instead of typing
+  dots ("Let me check on that…", "Checking on that…", "Checking, be right back…", and about 1 in 6
+  "Hooking and jabbing, be right back…"; never the same twice in a row). It's italic and muted with a
+  shimmer (static with reduced motion), role="status", replaced by a tool status, cleared on the first
+  text, and never saved. The list lives in `THINKING` in `public/widget.js` and `lib/chat-client.ts`;
+  keep them in step (`tests/unit/thinking-status-check.mjs` checks).
+- Tool status wording: "Checking Camp Pendleton…" (fallback "Checking another installation…",
+  `lib/crossbase.ts`), "Checking the latest MCCS info…" (web_fetch), "Searching for the latest MCCS
+  info…" (web_search) (`SERVER_TOOL_STATUS` in `app/api/chat/route.ts`).
+
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
   differs from older versions — see `AGENTS.md` and `node_modules/next/dist/docs/`. Middleware is

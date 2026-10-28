@@ -63,7 +63,9 @@ async function open(opts = {}) {
         const body = new ReadableStream({
           async start(ctl) {
             if (window.__withStatus) {
-              ctl.enqueue(enc.encode("\u001dChecking the live MCCS page…\u001d"));
+              ctl.enqueue(enc.encode("\u001dChecking the latest MCCS info…\u001d"));
+              while (!window.__release) await new Promise((r) => setTimeout(r, 30));
+            } else if (window.__hold) {
               while (!window.__release) await new Promise((r) => setTimeout(r, 30));
             }
             ctl.enqueue(enc.encode(answer));
@@ -274,12 +276,48 @@ const ask = async (p, q) => {
   await p.locator("#fd-ask-input").fill("Is the pool open now?");
   await p.locator("#fd-ask-input").press("Enter");
   await p.locator(".fd-status").waitFor();
-  check("Status line while a tool runs", (await p.locator(".fd-status").textContent()) === "Checking the live MCCS page…" && (await p.locator(".fd-typing").count()) === 0);
+  check("Status line while a tool runs (new wording), replacing the thinking phrase", (await p.locator(".fd-status").textContent()) === "Checking the latest MCCS info…" && (await p.locator(".fd-thinking").count()) === 0);
   await p.evaluate(() => { window.__release = true; });
   await p.locator(".fd-a .fd-md").waitFor();
   check("Status gone when the answer arrives", (await p.locator(".fd-status").count()) === 0);
   await p.locator(".fd-followups").waitFor();
   check("Status never saved", !(await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation:quantico") ?? "")).includes("Checking"));
+  await c.close();
+}
+
+// 3b. Thinking phrases in place of typing dots: one per message, never the same twice in a row.
+const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…", "Hooking and jabbing, be right back…"];
+{
+  const { c, p } = await open();
+  await p.evaluate(() => { window.__hold = true; });
+  const seen = [];
+  for (let k = 0; k < 4; k++) {
+    await p.evaluate(() => { window.__release = false; });
+    await p.locator("#fd-ask-input").fill(`Question ${k + 1}?`);
+    await p.locator("#fd-ask-input").press("Enter");
+    const last = p.locator(".fd-a").last();
+    await last.locator(".fd-thinking").waitFor();
+    seen.push({ text: await last.locator(".fd-thinking").textContent(), role: await last.locator(".fd-thinking").getAttribute("role"), anim: await last.locator(".fd-thinking").evaluate((el) => getComputedStyle(el).animationName) });
+    await p.evaluate(() => { window.__release = true; });
+    await last.locator(".fd-md").waitFor();
+    if (k === 0) check("Front door: thinking phrase clears when the answer starts", (await last.locator(".fd-thinking").count()) === 0);
+    await p.locator(".fd-followups").waitFor();
+  }
+  check("Front door: a thinking phrase from the list, announced once (role=status)", seen.every((x) => THINKING.includes(x.text) && x.role === "status"), JSON.stringify(seen));
+  check("Front door: never the same phrase on consecutive messages", seen.every((x, k) => k === 0 || x.text !== seen[k - 1].text), seen.map((x) => x.text).join(" | "));
+  check("Front door: thinking phrase shimmers", seen.every((x) => x.anim === "fd-thinking"));
+  const saved = await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation:quantico") ?? "");
+  check("Front door: thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));
+  await c.close();
+}
+{
+  const { c, p } = await open({ reducedMotion: "reduce" });
+  await p.evaluate(() => { window.__hold = true; });
+  await p.locator("#fd-ask-input").fill("Pool hours?");
+  await p.locator("#fd-ask-input").press("Enter");
+  await p.locator(".fd-thinking").waitFor();
+  check("Front door, reduced motion: thinking phrase is static", (await p.locator(".fd-thinking").evaluate((el) => getComputedStyle(el).animationName)) === "none");
+  await p.evaluate(() => { window.__release = true; });
   await c.close();
 }
 

@@ -62,12 +62,12 @@ const terms = (s: string) =>
 
 /**
  * Status line shown while the cross-base tool runs, from its (possibly partial) JSON input:
- * "Checking Camp Pendleton’s pages…". Display text only; never part of the prompt.
+ * "Checking Camp Pendleton…". Display text only; never part of the prompt.
  */
 export function crossBaseStatus(inputJson: string): string {
   const id = inputJson.match(/"installation"\s*:\s*"([a-z]+)"/)?.[1];
   const name = id ? getInstallation(id)?.shortName.replace(/^MCB\s+/, "") : undefined;
-  return name ? `Checking ${name}’s pages…` : "Checking another installation’s pages…";
+  return name ? `Checking ${name}…` : "Checking another installation…";
 }
 
 /** Runs the tool. Returns the text for the tool_result and whether it's an error. */

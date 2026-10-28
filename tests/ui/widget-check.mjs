@@ -65,6 +65,16 @@ const shimmer = await launcherCheck.evaluate((el) => {
 });
 check("Launcher shimmers once on load", shimmer.name === "launcher-shimmer" && shimmer.count === "1", JSON.stringify(shimmer));
 check("Launcher has a gradient border", (shimmer.image.match(/linear-gradient/g) || []).length === 2, shimmer.image.slice(0, 80));
+const lstyle = await launcherCheck.evaluate((el) => {
+  const cs = getComputedStyle(el);
+  return { font: cs.fontSize, pad: cs.paddingTop, color: cs.color, image: cs.backgroundImage, shadow: cs.boxShadow, sparkle: parseFloat(getComputedStyle(el.querySelector(".sparkle")).width) };
+});
+check("Launcher is larger (font, padding, sparkle)", lstyle.font === "17px" && lstyle.pad === "13px" && lstyle.sparkle >= 25, JSON.stringify(lstyle));
+check("Launcher: solid MCCS red with white text (contrast > 7:1)", lstyle.image.startsWith("linear-gradient(rgb(158, 27, 50), rgb(158, 27, 50))") && lstyle.color === "rgb(255, 255, 255)", lstyle.image.slice(0, 60));
+check("Launcher: 1px light ring and a crisp soft shadow", /rgba\(255, 255, 255, 0\.55\) 0px 0px 0px 1px/.test(lstyle.shadow) && /0px 10px 24px/.test(lstyle.shadow), lstyle.shadow);
+const pstyle = await w.locator(".panel").evaluate((el) => { const cs = getComputedStyle(el); return { border: `${cs.borderLeftWidth} ${cs.borderLeftStyle} ${cs.borderLeftColor}`, shadow: cs.boxShadow }; });
+check("Panel: hairline border on the page side", pstyle.border === "1px solid rgba(17, 24, 39, 0.12)", pstyle.border);
+check("Panel: soft, wide, low-opacity shadow and a faint warm edge glow", /rgba\(15, 23, 42, 0\.22\) -18px 0px 48px -8px/.test(pstyle.shadow) && /rgba\(255, 199, 44, 0\.1\)/.test(pstyle.shadow), pstyle.shadow);
 
 // 2. Ask via a chip: page context sent, follow-ups replace page chips, links rendered.
 await w.locator(".chips .chip").first().click();
@@ -355,6 +365,8 @@ async function edgeFlow(label, viewport, mobile) {
   const tab = wx.locator("button.edge-tab");
   await p.goto(base + "/quantico/recreation-fitness/recreation/indoor-recreation/bowling", { waitUntil: "networkidle" });
   check(`${label}: full button on first visit`, (await full.isVisible()) && !(await tab.isVisible()));
+  const fb = await full.boundingBox();
+  check(`${label}: full button is a 44px+ tap target and stays in the corner`, fb.height >= 52 && fb.width <= 200 && fb.x + fb.width <= viewport.width && fb.y + fb.height <= viewport.height, JSON.stringify(fb));
   const fullBox = await full.boundingBox();
   await full.click();
   const min = wx.locator("button.minimize");
@@ -369,7 +381,7 @@ async function edgeFlow(label, viewport, mobile) {
   check(`${label}: minimize hides the panel and shows the edge tab`, !(await wx.locator(".panel").isVisible()) && !(await full.isVisible()) && (await tab.isVisible()));
   check(`${label}: edge tab label and focus`, (await tab.getAttribute("aria-label")) === "Open Ask MCCS" && (await tab.evaluate((el) => el.getRootNode().activeElement === el)));
   const tabBox = await tab.boundingBox();
-  check(`${label}: edge tab flush right, at the full button's height`, Math.abs(tabBox.x + tabBox.width - viewport.width) < 1 && Math.abs(tabBox.y + tabBox.height - (fullBox.y + fullBox.height)) <= 4 && tabBox.width <= 44, JSON.stringify({ tabBox, fullBox }));
+  check(`${label}: edge tab flush right, at the full button's height`, Math.abs(tabBox.x + tabBox.width - viewport.width) < 1 && Math.abs(tabBox.y + tabBox.height - (fullBox.y + fullBox.height)) <= 4 && tabBox.width >= 44 && tabBox.width <= 50 && tabBox.height >= 54, JSON.stringify({ tabBox, fullBox }));
   check(`${label}: edge tab pulses`, (await tab.evaluate((el) => getComputedStyle(el).animationName)) === "edge-glow");
   await tab.click();
   check(`${label}: edge tab reopens the panel with the chat`, (await wx.locator(".panel").isVisible()) && (await wx.locator(".msg.user").count()) === 1 && !(await tab.isVisible()));
@@ -416,7 +428,7 @@ const tabState = (tab) => tab.evaluate((el) => {
   await p.mouse.move(400, 400);
   await p.waitForTimeout(300);
   const collapsed = await tabState(tab);
-  check("Edge tab collapsed: compact sparkle only", collapsed.width <= 44 && collapsed.labelOpacity === "0" && collapsed.labelWidth === 0, JSON.stringify(collapsed));
+  check("Edge tab collapsed: compact sparkle only", collapsed.width <= 50 && collapsed.labelOpacity === "0" && collapsed.labelWidth === 0, JSON.stringify(collapsed));
   check("Edge tab label slides with ~200ms ease-out", /^0\.2s/.test(collapsed.transition) && /ease-out/.test(collapsed.transition), collapsed.transition);
   await tab.hover();
   await p.waitForTimeout(350);
@@ -427,7 +439,7 @@ const tabState = (tab) => tab.evaluate((el) => {
   check("Expanded tab keeps its accessible name", (await tab.getAttribute("aria-label")) === "Open Ask MCCS");
   await p.mouse.move(400, 400);
   await p.waitForTimeout(350);
-  check("Mouse leave tucks it back", (await tabState(tab)).width <= 44);
+  check("Mouse leave tucks it back", (await tabState(tab)).width <= 50);
   // Keyboard: Escape from the panel puts keyboard focus on the tab, which expands it.
   await tab.click();
   await p.mouse.move(400, 400); // not hovering the tab, so only focus can expand it
@@ -437,7 +449,7 @@ const tabState = (tab) => tab.evaluate((el) => {
   check("Keyboard focus expands the tab", focused.width > 100 && focused.labelOpacity === "1" && (await tab.evaluate((el) => el.matches(":focus-visible"))), JSON.stringify(focused));
   await p.keyboard.press("Shift+Tab");
   await p.waitForTimeout(350);
-  check("Blur tucks it back", (await tabState(tab)).width <= 44);
+  check("Blur tucks it back", (await tabState(tab)).width <= 50);
   await p.context().close();
 }
 {
@@ -446,7 +458,7 @@ const tabState = (tab) => tab.evaluate((el) => {
   const before = await tabState(tab);
   await tab.tap();
   await p.waitForTimeout(300);
-  check("Touch: a tap opens the panel directly", before.width <= 44 && (await wx.locator(".panel").isVisible()) && !(await tab.isVisible()), JSON.stringify(before));
+  check("Touch: a tap opens the panel directly", before.width <= 50 && (await wx.locator(".panel").isVisible()) && !(await tab.isVisible()), JSON.stringify(before));
   await p.context().close();
 }
 {
@@ -486,7 +498,7 @@ async function statusPage(extra = {}) {
       const body = new ReadableStream({
         async start(ctl) {
           ctl.enqueue(enc.encode(window.__before ?? ""));
-          ctl.enqueue(enc.encode("\u001dChecking Camp Pendleton’s pages…\u001d"));
+          if (!window.__noStatus) ctl.enqueue(enc.encode("\u001dChecking Camp Pendleton…\u001d"));
           while (!window.__release) await new Promise((r) => setTimeout(r, 50));
           ctl.enqueue(enc.encode("Pendleton's relocation office handles sponsors."));
           ctl.enqueue(enc.encode("\u001e" + JSON.stringify({ followups: ["Pendleton lodging?"] })));
@@ -507,8 +519,8 @@ async function statusPage(extra = {}) {
   await p.locator("#mccs-assistant textarea").fill("I'm PCSing to Pendleton next month, what should I set up?");
   await p.locator("#mccs-assistant textarea").press("Enter");
   await last.locator(".status").waitFor();
-  check("Tool status shown while waiting", (await last.locator(".status").textContent()) === "Checking Camp Pendleton’s pages…" && (await last.locator(".status").getAttribute("role")) === "status");
-  check("Tool status replaces the typing dots", (await last.locator(".typing").count()) === 0);
+  check("Tool status shown while waiting (new wording)", (await last.locator(".status").textContent()) === "Checking Camp Pendleton…" && (await last.locator(".status").getAttribute("role")) === "status");
+  check("Tool status replaces the thinking phrase", (await last.locator(".thinking").count()) === 0 && (await last.locator(".typing").count()) === 0);
   await p.evaluate(() => { window.__release = true; });
   await last.filter({ hasText: "relocation office" }).waitFor();
   await p.waitForTimeout(300);
@@ -538,6 +550,55 @@ async function statusPage(extra = {}) {
   await last.locator(".status").waitFor();
   const anim = await last.locator(".status").evaluate((el) => getComputedStyle(el).animationName);
   check("Reduced motion: status line doesn't pulse", anim === "none", anim);
+  await p.evaluate(() => { window.__release = true; });
+  await c.close();
+}
+
+// Thinking phrases in place of typing dots: one per message, never the same twice in a row.
+const THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…", "Hooking and jabbing, be right back…"];
+{
+  const { c, p } = await statusPage();
+  await p.evaluate(() => { window.__noStatus = true; });
+  const seen = [];
+  for (let k = 0; k < 4; k++) {
+    await p.evaluate(() => { window.__release = false; });
+    await p.locator("#mccs-assistant textarea").fill(`Question ${k + 1}?`);
+    await p.locator("#mccs-assistant textarea").press("Enter");
+    const last = p.locator("#mccs-assistant .msg.assistant").last();
+    await last.locator(".thinking").waitFor();
+    seen.push({ text: await last.locator(".thinking").textContent(), role: await last.locator(".thinking").getAttribute("role"), dots: await last.locator(".typing").count(), anim: await last.locator(".thinking").evaluate((el) => getComputedStyle(el).animationName) });
+    await p.evaluate(() => { window.__release = true; });
+    await last.filter({ hasText: "relocation office" }).waitFor();
+    if (k === 0) check("Thinking phrase clears when the answer starts", (await last.locator(".thinking").count()) === 0);
+  }
+  check("A thinking phrase from the list while waiting, announced once (role=status), no dots", seen.every((x) => THINKING.includes(x.text) && x.role === "status" && x.dots === 0), JSON.stringify(seen));
+  check("Never the same phrase on consecutive messages", seen.every((x, k) => k === 0 || x.text !== seen[k - 1].text), seen.map((x) => x.text).join(" | "));
+  check("Thinking phrase shimmers", seen.every((x) => x.anim === "thinking-shimmer"), JSON.stringify(seen.map((x) => x.anim)));
+  const saved = await p.evaluate(() => sessionStorage.getItem("mccs-assistant:quantico") ?? "");
+  check("Thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));
+  const dist = await p.evaluate((list) => {
+    const pick = window.mccsAssistant._pickThinking;
+    let prev = "", repeats = 0, rare = 0, unknown = 0;
+    for (let i = 0; i < 6000; i++) {
+      const t = pick();
+      if (t === prev) repeats++;
+      if (t === list[3]) rare++;
+      if (!list.includes(t)) unknown++;
+      prev = t;
+    }
+    return { repeats, rareShare: rare / 6000, unknown };
+  }, THINKING);
+  check("Picker: no repeats; “Hooking and jabbing” about 1 in 6", dist.repeats === 0 && dist.unknown === 0 && dist.rareShare > 0.12 && dist.rareShare < 0.21, JSON.stringify(dist));
+  await c.close();
+}
+{
+  const { c, p } = await statusPage({ reducedMotion: "reduce" });
+  await p.evaluate(() => { window.__noStatus = true; });
+  await p.locator("#mccs-assistant textarea").fill("Pool hours?");
+  await p.locator("#mccs-assistant textarea").press("Enter");
+  const last = p.locator("#mccs-assistant .msg.assistant").last();
+  await last.locator(".thinking").waitFor();
+  check("Reduced motion: thinking phrase is static", (await last.locator(".thinking").evaluate((el) => getComputedStyle(el).animationName)) === "none");
   await p.evaluate(() => { window.__release = true; });
   await c.close();
 }

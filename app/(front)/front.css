@@ -1109,23 +1109,25 @@
   gap: 0.5em;
   margin-top: 0.6em;
 }
-.fd-typing {
-  display: inline-flex;
-  gap: 0.3em;
-  padding: 0.4em 0;
+/* Thinking phrase until the answer starts: italic, muted, a gentle shimmer sweep. */
+.fd-thinking {
+  display: inline-block;
+  padding: 0.3em 0;
+  font-style: italic;
+  color: var(--fd-muted);
+  background: linear-gradient(100deg, var(--fd-muted) 35%, var(--fd-line) 50%, var(--fd-muted) 65%) 0 0 / 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fd-thinking 1.8s linear infinite;
 }
-.fd-typing i {
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  background: var(--fd-muted);
-  animation: fd-blink 1.2s infinite both;
-}
-.fd-typing i:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.fd-typing i:nth-child(3) {
-  animation-delay: 0.4s;
+@keyframes fd-thinking {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0% 0;
+  }
 }
 .fd-followups {
   margin-top: 1.2em;
@@ -1210,24 +1212,18 @@
     opacity: 0.5;
   }
 }
-@keyframes fd-blink {
-  0%,
-  80%,
-  100% {
-    opacity: 0.25;
-  }
-  40% {
-    opacity: 1;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .fd-dock,
   .fd-conv,
   .fd-status,
-  .fd-rec-dot,
-  .fd-typing i {
+  .fd-rec-dot {
     animation: none;
+  }
+  .fd-thinking {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: currentColor;
   }
   .fd-card,
   .fd-arrow,
