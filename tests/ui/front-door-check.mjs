@@ -472,6 +472,101 @@ const ask = async (p, q) => {
   await c.close();
 }
 
+// 9. Focus rings: one per control, on the rounded container, never a square inner outline.
+{
+  const { c, p } = await open();
+  const st = (sel) =>
+    p.locator(sel).first().evaluate((el) => {
+      const cs = getComputedStyle(el);
+      return { outline: cs.outlineStyle, ow: cs.outlineWidth, oc: cs.outlineColor, shadow: cs.boxShadow, radius: cs.borderTopLeftRadius, border: cs.borderTopColor };
+    });
+  const pillBase = await st(".fd-inst");
+  const askBase = await st(".fd-ask");
+
+  // Mouse click in the ask box: no inner outline; the box glows, following its radius.
+  await p.locator("#fd-ask-input").click();
+  const ta = await st("#fd-ask-input");
+  const ask = await st(".fd-ask");
+  check("Ask box click: no outline or shadow on the textarea", ta.outline === "none" && ta.shadow === "none", JSON.stringify(ta));
+  check("Ask box click: the box shows its ring, with its own radius", ask.shadow !== askBase.shadow && /0px 0px 0px 4px/.test(ask.shadow) && ask.radius === askBase.radius && parseFloat(ask.radius) > 0, JSON.stringify(ask));
+
+  // Mouse click on the installation select: no inner outline, and no ring (keyboard only).
+  await p.locator("#fd-inst-select").click();
+  await p.keyboard.press("Escape").catch(() => {});
+  await p.locator("#fd-inst-select").evaluate((el) => el.blur());
+  await p.mouse.click(600, 820);
+  await p.locator("#fd-inst-select").click();
+  const selClick = await st("#fd-inst-select");
+  check("Selector click: no outline on the inner select", selClick.outline === "none" && selClick.shadow === "none", JSON.stringify(selClick));
+  check("Selector click: no ring on the pill", (await st(".fd-inst")).shadow === pillBase.shadow);
+  await p.mouse.click(600, 820); // closes the list, blurs the select
+
+  // Keyboard: Tab from the top lands on the select; the pill gets the ring.
+  await p.locator(".demo-banner").click(); // start sequential focus at the top of the page
+  await p.keyboard.press("Tab");
+  check("Keyboard: Tab reaches the installation selector first", await p.locator("#fd-inst-select").evaluate((el) => document.activeElement === el));
+  const selKey = await st("#fd-inst-select");
+  const pillKey = await st(".fd-inst");
+  check("Keyboard: no outline on the inner select", selKey.outline === "none" && selKey.shadow === "none", JSON.stringify(selKey));
+  check("Keyboard: the pill shows the ring, following its radius", pillKey.shadow !== pillBase.shadow && /0px 0px 0px 4px/.test(pillKey.shadow) && pillKey.radius === pillBase.radius && parseFloat(pillKey.radius) > 100, JSON.stringify(pillKey));
+
+  // Tab through the rest of the hero: each stop has exactly one ring, on the control itself.
+  const stops = [];
+  for (let k = 0; k < 14; k++) {
+    await p.keyboard.press("Tab");
+    stops.push(
+      await p.evaluate(() => {
+        const el = document.activeElement;
+        const cs = getComputedStyle(el);
+        const inner = [...el.querySelectorAll("*")].some((d) => getComputedStyle(d).outlineStyle !== "none");
+        const box = el.closest(".fd-ask");
+        return {
+          what: el.id || el.className || el.tagName,
+          tag: el.tagName,
+          outline: cs.outlineStyle,
+          ow: cs.outlineWidth,
+          radius: parseFloat(cs.borderTopLeftRadius),
+          inner,
+          askRing: box ? getComputedStyle(box).boxShadow : null,
+        };
+      }),
+    );
+  }
+  const bad = stops.filter((s) =>
+    s.tag === "TEXTAREA" ? s.outline !== "none" || !/0px 0px 0px 4px/.test(s.askRing ?? "") : s.outline !== "solid" || s.ow !== "3px" || !(s.radius > 0) || s.inner,
+  );
+  const kinds = new Set(stops.map((s) => String(s.what).split(" ")[0]));
+  check("Keyboard: every control has one ring that follows its shape", bad.length === 0, JSON.stringify(bad));
+  check("…covering the Display pill, photo controls, ask box, mic, chips", ["fd-pill", "fd-credit", "fd-slide-toggle", "fd-ask-input", "fd-icon-btn", "fd-chip"].every((k) => kinds.has(k)), JSON.stringify([...kinds]));
+
+  // Cards: numbered moment cards and installation cards.
+  await p.keyboard.press("Shift"); // keyboard modality for programmatic focus
+  for (const sel of [".fd-card[data-moment=arrived]", ".fd-bases .fd-bcard"]) {
+    await p.locator(sel).first().focus();
+    const s = await st(sel);
+    check(`Keyboard: ${sel} ring follows its radius`, s.outline === "solid" && s.ow === "3px" && parseFloat(s.radius) > 10, JSON.stringify(s));
+  }
+
+  // Visible in dark and high contrast.
+  for (const [label, display, ring] of [
+    ["dark", { theme: "dark", large: false, contrast: false }, /0px 0px 0px 4px/],
+    ["high contrast", { theme: "light", large: false, contrast: true }, /rgb\(0, 51, 204\) 0px 0px 0px 3px/],
+    ["dark high contrast", { theme: "dark", large: false, contrast: true }, /rgb\(255, 211, 77\) 0px 0px 0px 3px/],
+  ]) {
+    await p.evaluate((d) => localStorage.setItem("mccs-front:display", JSON.stringify(d)), display);
+    await p.reload({ waitUntil: "networkidle" });
+    await p.evaluate(() => document.activeElement?.blur());
+    await p.keyboard.press("Tab");
+    const pill = await st(".fd-inst");
+    await p.keyboard.press("Tab"); // Display pill
+    const btn = await st(".fd-display-btn");
+    const bg = await p.locator(".fd").evaluate((el) => getComputedStyle(el).backgroundColor);
+    check(`Rings visible in ${label}`, ring.test(pill.shadow) && btn.outline === "solid" && btn.oc !== bg && pill.border !== bg, JSON.stringify({ pill: pill.shadow, btn: btn.oc, bg }));
+  }
+  await p.evaluate(() => localStorage.removeItem("mccs-front:display"));
+  await c.close();
+}
+
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
 

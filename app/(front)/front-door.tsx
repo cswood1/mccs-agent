@@ -119,6 +119,7 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
   const displayBtnRef = useRef<HTMLButtonElement | null>(null);
   const displayPanelRef = useRef<HTMLDivElement | null>(null);
   const restored = useRef(false);
+  const rootRef = useRef<HTMLDivElement | null>(null);
   const [ready, setReady] = useState(false); // browser-only state (saved installation etc.) loaded
 
   // ---------- browser-only setup (after hydration) ----------
@@ -252,6 +253,21 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
       /* ignore */
     }
   }, [messages, instId]);
+
+  // Last input type, for focus rings that should show for keyboard focus only (front.css).
+  useEffect(() => {
+    const set = (type: "keyboard" | "pointer") => () => {
+      if (rootRef.current) rootRef.current.dataset.input = type;
+    };
+    const onKey = set("keyboard");
+    const onPointer = set("pointer");
+    document.addEventListener("keydown", onKey, true);
+    document.addEventListener("pointerdown", onPointer, true);
+    return () => {
+      document.removeEventListener("keydown", onKey, true);
+      document.removeEventListener("pointerdown", onPointer, true);
+    };
+  }, []);
 
   // Display menu: close on Escape or a click outside.
   useEffect(() => {
@@ -526,6 +542,7 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
 
   return (
     <div
+      ref={rootRef}
       className={`fd fd--${mode}`}
       data-theme={display.theme}
       data-text={display.large ? "large" : "normal"}

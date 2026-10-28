@@ -190,6 +190,13 @@ disagrees with it, ask before changing either.
 - Ask box placeholder: the widget header search's typing effect at a calmer pace (50 ms/letter,
   3.25 s hold, 0.3 s erase, ~4.5 s per example; the widget keeps 35 ms / 2 s). It's cleared while focused or holding text, and static with reduced motion. The docked
   "Ask a follow-up…" stays static.
+- Focus rings (front.css):
+  - Inner select/textarea/text inputs never draw an outline. Their rounded container shows the
+    `--fd-ring` box-shadow instead: the ask box on any focus, the installation pill for keyboard focus
+    only. Keyboard-only uses `data-input` on `.fd`, set on keydown/pointerdown, because Chrome counts a
+    clicked select as `:focus-visible`.
+  - Every other control gets one 3px outline that follows its border radius.
+  - High contrast uses a solid ring.
 - Warm-up: `/api/warm` for the selected base on load and on selector change. It uses the widget's
   localStorage throttle key (`mccs-assistant:<id>:warmed`, 50 min), so the two share it.
 - Tests: `tests/ui/front-door-check.mjs` (stubbed chat stream and speech APIs); `npm run test:ui` runs
