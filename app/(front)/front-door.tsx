@@ -35,7 +35,12 @@ const DISPLAY_KEY = "mccs-front:display";
 const CONVO_KEY = "mccs-front:conversation";
 // Short enough to fit the ask box on a 375px phone.
 const EXAMPLES = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
-const PLACEHOLDER_MS = 3000;
+// Typing placeholder: same timing as the widget's header search (public/widget.js), about 3 s per
+// example: 35 ms a letter, a 2 s hold, then a 0.3 s erase.
+const TYPE_MS = 35;
+const HOLD_MS = 2000;
+const ERASE_MS = 300;
+const SLIDE_MS = 5000; // hero photo carousel
 
 /** "Start with a moment": each numbered card opens the conversation with a set question. */
 const MOMENTS: { id: string; title: string; blurb: string; question: (base: string) => string }[] = [
@@ -94,7 +99,9 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
   const [mode, setMode] = useState<"hero" | "chat">("hero");
   const [busy, setBusy] = useState(false);
   const [question, setQuestion] = useState("");
-  const [placeholder, setPlaceholder] = useState(0);
+  const [typed, setTyped] = useState(EXAMPLES[0]);
+  const exampleRef = useRef(0);
+  const typingStarted = useRef(false);
   const [askFocused, setAskFocused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [micSupported, setMicSupported] = useState(false);
@@ -160,12 +167,71 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
     });
   }, [instId, ready]);
 
-  // Rotating example questions in the ask box (still with reduced motion, paused while in use).
+  // Typing placeholder: each example types out, holds, erases, then the next types. Stopped (and the
+  // placeholder cleared) while the box is focused or has text; resumes on blur when empty.
   useEffect(() => {
-    if (reducedMotion || askFocused || question) return;
-    const t = setInterval(() => setPlaceholder((p) => (p + 1) % EXAMPLES.length), PLACEHOLDER_MS);
+    if (mode !== "hero" || reducedMotion || askFocused || question) return;
+    let i = exampleRef.current;
+    // The first run starts on the whole first example (like the widget); a resume types from empty.
+    let n = typingStarted.current ? 0 : EXAMPLES[i].length;
+    let phase: "type" | "hold" | "erase" = typingStarted.current ? "type" : "hold";
+    typingStarted.current = true;
+    let timer: ReturnType<typeof setTimeout>;
+    const tick = () => {
+      const ex = EXAMPLES[i];
+      if (phase === "type") {
+        if (n < ex.length) {
+          setTyped(ex.slice(0, ++n));
+          timer = setTimeout(tick, TYPE_MS);
+        } else {
+          phase = "hold";
+          timer = setTimeout(tick, HOLD_MS);
+        }
+      } else if (phase === "hold") {
+        phase = "erase";
+        tick();
+      } else if (n > 0) {
+        setTyped(ex.slice(0, --n));
+        timer = setTimeout(tick, ERASE_MS / ex.length);
+      } else {
+        i = exampleRef.current = (i + 1) % EXAMPLES.length;
+        phase = "type";
+        timer = setTimeout(tick, TYPE_MS);
+      }
+    };
+    setTyped(EXAMPLES[i].slice(0, n)); // start state of the loop
+    timer = setTimeout(tick, phase === "hold" ? HOLD_MS : TYPE_MS);
+    return () => clearTimeout(timer);
+  }, [mode, reducedMotion, askFocused, question]);
+  const askPlaceholder =
+    mode === "chat" ? "Ask a follow-up…" : reducedMotion ? EXAMPLES[0] : askFocused || question ? "" : typed;
+
+  // Hero photo carousel: all installations' photos, whichever is selected; 5 s each, crossfading.
+  // Paused while the tab is hidden, on hover, on keyboard focus in the photo, or by the button.
+  const slides = installations.filter((i) => i.hero).map((i) => ({ id: i.id, photo: i.hero as Photo }));
+  const [slide, setSlide] = useState(0);
+  const [userPaused, setUserPaused] = useState(false);
+  const [hoverPaused, setHoverPaused] = useState(false);
+  const [focusPaused, setFocusPaused] = useState(false);
+  const [tabHidden, setTabHidden] = useState(false);
+  const selectedSlide = Math.max(0, slides.findIndex((s) => s.id === instId));
+  useEffect(() => {
+    // Start on the selected installation's photo once the saved choice is known.
+    if (ready) setSlide(Math.max(0, slides.findIndex((s) => s.id === instId))); // eslint-disable-line react-hooks/set-state-in-effect
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- only when ready flips
+  }, [ready]);
+  useEffect(() => {
+    const onVisibility = () => setTabHidden(document.hidden);
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, []);
+  const rotating = !reducedMotion && slides.length > 1;
+  useEffect(() => {
+    if (!rotating || mode !== "hero" || userPaused || hoverPaused || focusPaused || tabHidden) return;
+    const t = setInterval(() => setSlide((k) => (k + 1) % slides.length), SLIDE_MS);
     return () => clearInterval(t);
-  }, [reducedMotion, askFocused, question]);
+  }, [rotating, mode, userPaused, hoverPaused, focusPaused, tabHidden, slides.length]);
+  const shown = rotating ? slide : selectedSlide;
 
   // Ask box height follows its text, or its placeholder when empty (which can wrap with large text).
   useLayoutEffect(() => {
@@ -173,7 +239,7 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
     if (!ta) return;
     ta.style.height = "auto";
     ta.style.height = `${ta.scrollHeight}px`; // capped by max-height in front.css
-  }, [question, placeholder, display.large, mode]);
+  }, [question, askPlaceholder, display.large, mode]);
 
   // Remember the conversation for this tab (display-only fields stay out of what's sent).
   useEffect(() => {
@@ -403,7 +469,7 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
         ref={askRef}
         rows={1}
         value={question}
-        placeholder={mode === "chat" ? "Ask a follow-up…" : EXAMPLES[placeholder]}
+        placeholder={askPlaceholder}
         onChange={(e) => setQuestion(e.target.value)}
         onFocus={() => setAskFocused(true)}
         onBlur={() => setAskFocused(false)}
@@ -529,11 +595,44 @@ export default function FrontDoor({ installations, momentsPhoto }: { installatio
       {mode === "hero" ? (
         <main className="fd-main">
           <section className="fd-hero" aria-labelledby="fd-title">
-            {inst?.hero && (
-              <figure className="fd-hero-photo">
-                {/* eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP */}
-                <img src={inst.hero.src} alt={inst.hero.alt} style={{ objectPosition: inst.hero.focus }} fetchPriority="high" />
-                {credit(inst.hero)}
+            {slides.length > 0 && (
+              <figure
+                className="fd-hero-photo"
+                onPointerEnter={() => setHoverPaused(true)}
+                onPointerLeave={() => setHoverPaused(false)}
+                // Keyboard focus on the credit link pauses; focus on the pause/play button doesn't, so Play works.
+                onFocus={(e) => setFocusPaused(!(e.target as HTMLElement).closest(".fd-slide-toggle"))}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setFocusPaused(false);
+                }}
+              >
+                {/* All photos are in the page (so they're loaded before they show); only the visible one is described. */}
+                {slides.map((s, k) => (
+                  // eslint-disable-next-line @next/next/no-img-element -- static, pre-sized WebP
+                  <img
+                    key={s.id}
+                    className={k === shown ? "is-active" : undefined}
+                    src={s.photo.src}
+                    alt={k === shown ? s.photo.alt : ""}
+                    aria-hidden={k === shown ? undefined : true}
+                    data-installation={s.id}
+                    style={{ objectPosition: s.photo.focus }}
+                    fetchPriority={k === shown ? "high" : "low"}
+                  />
+                ))}
+                {credit(slides[shown]?.photo ?? null)}
+                {rotating && (
+                  <button
+                    type="button"
+                    className="fd-slide-toggle"
+                    aria-label={userPaused ? "Play photo slideshow" : "Pause photo slideshow"}
+                    onClick={() => setUserPaused((p) => !p)}
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d={userPaused ? "M8 5v14l11-7z" : "M8 5h3v14H8zM13 5h3v14h-3z"} />
+                    </svg>
+                  </button>
+                )}
               </figure>
             )}
             <div className="fd-hero-text">

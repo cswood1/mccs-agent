@@ -20,6 +20,7 @@ const ANSWER =
   "Start with **MilitaryChildCare.com**: create an account and request care. Call Resource & Referral at 760-725-3400, or stop by 2034 Barnett Ave.\n\n" +
   "Details: [Child Development Centers](https://pendleton.usmc-mccs.org/marine-family-support/child-and-youth/child-development-centers)";
 const FOLLOWUPS = ["Where are the CDCs?", "How does the waitlist work?"];
+const EXAMPLES_FD = ["Gym hours today?", "Child care waitlist", "Where can I stay?", "Tuition Assistance help", "This weekend’s events"];
 
 const browser = await chromium.launch({ executablePath: CHROME });
 const cookie = code ? [{ name: "mccs_demo_access", value: createHash("sha256").update(`mccs-demo-access:${code}`).digest("hex"), url: base }] : [];
@@ -126,11 +127,12 @@ const ask = async (p, q) => {
   check("Pill-shaped top controls", (await p.locator(".fd-top .fd-pill").count()) >= 2 && (await p.locator(".fd-display-btn").evaluate((el) => parseFloat(getComputedStyle(el).borderRadius))) > 100);
   const options = await p.locator("#fd-inst-select option").allTextContents();
   check("Installation selector lists the three bases", JSON.stringify(options) === JSON.stringify(["MCB Quantico", "MCB Camp Pendleton", "MCB Camp Lejeune"]), JSON.stringify(options));
-  // Photos: a hero per installation (swaps with the selector), one per card, one for the moments.
-  const heroSrc = await p.locator(".fd-hero-photo img").getAttribute("src");
-  check("Hero photo for the selected installation", heroSrc === "/home/hero-quantico.webp", heroSrc);
-  const imgs = await p.locator(".fd img").evaluateAll((els) => els.map((e) => ({ src: e.getAttribute("src"), alt: e.alt, ok: e.complete && e.naturalWidth > 0 })));
-  check("All photos are WebP with descriptive alt text", imgs.length === 5 && imgs.every((i) => /\.webp$/.test(i.src) && i.alt.length > 20), JSON.stringify(imgs));
+  // Photos: the hero carousel (all three installations), one per card, one for the moments.
+  const heroSrc = await p.locator(".fd-hero-photo img.is-active").getAttribute("src");
+  check("Hero starts on the selected installation's photo", heroSrc === "/home/hero-quantico.webp", heroSrc);
+  const imgs = await p.locator(".fd img").evaluateAll((els) => els.map((e) => ({ src: e.getAttribute("src"), alt: e.alt, hidden: e.getAttribute("aria-hidden") === "true" })));
+  const described = imgs.filter((i) => !i.hidden);
+  check("All photos are WebP; every visible one has descriptive alt text", imgs.length === 7 && imgs.every((i) => /\.webp$/.test(i.src)) && described.length === 5 && described.every((i) => i.alt.length > 20) && imgs.filter((i) => i.hidden).every((i) => i.alt === ""), JSON.stringify(imgs));
   await p.waitForFunction(() => [...document.querySelectorAll(".fd img")].every((i) => i.complete), null, { timeout: 5000 }).catch(() => {});
   check("Photos load", (await p.locator(".fd img").evaluateAll((els) => els.every((e) => e.naturalWidth > 0))));
   const credits = await p.locator(".fd-credit").allTextContents();
@@ -149,7 +151,6 @@ const ask = async (p, q) => {
   // Installation choice is remembered.
   await p.locator("#fd-inst-select").selectOption("pendleton");
   check("Selected installation saved", (await p.evaluate(() => localStorage.getItem("mccs-front:installation"))) === "pendleton");
-  check("Hero photo swaps with the selector", (await p.locator(".fd-hero-photo img").getAttribute("src")) === "/home/hero-pendleton.webp");
   await p.waitForTimeout(200);
   check("Warm-up when the selector changes", JSON.stringify(c.warms) === JSON.stringify(["quantico", "pendleton"]), JSON.stringify(c.warms));
   await p.reload({ waitUntil: "networkidle" });
@@ -283,26 +284,150 @@ const ask = async (p, q) => {
   await c.close();
 }
 
-// 5. Placeholder rotation, and reduced motion.
+// 5. Hero photo carousel (fake clock).
 {
   const { c, p } = await open({ clock: true });
-  const first = await p.locator("#fd-ask-input").getAttribute("placeholder");
-  await p.clock.runFor(3100);
-  const second = await p.locator("#fd-ask-input").getAttribute("placeholder");
-  check("Ask box placeholder rotates", first !== second && !!second, `${first} -> ${second}`);
+  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-installation");
+  const state = async () => ({
+    id: await active(),
+    alt: await p.locator(".fd-hero-photo img.is-active").getAttribute("alt"),
+    credit: await p.locator(".fd-hero-photo .fd-credit").textContent(),
+  });
+  await p.mouse.move(5, 400); // away from the photo
+  await p.waitForFunction(() => [...document.querySelectorAll(".fd-hero-photo img")].every((i) => i.complete && i.naturalWidth > 0), null, { timeout: 5000 }).catch(() => {});
+  check("Carousel: all three hero photos preloaded", (await p.locator(".fd-hero-photo img").evaluateAll((els) => els.length === 3 && els.every((e) => e.complete && e.naturalWidth > 0))));
+  check("Carousel: soft 0.8s crossfade", /opacity 0\.8s/.test(await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transition)));
+  const s0 = await state();
+  await p.clock.runFor(5000);
+  const s1 = await state();
+  await p.clock.runFor(5000);
+  const s2 = await state();
+  await p.clock.runFor(5000);
+  const s3 = await state();
+  check("Carousel: every 5 s through Quantico, Pendleton, Lejeune", [s0.id, s1.id, s2.id, s3.id].join() === "quantico,pendleton,lejeune,quantico", [s0.id, s1.id, s2.id, s3.id].join());
+  check("Carousel: alt text follows the photo shown", s1.alt === "Snow-capped mountains above green hills at Marine Corps Base Camp Pendleton" && s2.alt !== s1.alt && (await p.locator(".fd-hero-photo img[aria-hidden=true]").count()) === 2, JSON.stringify(s1));
+  check("Carousel: credit follows the photo shown", s1.credit === "Photo: Sgt. Melissa Marnell, USMC" && s2.credit !== s1.credit && s0.credit === s3.credit, `${s0.credit} | ${s1.credit} | ${s2.credit}`);
+
+  await p.locator("#fd-inst-select").selectOption("lejeune");
+  check("Carousel: the selector no longer changes the hero photo", (await active()) === "quantico" && /Lejeune/.test((await p.locator(".fd-lead").textContent()) ?? ""));
+
+  const toggle = p.locator(".fd-slide-toggle");
+  check("Carousel: pause button", (await toggle.getAttribute("aria-label")) === "Pause photo slideshow");
+  check("Carousel: pause icon is visible (white on dark)", (await toggle.evaluate((el) => getComputedStyle(el).color)) === "rgb(255, 255, 255)");
+  await toggle.click();
+  await p.mouse.move(5, 400);
+  check("Carousel: button becomes Play", (await toggle.getAttribute("aria-label")) === "Play photo slideshow");
+  await p.clock.runFor(15000);
+  check("Carousel: paused by the button", (await active()) === "quantico");
+  await toggle.click();
+  await p.mouse.move(5, 400);
+  await p.clock.runFor(5000);
+  check("Carousel: Play resumes", (await active()) === "pendleton", await active());
+
+  await p.locator(".fd-hero-photo").hover();
+  await p.clock.runFor(12000);
+  check("Carousel: paused while hovered", (await active()) === "pendleton");
+  await p.mouse.move(5, 400);
+  await p.clock.runFor(5000);
+  check("Carousel: resumes when the pointer leaves", (await active()) === "lejeune", await active());
+
+  await p.locator(".fd-hero-photo .fd-credit").focus();
+  await p.clock.runFor(12000);
+  check("Carousel: paused while keyboard focus is on the photo", (await active()) === "lejeune");
+  await p.locator("#fd-inst-select").focus();
+  await p.clock.runFor(5000);
+  check("Carousel: resumes when focus leaves", (await active()) === "quantico", await active());
+
+  const setHidden = (hidden) =>
+    p.evaluate((h) => {
+      Object.defineProperty(document, "hidden", { configurable: true, get: () => h });
+      document.dispatchEvent(new Event("visibilitychange"));
+    }, hidden);
+  await setHidden(true);
+  await p.clock.runFor(12000);
+  check("Carousel: paused while the tab is hidden", (await active()) === "quantico");
+  await setHidden(false);
+  await p.clock.runFor(5000);
+  check("Carousel: resumes when the tab is visible", (await active()) === "pendleton", await active());
   await c.close();
 }
 {
   const { c, p } = await open({ clock: true, reducedMotion: "reduce" });
-  const first = await p.locator("#fd-ask-input").getAttribute("placeholder");
+  const active = () => p.locator(".fd-hero-photo img.is-active").getAttribute("data-installation");
+  await p.clock.runFor(15000);
+  check("Reduced motion: no rotation, no pause button", (await active()) === "quantico" && (await p.locator(".fd-slide-toggle").count()) === 0);
+  await p.locator("#fd-inst-select").selectOption("pendleton");
+  check("Reduced motion: shows the selected installation's photo", (await active()) === "pendleton" && (await p.locator(".fd-hero-photo .fd-credit").textContent()) === "Photo: Sgt. Melissa Marnell, USMC");
+  check("Reduced motion: no crossfade", (await p.locator(".fd-hero-photo img").first().evaluate((el) => getComputedStyle(el).transitionDuration)) === "0s");
+  await p.locator("#fd-inst-select").selectOption("quantico");
+  await c.close();
+}
+
+// 6. Typing placeholder (the widget's timing), and reduced motion.
+{
+  const { c, p } = await open({ clock: true });
+  const box = p.locator("#fd-ask-input");
+  check("Ask box: screen readers get only its label", (await p.getByRole("textbox", { name: "Ask MCCS", exact: true }).count()) === 1 && !(await box.getAttribute("aria-describedby")) && !(await box.getAttribute("aria-live")));
+  check("Typing: starts on the first example", (await box.getAttribute("placeholder")) === "Gym hours today?");
+  await box.evaluate((el) => {
+    window.__ph = [{ t: Date.now(), v: el.placeholder }];
+    new MutationObserver(() => window.__ph.push({ t: Date.now(), v: el.placeholder })).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
+  });
+  await p.clock.runFor(9000);
+  const frames = await p.evaluate(() => window.__ph);
+  const vals = frames.map((f) => f.v);
+  const second = "Child care waitlist";
+  const at = (v, from = 0) => frames.findIndex((f, k) => k >= from && f.v === v);
+  const emptyAt = at("", 1);
+  const typedFrames = vals.slice(emptyAt + 1, at(second) + 1);
+  check("Typing: the next example types letter by letter", typedFrames.length === second.length && typedFrames.every((v, k) => v === second.slice(0, k + 1)), JSON.stringify(typedFrames.slice(0, 5)));
+  const perChar = (frames[at(second)].t - frames[at("C", emptyAt)].t) / (second.length - 1);
+  const hold = frames[at(second) + 1].t - frames[at(second)].t;
+  const erase = frames[at("", at(second))].t - frames[at(second)].t - hold;
+  check("Typing: ~35 ms a letter", perChar >= 30 && perChar <= 45, perChar.toFixed(1));
+  check("Typing: holds ~2 s", hold >= 1950 && hold <= 2100, String(hold));
+  check("Typing: erases in ~0.3 s", erase >= 200 && erase <= 380, String(erase));
+  const cycle = frames[at("W", at(second))].t - frames[at("C", emptyAt)].t;
+  check("Typing: about 3 s per example", cycle >= 2400 && cycle <= 3300, String(cycle));
+
+  await box.focus();
+  check("Typing: cleared while the box is focused", (await box.getAttribute("placeholder")) === "");
+  await p.clock.runFor(4000);
+  check("Typing: stays stopped while focused", (await box.getAttribute("placeholder")) === "");
+  await box.fill("pool");
+  await p.locator("#fd-inst-select").focus();
+  await p.clock.runFor(4000);
+  check("Typing: stays stopped while the box has text", (await box.getAttribute("placeholder")) === "");
+  await box.fill(""); // fill() focuses the box, so move focus away again
+  await p.locator("#fd-inst-select").focus();
+  await p.clock.runFor(1500);
+  const resumed = (await box.getAttribute("placeholder")) ?? "";
+  check("Typing: resumes on blur when empty", resumed.length > 0 && EXAMPLES_FD.some((e) => e.startsWith(resumed)), resumed);
+
+  await ask(p, "Gym hours today?");
+  await box.evaluate((el) => {
+    window.__dock = 0;
+    new MutationObserver(() => window.__dock++).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
+  });
+  await p.clock.runFor(8000);
+  check("Docked placeholder stays static", (await box.getAttribute("placeholder")) === "Ask a follow-up…" && (await p.evaluate(() => window.__dock)) === 0);
+  await c.close();
+}
+{
+  const { c, p } = await open({ clock: true, reducedMotion: "reduce" });
+  const box = p.locator("#fd-ask-input");
+  await box.evaluate((el) => {
+    window.__n = 0;
+    new MutationObserver(() => window.__n++).observe(el, { attributes: true, attributeFilter: ["placeholder"] });
+  });
   await p.clock.runFor(10000);
-  check("Reduced motion: placeholder stays put", (await p.locator("#fd-ask-input").getAttribute("placeholder")) === first);
+  check("Reduced motion: static first example, no typing", (await box.getAttribute("placeholder")) === "Gym hours today?" && (await p.evaluate(() => window.__n)) === 0);
   await ask(p, "Gym hours today?");
   check("Reduced motion: no dock animation", (await p.locator(".fd-dock").evaluate((el) => getComputedStyle(el).animationName)) === "none");
   await c.close();
 }
 
-// 6. Phones (375px): no sideways scroll, placeholder fits, top bar usable, large text reaches answers.
+// 7. Phones (375px): no sideways scroll, placeholder fits, top bar usable, large text reaches answers.
 {
   const { c, p } = await open({ viewport: { width: 375, height: 812 }, mobile: true });
   check("375px hero: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
@@ -337,7 +462,7 @@ const ask = async (p, q) => {
   await c.close();
 }
 
-// 7. Photo credits page.
+// 8. Photo credits page.
 {
   const { c, p } = await open();
   await p.goto(base + "/credits", { waitUntil: "networkidle" });

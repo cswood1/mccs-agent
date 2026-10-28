@@ -291,6 +291,45 @@
   height: 100%;
   object-fit: cover;
 }
+/* Hero carousel: the photos are stacked and crossfade. */
+.fd-hero-photo img {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.fd-hero-photo img.is-active {
+  opacity: 1;
+}
+.fd .fd-slide-toggle {
+  position: absolute;
+  left: 1.1rem; /* clear of the rounded corner */
+  bottom: 0.6rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff; /* beats ".fd button { color: inherit }" via the .fd prefix */
+  cursor: pointer;
+}
+.fd-slide-toggle svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+.fd-slide-toggle:hover {
+  background: rgba(0, 0, 0, 0.78);
+}
+@media (min-width: 60em) {
+  .fd .fd-slide-toggle {
+    left: 1.6rem;
+    bottom: 1rem;
+  }
+}
 .fd-hero-text {
   padding: 1.75em var(--fd-pad) 2.5em;
 }
@@ -345,6 +384,7 @@
 /* Photo credit on each image. */
 .fd-credit {
   position: absolute;
+  z-index: 2;
   right: 0.6rem;
   bottom: 0.6rem;
   max-width: calc(100% - 1.2rem);
@@ -848,7 +888,8 @@
     animation: none;
   }
   .fd-card,
-  .fd-arrow {
+  .fd-arrow,
+  .fd-hero-photo img {
     transition: none;
   }
   .fd-card:hover .fd-arrow {

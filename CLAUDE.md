@@ -183,6 +183,13 @@ disagrees with it, ask before changing either.
   officials, close-up portraits, weapons and combat.
   - Credits are in `public/home/CREDITS.json`, shown on each image and listed on `/credits`.
   - `/home/*` and `/credits` are app paths in `proxy.ts`, still behind the access gate.
+- Hero carousel: all three installation photos, 5 s each with a 0.8 s crossfade, whichever base is
+  selected. Alt text and credit follow the shown photo. It pauses on a hidden tab, hover, keyboard
+  focus in the photo, or the pause/play button. With reduced motion it shows the selected base's
+  photo with no rotation.
+- Ask box placeholder: the widget header search's typing effect and timing (35 ms/letter, 2 s hold,
+  0.3 s erase). It's cleared while focused or holding text, and static with reduced motion. The docked
+  "Ask a follow-up…" stays static.
 - Warm-up: `/api/warm` for the selected base on load and on selector change. It uses the widget's
   localStorage throttle key (`mccs-assistant:<id>:warmed`, 50 min), so the two share it.
 - Tests: `tests/ui/front-door-check.mjs` (stubbed chat stream and speech APIs); `npm run test:ui` runs
