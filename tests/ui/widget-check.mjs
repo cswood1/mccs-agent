@@ -736,7 +736,7 @@ const motion = (pg) => pg.evaluate(() => {
   return r.getAnimations().filter((a) => !(a instanceof CSSAnimation)).map((a) => {
     const el = a.effect.target;
     const t = a.effect.getTiming();
-    return { target: typeof el.className === "string" ? el.className : el.className.baseVal, duration: t.duration, delay: t.delay, easing: t.easing,
+    return { target: typeof el.className === "string" ? el.className : el.className.baseVal, inHead: !!el.closest("h2"), id: a.id, duration: t.duration, delay: t.delay, easing: t.easing,
       frames: a.effect.getKeyframes().map((k) => ({ transform: k.transform, opacity: k.opacity, filter: k.filter })), origin: el.style.transformOrigin };
   });
 });
@@ -759,9 +759,11 @@ const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.re
   const pa = opening.find((a) => a.target === "panel");
   const [ox, oy] = (pa?.origin ?? "").split(" ").map(parseFloat);
   check("Open: the window grows out of the launcher (origin at its center)", Math.abs(ox - (lb.x + lb.width / 2 - offs.left)) <= 2 && Math.abs(oy - (lb.y + lb.height / 2 - offs.top)) <= 2, JSON.stringify({ origin: pa?.origin, lb, offs }));
-  check("Open: scale 0.9 → 1 with a fade and a small slide, 300ms, spring ease", pa && pa.duration === 300 && /cubic-bezier\(0\.32, 1\.24, 0\.52, 1\)/.test(pa.easing) && hasScale(pa.frames[0].transform, ".9") && /translateX\(16px\)/.test(pa.frames[0].transform) && pa.frames[0].opacity === "0" && pa.frames[1].opacity === "1", JSON.stringify(pa));
+  check("Open: scale 0.85 → 1 with a fade and a 24px slide, 360ms, spring ease", pa && pa.duration === 360 && /cubic-bezier\(0\.28, 1\.42, 0\.5, 1\)/.test(pa.easing) && hasScale(pa.frames[0].transform, ".85") && /translateX\(24px\)/.test(pa.frames[0].transform) && pa.frames[0].opacity === "0" && pa.frames[1].opacity === "1", JSON.stringify(pa));
   const inner = opening.filter((a) => ["head", "log", "bottom"].includes(a.target));
-  check("Open: header, conversation, composer follow, 40ms apart, rising 6px", JSON.stringify(inner.map((a) => a.target)) === JSON.stringify(["head", "log", "bottom"]) && inner[1].delay - inner[0].delay === 40 && inner[2].delay - inner[1].delay === 40 && inner[0].delay > 0 && inner.every((a) => /translateY\(6px\)/.test(a.frames[0].transform)), JSON.stringify(inner.map((a) => [a.target, a.delay])));
+  check("Open: header, conversation, composer follow, 50ms apart, rising 10px", JSON.stringify(inner.map((a) => a.target)) === JSON.stringify(["head", "log", "bottom"]) && inner[1].delay - inner[0].delay === 50 && inner[2].delay - inner[1].delay === 50 && inner[0].delay > 0 && inner.every((a) => /translateY\(10px\)/.test(a.frames[0].transform)), JSON.stringify(inner.map((a) => [a.target, a.delay])));
+  const hs = opening.filter((a) => a.inHead);
+  check("Open: header sparkle bounces (1 → 1.3 → 0.95 → 1, glint) right after the window settles, 500ms", hs.length === 1 && hs[0].id === "spark-open" && hs[0].delay === 360 && hs[0].duration === 500 && hasScale(hs[0].frames[1].transform.split(" ")[0], "1.3") && /scale\(0\.95\)/.test(hs[0].frames[2].transform) && /rotate/.test(hs[0].frames[1].transform) && /brightness/.test(hs[0].frames[1].filter), JSON.stringify(hs));
   await settle(p);
   let st = await widgetState(p);
   check("Open: ends fully shown, no transform left, focus in the input", st.open && st.opacity === "1" && st.transform === "none" && st.running === 0 && st.focus === "input" && !st.tab && !st.launcher, JSON.stringify(st));
@@ -772,12 +774,13 @@ const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.re
   const closing = await motion(p);
   const pc = closing.find((a) => a.target === "panel");
   const pop = closing.find((a) => a.target === "edge-tab");
-  const glint = closing.find((a) => a.target === "sparkle");
-  check("Minimize: quicker (200ms), scales to 0.9 and fades out", pc && pc.duration === 200 && hasScale(pc.frames.at(-1).transform, ".9") && pc.frames.at(-1).opacity === "0", JSON.stringify(pc));
+  const glint = closing.find((a) => a.target === "sparkle" && !a.inHead);
+  check("Minimize: quicker (240ms), scales to 0.85 and fades out", pc && pc.duration === 240 && hasScale(pc.frames.at(-1).transform, ".85") && pc.frames.at(-1).opacity === "0", JSON.stringify(pc));
   const tabBox = await wx.locator("button.edge-tab").evaluate((el) => { const r = el.getBoundingClientRect(); return { x: r.x + r.width / 2, y: r.y + r.height / 2 }; });
   const [cx, cy] = (pc?.origin ?? "").split(" ").map(parseFloat);
   check("Minimize: toward the edge tab", Math.abs(cx - (tabBox.x - offs.left)) <= 12 && Math.abs(cy - (tabBox.y - offs.top)) <= 12, JSON.stringify({ origin: pc?.origin, tabBox, tb }));
-  check("Minimize: the edge tab pops in after the window (0.85 → 1, slight overshoot) with one glint", pop && pop.delay === 200 && hasScale(pop.frames[0].transform, ".85") && pop.frames.some((f) => /scale\(1\.0\d+\)/.test(f.transform)) && glint && glint.delay > 200 && Number.isFinite(glint.duration), JSON.stringify({ pop, glint }));
+  check("Minimize: the edge tab pops in after the window (0.75 → 1, clear overshoot) with a bright glint", pop && pop.delay === 240 && hasScale(pop.frames[0].transform, ".75") && pop.frames.some((f) => /scale\(1\.0[5-9]\)/.test(f.transform)) && glint && glint.delay > 240 && /rotate/.test(glint.frames[1].transform) && /brightness/.test(glint.frames[1].filter), JSON.stringify({ pop, glint }));
+  check("Minimize: no header sparkle animation", !closing.some((a) => a.inHead), JSON.stringify(closing.filter((a) => a.inHead)));
   st = await widgetState(p);
   check("Minimize: focus moves to the edge tab at once", st.focus === "edge-tab", JSON.stringify(st));
   await settle(p);
@@ -821,7 +824,7 @@ const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.re
   const { c, p, wx } = await motionPage({ width: 390, height: 844 }, true);
   await wx.locator("button.launcher").click();
   const o = (await motion(p)).find((a) => a.target === "panel");
-  check("Phone: the sheet slides up (280ms, spring ease)", o && o.duration === 280 && o.frames[0].transform === "translateY(100%)" && /none/.test(o.frames.at(-1).transform) && /cubic-bezier\(0\.32/.test(o.easing), JSON.stringify(o));
+  check("Phone: the sheet slides up (280ms, the stronger spring)", o && o.duration === 280 && o.frames[0].transform === "translateY(100%)" && /none/.test(o.frames.at(-1).transform) && /cubic-bezier\(0\.28, 1\.42/.test(o.easing), JSON.stringify(o));
   await settle(p);
   let st = await widgetState(p);
   check("Phone: open sheet settles in place", st.open && st.transform === "none" && st.opacity === "1", JSON.stringify(st));
@@ -831,6 +834,67 @@ const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.re
   await settle(p);
   st = await widgetState(p);
   check("Phone: ends minimized with the edge tab", !st.open && st.tab && st.focus === "edge-tab", JSON.stringify(st));
+  await c.close();
+}
+
+// Header sparkle: a bounce-and-shake on send, a soft repeat every 1.5 s only while waiting, stopped by
+// the first answer text, minimize, or the end of the reply; nothing with reduced motion.
+const headSpark = (pg) => pg.evaluate(() => {
+  const el = document.querySelector("#mccs-assistant").shadowRoot.querySelector("#title .sparkle");
+  return el.getAnimations().map((a) => ({ id: a.id, state: a.playState, duration: a.effect.getTiming().duration, frames: a.effect.getKeyframes().map((k) => k.transform) }));
+});
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+{
+  const { c, p } = await statusPage();
+  await p.evaluate(() => { window.__noStatus = true; });
+  await settle(p);
+  const ask = async (q) => { await p.locator("#mccs-assistant textarea").fill(q); await p.locator("#mccs-assistant textarea").press("Enter"); };
+  await ask("Pool hours?");
+  const sent = await headSpark(p);
+  check("Send: one bounce-and-shake (±12° twice), 600ms", sent.length === 1 && sent[0].id === "spark-send" && sent[0].duration === 600 && sent[0].frames.filter((f) => /rotate\(12deg\)/.test(f)).length === 2 && sent[0].frames.filter((f) => /rotate\(-12deg\)/.test(f)).length === 2 && sent[0].frames.some((f) => /scale\(1\.2/.test(f)), JSON.stringify(sent));
+  await wait(1700);
+  const soft1 = await headSpark(p);
+  await wait(1500);
+  const soft2 = await headSpark(p);
+  check("Waiting: a softer repeat every 1.5 s, one at a time", soft1.length === 1 && soft1[0].id === "spark-soft" && soft2.length === 1 && soft2[0].id === "spark-soft", JSON.stringify({ soft1, soft2 }));
+  await p.evaluate(() => { window.__release = true; });
+  await p.locator("#mccs-assistant .msg.assistant").last().filter({ hasText: "relocation office" }).waitFor();
+  const done = await headSpark(p);
+  await wait(1700);
+  check("First answer text stops the sparkle, no repeat after", done.length === 0 && (await headSpark(p)).length === 0, JSON.stringify(done));
+  // Minimize while waiting stops it.
+  await p.evaluate(() => { window.__release = false; });
+  await ask("Gym hours?");
+  await wait(200);
+  await p.locator("#mccs-assistant button.minimize").click();
+  await settle(p);
+  await wait(1700);
+  check("Minimize while waiting stops the sparkle", (await headSpark(p)).length === 0, JSON.stringify(await headSpark(p)));
+  await p.evaluate(() => { window.__release = true; });
+  await p.locator("#mccs-assistant button.edge-tab").click();
+  await p.locator("#mccs-assistant .msg.assistant").last().filter({ hasText: "relocation office" }).waitFor();
+  await settle(p);
+  // Rapid sends (answers stream straight away): ends with no sparkle running or repeating.
+  for (const q of ["One?", "Two?", "Three?"]) { await ask(q); await wait(30); }
+  await p.waitForFunction(() => !document.querySelector("#mccs-assistant").shadowRoot.querySelector(".thinking"));
+  await wait(1700);
+  const after = await p.evaluate(() => {
+    const r = document.querySelector("#mccs-assistant").shadowRoot;
+    return { panels: r.querySelectorAll(".panel").length, open: !r.querySelector(".panel").hidden, thinking: r.querySelectorAll(".thinking").length, sendDisabled: r.querySelector(".send").disabled, spark: r.querySelector("#title .sparkle").getAnimations().length };
+  });
+  check("Rapid sends end clean: no sparkle running or repeating, ready for the next question", after.panels === 1 && after.open && after.thinking === 0 && !after.sendDisabled && after.spark === 0, JSON.stringify(after));
+  await c.close();
+}
+{
+  const { c, p } = await statusPage({ reducedMotion: "reduce" });
+  await p.evaluate(() => { window.__noStatus = true; });
+  const onOpen = await headSpark(p);
+  await p.locator("#mccs-assistant textarea").fill("Pool hours?");
+  await p.locator("#mccs-assistant textarea").press("Enter");
+  const onSend = await headSpark(p);
+  await wait(1700);
+  check("Reduced motion: no sparkle animation on open, send or while waiting", onOpen.length === 0 && onSend.length === 0 && (await headSpark(p)).length === 0, JSON.stringify({ onOpen, onSend }));
+  await p.evaluate(() => { window.__release = true; });
   await c.close();
 }
 

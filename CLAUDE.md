@@ -277,13 +277,20 @@ disagrees with it, ask before changing either.
   "Ask a follow-up…" (docs/PRODUCT.md §13).
 - Open/minimize motion (`animateOpen` / `animateClose` in `public/widget.js`, Web Animations):
   - Open: the window grows out of the control that opened it (transform-origin at its center):
-    scale 0.9 → 1, a fade and a 16px slide, 300ms with a slight-overshoot spring. Then the header,
-    conversation and composer rise 6px, 40ms apart.
-  - Minimize: 200ms back down to 0.9 toward the edge tab. The tab pops in (0.85 → 1) with one
-    sparkle glint; it's shown and focused at once, and invisible until then (`fill: backwards`).
-  - Phones: the sheet slides up and down (280ms). Reduced motion: 150ms opacity fades only.
+    scale 0.85 → 1, a fade and a 24px slide, 360ms with a spring that overshoots a little
+    (`SPRING`). Then the header, conversation and composer rise 10px, 50ms apart.
+  - Minimize: 240ms back down to 0.85 toward the edge tab. The tab pops in (0.75 → 1.09 → 1) with a
+    bright sparkle glint (flash and rotation). It's shown and focused at once, and invisible until
+    then (`fill: backwards`).
+  - Phones: the sheet slides up and down (280ms, same spring). Reduced motion: 150ms opacity fades
+    only.
   - A click mid-animation starts the next one from the window's current opacity and transform.
     The final state never depends on an animation finishing.
+  - Header sparkle (`playSpark` / `sparkWaiting` / `stopSpark`): a bounce with a glint
+    (1 → 1.3 → 0.95 → 1, 500ms) right after the window settles. On send, a bounce-and-shake
+    (±12° twice, 600ms), then a softer repeat every 1.5 s while waiting. It stops on the first
+    answer text, an error, the end of the reply or minimize. Only one animation runs at a time, and
+    there are none with reduced motion.
   - Tests wait with `settle()` in `tests/ui/widget-check.mjs`.
 
 ## Stack

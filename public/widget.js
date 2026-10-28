@@ -641,10 +641,17 @@
       warmCache();
       render();
       scrollToEnd();
-      if (changed && !restoring) animateOpen(openerRect);
+      if (changed && !restoring) {
+        animateOpen(openerRect);
+        // Right after the window settles: a bounce (and the soft repeat again if still waiting).
+        var spark = { kind: "open", delay: isPhone() ? 280 : 360 };
+        if (isWaiting()) sparkWaiting(spark);
+        else playSpark(spark.kind, spark.delay);
+      }
       if (!(restoring && isPhone())) input.focus({ preventScroll: true });
     } else {
       var button = edgeTab.hidden ? launcher : edgeTab;
+      stopSpark();
       if (changed) animateClose(button);
       else panel.hidden = true;
       button.focus();
@@ -652,8 +659,8 @@
   }
 
   // ---------- open and minimize motion (Web Animations; the final state never depends on it) ----------
-  // A gentle spring: a very slight overshoot that settles cleanly.
-  var SPRING = "cubic-bezier(.32, 1.24, .52, 1)";
+  // A gentle spring: a small, noticeable overshoot that settles cleanly.
+  var SPRING = "cubic-bezier(.28, 1.42, .5, 1)";
   var panelAnim = null;
   var contentAnims = [];
   var buttonAnims = [];
@@ -703,14 +710,14 @@
     } else {
       if (!live) panel.style.transformOrigin = originAt(openerRect);
       panelAnim = panel.animate(
-        [{ opacity: live ? live.opacity : 0, transform: live ? live.transform : "translateX(16px) scale(.9)" }, { opacity: 1, transform: "none" }],
-        { duration: 300, easing: SPRING }
+        [{ opacity: live ? live.opacity : 0, transform: live ? live.transform : "translateX(24px) scale(.85)" }, { opacity: 1, transform: "none" }],
+        { duration: 360, easing: SPRING }
       );
       // The inside follows a beat later: header, then conversation, then composer.
       if (!live) {
         [root.querySelector(".head"), log, root.querySelector(".bottom")].forEach(function (el, i) {
-          contentAnims.push(el.animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }],
-            { duration: 240, delay: 90 + i * 40, easing: "cubic-bezier(.2, .7, .3, 1)", fill: "backwards" }));
+          contentAnims.push(el.animate([{ opacity: 0, transform: "translateY(10px)" }, { opacity: 1, transform: "none" }],
+            { duration: 260, delay: 100 + i * 50, easing: "cubic-bezier(.2, .7, .3, 1)", fill: "backwards" }));
         });
       }
     }
@@ -731,9 +738,9 @@
       duration = 280;
       panelAnim = panel.animate([{ transform: live.transform, opacity: live.opacity }, { transform: "translateY(100%)", opacity: live.opacity }], { duration: duration, easing: SPRING, fill: "forwards" });
     } else {
-      duration = 200;
+      duration = 240;
       if (live.transform === "none") panel.style.transformOrigin = originAt(button.getBoundingClientRect());
-      panelAnim = panel.animate([{ opacity: live.opacity, transform: live.transform }, { opacity: 0, transform: "translateX(8px) scale(.9)" }],
+      panelAnim = panel.animate([{ opacity: live.opacity, transform: live.transform }, { opacity: 0, transform: "translateX(12px) scale(.85)" }],
         { duration: duration, easing: "cubic-bezier(.4, 0, 1, 1)", fill: "forwards" });
     }
     var a = panelAnim;
@@ -747,6 +754,67 @@
     arrive(button, mode, duration);
   }
 
+  // ---------- header sparkle: a bounce on open, a bounce-and-shake on send, a soft repeat while waiting ----------
+  // One animation at a time: each start cancels the last. Nothing with reduced motion.
+  var headSpark = root.querySelector("#title .sparkle");
+  var sparkAnim = null;
+  var sparkTimer = null;
+  var GLINT = "brightness(1.6) drop-shadow(0 0 6px rgba(255,236,160,.95))";
+  var SPARK = {
+    open: { duration: 500, frames: [
+      { transform: "none", filter: "none" },
+      { transform: "scale(1.3) rotate(-12deg)", filter: GLINT, offset: 0.35 },
+      { transform: "scale(.95) rotate(4deg)", filter: "brightness(1.15)", offset: 0.7 },
+      { transform: "none", filter: "none" },
+    ] },
+    send: { duration: 600, frames: [
+      { transform: "none", filter: "none" },
+      { transform: "scale(1.25)", filter: GLINT, offset: 0.15 },
+      { transform: "scale(1.2) rotate(12deg)", offset: 0.3 },
+      { transform: "scale(1.2) rotate(-12deg)", offset: 0.45 },
+      { transform: "scale(1.15) rotate(12deg)", offset: 0.6 },
+      { transform: "scale(1.1) rotate(-12deg)", filter: "brightness(1.2)", offset: 0.75 },
+      { transform: "none", filter: "none" },
+    ] },
+    soft: { duration: 500, frames: [
+      { transform: "none", filter: "none" },
+      { transform: "scale(1.12) rotate(8deg)", filter: "brightness(1.3) drop-shadow(0 0 4px rgba(255,236,160,.7))", offset: 0.4 },
+      { transform: "none", filter: "none" },
+    ] },
+  };
+
+  function playSpark(kind, delay) {
+    if (sparkAnim) sparkAnim.cancel();
+    sparkAnim = null;
+    if (!headSpark.animate || motionMode() === "reduced") return;
+    var k = SPARK[kind];
+    sparkAnim = headSpark.animate(k.frames, { duration: k.duration, delay: delay || 0, easing: "ease-in-out" });
+    sparkAnim.id = "spark-" + kind;
+  }
+
+  function isWaiting() {
+    var last = state.messages[state.messages.length - 1];
+    return state.busy && !!last && last.role === "assistant" && !last.content.trim();
+  }
+
+  // Sent: bounce and shake now, then a softer repeat every 1.5 s until answer text arrives.
+  function sparkWaiting(first) {
+    stopSpark();
+    if (motionMode() === "reduced") return;
+    if (first) playSpark(first.kind, first.delay);
+    sparkTimer = setInterval(function () {
+      if (!isWaiting() || !state.open) stopSpark();
+      else playSpark("soft");
+    }, 1500);
+  }
+
+  function stopSpark() {
+    clearInterval(sparkTimer);
+    sparkTimer = null;
+    if (sparkAnim) sparkAnim.cancel();
+    sparkAnim = null;
+  }
+
   // The button arrives once the window has gone: a small pop and one sparkle glint (a fade with
   // reduced motion). It's shown and focused at once; fill: backwards keeps it invisible until then.
   function arrive(button, mode, delay) {
@@ -756,17 +824,18 @@
     }
     var origin = button === edgeTab ? "100% 50%" : "50% 50%";
     buttonAnims.push(button.animate([
-      { opacity: 0, transform: "scale(.85)", transformOrigin: origin },
-      { opacity: 1, transform: "scale(1.04)", transformOrigin: origin, offset: 0.65 },
+      { opacity: 0, transform: "scale(.75)", transformOrigin: origin },
+      { opacity: 1, transform: "scale(1.09)", transformOrigin: origin, offset: 0.55 },
+      { opacity: 1, transform: "scale(.97)", transformOrigin: origin, offset: 0.8 },
       { opacity: 1, transform: "scale(1)", transformOrigin: origin },
-    ], { duration: 260, delay: delay, easing: "ease-out", fill: "backwards" }));
+    ], { duration: 320, delay: delay, easing: "ease-out", fill: "backwards" }));
     var spark = button.querySelector(".sparkle");
     var glow = getComputedStyle(spark).filter;
     buttonAnims.push(spark.animate([
       { filter: glow, transform: "none" },
-      { filter: "drop-shadow(0 0 9px rgba(255,236,160,1)) brightness(1.3)", transform: "scale(1.18) rotate(14deg)", offset: 0.4 },
+      { filter: "drop-shadow(0 0 12px rgba(255,240,180,1)) brightness(1.6)", transform: "scale(1.28) rotate(20deg)", offset: 0.3 },
       { filter: glow, transform: "none" },
-    ], { duration: 520, delay: delay + 140, easing: "ease-in-out" }));
+    ], { duration: 480, delay: delay + 160, easing: "ease-in-out" }));
   }
 
   // The floating window starts below the demo site's banner when there is one (it scrolls with the
@@ -836,6 +905,7 @@
     state.busy = true;
     render();
     scrollToEnd();
+    sparkWaiting({ kind: "send" });
 
     // Only send real turns; drop error bubbles and anything after the last 30.
     var history = state.messages
@@ -869,6 +939,7 @@
             var parsed = parseStream(raw.split(FRAME)[0]);
             reply.content = parsed.text;
             reply.status = parsed.status;
+            if (sparkTimer && parsed.text.trim()) stopSpark(); // the answer has started
             if (!pending) {
               pending = true;
               requestAnimationFrame(function () {
@@ -887,6 +958,7 @@
         reply.content = (reply.content ? reply.content + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again.");
       })
       .then(function () {
+        stopSpark(); // done or failed
         delete reply.status; // display only, never saved
         delete reply.thinking;
         reply.content = reply.content.trim();
