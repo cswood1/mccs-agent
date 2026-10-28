@@ -1,4 +1,5 @@
 import { getCache } from "@vercel/functions";
+import { isPresenter } from "@/lib/access";
 import { corsHeaders } from "@/lib/cors";
 import { VISITOR_COOKIE } from "@/lib/visitor";
 
@@ -9,13 +10,25 @@ import { VISITOR_COOKIE } from "@/lib/visitor";
 //
 // On by default only in production (local dev and evals aren't throttled). RATE_LIMIT=on
 // turns it on anywhere, for testing.
+//
+// Limits per visitor per hour, from the environment:
+//   RATE_LIMIT_CHAT_PER_HOUR (default 150): chat messages
+//   RATE_LIMIT_WARM_PER_HOUR (default 30): warm-ups (the widget and front doors warm at most once
+//     per base per 50 minutes; this just caps abuse)
+// Requests with a valid presenter cookie (lib/access.ts) skip both.
 
 const WINDOW_SECONDS = 3600;
+const DEFAULTS = { chat: 150, warm: 30 } as const;
+const ENV = { chat: "RATE_LIMIT_CHAT_PER_HOUR", warm: "RATE_LIMIT_WARM_PER_HOUR" } as const;
+type Route = keyof typeof DEFAULTS;
 
-export const LIMITS = {
-  chat: 20, // messages per visitor per hour
-  warm: 6, // the widget warms at most once per 50 minutes; this just caps abuse
-} as const;
+/** The limit for a route: its env var when it's a positive whole number, else the default. */
+export function limitFor(route: Route): number {
+  const n = Number(process.env[ENV[route]]);
+  return Number.isInteger(n) && n > 0 ? n : DEFAULTS[route];
+}
+
+export const LIMIT_MESSAGE = "You’ve asked a lot of questions this hour. Try again in a few minutes.";
 
 const enabled = () => process.env.RATE_LIMIT === "on" || (process.env.VERCEL_ENV === "production" && process.env.RATE_LIMIT !== "off");
 
@@ -31,16 +44,17 @@ function visitorKey(request: Request): string {
 /**
  * Count this request. Returns a 429 response when the visitor is over the limit, otherwise null.
  */
-export async function rateLimit(request: Request, route: keyof typeof LIMITS): Promise<Response | null> {
+export async function rateLimit(request: Request, route: Route): Promise<Response | null> {
   if (!enabled()) return null;
+  if (await isPresenter(request)) return null;
   const windowStart = Math.floor(Date.now() / 1000 / WINDOW_SECONDS) * WINDOW_SECONDS;
   const key = `rl:${route}:${visitorKey(request)}:${windowStart}`;
   const cache = getCache({ namespace: "mccs" });
   const count = Number((await cache.get(key)) ?? 0);
-  if (count >= LIMITS[route]) {
+  if (count >= limitFor(route)) {
     const retryAfter = windowStart + WINDOW_SECONDS - Math.floor(Date.now() / 1000);
     return Response.json(
-      { error: "You've reached the demo's limit of questions for this hour. Please try again a little later." },
+      { error: LIMIT_MESSAGE },
       { status: 429, headers: { ...corsHeaders, "Retry-After": String(Math.max(retryAfter, 1)) } },
     );
   }

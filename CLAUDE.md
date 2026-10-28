@@ -62,6 +62,11 @@ deployed on Vercel for demos. Three bases have full content: Quantico (`/quantic
 - **Access code.** `proxy.ts` gates every page and API route when `DEMO_ACCESS_CODE` is set (unset =
   public). The `/access` page sets a hashed cookie for a year; the widget can also send the code in an
   `X-Demo-Access` header (used by the bookmarklet on the live site). Never commit the code.
+- **Presenter mode.** When `PRESENTER_CODE` is set, entering it on `/access` grants access (like the
+  demo code) and sets an httpOnly `mccs_presenter` cookie (a salted hash of the code, 30 days).
+  Requests with a valid presenter cookie skip both rate limits. The regular code keeps normal limits;
+  unset = no presenter mode. Never log or commit the code. Checked by `npm run test:unit`
+  (`tests/unit/limits-check.mjs`: the real modules with stubbed requests, no server or Claude calls).
 - **Widget on the demo site.** `data-site-host="quantico.usmc-mccs.org"` makes links to the real site in
   answers open the local page in the same tab; chat history and open state persist across navigation
   (sessionStorage). The header search box opens the assistant.
@@ -89,8 +94,12 @@ Every chat call reads a ~200K-token cached prompt per base, so calls add up fast
   with results cached on disk so re-runs only process what changed.
 - **Content changes are checked offline:** `node scripts/check-content-facts.mjs <before> <after>`
   must report no missing phone numbers, time ranges or dollar amounts.
-- **Production is rate limited per visitor** (`lib/ratelimit.ts`): 20 chat messages and 6 warm-ups per
-  hour. Run evals against the local dev server, not production.
+- **Production is rate limited per visitor** (`lib/ratelimit.ts`):
+  - `RATE_LIMIT_CHAT_PER_HOUR` chat messages (default 150) and `RATE_LIMIT_WARM_PER_HOUR` warm-ups
+    (default 30) per hour.
+  - Presenter-mode visitors skip both (see Access code).
+  - The limit message reads "You’ve asked a lot of questions this hour. Try again in a few minutes."
+  - Run evals against the local dev server, not production.
 
 ## Product spec
 `docs/PRODUCT.md` is the source of truth for how the assistant behaves (answer style, page awareness,
@@ -256,7 +265,8 @@ disagrees with it, ask before changing either.
   effort `low` (override with `CLAUDE_EFFORT`), streaming, server-side refusal fallbacks on.
 - Widget is plain JS in `public/widget.js` (Shadow DOM, no build step), served by the same app.
 - Deployed on Vercel (`vercel` CLI). Env vars there: `ANTHROPIC_API_KEY`, `CLAUDE_MODEL`,
-  `DEMO_ACCESS_CODE`.
+  `DEMO_ACCESS_CODE`, `PRESENTER_CODE`, `RATE_LIMIT_CHAT_PER_HOUR`, `RATE_LIMIT_WARM_PER_HOUR` (the
+  last three optional; see `.env.example`).
 
 ## Layout
 - **Multiple installations (docs/PRODUCT.md §12):** every site in the real location picker
@@ -324,4 +334,5 @@ disagrees with it, ask before changing either.
   After that run the per-turn reminder was tightened ("name the top two"); the 6 long answers re-checked
   4/6 within length (`r3-concise.json`), not yet confirmed with a full run.
 - `/api/chat` and `/api/warm` are protected by the access code and, on production, a per-visitor rate
-  limit (20 chat messages and 6 warm-ups per hour; see API budget rules).
+  limit (by default 150 chat messages and 30 warm-ups per hour; presenter mode skips it; see API budget
+  rules).

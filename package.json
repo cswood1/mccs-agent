@@ -10,7 +10,8 @@
     "build:content": "node scripts/build-content.mjs",
     "eval": "node --env-file=.env.local scripts/eval/run.mjs",
     "eval:compare": "node scripts/eval/compare.mjs",
-    "test:ui": "node --env-file=.env.local tests/ui/widget-check.mjs && node --env-file=.env.local tests/ui/front-door-check.mjs"
+    "test:ui": "node --env-file=.env.local tests/ui/widget-check.mjs && node --env-file=.env.local tests/ui/front-door-check.mjs",
+    "test:unit": "node --no-warnings --import ./tests/unit/alias-hooks.mjs tests/unit/limits-check.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
