@@ -11,11 +11,18 @@ Requires Node 22.18 or newer.
 
 ```bash
 npm install
-cp .env.example .env.local   # then add your Anthropic API key (and optionally DEMO_ACCESS_CODE)
+cp .env.example .env.local   # then add your Anthropic API key
 npm run dev
 ```
 
-Open http://localhost:3000. If `DEMO_ACCESS_CODE` is set you'll be asked for it once.
+Open http://localhost:3000.
+
+## Open demo
+
+The demo is open for hackathon judging: every page and API route works with no access code, and
+`/access` redirects to `/`. The access-code gate is switched off in code (`ACCESS_GATE_ENABLED = false`
+in `lib/access.ts`), whatever `DEMO_ACCESS_CODE` is set to; set it to `true` to require the code again.
+Per-visitor rate limits (150 chat messages and 30 warm-ups per hour) and noindex stay on.
 
 ## Content
 

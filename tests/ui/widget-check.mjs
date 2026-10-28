@@ -841,7 +841,7 @@ const hasScale = (f, v) => typeof f === "string" && new RegExp(`scale\\(0?${v.re
 // the first answer text, minimize, or the end of the reply; nothing with reduced motion.
 const headSpark = (pg) => pg.evaluate(() => {
   const el = document.querySelector("#mccs-assistant").shadowRoot.querySelector("#title .sparkle");
-  return el.getAnimations().map((a) => ({ id: a.id, state: a.playState, duration: a.effect.getTiming().duration, frames: a.effect.getKeyframes().map((k) => k.transform) }));
+  return el.getAnimations().map((a) => ({ id: a.id, state: a.playState, start: a.startTime, duration: a.effect.getTiming().duration, frames: a.effect.getKeyframes().map((k) => k.transform) }));
 });
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 {
@@ -852,11 +852,15 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   await ask("Pool hours?");
   const sent = await headSpark(p);
   check("Send: one bounce-and-shake (±12° twice), 600ms", sent.length === 1 && sent[0].id === "spark-send" && sent[0].duration === 600 && sent[0].frames.filter((f) => /rotate\(12deg\)/.test(f)).length === 2 && sent[0].frames.filter((f) => /rotate\(-12deg\)/.test(f)).length === 2 && sent[0].frames.some((f) => /scale\(1\.2/.test(f)), JSON.stringify(sent));
-  await wait(1700);
-  const soft1 = await headSpark(p);
-  await wait(1500);
-  const soft2 = await headSpark(p);
-  check("Waiting: a softer repeat every 1.5 s, one at a time", soft1.length === 1 && soft1[0].id === "spark-soft" && soft2.length === 1 && soft2[0].id === "spark-soft", JSON.stringify({ soft1, soft2 }));
+  // Wait for the first soft repeat, then the next one: about 1.5 s apart, never two at once.
+  const nextSoft = (after) => p.waitForFunction((after) => {
+    const el = document.querySelector("#mccs-assistant").shadowRoot.querySelector("#title .sparkle");
+    const list = el.getAnimations();
+    return list.length === 1 && list[0].id === "spark-soft" && list[0].startTime !== null && list[0].startTime !== after ? list[0].startTime : false;
+  }, after, { timeout: 2500, polling: 50 }).then((h) => h.jsonValue()).catch(() => null);
+  const soft1 = await nextSoft(-1);
+  const soft2 = soft1 === null ? null : await nextSoft(soft1);
+  check("Waiting: a softer repeat every 1.5 s, one at a time", soft1 !== null && soft2 !== null && Math.abs(soft2 - soft1 - 1500) < 150, JSON.stringify({ soft1, soft2 }));
   await p.evaluate(() => { window.__release = true; });
   await p.locator("#mccs-assistant .msg.assistant").last().filter({ hasText: "relocation office" }).waitFor();
   const done = await headSpark(p);

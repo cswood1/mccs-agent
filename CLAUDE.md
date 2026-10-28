@@ -59,11 +59,20 @@ deployed on Vercel for demos. Three bases have full content: Quantico (`/quantic
   (Black Ops One, all caps; short version under 640px), footer's
   "Official U.S. Marine Corps Website" line replaced, noindex (meta tag, X-Robots-Tag header,
   robots.txt).
-- **Access code.** `proxy.ts` gates every page and API route when `DEMO_ACCESS_CODE` is set (unset =
-  public). The `/access` page sets a hashed cookie for a year; the widget can also send the code in an
-  `X-Demo-Access` header (used by the bookmarklet on the live site). Never commit the code.
+- **Access code: off for hackathon judging (2026-10-28). The demo is open.**
+  - `ACCESS_GATE_ENABLED = false` in `lib/access.ts`. `proxy.ts` (via `accessGateOn()`) lets every
+    page and API route through with no cookie or code, whatever `DEMO_ACCESS_CODE` is set to in Vercel.
+    `/access` redirects to `/`. The bookmarklet leaves the code out.
+  - To turn the gate back on, set the constant to `true`. Then `proxy.ts` gates everything when
+    `DEMO_ACCESS_CODE` is set: the `/access` page sets a hashed cookie for a year, and the widget can
+    also send the code in an `X-Demo-Access` header (used by the bookmarklet on the live site).
+  - Rate limits, the visitor cookie and noindex don't depend on the gate.
+  - Never commit the code. Checked by `npm run test:unit` (`limits-check.mjs`) and the front-door
+    suite's "Open demo" checks.
 - **Presenter mode.** When `PRESENTER_CODE` is set, entering it on `/access` grants access (like the
-  demo code) and sets an httpOnly `mccs_presenter` cookie (a salted hash of the code, 30 days).
+  demo code) and sets an httpOnly `mccs_presenter` cookie (a salted hash of the code, 30 days). While
+  the gate is off, `/access` redirects to `/`, so there's no form for it; existing presenter cookies
+  keep working, and `POST /api/access` still sets one.
   Requests with a valid presenter cookie skip both rate limits. The regular code keeps normal limits;
   unset = no presenter mode. Never log or commit the code. Checked by `npm run test:unit`
   (`tests/unit/limits-check.mjs`: the real modules with stubbed requests, no server or Claude calls).
@@ -225,7 +234,7 @@ disagrees with it, ask before changing either.
   photos under PD-USGov templates: community scenes, facilities and landscapes. Excluded: named
   officials, close-up portraits, weapons and combat.
   - Credits are in `public/home/CREDITS.json`, shown on each image and listed on `/credits`.
-  - `/home/*` and `/credits` are app paths in `proxy.ts`, still behind the access gate.
+  - `/home/*` and `/credits` are app paths in `proxy.ts`, behind the access gate when it's on.
 - Hero carousel: all seven front-door photos in an interleaved order (`CAROUSEL` in
   `app/(front)/photos.ts`, so neighbours differ in base and scene), 6.5 s each with a 0.8 s crossfade,
   whichever base is selected. Each photo's crop focus (`focus`, CSS object-position) is in
@@ -329,7 +338,7 @@ disagrees with it, ask before changing either.
   `<slug>.usmc-mccs.org` link → `/<slug>/...`), and `fragment(inst, name)`, which prefixes internal
   links, points the location picker at `/<slug>`, and labels the picker button. Paths inside page data
   and templates are site paths (`/lodging`); only rendered hrefs carry the prefix.
-- `app/access/`, `app/api/access/`, `proxy.ts`, `lib/access.ts` — access-code gate.
+- `app/access/`, `app/api/access/`, `proxy.ts`, `lib/access.ts` — access-code gate (off: `ACCESS_GATE_ENABLED`).
 - `app/api/chat/route.ts` — POST `{installationId, messages, page?, trail?}` → streams text, then the
   follow-ups frame. `lib/site/context.ts` strips the `/<slug>` prefix from page paths.
 - `app/api/installations/[id]/route.ts` (config) and `.../page/route.ts` (title, chips, welcome).
@@ -341,7 +350,7 @@ disagrees with it, ask before changing either.
 - `public/embed-test.html` — plain-HTML embed check.
 
 ## Commands
-- `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; set `DEMO_ACCESS_CODE` to test the gate)
+- `npm run dev` — run locally (needs `ANTHROPIC_API_KEY`; to test the gate, turn `ACCESS_GATE_ENABLED` on and set `DEMO_ACCESS_CODE`)
 - `npm run build:content -- <base>` — regenerate a base's content file from `data/site/<base>/pages`
   (default quantico)
 - `node scripts/extract-theme.mjs` — regenerate theme fragments/CSS from `design/reference`
@@ -356,7 +365,8 @@ disagrees with it, ask before changing either.
 
 ## Status (2026-10-27)
 - **Live demo:** https://mccs-agent.vercel.app (Vercel team `nps-hackathon-mccs-agent`, project
-  `mccs-agent`). Access code is in Vercel's `DEMO_ACCESS_CODE` env var and the local `.env.local`.
+  `mccs-agent`). Open for judging (no access code; see Access code). The code itself stays in Vercel's
+  `DEMO_ACCESS_CODE` env var and the local `.env.local` for when the gate is turned back on.
 - **Crawl:** 439 pages captured with WebFetch in three waves from the home page, menus, and every
   internal link found (85 program/section/facility/info pages, 53 events, 301 news stories). 39 pages
   have little or no body text on the real site itself (image-only stories, dynamic lists).
@@ -377,6 +387,6 @@ disagrees with it, ask before changing either.
   33/33, safe 33/33, context 8/8, concise 27/33; median 67 words, 1.9 s to first text, 3.8 s total.
   After that run the per-turn reminder was tightened ("name the top two"); the 6 long answers re-checked
   4/6 within length (`r3-concise.json`), not yet confirmed with a full run.
-- `/api/chat` and `/api/warm` are protected by the access code and, on production, a per-visitor rate
+- `/api/chat` and `/api/warm` are open (the access gate is off) and, on production, have a per-visitor rate
   limit (by default 150 chat messages and 30 warm-ups per hour; presenter mode skips it; see API budget
   rules).

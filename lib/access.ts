@@ -1,6 +1,13 @@
-// Demo access code. When DEMO_ACCESS_CODE is set, every page and API route needs it;
-// when it's unset, the site is public. The browser keeps a hash of the code in a cookie
-// so people enter it once.
+// Demo access code. When the gate is on and DEMO_ACCESS_CODE is set, every page and API route
+// needs it; otherwise the site is public. The browser keeps a hash of the code in a cookie so people
+// enter it once.
+
+/**
+ * Master switch for the access gate. Off for hackathon judging (2026-10-28): the demo is open to
+ * everyone, whatever DEMO_ACCESS_CODE is set to in Vercel, and /access redirects to /. Set it back to
+ * true to require the code again. Rate limits, the visitor cookie and noindex don't depend on it.
+ */
+export const ACCESS_GATE_ENABLED = false;
 
 export const ACCESS_COOKIE = "mccs_demo_access";
 /** Header the widget sends when it runs on another site (the bookmarklet), where our cookie isn't sent. */
@@ -8,6 +15,11 @@ export const ACCESS_HEADER = "x-demo-access";
 
 export function accessCode(): string | undefined {
   return process.env.DEMO_ACCESS_CODE?.trim() || undefined;
+}
+
+/** Is the gate in force: switched on and a code set? */
+export function accessGateOn(): boolean {
+  return ACCESS_GATE_ENABLED && !!accessCode();
 }
 
 /** Cookie value: a hash of the code, so the code itself isn't stored in the browser. */

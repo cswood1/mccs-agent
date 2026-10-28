@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { ACCESS_COOKIE, ACCESS_HEADER, accessCode, accessToken, safeEqual } from "@/lib/access";
+import { ACCESS_COOKIE, ACCESS_HEADER, accessCode, accessGateOn, accessToken, safeEqual } from "@/lib/access";
 import { corsHeaders } from "@/lib/cors";
 import { VISITOR_COOKIE } from "@/lib/visitor";
 import registry from "@/site/installations.json";
@@ -7,7 +7,8 @@ import registry from "@/site/installations.json";
 // 1. Sends pre-multi-installation URLs (/lodging, /recreation-fitness/...) to /quantico/...
 //    ("/" itself is the globe page, app/(front)/page.tsx; front doors are /ask/<base>).
 // 2. Gives every browser an anonymous visitor id (a random cookie) for per-visitor rate limits.
-// 3. Access-code gate for the demo (see lib/access.ts). No-op when DEMO_ACCESS_CODE is unset.
+// 3. Access-code gate for the demo (see lib/access.ts). Off while ACCESS_GATE_ENABLED is false (then
+//    /access redirects to /), and a no-op when DEMO_ACCESS_CODE is unset.
 export async function proxy(request: NextRequest) {
   const moved = legacyRedirect(request);
   if (moved) return withVisitorId(request, moved);
@@ -48,10 +49,18 @@ function legacyRedirect(request: NextRequest): NextResponse | null {
 }
 
 async function gate(request: NextRequest): Promise<NextResponse> {
-  const code = accessCode();
-  if (!code) return NextResponse.next();
-
   const { pathname } = request.nextUrl;
+  if (!accessGateOn()) {
+    if (pathname === "/access") {
+      const url = request.nextUrl.clone();
+      url.pathname = "/";
+      url.search = "";
+      return NextResponse.redirect(url, 307);
+    }
+    return NextResponse.next();
+  }
+  const code = accessCode()!;
+
   if (pathname === "/access" || pathname === "/api/access") return NextResponse.next();
   // CORS preflights never carry cookies or custom header values.
   if (request.method === "OPTIONS" && pathname.startsWith("/api/")) return NextResponse.next();

@@ -84,6 +84,24 @@ check("PRESENTER_CODE unset: the presenter code is rejected", noPres.status === 
 const stale = await burst("chat", cookiesFrom(pres), 10);
 check("PRESENTER_CODE unset: an old presenter cookie is ignored", stale.passed === 3 && stale.blocked?.status === 429);
 
+// The access gate is switched off for judging (lib/access.ts), even with DEMO_ACCESS_CODE set:
+// every page and API route passes the proxy with no cookie, and /access goes to /.
+{
+  const { NextRequest } = await import("next/server.js");
+  const { proxy } = await import("../../proxy.ts");
+  check("Gate off: ACCESS_GATE_ENABLED is false, so the gate isn't in force even with a code set", access.ACCESS_GATE_ENABLED === false && !access.accessGateOn() && !!access.accessCode());
+  const passes = [];
+  for (const path of ["/", "/ask/quantico", "/quantico/lodging", "/api/chat", "/api/warm"]) {
+    const res = await proxy(new NextRequest(`https://demo.test${path}`, { method: path.startsWith("/api/") ? "POST" : "GET" }));
+    passes.push([path, res.status, res.headers.get("x-middleware-next")]);
+  }
+  check("Gate off: pages and API routes pass with no cookie or code", passes.every(([, status, next]) => status === 200 && next === "1"), JSON.stringify(passes));
+  const toRoot = await proxy(new NextRequest("https://demo.test/access?next=%2Fquantico"));
+  check("Gate off: /access redirects to /", toRoot.status === 307 && new URL(toRoot.headers.get("location")).pathname === "/" && !new URL(toRoot.headers.get("location")).search, toRoot.headers.get("location"));
+  const fresh = await proxy(new NextRequest("https://demo.test/quantico"));
+  check("Gate off: the visitor cookie is still set", /mccs_visitor=/.test(fresh.headers.get("set-cookie") ?? ""));
+}
+
 for (const r of results) console.log(`${r.ok ? "PASS" : "FAIL"}  ${r.name}${r.ok ? "" : `  →  ${r.detail}`}`);
 const failed = results.filter((r) => !r.ok).length;
 console.log(`\n${results.length - failed}/${results.length} passed`);

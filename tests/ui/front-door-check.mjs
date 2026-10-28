@@ -124,14 +124,27 @@ const ask = async (p, q) => {
   await p.locator(".fd-followups").waitFor();
 };
 
-// 0. Access gate still guards the globe page and the front doors.
+// 0. The demo is open (ACCESS_GATE_ENABLED = false in lib/access.ts): no cookie, no code.
 {
   const c = await browser.newContext();
+  await c.route(/usmc-mccs\.org/, (r) => r.abort());
   const p = await c.newPage();
-  for (const path of ["/", "/ask/quantico"]) {
-    await p.goto(base + path);
-    check(`Access gate: ${path} without the code goes to /access`, !code || /\/access/.test(p.url()), p.url());
+  for (const [path, sel] of [["/", ".fd-explore h1"], ["/ask/quantico", ".fd h1"], ["/quantico/lodging", "#mccs-assistant"], ["/pendleton", "header"]]) {
+    const res = await p.goto(base + path);
+    const shown = (await p.locator(sel).count()) > 0;
+    check(`Open demo: ${path} loads with no cookie or code`, res.status() === 200 && new URL(p.url()).pathname === path && shown, `${res.status()} ${p.url()}`);
+    if (path === "/") check("Open demo: noindex header still sent", /noindex/.test(res.headers()["x-robots-tag"] ?? ""), res.headers()["x-robots-tag"]);
   }
+  await p.goto(base + "/access");
+  check("Open demo: /access redirects to /", new URL(p.url()).pathname === "/", p.url());
+  check("Open demo: the visitor cookie is still set", (await c.cookies()).some((k) => k.name === "mccs_visitor"));
+  // API routes answer without the code. An unknown installation is turned away before any Claude call,
+  // so these make no API calls; a 404 (not 401) shows they got past the gate.
+  const chat = await c.request.post(base + "/api/chat", { data: { installationId: "not-a-base", messages: [{ role: "user", content: "Hi" }] } });
+  const warm = await c.request.post(base + "/api/warm", { data: { installationId: "not-a-base" } });
+  check("Open demo: /api/chat and /api/warm need no code (404 for an unknown base, not 401)", chat.status() === 404 && warm.status() === 404, `${chat.status()} ${warm.status()}`);
+  const bm = await (await c.request.get(base + "/bookmarklet.html")).text();
+  check("Open demo: the bookmarklet doesn't carry the access code", !code || !bm.includes(code));
   await c.close();
 }
 
