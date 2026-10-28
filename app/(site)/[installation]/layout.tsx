@@ -46,7 +46,7 @@ export default async function InstallationLayout({ children, params }: LayoutPro
       </div>
       <Script src="/theme/vendor/bootstrap.bundle.min.js" strategy="afterInteractive" />
       {/* Opt in to cross-document view transitions so the globe link (to /) crossfades into the
-          Explore page; site-enhancements.tsx skips the transition for every other navigation. */}
+          Explore page; the head script in app/layout.tsx skips every navigation into a base site. */}
       <style>{"@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }"}</style>
       <SiteEnhancements />
       {assistant && (

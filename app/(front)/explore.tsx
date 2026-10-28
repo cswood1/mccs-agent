@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { GlobeApi, GlobeMarker } from "./globe";
-import { ARRIVED_KEY, hasWebGL, LAST_KEY, read, useInputType, warm, write } from "./shared";
+import { ARRIVED_KEY, hasWebGL, LAST_KEY, read, useInputType, useReturnShortcut, warm, write } from "./shared";
 
 // The globe library is loaded only in the browser, after the page is up.
 const Globe = dynamic(() => import("./globe"), { ssr: false });
@@ -22,6 +22,7 @@ export default function Explore({ bases, markers }: { bases: ExploreBase[]; mark
   const [webgl, setWebgl] = useState<boolean | null>(null); // null until checked in the browser
   const [picking, setPicking] = useState<string | null>(null);
   useInputType(rootRef);
+  useReturnShortcut();
 
   useEffect(() => {
     /* eslint-disable react-hooks/set-state-in-effect -- browser-only state, read once after hydration */

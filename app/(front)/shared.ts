@@ -57,6 +57,27 @@ export function useInputType(rootRef: RefObject<HTMLElement | null>) {
   }, [rootRef]);
 }
 
+/**
+ * Demo shortcut: Shift+Q goes to the recreated Quantico site (/quantico), the way back from Shift+G
+ * on the base sites. Ignored while typing in any field (the ask box, a chat's follow-up box).
+ */
+export function useReturnShortcut() {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Q" || !e.shiftKey || e.metaKey || e.ctrlKey || e.altKey || e.isComposing) return;
+      const typing = e
+        .composedPath()
+        .some((n) => n instanceof HTMLElement && (n.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(n.tagName)));
+      if (typing) return;
+      e.preventDefault();
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- a full load: the base sites bring their own theme CSS and Bootstrap scripts
+      window.location.assign("/quantico");
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+}
+
 export const GLOBE_ICON =
   "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM3.6 9h16.8M3.6 15h16.8M12 3c2.3 2.4 3.5 5.5 3.5 9s-1.2 6.6-3.5 9c-2.3-2.4-3.5-5.5-3.5-9s1.2-6.6 3.5-9z";
 

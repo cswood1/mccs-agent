@@ -913,6 +913,35 @@ const labelsFit = (p) =>
   await c.close();
 }
 
+// 11b. Return shortcut: Shift+Q goes to the recreated Quantico site from Explore and the front doors,
+// but not while typing in the ask box or a chat's follow-up box.
+{
+  const { c, p } = await open({ path: "/" });
+  await p.evaluate(() => document.activeElement?.blur());
+  await p.keyboard.press("Shift+Q");
+  await p.waitForURL((u) => new URL(u).pathname === "/quantico", { timeout: 5000 }).catch(() => {});
+  check("Shift+Q: Explore goes to the Quantico site", new URL(p.url()).pathname === "/quantico", p.url());
+  await c.close();
+}
+{
+  const { c, p } = await open({ path: "/ask/pendleton" });
+  const box = p.locator("#fd-ask-input");
+  await box.click();
+  await p.keyboard.press("Shift+Q");
+  check("Shift+Q: ignored while typing in the ask box", new URL(p.url()).pathname === "/ask/pendleton" && (await box.inputValue()) === "Q", `${p.url()} ${await box.inputValue()}`);
+  await box.fill("");
+  await ask(p, "Pool hours?");
+  await box.click();
+  await p.keyboard.press("Shift+Q");
+  check("Shift+Q: ignored while typing in a chat", new URL(p.url()).pathname === "/ask/pendleton" && (await box.inputValue()) === "Q" && (await box.getAttribute("placeholder")) === "Ask a follow-up…", `${p.url()} ${await box.inputValue()}`);
+  await box.fill("");
+  await p.evaluate(() => document.activeElement?.blur());
+  await p.keyboard.press("Shift+Q");
+  await p.waitForURL((u) => new URL(u).pathname === "/quantico", { timeout: 5000 }).catch(() => {});
+  check("Shift+Q: a front door goes to the Quantico site", new URL(p.url()).pathname === "/quantico" && (await p.locator("#mccs-assistant").count()) === 1, p.url());
+  await c.close();
+}
+
 // 12. Explore fits one viewport on common laptop sizes; banner and Display pill always fully visible.
 for (const [w, h] of [[1280, 600], [1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
   const { c, p } = await open({ path: "/", viewport: { width: w, height: h } });

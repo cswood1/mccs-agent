@@ -38,12 +38,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {stylesheets.map((href) => (
           <link key={href} rel="stylesheet" href={href} />
         ))}
-        {/* Cross-document view transitions (the globe page and front doors, front.css): if the browser
-            gives one up (e.g. a slow first load), the page still navigates; don't surface that as an
-            uncaught error. */}
+        {/* Cross-document view transitions: only into the globe page, front doors and credits (they opt
+            in from front.css in the head). The base sites opt in too, from the page body, so the globe
+            link can crossfade to /; any other navigation is skipped on the page being left, since a
+            base page can't opt in early enough to be revealed with one. If the browser gives one up
+            (e.g. a slow first load), the page still navigates; don't surface that as an uncaught error. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
+              'addEventListener("pageswap",function(e){var v=e.viewTransition,a=e.activation;if(v&&!(a&&a.entry&&a.entry.url&&/^\\/(ask(\\/|$)|credits\\/?$|$)/.test(new URL(a.entry.url).pathname)))v.skipTransition()});' +
               '["pageswap","pagereveal"].forEach(function(t){addEventListener(t,function(e){var v=e.viewTransition;if(v)[v.ready,v.finished,v.updateCallbackDone].forEach(function(p){p&&p.catch(function(){})})})})',
           }}
         />

@@ -5,7 +5,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import { firstMccsLink, markdown, parseStream, shortDate, THINKING, speechText } from "@/lib/chat-client";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
-import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, warm, write } from "./shared";
+import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, useReturnShortcut, warm, write } from "./shared";
 
 export type FrontInstallation = {
   id: string;
@@ -266,6 +266,7 @@ export default function FrontDoor({
 
   // Last input type, for focus rings that should show for keyboard focus only (front.css).
   useInputType(rootRef);
+  useReturnShortcut();
 
   // ---------- reading aloud ----------
   const stopSpeaking = useCallback(() => {

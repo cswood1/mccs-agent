@@ -84,10 +84,14 @@ deployed on Vercel for demos. Three bases have full content: Quantico (`/quantic
     base (`splitLocationButton` in `lib/site/data.ts`; plain inner parts styled in `app/globals.css`).
     The globe is a link to `/` (title "Explore all installations", name "Explore your Marine
     Community"), and the name still opens the change-location modal. It's pixel-identical to the capture.
-  - Only that navigation crossfades: the site layout opts in to view transitions, and
-    `site-enhancements.tsx` skips every other one on `pageswap`.
+  - Only that navigation crossfades. The site layout opts in to view transitions (from the page body),
+    and the head script in `app/layout.tsx` skips every transition whose destination isn't `/`,
+    `/ask/*` or `/credits`. A base page can't opt in early enough to be revealed with one: without
+    the skip, navigations into a base site logged an aborted-transition error.
   - Shift+G goes to `/`, except while typing in a field (including the header search box) or in the
     Ask MCCS panel.
+  - Shift+Q on the Explore page and the front doors goes to `/quantico` (`useReturnShortcut` in
+    `app/(front)/shared.ts`), except while typing (the ask box, a chat's follow-up box). No visible UI.
   - Demo site only: `public/widget.js` is untouched.
 - **Live lookups.** The chat agent also has `web_fetch_20260318` / `web_search_20260318`, limited to the
   installation's `trustedDomains`; the snapshot lives in the first user turn so its URLs are fetchable.
