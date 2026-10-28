@@ -6,6 +6,10 @@
 
 .fd {
   --fd-bg: #edf1f6;
+  /* Lower section of the home page (below the hero) and its cards. */
+  --fd-bg-lower: #cfd7e0;
+  --fd-card-lower: #ffffff;
+  --fd-divider: none;
   --fd-surface: #ffffff;
   --fd-card: #f6f8fb;
   --fd-ink: #121a2f;
@@ -37,6 +41,8 @@
 }
 .fd[data-theme="dark"] {
   --fd-bg: #0e1520;
+  --fd-bg-lower: #162030;
+  --fd-card-lower: #1f2b3b;
   --fd-surface: #172130;
   --fd-card: #131c29;
   --fd-ink: #e9eef5;
@@ -51,6 +57,9 @@
 }
 .fd[data-contrast="high"] {
   --fd-bg: #ffffff;
+  --fd-bg-lower: #eeeeee;
+  --fd-card-lower: #ffffff;
+  --fd-divider: 2px solid #000000;
   --fd-surface: #ffffff;
   --fd-card: #ffffff;
   --fd-ink: #000000;
@@ -63,6 +72,9 @@
 }
 .fd[data-theme="dark"][data-contrast="high"] {
   --fd-bg: #000000;
+  --fd-bg-lower: #141414;
+  --fd-card-lower: #000000;
+  --fd-divider: 2px solid #ffffff;
   --fd-surface: #000000;
   --fd-card: #000000;
   --fd-ink: #ffffff;
@@ -540,6 +552,29 @@
 }
 .fd-chip:hover {
   border-color: var(--fd-ink);
+}
+
+/* ---------- lower section: a darker band from below the hero through the footer ---------- */
+/* The main area takes the lower shade edge to edge; the hero keeps the top shade, so the boundary is
+   a straight line where the hero ends. */
+.fd--hero .fd-main {
+  background: var(--fd-bg-lower);
+}
+.fd--hero .fd-hero {
+  background: var(--fd-bg);
+}
+.fd--hero .fd-chapter {
+  border-top: var(--fd-divider);
+}
+.fd--hero .fd-footer {
+  background: var(--fd-bg-lower);
+}
+.fd--hero .fd-chapter .fd-card,
+.fd--hero .fd-trust-strip {
+  background: var(--fd-card-lower);
+}
+.fd--hero .fd-chapter .fd-card:hover {
+  background: var(--fd-card-lower);
 }
 
 /* ---------- sections: photo + numbered "next chapter" cards ---------- */

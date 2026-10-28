@@ -614,6 +614,52 @@ const ask = async (p, q) => {
   await c.close();
 }
 
+// 10. Two sections: a darker lower band (moments, installations, trust strip, footer), edge to edge.
+for (const [label, display, viewport] of [
+  ["light", { theme: "light", large: false, contrast: false }, { width: 1280, height: 860 }],
+  ["dark", { theme: "dark", large: false, contrast: false }, { width: 1280, height: 860 }],
+  ["high contrast", { theme: "light", large: false, contrast: true }, { width: 1280, height: 860 }],
+  ["dark high contrast", { theme: "dark", large: false, contrast: true }, { width: 1280, height: 860 }],
+  ["light 375px", { theme: "light", large: false, contrast: false }, { width: 375, height: 812 }],
+]) {
+  const { c, p } = await open({ viewport });
+  await p.evaluate((d) => localStorage.setItem("mccs-front:display", JSON.stringify(d)), display);
+  await p.reload({ waitUntil: "networkidle" });
+  const r = await p.evaluate(() => {
+    const parse = (s) => (s.match(/[\d.]+/g) || []).map(Number);
+    const lum = ([r, g, b]) => [r, g, b].map((v) => v / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4)).reduce((t, v, i) => t + v * [0.2126, 0.7152, 0.0722][i], 0);
+    const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
+    const bgOf = (el) => { for (let e = el; e; e = e.parentElement) { const c = parse(getComputedStyle(e).backgroundColor); if (c.length === 3 || (c.length === 4 && c[3] > 0.99)) return c.slice(0, 3); } return [255, 255, 255]; };
+    const hero = document.querySelector(".fd-hero");
+    const chapter = document.querySelector(".fd-chapter");
+    const heroBg = bgOf(hero);
+    const lowerBg = bgOf(chapter);
+    const footerBg = bgOf(document.querySelector(".fd-footer"));
+    const card = bgOf(document.querySelector(".fd-chapter .fd-card"));
+    const strip = bgOf(document.querySelector(".fd-trust-strip"));
+    // Every bit of text in the lower section, against its actual background.
+    const texts = [...document.querySelectorAll(".fd-chapter .fd-label, .fd-chapter .fd-num, .fd-chapter .fd-card-title, .fd-chapter .fd-card-blurb, .fd-chapter .fd-cta, .fd-trust-strip, .fd-footer, .fd-footer a")];
+    const worst = texts.map((el) => ({ what: el.className || el.tagName, r: ratio(parse(getComputedStyle(el).color), bgOf(el)) })).sort((a, b) => a.r - b.r)[0];
+    const hb = hero.getBoundingClientRect(), cb = chapter.getBoundingClientRect(), mb = document.querySelector(".fd-main").getBoundingClientRect();
+    return {
+      heroBg, lowerBg, footerBg, card, strip,
+      step: ratio(heroBg, lowerBg),
+      cardStep: ratio(card, lowerBg),
+      worst,
+      boundary: Math.abs(cb.top - hb.bottom) < 1,
+      fullWidth: Math.abs(mb.left) < 1 && Math.abs(mb.right - document.documentElement.clientWidth) < 1,
+      divider: getComputedStyle(chapter).borderTopStyle + " " + getComputedStyle(chapter).borderTopWidth,
+    };
+  });
+  const hc = display.contrast;
+  check(`Sections (${label}): the lower band differs from the hero`, r.step > (display.theme === "light" && !hc ? 1.2 : 1.05) && JSON.stringify(r.footerBg) === JSON.stringify(r.lowerBg), JSON.stringify(r));
+  check(`Sections (${label}): straight boundary where the hero ends, full width`, r.boundary && r.fullWidth);
+  check(`Sections (${label}): cards stand out from the band`, r.cardStep > 1.08 || hc, JSON.stringify({ card: r.card, lower: r.lowerBg, step: r.cardStep }));
+  check(`Sections (${label}): all lower-section text meets WCAG AA`, r.worst.r >= 4.5, JSON.stringify(r.worst));
+  if (hc) check(`Sections (${label}): solid divider at the boundary`, r.divider === "solid 2px", r.divider);
+  await c.close();
+}
+
 check("No page errors", errors.length === 0, errors.join(" | "));
 await browser.close();
 

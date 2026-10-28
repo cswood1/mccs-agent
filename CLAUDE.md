@@ -193,6 +193,10 @@ disagrees with it, ask before changing either.
 - Ask box placeholder: the widget header search's typing effect at a calmer pace (50 ms/letter,
   3.25 s hold, 0.3 s erase, ~4.5 s per example; the widget keeps 35 ms / 2 s). It's cleared while focused or holding text, and static with reduced motion. The docked
   "Ask a follow-up…" stays static.
+- Two sections: below the hero, the main area and footer use `--fd-bg-lower` (light #cfd7e0, dark
+  #162030), edge to edge, with a straight boundary where the hero ends. Cards there use
+  `--fd-card-lower` (white in light). High contrast adds a 2px divider (`--fd-divider`). All
+  lower-section text passes WCAG AA, which is tested.
 - Focus rings (front.css):
   - Inner select/textarea/text inputs never draw an outline. Their rounded container shows the
     `--fd-ring` box-shadow instead: the ask box on any focus, the installation pill for keyboard focus
