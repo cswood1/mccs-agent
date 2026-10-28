@@ -38,6 +38,10 @@
   // row; the last one is rarer (about 1 in 6). Same list as THINKING in lib/chat-client.ts.
   var THINKING = ["Let me check on that…", "Checking on that…", "Checking, be right back…"];
   var THINKING_RARE = "Hooking and jabbing, be right back…";
+  // Composer placeholder before the first message and after it.
+  var PLACEHOLDER_FIRST = "Ask MCCS anything…";
+  var PLACEHOLDER_FOLLOWUP = "Ask a follow-up…";
+  var INPUT_MAX = 108; // about 4 lines, then the field scrolls
   var lastThinking = "";
 
   // Header search (Ask MCCS search bar, see enhanceHeaderSearch).
@@ -99,14 +103,22 @@
         '<button class="icon-btn minimize" type="button" aria-label="Minimize Ask MCCS" title="Minimize">' + icon("minimize") + "</button>" +
       "</header>" +
       '<div class="sample-banner" hidden>Sample data — answers use placeholder content, not real MCCS information.</div>' +
-      '<div class="log" role="log" aria-live="polite" aria-relevant="additions text"></div>' +
-      '<div class="chips" role="group" aria-label="Suggested questions" hidden></div>' +
-      '<form class="composer">' +
-        '<label class="sr-only" for="input">Message</label>' +
-        '<textarea id="input" rows="1" placeholder="Ask me anything…" autocomplete="off" enterkeyhint="send"></textarea>' +
-        '<button class="send" type="submit" aria-label="Send">' + icon("send") + "</button>" +
-      "</form>" +
-      '<p class="disclaimer">SI answers can be wrong. Check the linked MCCS page before you go.</p>' +
+      // The scrolling conversation: the messages (the live region) and, under the latest answer,
+      // the suggested questions (outside the live region, so they aren't read out on every update).
+      '<div class="log">' +
+        '<div class="thread" role="log" aria-live="polite" aria-relevant="additions text"></div>' +
+        '<div class="chips" role="group" aria-label="Suggested questions" hidden></div>' +
+      "</div>" +
+      '<div class="bottom">' +
+        '<form class="composer">' +
+          '<label class="sr-only" for="input">Message</label>' +
+          '<div class="field">' +
+            '<textarea id="input" rows="1" placeholder="' + PLACEHOLDER_FIRST + '" autocomplete="off" enterkeyhint="send"></textarea>' +
+            '<button class="send" type="submit" aria-label="Send">' + icon("send") + "</button>" +
+          "</div>" +
+        "</form>" +
+        '<p class="disclaimer">SI answers can be wrong. Check the linked MCCS page before you go.</p>' +
+      "</div>" +
     "</section>";
 
   var launcher = root.querySelector(".launcher");
@@ -116,6 +128,7 @@
   var contextEl = root.querySelector(".context-line");
   var sampleBanner = root.querySelector(".sample-banner");
   var log = root.querySelector(".log");
+  var thread = root.querySelector(".thread");
   var form = root.querySelector(".composer");
   var input = root.querySelector("#input");
   var sendBtn = root.querySelector(".send");
@@ -149,6 +162,7 @@
     }
   });
   input.addEventListener("input", autosize);
+  window.addEventListener("resize", function () { if (state.open) placePanel(); });
 
   document.body.appendChild(host);
   fetchConfig();
@@ -615,6 +629,7 @@
     state.open = open;
     saveOpen(open);
     panel.hidden = !open;
+    if (open) placePanel();
     // Once the chat has been opened this session, minimizing leaves the compact edge tab.
     if (open) saveTab(true);
     showButton();
@@ -629,6 +644,13 @@
     } else {
       (edgeTab.hidden ? launcher : edgeTab).focus();
     }
+  }
+
+  // The floating window starts below the demo site's banner when there is one (it scrolls with the
+  // page, so its height is reserved whatever the scroll position).
+  function placePanel() {
+    var banner = document.querySelector(".demo-banner");
+    panel.style.setProperty("--top-offset", (banner ? banner.offsetHeight : 0) + "px");
   }
 
   // The full "Ask MCCS" button, or the edge tab once the chat has been used this session.
@@ -789,27 +811,29 @@
   // ---------- rendering ----------
   function render() {
     sendBtn.disabled = state.busy;
-    log.innerHTML = "";
+    input.placeholder = state.messages.length ? PLACEHOLDER_FOLLOWUP : PLACEHOLDER_FIRST;
+    thread.innerHTML = "";
     renderChips();
 
     if (!state.messages.length) {
       var welcome = document.createElement("div");
       welcome.className = "msg assistant";
       welcome.textContent = (state.page && state.page.welcome) || (state.config ? state.config.welcomeMessage : "Hi! How can I help?");
-      log.appendChild(welcome);
+      thread.appendChild(welcome);
       return;
     }
 
-    state.messages.forEach(function (m) { log.appendChild(bubble(m)); });
+    state.messages.forEach(function (m) { thread.appendChild(bubble(m)); });
   }
 
-  // Follow-ups from the last answer on this page, else this page's chips (page → section → home).
+  // Under the latest answer (or the welcome): follow-ups from the last answer on this page, else this
+  // page's chips (page → section → home). Hidden while an answer is streaming.
   function renderChips() {
     var items = [];
     if (state.followups && state.followups.path === currentPath && state.messages.length) items = state.followups.items;
     else if (state.page && state.page.chips) items = state.page.chips.slice(0, 4);
     else if (state.config && state.config.defaultChips) items = state.config.defaultChips.slice(0, 4);
-    chipsEl.innerHTML = "";
+    chipsEl.innerHTML = '<p class="chips-label" aria-hidden="true">Suggested</p>';
     chipsEl.hidden = state.busy || !items.length;
     items.forEach(function (q) {
       var b = document.createElement("button");
@@ -823,7 +847,7 @@
 
   function updateLast() {
     var last = state.messages[state.messages.length - 1];
-    var el = log.lastElementChild;
+    var el = thread.lastElementChild;
     if (!el || !last) return;
     var nearBottom = log.scrollHeight - log.scrollTop - log.clientHeight < 80;
     el.replaceWith(bubble(last));
@@ -866,11 +890,11 @@
 
   function autosize() {
     input.style.height = "auto";
-    input.style.height = Math.min(input.scrollHeight, 120) + "px";
+    input.style.height = Math.min(input.scrollHeight, INPUT_MAX) + "px";
   }
 
   function isPhone() {
-    return window.matchMedia("(max-width: 640px)").matches;
+    return window.matchMedia("(max-width: 767px)").matches;
   }
 
   // ---------- persistence (survives navigating between pages of the site) ----------
@@ -1046,7 +1070,7 @@
 
   function css() {
     return [
-      ":host { --primary: #9e1b32; --accent: #ffc72c; --ink: #1c1c1e; --muted: #5f6368; --line: #e3e3e6; --bg: #ffffff; --soft: #f4f4f6;",
+      ":host { --primary: #9e1b32; --accent: #ffc72c; --ink: #1c1c1e; --muted: #5f6368; --line: #e3e3e6; --bg: #ffffff; --soft: #f4f4f6; --navy: #1d3954;",
       "  all: initial; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-size: 15px; line-height: 1.45; color: var(--ink); }",
       "*, *::before, *::after { box-sizing: border-box; }",
       "[hidden] { display: none !important; }",
@@ -1087,12 +1111,21 @@
       ".edge-tab:focus-visible .edge-label { max-width: 90px; margin-left: 8px; opacity: 1; }",
       ".edge-tab:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }",
 
-      ".panel { position: fixed; z-index: 2147483001; top: 0; right: 0; bottom: 0; width: 420px; max-width: 100vw;",
-      // Subtle edge: a hairline, a soft wide shadow, and a barely warm glow on the edge facing the page.
-      "  display: flex; flex-direction: column; background: var(--bg); border-left: 1px solid rgba(17,24,39,.12);",
-      "  box-shadow: -1px 0 10px rgba(255,199,44,.10), -18px 0 48px -8px rgba(15,23,42,.22); animation: slide .2s ease-out; }",
+      // Floating window flush with the right edge: below the demo banner (when there is one), 24px
+      // from the top and bottom, at most 820px tall and centered in that space. Left corners rounded;
+      // the content clips to the shape.
+      ".panel { position: fixed; z-index: 2147483001; right: 0; top: calc(var(--top-offset, 0px) + 24px); bottom: 24px; width: 420px; max-width: 100vw;",
+      "  max-height: 820px; margin: auto 0; border-radius: 18px 0 0 18px; overflow: hidden;",
+      // Hairline, a faint warm glow on the page side, and a slightly stronger floating shadow.
+      "  display: flex; flex-direction: column; background: var(--bg); border: 1px solid rgba(17,24,39,.12); border-right: 0;",
+      "  box-shadow: -1px 0 10px rgba(255,199,44,.10), -20px 8px 56px -6px rgba(15,23,42,.30), 0 2px 8px rgba(15,23,42,.08); animation: slide .22s ease-out; }",
       "@keyframes slide { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }",
-      "@media (max-width: 640px) { .panel { width: 100vw; height: 100dvh; bottom: auto; border-left: 0; } }",
+      "@keyframes rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }",
+      "@keyframes fade { from { opacity: 0; } to { opacity: 1; } }",
+      // Phones: a near-full-screen sheet with rounded top corners and a small gap above it.
+      "@media (max-width: 767px) { .panel { top: calc(10px + env(safe-area-inset-top)); bottom: auto; left: 0; width: 100vw; height: calc(100dvh - 10px - env(safe-area-inset-top));",
+      "  max-height: none; margin: 0; border: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -8px 32px rgba(15,23,42,.28); animation-name: rise; }",
+      "  .panel .head { padding-top: 14px; } }",
 
       ".head { display: flex; align-items: center; gap: 4px; padding: 14px 10px 14px 18px; padding-top: max(14px, env(safe-area-inset-top));",
       "  background: var(--primary); color: #fff; }",
@@ -1106,7 +1139,8 @@
 
       ".sample-banner { padding: 8px 18px; background: #fff4cc; color: #5c4400; font-size: 13px; border-bottom: 1px solid #f0dc8c; }",
 
-      ".log { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: var(--soft); }",
+      ".log { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px; background: var(--soft); }",
+      ".thread { display: flex; flex-direction: column; gap: 10px; }",
       ".msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; overflow-wrap: anywhere; }",
       ".msg.user { align-self: flex-end; background: var(--primary); color: #fff; border-bottom-right-radius: 4px; white-space: pre-wrap; }",
       ".msg.assistant { align-self: flex-start; background: #fff; border: 1px solid var(--line); border-bottom-left-radius: 4px; }",
@@ -1115,12 +1149,14 @@
       ".msg ul, .msg ol { margin: 4px 0 8px; padding-left: 20px; } .msg li { margin: 2px 0; }",
       ".msg a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }",
 
-      ".chips { display: flex; gap: 8px; padding: 10px 12px 2px; overflow-x: auto; scrollbar-width: none; background: var(--bg); border-top: 1px solid var(--line); }",
-      ".chips::-webkit-scrollbar { display: none; }",
-      "@media (min-width: 641px) { .chips { flex-wrap: wrap; overflow-x: visible; } }",
-      ".chip { flex: none; text-align: left; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--ink);",
-      "  font: inherit; font-size: 14px; white-space: nowrap; cursor: pointer; }",
-      ".chip:hover { border-color: var(--primary); color: var(--primary); }",
+      // Suggested questions under the latest answer: secondary to the answer, compact and wrapping.
+      ".chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }",
+      ".chips-label { flex-basis: 100%; margin: 0 0 1px 2px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }",
+      ".chip { display: inline-flex; align-items: center; max-width: 100%; min-height: 36px; padding: 6px 12px; border: 0; border-radius: 18px;",
+      "  background: #f6e8eb; color: #7a1426; font: inherit; font-size: 14px; line-height: 1.35; text-align: left; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }",
+      ".chip:hover, .chip:focus-visible { background: #efd6db; }",
+      ".chip:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }",
+      "@media (pointer: coarse) { .chip { min-height: 44px; } }",
       ".nudge { position: fixed; z-index: 2147483000; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(16px, env(safe-area-inset-bottom)) + 58px);",
       "  display: flex; align-items: center; max-width: min(280px, calc(100vw - 32px)); background: #fff; color: var(--ink); border: 1px solid var(--line);",
       "  border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.18); animation: pop .2s ease-out; }",
@@ -1143,17 +1179,24 @@
       ".msg p.status { margin: 8px 0 0; }",
       "@keyframes status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }",
 
-      ".composer { display: flex; align-items: flex-end; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--line); background: var(--bg); }",
-      ".chips:not([hidden]) + .composer { border-top: 0; }",
+      // Bottom zone: a faint tint and a hairline above it, the composer, then the disclaimer.
+      ".bottom { flex: none; padding: 12px 12px 0; background: #fafafb; border-top: 1px solid var(--line); }",
+      // One slim field with the send button inside it; the field shows the focus ring.
+      ".field { display: flex; align-items: flex-end; border: 1px solid #d5d7dc; border-radius: 23px; background: #fff; }",
+      ".field:focus-within { border-color: var(--navy); box-shadow: 0 0 0 1px var(--navy); }",
       // 16px font stops iOS Safari from zooming in when the field is focused.
-      "textarea { flex: 1; resize: none; max-height: 120px; padding: 11px 14px; border: 1px solid var(--line); border-radius: 22px;",
-      "  font: inherit; font-size: 16px; line-height: 1.35; color: var(--ink); background: #fff; }",
-      ".send { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%;",
-      "  background: var(--primary); color: #fff; cursor: pointer; }",
+      "textarea { flex: 1; min-width: 0; resize: none; max-height: 108px; padding: 11px 4px 11px 16px; border: 0; border-radius: 22px; outline: none;",
+      "  font: inherit; font-size: 16px; line-height: 1.35; color: var(--ink); background: transparent; }",
+      "textarea:focus-visible { outline: none; }",
+      // A 44px tap target drawn as a 34px red circle.
+      ".send { flex: none; display: grid; place-items: center; width: 44px; height: 44px; padding: 5px; border: 0; border-radius: 50%;",
+      "  background: var(--primary) content-box; color: #fff; cursor: pointer; }",
+      ".send svg { width: 17px; height: 17px; margin-left: -1px; }",
       ".send:disabled { opacity: .45; cursor: default; }",
-      ".disclaimer { margin: 0; padding: 0 16px 10px; padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 11px; color: var(--muted); background: var(--bg); text-align: center; text-wrap: balance; }",
+      ".send:focus-visible { outline: 2px solid var(--navy); outline-offset: -1px; }",
+      ".disclaimer { margin: 0; padding: 6px 4px 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); font-size: 11px; line-height: 1.3; color: var(--muted); text-align: center; text-wrap: balance; }",
 
-      "@media (prefers-reduced-motion: reduce) { .panel, .typing i, .nudge, .launcher, .edge-tab, .status, .thinking { animation: none; } .thinking { -webkit-text-fill-color: currentColor; background: none; } .edge-label { transition: none; } }",
+      "@media (prefers-reduced-motion: reduce) { .panel { animation: fade .15s ease-out; } .typing i, .nudge, .launcher, .edge-tab, .status, .thinking { animation: none; } .thinking { -webkit-text-fill-color: currentColor; background: none; } .edge-label { transition: none; } }",
     ].join("\n");
   }
 })();

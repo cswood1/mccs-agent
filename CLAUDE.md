@@ -268,6 +268,15 @@ disagrees with it, ask before changing either.
   `lib/crossbase.ts`), "Checking the latest MCCS info…" (web_fetch), "Searching for the latest MCCS
   info…" (web_search) (`SERVER_TOOL_STATUS` in `app/api/chat/route.ts`).
 
+## Widget window and bottom area (2026-10-28)
+- ≥ 768px: a floating window flush right, 24px below the demo banner (its height is reserved when
+  `.demo-banner` exists) and 24px above the bottom, max 820px tall and centered, left corners rounded
+  18px. Phones: a sheet with rounded top corners and a 10px top gap.
+- Suggested questions (starter chips, then the latest answer's follow-ups) sit in the conversation
+  under the latest message with a small "Suggested" label, outside the `.thread` live region.
+- Composer: one field with the send button inside; placeholder "Ask MCCS anything…", then
+  "Ask a follow-up…" (docs/PRODUCT.md §13 still says "Ask me anything…").
+
 ## Stack
 - Next.js 16 (App Router, TypeScript), Bootstrap 5.3.2 + the captured MCCS CSS (no Tailwind). Next 16
   differs from older versions — see `AGENTS.md` and `node_modules/next/dist/docs/`. Middleware is

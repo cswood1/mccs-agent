@@ -49,7 +49,7 @@ check("Viewing line on bowling page", /^Viewing: .*Bowling/i.test(viewing), view
 check("Panel title is Ask MCCS", (await w.locator("#title").textContent())?.trim() === "Ask MCCS", await w.locator("#title").textContent());
 check("Subtitle is the installation's short name", (await w.locator(".subtitle").textContent()) === "MCB Quantico", await w.locator(".subtitle").textContent());
 check("Sparkle next to the title", (await w.locator("#title svg.sparkle").count()) === 1);
-check("Composer placeholder", (await w.locator("textarea").getAttribute("placeholder")) === "Ask me anything…");
+check("Composer placeholder before the first message", (await w.locator("textarea").getAttribute("placeholder")) === "Ask MCCS anything…", await w.locator("textarea").getAttribute("placeholder"));
 const welcome = await w.locator(".msg.assistant").first().textContent();
 check("Page-specific welcome", /Questions about .*Bowling.*\? I can help\./i.test(welcome), welcome);
 const pageChips = await w.locator(".chips .chip").allTextContents();
@@ -74,7 +74,47 @@ check("Launcher: solid MCCS red with white text (contrast > 7:1)", lstyle.image.
 check("Launcher: 1px light ring and a crisp soft shadow", /rgba\(255, 255, 255, 0\.55\) 0px 0px 0px 1px/.test(lstyle.shadow) && /0px 10px 24px/.test(lstyle.shadow), lstyle.shadow);
 const pstyle = await w.locator(".panel").evaluate((el) => { const cs = getComputedStyle(el); return { border: `${cs.borderLeftWidth} ${cs.borderLeftStyle} ${cs.borderLeftColor}`, shadow: cs.boxShadow }; });
 check("Panel: hairline border on the page side", pstyle.border === "1px solid rgba(17, 24, 39, 0.12)", pstyle.border);
-check("Panel: soft, wide, low-opacity shadow and a faint warm edge glow", /rgba\(15, 23, 42, 0\.22\) -18px 0px 48px -8px/.test(pstyle.shadow) && /rgba\(255, 199, 44, 0\.1\)/.test(pstyle.shadow), pstyle.shadow);
+check("Panel: floating shadow and a faint warm edge glow", /rgba\(15, 23, 42, 0\.3\) -20px 8px 56px -6px/.test(pstyle.shadow) && /rgba\(255, 199, 44, 0\.1\)/.test(pstyle.shadow), pstyle.shadow);
+
+// Floating window (≥ 768px): flush right, below the demo banner, page visible above and below.
+const win = await w.locator(".panel").evaluate((el) => {
+  const r = el.getBoundingClientRect();
+  const cs = getComputedStyle(el);
+  const banner = document.querySelector(".demo-banner").getBoundingClientRect();
+  return { top: r.top, bottom: r.bottom, right: r.right, width: r.width, height: r.height, bannerBottom: banner.bottom, vh: innerHeight, vw: innerWidth,
+    radii: [cs.borderTopLeftRadius, cs.borderBottomLeftRadius, cs.borderTopRightRadius, cs.borderBottomRightRadius], overflow: cs.overflow };
+});
+check("Window: flush with the right edge, current width", Math.abs(win.right - win.vw) < 1 && win.width === 420, JSON.stringify(win));
+check("Window: starts below the demo banner, page visible above and below", win.top >= win.bannerBottom + 20 && win.vh - win.bottom >= 20 && win.height <= 820, JSON.stringify(win));
+check("Window: left corners rounded 18px, right side square, content clipped", JSON.stringify(win.radii) === JSON.stringify(["18px", "18px", "0px", "0px"]) && win.overflow === "hidden", JSON.stringify(win));
+// Starter chips sit in the conversation under the welcome, with the "Suggested" label.
+const starter = await w.locator(".chips").evaluate((el) => {
+  const label = el.querySelector(".chips-label");
+  const ls = getComputedStyle(label);
+  return { inLog: el.parentElement.classList.contains("log"), afterThread: el.previousElementSibling?.classList.contains("thread"), label: label.textContent, size: ls.fontSize, transform: ls.textTransform, spacing: parseFloat(ls.letterSpacing) };
+});
+check("Starter chips in the conversation, under a small Suggested label", starter.inLog && starter.afterThread && starter.label === "Suggested" && starter.size === "11px" && starter.transform === "uppercase" && starter.spacing > 0, JSON.stringify(starter));
+// Composer: the send button sits inside the field; the field shows a 2px navy ring on focus.
+const comp = await w.locator(".composer").evaluate((form) => {
+  const field = form.querySelector(".field").getBoundingClientRect();
+  const send = form.querySelector(".send").getBoundingClientRect();
+  const ta = form.querySelector("textarea");
+  ta.focus();
+  const fs = getComputedStyle(form.querySelector(".field"));
+  return { inside: send.left >= field.left && send.right <= field.right + 0.5 && send.top >= field.top && send.bottom <= field.bottom + 0.5, sendRightOfInput: send.left >= ta.getBoundingClientRect().right - 0.5,
+    sendSize: send.width, inputFont: getComputedStyle(ta).fontSize, taOutline: getComputedStyle(ta).outlineStyle, border: fs.borderColor, ring: fs.boxShadow, fieldHeight: field.height };
+});
+check("Composer: send button inside the field, on the right", comp.inside && comp.sendRightOfInput && comp.sendSize >= 44, JSON.stringify(comp));
+check("Composer: slim single line, 16px text", comp.fieldHeight <= 48 && comp.inputFont === "16px", JSON.stringify(comp));
+check("Composer: 2px navy focus ring, no gold outline", comp.border === "rgb(29, 57, 84)" && /rgb\(29, 57, 84\) 0px 0px 0px 1px/.test(comp.ring) && comp.taOutline === "none", JSON.stringify(comp));
+// Bottom zone: faint tint, hairline divider, small one-line disclaimer.
+const zone = await w.locator(".bottom").evaluate((el) => {
+  const cs = getComputedStyle(el);
+  const d = el.querySelector(".disclaimer");
+  return { bg: cs.backgroundColor, border: `${cs.borderTopWidth} ${cs.borderTopStyle}`, disc: getComputedStyle(d).fontSize, discHeight: d.getBoundingClientRect().height, logBg: getComputedStyle(el.previousElementSibling).backgroundColor };
+});
+check("Bottom zone: faint tint and a hairline above it", zone.bg === "rgb(250, 250, 251)" && zone.border === "1px solid", JSON.stringify(zone));
+check("Disclaimer: 11px, one line at this width", zone.disc === "11px" && zone.discHeight < 30, JSON.stringify(zone));
 
 // 2. Ask via a chip: page context sent, follow-ups replace page chips, links rendered.
 await w.locator(".chips .chip").first().click();
@@ -85,6 +125,36 @@ check("Sends current page path", body1.page?.path === "/quantico/recreation-fitn
 check("Sends title and URL", !!body1.page?.title && /bowling/.test(body1.page?.url ?? ""), body1.page?.title);
 const followChips = await w.locator(".chips .chip").allTextContents();
 check("Two follow-up chips after answer", JSON.stringify(followChips) === JSON.stringify(FOLLOWUPS), JSON.stringify(followChips));
+check("Composer placeholder after the first message", (await w.locator("textarea").getAttribute("placeholder")) === "Ask a follow-up…", await w.locator("textarea").getAttribute("placeholder"));
+// Follow-ups: inline, right under the latest answer, wrapping side by side, smaller than the answer.
+const inline = await w.locator(".log").evaluate((log) => {
+  const chips = log.querySelector(".chips");
+  const last = log.querySelector(".thread").lastElementChild;
+  const boxes = [...chips.querySelectorAll(".chip")].map((c) => c.getBoundingClientRect());
+  const chip = getComputedStyle(chips.querySelector(".chip"));
+  return { groups: log.getRootNode().querySelectorAll(".chips").length, lastIsAnswer: last.classList.contains("assistant"), gap: boxes[0].top - last.getBoundingClientRect().bottom,
+    sameRow: boxes.length === 2 && Math.abs(boxes[0].top - boxes[1].top) < 1, chipFont: parseFloat(chip.fontSize), answerFont: parseFloat(getComputedStyle(last).fontSize),
+    minHeight: boxes[0].height, pad: chip.padding, radius: chip.borderRadius, border: chip.borderTopStyle };
+});
+check("Follow-ups directly under the latest answer (one group in the panel)", inline.groups === 1 && inline.lastIsAnswer && inline.gap >= 0 && inline.gap <= 40, JSON.stringify(inline));
+check("Follow-ups wrap side by side", inline.sameRow, JSON.stringify(inline));
+check("Chip: 14px (smaller than the 15px answer), 6×12 padding, rounded, no border, 36px+", inline.chipFont === 14 && inline.chipFont < inline.answerFont && inline.pad === "6px 12px" && inline.radius === "18px" && inline.border === "none" && inline.minHeight >= 36, JSON.stringify(inline));
+// AA contrast: chip text on its tint (rest and hover), the label and the disclaimer on their backgrounds.
+const pairs = await w.locator(".panel").evaluate((panel) => {
+  const chip = panel.querySelector(".chip");
+  const label = panel.querySelector(".chips-label");
+  const disc = panel.querySelector(".disclaimer");
+  return [
+    ["chip", getComputedStyle(chip).color, getComputedStyle(chip).backgroundColor],
+    ["chip hover", getComputedStyle(chip).color, "rgb(239, 214, 219)"],
+    ["label", getComputedStyle(label).color, getComputedStyle(panel.querySelector(".log")).backgroundColor],
+    ["disclaimer", getComputedStyle(disc).color, getComputedStyle(panel.querySelector(".bottom")).backgroundColor],
+  ];
+});
+const lum = (rgb) => { const [r, g, b] = rgb.match(/\d+/g).slice(0, 3).map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; };
+const ratio = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
+const ratios = pairs.map(([name, fg, bg]) => [name, Math.round(ratio(fg, bg) * 10) / 10]);
+check("AA contrast: chips, Suggested label and disclaimer", ratios.every(([, r]) => r >= 4.5), JSON.stringify(ratios));
 const answerText = await w.locator(".msg.assistant").last().textContent();
 check("Follow-up frame not shown as text", !answerText.includes("\u001e") && !answerText.includes("followups"), answerText.slice(-60));
 const links = await w.locator(".msg.assistant").last().locator("a").evaluateAll((as) => as.map((a) => ({ text: a.textContent, href: a.getAttribute("href"), target: a.getAttribute("target") })));
@@ -382,6 +452,10 @@ async function edgeFlow(label, viewport, mobile) {
   await p.evaluate(() => window.scrollTo(0, 0));
   const fullBox = await full.boundingBox();
   await full.click();
+  await p.waitForTimeout(300);
+  const sheet = await wx.locator(".panel").evaluate((el) => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return { x: r.x, top: r.top, width: r.width, bottom: r.bottom, radii: [cs.borderTopLeftRadius, cs.borderTopRightRadius, cs.borderBottomLeftRadius], vh: innerHeight }; });
+  if (mobile) check(`${label}: near-full-screen sheet, rounded top corners, small top gap`, sheet.x === 0 && sheet.width === viewport.width && sheet.top >= 6 && sheet.top <= 20 && Math.abs(sheet.bottom - sheet.vh) < 1 && JSON.stringify(sheet.radii) === JSON.stringify(["18px", "18px", "0px"]), JSON.stringify(sheet));
+  else check(`${label}: floating window inset from top and bottom`, sheet.top > 40 && sheet.vh - sheet.bottom >= 20, JSON.stringify(sheet));
   const min = wx.locator("button.minimize");
   check(`${label}: header has a minimize button, no close X`, (await min.getAttribute("aria-label")) === "Minimize Ask MCCS" && (await wx.locator(".panel button.close").count()) === 0);
   const disc = wx.locator(".disclaimer");
@@ -492,6 +566,8 @@ await rm.goto(base + "/quantico", { waitUntil: "networkidle" });
 const rmAnim = await rm.locator("#mccs-assistant button.launcher").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: no shimmer", rmAnim === "none", rmAnim);
 await rm.locator("#mccs-assistant button.launcher").click();
+const rmPanel = await rm.locator("#mccs-assistant .panel").evaluate((el) => getComputedStyle(el).animationName);
+check("Reduced motion: the window fades in (no slide)", rmPanel === "fade", rmPanel);
 await rm.locator("#mccs-assistant button.minimize").click();
 const rmGlow = await rm.locator("#mccs-assistant button.edge-tab").evaluate((el) => getComputedStyle(el).animationName);
 check("Reduced motion: edge tab glow is static", rmGlow === "none", rmGlow);
@@ -597,6 +673,11 @@ const THINKING = ["Let me check on that…", "Checking on that…", "Checking, b
   }
   check("A thinking phrase from the list while waiting, announced once (role=status), no dots", seen.every((x) => THINKING.includes(x.text) && x.role === "status" && x.dots === 0), JSON.stringify(seen));
   check("Never the same phrase on consecutive messages", seen.every((x, k) => k === 0 || x.text !== seen[k - 1].text), seen.map((x) => x.text).join(" | "));
+  const scroll = await p.locator("#mccs-assistant .panel").evaluate((panel) => {
+    const log = panel.querySelector(".log");
+    return { overflows: log.scrollHeight > log.clientHeight, overflowY: getComputedStyle(log).overflowY, panelHeight: panel.getBoundingClientRect().height, atEnd: log.scrollHeight - log.scrollTop - log.clientHeight < 2 };
+  });
+  check("Window: long conversations scroll inside it, at the same height", scroll.overflows && scroll.overflowY === "auto" && scroll.panelHeight <= 820 && scroll.atEnd, JSON.stringify(scroll));
   check("Thinking phrase shimmers", seen.every((x) => x.anim === "thinking-shimmer"), JSON.stringify(seen.map((x) => x.anim)));
   const saved = await p.evaluate(() => sessionStorage.getItem("mccs-assistant:quantico") ?? "");
   check("Thinking phrase never saved", !THINKING.some((t) => saved.includes(t)) && !saved.includes('"thinking"'), saved.slice(0, 120));
