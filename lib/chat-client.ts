@@ -12,6 +12,9 @@ export const STATUS = "\u001d";
 /** Shown in place of typing dots until the answer starts. Same list as THINKING in public/widget.js. */
 export const THINKING = ["Hooking and jabbing, be right back…"];
 
+/** The one error visitors see for anything unexpected (same as the chat route's friendlyError). */
+export const FRIENDLY_ERROR = "Something went wrong. Please try again.";
+
 /** Demo app slugs that differ from the real subdomain (same map as scripts/extract-theme.mjs). */
 const SLUG_FOR_SUBDOMAIN: Record<string, string> = { lejeunenewriver: "lejeune" };
 
@@ -247,3 +250,31 @@ export function planText(plan: Plan, baseName: string): string {
 export function mapHref(place: string, location = ""): string {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place + (location ? `, ${location}` : ""))}`;
 }
+
+/** Sent-history cap for one assistant reply: well under the server's 4,000-character limit. */
+export const HISTORY_REPLY_CHARS = 3000;
+
+/**
+ * An assistant reply as it's resent in the conversation history. A plan reply becomes a compact
+ * text version (the intro, "Plan: <title>", one line per item); the stored conversation and the
+ * panel keep the full plan. Everything is capped at HISTORY_REPLY_CHARS.
+ */
+export function historyText(content: string, max = HISTORY_REPLY_CHARS): string {
+  const p = parsePlanReply(content);
+  if (!p) return cap(content, max);
+  if (!p.plan) return cap(planFallbackText(content), max);
+  const head = [p.intro, `Plan: ${p.plan.title}`].filter(Boolean).join("\n\n");
+  const lines = p.plan.sections.flatMap((s) => s.items.map((it) => `${s.name}: ${[it.task, it.where, it.when].filter(Boolean).join(", ")}`));
+  const tail = p.after ? `\n\n${p.after}` : "";
+  const reserve = 40; // room for "…and N more"
+  let out = cap(head, max - reserve);
+  let n = 0;
+  for (; n < lines.length; n++) {
+    if (out.length + 1 + lines[n].length > max - reserve) break;
+    out += `\n${lines[n]}`;
+  }
+  if (n < lines.length) out += `\n…and ${lines.length - n} more`;
+  return out.length + tail.length <= max ? out + tail : out;
+}
+
+const cap = (text: string, max: number) => (text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`);

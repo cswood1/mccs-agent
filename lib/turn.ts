@@ -93,3 +93,29 @@ export function buildMessages(
   // Restated right before it answers, where the model follows it far better.
   return [...messages, { role: "system", content: turnNote(options, today) }];
 }
+
+const MAX_MESSAGES = 30;
+export const MAX_MESSAGE_CHARS = 4000;
+
+/**
+ * Checks the conversation from the client; returns the problem, or null when it's fine. A long
+ * earlier assistant reply (e.g. a plan) never rejects the request: it's trimmed to the limit in
+ * place. The limit still applies to the visitor's own messages.
+ */
+export function validateMessages(messages: unknown): string | null {
+  if (!Array.isArray(messages) || messages.length === 0) return "messages must be a non-empty array";
+  if (messages.length > MAX_MESSAGES) return `Conversation too long (max ${MAX_MESSAGES} messages). Start a new chat.`;
+  for (const [i, m] of messages.entries()) {
+    if (!m || (m.role !== "user" && m.role !== "assistant") || typeof m.content !== "string" || !m.content.trim()) {
+      return `messages[${i}] must be {role: "user" | "assistant", content: non-empty string}`;
+    }
+    if (m.content.length > MAX_MESSAGE_CHARS) {
+      if (m.role === "user") return `messages[${i}] is too long (max ${MAX_MESSAGE_CHARS} characters)`;
+      m.content = m.content.slice(0, MAX_MESSAGE_CHARS);
+    }
+  }
+  if (messages[0].role !== "user" || messages.at(-1).role !== "user") {
+    return "Conversation must start and end with a user message";
+  }
+  return null;
+}

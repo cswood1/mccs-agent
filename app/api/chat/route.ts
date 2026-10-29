@@ -4,7 +4,7 @@ import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
 import { CROSS_BASE_TOOL, crossBaseStatus, runCrossBaseTool } from "@/lib/crossbase";
 import { rateLimit } from "@/lib/ratelimit";
-import { buildMessages, MAX_TOKENS, PLAN_MAX_TOKENS, planKind } from "@/lib/turn";
+import { buildMessages, MAX_TOKENS, PLAN_MAX_TOKENS, planKind, validateMessages } from "@/lib/turn";
 import { cleanClientText, pageInfo } from "@/lib/site/context";
 
 // Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
@@ -17,10 +17,8 @@ const SERVER_TOOL_STATUS: Record<string, string> = {
   web_search: "Searching for the latest MCCS info…",
 };
 
-const MAX_MESSAGES = 30;
 // Extra model calls per answer: server-tool pauses, plus our own tool (other installations' pages).
 const MAX_CONTINUATIONS = 4;
-const MAX_MESSAGE_CHARS = 4000;
 
 type PageRef = { url?: string; path?: string; title?: string; breadcrumb?: string[] };
 
@@ -44,14 +42,22 @@ export async function POST(request: Request) {
   try {
     body = await request.json();
   } catch {
-    return jsonError("Invalid JSON body", 400);
+    console.warn("[chat] rejected request: invalid JSON body");
+    return jsonError(friendlyError(null), 400);
   }
 
   const installation = getInstallation(String(body?.installationId ?? ""));
-  if (!installation) return jsonError("Unknown installation", 404);
+  if (!installation) {
+    console.warn(`[chat] rejected request: unknown installation ${JSON.stringify(String(body?.installationId ?? "")).slice(0, 80)}`);
+    return jsonError(friendlyError(null), 404);
+  }
 
+  // Validation detail goes to the log, never to the visitor.
   const problem = validateMessages(body.messages);
-  if (problem) return jsonError(problem, 400);
+  if (problem) {
+    console.warn(`[chat] rejected request: ${problem}`);
+    return jsonError(friendlyError(null), 400);
+  }
 
   const content = await loadContent(installation.id);
   if (!content) {
@@ -222,7 +228,10 @@ function buildPageNote(body: ChatRequest, inst: string, defaultChips: string[]):
 class FollowupSplitter {
   private buffer = "";
   private captured: string | null = null;
-  constructor(private out: (text: string) => void) {}
+  private out: (text: string) => void;
+  constructor(out: (text: string) => void) {
+    this.out = out;
+  }
 
   push(text: string) {
     if (this.captured !== null) {
@@ -301,21 +310,6 @@ function logTurn(installationId: string, final: Anthropic.Beta.BetaMessage) {
       console.log(`[chat]   search result: ${Array.isArray(c) ? `${c.length} results` : `error ${c.error_code}`}`);
     }
   }
-}
-
-function validateMessages(messages: unknown): string | null {
-  if (!Array.isArray(messages) || messages.length === 0) return "messages must be a non-empty array";
-  if (messages.length > MAX_MESSAGES) return `Conversation too long (max ${MAX_MESSAGES} messages). Start a new chat.`;
-  for (const [i, m] of messages.entries()) {
-    if (!m || (m.role !== "user" && m.role !== "assistant") || typeof m.content !== "string" || !m.content.trim()) {
-      return `messages[${i}] must be {role: "user" | "assistant", content: non-empty string}`;
-    }
-    if (m.content.length > MAX_MESSAGE_CHARS) return `messages[${i}] is too long (max ${MAX_MESSAGE_CHARS} characters)`;
-  }
-  if (messages[0].role !== "user" || messages.at(-1).role !== "user") {
-    return "Conversation must start and end with a user message";
-  }
-  return null;
 }
 
 function friendlyError(err: unknown): string {

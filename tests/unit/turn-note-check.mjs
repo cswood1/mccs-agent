@@ -52,6 +52,40 @@ check("Workout: Monday–Sunday, real facilities, classes, open gym, pool, rest"
 check("Plan mode needs a known kind", planKind({ mode: "plan", kind: "diet" }) === null && planKind({ kind: "arrival" }) === null && planKind({ mode: "plan", kind: "arrival" }) === "arrival");
 check("Plan mode raises max_tokens", PLAN_MAX_TOKENS > MAX_TOKENS && MAX_TOKENS === 16000);
 
+// Long plan replies in the history: compacted on the client, trimmed (never rejected) on the server.
+const { validateMessages, MAX_MESSAGE_CHARS } = await import("../../lib/turn.ts");
+const { historyText, FRIENDLY_ERROR } = await import("../../lib/chat-client.ts");
+const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const bigPlan = { title: "Your week at MCB Quantico", sections: days.map((d) => ({ name: d, items: Array.from({ length: 12 }, (_, k) => ({ task: `HITT instructor-led class ${k}`, detail: "A long detail line ".repeat(6), where: "HITT Center, Bldg 3117", when: "11:30am–12:30pm", sourceUrl: "https://quantico.usmc-mccs.org/recreation-fitness/fitness/hitt", confirm: true })) })) };
+const planReply = "Here’s a balanced week.\n\n```plan\n" + JSON.stringify(bigPlan, null, 2) + "\n```";
+const compact = historyText(planReply);
+check("Plan reply: well over the limit as stored", planReply.length > 20000, String(planReply.length));
+check("historyText: intro, “Plan: <title>”, one line per item, capped near 3,000 with “…and N more”",
+  compact.length <= 3000 && compact.startsWith("Here’s a balanced week.\n\nPlan: Your week at MCB Quantico\nMonday: HITT instructor-led class 0, HITT Center, Bldg 3117, 11:30am–12:30pm\n") && /\n…and \d+ more$/.test(compact) && !/```|"sections"|sourceUrl/.test(compact), compact.slice(0, 200) + " … " + compact.slice(-40));
+const small = historyText("Intro.\n\n```plan\n" + JSON.stringify({ title: "T", sections: [{ name: "Monday", items: [{ task: "Rest" }] }] }) + "\n```");
+check("historyText: a small plan lists every item, no “more”", small === "Intro.\n\nPlan: T\nMonday: Rest", small);
+check("historyText: plain replies pass through", historyText("Gym opens at 5.") === "Gym opens at 5.");
+const longAssistant = [{ role: "user", content: "Plan" }, { role: "assistant", content: "x".repeat(9000) }, { role: "user", content: "And then?" }];
+check("Server: a long earlier assistant message is trimmed to the limit, not rejected", validateMessages(longAssistant) === null && longAssistant[1].content.length === MAX_MESSAGE_CHARS);
+check("Server: the limit still applies to user messages", /too long/.test(validateMessages([{ role: "user", content: "x".repeat(4001) }]) ?? ""));
+
+// The route: validation detail is logged, never returned. No API key here, so no Claude call can happen.
+for (const k of ["ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "ANTHROPIC_PROFILE", "RATE_LIMIT"]) delete process.env[k];
+const { POST } = await import("../../app/api/chat/route.ts");
+const logged = [];
+const warn = console.warn;
+console.warn = (...a) => logged.push(a.join(" "));
+const post = (body) => POST(new Request("https://demo.test/api/chat", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
+const tooLongUser = await post({ installationId: "quantico", messages: [{ role: "user", content: "x".repeat(4001) }] });
+const badJson = await post("{not json");
+const longHistory = await post({ installationId: "quantico", messages: [{ role: "user", content: "Plan" }, { role: "assistant", content: planReply }, { role: "user", content: "Tell me more about: HITT instructor-led class 0 (HITT Center, Bldg 3117, 11:30am–12:30pm)" }] });
+console.warn = warn;
+const tooLongBody = await tooLongUser.json();
+check("Route: a rejected request returns the friendly error, not the validation text", tooLongUser.status === 400 && tooLongBody.error === FRIENDLY_ERROR && (await badJson.json()).error === FRIENDLY_ERROR, JSON.stringify(tooLongBody));
+check("Route: …and logs the detail server-side", logged.some((l) => /rejected request: messages\[0\] is too long/.test(l)) && logged.some((l) => /invalid JSON/.test(l)), JSON.stringify(logged));
+const longHistoryBody = await longHistory.json();
+check("Route: a history with a long plan reply passes validation (stops only at the missing key here)", longHistory.status === 500 && /ANTHROPIC_API_KEY/.test(longHistoryBody.error), JSON.stringify(longHistoryBody));
+
 for (const r of results) console.log(`${r.ok ? "PASS" : "FAIL"}  ${r.name}${r.ok ? "" : `  →  ${r.detail}`}`);
 const failed = results.filter((r) => !r.ok).length;
 console.log(`\n${results.length - failed}/${results.length} passed`);

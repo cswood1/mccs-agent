@@ -244,6 +244,11 @@ disagrees with it, ask before changing either.
     Open" card that opens `plan-panel.tsx` (right panel ≥48em, full-screen sheet on phones;
     checkboxes in localStorage, tel/map/source links, "Call to confirm", Print / Save as PDF, Copy).
     Invalid JSON shows the text. `tests/unit/turn-note-check.mjs` checks the prefix stays byte-identical.
+    History sent back to `/api/chat` compacts plan replies (`historyText`: intro, "Plan: <title>", one
+    line per item, ≤3,000 chars) and leaves out errored turns; the stored conversation keeps the full
+    plan. The route trims long assistant messages to 4,000 chars instead of rejecting them (the limit
+    still applies to user messages), logs validation detail and returns only the friendly error. Each
+    plan item has "Chat about this" (asks "Tell me more about: <task> (<where>, <when>)").
   - **Asking:** it uses `/api/chat` with the page's base and page path `/`, with the same stream
     format as the widget (`lib/chat-client.ts` mirrors widget.js: markdown, tel/map links, status and
     follow-up frames). The conversation layout works like a chat app:

@@ -58,7 +58,15 @@ async function open(opts = {}) {
       const realFetch = window.fetch;
       window.fetch = (url, init) => {
         if (!String(url).includes("/api/chat")) return realFetch(url, init);
-        window.__chatBodies.push(JSON.parse(init.body));
+        const req = JSON.parse(init.body);
+        window.__chatBodies.push(req);
+        // Like the old server: a message over 4,000 characters is rejected with raw validation text
+        // (the client must never send one, nor show the text). __failOnce forces that response.
+        const tooLong = req.messages.findIndex((m) => m.content.length > 4000);
+        if (tooLong >= 0 || window.__failOnce) {
+          window.__failOnce = false;
+          return Promise.resolve(new Response(JSON.stringify({ error: `messages[${Math.max(tooLong, 1)}] is too long (max 4000 characters)` }), { status: 400, headers: { "Content-Type": "application/json" } }));
+        }
         const enc = new TextEncoder();
         const body = new ReadableStream({
           async start(ctl) {
@@ -404,6 +412,62 @@ const WORKOUT = { title: "Your week at the gym", sections: ["Monday", "Tuesday",
   await p.locator(".fd-plan-card").click();
   const box = await p.getByRole("dialog").boundingBox();
   check("Phone: the plan opens as a full-screen sheet", box.x === 0 && box.y === 0 && box.width === 375 && box.height === 812, JSON.stringify(box));
+  await c.close();
+}
+
+// 3c. After a long plan: follow-ups and "Chat about this" send a compact history and succeed;
+// errors never show raw text, and errored turns are never resent.
+{
+  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const big = { title: "Your week at Camp Pendleton", sections: days.map((d) => ({ name: d, items: Array.from({ length: 6 }, (_, k) => ({ task: `HITT instructor-led class ${k}`, detail: "Coached intervals for every fitness level.", where: "HITT Center, Bldg 3117", when: "11:30am–12:30pm", sourceUrl: "https://pendleton.usmc-mccs.org/recreation-fitness/fitness", confirm: k % 2 === 0 })) })) };
+  const bigAnswer = "Here’s a balanced week.\n\n```plan\n" + JSON.stringify(big, null, 2) + "\n```";
+  const { c, p } = await open({ path: "/ask/pendleton" });
+  const underLimit = (b) => b.messages.every((m) => m.content.length <= 4000);
+  const compactPlan = (b) => b.messages[1].content.startsWith("Here’s a balanced week.\n\nPlan: Your week at Camp Pendleton\nMonday: HITT instructor-led class 0, HITT Center, Bldg 3117, 11:30am–12:30pm") && b.messages[1].content.length <= 3000 && !/```|"sections"/.test(b.messages[1].content);
+  const shownErrors = async () => ((await p.locator(".fd-conv").textContent()) ?? "").match(/messages\[\d|too long|max 4000/g);
+  await p.getByRole("tab", { name: "Marine", exact: true }).click();
+  await p.evaluate((a) => { window.__answer = a; }, bigAnswer);
+  await p.locator(".fd-card[data-card=workout]").click();
+  await p.locator(".fd-plan-card").waitFor();
+  check("Long plan fixture is over the limit", bigAnswer.length > 4000, String(bigAnswer.length));
+  await p.evaluate(() => { window.__answer = undefined; });
+  await ask(p, "What about the pool?");
+  const f1 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("After a long plan, a follow-up sends under the limit and succeeds", underLimit(f1) && (await p.locator(".fd-a").last().evaluate((el) => !el.classList.contains("is-error") && el.textContent.startsWith("Start with"))), JSON.stringify(f1.messages.map((m) => m.content.length)));
+  check("…the history carries the plan summary, not the JSON", compactPlan(f1), f1.messages[1].content.slice(0, 160));
+  await p.locator(".fd-plan-card").click();
+  const asked = await p.locator(".fd-q").count();
+  await p.getByRole("button", { name: "Chat about HITT instructor-led class 0" }).first().click();
+  await p.locator(".fd-q").nth(asked).waitFor();
+  await p.locator(".fd-followups").waitFor();
+  const f2 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("“Chat about this” after a long plan sends under the limit and succeeds", underLimit(f2) && compactPlan(f2) && f2.messages.at(-1).content === "Tell me more about: HITT instructor-led class 0 (HITT Center, Bldg 3117, 11:30am–12:30pm)" && (await p.locator(".fd-a.is-error").count()) === 0, JSON.stringify(f2.messages.map((m) => m.content.length)));
+  const stored = await p.evaluate(() => sessionStorage.getItem("mccs-front:conversation:pendleton") ?? "");
+  await p.locator(".fd-plan-card").click();
+  check("The stored conversation and the panel keep the full plan", stored.includes("```plan") && stored.includes("Sunday") && (await p.getByRole("dialog").locator("li").count()) === 42);
+  await p.keyboard.press("Escape");
+
+  // A failed request shows the friendly error only, and isn't resent.
+  await p.evaluate(() => { window.__failOnce = true; });
+  await p.locator("#fd-ask-input").fill("This one fails");
+  await p.locator("#fd-ask-input").press("Enter");
+  await p.locator(".fd-a.is-error").waitFor();
+  check("Errors: the friendly message, never the raw validation text", (await p.locator(".fd-a.is-error").textContent()) === "Something went wrong. Please try again." && !(await shownErrors()), await p.locator(".fd-a.is-error").textContent());
+  await ask(p, "Where is the commissary?");
+  const f3 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("The errored turn (question and error) is never resent", !f3.messages.some((m) => m.content === "This one fails" || /Something went wrong/.test(m.content)) && f3.messages.at(-1).content === "Where is the commissary?" && f3.messages.every((m, i) => m.role === (i % 2 ? "assistant" : "user")) && underLimit(f3), JSON.stringify(f3.messages.map((m) => [m.role, m.content.slice(0, 30)])));
+
+  // Recovery: a conversation saved before the fix (full plan, then a raw "too long" error) works on the next question.
+  await p.evaluate((a) => sessionStorage.setItem("mccs-front:conversation:pendleton", JSON.stringify({ audience: "marine", messages: [
+    { role: "user", content: "Build me a weekly workout plan using the gyms, pools and classes at MCB Camp Pendleton.", }, { role: "assistant", content: a, plan: "workout" },
+    { role: "user", content: "What about the pool?" }, { role: "assistant", content: "messages[1] is too long (max 4000 characters) Please try again.", error: true },
+  ] })), bigAnswer);
+  await p.reload({ waitUntil: "networkidle" });
+  check("Recovery: a saved raw error shows as the friendly one", !(await shownErrors()) && (await p.locator(".fd-a.is-error").textContent()) === "Something went wrong. Please try again.");
+  await ask(p, "What about the pool?");
+  const f4 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Recovery: the next question works without a new conversation", underLimit(f4) && compactPlan(f4) && f4.messages.length === 3 && f4.audience === "marine" && (await p.locator(".fd-a").last().evaluate((el) => !el.classList.contains("is-error"))), JSON.stringify(f4.messages.map((m) => m.content.length)));
+  check("No raw error text shown anywhere", !(await shownErrors()));
   await c.close();
 }
 

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { firstMccsLink, markdown, parsePlanReply, parseStream, planFallbackText, shortDate, THINKING, speechText, type Plan } from "@/lib/chat-client";
+import { FRIENDLY_ERROR, firstMccsLink, historyText, markdown, parsePlanReply, parseStream, planFallbackText, shortDate, THINKING, speechText, type Plan } from "@/lib/chat-client";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
 import { PLAN_LABEL, PlanPanel, type PlanKind } from "./plan-panel";
@@ -85,6 +85,9 @@ const spokenText = (content: string) => {
   return p?.plan ? [p.intro, p.after].filter(Boolean).join("\n\n") : p ? planFallbackText(content) : content;
 };
 
+/** An error whose message (if any) is fit to show; every other failure shows FRIENDLY_ERROR. */
+class ShownError extends Error {}
+
 /** The plan's kind: as asked for, else a Monday–Sunday plan is a workout. */
 const kindOf = (m: Msg, plan: Plan | null | undefined): PlanKind =>
   m.plan ?? (plan?.sections.some((s) => /^monday$/i.test(s.name)) ? "workout" : "arrival");
@@ -163,7 +166,8 @@ export default function FrontDoor({
     try {
       const c = JSON.parse(sessionStorage.getItem(convoKey(instId)) || "null");
       if (c && Array.isArray(c.messages) && c.messages.length) {
-        setMessages(c.messages);
+        // Errored turns saved before errors were always friendly may hold raw validation text.
+        setMessages(c.messages.map((m: Msg) => (m.error ? { ...m, content: FRIENDLY_ERROR } : m)));
         if (AUDIENCES.some((a) => a.id === c.audience)) {
           setAudience(c.audience);
           setTab(c.audience);
@@ -452,7 +456,18 @@ export default function FrontDoor({
       setAtBottom(true);
       setMode("chat");
       stopSpeaking();
-      const history: Msg[] = [...messages.filter((m) => !m.error && m.content), { role: "user", content: q }];
+      // History as sent: errored turns (the reply and its question) left out, plan replies compacted
+      // (historyText); the stored conversation keeps everything.
+      const history = [
+        ...messages
+          .filter((m, i) => {
+            if (!m.content || m.error) return false;
+            const reply = messages[i + 1];
+            return !(m.role === "user" && reply?.role === "assistant" && (reply.error || !reply.content));
+          })
+          .map((m) => ({ role: m.role, content: m.role === "assistant" ? historyText(m.content) : m.content })),
+        { role: "user" as const, content: q },
+      ];
       while (history.length > 29) history.shift();
       while (history.length && history[0].role !== "user") history.shift();
       const replyIndex = messages.length + 1;
@@ -473,7 +488,7 @@ export default function FrontDoor({
           signal: abort.signal,
           body: JSON.stringify({
             installationId: inst.id,
-            messages: history.map((m) => ({ role: m.role, content: m.content })),
+            messages: history,
             page: { url: location.href, path: "/", title: "Ask MCCS front door" },
             trail: [],
             ...(who ? { audience: who } : {}),
@@ -482,7 +497,10 @@ export default function FrontDoor({
         });
         if (!res.ok || !res.body) {
           const j = await res.json().catch(() => ({}));
-          throw new Error(j.error || `Request failed (${res.status})`);
+          console.warn("[ask] chat request failed", res.status, j.error);
+          // Only the rate-limit and "not loaded yet" messages are written for visitors; anything
+          // else (validation detail) gets the friendly error.
+          throw new ShownError(res.status === 429 || res.status === 503 ? j.error : undefined);
         }
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
@@ -495,7 +513,7 @@ export default function FrontDoor({
         }
         const final = parseStream(raw, true);
         const content = final.text.trim();
-        if (!content) throw new Error("No answer came back.");
+        if (!content) throw new ShownError();
         patch({ content, status: undefined, thinking: undefined, followups: final.followups });
         setBusy(false);
         if (opts.spoken) speak(replyIndex, spokenText(content));
@@ -503,7 +521,8 @@ export default function FrontDoor({
         if (trust && !abort.signal.aborted) patch({ trust });
       } catch (err) {
         if (abort.signal.aborted) return;
-        const msg = err instanceof Error ? err.message : "Couldn't reach Ask MCCS.";
+        if (!(err instanceof ShownError)) console.warn("[ask] chat failed", err);
+        const msg = (err instanceof ShownError && err.message) || FRIENDLY_ERROR;
         const partial = parseStream(raw).text.trim();
         patch({ content: (partial ? partial + "\n\n" : "") + msg + (/try again/i.test(msg) ? "" : " Please try again."), status: undefined, thinking: undefined, error: true });
         setBusy(false);
