@@ -1063,30 +1063,90 @@
   }
 }
 
-/* ---------- conversation ---------- */
+/* ---------- conversation: title on top, the conversation in the middle, the ask box docked at the
+   bottom of the viewport (like chat apps) ---------- */
+/* No scroll anchoring in a conversation: the code decides when to follow the newest message, and a
+   reader who has scrolled up stays exactly where they are while an answer streams in. */
+html:has(.fd--chat) {
+  overflow-anchor: none;
+}
+/* The page is at least one viewport tall, so a short conversation still has the box at the bottom. */
+body:has(.fd--chat) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.fd--chat {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
 .fd-chat-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   max-width: 48em;
   margin: 0 auto;
-  padding: 0 var(--fd-pad) 2em;
+  padding: 0 var(--fd-pad);
 }
-.fd-dock {
-  position: sticky;
-  top: env(safe-area-inset-top, 0);
-  z-index: 10;
-  padding: 0.5em 0 0.8em;
-  background: var(--fd-bg);
-  animation: fd-dock 0.35s ease-out;
-}
-.fd-dock-title {
-  margin: 0 0 0.45em;
+.fd-chat-title {
+  margin: 0 0 0.3em;
   font-family: var(--fd-serif);
   font-weight: 700;
-  font-size: 1.25em;
+  font-size: 1.1em;
+}
+/* Sticky, not fixed: pinned to the bottom while the conversation scrolls under it, and in the flow at
+   the end, so nothing hides behind it. --fd-kb lifts it above a phone's on-screen keyboard. */
+.fd-dock {
+  position: sticky;
+  bottom: var(--fd-kb, 0px);
+  z-index: 10;
+  margin-top: 1em;
+  padding: 0.6em 0 max(0.5em, env(safe-area-inset-bottom));
+  background: var(--fd-bg);
+}
+/* A soft fade above it, so text scrolling underneath doesn't run into the box. */
+.fd-dock::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 1.75em;
+  background: linear-gradient(to bottom, transparent, var(--fd-bg));
+  pointer-events: none;
 }
 .fd-dock .fd-ask {
   max-width: none;
 }
+/* About 4 lines at most (Large text too), then it scrolls. */
+.fd-dock .fd-ask textarea {
+  max-height: calc(4 * 1.4em + 1.4em);
+}
+.fd-dock-note {
+  margin: 0.45em 0 0;
+  font-size: 0.75em;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--fd-muted);
+}
+.fd-dock-note a {
+  color: var(--fd-navy);
+  font-weight: 600;
+}
+.fd-latest {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.4em);
+  translate: -50% 0;
+  z-index: 1;
+  min-height: 2.75em;
+  box-shadow: var(--fd-shadow);
+}
 .fd-conv {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -1218,16 +1278,6 @@
   margin: 0 0 0.25em;
 }
 
-@keyframes fd-dock {
-  from {
-    transform: translateY(1.5em) scale(1.03);
-    opacity: 0.4;
-  }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
 @keyframes fd-fade {
   from {
     opacity: 0;
@@ -1249,7 +1299,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fd-dock,
   .fd-conv,
   .fd-status,
   .fd-rec-dot {

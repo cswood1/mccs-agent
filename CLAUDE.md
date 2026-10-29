@@ -232,9 +232,24 @@ disagrees with it, ask before changing either.
   - **Hero:** installation pill, Display menu (Light/Dark, Large text, High contrast; saved in
     localStorage), ask box with rotating examples, mic and send, starter chips from `defaultChips`,
     5 "moment" cards, installation cards, trust strip.
-  - **Asking:** the hero docks into a compact bar and the conversation shows as a reading column. It
-    uses `/api/chat` with the page's base and page path `/`, with the same stream format as the widget
-    (`lib/chat-client.ts` mirrors widget.js: markdown, tel/map links, status and follow-up frames).
+  - **Asking:** it uses `/api/chat` with the page's base and page path `/`, with the same stream
+    format as the widget (`lib/chat-client.ts` mirrors widget.js: markdown, tel/map links, status and
+    follow-up frames). The conversation layout works like a chat app:
+    - A small "Ask MCCS · <base>" title under the pills, the conversation in the centered reading
+      column, and follow-up chips inline under the latest answer.
+    - The ask box is docked at the bottom of the viewport: `position: sticky` at the end of a page
+      that's at least one viewport tall, so it never covers the end of the conversation. It has a
+      soft fade above it and safe-area padding.
+    - Under the box, small print: the privacy note plus the demo and photo-credits line. The hero
+      footer isn't shown in chat mode.
+    - Following: it scrolls to the newest message on send and while an answer streams. Only the
+      reader scrolling up stops it, and then a "↓ Latest" pill shows. A ResizeObserver catches every
+      size change. Scrolls are explicitly `instant`, because Bootstrap's reboot makes page scrolling
+      smooth. Scroll anchoring is off in chat mode.
+    - The first question slides the box from the hero to the dock (FLIP, 450ms; a 150ms fade with
+      reduced motion).
+    - Phones: `--fd-kb` from `visualViewport` lifts the dock above the keyboard.
+    - The docked box grows to about 4 lines, then scrolls. "New conversation" returns to the hero.
   - **Trust line:** under each answer, from the first MCCS link and that page's `fetchedAt` (the page
     API now returns it).
   - **Speech:** Listen/Stop/Slow use speechSynthesis; the mic uses SpeechRecognition (hidden when

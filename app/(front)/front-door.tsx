@@ -253,6 +253,80 @@ export default function FrontDoor({
     ta.style.height = `${ta.scrollHeight}px`; // capped by max-height in front.css
   }, [question, askPlaceholder, display.large, mode]);
 
+  // ---------- conversation layout: ask box docked at the bottom ----------
+  // Follow the newest message while the reader is at the bottom; once they scroll up to read, leave
+  // them there and offer "↓ Latest" instead.
+  const stickRef = useRef(true);
+  const [atBottom, setAtBottom] = useState(true);
+  const heroAskRect = useRef<DOMRect | null>(null); // where the ask box was in the hero, for the slide
+  // Following jumps ("instant"): Bootstrap's reboot turns on smooth scrolling for the whole page.
+  const scrollToLatest = (behavior: ScrollBehavior = "instant") => {
+    stickRef.current = true;
+    setAtBottom(true);
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior });
+  };
+  const chatMainRef = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    if (mode !== "chat") return;
+    // Only scrolling up stops following; content growing below the reader doesn't.
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      const near = document.documentElement.scrollHeight - (y + window.innerHeight) < 80;
+      if (near) stickRef.current = true;
+      else if (y < lastY) stickRef.current = false;
+      lastY = y;
+      setAtBottom(stickRef.current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // Whatever grows the conversation (streaming text, follow-ups, Listen buttons, fonts) keeps the
+    // newest message in view while following.
+    const grown = new ResizeObserver(() => {
+      if (stickRef.current) window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "instant" });
+    });
+    if (chatMainRef.current) grown.observe(chatMainRef.current);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      grown.disconnect();
+    };
+  }, [mode]);
+  useLayoutEffect(() => {
+    if (mode === "chat" && stickRef.current) window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "instant" });
+  }, [messages, mode, busy]);
+  // Phones: keep the docked box above the on-screen keyboard.
+  useEffect(() => {
+    const vv = window.visualViewport;
+    const root = rootRef.current;
+    if (mode !== "chat" || !vv || !root) return;
+    const update = () => root.style.setProperty("--fd-kb", `${Math.max(0, Math.round(window.innerHeight - vv.height - vv.offsetTop))}px`);
+    update();
+    vv.addEventListener("resize", update);
+    vv.addEventListener("scroll", update);
+    return () => {
+      vv.removeEventListener("resize", update);
+      vv.removeEventListener("scroll", update);
+      root.style.removeProperty("--fd-kb");
+    };
+  }, [mode]);
+  // The first question: the ask box slides from the hero down to its docked place (a fade with
+  // reduced motion).
+  useLayoutEffect(() => {
+    const from = heroAskRect.current;
+    heroAskRect.current = null;
+    const form = askRef.current?.closest("form");
+    if (mode !== "chat" || !from || !form?.animate) return;
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "instant" });
+    const to = form.getBoundingClientRect();
+    if (reducedMotion) {
+      form.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, easing: "ease-out" });
+    } else {
+      form.animate(
+        [{ transform: `translate(${from.left - to.left}px, ${from.top - to.top}px)`, opacity: 0.85 }, { transform: "none", opacity: 1 }],
+        { duration: 450, easing: "cubic-bezier(.2, .8, .2, 1)" },
+      );
+    }
+  }, [mode, reducedMotion]);
+
   // Remember the conversation for this tab (display-only fields stay out of what's sent).
   useEffect(() => {
     if (!restored.current) return;
@@ -325,6 +399,9 @@ export default function FrontDoor({
       const q = text.trim();
       if (!q || busy || !inst) return;
       setQuestion("");
+      if (mode === "hero") heroAskRect.current = askRef.current?.closest("form")?.getBoundingClientRect() ?? null;
+      stickRef.current = true; // sending always shows the newest message
+      setAtBottom(true);
       setMode("chat");
       stopSpeaking();
       const history: Msg[] = [...messages.filter((m) => !m.error && m.content), { role: "user", content: q }];
@@ -381,12 +458,13 @@ export default function FrontDoor({
         setBusy(false);
       }
     },
-    [busy, inst, messages, speak, stopSpeaking, trustLine],
+    [busy, inst, messages, mode, speak, stopSpeaking, trustLine],
   );
 
   const newConversation = () => {
     resetConversation();
     setMode("hero");
+    window.scrollTo({ top: 0, behavior: "instant" });
     setTimeout(() => askRef.current?.focus(), 0);
   };
 
@@ -671,14 +749,10 @@ export default function FrontDoor({
           </section>
         </main>
       ) : (
-        <main className="fd-main fd-chat-main">
-          <div className="fd-dock">
-            <p className="fd-dock-title" aria-hidden="true">
-              <span className="fd-red">Ask MCCS</span> · {inst?.shortName}
-            </p>
-            {askForm}
-            {voiceStatus}
-          </div>
+        <main className="fd-main fd-chat-main" ref={chatMainRef}>
+          <p className="fd-chat-title" aria-hidden="true">
+            <span className="fd-red">Ask MCCS</span> · {inst?.shortName}
+          </p>
           <h1 className="fd-sr">Ask MCCS conversation</h1>
           <section className="fd-conv" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
             {messages.map((m, i) =>
@@ -740,12 +814,30 @@ export default function FrontDoor({
               ))}
             </div>
           )}
+          {/* Docked at the bottom of the viewport (sticky, so it never covers the end of the conversation). */}
+          <div className="fd-dock">
+            {!atBottom && (
+              <button type="button" className="fd-pill fd-latest" onClick={() => scrollToLatest(reducedMotion ? "instant" : "smooth")}>
+                <span aria-hidden="true">↓</span> Latest
+              </button>
+            )}
+            {voiceStatus}
+            {askForm}
+            <p className="fd-dock-note">
+              Please don’t include personal or sensitive information.{" "}
+              <span className="fd-dock-meta">
+                Prototype demo, not the official MCCS site · <Link href="/credits">Photo credits</Link>
+              </span>
+            </p>
+          </div>
         </main>
       )}
 
-      <footer className="fd-footer">
-        Prototype demo — not the official MCCS site. · <Link href="/credits">Photo credits</Link>
-      </footer>
+      {mode === "hero" && (
+        <footer className="fd-footer">
+          Prototype demo — not the official MCCS site. · <Link href="/credits">Photo credits</Link>
+        </footer>
+      )}
     </div>
   );
 

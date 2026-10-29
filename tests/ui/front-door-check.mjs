@@ -942,6 +942,93 @@ const labelsFit = (p) =>
   await c.close();
 }
 
+// 11c. Conversation layout: the title on top, the conversation in the middle, the ask box docked at
+// the bottom of the viewport; follows the newest message unless the reader has scrolled up.
+// Ask and wait for the new answer, its follow-ups and the end of the box's slide.
+const askAndWait = async (p, q) => {
+  const n = await p.locator(".fd-a").count();
+  await p.locator("#fd-ask-input").fill(q);
+  await p.locator("#fd-ask-input").press("Enter");
+  await p.waitForFunction(
+    (n) => document.querySelectorAll(".fd-a").length > n && !document.querySelector(".fd-thinking") && document.querySelector(".fd-followups") && document.querySelector(".fd-dock .fd-ask").getAnimations().length === 0,
+    n,
+  );
+  await p.waitForTimeout(150);
+};
+const layout = (p) => p.evaluate(() => {
+  const r = (el) => { const x = el.getBoundingClientRect(); return { top: Math.round(x.top), bottom: Math.round(x.bottom), left: Math.round(x.left), right: Math.round(x.right) }; };
+  const dock = document.querySelector(".fd-dock");
+  const lastMsg = [...document.querySelectorAll(".fd-conv > *")].at(-1);
+  const end = document.querySelector(".fd-followups") ?? lastMsg;
+  const latest = document.querySelector(".fd-latest");
+  return { vh: innerHeight, dock: r(dock), ask: r(document.querySelector(".fd-dock .fd-ask")), conv: r(document.querySelector(".fd-conv")), end: r(end), title: r(document.querySelector(".fd-chat-title")), pills: r(document.querySelector(".fd-top")),
+    note: document.querySelector(".fd-dock-note")?.textContent ?? "", noteSize: parseFloat(getComputedStyle(document.querySelector(".fd-dock-note")).fontSize), bodySize: parseFloat(getComputedStyle(document.querySelector(".fd-a") ?? document.body).fontSize),
+    scrollable: document.documentElement.scrollHeight > innerHeight + 1, gap: document.documentElement.scrollHeight - (scrollY + innerHeight), latest: !!latest, sticky: getComputedStyle(dock).position, fade: getComputedStyle(dock, "::before").backgroundImage };
+});
+{
+  const { c, p } = await open({ viewport: { width: 1280, height: 640 } });
+  await p.locator("#fd-ask-input").fill("Where is child care?");
+  await p.locator("#fd-ask-input").press("Enter");
+  const slide = await p.locator(".fd-dock .fd-ask").evaluate((el) => el.getAnimations().map((a) => ({ d: a.effect.getTiming().duration, f: a.effect.getKeyframes().map((k) => k.transform ?? null) })));
+  check("First question: the ask box slides from the hero to the dock", slide.length === 1 && slide[0].d === 450 && /translate\(/.test(slide[0].f[0] ?? ""), JSON.stringify(slide));
+  await p.waitForFunction(() => document.querySelector(".fd-followups") && document.querySelector(".fd-dock .fd-ask").getAnimations().length === 0);
+  let L = await layout(p);
+  check("Chat: title on top under the pills, conversation in the middle, ask box at the bottom", L.title.top >= L.pills.bottom - 1 && L.title.bottom <= L.conv.top + 1 && L.dock.top >= L.end.bottom && Math.abs(L.dock.bottom - L.vh) <= 1, JSON.stringify(L));
+  check("Chat: the box is the column's width; follow-ups sit above it", L.ask.left >= L.conv.left - 1 && L.ask.right <= L.conv.right + 1 && L.ask.right - L.ask.left >= (L.conv.right - L.conv.left) - 2 && L.end.bottom <= L.dock.top, JSON.stringify(L));
+  check("Chat: privacy note in small text under the box; soft fade above it", /Please don’t include personal or sensitive information/.test(L.note) && L.noteSize < L.bodySize && /gradient/.test(L.fade) && L.sticky === "sticky", JSON.stringify({ note: L.note, size: L.noteSize, fade: L.fade }));
+  for (const q of ["What about the waitlist?", "And the hours?", "Any part-day programs?"]) await askAndWait(p, q);
+  L = await layout(p);
+  check("Long conversation: it scrolls, the box stays pinned to the bottom, and sending shows the newest message", L.scrollable && Math.abs(L.dock.bottom - L.vh) <= 1 && L.gap <= 2 && L.end.bottom <= L.dock.top && !L.latest, JSON.stringify(L));
+  // Scrolled up to read: no yank while an answer streams; "↓ Latest" instead.
+  await p.evaluate(() => { window.__hold = true; window.__release = false; });
+  await p.locator("#fd-ask-input").fill("One more?");
+  await p.locator("#fd-ask-input").press("Enter");
+  await p.locator(".fd-thinking").waitFor();
+  await p.evaluate(() => window.scrollBy({ top: -500, behavior: "instant" }));
+  await p.waitForTimeout(300);
+  const yUp = await p.evaluate(() => scrollY);
+  await p.evaluate(() => { window.__release = true; });
+  await p.locator(".fd-followups").waitFor();
+  await p.waitForTimeout(300);
+  L = await layout(p);
+  const yAfter = await p.evaluate(() => scrollY);
+  check("Scrolled up: the answer streams in without yanking the reader down", Math.abs(yAfter - yUp) <= 2 && L.gap > 80, JSON.stringify({ yUp, yAfter, gap: L.gap }));
+  check("Scrolled up: a “↓ Latest” button shows", L.latest && (await p.locator(".fd-latest").textContent()).includes("Latest"));
+  await p.locator(".fd-latest").click();
+  await p.waitForFunction(() => document.documentElement.scrollHeight - (scrollY + innerHeight) < 4, null, { timeout: 3000 }).catch(() => {});
+  L = await layout(p);
+  check("“↓ Latest” goes to the newest message and hides", L.gap <= 4 && !L.latest, JSON.stringify(L));
+  await p.evaluate(() => { window.__hold = false; });
+  // New conversation: back to the full hero, the box in the hero.
+  await p.locator(".fd-new").click();
+  check("New conversation restores the hero with the box in it", (await p.locator(".fd.fd--hero .fd-hero-text .fd-ask").count()) === 1 && (await p.locator(".fd-dock").count()) === 0 && (await p.locator(".fd-footer").count()) === 1);
+  await c.close();
+}
+{
+  // Phone, Large text, reduced motion.
+  const { c, p } = await open({ viewport: { width: 375, height: 812 }, mobile: true, reducedMotion: "reduce" });
+  await p.evaluate(() => localStorage.setItem("mccs-front:display", JSON.stringify({ theme: "light", large: true, contrast: false })));
+  await p.reload({ waitUntil: "networkidle" });
+  await p.locator("#fd-ask-input").fill("Where is child care?");
+  await p.locator("#fd-ask-input").press("Enter");
+  const fade = await p.locator(".fd-dock .fd-ask").evaluate((el) => el.getAnimations().map((a) => ({ d: a.effect.getTiming().duration, f: a.effect.getKeyframes().map((k) => Object.keys(k).filter((x) => !["offset", "easing", "composite", "computedOffset"].includes(x))) })));
+  check("Reduced motion: the box just fades into the dock (opacity only)", fade.length === 1 && fade[0].d === 150 && fade[0].f.every((keys) => keys.join() === "opacity"), JSON.stringify(fade));
+  await p.waitForFunction(() => document.querySelector(".fd-followups"));
+  for (const q of ["What about the waitlist?", "And the hours?"]) await askAndWait(p, q);
+  const L = await layout(p);
+  const pad = await p.locator(".fd-dock").evaluate((el) => getComputedStyle(el).paddingBottom);
+  const wide = await p.evaluate(() => document.documentElement.scrollWidth);
+  check("375px, Large text: box pinned at the bottom, the conversation scrolls above it, nothing hidden or wider than the screen", (await p.locator(".fd").getAttribute("data-text")) === "large" && L.vh === 812 && wide <= 375 && L.scrollable && Math.abs(L.dock.bottom - L.vh) <= 1 && L.end.bottom <= L.dock.top && L.dock.right <= 375 && L.gap <= 2, JSON.stringify({ L, pad }));
+  await p.locator("#fd-ask-input").fill(Array.from({ length: 12 }, (_, i) => `Line ${i + 1}`).join("\n"));
+  const box = await p.locator("#fd-ask-input").evaluate((el) => ({ h: el.clientHeight, sh: el.scrollHeight, lh: parseFloat(getComputedStyle(el).lineHeight), overflow: getComputedStyle(el).overflowY }));
+  check("Large text: the docked box grows to about 4 lines, then scrolls", box.h <= box.lh * 5.2 && box.h >= box.lh * 3.5 && box.sh > box.h && box.overflow === "auto", JSON.stringify(box));
+  // The on-screen keyboard: --fd-kb (from visualViewport) lifts the dock.
+  await p.evaluate(() => { document.querySelector(".fd").style.setProperty("--fd-kb", "300px"); window.dispatchEvent(new Event("scroll")); });
+  const lifted = await p.locator(".fd-dock").evaluate((el) => ({ bottom: el.getBoundingClientRect().bottom, css: getComputedStyle(el).bottom }));
+  check("Phone keyboard: the dock sits above it (bottom offset from visualViewport)", lifted.css === "300px" && Math.abs(lifted.bottom - (812 - 300)) <= 2, JSON.stringify(lifted));
+  await c.close();
+}
+
 // 12. Explore fits one viewport on common laptop sizes; banner and Display pill always fully visible.
 for (const [w, h] of [[1280, 600], [1280, 720], [1440, 900], [1512, 982], [1920, 1080]]) {
   const { c, p } = await open({ path: "/", viewport: { width: w, height: h } });
