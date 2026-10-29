@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { firstMccsLink, markdown, parseStream, shortDate, THINKING, speechText } from "@/lib/chat-client";
+import { firstMccsLink, markdown, parsePlanReply, parseStream, planFallbackText, shortDate, THINKING, speechText, type Plan } from "@/lib/chat-client";
 import { DisplayMenu, useDisplay } from "./display-menu";
 import type { Photo } from "./photos";
+import { PLAN_LABEL, PlanPanel, type PlanKind } from "./plan-panel";
 import { ARRIVED_KEY, GLOBE_ICON, LAST_KEY, useInputType, useReturnShortcut, warm, write } from "./shared";
 
 export type FrontInstallation = {
@@ -29,6 +30,8 @@ type Msg = {
   followups?: string[];
   trust?: string;
   error?: boolean;
+  /** Plan mode: the kind of plan this reply was asked for (its ```plan block opens in the panel). */
+  plan?: PlanKind;
 };
 
 // Conversation per base, for this tab: switching base starts fresh; coming back restores it.
@@ -43,14 +46,48 @@ const HOLD_MS = 3250;
 const ERASE_MS = 300;
 const SLIDE_MS = 6500; // hero photo carousel
 
-/** "Start with a moment": each numbered card opens the conversation with a set question. */
-const MOMENTS: { id: string; title: string; blurb: string; question: (base: string) => string }[] = [
-  { id: "arrived", title: "I just arrived", blurb: "Get a First 7 Days plan for your new installation.", question: (b) => `I just arrived at ${b}. Can you give me a First 7 Days plan?` },
-  { id: "pcs-out", title: "I’m PCSing out", blurb: "What to wrap up on base before you go.", question: (b) => `I'm PCSing out of ${b} soon. What should I take care of before I leave?` },
-  { id: "talk", title: "I need someone to talk to", blurb: "Confidential support, right now.", question: () => "I need someone to talk to." },
-  { id: "kids", title: "Childcare and youth", blurb: "Child care, camps, school help and youth programs.", question: () => "What child care and youth programs are there for my kids?" },
-  { id: "active", title: "Getting active", blurb: "Gyms, classes, pools and sports.", question: () => "I want to get active. What gyms, classes and sports are there?" },
+/** Lower section: who's asking. Sent as `audience` (lib/turn.ts adds "The user is a …"). */
+type Audience = "marine" | "family" | "retiree" | "community";
+const AUDIENCES: { id: Audience; label: string }[] = [
+  { id: "marine", label: "Marine" },
+  { id: "family", label: "Marine Family" },
+  { id: "retiree", label: "Retiree & Veteran" },
+  { id: "community", label: "Community" },
 ];
+
+type Starter = { id: string; title: string; blurb: string; question: (base: string) => string; plan?: PlanKind };
+/** "Start your next chapter": two plan-mode cards for everyone, then one per audience. */
+const PLAN_CARDS: Starter[] = [
+  { id: "arrival", title: "New to this installation", blurb: "Your arrival plan: this week, the first 30 days, and once you’re settled.", plan: "arrival", question: (b) => `I'm new to ${b}. Can you make me an arrival plan?` },
+  { id: "workout", title: "Build my weekly workout plan", blurb: "Seven days of classes, open gym, pool and rest, at this installation’s facilities.", plan: "workout", question: (b) => `Build me a weekly workout plan using the gyms, pools and classes at ${b}.` },
+];
+const AUDIENCE_CARD: Record<Audience, Starter> = {
+  marine: { id: "pcs-out", title: "PCSing out", blurb: "What to wrap up on base before you go.", question: (b) => `I'm PCSing out of ${b} soon. What should I take care of before I leave?` },
+  family: { id: "kids", title: "Childcare & schools", blurb: "Child care, school help and youth programs.", question: (b) => `What child care and school support is there for my kids at ${b}?` },
+  retiree: { id: "retiree", title: "What I can use on base", blurb: "MCCS programs and services open to retirees and veterans.", question: (b) => `I'm a retiree or veteran. Which MCCS programs and services at ${b} can I use?` },
+  community: { id: "visiting", title: "Visiting the base", blurb: "Getting on base and what visitors can do.", question: (b) => `I'm visiting ${b}. What do I need to get on base, and what can visitors use?` },
+};
+/** "Everyday support" tiles, the same for every audience. */
+const TILES: Starter[] = [
+  { id: "childcare", title: "Childcare & Schools", blurb: "Care, school transitions and youth", question: (b) => `What child care and school support is there at ${b}?` },
+  { id: "fitness", title: "Fitness & Sports", blurb: "Train, play and stay ready", question: (b) => `What gyms, classes and sports are there at ${b}?` },
+  { id: "money", title: "Money & Benefits", blurb: "Build a plan for your finances", question: (b) => `What financial help and benefits does MCCS offer at ${b}?` },
+  { id: "education", title: "Education & Careers", blurb: "Learning and your next step", question: (b) => `What education and career help is there at ${b}?` },
+  { id: "family", title: "Family & Relationships", blurb: "Support for life together", question: (b) => `What family and relationship support is there at ${b}?` },
+  { id: "recreation", title: "Recreation & Events", blurb: "Get out and get connected", question: (b) => `What recreation and events are coming up at ${b}?` },
+  { id: "transition", title: "Transition & Retirement", blurb: "Prepare for what comes next", question: (b) => `What help is there at ${b} for leaving the service or retiring?` },
+  { id: "shopping", title: "Shopping & Dining", blurb: "Everyday essentials and more", question: (b) => `Where can I shop and eat at ${b}?` },
+];
+
+/** What Listen reads: for a plan reply, the text around the plan (not its JSON). */
+const spokenText = (content: string) => {
+  const p = parsePlanReply(content);
+  return p?.plan ? [p.intro, p.after].filter(Boolean).join("\n\n") : p ? planFallbackText(content) : content;
+};
+
+/** The plan's kind: as asked for, else a Monday–Sunday plan is a workout. */
+const kindOf = (m: Msg, plan: Plan | null | undefined): PlanKind =>
+  m.plan ?? (plan?.sections.some((s) => /^monday$/i.test(s.name)) ? "workout" : "arrival");
 
 // Web Speech API: not in every browser, and prefixed in Chrome/Safari.
 type Recognition = {
@@ -103,6 +140,11 @@ export default function FrontDoor({
   const [micNote, setMicNote] = useState("");
   const [speaking, setSpeaking] = useState<number | null>(null);
   const [slow, setSlow] = useState(false);
+  // Audience tab shown, and the audience sent with questions (once the visitor picks a tab or a card).
+  const [tab, setTab] = useState<Audience>("marine");
+  const [audience, setAudience] = useState<Audience | null>(null);
+  const [openPlan, setOpenPlan] = useState<number | null>(null); // message index of the plan in the panel
+  const planOpener = useRef<HTMLElement | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
   const recRef = useRef<Recognition | null>(null);
@@ -121,6 +163,10 @@ export default function FrontDoor({
       const c = JSON.parse(sessionStorage.getItem(convoKey(instId)) || "null");
       if (c && Array.isArray(c.messages) && c.messages.length) {
         setMessages(c.messages);
+        if (AUDIENCES.some((a) => a.id === c.audience)) {
+          setAudience(c.audience);
+          setTab(c.audience);
+        }
         setMode("chat");
         restoredChat = true;
       }
@@ -331,12 +377,12 @@ export default function FrontDoor({
   useEffect(() => {
     if (!restored.current) return;
     try {
-      if (messages.length) sessionStorage.setItem(convoKey(instId), JSON.stringify({ messages: messages.map(({ status, thinking, ...m }) => (void status, void thinking, m)) }));
+      if (messages.length) sessionStorage.setItem(convoKey(instId), JSON.stringify({ audience, messages: messages.map(({ status, thinking, ...m }) => (void status, void thinking, m)) }));
       else sessionStorage.removeItem(convoKey(instId));
     } catch {
       /* ignore */
     }
-  }, [messages, instId]);
+  }, [messages, instId, audience]);
 
   // Last input type, for focus rings that should show for keyboard focus only (front.css).
   useInputType(rootRef);
@@ -370,6 +416,7 @@ export default function FrontDoor({
     stopSpeaking();
     setBusy(false);
     setMessages([]);
+    setOpenPlan(null);
     setCaption("");
     setListening(false);
   }, [stopSpeaking]);
@@ -395,7 +442,7 @@ export default function FrontDoor({
   );
 
   const send = useCallback(
-    async (text: string, opts: { spoken?: boolean } = {}) => {
+    async (text: string, opts: { spoken?: boolean; plan?: PlanKind; audience?: Audience } = {}) => {
       const q = text.trim();
       if (!q || busy || !inst) return;
       setQuestion("");
@@ -409,7 +456,8 @@ export default function FrontDoor({
       while (history.length && history[0].role !== "user") history.shift();
       const replyIndex = messages.length + 1;
       const thinking = THINKING[0];
-      setMessages((ms) => [...ms, { role: "user", content: q }, { role: "assistant", content: "", thinking }]);
+      setMessages((ms) => [...ms, { role: "user", content: q }, { role: "assistant", content: "", thinking, plan: opts.plan }]);
+      const who = opts.audience ?? audience;
       setBusy(true);
       const abort = new AbortController();
       abortRef.current = abort;
@@ -427,6 +475,8 @@ export default function FrontDoor({
             messages: history.map((m) => ({ role: m.role, content: m.content })),
             page: { url: location.href, path: "/", title: "Ask MCCS front door" },
             trail: [],
+            ...(who ? { audience: who } : {}),
+            ...(opts.plan ? { mode: "plan", kind: opts.plan } : {}),
           }),
         });
         if (!res.ok || !res.body) {
@@ -447,7 +497,7 @@ export default function FrontDoor({
         if (!content) throw new Error("No answer came back.");
         patch({ content, status: undefined, thinking: undefined, followups: final.followups });
         setBusy(false);
-        if (opts.spoken) speak(replyIndex, content);
+        if (opts.spoken) speak(replyIndex, spokenText(content));
         const trust = await trustLine(content);
         if (trust && !abort.signal.aborted) patch({ trust });
       } catch (err) {
@@ -458,7 +508,7 @@ export default function FrontDoor({
         setBusy(false);
       }
     },
-    [busy, inst, messages, mode, speak, stopSpeaking, trustLine],
+    [audience, busy, inst, messages, mode, speak, stopSpeaking, trustLine],
   );
 
   const newConversation = () => {
@@ -507,6 +557,52 @@ export default function FrontDoor({
   const chips = (inst?.defaultChips ?? []).slice(0, 4);
   const lastAnswer = [...messages].reverse().find((m) => m.role === "assistant");
   const followups = !busy && lastAnswer && !lastAnswer.error ? (lastAnswer.followups ?? []) : [];
+
+  // A card or tile: the conversation is for this base, as the audience on the selected tab.
+  const start = (st: Starter) => {
+    setAudience(tab);
+    send(st.question(inst?.shortName ?? ""), { plan: st.plan, audience: tab });
+  };
+  const openPlanPanel = (i: number, opener: HTMLElement) => {
+    planOpener.current = opener;
+    setOpenPlan(i);
+  };
+  const closePlan = useCallback(() => {
+    setOpenPlan(null);
+    planOpener.current?.focus();
+  }, []);
+  const panelPlan = openPlan !== null ? parsePlanReply(messages[openPlan]?.content ?? "")?.plan : null;
+
+  /** An answer's body: markdown, or for a plan reply the intro, the plan card and any text after it. */
+  const answerBody = (m: Msg, i: number) => {
+    const p = parsePlanReply(m.content);
+    const streaming = busy && i === messages.length - 1;
+    const md = (text: string) => <div className="fd-md" dangerouslySetInnerHTML={{ __html: markdown(text, inst?.location) }} />;
+    if (!p) return md(m.content);
+    if (!p.plan && !streaming) return md(planFallbackText(m.content)); // invalid JSON: just the text
+    const kind = kindOf(m, p.plan);
+    const label = PLAN_LABEL[kind];
+    return (
+      <>
+        {p.intro && md(p.intro)}
+        {p.plan ? (
+          <button type="button" className="fd-card fd-plan-card" data-plan={kind} onClick={(e) => openPlanPanel(i, e.currentTarget)}>
+            <span className="fd-plan-card-label">
+              <span aria-hidden="true">{label.icon}</span> {label.name} · <span className="fd-plan-open">Open</span>
+            </span>
+            <span className="fd-card-blurb">
+              {p.plan.title} · {p.plan.sections.reduce((n, s) => n + s.items.length, 0)} steps
+            </span>
+          </button>
+        ) : (
+          <p className="fd-status" role="status">
+            Building your {label.name.toLowerCase()}…
+          </p>
+        )}
+        {p.after && md(p.after)}
+      </>
+    );
+  };
 
   const askForm = (
     <form
@@ -686,27 +782,76 @@ export default function FrontDoor({
               </figure>
             )}
             <div className="fd-chapter-body">
-              <h2 className="fd-label" id="fd-moments">
-                Start with a moment
-              </h2>
-              <ol className="fd-moments" aria-labelledby="fd-moments">
-                {MOMENTS.map((m, n) => (
-                  <li key={m.id}>
-                    <button type="button" className="fd-card fd-ncard" data-moment={m.id} onClick={() => send(m.question(inst?.shortName ?? ""))}>
-                      <span className="fd-num" aria-hidden="true">
-                        {String(n + 1).padStart(2, "0")}
-                      </span>
-                      <span className="fd-ncard-body">
-                        <span className="fd-card-title">{m.title}</span>
-                        <span className="fd-card-blurb">{m.blurb}</span>
-                        <span className="fd-cta" aria-hidden="true">
-                          Ask MCCS <span className="fd-arrow">→</span>
-                        </span>
-                      </span>
-                    </button>
-                  </li>
+              <div
+                className="fd-audiences"
+                role="tablist"
+                aria-label="I am a…"
+                onKeyDown={(e) => {
+                  const k = AUDIENCES.findIndex((a) => a.id === tab);
+                  const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+                  if (!step) return;
+                  e.preventDefault();
+                  const next = AUDIENCES[(k + step + AUDIENCES.length) % AUDIENCES.length].id;
+                  setTab(next);
+                  setAudience(next);
+                  document.getElementById(`fd-aud-${next}`)?.focus();
+                }}
+              >
+                {AUDIENCES.map((a) => (
+                  <button
+                    key={a.id}
+                    id={`fd-aud-${a.id}`}
+                    type="button"
+                    role="tab"
+                    className="fd-pill fd-aud"
+                    aria-selected={tab === a.id}
+                    aria-controls="fd-aud-panel"
+                    tabIndex={tab === a.id ? 0 : -1}
+                    onClick={() => {
+                      setTab(a.id);
+                      setAudience(a.id);
+                    }}
+                  >
+                    {a.label}
+                  </button>
                 ))}
-              </ol>
+              </div>
+              <div id="fd-aud-panel" role="tabpanel" aria-labelledby={`fd-aud-${tab}`}>
+                <h2 className="fd-label" id="fd-chapter">
+                  Start your next chapter
+                </h2>
+                <ol className="fd-moments" aria-labelledby="fd-chapter">
+                  {[...PLAN_CARDS, AUDIENCE_CARD[tab]].map((m, n) => (
+                    <li key={m.id}>
+                      <button type="button" className="fd-card fd-ncard" data-card={m.id} onClick={() => start(m)}>
+                        <span className="fd-num" aria-hidden="true">
+                          {String(n + 1).padStart(2, "0")}
+                        </span>
+                        <span className="fd-ncard-body">
+                          <span className="fd-card-title">{m.title}</span>
+                          <span className="fd-card-blurb">{m.blurb}</span>
+                          <span className="fd-cta" aria-hidden="true">
+                            {m.plan ? "Make my plan" : "Ask MCCS"} <span className="fd-arrow">→</span>
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+                <h2 className="fd-label" id="fd-everyday">
+                  Everyday support
+                </h2>
+                <ul className="fd-tiles" aria-labelledby="fd-everyday">
+                  {TILES.map((t) => (
+                    <li key={t.id}>
+                      <button type="button" className="fd-card fd-tile" data-tile={t.id} onClick={() => start(t)}>
+                        <span className="fd-card-title">{t.title}</span>
+                        <span className="fd-card-blurb">{t.blurb}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <h2 className="fd-label" id="fd-bases">
                 Your installation
@@ -763,7 +908,7 @@ export default function FrontDoor({
               ) : (
                 <article key={i} className={`fd-a${m.error ? " is-error" : ""}`}>
                   {m.content ? (
-                    <div className="fd-md" dangerouslySetInnerHTML={{ __html: markdown(m.content, inst?.location) }} />
+                    answerBody(m, i)
                   ) : m.status ? null : (
                     // Until the answer starts. role="status": announced once (the shimmer is CSS only).
                     <span className="fd-thinking" role="status">
@@ -783,7 +928,7 @@ export default function FrontDoor({
                           Stop
                         </button>
                       ) : (
-                        <button type="button" className="fd-pill fd-small" onClick={() => speak(i, m.content)}>
+                        <button type="button" className="fd-pill fd-small" onClick={() => speak(i, spokenText(m.content))}>
                           Listen
                         </button>
                       )}
@@ -794,7 +939,7 @@ export default function FrontDoor({
                         onClick={() => {
                           const next = !slow;
                           setSlow(next);
-                          if (speaking === i) speak(i, m.content, next);
+                          if (speaking === i) speak(i, spokenText(m.content), next);
                         }}
                       >
                         Slow
@@ -831,6 +976,17 @@ export default function FrontDoor({
             </p>
           </div>
         </main>
+      )}
+
+      {panelPlan && openPlan !== null && inst && (
+        <PlanPanel
+          plan={panelPlan}
+          kind={kindOf(messages[openPlan], panelPlan)}
+          baseId={inst.id}
+          baseName={inst.shortName}
+          location={inst.location}
+          onClose={closePlan}
+        />
       )}
 
       {mode === "hero" && (

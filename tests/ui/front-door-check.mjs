@@ -68,7 +68,7 @@ async function open(opts = {}) {
             } else if (window.__hold) {
               while (!window.__release) await new Promise((r) => setTimeout(r, 30));
             }
-            ctl.enqueue(enc.encode(answer));
+            ctl.enqueue(enc.encode(window.__answer ?? answer)); // a test can swap in a plan reply
             ctl.enqueue(enc.encode("\u001e" + JSON.stringify({ followups })));
             ctl.close();
           },
@@ -176,7 +176,10 @@ const ask = async (p, q) => {
   check("Warm-up on load for the selected base", JSON.stringify(c.warms) === JSON.stringify(["quantico"]), JSON.stringify(c.warms));
   const qCfg = await (await p.request.get(base + "/api/installations/quantico")).json();
   check("Starter chips from Quantico's defaultChips", JSON.stringify(await p.locator(".fd-hero .fd-chip").allTextContents()) === JSON.stringify(qCfg.defaultChips.slice(0, 4)));
-  check("Five moment cards", (await p.locator(".fd-moments .fd-card").count()) === 5);
+  check("Audience tabs, Marine selected: three next-chapter cards and eight everyday tiles",
+    JSON.stringify(await p.locator(".fd-aud").allTextContents()) === JSON.stringify(["Marine", "Marine Family", "Retiree & Veteran", "Community"]) &&
+      (await p.locator(".fd-aud[aria-selected=true]").textContent()) === "Marine" &&
+      (await p.locator(".fd-moments .fd-card").count()) === 3 && (await p.locator(".fd-tiles .fd-tile").count()) === 8);
   const cardLinks = await p.locator(".fd-bases .fd-bcard").evaluateAll((cards) => cards.map((c) => [...c.querySelectorAll("a")].map((a) => a.getAttribute("href"))));
   check("Installation cards: other bases' front doors, plus every full site", JSON.stringify(cardLinks) === JSON.stringify([["/quantico"], ["/ask/pendleton", "/pendleton"], ["/ask/lejeune", "/lejeune"]]), JSON.stringify(cardLinks));
   check("This base's card says you're here", (await p.locator(".fd-bcard[data-installation=quantico] .fd-here").textContent()) === "You’re here");
@@ -269,16 +272,121 @@ const ask = async (p, q) => {
   check("Coming back to a base in the same tab keeps its conversation", (await p.locator(".fd.fd--chat").count()) === 1 && JSON.stringify(await p.locator(".fd-q").allTextContents()) === JSON.stringify(["Where can I stay?"]));
   await p.goto(base + "/ask/lejeune", { waitUntil: "networkidle" });
 
-  // Moment card.
+  // Next-chapter card.
   await p.getByRole("button", { name: "New conversation" }).click();
-  await p.locator(".fd-card[data-moment=arrived]").click();
+  await p.locator(".fd-card[data-card=pcs-out]").click();
   await p.locator(".fd-q").first().waitFor();
-  check("Moment card opens with its question", (await p.locator(".fd-q").first().textContent()) === "I just arrived at MCB Camp Lejeune. Can you give me a First 7 Days plan?", await p.locator(".fd-q").first().textContent());
+  check("Next-chapter card opens with its question", (await p.locator(".fd-q").first().textContent()) === "I'm PCSing out of MCB Camp Lejeune soon. What should I take care of before I leave?", await p.locator(".fd-q").first().textContent());
 
   // Conversation survives following a link and coming back.
   await p.locator(".fd-followups").waitFor();
   await p.reload({ waitUntil: "networkidle" });
   check("Conversation restored in the tab", (await p.locator(".fd.fd--chat").count()) === 1 && (await p.locator(".fd-q").count()) === 1);
+  await c.close();
+}
+
+// 3b. Audience tabs and plan mode (stubbed plan streams).
+const PLAN = {
+  title: "Your first weeks at Camp Pendleton",
+  sections: [
+    { name: "This week", items: [{ task: "Visit Relocation Assistance", detail: "Newcomer info and the loan locker.", where: "Building 1160", phone: "760-725-9052", sourceUrl: "https://pendleton.usmc-mccs.org/marine-family-support/relocation" }] },
+    { name: "First 30 days", items: [{ task: "Try a group fitness class", confirm: true, sourceUrl: "https://pendleton.usmc-mccs.org/recreation-fitness/fitness" }] },
+    { name: "When you’re settled", items: [{ task: "Explore the beaches", detail: "Del Mar Beach is open to patrons." }] },
+  ],
+};
+const PLAN_ANSWER = "Here’s a starting plan for your arrival.\n\n```plan\n" + JSON.stringify(PLAN, null, 1) + "\n```";
+const WORKOUT = { title: "Your week at the gym", sections: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map((d) => ({ name: d, items: [{ task: d === "Sunday" ? "Rest and stretch" : "Open gym", confirm: d !== "Sunday" }] })) };
+{
+  const { c, p } = await open({ path: "/ask/pendleton" });
+  await c.grantPermissions(["clipboard-read", "clipboard-write"], { origin: base });
+  const third = {};
+  for (const [label, id] of [["Marine Family", "family"], ["Retiree & Veteran", "retiree"], ["Community", "community"], ["Marine", "marine"]]) {
+    await p.getByRole("tab", { name: label, exact: true }).click();
+    third[id] = JSON.stringify(await p.locator(".fd-moments .fd-card-title").allTextContents());
+  }
+  check("Every audience: arrival and workout plans first, then its own card",
+    third.marine === JSON.stringify(["New to this installation", "Build my weekly workout plan", "PCSing out"]) &&
+      third.family === JSON.stringify(["New to this installation", "Build my weekly workout plan", "Childcare & schools"]) &&
+      third.retiree === JSON.stringify(["New to this installation", "Build my weekly workout plan", "What I can use on base"]) &&
+      third.community === JSON.stringify(["New to this installation", "Build my weekly workout plan", "Visiting the base"]), JSON.stringify(third));
+  await p.getByRole("tab", { name: "Retiree & Veteran" }).click();
+  check("Tabs: the selected pill is marked", (await p.getByRole("tab", { name: "Retiree & Veteran" }).getAttribute("aria-selected")) === "true" && (await p.locator("[role=tab][aria-selected=true]").count()) === 1);
+
+  // Arrival card: plan mode, the audience, this base only.
+  await p.evaluate((a) => { window.__answer = a; }, PLAN_ANSWER);
+  await p.locator(".fd-card[data-card=arrival]").click();
+  await p.locator(".fd-plan-card").waitFor();
+  const body = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Arrival card sends plan mode, kind arrival, and the audience", body.mode === "plan" && body.kind === "arrival" && body.audience === "retiree" && body.installationId === "pendleton", JSON.stringify({ ...body, messages: undefined }));
+  check("…with the base's short name, never another base", body.messages[0].content === "I'm new to MCB Camp Pendleton. Can you make me an arrival plan?" && !/Quantico|Lejeune/.test(body.messages[0].content), body.messages[0].content);
+  check("Plan reply: intro text plus the “📋 Arrival Plan · Open” card, no raw JSON", (await p.locator(".fd-a .fd-md").first().textContent()) === "Here’s a starting plan for your arrival." && /^📋 Arrival Plan · Open/.test((await p.locator(".fd-plan-card").textContent()) ?? "") && !/"sections"|```/.test((await p.locator(".fd-conv").textContent()) ?? ""));
+
+  // The panel.
+  await p.locator(".fd-plan-card").click();
+  const dlg = p.getByRole("dialog");
+  await dlg.waitFor();
+  const box = await dlg.boundingBox();
+  check("Desktop: a right-side panel", box.x > 400 && Math.abs(box.x + box.width - 1280) < 2, JSON.stringify(box));
+  check("Panel: title with the base, and its three sections", (await dlg.locator("h2").textContent()) === PLAN.title && /^MCB Camp Pendleton/.test((await dlg.locator(".fd-plan-base").textContent()) ?? "") && JSON.stringify(await dlg.locator("h3").allTextContents()) === JSON.stringify(["This week", "First 30 days", "When you’re settled"]));
+  const hrefs = await dlg.locator("a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+  check("Panel: tap-to-call, map link, source link to the demo page", hrefs.includes("tel:7607259052") && hrefs.some((h) => /google\.com\/maps\/search.*Building%201160/.test(h)) && hrefs.includes("/pendleton/marine-family-support/relocation"), JSON.stringify(hrefs));
+  check("Panel: “Call to confirm” only where confirm is true", (await dlg.locator(".fd-plan-confirm").count()) === 1 && (await dlg.locator("li").nth(1).locator(".fd-plan-confirm").count()) === 1);
+  check("Panel: focus moves to Close", await p.evaluate(() => document.activeElement?.getAttribute("aria-label") === "Close plan"));
+  await dlg.getByRole("checkbox", { name: "Visit Relocation Assistance" }).check();
+  await dlg.getByRole("button", { name: "Copy" }).click();
+  const copied = await p.evaluate(() => navigator.clipboard.readText());
+  check("Copy puts the plan as text on the clipboard", copied.startsWith(`${PLAN.title} · MCB Camp Pendleton`) && copied.includes("- Visit Relocation Assistance") && copied.includes("call to confirm"), copied.slice(0, 120));
+  await p.emulateMedia({ media: "print" });
+  const printed = await p.evaluate(() => ({ plan: getComputedStyle(document.querySelector(".fd-plan h2")).visibility, conv: getComputedStyle(document.querySelector(".fd-conv")).visibility, actions: getComputedStyle(document.querySelector(".fd-plan-actions")).display }));
+  check("Print: only the plan, without its buttons", printed.plan === "visible" && printed.conv === "hidden" && printed.actions === "none", JSON.stringify(printed));
+  await p.emulateMedia({ media: "screen" });
+  await p.keyboard.press("Escape");
+  check("Escape closes the panel and returns focus to the card", (await p.getByRole("dialog").count()) === 0 && (await p.evaluate(() => document.activeElement?.classList.contains("fd-plan-card"))));
+  await p.reload({ waitUntil: "networkidle" });
+  await p.locator(".fd-plan-card").click();
+  check("Checked items are remembered (localStorage), across a reload", (await p.getByRole("checkbox", { name: "Visit Relocation Assistance" }).isChecked()) && !(await p.getByRole("checkbox", { name: "Explore the beaches" }).isChecked()));
+  await p.keyboard.press("Escape");
+  // The restored conversation keeps its audience for follow-ups.
+  await p.evaluate(() => { window.__answer = undefined; });
+  await ask(p, "What about the pool?");
+  const b2 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Follow-ups keep the audience, without plan mode", b2.audience === "retiree" && !("mode" in b2) && b2.messages.length === 3, JSON.stringify({ ...b2, messages: b2.messages.length }));
+
+  // Invalid JSON: just the text.
+  await p.getByRole("button", { name: "New conversation" }).click();
+  await p.evaluate(() => { window.__answer = "Here’s a plan.\n\n```plan\n{\"title\": \"Broken\", \"sections\": [\n```"; });
+  await p.locator(".fd-card[data-card=arrival]").click();
+  await p.locator(".fd-followups").waitFor();
+  const conv = (await p.locator(".fd-a .fd-md").textContent()) ?? "";
+  check("Invalid plan JSON falls back to the text", (await p.locator(".fd-plan-card").count()) === 0 && conv.startsWith("Here’s a plan.") && conv.includes("Broken") && !conv.includes("```"), conv.slice(0, 100));
+
+  // Workout card.
+  await p.getByRole("button", { name: "New conversation" }).click();
+  await p.getByRole("tab", { name: "Marine Family" }).click();
+  await p.evaluate((a) => { window.__answer = a; }, "Here’s a balanced week.\n\n```plan\n" + JSON.stringify(WORKOUT) + "\n```");
+  await p.locator(".fd-card[data-card=workout]").click();
+  await p.locator(".fd-plan-card").waitFor();
+  const b3 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Workout card: kind workout, the family audience, the “💪 Weekly Workout Plan · Open” card", b3.kind === "workout" && b3.mode === "plan" && b3.audience === "family" && /^💪 Weekly Workout Plan · Open/.test((await p.locator(".fd-plan-card").textContent()) ?? ""), JSON.stringify({ ...b3, messages: undefined }));
+
+  // Everyday tile: a plain question for this base, with the audience.
+  await p.getByRole("button", { name: "New conversation" }).click();
+  await p.evaluate(() => { window.__answer = undefined; });
+  await p.locator(".fd-tile[data-tile=fitness]").click();
+  await p.locator(".fd-followups").waitFor();
+  const b4 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Everyday tile asks for this base with the audience, not plan mode", b4.messages[0].content === "What gyms, classes and sports are there at MCB Camp Pendleton?" && b4.audience === "family" && !("mode" in b4), JSON.stringify({ ...b4, messages: b4.messages[0].content }));
+  await c.close();
+}
+{
+  // No tab picked: no audience sent. Phones: the plan is a full-screen sheet.
+  const { c, p } = await open({ viewport: { width: 375, height: 812 }, mobile: true });
+  await p.evaluate((a) => { window.__answer = a; }, PLAN_ANSWER);
+  await ask(p, "Make me a plan");
+  check("A typed question before picking an audience sends none", !("audience" in (await p.evaluate(() => window.__chatBodies.at(-1)))));
+  await p.locator(".fd-plan-card").click();
+  const box = await p.getByRole("dialog").boundingBox();
+  check("Phone: the plan opens as a full-screen sheet", box.x === 0 && box.y === 0 && box.width === 375 && box.height === 812, JSON.stringify(box));
   await c.close();
 }
 
@@ -625,9 +733,9 @@ const THINKING = ["Hooking and jabbing, be right back…"];
   check("Keyboard: every control has one ring that follows its shape", bad.length === 0, JSON.stringify(bad));
   check("…covering the Display pill, photo controls, ask box, mic, chips", ["fd-pill", "fd-credit", "fd-slide-toggle", "fd-ask-input", "fd-icon-btn", "fd-chip"].every((k) => kinds.has(k)), JSON.stringify([...kinds]));
 
-  // Cards: numbered moment cards and installation cards.
+  // Cards: numbered next-chapter cards, tiles and installation cards.
   await p.keyboard.press("Shift"); // keyboard modality for programmatic focus
-  for (const sel of [".fd-card[data-moment=arrived]", ".fd-bases .fd-cta-link"]) {
+  for (const sel of [".fd-card[data-card=arrival]", ".fd-tile", ".fd-bases .fd-cta-link"]) {
     await p.locator(sel).first().focus();
     const s = await st(sel);
     check(`Keyboard: ${sel} has its focus ring`, s.outline === "solid" && s.ow === "3px" && (sel.includes("cta") || parseFloat(s.radius) > 10), JSON.stringify(s));

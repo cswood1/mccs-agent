@@ -231,7 +231,19 @@ disagrees with it, ask before changing either.
 - Front door (`front-door.tsx`, scoped `front.css`):
   - **Hero:** installation pill, Display menu (Light/Dark, Large text, High contrast; saved in
     localStorage), ask box with rotating examples, mic and send, starter chips from `defaultChips`,
-    5 "moment" cards, installation cards, trust strip.
+    a lower section (photo left; audience tabs Marine · Marine Family · Retiree & Veteran · Community,
+    each with 3 "Start your next chapter" cards and the 8 "Everyday support" tiles), installation cards,
+    trust strip.
+  - **Audience and plan mode (2026-10-28):** cards and tiles ask for this base by its shortName, with
+    the tab's `audience` (also sent with later questions once a tab or card is picked). The first two
+    cards are plan mode (`mode: "plan"`, `kind: "arrival" | "workout"`), the third is per audience.
+    `lib/turn.ts` builds the per-turn system note after the cached prefix: the audience line ("The user
+    is a …; tailor to them.") and, in plan mode, the plan instruction in place of the length rule
+    (one intro sentence, then a ```plan JSON block; max_tokens 32K). The client (`parsePlanReply` in
+    `lib/chat-client.ts`) shows the intro plus a "📋 Arrival Plan · Open" / "💪 Weekly Workout Plan ·
+    Open" card that opens `plan-panel.tsx` (right panel ≥48em, full-screen sheet on phones;
+    checkboxes in localStorage, tel/map/source links, "Call to confirm", Print / Save as PDF, Copy).
+    Invalid JSON shows the text. `tests/unit/turn-note-check.mjs` checks the prefix stays byte-identical.
   - **Asking:** it uses `/api/chat` with the page's base and page path `/`, with the same stream
     format as the widget (`lib/chat-client.ts` mirrors widget.js: markdown, tel/map links, status and
     follow-up frames). The conversation layout works like a chat app:
@@ -258,7 +270,7 @@ disagrees with it, ask before changing either.
 - Style follows `design/reference/home/style-hero.png` and `style-sections.png`:
   - Fraunces 800 headline, Plus Jakarta Sans body, white pill controls (Display is icon-only on phones).
   - Full-height hero photo with a rounded inner corner, swapping with the selected installation.
-  - Small uppercase section labels and numbered "moment" cards.
+  - Small uppercase section labels and numbered "next chapter" cards.
 - Photos (`public/home/*.webp`, 1600px wide, under 200KB) are Wikimedia Commons U.S. Marine Corps
   photos under PD-USGov templates: community scenes, facilities and landscapes. Excluded: named
   officials, close-up portraits, weapons and combat.

@@ -741,6 +741,38 @@
   font-size: 0.9em;
 }
 
+/* Audience tabs, and the "Everyday support" tiles under the next-chapter cards. */
+.fd-audiences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0 0 1.6em;
+}
+.fd-aud {
+  box-shadow: none;
+}
+.fd-aud[aria-selected="true"] {
+  background: var(--fd-ink);
+  border-color: var(--fd-ink);
+  color: var(--fd-bg);
+}
+.fd-tiles {
+  list-style: none;
+  margin: 0 0 2.4em;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14em), 1fr));
+  gap: 0.75em;
+}
+.fd-tile {
+  flex-direction: column;
+  gap: 0.15em;
+  padding: 0.95em 1.15em;
+}
+.fd-tile .fd-card-blurb {
+  font-size: 0.875em;
+}
+
 /* Installation cards: ask another base, or visit the full recreated site. */
 .fd-bcard {
   cursor: auto;
@@ -1319,5 +1351,180 @@ body:has(.fd--chat) {
   }
   .fd-card:hover .fd-arrow {
     transform: none;
+  }
+}
+
+/* ---------- plan mode: the card in the conversation and the plan panel ---------- */
+.fd-plan-card {
+  flex-direction: column;
+  gap: 0.2em;
+  margin: 0.75em 0 0.25em;
+  padding: 0.95em 1.15em;
+  background: var(--fd-surface);
+}
+.fd-plan-card-label {
+  font-weight: 700;
+}
+.fd-plan-open {
+  color: var(--fd-navy);
+}
+.fd-plan-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+.fd-plan-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 16, 28, 0.45);
+}
+/* Phones: a full-screen sheet. Desktop: a panel on the right. */
+.fd-plan {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--fd-surface);
+  color: var(--fd-ink);
+  overflow: hidden;
+}
+@media (min-width: 48em) {
+  .fd-plan {
+    inset: 0 0 0 auto;
+    width: min(34rem, 100%);
+    border-radius: 1.25rem 0 0 1.25rem;
+    box-shadow: -12px 0 40px rgba(10, 16, 28, 0.25);
+  }
+}
+.fd-plan-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1em;
+  padding: calc(1.1em + env(safe-area-inset-top)) var(--fd-pad) 0.4em;
+}
+.fd-plan-head .fd-label {
+  margin-bottom: 0.3em;
+}
+.fd-plan-head h2 {
+  margin: 0;
+  font-family: var(--fd-serif);
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 1.15;
+}
+.fd-plan-base {
+  margin: 0.3em 0 0;
+  color: var(--fd-muted);
+  font-size: 0.9em;
+}
+.fd-plan-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0.5em var(--fd-pad) 0.9em;
+  border-bottom: 1px solid var(--fd-line);
+}
+.fd-plan-body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.5em var(--fd-pad) calc(1.5em + env(safe-area-inset-bottom));
+}
+.fd-plan-section h3 {
+  margin: 1.1em 0 0.4em;
+  font-size: 1em;
+  font-weight: 800;
+}
+.fd-plan-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.fd-plan-section li {
+  display: flex;
+  gap: 0.7em;
+  padding: 0.6em 0;
+  border-top: 1px solid var(--fd-line);
+}
+.fd-plan-section input {
+  flex: none;
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.15em;
+  accent-color: var(--fd-navy);
+}
+.fd-plan-task {
+  font-weight: 600;
+  cursor: pointer;
+}
+.fd-plan-section li.is-done .fd-plan-task {
+  text-decoration: line-through;
+  color: var(--fd-muted);
+}
+.fd-plan-detail,
+.fd-plan-meta {
+  margin: 0.15em 0 0;
+  font-size: 0.9em;
+  color: var(--fd-muted);
+}
+.fd-plan-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em 0.9em;
+}
+.fd-plan-meta a {
+  color: var(--fd-navy);
+}
+.fd-plan-confirm {
+  padding: 0 0.5em;
+  border-radius: 999px;
+  border: 1px solid var(--fd-red);
+  color: var(--fd-red);
+  font-weight: 700;
+  font-size: 0.85em;
+}
+.fd-plan-note {
+  margin: 1.2em 0 0;
+  font-size: 0.85em;
+  color: var(--fd-muted);
+}
+html.fd-plan-open {
+  overflow: hidden;
+}
+
+/* Print / Save as PDF: only the plan, on white. */
+@media print {
+  html.fd-plan-open body * {
+    visibility: hidden;
+  }
+  html.fd-plan-open .fd-plan,
+  html.fd-plan-open .fd-plan * {
+    visibility: visible;
+  }
+  html.fd-plan-open {
+    overflow: visible;
+  }
+  .fd-plan-layer,
+  .fd-plan {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    background: #fff;
+    color: #000;
+  }
+  .fd-plan-backdrop,
+  .fd-plan-close,
+  .fd-plan-actions {
+    display: none;
+  }
+  .fd-plan-body {
+    overflow: visible;
+  }
+  .fd-plan-section li {
+    break-inside: avoid;
   }
 }

@@ -168,3 +168,82 @@ function link(href: string, text: string): string {
   const external = /^https?:/.test(href);
   return `<a href="${href}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${text}</a>`;
 }
+
+// ---------- plan mode: an intro sentence, then a ```plan JSON block (lib/turn.ts) ----------
+
+export type PlanItem = { task: string; detail?: string; where?: string; when?: string; phone?: string; sourceUrl?: string; confirm?: boolean };
+export type Plan = { title: string; sections: { name: string; items: PlanItem[] }[] };
+export type PlanReply = {
+  /** Text before the block, and any after it. */
+  intro: string;
+  after: string;
+  /** The parsed plan, or null while the block is still streaming or when its JSON is invalid. */
+  plan: Plan | null;
+  /** The block has started (so the raw JSON shouldn't be shown while it streams). */
+  started: boolean;
+};
+
+const PLAN_OPEN = /```plan[^\n]*\n?/;
+
+/** Splits a plan-mode reply. Returns null when there's no ```plan block. */
+export function parsePlanReply(text: string): PlanReply | null {
+  const open = PLAN_OPEN.exec(text);
+  if (!open) return null;
+  const intro = text.slice(0, open.index).trim();
+  const rest = text.slice(open.index + open[0].length);
+  const close = rest.indexOf("```");
+  if (close < 0) return { intro, after: "", plan: null, started: true };
+  return { intro, after: rest.slice(close + 3).trim(), plan: toPlan(rest.slice(0, close)), started: true };
+}
+
+/** The text to show when a plan can't be: the reply without the fence markers. */
+export function planFallbackText(text: string): string {
+  return text.replace(PLAN_OPEN, "\n").replace(/```/g, "\n").trim();
+}
+
+const str = (v: unknown, max = 300) => (typeof v === "string" && v.trim() ? v.trim().slice(0, max) : undefined);
+
+function toPlan(json: string): Plan | null {
+  let data: unknown;
+  try {
+    data = JSON.parse(json.trim());
+  } catch {
+    return null;
+  }
+  const d = data as { title?: unknown; sections?: unknown };
+  if (!d || typeof d !== "object" || !Array.isArray(d.sections)) return null;
+  const sections = d.sections
+    .map((s: { name?: unknown; items?: unknown }) => ({
+      name: str(s?.name, 80) ?? "",
+      items: (Array.isArray(s?.items) ? s.items : [])
+        .map((it: Record<string, unknown>): PlanItem | null => {
+          const task = str(it?.task, 160);
+          if (!task) return null;
+          return { task, detail: str(it.detail), where: str(it.where, 160), when: str(it.when, 120), phone: str(it.phone, 40), sourceUrl: str(it.sourceUrl, 500), confirm: it.confirm === true };
+        })
+        .filter((x: PlanItem | null): x is PlanItem => !!x),
+    }))
+    .filter((s: { name: string; items: PlanItem[] }) => s.name && s.items.length);
+  if (!sections.length) return null;
+  return { title: str(d.title, 120) ?? "Your plan", sections };
+}
+
+/** The plan as plain text (Copy). */
+export function planText(plan: Plan, baseName: string): string {
+  const lines = [`${plan.title} · ${baseName}`, ""];
+  for (const s of plan.sections) {
+    lines.push(s.name);
+    for (const it of s.items) {
+      const meta = [it.when, it.where, it.phone, it.confirm ? "call to confirm" : ""].filter(Boolean).join(" · ");
+      lines.push(`- ${it.task}${it.detail ? ` — ${it.detail}` : ""}${meta ? ` (${meta})` : ""}`);
+      if (it.sourceUrl) lines.push(`  ${it.sourceUrl}`);
+    }
+    lines.push("");
+  }
+  return lines.join("\n").trim();
+}
+
+/** Map search link for a place on the installation. */
+export function mapHref(place: string, location = ""): string {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place + (location ? `, ${location}` : ""))}`;
+}

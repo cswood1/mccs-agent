@@ -4,12 +4,8 @@ import { getInstallation, loadContent } from "@/lib/installations";
 import { agentRequest } from "@/lib/agent";
 import { CROSS_BASE_TOOL, crossBaseStatus, runCrossBaseTool } from "@/lib/crossbase";
 import { rateLimit } from "@/lib/ratelimit";
-import { buildContentBlock } from "@/lib/prompt";
+import { buildMessages, MAX_TOKENS, PLAN_MAX_TOKENS, planKind } from "@/lib/turn";
 import { cleanClientText, pageInfo } from "@/lib/site/context";
-
-// docs/PRODUCT.md section 4, restated each turn.
-const REPLY_REMINDER =
-  "Keep this reply under 60 words (under 120 only if they asked how to do a multi-step process): the direct answer, the key specifics, then at most one offer to go deeper. Leave out caveats, eligibility lists, and other options unless they asked. When there are several options or events, name the top two and offer the rest. End with the <followups> line.";
 
 // Separates the answer text from the follow-up chips in the response stream (ASCII record separator).
 const FRAME = "\u001e";
@@ -34,6 +30,11 @@ type ChatRequest = {
   /** The page the person is on, and up to 5 pages they visited before it (most recent first). */
   page?: PageRef;
   trail?: PageRef[];
+  /** Front-door audience tab: marine | family | retiree | community (lib/turn.ts). */
+  audience?: string;
+  /** Plan mode: a structured plan (a ```plan JSON block) instead of a short answer. */
+  mode?: "plan";
+  kind?: "arrival" | "workout";
 };
 
 export const OPTIONS = preflight;
@@ -67,24 +68,9 @@ export async function POST(request: Request) {
 
   const shared = agentRequest(installation, content);
 
-  // Saved site content goes first in the first user turn (cached), then the conversation.
-  // The latest question carries a page-context note (after the cached prefix), and a trailing
-  // system note carries today's date and the length rule.
   const pageNote = buildPageNote(body, installation.id, installation.defaultChips);
-  const turns: Anthropic.Beta.BetaMessageParam[] = body.messages.map((m, i) => {
-    if (m.role !== "user") return { role: "assistant", content: m.content };
-    const blocks: Anthropic.Beta.BetaTextBlockParam[] = [];
-    if (i === 0) blocks.push(buildContentBlock(installation, content));
-    if (i === body.messages.length - 1 && pageNote) blocks.push({ type: "text", text: pageNote });
-    blocks.push({ type: "text", text: m.content });
-    return { role: "user", content: blocks };
-  });
-  let messages: Anthropic.Beta.BetaMessageParam[] = [
-    ...turns,
-    // Per-turn note after the cached prefix: today's date, plus the length rule, which the
-    // model follows far better when it's restated right before it answers.
-    { role: "system", content: `Today is ${today()}. ${REPLY_REMINDER}` },
-  ];
+  let messages = buildMessages(installation, content, body.messages, pageNote, body, today());
+  const maxTokens = planKind(body) ? PLAN_MAX_TOKENS : MAX_TOKENS;
 
   const abort = new AbortController();
   request.signal.addEventListener("abort", () => abort.abort());
@@ -103,7 +89,7 @@ export async function POST(request: Request) {
           const stream = client.beta.messages.stream(
             {
               ...shared,
-              max_tokens: 16000,
+              max_tokens: maxTokens,
               // Also cache the growing conversation (5-minute TTL), so follow-up turns are cheap.
               cache_control: { type: "ephemeral" },
               messages,
