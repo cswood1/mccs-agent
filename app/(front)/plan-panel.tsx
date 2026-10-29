@@ -1,13 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { demoPath, mapHref, planText, type Plan } from "@/lib/chat-client";
+import { demoPath, mapHref, planText, type Plan, type PlanItem } from "@/lib/chat-client";
 import { write } from "./shared";
 
 export type PlanKind = "arrival" | "workout";
 export const PLAN_LABEL: Record<PlanKind, { icon: string; name: string }> = {
   arrival: { icon: "📋", name: "Arrival Plan" },
   workout: { icon: "💪", name: "Weekly Workout Plan" },
+};
+
+/** "Chat about this": the item as a plain question, with whichever of where and when it has. */
+export const chatQuestion = (it: PlanItem) => {
+  const extra = [it.where, it.when].filter(Boolean).join(", ");
+  return `Tell me more about: ${it.task}${extra ? ` (${extra})` : ""}`;
 };
 
 /** Checked items per plan (localStorage), keyed by base and a hash of the plan. */
@@ -28,6 +34,7 @@ export function PlanPanel({
   baseName,
   location,
   onClose,
+  onChat,
 }: {
   plan: Plan;
   kind: PlanKind;
@@ -35,6 +42,8 @@ export function PlanPanel({
   baseName: string;
   location: string;
   onClose: () => void;
+  /** "Chat about this" on an item: the panel closes and the question is asked. */
+  onChat: (question: string) => void;
 }) {
   const key = doneKey(baseId, plan);
   const [done, setDone] = useState<Record<string, boolean>>(() => {
@@ -142,8 +151,7 @@ export function PlanPanel({
                           {it.task}
                         </label>
                         {it.detail && <p className="fd-plan-detail">{it.detail}</p>}
-                        {(it.when || it.where || it.phone || it.sourceUrl || it.confirm) && (
-                          <p className="fd-plan-meta">
+                        <p className="fd-plan-meta">
                             {it.when && <span>{it.when}</span>}
                             {it.where && (
                               <a href={mapHref(it.where, location)} target="_blank" rel="noopener noreferrer">
@@ -156,9 +164,11 @@ export function PlanPanel({
                                 Source
                               </a>
                             )}
+                            <button type="button" className="fd-plan-chat" aria-label={`Chat about ${it.task}`} onClick={() => onChat(chatQuestion(it))}>
+                              Chat about this
+                            </button>
                             {it.confirm && <span className="fd-plan-confirm">Call to confirm</span>}
                           </p>
-                        )}
                       </div>
                     </li>
                   );

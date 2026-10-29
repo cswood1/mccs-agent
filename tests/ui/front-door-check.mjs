@@ -352,6 +352,23 @@ const WORKOUT = { title: "Your week at the gym", sections: ["Monday", "Tuesday",
   const b2 = await p.evaluate(() => window.__chatBodies.at(-1));
   check("Follow-ups keep the audience, without plan mode", b2.audience === "retiree" && !("mode" in b2) && b2.messages.length === 3, JSON.stringify({ ...b2, messages: b2.messages.length }));
 
+  // "Chat about this" on an item: closes the panel, asks like a follow-up chip, plan card still reopens.
+  await p.locator(".fd-plan-card").click();
+  const chatBtn = p.getByRole("dialog").getByRole("button", { name: "Chat about Visit Relocation Assistance" });
+  const chatStyle = await chatBtn.evaluate((el) => { const a = el.parentElement.querySelector("a"); const s = getComputedStyle(el), t = getComputedStyle(a); return { text: el.textContent, last: el.previousElementSibling?.textContent, same: s.color === t.color && s.fontSize === t.fontSize && s.textDecorationLine === t.textDecorationLine }; });
+  check("Chat about this: after Source, styled like the row's links", chatStyle.text === "Chat about this" && chatStyle.last === "Source" && chatStyle.same && (await p.locator(".fd-plan-chat").count()) === 3, JSON.stringify(chatStyle));
+  const asked = await p.locator(".fd-q").count();
+  await chatBtn.click();
+  await p.locator(".fd-q").nth(asked).waitFor();
+  await p.locator(".fd-followups").waitFor();
+  const b5 = await p.evaluate(() => window.__chatBodies.at(-1));
+  check("Chat about this: closes the panel and asks the item as a normal question, with the audience",
+    (await p.getByRole("dialog").count()) === 0 && b5.messages.at(-1).content === "Tell me more about: Visit Relocation Assistance (Building 1160)" && b5.audience === "retiree" && !("mode" in b5) && (await p.evaluate(() => document.activeElement?.classList.contains("fd-conv"))),
+    JSON.stringify({ q: b5.messages.at(-1).content, audience: b5.audience, mode: b5.mode }));
+  await p.locator(".fd-plan-card").click();
+  check("…and the plan card still reopens the panel", await p.getByRole("dialog").isVisible());
+  await p.keyboard.press("Escape");
+
   // Invalid JSON: just the text.
   await p.getByRole("button", { name: "New conversation" }).click();
   await p.evaluate(() => { window.__answer = "Here’s a plan.\n\n```plan\n{\"title\": \"Broken\", \"sections\": [\n```"; });

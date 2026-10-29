@@ -145,6 +145,7 @@ export default function FrontDoor({
   const [audience, setAudience] = useState<Audience | null>(null);
   const [openPlan, setOpenPlan] = useState<number | null>(null); // message index of the plan in the panel
   const planOpener = useRef<HTMLElement | null>(null);
+  const convRef = useRef<HTMLElement | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
   const recRef = useRef<Recognition | null>(null);
@@ -899,7 +900,7 @@ export default function FrontDoor({
             <span className="fd-red">Ask MCCS</span> · {inst?.shortName}
           </p>
           <h1 className="fd-sr">Ask MCCS conversation</h1>
-          <section className="fd-conv" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
+          <section ref={convRef} tabIndex={-1} className="fd-conv" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversation">
             {messages.map((m, i) =>
               m.role === "user" ? (
                 <p key={i} className="fd-q">
@@ -986,6 +987,12 @@ export default function FrontDoor({
           baseName={inst.shortName}
           location={inst.location}
           onClose={closePlan}
+          onChat={(q) => {
+            // Like a follow-up chip: a normal question with the current audience; focus goes to the conversation.
+            setOpenPlan(null);
+            convRef.current?.focus({ preventScroll: true });
+            send(q);
+          }}
         />
       )}
 

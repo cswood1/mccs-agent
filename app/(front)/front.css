@@ -1473,8 +1473,20 @@ body:has(.fd--chat) {
   flex-wrap: wrap;
   gap: 0.2em 0.9em;
 }
-.fd-plan-meta a {
+.fd-plan-meta a,
+.fd-plan-meta .fd-plan-chat {
   color: var(--fd-navy);
+}
+/* "Chat about this": a button that looks like the row's links. */
+.fd-plan-meta .fd-plan-chat {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+.fd-conv:focus {
+  outline: none;
 }
 .fd-plan-confirm {
   padding: 0 0.5em;
