@@ -1485,6 +1485,17 @@ body:has(.fd--chat) {
   font: inherit;
   cursor: pointer;
 }
+/* Hover, active and keyboard focus for every link in the row, "Chat about this" included. One rule,
+   so the button never drifts from the links (the site theme's red a:hover only matches <a>). */
+.fd-plan-meta :is(a, .fd-plan-chat):is(:hover, :active) {
+  color: var(--fd-red);
+  text-decoration: underline;
+}
+.fd-plan-meta :is(a, .fd-plan-chat):focus-visible {
+  outline: 3px solid var(--fd-focus);
+  outline-offset: 2px;
+  border-radius: 0.2em;
+}
 .fd-conv:focus {
   outline: none;
 }

@@ -36,10 +36,14 @@ const PLAN_SECTIONS: Record<PlanKind, string> = {
     'A weekly workout plan. Seven sections, in order: "Monday" through "Sunday". Use this installation’s real fitness centers, pools and published class schedules, with a mix of group classes, open gym, pool sessions and rest days (a rest day is one item such as "Rest and stretch"). Put a class time in "when" only when the content publishes it.',
 };
 
-export function planInstruction(kind: PlanKind): string {
+const PLAN_NAME: Record<PlanKind, string> = { arrival: "arrival plan", workout: "weekly workout plan" };
+
+/** `base` is the installation's short name ("MCB Quantico"), for the example intro. */
+export function planInstruction(kind: PlanKind, base = "this installation"): string {
   return [
     `Plan mode. ${PLAN_SECTIONS[kind]}`,
-    "Reply with one short intro sentence, then a single fenced code block with the info string plan (```plan), holding only JSON in this shape:",
+    `Start with one short, friendly sentence that just says the plan is ready, e.g. "Here’s your ${PLAN_NAME[kind]} for ${base}." Never mention saved, captured or cached pages, the site content, or an "as of" date in it. At most one brief practical note may follow, only if it matters (e.g. "The pool is seasonal, so call before you go."); keep any call-to-confirm detail on the plan items themselves.`,
+    "Then a single fenced code block with the info string plan (```plan), holding only JSON in this shape:",
     PLAN_SCHEMA,
     "Use only facts from the MCCS content (or MCCS pages you fetch). Never invent dates, times or phone numbers: leave the field out instead. Set \"confirm\": true on any item whose hours, dates or details aren’t published. sourceUrl is the MCCS page the item comes from. 3–6 items per section, each task under 10 words, each detail under 25 words.",
     "Write nothing after the block except the <followups> line.",
@@ -59,9 +63,9 @@ export function audienceLine(audience: unknown): string | null {
 }
 
 /** The trailing system note for this turn. */
-export function turnNote(body: TurnOptions, today: string): string {
+export function turnNote(body: TurnOptions, today: string, base?: string): string {
   const kind = planKind(body);
-  const lines = [`Today is ${today}. ${kind ? planInstruction(kind) : REPLY_REMINDER}`];
+  const lines = [`Today is ${today}. ${kind ? planInstruction(kind, base) : REPLY_REMINDER}`];
   const who = audienceLine(body.audience);
   if (who) lines.push(who);
   return lines.join("\n");
@@ -91,7 +95,7 @@ export function buildMessages(
     return { role: "user", content: blocks };
   });
   // Restated right before it answers, where the model follows it far better.
-  return [...messages, { role: "system", content: turnNote(options, today) }];
+  return [...messages, { role: "system", content: turnNote(options, today, inst.shortName) }];
 }
 
 const MAX_MESSAGES = 30;

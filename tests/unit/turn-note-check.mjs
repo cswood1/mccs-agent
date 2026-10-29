@@ -49,6 +49,21 @@ const workout = turnNote({ mode: "plan", kind: "workout", audience: "marine" }, 
 check("Plan mode replaces the length rule with the plan instruction", !arrival.includes("under 60 words") && arrival.includes("```plan") && arrival.includes('"confirm"?: boolean') && /Never invent dates, times or phone numbers/.test(arrival));
 check("Arrival sections", arrival.includes('"This week", "First 30 days", "When you’re settled"'));
 check("Workout: Monday–Sunday, real facilities, classes, open gym, pool, rest", workout.includes('"Monday" through "Sunday"') && /group classes, open gym, pool sessions and rest days/.test(workout) && workout.endsWith("\nThe user is a Marine; tailor to them."));
+{
+  // Intro wording: a friendly "plan is ready" line naming the base; no saved pages or "as of" dates.
+  const inst = getInstallation("quantico");
+  const content = await loadContent("quantico");
+  const noteFor = (kind) => buildMessages(inst, content, turns, null, { mode: "plan", kind }, TODAY).at(-1).content;
+  const w = noteFor("workout");
+  const a = noteFor("arrival");
+  check("Plan intro: one short, friendly sentence that says the plan is ready, naming the base",
+    w.includes('Start with one short, friendly sentence that just says the plan is ready, e.g. "Here’s your weekly workout plan for MCB Quantico."') &&
+      a.includes('e.g. "Here’s your arrival plan for MCB Quantico."') && !/Reply with one short intro sentence/.test(w), w);
+  check("Plan intro: never saved, captured or cached pages, the site content, or an “as of” date", /Never mention saved, captured or cached pages, the site content, or an "as of" date in it\./.test(w));
+  check("Plan intro: at most one brief practical note; call-to-confirm stays on the items", w.includes('At most one brief practical note may follow, only if it matters (e.g. "The pool is seasonal, so call before you go."); keep any call-to-confirm detail on the plan items themselves.'));
+  check("Plan intro: then the ```plan block", /plan items themselves\.\nThen a single fenced code block with the info string plan \(```plan\)/.test(w));
+  check("Plan intro without a base name falls back to “this installation”", turnNote({ mode: "plan", kind: "arrival" }, TODAY).includes('"Here’s your arrival plan for this installation."'));
+}
 check("Plan mode needs a known kind", planKind({ mode: "plan", kind: "diet" }) === null && planKind({ kind: "arrival" }) === null && planKind({ mode: "plan", kind: "arrival" }) === "arrival");
 check("Plan mode raises max_tokens", PLAN_MAX_TOKENS > MAX_TOKENS && MAX_TOKENS === 16000);
 

@@ -365,6 +365,18 @@ const WORKOUT = { title: "Your week at the gym", sections: ["Monday", "Tuesday",
   const chatBtn = p.getByRole("dialog").getByRole("button", { name: "Chat about Visit Relocation Assistance" });
   const chatStyle = await chatBtn.evaluate((el) => { const a = el.parentElement.querySelector("a"); const s = getComputedStyle(el), t = getComputedStyle(a); return { text: el.textContent, last: el.previousElementSibling?.textContent, same: s.color === t.color && s.fontSize === t.fontSize && s.textDecorationLine === t.textDecorationLine }; });
   check("Chat about this: after Source, styled like the row's links", chatStyle.text === "Chat about this" && chatStyle.last === "Source" && chatStyle.same && (await p.locator(".fd-plan-chat").count()) === 3, JSON.stringify(chatStyle));
+  // Hover: "Chat about this" turns the same color (and underline) as a hovered "Source", in every theme.
+  const source = p.getByRole("dialog").locator(".fd-plan-meta a", { hasText: "Source" }).first();
+  const hovered = async (loc) => { await loc.hover(); return loc.evaluate((el) => { const s = getComputedStyle(el); return `${s.color} ${s.textDecorationLine}`; }); };
+  const hoverLooks = {};
+  for (const [label, theme, contrast] of [["light", "light", null], ["dark", "dark", null], ["high contrast", "light", "high"]]) {
+    await p.locator(".fd").evaluate((el, [t, k]) => { el.dataset.theme = t; if (k) el.dataset.contrast = k; else delete el.dataset.contrast; }, [theme, contrast]);
+    const rest = await chatBtn.evaluate((el) => getComputedStyle(el).color);
+    hoverLooks[label] = { source: await hovered(source), chat: await hovered(chatBtn), rest };
+  }
+  await p.locator(".fd").evaluate((el) => { el.dataset.theme = "light"; delete el.dataset.contrast; });
+  check("Hovering “Chat about this” turns it the same color as a hovered “Source” (light, dark, high contrast)",
+    Object.values(hoverLooks).every((h) => h.source === h.chat && h.chat !== `${h.rest} none` && /underline/.test(h.chat)) && hoverLooks.light.chat === "rgb(158, 27, 50) underline", JSON.stringify(hoverLooks));
   const asked = await p.locator(".fd-q").count();
   await chatBtn.click();
   await p.locator(".fd-q").nth(asked).waitFor();
@@ -458,6 +470,7 @@ const WORKOUT = { title: "Your week at the gym", sections: ["Monday", "Tuesday",
   check("The errored turn (question and error) is never resent", !f3.messages.some((m) => m.content === "This one fails" || /Something went wrong/.test(m.content)) && f3.messages.at(-1).content === "Where is the commissary?" && f3.messages.every((m, i) => m.role === (i % 2 ? "assistant" : "user")) && underLimit(f3), JSON.stringify(f3.messages.map((m) => [m.role, m.content.slice(0, 30)])));
 
   // Recovery: a conversation saved before the fix (full plan, then a raw "too long" error) works on the next question.
+  await p.locator(".fd-a").last().locator(".fd-trust").waitFor(); // the last async save (trust line) is done
   await p.evaluate((a) => sessionStorage.setItem("mccs-front:conversation:pendleton", JSON.stringify({ audience: "marine", messages: [
     { role: "user", content: "Build me a weekly workout plan using the gyms, pools and classes at MCB Camp Pendleton.", }, { role: "assistant", content: a, plan: "workout" },
     { role: "user", content: "What about the pool?" }, { role: "assistant", content: "messages[1] is too long (max 4000 characters) Please try again.", error: true },
